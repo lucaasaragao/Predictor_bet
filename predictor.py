@@ -60,8 +60,12 @@ class ScoreTempo:
 @dataclass
 class PredicaoJogo:
     """Previsão de um jogo"""
+    data_jogo: str
     time_casa: str
     time_visitante: str
+    status: str
+    placar_casa: Optional[int]
+    placar_visitante: Optional[int]
     prob_casa: float
     prob_empate: float
     prob_visitante: float
@@ -84,6 +88,7 @@ class BetSuggestion:
     probabilidade: float
     confianca: str             # HIGH, MEDIUM, LOW
     justificativa: str
+    resultado_verificador: Optional[str] = None
 
 
 def buscar_jogos_permitidos() -> List[Dict]:
@@ -347,10 +352,18 @@ def prever_jogo(match: Dict) -> PredicaoJogo:
     
     tendencia_casa = calcular_tendencia_forma(hist_home, home_id)
     tendencia_visitante = calcular_tendencia_forma(hist_away, away_id)
+    
+    score_real = match.get("score", {}).get("fullTime", {})
+    placar_casa = score_real.get("home") if score_real else None
+    placar_visitante = score_real.get("away") if score_real else None
 
     return PredicaoJogo(
+        data_jogo=match.get("utcDate", ""),
         time_casa=home_team.get("shortName") or home_team.get("name", ""),
         time_visitante=away_team.get("shortName") or away_team.get("name", ""),
+        status=match.get("status", "SCHEDULED"),
+        placar_casa=placar_casa,
+        placar_visitante=placar_visitante,
         prob_casa=mercados["casa"],
         prob_empate=mercados["empate"],
         prob_visitante=mercados["visitante"],
@@ -486,6 +499,27 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
                 f"Empate com {predicao.prob_empate*100:.1f}% de probabilidade"
             ),
         ))
+    if predicao.status == "FINISHED" and predicao.placar_casa is not None and predicao.placar_visitante is not None:
+        home_g = predicao.placar_casa
+        away_g = predicao.placar_visitante
+        for p in palpites:
+            if p.tipo == "WINNER":
+                if home_g > away_g and p.opcao == "1": p.resultado_verificador = "ACERTO"
+                elif home_g == away_g and p.opcao == "X": p.resultado_verificador = "ACERTO"
+                elif home_g < away_g and p.opcao == "2": p.resultado_verificador = "ACERTO"
+                else: p.resultado_verificador = "ERRO"
+            elif p.tipo == "OVER_UNDER":
+                total = home_g + away_g
+                if total > 2.5 and p.opcao == "OVER": p.resultado_verificador = "ACERTO"
+                elif total < 2.5 and p.opcao == "UNDER": p.resultado_verificador = "ACERTO"
+                else: p.resultado_verificador = "ERRO"
+            elif p.tipo == "BTTS":
+                if home_g > 0 and away_g > 0 and p.opcao == "YES": p.resultado_verificador = "ACERTO"
+                elif (home_g == 0 or away_g == 0) and p.opcao == "NO": p.resultado_verificador = "ACERTO"
+                else: p.resultado_verificador = "ERRO"
+            elif p.tipo == "EMPATE":
+                if home_g == away_g and p.opcao == "X": p.resultado_verificador = "ACERTO"
+                else: p.resultado_verificador = "ERRO"
 
     return palpites
 
@@ -603,6 +637,12 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
         dados["jogos"].append(
             {
                 "competicao": pred.competicao,
+                "data": pred.data_jogo,
+                "status": pred.status,
+                "placar_atual": {
+                    "casa": pred.placar_casa,
+                    "visitante": pred.placar_visitante
+                },
                 "times": {
                     "casa": pred.time_casa,
                     "visitante": pred.time_visitante,

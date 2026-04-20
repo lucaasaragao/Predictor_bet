@@ -2,7 +2,8 @@ name: Update predictions.json
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    # Roda a cada 8 horas (3 vezes ao dia)
+    - cron: "0 */8 * * *"
   workflow_dispatch:
 
 permissions:

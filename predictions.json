@@ -1,63 +1,65 @@
 {
-  "generated_at": "2026-04-20 00:30:23",
+  "generated_at": "2026-04-20 20:27:07",
   "total_jogos": 3,
   "jogos": [
     {
       "competicao": "Serie A",
+      "data": "2026-04-20T18:45:00Z",
+      "status": "FINISHED",
+      "placar_atual": {
+        "casa": 1,
+        "visitante": 1
+      },
       "times": {
         "casa": "Lecce",
         "visitante": "Fiorentina"
       },
       "probabilidades": {
-        "casa": 0.2845857877829033,
-        "empate": 0.2786127086173255,
-        "visitante": 0.4367235130956109
+        "casa": 0.2787402471118711,
+        "empate": 0.28339110916252536,
+        "visitante": 0.4378032076577638
       },
       "favorito": {
         "nome": "Fiorentina",
-        "prob": 0.4367235130956109,
-        "vantagem": 0.15213772531270764
+        "prob": 0.4378032076577638,
+        "vantagem": 0.15441209849523846
       },
       "gols_esperados": {
-        "casa": 1.0,
-        "visitante": 1.31,
-        "total": 2.31
+        "casa": 0.9600000000000001,
+        "visitante": 1.28,
+        "total": 2.24
       },
       "mercados": {
-        "under_25": 0.5934667153903002,
-        "over_25": 0.40653328460969984,
-        "btts_yes": 0.46151144982794196,
-        "btts_no": 0.538488550172058
+        "under_25": 0.6120740860432884,
+        "over_25": 0.3879259139567116,
+        "btts_yes": 0.44548713406316204,
+        "btts_no": 0.5545128659368379
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.4,
+          "forma_recente": 0.4636363636363636,
           "ataque": 0.4,
-          "defesa": 0.30000000000000004,
+          "defesa": 0.36,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.46
+          "score_total": 0.49427272727272725
         },
         "visitante": {
-          "forma_recente": 0.5545454545454546,
+          "forma_recente": 0.6818181818181818,
           "ataque": 0.64,
-          "defesa": 0.44000000000000006,
+          "defesa": 0.52,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.5820909090909092
+          "score_total": 0.6426363636363636
         }
       },
-      "leitura_rapida": "Fiorentina e favorito com risco alto. Tendencia de gols: UNDER 2.5.",
+      "leitura_rapida": "Fiorentina favorito (44%, risco alto). Jogo fechado esperado (xG total ≈2.2). Under 2.5 com 61%. | Forma recente: Fiorentina em alta.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "em alta"
+      },
       "historico": {
         "casa": [
-          {
-            "data": "01/02 11:30",
-            "mandante": "Torino",
-            "visitante": "Lecce",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
           {
             "data": "08/02 14:00",
             "mandante": "Lecce",
@@ -89,17 +91,17 @@
             "placar": "3 x 1",
             "resultado": "D",
             "resultado_label": "Derrota"
+          },
+          {
+            "data": "08/03 11:30",
+            "mandante": "Lecce",
+            "visitante": "Cremonese",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
           }
         ],
         "visitante": [
-          {
-            "data": "31/01 17:00",
-            "mandante": "Napoli",
-            "visitante": "Fiorentina",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
           {
             "data": "07/02 19:45",
             "mandante": "Fiorentina",
@@ -131,6 +133,14 @@
             "placar": "3 x 0",
             "resultado": "D",
             "resultado_label": "Derrota"
+          },
+          {
+            "data": "08/03 14:00",
+            "mandante": "Fiorentina",
+            "visitante": "Parma",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
           }
         ]
       },
@@ -138,82 +148,87 @@
         {
           "tipo": "WINNER",
           "opcao": "2",
-          "probabilidade": 0.4367235130956109,
+          "probabilidade": 0.4378032076577638,
           "confianca": "LOW",
-          "justificativa": "Probabilidade de vitória: 43.7%"
+          "justificativa": "Fiorentina: ataque ≈1.6 gols/jogo vs defesa adversária ≈1.6 sofridos/jogo. Prob vitória: 43.8%",
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "UNDER",
-          "probabilidade": 0.5934667153903002,
-          "confianca": "MEDIUM",
-          "justificativa": "UNDER 2.5: 59.3% de probabilidade"
+          "probabilidade": 0.6120740860432884,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈2.2. UNDER 2.5: 61.2% de probabilidade",
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
           "opcao": "NO",
-          "probabilidade": 0.538488550172058,
+          "probabilidade": 0.5545128659368379,
           "confianca": "MEDIUM",
-          "justificativa": "BTTS NO: 53.8% de probabilidade"
+          "justificativa": "xG: 1.0 (casa) x 1.3 (fora). Ambas marcam - Nao: 55.5%",
+          "resultado_verificador": "ERRO"
         }
       ]
     },
     {
       "competicao": "Premier League",
+      "data": "2026-04-20T19:00:00Z",
+      "status": "FINISHED",
+      "placar_atual": {
+        "casa": 0,
+        "visitante": 0
+      },
       "times": {
         "casa": "Crystal Palace",
         "visitante": "West Ham"
       },
       "probabilidades": {
-        "casa": 0.3965364965791243,
-        "empate": 0.2768119313611913,
-        "visitante": 0.32657574932606837
+        "casa": 0.3769867793770126,
+        "empate": 0.30897830543841914,
+        "visitante": 0.31401383634448393
       },
       "favorito": {
         "nome": "Crystal Palace",
-        "prob": 0.3965364965791243,
-        "vantagem": 0.06996074725305595
+        "prob": 0.3769867793770126,
+        "vantagem": 0.06297294303252865
       },
       "gols_esperados": {
-        "casa": 1.264,
-        "visitante": 1.1199999999999999,
-        "total": 2.384
+        "casa": 1.0533333333333335,
+        "visitante": 0.9333333333333333,
+        "total": 1.9866666666666668
       },
       "mercados": {
-        "under_25": 0.5739703690864799,
-        "over_25": 0.42602963091352003,
-        "btts_yes": 0.4833275610392596,
-        "btts_no": 0.5166724389607404
+        "under_25": 0.6803063822654495,
+        "over_25": 0.3196936177345505,
+        "btts_yes": 0.3951248163555837,
+        "btts_no": 0.6048751836444163
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.38181818181818183,
-          "ataque": 0.48,
-          "defesa": 0.44000000000000006,
+          "forma_recente": 0.4818181818181818,
+          "ataque": 0.4,
+          "defesa": 0.5333333333333333,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.5016363636363638
+          "score_total": 0.5353030303030304
         },
         "visitante": {
-          "forma_recente": 0.5636363636363636,
-          "ataque": 0.5599999999999999,
-          "defesa": 0.19999999999999996,
+          "forma_recente": 0.4727272727272727,
+          "ataque": 0.4666666666666667,
+          "defesa": 0.33333333333333326,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.5172727272727272
+          "score_total": 0.48878787878787877
         }
       },
-      "leitura_rapida": "Crystal Palace e favorito com risco alto. Tendencia de gols: UNDER 2.5.",
+      "leitura_rapida": "Crystal Palace favorito (38%, risco alto). Jogo fechado esperado (xG total ≈2.0). Under 2.5 com 68%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
       "historico": {
         "casa": [
-          {
-            "data": "17/01 15:00",
-            "mandante": "Sunderland",
-            "visitante": "Crystal Palace",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
           {
             "data": "25/01 14:00",
             "mandante": "Crystal Palace",
@@ -245,17 +260,17 @@
             "placar": "2 x 3",
             "resultado": "D",
             "resultado_label": "Derrota"
+          },
+          {
+            "data": "22/02 14:00",
+            "mandante": "Crystal Palace",
+            "visitante": "Wolverhampton",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
           }
         ],
         "visitante": [
-          {
-            "data": "24/01 12:30",
-            "mandante": "West Ham",
-            "visitante": "Sunderland",
-            "placar": "3 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
           {
             "data": "31/01 17:30",
             "mandante": "Chelsea",
@@ -287,6 +302,14 @@
             "placar": "0 x 0",
             "resultado": "E",
             "resultado_label": "Empate"
+          },
+          {
+            "data": "28/02 15:00",
+            "mandante": "Liverpool",
+            "visitante": "West Ham",
+            "placar": "5 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
           }
         ]
       },
@@ -294,97 +317,195 @@
         {
           "tipo": "WINNER",
           "opcao": "1",
-          "probabilidade": 0.3965364965791243,
+          "probabilidade": 0.3769867793770126,
           "confianca": "LOW",
-          "justificativa": "Probabilidade de vitória: 39.7%"
+          "justificativa": "Crystal Palace: ataque ≈1.0 gols/jogo vs defesa adversária ≈1.7 sofridos/jogo. Prob vitória: 37.7%",
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "UNDER",
-          "probabilidade": 0.5739703690864799,
-          "confianca": "MEDIUM",
-          "justificativa": "UNDER 2.5: 57.4% de probabilidade"
+          "probabilidade": 0.6803063822654495,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈2.0. UNDER 2.5: 68.0% de probabilidade",
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
           "opcao": "NO",
-          "probabilidade": 0.5166724389607404,
-          "confianca": "MEDIUM",
-          "justificativa": "BTTS NO: 51.7% de probabilidade"
+          "probabilidade": 0.6048751836444163,
+          "confianca": "HIGH",
+          "justificativa": "xG: 1.1 (casa) x 0.9 (fora). Ambas marcam - Nao: 60.5%",
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
     {
       "competicao": "Primeira Liga",
+      "data": "2026-04-20T19:15:00Z",
+      "status": "FINISHED",
+      "placar_atual": {
+        "casa": 1,
+        "visitante": 0
+      },
       "times": {
         "casa": "Moreirense",
         "visitante": "Estoril Praia"
       },
       "probabilidades": {
-        "casa": 0.3647669493251309,
-        "empate": 0.3371857498461953,
-        "visitante": 0.2980396074882892
+        "casa": 0.34826474153585735,
+        "empate": 0.38387357455791665,
+        "visitante": 0.2678599363713649
       },
       "favorito": {
-        "nome": "Moreirense",
-        "prob": 0.3647669493251309,
-        "vantagem": 0.02758119947893556
+        "nome": "Empate",
+        "prob": 0.38387357455791665,
+        "vantagem": 0.035608833022059305
       },
       "gols_esperados": {
-        "casa": 0.9200000000000002,
-        "visitante": 0.8,
-        "total": 1.7200000000000002
+        "casa": 0.76,
+        "visitante": 0.6266666666666667,
+        "total": 1.3866666666666667
       },
       "mercados": {
-        "under_25": 0.7519422616503268,
-        "over_25": 0.2480577383496731,
-        "btts_yes": 0.3312138020453225,
-        "btts_no": 0.6687861979546774
+        "under_25": 0.8367123997441962,
+        "over_25": 0.16328760025580377,
+        "btts_yes": 0.24786960849178605,
+        "btts_no": 0.7521303915082139
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
+          "forma_recente": 0.31818181818181823,
+          "ataque": 0.2,
+          "defesa": 0.4666666666666667,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.555
+          "score_total": 0.41469696969696973
         },
         "visitante": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
+          "forma_recente": 0.38181818181818183,
+          "ataque": 0.24,
+          "defesa": 0.19999999999999996,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.535
+          "score_total": 0.37363636363636366
         }
       },
-      "leitura_rapida": "Moreirense e favorito com risco alto. Tendencia de gols: UNDER 2.5.",
+      "leitura_rapida": "Empate favorito (38%, risco alto). Jogo fechado esperado (xG total ≈1.4). Under 2.5 com 84%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
       "historico": {
-        "casa": [],
-        "visitante": []
+        "casa": [
+          {
+            "data": "07/02 15:30",
+            "mandante": "Moreirense",
+            "visitante": "Gil Vicente",
+            "placar": "1 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "16/02 20:15",
+            "mandante": "Rio Ave",
+            "visitante": "Moreirense",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "21/02 18:00",
+            "mandante": "Moreirense",
+            "visitante": "Sporting CP",
+            "placar": "0 x 3",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "01/03 18:00",
+            "mandante": "Casa Pia",
+            "visitante": "Moreirense",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "07/03 15:30",
+            "mandante": "Moreirense",
+            "visitante": "CD Nacional",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "07/02 18:00",
+            "mandante": "Estoril Praia",
+            "visitante": "Tondela",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "15/02 18:00",
+            "mandante": "AVS",
+            "visitante": "Estoril Praia",
+            "placar": "3 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "22/02 18:00",
+            "mandante": "Estoril Praia",
+            "visitante": "Gil Vicente",
+            "placar": "3 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "27/02 20:45",
+            "mandante": "Sporting CP",
+            "visitante": "Estoril Praia",
+            "placar": "3 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "07/03 20:30",
+            "mandante": "Estoril Praia",
+            "visitante": "Casa Pia",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ]
       },
       "palpites": [
         {
           "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.3647669493251309,
+          "opcao": "X",
+          "probabilidade": 0.38387357455791665,
           "confianca": "LOW",
-          "justificativa": "Probabilidade de vitória: 36.5%"
+          "justificativa": "Jogo equilibrado. Prob empate: 38.4%",
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "UNDER",
-          "probabilidade": 0.7519422616503268,
+          "probabilidade": 0.8367123997441962,
           "confianca": "HIGH",
-          "justificativa": "UNDER 2.5: 75.2% de probabilidade"
+          "justificativa": "Gols esperados no jogo: ≈1.4. UNDER 2.5: 83.7% de probabilidade",
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
           "opcao": "NO",
-          "probabilidade": 0.6687861979546774,
+          "probabilidade": 0.7521303915082139,
           "confianca": "HIGH",
-          "justificativa": "BTTS NO: 66.9% de probabilidade"
+          "justificativa": "xG: 0.8 (casa) x 0.6 (fora). Ambas marcam - Nao: 75.2%",
+          "resultado_verificador": "ACERTO"
         }
       ]
     }

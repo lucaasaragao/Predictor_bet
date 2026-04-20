@@ -253,6 +253,28 @@ function renderTips(container, tips, match) {
   summaryBox.className = "tip-summary";
   summaryBox.textContent = summary;
   container.appendChild(summaryBox);
+
+  (tips || []).forEach(tip => {
+    const tipEl = document.createElement("div");
+    tipEl.className = "tip";
+    
+    let resultMark = "";
+    if (tip.resultado_verificador === "ACERTO") {
+      resultMark = '<span class="tip-mark tip-mark--acerto">✅ Acerto</span>';
+    } else if (tip.resultado_verificador === "ERRO") {
+      resultMark = '<span class="tip-mark tip-mark--erro">❌ Erro</span>';
+    }
+
+    tipEl.innerHTML = `
+      <div class="tag">${translateTipType(tip.tipo)}</div>
+      <div class="conf ${confidenceClass(tip.confianca)}">${confidenceLabel(tip.confianca)}</div>
+      <div class="tip-desc">
+        ${translateTipOption(tip.tipo, tip.opcao)} — <span class="tip-just">${translateTipJustification(tip.justificativa)}</span>
+        ${resultMark}
+      </div>
+    `;
+    container.appendChild(tipEl);
+  });
 }
 
 function renderCards() {
@@ -273,8 +295,36 @@ function renderCards() {
     const node = template.content.cloneNode(true);
     const cardEl = node.querySelector(".card");
 
-    node.querySelector(".competition").textContent = match.competicao;
-    node.querySelector(".match-title").textContent = `${match.times.casa} x ${match.times.visitante}`;
+    let compStr = match.competicao;
+    if (match.data) {
+        const dateObj = new Date(match.data);
+        const day = dateObj.getDate().toString().padStart(2, '0');
+        const month = (dateObj.getMonth() + 1).toString().padStart(2, '0');
+        const hours = dateObj.getHours().toString().padStart(2, '0');
+        const minutes = dateObj.getMinutes().toString().padStart(2, '0');
+        compStr += ` • ${day}/${month} às ${hours}:${minutes}`;
+    }
+    node.querySelector(".competition").textContent = compStr;
+    
+    let titleContent = `${match.times.casa} x ${match.times.visitante}`;
+    if (match.status === "FINISHED" && match.placar_atual && match.placar_atual.casa !== null) {
+      titleContent = `${match.times.casa} ${match.placar_atual.casa} x ${match.placar_atual.visitante} ${match.times.visitante}`;
+    } else if (match.status === "IN_PLAY" || match.status === "PAUSED") {
+      titleContent = `${match.times.casa} ${match.placar_atual?.casa ?? 0} x ${match.placar_atual?.visitante ?? 0} ${match.times.visitante}`;
+    }
+    node.querySelector(".match-title").textContent = titleContent;
+
+    if (match.status === "FINISHED") {
+      const badge = document.createElement("span");
+      badge.className = "card-status-badge card-status-badge--finished";
+      badge.textContent = "Finalizado";
+      node.querySelector(".card-head").appendChild(badge);
+    } else if (match.status === "IN_PLAY" || match.status === "PAUSED") {
+      const badge = document.createElement("span");
+      badge.className = "card-status-badge card-status-badge--live";
+      badge.textContent = "Ao Vivo";
+      node.querySelector(".card-head").appendChild(badge);
+    }
 
     const miniOdds = document.createElement("div");
     miniOdds.className = "mini-odds";
