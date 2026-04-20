@@ -95,7 +95,12 @@ def buscar_jogos_permitidos() -> List[Dict]:
     """Busca jogos das competições permitidas"""
     
     url = f"{API_BASE}/matches/"
-    response = requests.get(url, headers=HEADERS, timeout=30)
+    data_hoje = datetime.now().strftime("%Y-%m-%d")
+    params = {
+        "dateFrom": data_hoje,
+        "dateTo": data_hoje,
+    }
+    response = requests.get(url, headers=HEADERS, params=params, timeout=30)
     
     if response.status_code != 200:
         print(f"❌ Erro ao buscar jogos: {response.status_code}")
