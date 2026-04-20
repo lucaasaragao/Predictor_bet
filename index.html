@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radar de Palpites</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Football Intelligence</p>
+      <h1>Radar de Palpites</h1>
+      <p class="sub">Favoritos, mercado de gols, BTTS e histórico recente em uma visão única.</p>
+    </div>
+    <div class="meta">
+      <div>
+        <span>Atualizado em</span>
+        <strong id="generatedAt">--</strong>
+      </div>
+      <div>
+        <span>Jogos</span>
+        <strong id="totalJogos">--</strong>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="toolbar">
+      <label>
+        Competição
+        <select id="competitionFilter">
+          <option value="">Todas</option>
+        </select>
+      </label>
+      <label>
+        Confiança mínima
+        <select id="confidenceFilter">
+          <option value="LOW">LOW</option>
+          <option value="MEDIUM">MEDIUM</option>
+          <option value="HIGH">HIGH</option>
+        </select>
+      </label>
+    </section>
+
+    <section id="cardsContainer" class="cards"></section>
+  </main>
+
+  <template id="matchCardTemplate">
+    <article class="card">
+      <div class="card-head">
+        <p class="competition"></p>
+        <h2 class="match-title"></h2>
+      </div>
+
+      <div class="grid-2">
+        <section class="panel emphasis">
+          <h3>Favorito e chances</h3>
+          <p class="favorite-line"></p>
+          <div class="prob-bars"></div>
+          <p class="quick-read"></p>
+        </section>
+
+        <section class="panel">
+          <h3>Mercado de gols</h3>
+          <ul class="market-list"></ul>
+        </section>
+      </div>
+
+      <div class="grid-2">
+        <section class="panel">
+          <h3>Histórico - Casa</h3>
+          <ul class="history home-history"></ul>
+        </section>
+        <section class="panel">
+          <h3>Histórico - Visitante</h3>
+          <ul class="history away-history"></ul>
+        </section>
+      </div>
+
+      <section class="panel">
+        <h3>Palpites</h3>
+        <div class="tips"></div>
+      </section>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
