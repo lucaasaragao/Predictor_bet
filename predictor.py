@@ -72,6 +72,8 @@ class PredicaoJogo:
     competicao: str
     historico_casa: List[Dict]
     historico_visitante: List[Dict]
+    tendencia_casa: str
+    tendencia_visitante: str
 
 
 @dataclass
@@ -173,6 +175,38 @@ def calcular_estatisticas(historico: List[Dict], team_id: int, eh_em_casa: bool)
         cartoes_media=2.0,      # Placeholder
         jogos=len(gols_marcados)
     )
+
+
+def calcular_tendencia_forma(historico: List[Dict], team_id: int) -> str:
+    """Compara forma dos últimos 3 vs últimos 5 jogos para detectar time em alta/baixa"""
+
+    def aproveitamento(matches: List[Dict]) -> float:
+        pts = 0
+        total = len(matches) * 3
+        for m in matches:
+            home_id = m.get("homeTeam", {}).get("id")
+            h = m.get("score", {}).get("fullTime", {}).get("home", 0) or 0
+            a = m.get("score", {}).get("fullTime", {}).get("away", 0) or 0
+            if home_id == team_id:
+                if h > a: pts += 3
+                elif h == a: pts += 1
+            else:
+                if a > h: pts += 3
+                elif a == h: pts += 1
+        return pts / total if total else 0.5
+
+    if len(historico) < 3:
+        return "indefinida"
+
+    forma_3 = aproveitamento(historico[:3])
+    forma_5 = aproveitamento(historico[:5]) if len(historico) >= 5 else forma_3
+    diff = forma_3 - forma_5
+
+    if diff > 0.15:
+        return "em alta"
+    elif diff < -0.15:
+        return "em baixa"
+    return "estavel"
 
 
 def aplicar_pesos_temporais(historico: List[Dict], team_id: int) -> float:
@@ -311,6 +345,9 @@ def prever_jogo(match: Dict) -> PredicaoJogo:
     
     mercados = calcular_probabilidades_mercado(lambda_home, lambda_away)
     
+    tendencia_casa = calcular_tendencia_forma(hist_home, home_id)
+    tendencia_visitante = calcular_tendencia_forma(hist_away, away_id)
+
     return PredicaoJogo(
         time_casa=home_team.get("shortName") or home_team.get("name", ""),
         time_visitante=away_team.get("shortName") or away_team.get("name", ""),
@@ -324,6 +361,8 @@ def prever_jogo(match: Dict) -> PredicaoJogo:
         competicao=match.get("competition", {}).get("name", "Desconhecido"),
         historico_casa=hist_home,
         historico_visitante=hist_away,
+        tendencia_casa=tendencia_casa,
+        tendencia_visitante=tendencia_visitante,
     )
 
 
@@ -343,42 +382,67 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
         (predicao.prob_visitante, "2"),
     ]
     prob_max, opcao = max(probs, key=lambda x: x[0])
-    
+
     if prob_max > 0.55:
         confianca = "HIGH"
     elif prob_max > 0.45:
         confianca = "MEDIUM"
     else:
         confianca = "LOW"
-    
+
+    # Justificativa cruzada: ataque do favorito vs defesa do adversário
+    if opcao == "1":
+        ataque_fav = predicao.score_casa.ataque * 2.5
+        defesa_adv = (1.0 - predicao.score_visitante.defesa) * 2.5
+        nome_fav = predicao.time_casa
+    elif opcao == "2":
+        ataque_fav = predicao.score_visitante.ataque * 2.5
+        defesa_adv = (1.0 - predicao.score_casa.defesa) * 2.5
+        nome_fav = predicao.time_visitante
+    else:
+        ataque_fav = defesa_adv = None
+        nome_fav = "Empate"
+
+    if ataque_fav is not None:
+        just_winner = (
+            f"{nome_fav}: ataque ≈{ataque_fav:.1f} gols/jogo vs defesa adversária ≈{defesa_adv:.1f} sofridos/jogo. "
+            f"Prob vitória: {prob_max*100:.1f}%"
+        )
+    else:
+        just_winner = f"Jogo equilibrado. Prob empate: {prob_max*100:.1f}%"
+
     palpites.append(BetSuggestion(
         tipo="WINNER",
         opcao=opcao,
         probabilidade=prob_max,
         confianca=confianca,
-        justificativa=f"Probabilidade de vitória: {prob_max*100:.1f}%"
+        justificativa=just_winner,
     ))
-    
+
     # Palpite: Over/Under 2.5
     prob_over = mercados["over_25"]
     prob_under = mercados["under_25"]
-    
+
     bet_type = "OVER" if prob_over > prob_under else "UNDER"
     prob = max(prob_over, prob_under)
-    
+    total_esperado = predicao.gols_esperados_casa + predicao.gols_esperados_visitante
+
     if prob > 0.60:
         confianca = "HIGH"
     elif prob > 0.50:
         confianca = "MEDIUM"
     else:
         confianca = "LOW"
-    
+
     palpites.append(BetSuggestion(
         tipo="OVER_UNDER",
         opcao=bet_type,
         probabilidade=prob,
         confianca=confianca,
-        justificativa=f"{bet_type} 2.5: {prob*100:.1f}% de probabilidade"
+        justificativa=(
+            f"Gols esperados no jogo: ≈{total_esperado:.1f}. "
+            f"{'UNDER' if bet_type == 'UNDER' else 'OVER'} 2.5: {prob*100:.1f}% de probabilidade"
+        ),
     ))
 
     # Palpite: BTTS (ambos marcam)
@@ -394,14 +458,35 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
     else:
         confianca = "LOW"
 
+    xg_casa = predicao.gols_esperados_casa
+    xg_fora = predicao.gols_esperados_visitante
     palpites.append(BetSuggestion(
         tipo="BTTS",
         opcao=btts_opcao,
         probabilidade=btts_prob,
         confianca=confianca,
-        justificativa=f"BTTS {btts_opcao}: {btts_prob*100:.1f}% de probabilidade"
+        justificativa=(
+            f"xG: {xg_casa:.1f} (casa) x {xg_fora:.1f} (fora). "
+            f"Ambas marcam - {'Sim' if btts_opcao == 'YES' else 'Nao'}: {btts_prob*100:.1f}%"
+        ),
     ))
-    
+
+    # Palpite: Empate vantajoso — defesas sólidas e prob > 30%
+    defesa_casa = predicao.score_casa.defesa
+    defesa_fora = predicao.score_visitante.defesa
+    if predicao.prob_empate > 0.30 and defesa_casa > 0.50 and defesa_fora > 0.50:
+        confianca_emp = "MEDIUM" if predicao.prob_empate > 0.35 else "LOW"
+        palpites.append(BetSuggestion(
+            tipo="EMPATE",
+            opcao="X",
+            probabilidade=predicao.prob_empate,
+            confianca=confianca_emp,
+            justificativa=(
+                f"Ambas defesas solidas ({defesa_casa*100:.0f}% / {defesa_fora*100:.0f}% de aproveitamento defensivo). "
+                f"Empate com {predicao.prob_empate*100:.1f}% de probabilidade"
+            ),
+        ))
+
     return palpites
 
 
@@ -491,9 +576,27 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
         ranking.sort(key=lambda item: item["prob"], reverse=True)
         favorito = ranking[0]
         diferenca = max(0.0, ranking[0]["prob"] - ranking[1]["prob"])
+
+        total_gols = pred.gols_esperados_casa + pred.gols_esperados_visitante
+        if mercados["under_25"] >= 0.58:
+            cenario_gols = f"Jogo fechado esperado (xG total ≈{total_gols:.1f}). Under 2.5 com {mercados['under_25']*100:.0f}%."
+        elif mercados["over_25"] >= 0.55:
+            cenario_gols = f"Jogo mais aberto (xG total ≈{total_gols:.1f}). Over 2.5 com {mercados['over_25']*100:.0f}%."
+        else:
+            cenario_gols = f"Mercado de gols equilibrado (xG total ≈{total_gols:.1f})."
+
+        tendencia_partes = []
+        if pred.tendencia_casa not in ("estavel", "indefinida"):
+            tendencia_partes.append(f"{pred.time_casa} {pred.tendencia_casa}")
+        if pred.tendencia_visitante not in ("estavel", "indefinida"):
+            tendencia_partes.append(f"{pred.time_visitante} {pred.tendencia_visitante}")
+        tendencia_txt = (" | Forma recente: " + ", ".join(tendencia_partes) + ".") if tendencia_partes else ""
+
+        confianca_fav = _texto_risco(favorito["prob"])
         leitura = (
-            f"{favorito['nome']} e favorito com risco {_texto_risco(favorito['prob'])}. "
-            f"Tendencia de gols: {'UNDER' if mercados['under_25'] >= mercados['over_25'] else 'OVER'} 2.5."
+            f"{favorito['nome']} favorito ({favorito['prob']*100:.0f}%, risco {confianca_fav}). "
+            f"{cenario_gols}"
+            f"{tendencia_txt}"
         )
 
         palpites = [asdict(item) for item in gerar_palpites(pred)]
@@ -530,6 +633,10 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
                     "visitante": asdict(pred.score_visitante),
                 },
                 "leitura_rapida": leitura,
+                "tendencia": {
+                    "casa": pred.tendencia_casa,
+                    "visitante": pred.tendencia_visitante,
+                },
                 "historico": {
                     "casa": _normalizar_historico_para_front(pred.historico_casa, pred.time_casa),
                     "visitante": _normalizar_historico_para_front(pred.historico_visitante, pred.time_visitante),

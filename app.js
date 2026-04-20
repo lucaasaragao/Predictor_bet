@@ -18,6 +18,11 @@ function confidenceClass(conf) {
   return (conf || "LOW").toLowerCase();
 }
 
+function confidenceLabel(conf) {
+  const labels = { LOW: "Baixa", MEDIUM: "Média", HIGH: "Alta" };
+  return labels[(conf || "LOW").toUpperCase()] || conf;
+}
+
 function historyBadgeClass(result) {
   if (result === "V") return "v";
   if (result === "E") return "e";
@@ -29,6 +34,7 @@ function translateTipType(type) {
     WINNER: "Vencedor",
     OVER_UNDER: "Gols 2.5",
     BTTS: "Ambas Marcam",
+    EMPATE: "Empate",
   };
   return labels[type] || type;
 }
@@ -65,7 +71,9 @@ function translateTipJustification(text) {
 function translateQuickRead(text) {
   return String(text || "")
     .replaceAll("UNDER 2.5", "Menos de 2.5 gols")
-    .replaceAll("OVER 2.5", "Mais de 2.5 gols");
+    .replaceAll("OVER 2.5", "Mais de 2.5 gols")
+    .replaceAll("em alta", "\u2197 em alta")
+    .replaceAll("em baixa", "\u2198 em baixa");
 }
 
 async function loadData() {
@@ -136,10 +144,16 @@ function renderHistory(listEl, items) {
   listEl.innerHTML = "";
   (items || []).slice(0, 5).forEach((row) => {
     const li = document.createElement("li");
-    li.innerHTML = `
-      <span>${row.data} - ${row.mandante} x ${row.visitante} (${row.placar})</span>
-      <span class="badge ${historyBadgeClass(row.resultado)}">${row.resultado_label}</span>
-    `;
+
+    const info = document.createElement("span");
+    info.textContent = `${row.data} - ${row.mandante} x ${row.visitante} (${row.placar})`;
+
+    const badge = document.createElement("span");
+    badge.className = `badge ${historyBadgeClass(row.resultado)}`;
+    badge.textContent = row.resultado_label;
+
+    li.appendChild(info);
+    li.appendChild(badge);
     listEl.appendChild(li);
   });
 
@@ -161,11 +175,24 @@ function renderTips(container, tips, match) {
       : translateTipOption(tip.tipo, tip.opcao);
     const translatedJustification = translateTipJustification(tip.justificativa);
     row.className = "tip";
-    row.innerHTML = `
-      <span class="tag">${translatedType}</span>
-      <span class="conf ${confidenceClass(conf)}">${conf}</span>
-      <span><strong>${translatedOption}</strong> - ${pct(tip.probabilidade)}. ${translatedJustification}</span>
-    `;
+
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = translatedType;
+
+    const confEl = document.createElement("span");
+    confEl.className = `conf ${confidenceClass(conf)}`;
+    confEl.textContent = confidenceLabel(conf);
+
+    const detail = document.createElement("span");
+    const strong = document.createElement("strong");
+    strong.textContent = translatedOption;
+    detail.appendChild(strong);
+    detail.appendChild(document.createTextNode(` - ${pct(tip.probabilidade)}. ${translatedJustification}`));
+
+    row.appendChild(tag);
+    row.appendChild(confEl);
+    row.appendChild(detail);
     container.appendChild(row);
   });
 }
@@ -187,18 +214,35 @@ function renderCards() {
 
     node.querySelector(".competition").textContent = match.competicao;
     node.querySelector(".match-title").textContent = `${match.times.casa} vs ${match.times.visitante}`;
-    node.querySelector(".favorite-line").textContent = `Favorito: ${match.favorito.nome} (${pct(match.favorito.prob)}) | vantagem: ${pct(match.favorito.vantagem)}`;
+    node.querySelector(".favorite-line").textContent =
+      `${match.favorito.nome} — ${pct(match.favorito.prob)} de chance | margem ${pct(match.favorito.vantagem)}`;
     node.querySelector(".quick-read").textContent = translateQuickRead(match.leitura_rapida);
+
+    // Tendência de forma
+    const formaRow = node.querySelector(".forma-row");
+    const tendencia = match.tendencia || {};
+    const formaLabel = { "em alta": "↗ em alta", "em baixa": "↘ em baixa", "estavel": "→ estável", "indefinida": null };
+    const formaClass = { "em alta": "forma--alta", "em baixa": "forma--baixa", "estavel": "forma--estavel" };
+    [[match.times.casa, tendencia.casa], [match.times.visitante, tendencia.visitante]].forEach(([nome, tend]) => {
+      const label = formaLabel[tend];
+      if (!label) return;
+      const pill = document.createElement("span");
+      pill.className = `forma-pill ${formaClass[tend] || ""}`;
+      pill.textContent = `${nome} ${label}`;
+      formaRow.appendChild(pill);
+    });
 
     renderProbabilities(node.querySelector(".prob-bars"), match);
 
+    const xgCasa = (match.gols_esperados.casa || 0).toFixed(2);
+    const xgFora = (match.gols_esperados.visitante || 0).toFixed(2);
     const marketList = node.querySelector(".market-list");
     marketList.innerHTML = `
+      <li class="market-xg"><span>xG esperado</span><strong>${xgCasa} × ${xgFora}</strong></li>
       <li><span>Menos de 2.5 gols</span><strong>${pct(match.mercados.under_25)}</strong></li>
       <li><span>Mais de 2.5 gols</span><strong>${pct(match.mercados.over_25)}</strong></li>
       <li><span>Ambas Marcam - Sim</span><strong>${pct(match.mercados.btts_yes)}</strong></li>
       <li><span>Ambas Marcam - Nao</span><strong>${pct(match.mercados.btts_no)}</strong></li>
-      <li><span>xG total</span><strong>${match.gols_esperados.total.toFixed(2)}</strong></li>
     `;
 
     renderHistory(node.querySelector(".home-history"), match.historico.casa);
@@ -230,6 +274,10 @@ function setupFilters() {
     setupFilters();
     renderCards();
   } catch (error) {
-    document.getElementById("cardsContainer").innerHTML = `<div class="empty">Erro ao carregar dados: ${error.message}</div>`;
+    const errContainer = document.getElementById("cardsContainer");
+    const errDiv = document.createElement("div");
+    errDiv.className = "empty";
+    errDiv.textContent = `Erro ao carregar dados: ${error.message}`;
+    errContainer.appendChild(errDiv);
   }
 })();
