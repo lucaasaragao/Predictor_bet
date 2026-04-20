@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Radar de Palpites — Análise Estatística de Futebol</title>
-  <meta name="description" content="Palpites e análises estatísticas de futebol baseados em modelos probabilísticos. Mercado de gols, BTTS, favoritos e tendência de forma." />
+  <title>Radar de Palpites — Probabilidades de Futebol</title>
+  <meta name="description" content="Probabilidades e leituras rápidas de jogos de futebol com base em dados estatísticos." />
   <meta property="og:title" content="Radar de Palpites" />
-  <meta property="og:description" content="Palpites e análises estatísticas de futebol baseados em modelos probabilísticos. Mercado de gols, BTTS, favoritos e tendência de forma." />
+  <meta property="og:description" content="Probabilidades e leituras rápidas de jogos de futebol com base em dados estatísticos." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>" />
+  <link rel="icon" href="assets/fav-icon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -23,7 +23,7 @@
       <p class="age-gate__eyebrow">Acesso Restrito</p>
       <div class="age-gate__icon" aria-hidden="true">🔞</div>
       <h2 id="ageGateTitle" class="age-gate__title">Você é maior de 18 anos?</h2>
-      <p class="age-gate__desc">Este site contém conteúdo relacionado a apostas esportivas. O acesso é permitido apenas para maiores de 18 anos.</p>
+      <p class="age-gate__desc">Este site trata de apostas esportivas. O acesso é permitido apenas para maiores de 18 anos.</p>
       <div class="age-gate__actions">
         <button id="ageYes" class="age-gate__btn age-gate__btn--yes">Sim, tenho 18 anos ou mais</button>
         <button id="ageNo" class="age-gate__btn age-gate__btn--no">Não, sou menor de 18</button>
@@ -45,19 +45,20 @@
   <div class="bg-noise" aria-hidden="true"></div>
   <header class="topbar">
     <div class="topbar__brand">
+      <!-- <img src="assets/logo.png" alt="Radar de Palpites" class="brand-logo" /> -->
       <p class="eyebrow">
         <span class="eyebrow__dot" aria-hidden="true"></span>
         Football Intelligence
       </p>
       <h1>
-        <span class="h1__icon" aria-hidden="true">⚽</span>
+        <img class="h1__icon-img" src="assets/fav-icon.png" alt="" aria-hidden="true" />
         Radar de Palpites
       </h1>
       <div class="feature-chips" aria-label="Funcionalidades">
-        <span class="chip">Favoritos</span>
-        <span class="chip">Mercado de Gols</span>
+        <span class="chip"><img src="assets/palpite.png" class="chip-icon" alt="" aria-hidden="true" />Favoritos</span>
+        <span class="chip"><img src="assets/Probabilidade.png" class="chip-icon" alt="" aria-hidden="true" />Probabilidade de gols</span>
         <span class="chip">BTTS</span>
-        <span class="chip">Histórico</span>
+        <span class="chip"><img src="assets/historico.png" class="chip-icon" alt="" aria-hidden="true" />Últimos jogos</span>
       </div>
     </div>
     <div class="meta">
@@ -82,19 +83,26 @@
   <main>
     <section class="toolbar">
       <label>
-        Competição
+        <span class="label-with-icon">Competição</span>
         <select id="competitionFilter">
           <option value="">Todas</option>
         </select>
       </label>
       <label>
-        Confiança mínima
+        Confiança mínima dos palpites
         <select id="confidenceFilter">
           <option value="LOW">Baixa</option>
           <option value="MEDIUM">Média</option>
           <option value="HIGH">Alta</option>
         </select>
       </label>
+
+      <div class="confidence-legend" aria-live="polite">
+        <span id="confChipLow" class="legend-chip legend-chip--low">Baixa: entradas com probabilidades baixas</span>
+        <span id="confChipMedium" class="legend-chip legend-chip--medium">Média: entradas com probabilidades médias</span>
+        <span id="confChipHigh" class="legend-chip legend-chip--high">Alta: entradas com probabilidades altas</span>
+        <span id="confidenceHelp" class="legend-count"></span>
+      </div>
     </section>
 
     <section id="cardsContainer" class="cards"></section>
@@ -109,7 +117,7 @@
 
       <div class="grid-2">
         <section class="panel emphasis">
-          <h3>Favorito e chances</h3>
+          <h3>Time mais provável</h3>
           <p class="favorite-line"></p>
           <div class="forma-row"></div>
           <div class="prob-bars"></div>
@@ -117,24 +125,24 @@
         </section>
 
         <section class="panel">
-          <h3>Mercado de gols</h3>
+          <h3>Probabilidades de gols</h3>
           <ul class="market-list"></ul>
         </section>
       </div>
 
       <div class="grid-2">
         <section class="panel">
-          <h3>Histórico - Casa</h3>
+          <h3>Últimos jogos - Casa</h3>
           <ul class="history home-history"></ul>
         </section>
         <section class="panel">
-          <h3>Histórico - Visitante</h3>
+          <h3>Últimos jogos - Visitante</h3>
           <ul class="history away-history"></ul>
         </section>
       </div>
 
       <section class="panel">
-        <h3>Palpites</h3>
+        <h3>Sugestões do modelo</h3>
         <div class="tips"></div>
       </section>
     </article>

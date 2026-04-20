@@ -1,0 +1,582 @@
+
+<!DOCTYPE html>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0a0c0f;
+  --ink-2:#23272e;
+  --ink-3:#3e444f;
+  --muted:#6b7280;
+  --muted-2:#9ca3af;
+  --line:rgba(255,255,255,0.08);
+  --line-2:rgba(255,255,255,0.14);
+  --surface:#12151c;
+  --surface-2:#1a1e28;
+  --surface-3:#222736;
+  --signal:#00e87c;
+  --signal-dim:rgba(0,232,124,0.12);
+  --signal-glow:rgba(0,232,124,0.2);
+  --amber:#f59e0b;
+  --amber-dim:rgba(245,158,11,0.12);
+  --red:#ef4444;
+  --red-dim:rgba(239,68,68,0.12);
+  --white:#f0f2f5;
+  --mono:'JetBrains Mono',monospace;
+  --display:'Syne',sans-serif;
+  --body:'DM Sans',system-ui,sans-serif;
+}
+body{font-family:var(--body);background:var(--ink);color:var(--white);-webkit-font-smoothing:antialiased;}
+
+/* ── SECTIONS ─────────────── */
+.section{padding:3rem 2.5rem;border-bottom:1px solid var(--line);}
+.section:last-child{border-bottom:none;}
+.label{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:var(--muted);margin-bottom:2rem;display:flex;align-items:center;gap:.75rem;}
+.label::after{content:'';flex:1;height:1px;background:var(--line-2);}
+
+/* ── LOGO SECTION ─────────────── */
+.logo-area{display:flex;align-items:center;justify-content:space-between;gap:3rem;}
+.logo-main{display:flex;align-items:center;gap:1.25rem;}
+.logo-mark{
+  width:52px;height:52px;
+  background:var(--signal);
+  border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+  flex-shrink:0;
+}
+.logo-mark svg{width:30px;height:30px;}
+.logo-text-block{}
+.logo-name{font-family:var(--display);font-size:1.9rem;font-weight:800;letter-spacing:-.04em;color:var(--white);line-height:1;}
+.logo-tag{font-family:var(--mono);font-size:9.5px;text-transform:uppercase;letter-spacing:.2em;color:var(--signal);margin-top:.35rem;}
+.logo-variants{display:flex;flex-direction:column;gap:1rem;}
+.logo-sm{display:flex;align-items:center;gap:.7rem;}
+.logo-mark-sm{width:32px;height:32px;background:var(--signal);border-radius:9px;display:flex;align-items:center;justify-content:center;}
+.logo-mark-sm svg{width:18px;height:18px;}
+.logo-name-sm{font-family:var(--display);font-size:1.1rem;font-weight:800;letter-spacing:-.03em;color:var(--white);}
+.logo-mono{display:flex;align-items:center;gap:.7rem;}
+.logo-mark-mono{width:32px;height:32px;background:var(--surface-3);border:1px solid var(--line-2);border-radius:9px;display:flex;align-items:center;justify-content:center;}
+.logo-mark-mono svg{width:18px;height:18px;}
+.logo-name-mono{font-family:var(--display);font-size:1.1rem;font-weight:800;letter-spacing:-.03em;color:var(--muted-2);}
+.logo-negative{background:var(--white);border-radius:10px;padding:.6rem .9rem;display:inline-flex;align-items:center;gap:.7rem;}
+.logo-mark-neg{width:32px;height:32px;background:var(--ink);border-radius:9px;display:flex;align-items:center;justify-content:center;}
+.logo-mark-neg svg{width:18px;height:18px;}
+.logo-name-neg{font-family:var(--display);font-size:1.1rem;font-weight:800;letter-spacing:-.03em;color:var(--ink);}
+
+/* ── PALETTE ─────────────── */
+.palette-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:.5rem;}
+.swatch{border-radius:10px;padding:.9rem .5rem .75rem;text-align:center;display:flex;flex-direction:column;gap:.4rem;}
+.swatch-label{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.05em;}
+.swatch-hex{font-family:var(--mono);font-size:8px;opacity:.7;}
+
+/* ── TYPOGRAPHY ─────────────── */
+.type-samples{display:flex;flex-direction:column;gap:2rem;}
+.type-row{display:flex;align-items:baseline;gap:2rem;}
+.type-meta{min-width:140px;display:flex;flex-direction:column;gap:.2rem;}
+.type-meta-name{font-family:var(--mono);font-size:9px;color:var(--signal);text-transform:uppercase;letter-spacing:.12em;}
+.type-meta-spec{font-family:var(--mono);font-size:9px;color:var(--muted);margin-top:2px;}
+.type-divider{width:1px;height:2rem;background:var(--line-2);flex-shrink:0;}
+.t-hero{font-family:var(--display);font-size:3rem;font-weight:800;letter-spacing:-.04em;color:var(--white);line-height:1;}
+.t-h1{font-family:var(--display);font-size:2rem;font-weight:700;letter-spacing:-.03em;color:var(--white);line-height:1.1;}
+.t-h2{font-family:var(--display);font-size:1.3rem;font-weight:600;letter-spacing:-.02em;color:var(--white);}
+.t-body{font-family:var(--body);font-size:14px;font-weight:400;color:var(--muted-2);line-height:1.6;}
+.t-caption{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);}
+.t-number{font-family:var(--mono);font-size:2.2rem;font-weight:500;color:var(--signal);}
+
+/* ── COMPONENTS ─────────────── */
+.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.comp-area{display:flex;flex-direction:column;gap:1rem;}
+.comp-title{font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:.25rem;}
+
+/* Badge */
+.badge-row{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;}
+.badge{display:inline-flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:8.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border-radius:50%;width:22px;height:22px;}
+.badge.v{background:rgba(0,232,124,.14);color:var(--signal);border:1px solid rgba(0,232,124,.25);}
+.badge.e{background:rgba(245,158,11,.14);color:var(--amber);border:1px solid rgba(245,158,11,.25);}
+.badge.d{background:rgba(239,68,68,.14);color:var(--red);border:1px solid rgba(239,68,68,.25);}
+
+/* Confidence tags */
+.conf{font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border-radius:4px;padding:3px 8px;}
+.conf.high{background:rgba(0,232,124,.12);color:var(--signal);border:1px solid rgba(0,232,124,.22);}
+.conf.medium{background:rgba(245,158,11,.12);color:var(--amber);border:1px solid rgba(245,158,11,.22);}
+.conf.low{background:rgba(239,68,68,.12);color:var(--red);border:1px solid rgba(239,68,68,.22);}
+
+/* Chip */
+.chip{font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.1em;padding:3px 9px;border-radius:99px;border:1px solid var(--line-2);color:var(--muted-2);background:var(--surface-2);}
+
+/* Prob bar */
+.prob-demo{display:flex;flex-direction:column;gap:5px;padding:1rem;background:var(--surface-2);border:1px solid var(--line-2);border-radius:12px;}
+.prob-row{display:grid;grid-template-columns:90px 1fr 42px;align-items:center;gap:8px;font-size:11px;}
+.prob-row span:first-child{color:var(--muted-2);}
+.prob-track{height:3px;background:rgba(255,255,255,.06);border-radius:99px;overflow:hidden;}
+.prob-fill{height:100%;border-radius:99px;}
+.prob-fill.h{background:linear-gradient(90deg,var(--signal),#00c46a);}
+.prob-fill.m{background:var(--amber);}
+.prob-fill.l{background:var(--red);}
+.prob-row strong{font-family:var(--mono);font-size:10px;color:var(--white);text-align:right;}
+
+/* Card mini */
+.mini-card{background:var(--surface);border:1px solid var(--line-2);border-radius:16px;overflow:hidden;}
+.mini-card-head{padding:.65rem 1rem;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;}
+.mini-comp{font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);}
+.mini-title{font-family:var(--display);font-size:.85rem;font-weight:600;color:var(--white);}
+.mini-body{padding:.75rem 1rem;}
+
+/* Status pill */
+.status-live{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--signal);background:rgba(0,232,124,.1);border:1px solid rgba(0,232,124,.2);padding:3px 10px;border-radius:99px;}
+.status-dot{width:5px;height:5px;border-radius:50%;background:var(--signal);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* ── ICONOGRAPHY ─────────────── */
+.icon-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:1rem;}
+.icon-item{display:flex;flex-direction:column;align-items:center;gap:.5rem;}
+.icon-box{width:44px;height:44px;background:var(--surface-2);border:1px solid var(--line-2);border-radius:10px;display:flex;align-items:center;justify-content:center;}
+.icon-box svg{width:20px;height:20px;color:var(--muted-2);}
+.icon-box.accent{background:var(--signal-dim);border-color:rgba(0,232,124,.2);}
+.icon-box.accent svg{color:var(--signal);}
+.icon-name{font-family:var(--mono);font-size:8px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;text-align:center;}
+
+/* ── SPACING ─────────────── */
+.space-row{display:flex;align-items:flex-end;gap:1rem;}
+.space-item{display:flex;flex-direction:column;align-items:flex-start;gap:.4rem;}
+.space-block{background:var(--signal-dim);border:1px solid rgba(0,232,124,.2);border-radius:3px;}
+.space-label{font-family:var(--mono);font-size:8px;color:var(--muted);}
+
+/* ── COLOR USAGE ─────────────── */
+.usage-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;}
+.usage-card{padding:1rem;border-radius:12px;border:1px solid var(--line-2);}
+</style>
+
+<!-- HEADER -->
+<div style="padding:2rem 2.5rem 1.5rem;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:flex-end;">
+  <div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.2em;color:#00e87c;margin-bottom:.4rem;">Brand Identity System</div>
+    <div style="font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;letter-spacing:-.03em;color:#f0f2f5;">Radar de Palpites</div>
+  </div>
+  <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#6b7280;">v1.0 · 2026</div>
+</div>
+
+<!-- 1. LOGO -->
+<div class="section">
+  <div class="label">01 — Logotipo</div>
+  <div class="logo-area">
+    <!-- Logo principal -->
+    <div class="logo-main">
+      <div class="logo-mark">
+        <svg viewBox="0 0 30 30" fill="none">
+          <!-- Radar circles -->
+          <circle cx="15" cy="15" r="13" stroke="#0a0c0f" stroke-width="1" opacity=".3"/>
+          <circle cx="15" cy="15" r="9" stroke="#0a0c0f" stroke-width="1" opacity=".3"/>
+          <circle cx="15" cy="15" r="5" stroke="#0a0c0f" stroke-width="1" opacity=".3"/>
+          <!-- Crosshair lines -->
+          <line x1="2" y1="15" x2="28" y2="15" stroke="#0a0c0f" stroke-width=".8" opacity=".4"/>
+          <line x1="15" y1="2" x2="15" y2="28" stroke="#0a0c0f" stroke-width=".8" opacity=".4"/>
+          <!-- Radar sweep (filled wedge) -->
+          <path d="M15 15 L25.2 7.8 A13 13 0 0 1 26.5 15 Z" fill="#0a0c0f" opacity=".18"/>
+          <!-- Center dot -->
+          <circle cx="15" cy="15" r="2.5" fill="#0a0c0f"/>
+          <!-- Blip -->
+          <circle cx="22" cy="10" r="2" fill="#0a0c0f" opacity=".85"/>
+          <circle cx="22" cy="10" r="3.5" fill="#0a0c0f" opacity=".15"/>
+        </svg>
+      </div>
+      <div class="logo-text-block">
+        <div class="logo-name">Radar</div>
+        <div style="font-family:'Syne',sans-serif;font-size:1.9rem;font-weight:400;letter-spacing:.01em;color:rgba(240,242,245,.55);line-height:1;margin-top:-.1rem;">de Palpites</div>
+        <div class="logo-tag">Football Intelligence</div>
+      </div>
+    </div>
+
+    <!-- Variações -->
+    <div class="logo-variants">
+      <div class="comp-title">Variações</div>
+      <!-- Small -->
+      <div class="logo-sm">
+        <div class="logo-mark-sm">
+          <svg viewBox="0 0 30 30" fill="none" width="18" height="18">
+            <circle cx="15" cy="15" r="13" stroke="#0a0c0f" stroke-width="1.2" opacity=".3"/>
+            <circle cx="15" cy="15" r="8" stroke="#0a0c0f" stroke-width="1.2" opacity=".3"/>
+            <line x1="2" y1="15" x2="28" y2="15" stroke="#0a0c0f" stroke-width=".8" opacity=".4"/>
+            <line x1="15" y1="2" x2="15" y2="28" stroke="#0a0c0f" stroke-width=".8" opacity=".4"/>
+            <path d="M15 15 L25.2 7.8 A13 13 0 0 1 26.5 15 Z" fill="#0a0c0f" opacity=".2"/>
+            <circle cx="15" cy="15" r="2.5" fill="#0a0c0f"/>
+            <circle cx="22" cy="10" r="1.8" fill="#0a0c0f" opacity=".9"/>
+          </svg>
+        </div>
+        <div class="logo-name-sm">Radar de Palpites</div>
+      </div>
+      <!-- Mono -->
+      <div class="logo-mono">
+        <div class="logo-mark-mono">
+          <svg viewBox="0 0 30 30" fill="none" width="18" height="18">
+            <circle cx="15" cy="15" r="13" stroke="rgba(240,242,245,.3)" stroke-width="1.2"/>
+            <circle cx="15" cy="15" r="8" stroke="rgba(240,242,245,.3)" stroke-width="1.2"/>
+            <line x1="2" y1="15" x2="28" y2="15" stroke="rgba(240,242,245,.3)" stroke-width=".8"/>
+            <line x1="15" y1="2" x2="15" y2="28" stroke="rgba(240,242,245,.3)" stroke-width=".8"/>
+            <path d="M15 15 L25.2 7.8 A13 13 0 0 1 26.5 15 Z" fill="rgba(240,242,245,.15)"/>
+            <circle cx="15" cy="15" r="2.5" fill="rgba(240,242,245,.6)"/>
+            <circle cx="22" cy="10" r="1.8" fill="rgba(240,242,245,.5)"/>
+          </svg>
+        </div>
+        <div class="logo-name-mono">Radar de Palpites</div>
+      </div>
+      <!-- Negativo -->
+      <div class="logo-negative">
+        <div class="logo-mark-neg">
+          <svg viewBox="0 0 30 30" fill="none" width="18" height="18">
+            <circle cx="15" cy="15" r="13" stroke="rgba(0,232,124,.4)" stroke-width="1.2"/>
+            <circle cx="15" cy="15" r="8" stroke="rgba(0,232,124,.4)" stroke-width="1.2"/>
+            <line x1="2" y1="15" x2="28" y2="15" stroke="rgba(0,232,124,.4)" stroke-width=".8"/>
+            <line x1="15" y1="2" x2="15" y2="28" stroke="rgba(0,232,124,.4)" stroke-width=".8"/>
+            <path d="M15 15 L25.2 7.8 A13 13 0 0 1 26.5 15 Z" fill="rgba(0,232,124,.15)"/>
+            <circle cx="15" cy="15" r="2.5" fill="#00e87c"/>
+            <circle cx="22" cy="10" r="1.8" fill="#00e87c" opacity=".9"/>
+          </svg>
+        </div>
+        <div class="logo-name-neg">Radar de Palpites</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Símbolo isolado + construção -->
+  <div style="display:flex;gap:2rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--line);">
+    <div>
+      <div class="comp-title" style="margin-bottom:.75rem;">Símbolo isolado</div>
+      <div style="display:flex;gap:.75rem;align-items:center;">
+        <div style="width:64px;height:64px;background:var(--signal);border-radius:18px;display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 30 30" fill="none" width="38" height="38">
+            <circle cx="15" cy="15" r="13" stroke="#0a0c0f" stroke-width="1" opacity=".3"/>
+            <circle cx="15" cy="15" r="9" stroke="#0a0c0f" stroke-width="1" opacity=".3"/>
+            <circle cx="15" cy="15" r="5" stroke="#0a0c0f" stroke-width="1" opacity=".3"/>
+            <line x1="2" y1="15" x2="28" y2="15" stroke="#0a0c0f" stroke-width=".8" opacity=".4"/>
+            <line x1="15" y1="2" x2="15" y2="28" stroke="#0a0c0f" stroke-width=".8" opacity=".4"/>
+            <path d="M15 15 L25.2 7.8 A13 13 0 0 1 26.5 15 Z" fill="#0a0c0f" opacity=".2"/>
+            <circle cx="15" cy="15" r="2.5" fill="#0a0c0f"/>
+            <circle cx="22" cy="10" r="2.2" fill="#0a0c0f"/>
+            <circle cx="22" cy="10" r="4" fill="#0a0c0f" opacity=".12"/>
+          </svg>
+        </div>
+        <div style="width:48px;height:48px;background:var(--signal);border-radius:13px;display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 30 30" fill="none" width="28" height="28">
+            <circle cx="15" cy="15" r="13" stroke="#0a0c0f" stroke-width="1" opacity=".3"/>
+            <circle cx="15" cy="15" r="9" stroke="#0a0c0f" stroke-width="1" opacity=".3"/>
+            <circle cx="15" cy="15" r="5" stroke="#0a0c0f" stroke-width="1" opacity=".3"/>
+            <line x1="2" y1="15" x2="28" y2="15" stroke="#0a0c0f" stroke-width=".8" opacity=".4"/>
+            <line x1="15" y1="2" x2="15" y2="28" stroke="#0a0c0f" stroke-width=".8" opacity=".4"/>
+            <path d="M15 15 L25.2 7.8 A13 13 0 0 1 26.5 15 Z" fill="#0a0c0f" opacity=".2"/>
+            <circle cx="15" cy="15" r="2.5" fill="#0a0c0f"/>
+            <circle cx="22" cy="10" r="2" fill="#0a0c0f"/>
+          </svg>
+        </div>
+        <div style="width:32px;height:32px;background:var(--signal);border-radius:9px;display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 30 30" fill="none" width="18" height="18">
+            <circle cx="15" cy="15" r="13" stroke="#0a0c0f" stroke-width="1" opacity=".3"/>
+            <circle cx="15" cy="15" r="8" stroke="#0a0c0f" stroke-width="1" opacity=".3"/>
+            <line x1="2" y1="15" x2="28" y2="15" stroke="#0a0c0f" stroke-width=".8" opacity=".4"/>
+            <line x1="15" y1="2" x2="15" y2="28" stroke="#0a0c0f" stroke-width=".8" opacity=".4"/>
+            <path d="M15 15 L25.2 7.8 A13 13 0 0 1 26.5 15 Z" fill="#0a0c0f" opacity=".2"/>
+            <circle cx="15" cy="15" r="2.5" fill="#0a0c0f"/>
+            <circle cx="22" cy="10" r="1.8" fill="#0a0c0f"/>
+          </svg>
+        </div>
+        <div style="width:20px;height:20px;background:var(--signal);border-radius:5px;display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 30 30" fill="none" width="12" height="12">
+            <circle cx="15" cy="15" r="12" stroke="#0a0c0f" stroke-width="1.5" opacity=".4"/>
+            <line x1="2" y1="15" x2="28" y2="15" stroke="#0a0c0f" stroke-width="1.2" opacity=".5"/>
+            <line x1="15" y1="2" x2="15" y2="28" stroke="#0a0c0f" stroke-width="1.2" opacity=".5"/>
+            <circle cx="15" cy="15" r="3" fill="#0a0c0f"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="comp-title" style="margin-bottom:.75rem;">Conceito do símbolo</div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--muted-2);line-height:1.7;max-width:320px;">
+        O símbolo combina um <strong style="color:var(--white);">radar de varredura</strong> com os círculos de alcance — metáfora para o monitoramento contínuo de dados e o rastreamento de oportunidades. O <strong style="color:var(--signal);">blip verde</strong> representa o sinal identificado: o palpite de valor.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. PALETTE -->
+<div class="section">
+  <div class="label">02 — Paleta de cores</div>
+
+  <!-- Cor primária em destaque -->
+  <div style="display:grid;grid-template-columns:1fr 2fr;gap:1.5rem;margin-bottom:2rem;">
+    <div style="background:var(--signal);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;min-height:120px;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.15em;color:rgba(10,12,15,.6);">Sinal — Primária</div>
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:var(--ink);">#00E87C</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(10,12,15,.6);margin-top:.2rem;">Signal Green · Principal</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.75rem;">
+      <div style="background:var(--ink-2);border-radius:12px;padding:1rem 1.1rem;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;">Fundo base</div>
+        <div style="font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:var(--white);">#0A0C0F</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted);margin-top:.2rem;">Ink Black</div>
+      </div>
+      <div style="background:var(--surface-2);border:1px solid var(--line-2);border-radius:12px;padding:1rem 1.1rem;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;">Superfície</div>
+        <div style="font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:var(--white);">#1A1E28</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted);margin-top:.2rem;">Surface Dark</div>
+      </div>
+      <div style="background:var(--surface-3);border:1px solid var(--line-2);border-radius:12px;padding:1rem 1.1rem;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;">Card</div>
+        <div style="font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:var(--white);">#222736</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted);margin-top:.2rem;">Card Base</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Swatches -->
+  <div class="palette-grid">
+    <div class="swatch" style="background:var(--signal);"><span class="swatch-label" style="color:#0a0c0f;">Signal</span><span class="swatch-hex" style="color:rgba(10,12,15,.6)">#00E87C</span></div>
+    <div class="swatch" style="background:rgba(0,232,124,.5);"><span class="swatch-label" style="color:#0a0c0f;">Signal 50%</span><span class="swatch-hex" style="color:rgba(10,12,15,.5)">#00E87C80</span></div>
+    <div class="swatch" style="background:var(--signal-dim);border:1px solid rgba(0,232,124,.15);"><span class="swatch-label" style="color:var(--signal);">Signal Dim</span><span class="swatch-hex" style="color:var(--muted)">#00E87C1F</span></div>
+    <div class="swatch" style="background:var(--amber);"><span class="swatch-label" style="color:#0a0c0f;">Amber</span><span class="swatch-hex" style="color:rgba(10,12,15,.6)">#F59E0B</span></div>
+    <div class="swatch" style="background:var(--red);"><span class="swatch-label" style="color:#fff;">Red</span><span class="swatch-hex" style="color:rgba(255,255,255,.7)">#EF4444</span></div>
+    <div class="swatch" style="background:var(--white);"><span class="swatch-label" style="color:#0a0c0f;">White</span><span class="swatch-hex" style="color:rgba(10,12,15,.6)">#F0F2F5</span></div>
+    <div class="swatch" style="background:var(--muted);"><span class="swatch-label" style="color:#fff;">Muted</span><span class="swatch-hex" style="color:rgba(255,255,255,.7)">#6B7280</span></div>
+  </div>
+
+  <!-- Uso semântico -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:.75rem;margin-top:1.5rem;">
+    <div style="padding:.85rem;border-radius:10px;border-left:3px solid var(--signal);background:var(--signal-dim);">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:8px;text-transform:uppercase;letter-spacing:.12em;color:var(--signal);margin-bottom:.35rem;">Vitória / HIGH</div>
+      <div style="font-size:11px;color:var(--muted-2);">Resultados positivos, confiança alta, online</div>
+    </div>
+    <div style="padding:.85rem;border-radius:10px;border-left:3px solid var(--amber);background:var(--amber-dim);">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:8px;text-transform:uppercase;letter-spacing:.12em;color:var(--amber);margin-bottom:.35rem;">Empate / MEDIUM</div>
+      <div style="font-size:11px;color:var(--muted-2);">Alerta, confiança média, atenção necessária</div>
+    </div>
+    <div style="padding:.85rem;border-radius:10px;border-left:3px solid var(--red);background:var(--red-dim);">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:8px;text-transform:uppercase;letter-spacing:.12em;color:var(--red);margin-bottom:.35rem;">Derrota / LOW</div>
+      <div style="font-size:11px;color:var(--muted-2);">Probabilidade baixa, risco, erro</div>
+    </div>
+    <div style="padding:.85rem;border-radius:10px;border-left:3px solid var(--line-2);background:var(--surface-2);">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:8px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:.35rem;">Neutro</div>
+      <div style="font-size:11px;color:var(--muted-2);">Informação, estrutura, container</div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. TYPOGRAPHY -->
+<div class="section">
+  <div class="label">03 — Tipografia</div>
+  <div class="type-samples">
+    <div class="type-row">
+      <div class="type-meta">
+        <span class="type-meta-name">Syne</span>
+        <span class="type-meta-spec">Display · 800</span>
+        <span class="type-meta-spec">Heroes, H1, Logotipo</span>
+      </div>
+      <div class="type-divider"></div>
+      <div class="t-hero">Radar</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">
+        <span class="type-meta-name">Syne</span>
+        <span class="type-meta-spec">Display · 600</span>
+        <span class="type-meta-spec">H2, Títulos de card</span>
+      </div>
+      <div class="type-divider"></div>
+      <div class="t-h2">Crystal Palace vs West Ham</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">
+        <span class="type-meta-name">DM Sans</span>
+        <span class="type-meta-spec">Body · 400</span>
+        <span class="type-meta-spec">Texto corrido, descrições</span>
+      </div>
+      <div class="type-divider"></div>
+      <div class="t-body">Favorito com risco moderado. Tendência de gols Abaixo de 2.5, com histórico recente equilibrado dos dois lados.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">
+        <span class="type-meta-name">JetBrains Mono</span>
+        <span class="type-meta-spec">Mono · 400/500</span>
+        <span class="type-meta-spec">Labels, odds, stats, UI</span>
+      </div>
+      <div class="type-divider"></div>
+      <div style="display:flex;align-items:baseline;gap:1.5rem;">
+        <div class="t-number">75.2%</div>
+        <div class="t-caption">Premier League · Under 2.5</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. COMPONENTS -->
+<div class="section">
+  <div class="label">04 — Componentes</div>
+  <div class="comp-grid">
+    <!-- Esquerda -->
+    <div class="comp-area">
+      <div>
+        <div class="comp-title">Badges de resultado</div>
+        <div class="badge-row">
+          <span class="badge v">V</span>
+          <span class="badge e">E</span>
+          <span class="badge d">D</span>
+          <span style="font-size:11px;color:var(--muted);margin-left:.25rem;">Vitória · Empate · Derrota</span>
+        </div>
+      </div>
+      <div>
+        <div class="comp-title">Tags de confiança</div>
+        <div class="badge-row">
+          <span class="conf high">HIGH</span>
+          <span class="conf medium">MEDIUM</span>
+          <span class="conf low">LOW</span>
+        </div>
+      </div>
+      <div>
+        <div class="comp-title">Chips de feature</div>
+        <div class="badge-row">
+          <span class="chip">Favoritos</span>
+          <span class="chip">Gols 2.5</span>
+          <span class="chip">BTTS</span>
+          <span class="chip">Histórico</span>
+        </div>
+      </div>
+      <div>
+        <div class="comp-title">Status ao vivo</div>
+        <div class="status-live"><span class="status-dot"></span>Ao vivo</div>
+      </div>
+    </div>
+    <!-- Direita: prob bars + mini card -->
+    <div class="comp-area">
+      <div>
+        <div class="comp-title">Barras de probabilidade</div>
+        <div class="prob-demo">
+          <div class="prob-row"><span>Fiorentina</span><div class="prob-track"><div class="prob-fill h" style="width:60%"></div></div><strong>60%</strong></div>
+          <div class="prob-row"><span>Empate</span><div class="prob-track"><div class="prob-fill m" style="width:28%"></div></div><strong>28%</strong></div>
+          <div class="prob-row"><span>Lecce</span><div class="prob-track"><div class="prob-fill l" style="width:12%"></div></div><strong>12%</strong></div>
+        </div>
+      </div>
+      <div>
+        <div class="comp-title">Card de jogo (miniatura)</div>
+        <div class="mini-card">
+          <div class="mini-card-head">
+            <span class="mini-comp">Premier League</span>
+            <span class="conf high">HIGH</span>
+          </div>
+          <div class="mini-body">
+            <div class="mini-title">Crystal Palace vs West Ham</div>
+            <div style="margin-top:.5rem;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);">Under 2.5 · 57.4%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. ICONOGRAFIA -->
+<div class="section">
+  <div class="label">05 — Iconografia</div>
+  <div class="icon-grid">
+    <div class="icon-item">
+      <div class="icon-box accent">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
+      </div>
+      <span class="icon-name">Radar</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      </div>
+      <span class="icon-name">Probabilidade</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 010-5H6"/><path d="M18 9h1.5a2.5 2.5 0 000-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0012 0V2z"/></svg>
+      </div>
+      <span class="icon-name">Campeonato</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <span class="icon-name">Histórico</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <span class="icon-name">Palpite</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+      </div>
+      <span class="icon-name">Gols</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <span class="icon-name">Forma</span>
+    </div>
+    <div class="icon-item">
+      <div class="icon-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+      <span class="icon-name">Filtro</span>
+    </div>
+  </div>
+</div>
+
+<!-- 6. ESPAÇAMENTO -->
+<div class="section">
+  <div class="label">06 — Escala de espaçamento</div>
+  <div class="space-row">
+    <div class="space-item"><div class="space-block" style="width:4px;height:16px;"></div><span class="space-label">4px · xs</span></div>
+    <div class="space-item"><div class="space-block" style="width:8px;height:24px;"></div><span class="space-label">8px · sm</span></div>
+    <div class="space-item"><div class="space-block" style="width:12px;height:32px;"></div><span class="space-label">12px</span></div>
+    <div class="space-item"><div class="space-block" style="width:16px;height:40px;"></div><span class="space-label">16px · md</span></div>
+    <div class="space-item"><div class="space-block" style="width:20px;height:48px;"></div><span class="space-label">20px</span></div>
+    <div class="space-item"><div class="space-block" style="width:24px;height:56px;"></div><span class="space-label">24px · lg</span></div>
+    <div class="space-item"><div class="space-block" style="width:32px;height:64px;"></div><span class="space-label">32px · xl</span></div>
+    <div class="space-item"><div class="space-block" style="width:48px;height:72px;"></div><span class="space-label">48px · 2xl</span></div>
+    <div class="space-item"><div class="space-block" style="width:64px;height:80px;"></div><span class="space-label">64px · 3xl</span></div>
+  </div>
+  <div style="margin-top:1.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:.75rem;">
+    <div style="padding:.85rem;border-radius:10px;background:var(--surface-2);border:1px solid var(--line-2);">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--signal);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.4rem;">Radius</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted-2);">6px · 10px · 14px · 18px · 22px</div>
+    </div>
+    <div style="padding:.85rem;border-radius:10px;background:var(--surface-2);border:1px solid var(--line-2);">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--signal);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.4rem;">Border</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted-2);">0.5px · rgba(255,255,255,0.07–0.20)</div>
+    </div>
+    <div style="padding:.85rem;border-radius:10px;background:var(--surface-2);border:1px solid var(--line-2);">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--signal);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.4rem;">Motion</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted-2);">220ms cubic-bezier(.22,1,.36,1)</div>
+    </div>
+  </div>
+</div>
+
+<!-- 7. VOICE & TONE -->
+<div class="section">
+  <div class="label">07 — Voz e tom</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--signal);margin-bottom:1rem;">Usar</div>
+      <div style="display:flex;flex-direction:column;gap:.6rem;">
+        <div style="padding:.65rem .9rem;background:var(--signal-dim);border-left:2px solid var(--signal);border-radius:0 8px 8px 0;font-size:12px;color:var(--white);">"Fiorentina favorita — vantagem de 15%"</div>
+        <div style="padding:.65rem .9rem;background:var(--signal-dim);border-left:2px solid var(--signal);border-radius:0 8px 8px 0;font-size:12px;color:var(--white);">"Tendência clara: Under 2.5 gols"</div>
+        <div style="padding:.65rem .9rem;background:var(--signal-dim);border-left:2px solid var(--signal);border-radius:0 8px 8px 0;font-size:12px;color:var(--white);">"Alta confiança · 75.2%"</div>
+      </div>
+    </div>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--red);margin-bottom:1rem;">Evitar</div>
+      <div style="display:flex;flex-direction:column;gap:.6rem;">
+        <div style="padding:.65rem .9rem;background:var(--red-dim);border-left:2px solid var(--red);border-radius:0 8px 8px 0;font-size:12px;color:var(--muted-2);">"Aposte agora! Ganhe muito dinheiro"</div>
+        <div style="padding:.65rem .9rem;background:var(--red-dim);border-left:2px solid var(--red);border-radius:0 8px 8px 0;font-size:12px;color:var(--muted-2);">"Garantido 100% de certeza"</div>
+        <div style="padding:.65rem .9rem;background:var(--red-dim);border-left:2px solid var(--red);border-radius:0 8px 8px 0;font-size:12px;color:var(--muted-2);">"Dica quente urgente imperdível"</div>
+      </div>
+    </div>
+  </div>
+</div>
