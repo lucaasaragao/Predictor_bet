@@ -6,6 +6,7 @@ Combina histórico, H2H, forma recente e modelo Poisson para gerar palpites.
 
 import json
 import os
+import time
 
 import requests
 from datetime import datetime
@@ -755,10 +756,13 @@ def main():
     print(f"📊 Encontrados {len(jogos)} jogo(s). Analisando...\n")
     
     predicoes = []
-    for match in jogos[:5]:  # Limitar a 5 para não sobrecarregar
+    print("⏳ Processando jogos... (Aguardando ~12s por partida para evitar bloqueios da API)")
+    for match in jogos:
         try:
             pred = prever_jogo(match)
             predicoes.append(pred)
+            time.sleep(12)  # Respeita o limite de 10 requests por minuto do TIER_ONE
+
         except Exception as e:
             print(f"⚠️  Erro ao processar jogo: {e}")
     
