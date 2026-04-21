@@ -36,8 +36,19 @@ jobs:
 
       - name: Commit and push if changed
         run: |
-          if git diff --quiet -- predictions.json; then
-            echo "No changes in predictions.json"
+          # Extract jogos from previous version (ignoring generated_at timestamp)
+          if git show HEAD:predictions.json > /tmp/predictions_old.json 2>/dev/null; then
+            OLD_JOGOS=$(jq -c '.jogos' /tmp/predictions_old.json 2>/dev/null || echo "null")
+          else
+            OLD_JOGOS="null"
+          fi
+
+          # Extract jogos from newly generated version
+          NEW_JOGOS=$(jq -c '.jogos' predictions.json 2>/dev/null || echo "null")
+
+          # Only commit if the actual game data changed (ignore timestamp differences)
+          if [ "$OLD_JOGOS" = "$NEW_JOGOS" ]; then
+            echo "No changes in jogos data (only timestamp changed)"
             exit 0
           fi
 
