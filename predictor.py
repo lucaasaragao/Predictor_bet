@@ -25,14 +25,15 @@ API_BASE = "https://api.football-data.org/v4"
 
 # Competições permitidas
 COMPETICOES_PERMITIDAS = {
-    "Brasileirão Série A",
-    "Brasileirão Série B", 
-    "Champions League",
+    "Campeonato Brasileiro Série A",
+    "Campeonato Brasileiro Série B", 
+    "UEFA Champions League",
     "Copa Libertadores",
     "Premier League",
-    "La Liga",
+    "Primera Division", # La Liga
     "Serie A",
     "Primeira Liga",
+    "Championship", # Segunda divisão inglesa
 }
 
 
