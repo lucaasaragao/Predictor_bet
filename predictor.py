@@ -9,7 +9,7 @@ import os
 import time
 
 import requests
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Optional, List, Dict
 from math import factorial, e
 from dataclasses import dataclass, asdict
@@ -91,27 +91,53 @@ class BetSuggestion:
     confianca: str             # HIGH, MEDIUM, LOW
     justificativa: str
     resultado_verificador: Optional[str] = None
+    resultado_verificador: Optional[str] = None
 
 
 def buscar_jogos_permitidos() -> List[Dict]:
-    """Busca jogos das competições permitidas"""
-    
+    """Busca jogos das competições permitidas nos próximos 7 dias"""
+
+    hoje = datetime.now()
+    date_from = hoje.strftime("%Y-%m-%d")
+    date_to = (hoje + timedelta(days=7)).strftime("%Y-%m-%d")
+
     url = f"{API_BASE}/matches/"
-    response = requests.get(url, headers=HEADERS, timeout=30)
-    
-    if response.status_code != 200:
-        print(f"❌ Erro ao buscar jogos: {response.status_code}")
+    params = {
+        "dateFrom": date_from,
+        "dateTo": date_to,
+        "status": "SCHEDULED",
+    }
+
+    print(f"📅 Buscando jogos de {date_from} até {date_to} (status=SCHEDULED)...")
+
+    try:
+        response = requests.get(url, headers=HEADERS, params=params, timeout=30)
+    except requests.exceptions.RequestException as e:
+        print(f"❌ Erro de conexão ao buscar jogos: {e}")
         return []
-    
+
+    if response.status_code != 200:
+        print(f"❌ Erro ao buscar jogos: HTTP {response.status_code} - {response.text[:200]}")
+        return []
+
     dados = response.json()
-    
+    todos_matches = dados.get("matches", [])
+    print(f"🔎 API retornou {len(todos_matches)} jogo(s) no período.")
+
     # Filtrar por competições permitidas
     jogos_permitidos = []
-    for match in dados.get("matches", []):
+    competicoes_rejeitadas = set()
+    for match in todos_matches:
         competicao = match.get("competition", {}).get("name", "")
         if competicao in COMPETICOES_PERMITIDAS:
             jogos_permitidos.append(match)
-    
+        else:
+            competicoes_rejeitadas.add(competicao)
+
+    if competicoes_rejeitadas:
+        print(f"⚠️  Competições ignoradas (não estão na lista permitida): {sorted(competicoes_rejeitadas)}")
+
+    print(f"✅ {len(jogos_permitidos)} jogo(s) encontrado(s) nas competições permitidas.")
     return jogos_permitidos
 
 
@@ -501,6 +527,28 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
                 f"Empate com {predicao.prob_empate*100:.1f}% de probabilidade"
             ),
         ))
+    if predicao.status == "FINISHED" and predicao.placar_casa is not None and predicao.placar_visitante is not None:
+        home_g = predicao.placar_casa
+        away_g = predicao.placar_visitante
+        for p in palpites:
+            if p.tipo == "WINNER":
+                if home_g > away_g and p.opcao == "1": p.resultado_verificador = "ACERTO"
+                elif home_g == away_g and p.opcao == "X": p.resultado_verificador = "ACERTO"
+                elif home_g < away_g and p.opcao == "2": p.resultado_verificador = "ACERTO"
+                else: p.resultado_verificador = "ERRO"
+            elif p.tipo == "OVER_UNDER":
+                total = home_g + away_g
+                if total > 2.5 and p.opcao == "OVER": p.resultado_verificador = "ACERTO"
+                elif total < 2.5 and p.opcao == "UNDER": p.resultado_verificador = "ACERTO"
+                else: p.resultado_verificador = "ERRO"
+            elif p.tipo == "BTTS":
+                if home_g > 0 and away_g > 0 and p.opcao == "YES": p.resultado_verificador = "ACERTO"
+                elif (home_g == 0 or away_g == 0) and p.opcao == "NO": p.resultado_verificador = "ACERTO"
+                else: p.resultado_verificador = "ERRO"
+            elif p.tipo == "EMPATE":
+                if home_g == away_g and p.opcao == "X": p.resultado_verificador = "ACERTO"
+                else: p.resultado_verificador = "ERRO"
+
     if predicao.status == "FINISHED" and predicao.placar_casa is not None and predicao.placar_visitante is not None:
         home_g = predicao.placar_casa
         away_g = predicao.placar_visitante
