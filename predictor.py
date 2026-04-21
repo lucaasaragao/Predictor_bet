@@ -7,12 +7,13 @@ Combina histórico, H2H, forma recente e modelo Poisson para gerar palpites.
 import json
 import os
 import time
+import unicodedata
 
 import requests
 from datetime import datetime, timedelta
-from typing import Optional, List, Dict
+from typing import Optional, List, Dict, Tuple
 from math import factorial, e
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, field
 
 TOKEN_ENV_VAR = "FOOTBALL_DATA_TOKEN"
 TOKEN = os.getenv(TOKEN_ENV_VAR, "").strip()
@@ -23,6 +24,56 @@ if not TOKEN:
     )
 HEADERS = {"X-Auth-Token": TOKEN}
 API_BASE = "https://api.football-data.org/v4"
+
+ODDS_API_KEY = os.getenv("ODDS_API_KEY", "").strip()
+ODDS_API_BASE = "https://api.the-odds-api.com/v4"
+ODDS_ENABLED = bool(ODDS_API_KEY)
+ODDS_REGIONS = os.getenv("ODDS_REGIONS", "eu")
+ODDS_BOOKMAKERS = os.getenv("ODDS_BOOKMAKERS", "").strip()
+ODDS_MARKETS = "h2h"
+ODDS_FORMAT = "decimal"
+ODDS_MIN_EV = float(os.getenv("ODDS_MIN_EV", "0.03"))
+ODDS_MIN_EDGE_GATE = float(os.getenv("ODDS_MIN_EDGE_GATE", "0.10"))
+ODDS_ONLY_VALUE_GAMES = os.getenv("ODDS_ONLY_VALUE_GAMES", "true").lower() == "true"
+ODDS_MAX_SPORT_CALLS = int(os.getenv("ODDS_MAX_SPORT_CALLS", "3"))
+ODDS_USE_UPCOMING = os.getenv("ODDS_USE_UPCOMING", "true").lower() == "true"
+ODDS_DEBUG_VISUAL = os.getenv("ODDS_DEBUG_VISUAL", "false").lower() == "true"
+
+COMPETICAO_PARA_ODDS_SPORT = {
+    "Premier League": "soccer_epl",
+    "Primera Division": "soccer_spain_la_liga",
+    "Serie A": "soccer_italy_serie_a",
+    "Bundesliga": "soccer_germany_bundesliga",
+    "Ligue 1": "soccer_france_ligue_one",
+    "Championship": "soccer_efl_champ",
+    "Primeira Liga": "soccer_portugal_primeira_liga",
+    "Eredivisie": "soccer_netherlands_eredivisie",
+    "Campeonato Brasileiro Série A": "soccer_brazil_campeonato",
+    "Campeonato Brasileiro Série B": "soccer_brazil_serie_b",
+    "UEFA Champions League": "soccer_uefa_champs_league",
+    "Copa Libertadores": "soccer_conmebol_libertadores",
+}
+
+# Vantagem de mando de campo (multiplicador sobre λ)
+HOME_ADVANTAGE = 1.22
+
+# Média histórica de gols por jogo por liga (fonte: dados públicos últimas 3 temporadas)
+# Usada para normalizar força de ataque/defesa relativa à liga (modelo Dixon-Coles)
+MEDIA_GOLS_LIGA: dict[str, float] = {
+    "Premier League": 2.72,
+    "Primera Division": 2.58,
+    "Serie A": 2.50,
+    "Bundesliga": 3.05,
+    "Ligue 1": 2.52,
+    "Campeonato Brasileiro Série A": 2.28,
+    "Campeonato Brasileiro Série B": 2.18,
+    "UEFA Champions League": 2.75,
+    "Copa Libertadores": 2.45,
+    "Primeira Liga": 2.42,
+    "Championship": 2.55,
+    "Eredivisie": 3.12,
+}
+MEDIA_GOLS_DEFAULT = 2.55  # fallback para ligas sem mapeamento
 
 # Competições permitidas
 COMPETICOES_PERMITIDAS = {
@@ -83,6 +134,9 @@ class PredicaoJogo:
     historico_visitante: List[Dict]
     tendencia_casa: str
     tendencia_visitante: str
+    odds_h2h: Optional[Dict[str, float]] = None
+    odds_match_id: Optional[str] = None
+    odds_debug: Dict[str, str] = field(default_factory=dict)
 
 
 @dataclass
@@ -93,6 +147,10 @@ class BetSuggestion:
     probabilidade: float
     confianca: str             # HIGH, MEDIUM, LOW
     justificativa: str
+    edge: float = 0.0          # margem de vantagem sobre a segunda melhor opção
+    odd_decimal: Optional[float] = None
+    ev: Optional[float] = None
+    valor_esperado_positivo: bool = False
     resultado_verificador: Optional[str] = None
 
 
@@ -201,6 +259,28 @@ def calcular_estatisticas(historico: List[Dict], team_id: int, eh_em_casa: bool)
         cartoes_media=2.0,      # Placeholder
         jogos=len(gols_marcados)
     )
+
+
+def detectar_fadiga(historico: List[Dict], data_jogo_utc: str) -> float:
+    """Retorna fator de fadiga (0.85–1.0) se o time jogou recentemente.
+
+    Um time que jogou há 2 dias ou menos tem desempenho ofensivo reduzido
+    em média ~10-15% segundo análises de back-to-back em grandes ligas.
+    """
+    if not historico:
+        return 1.0
+    try:
+        ultimo_jogo_utc = historico[0].get("utcDate", "")
+        ultimo_dt = datetime.fromisoformat(ultimo_jogo_utc.replace("Z", "+00:00"))
+        jogo_dt = datetime.fromisoformat(data_jogo_utc.replace("Z", "+00:00"))
+        dias = (jogo_dt - ultimo_dt).days
+        if dias <= 2:
+            return 0.86  # back-to-back severo
+        if dias <= 4:
+            return 0.93  # sequência apertada
+    except (ValueError, TypeError, AttributeError):
+        pass
+    return 1.0
 
 
 def calcular_tendencia_forma(historico: List[Dict], team_id: int) -> str:
@@ -348,6 +428,285 @@ def calcular_probabilidades_mercado(lambda_home: float, lambda_away: float, max_
     }
 
 
+def _normalizar_nome_time(nome: str) -> str:
+    base = unicodedata.normalize("NFKD", str(nome or ""))
+    sem_acento = "".join(ch for ch in base if not unicodedata.combining(ch))
+    limpo = sem_acento.lower().replace("fc", "").replace("cf", "")
+    return " ".join(limpo.split())
+
+
+def _escolher_melhor_odd_h2h(evento_odds: Dict) -> Dict[str, float]:
+    melhores: Dict[str, float] = {}
+    for book in evento_odds.get("bookmakers", []):
+        for market in book.get("markets", []):
+            if market.get("key") != "h2h":
+                continue
+            for out in market.get("outcomes", []):
+                nome = out.get("name")
+                odd = out.get("price")
+                if not nome or odd is None:
+                    continue
+                try:
+                    odd_decimal = float(odd)
+                except (TypeError, ValueError):
+                    continue
+                if odd_decimal <= 1.0:
+                    continue
+                atual = melhores.get(nome)
+                if atual is None or odd_decimal > atual:
+                    melhores[nome] = odd_decimal
+    return melhores
+
+
+def _buscar_odds_h2h_por_sport(sport_key: str) -> Tuple[List[Dict], Dict[str, str]]:
+    url = f"{ODDS_API_BASE}/sports/{sport_key}/odds"
+    params = {
+        "apiKey": ODDS_API_KEY,
+        "regions": ODDS_REGIONS,
+        "markets": ODDS_MARKETS,
+        "oddsFormat": ODDS_FORMAT,
+        "dateFormat": "iso",
+    }
+    if ODDS_BOOKMAKERS:
+        params["bookmakers"] = ODDS_BOOKMAKERS
+
+    try:
+        response = requests.get(url, params=params, timeout=30)
+    except requests.exceptions.RequestException as exc:
+        print(f"⚠️  Odds API indisponível para {sport_key}: {exc}")
+        return [], {}
+
+    headers_quota = {
+        "x-requests-remaining": response.headers.get("x-requests-remaining", "?"),
+        "x-requests-used": response.headers.get("x-requests-used", "?"),
+        "x-requests-last": response.headers.get("x-requests-last", "?"),
+    }
+
+    if response.status_code == 429:
+        print(f"⚠️  Odds API rate limit em {sport_key}.")
+        return [], headers_quota
+
+    if response.status_code != 200:
+        print(f"⚠️  Odds API erro {response.status_code} em {sport_key}: {response.text[:140]}")
+        return [], headers_quota
+
+    data = response.json() or []
+    return data, headers_quota
+
+
+def _buscar_odds_h2h_upcoming() -> Tuple[List[Dict], Dict[str, str]]:
+    """Busca odds H2H em uma unica chamada para todos os esportes/liga upcoming.
+
+    Custo tipico desta chamada: 1 credito por regiao para 1 market (h2h).
+    """
+    url = f"{ODDS_API_BASE}/sports/upcoming/odds"
+    params = {
+        "apiKey": ODDS_API_KEY,
+        "regions": ODDS_REGIONS,
+        "markets": ODDS_MARKETS,
+        "oddsFormat": ODDS_FORMAT,
+        "dateFormat": "iso",
+    }
+    if ODDS_BOOKMAKERS:
+        params["bookmakers"] = ODDS_BOOKMAKERS
+
+    try:
+        response = requests.get(url, params=params, timeout=30)
+    except requests.exceptions.RequestException as exc:
+        print(f"⚠️  Odds API indisponível no endpoint upcoming: {exc}")
+        return [], {}
+
+    headers_quota = {
+        "x-requests-remaining": response.headers.get("x-requests-remaining", "?"),
+        "x-requests-used": response.headers.get("x-requests-used", "?"),
+        "x-requests-last": response.headers.get("x-requests-last", "?"),
+    }
+
+    if response.status_code == 429:
+        print("⚠️  Odds API rate limit no endpoint upcoming.")
+        return [], headers_quota
+
+    if response.status_code != 200:
+        print(f"⚠️  Odds API erro {response.status_code} em upcoming: {response.text[:140]}")
+        return [], headers_quota
+
+    data = response.json() or []
+    return data, headers_quota
+
+
+def _aplicar_odds_por_sport(candidatos_por_sport: Dict[str, List[PredicaoJogo]]) -> None:
+    """Fallback: consulta odds por liga apenas para os sport keys relevantes."""
+    sports_ordenados = sorted(candidatos_por_sport.keys(), key=lambda s: len(candidatos_por_sport[s]), reverse=True)
+    sports_consultar = sports_ordenados[:max(1, ODDS_MAX_SPORT_CALLS)]
+
+    print(f"🎯 Odds fallback: consultando {len(sports_consultar)} liga(s) relevantes.")
+    for sport_key in sports_consultar:
+        eventos_odds, quota_headers = _buscar_odds_h2h_por_sport(sport_key)
+        if quota_headers:
+            print(
+                f"   ↳ {sport_key}: custo {quota_headers.get('x-requests-last')} | "
+                f"usado {quota_headers.get('x-requests-used')} | restante {quota_headers.get('x-requests-remaining')}"
+            )
+
+        eventos_indexados = []
+        for ev in eventos_odds:
+            home = _normalizar_nome_time(ev.get("home_team"))
+            away = _normalizar_nome_time(ev.get("away_team"))
+            odds_h2h = _escolher_melhor_odd_h2h(ev)
+            if not home or not away or not odds_h2h:
+                continue
+            eventos_indexados.append(
+                {
+                    "id": ev.get("id"),
+                    "home": home,
+                    "away": away,
+                    "odds": odds_h2h,
+                }
+            )
+
+        for pred in candidatos_por_sport[sport_key]:
+            home_pred = _normalizar_nome_time(pred.time_casa)
+            away_pred = _normalizar_nome_time(pred.time_visitante)
+            match_ev = next((ev for ev in eventos_indexados if ev["home"] == home_pred and ev["away"] == away_pred), None)
+            if not match_ev:
+                pred.odds_debug["status"] = "no_event_match"
+                pred.odds_debug["reason"] = "não encontrou evento equivalente na consulta por liga"
+                continue
+
+            pred.odds_h2h = match_ev["odds"]
+            pred.odds_match_id = match_ev["id"]
+            pred.odds_debug["status"] = "matched"
+            pred.odds_debug["reason"] = "odds h2h encontradas com sucesso"
+            pred.odds_debug["odds_match_id"] = str(match_ev["id"])
+            pred.odds_debug["bookmakers_outcomes"] = str(len(pred.odds_h2h or {}))
+
+
+def _mapear_opcao_para_nome(opcao: str, pred: PredicaoJogo) -> str:
+    opcao_u = str(opcao or "").upper()
+    if opcao_u == "1":
+        return pred.time_casa
+    if opcao_u == "2":
+        return pred.time_visitante
+    if opcao_u == "X":
+        return "Draw"
+    return ""
+
+
+def aplicar_odds_e_valor(predicoes: List[PredicaoJogo]) -> List[PredicaoJogo]:
+    for pred in predicoes:
+        pred.odds_debug = {
+            "enabled": str(ODDS_DEBUG_VISUAL).lower(),
+            "status": "pending",
+            "reason": "aguardando processamento de odds",
+            "competition": pred.competicao,
+            "sport_key": COMPETICAO_PARA_ODDS_SPORT.get(pred.competicao, ""),
+        }
+
+    if not ODDS_ENABLED:
+        print("ℹ️  ODDS_API_KEY não definido. Seguindo sem odds externas.")
+        for pred in predicoes:
+            pred.odds_debug["status"] = "skip_no_api_key"
+            pred.odds_debug["reason"] = "ODDS_API_KEY não configurada"
+        return predicoes
+
+    # Pré-gate para economizar cota: só busca odds para jogos com edge mínimo.
+    candidatos = []
+    for pred in predicoes:
+        probs = sorted([pred.prob_casa, pred.prob_empate, pred.prob_visitante], reverse=True)
+        edge_1x2 = probs[0] - probs[1]
+        if edge_1x2 >= ODDS_MIN_EDGE_GATE:
+            candidatos.append(pred)
+            pred.odds_debug["status"] = "candidate"
+            pred.odds_debug["reason"] = f"passou no gate de edge ({edge_1x2*100:.1f} p.p.)"
+        else:
+            pred.odds_debug["status"] = "skip_edge_gate"
+            pred.odds_debug["reason"] = f"edge abaixo do gate ({edge_1x2*100:.1f} p.p. < {ODDS_MIN_EDGE_GATE*100:.1f} p.p.)"
+
+    if not candidatos:
+        print("ℹ️  Nenhum jogo passou no pré-filtro de edge para consulta de odds.")
+        return [] if ODDS_ONLY_VALUE_GAMES else predicoes
+
+    candidatos_por_sport: Dict[str, List[PredicaoJogo]] = {}
+    for pred in candidatos:
+        sport_key = COMPETICAO_PARA_ODDS_SPORT.get(pred.competicao)
+        if not sport_key:
+            pred.odds_debug["status"] = "skip_no_sport_mapping"
+            pred.odds_debug["reason"] = "competição sem mapeamento para sport_key da Odds API"
+            continue
+        candidatos_por_sport.setdefault(sport_key, []).append(pred)
+
+    if ODDS_USE_UPCOMING:
+        origem = f"bookmakers={ODDS_BOOKMAKERS}" if ODDS_BOOKMAKERS else f"regions={ODDS_REGIONS}"
+        print(f"🎯 Odds: consultando endpoint unico /sports/upcoming/odds para economizar cota ({origem}).")
+        eventos_odds, quota_headers = _buscar_odds_h2h_upcoming()
+        if quota_headers:
+            print(
+                f"   ↳ upcoming: custo {quota_headers.get('x-requests-last')} | "
+                f"usado {quota_headers.get('x-requests-used')} | restante {quota_headers.get('x-requests-remaining')}"
+            )
+
+        eventos_indexados: Dict[str, Dict[Tuple[str, str], Dict]] = {}
+        sport_keys_relevantes = set(candidatos_por_sport.keys())
+        eventos_relevantes = 0
+        for ev in eventos_odds:
+            sport_key = ev.get("sport_key")
+            home = _normalizar_nome_time(ev.get("home_team"))
+            away = _normalizar_nome_time(ev.get("away_team"))
+            odds_h2h = _escolher_melhor_odd_h2h(ev)
+            if not sport_key or not home or not away or not odds_h2h:
+                continue
+
+             
+            if sport_key in sport_keys_relevantes:
+                eventos_relevantes += 1
+
+            eventos_indexados.setdefault(sport_key, {})[(home, away)] = {
+                "id": ev.get("id"),
+                "odds": odds_h2h,
+            }
+
+        for sport_key, jogos in candidatos_por_sport.items():
+            pool = eventos_indexados.get(sport_key, {})
+            for pred in jogos:
+                home_pred = _normalizar_nome_time(pred.time_casa)
+                away_pred = _normalizar_nome_time(pred.time_visitante)
+                match_ev = pool.get((home_pred, away_pred))
+                if not match_ev:
+                    pred.odds_debug["status"] = "no_event_match"
+                    pred.odds_debug["reason"] = "não encontrou evento equivalente no retorno do endpoint upcoming"
+                    continue
+                pred.odds_h2h = match_ev["odds"]
+                pred.odds_match_id = match_ev["id"]
+                pred.odds_debug["status"] = "matched"
+                pred.odds_debug["reason"] = "odds h2h encontradas com sucesso"
+                pred.odds_debug["odds_match_id"] = str(match_ev["id"])
+                pred.odds_debug["bookmakers_outcomes"] = str(len(pred.odds_h2h or {}))
+
+        total_matches = sum(1 for pred in candidatos if pred.odds_match_id)
+        if eventos_relevantes == 0 or total_matches == 0:
+            motivo = "sem eventos relevantes" if eventos_relevantes == 0 else "sem matches de times"
+            print(f"⚠️  Upcoming não trouxe futebol utilizável ({motivo}). Ativando fallback por liga.")
+            _aplicar_odds_por_sport(candidatos_por_sport)
+    else:
+        _aplicar_odds_por_sport(candidatos_por_sport)
+
+    jogos_valor = 0
+    for pred in predicoes:
+        palpites = gerar_palpites(pred)
+        if any(p.valor_esperado_positivo for p in palpites):
+            jogos_valor += 1
+            pred.odds_debug["ev_filter"] = "pass"
+            pred.odds_debug["ev_reason"] = f"há palpite com EV >= {ODDS_MIN_EV*100:.1f}%"
+        else:
+            pred.odds_debug["ev_filter"] = "fail"
+            pred.odds_debug["ev_reason"] = f"nenhum palpite atingiu EV >= {ODDS_MIN_EV*100:.1f}%"
+
+    print(f"✅ Jogos com EV >= {ODDS_MIN_EV*100:.1f}%: {jogos_valor} de {len(predicoes)}")
+    if ODDS_ONLY_VALUE_GAMES:
+        print("ℹ️  Modo visual atual: todos os jogos exibidos; jogos com valor recebem destaque especial.")
+    return predicoes
+
+
 def prever_jogo(match: Dict) -> PredicaoJogo:
     """Prevê resultado de um jogo"""
     
@@ -361,14 +720,48 @@ def prever_jogo(match: Dict) -> PredicaoJogo:
     hist_away = buscar_historico_time(away_id, limit=10)
     h2h = buscar_h2h(home_id, away_id, limit=5)
     
-    # Calcular scores
+    # Calcular scores (forma, H2H) — mantidos para exibição e ajuste de forma
     score_home = calcular_score_time(hist_home, h2h, home_id, eh_em_casa=True)
     score_away = calcular_score_time(hist_away, h2h, away_id, eh_em_casa=False)
-    
-    # Gols esperados (λ)
-    lambda_home = score_home.ataque * 1.8 + (1.0 - score_away.defesa) * 0.5
-    lambda_away = score_away.ataque * 1.5 + (1.0 - score_home.defesa) * 0.5
-    
+
+    # --- Modelo Dixon-Coles de gols esperados (λ) ---
+    # Estatísticas brutas por posição (casa/fora)
+    stats_home = calcular_estatisticas(hist_home, home_id, eh_em_casa=True)
+    stats_away = calcular_estatisticas(hist_away, away_id, eh_em_casa=False)
+
+    competicao_nome = match.get("competition", {}).get("name", "")
+    media_liga = MEDIA_GOLS_LIGA.get(competicao_nome, MEDIA_GOLS_DEFAULT)
+    media_por_time = media_liga / 2.0  # média de gols marcados por time por jogo na liga
+
+    # Força ofensiva/defensiva relativa à média da liga
+    atk_home = stats_home.gols_marcados_media / media_por_time if media_por_time else 1.0
+    def_home = stats_home.gols_sofridos_media / media_por_time if media_por_time else 1.0
+    atk_away = stats_away.gols_marcados_media / media_por_time if media_por_time else 1.0
+    def_away = stats_away.gols_sofridos_media / media_por_time if media_por_time else 1.0
+
+    # Clamp: evitar distorções com poucos jogos no histórico
+    atk_home = max(0.3, min(atk_home, 3.0))
+    def_home = max(0.3, min(def_home, 3.0))
+    atk_away = max(0.3, min(atk_away, 3.0))
+    def_away = max(0.3, min(def_away, 3.0))
+
+    # Fator de forma recente (±15% sobre λ com base nos últimos jogos)
+    forma_fator_home = 0.85 + (score_home.forma_recente * 0.30)
+    forma_fator_away = 0.85 + (score_away.forma_recente * 0.30)
+
+    # Fadiga (back-to-back)
+    fadiga_home = detectar_fadiga(hist_home, match.get("utcDate", ""))
+    fadiga_away = detectar_fadiga(hist_away, match.get("utcDate", ""))
+
+    # λ final: ataque × fraqueza defensiva adversária × média da liga × mando × forma × fadiga
+    lambda_home = atk_home * def_away * media_por_time * HOME_ADVANTAGE * forma_fator_home * fadiga_home
+    lambda_away = atk_away * def_home * media_por_time * forma_fator_away * fadiga_away
+
+    # Clamp final de λ em valores plausíveis (0.3–5.0 gols)
+    lambda_home = max(0.3, min(lambda_home, 5.0))
+    lambda_away = max(0.3, min(lambda_away, 5.0))
+    # --- fim Dixon-Coles ---
+
     mercados = calcular_probabilidades_mercado(lambda_home, lambda_away)
     
     tendencia_casa = calcular_tendencia_forma(hist_home, home_id)
@@ -401,49 +794,73 @@ def prever_jogo(match: Dict) -> PredicaoJogo:
 
 
 def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
-    """Gera sugestões de aposta baseado na previsão"""
-    
+    """Gera sugestões de aposta baseado na previsão.
+
+    Confiança calculada por EDGE (margem sobre a segunda opção), não por probabilidade
+    absoluta — evita classificar como HIGH mercados intrinsecamente incertos.
+    """
     palpites = []
     mercados = calcular_probabilidades_mercado(
         predicao.gols_esperados_casa,
         predicao.gols_esperados_visitante,
     )
-    
-    # Palpite: Vencedor
-    probs = [
-        (predicao.prob_casa, "1"),
-        (predicao.prob_empate, "X"),
-        (predicao.prob_visitante, "2"),
-    ]
-    prob_max, opcao = max(probs, key=lambda x: x[0])
 
-    if prob_max > 0.55:
+    odds_h2h = predicao.odds_h2h or {}
+
+    def obter_odd_opcao(opcao: str) -> Optional[float]:
+        nome_alvo = _mapear_opcao_para_nome(opcao, predicao)
+        if not nome_alvo:
+            return None
+
+        # Match robusto por nome normalizado para lidar com variações de acento/sigla.
+        alvo_norm = _normalizar_nome_time(nome_alvo)
+        for nome_odds, odd in odds_h2h.items():
+            nome_norm = _normalizar_nome_time(nome_odds)
+            if nome_norm == alvo_norm:
+                return float(odd)
+
+        if str(opcao).upper() == "X":
+            for nome_odds, odd in odds_h2h.items():
+                n = _normalizar_nome_time(nome_odds)
+                if n in ("draw", "empate"):
+                    return float(odd)
+        return None
+
+    # ── Palpite: Vencedor ──────────────────────────────────────────────────────
+    probs_1x2 = sorted(
+        [(predicao.prob_casa, "1"), (predicao.prob_empate, "X"), (predicao.prob_visitante, "2")],
+        key=lambda x: x[0], reverse=True,
+    )
+    prob_max, opcao = probs_1x2[0]
+    # Edge = diferença entre 1° e 2° lugar (quanto o favorito se destaca)
+    edge_winner = prob_max - probs_1x2[1][0]
+
+    if edge_winner > 0.25:
         confianca = "HIGH"
-    elif prob_max > 0.45:
+    elif edge_winner > 0.12:
         confianca = "MEDIUM"
     else:
         confianca = "LOW"
 
-    # Justificativa cruzada: ataque do favorito vs defesa do adversário
     if opcao == "1":
-        ataque_fav = predicao.score_casa.ataque * 2.5
-        defesa_adv = (1.0 - predicao.score_visitante.defesa) * 2.5
         nome_fav = predicao.time_casa
+        xg_fav = predicao.gols_esperados_casa
+        xg_adv = predicao.gols_esperados_visitante
     elif opcao == "2":
-        ataque_fav = predicao.score_visitante.ataque * 2.5
-        defesa_adv = (1.0 - predicao.score_casa.defesa) * 2.5
         nome_fav = predicao.time_visitante
+        xg_fav = predicao.gols_esperados_visitante
+        xg_adv = predicao.gols_esperados_casa
     else:
-        ataque_fav = defesa_adv = None
         nome_fav = "Empate"
+        xg_fav = xg_adv = None
 
-    if ataque_fav is not None:
+    if xg_fav is not None:
         just_winner = (
-            f"{nome_fav}: ataque ≈{ataque_fav:.1f} gols/jogo vs defesa adversária ≈{defesa_adv:.1f} sofridos/jogo. "
-            f"Prob vitória: {prob_max*100:.1f}%"
+            f"{nome_fav} projeta ≈{xg_fav:.1f} gol(s) vs ≈{xg_adv:.1f} do adversário. "
+            f"Prob vitória: {prob_max*100:.1f}% (margem: {edge_winner*100:.1f} p.p.)"
         )
     else:
-        just_winner = f"Jogo equilibrado. Prob empate: {prob_max*100:.1f}%"
+        just_winner = f"Jogo muito equilibrado. Prob empate: {prob_max*100:.1f}% (margem: {edge_winner*100:.1f} p.p.)"
 
     palpites.append(BetSuggestion(
         tipo="WINNER",
@@ -451,19 +868,27 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
         probabilidade=prob_max,
         confianca=confianca,
         justificativa=just_winner,
+        edge=round(edge_winner, 4),
+        odd_decimal=obter_odd_opcao(opcao),
     ))
 
-    # Palpite: Over/Under 2.5
+    p_winner = palpites[-1]
+    if p_winner.odd_decimal is not None:
+        p_winner.ev = round((p_winner.probabilidade * p_winner.odd_decimal) - 1.0, 4)
+        p_winner.valor_esperado_positivo = bool(p_winner.ev >= ODDS_MIN_EV)
+
+    # ── Palpite: Over/Under 2.5 ────────────────────────────────────────────────
     prob_over = mercados["over_25"]
     prob_under = mercados["under_25"]
-
     bet_type = "OVER" if prob_over > prob_under else "UNDER"
-    prob = max(prob_over, prob_under)
+    prob_ou = max(prob_over, prob_under)
+    # Edge = distância de 50% (mercado binário — qualquer lado "bate" com 50%)
+    edge_ou = prob_ou - 0.50
     total_esperado = predicao.gols_esperados_casa + predicao.gols_esperados_visitante
 
-    if prob > 0.60:
+    if edge_ou > 0.15:
         confianca = "HIGH"
-    elif prob > 0.50:
+    elif edge_ou > 0.07:
         confianca = "MEDIUM"
     else:
         confianca = "LOW"
@@ -471,23 +896,25 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
     palpites.append(BetSuggestion(
         tipo="OVER_UNDER",
         opcao=bet_type,
-        probabilidade=prob,
+        probabilidade=prob_ou,
         confianca=confianca,
         justificativa=(
             f"Gols esperados no jogo: ≈{total_esperado:.1f}. "
-            f"{'UNDER' if bet_type == 'UNDER' else 'OVER'} 2.5: {prob*100:.1f}% de probabilidade"
+            f"{'UNDER' if bet_type == 'UNDER' else 'OVER'} 2.5: {prob_ou*100:.1f}% de probabilidade"
         ),
+        edge=round(edge_ou, 4),
     ))
 
-    # Palpite: BTTS (ambos marcam)
+    # ── Palpite: BTTS ──────────────────────────────────────────────────────────
     btts_yes = mercados["btts_yes"]
     btts_no = mercados["btts_no"]
     btts_opcao = "YES" if btts_yes >= btts_no else "NO"
     btts_prob = max(btts_yes, btts_no)
+    edge_btts = btts_prob - 0.50
 
-    if btts_prob > 0.60:
+    if edge_btts > 0.15:
         confianca = "HIGH"
-    elif btts_prob > 0.50:
+    elif edge_btts > 0.07:
         confianca = "MEDIUM"
     else:
         confianca = "LOW"
@@ -503,12 +930,14 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
             f"xG: {xg_casa:.1f} (casa) x {xg_fora:.1f} (fora). "
             f"Ambas marcam - {'Sim' if btts_opcao == 'YES' else 'Nao'}: {btts_prob*100:.1f}%"
         ),
+        edge=round(edge_btts, 4),
     ))
 
-    # Palpite: Empate vantajoso — defesas sólidas e prob > 30%
+    # ── Palpite: Empate vantajoso ──────────────────────────────────────────────
     defesa_casa = predicao.score_casa.defesa
     defesa_fora = predicao.score_visitante.defesa
     if predicao.prob_empate > 0.30 and defesa_casa > 0.50 and defesa_fora > 0.50:
+        edge_emp = predicao.prob_empate - probs_1x2[1][0]
         confianca_emp = "MEDIUM" if predicao.prob_empate > 0.35 else "LOW"
         palpites.append(BetSuggestion(
             tipo="EMPATE",
@@ -519,7 +948,14 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
                 f"Ambas defesas solidas ({defesa_casa*100:.0f}% / {defesa_fora*100:.0f}% de aproveitamento defensivo). "
                 f"Empate com {predicao.prob_empate*100:.1f}% de probabilidade"
             ),
+            edge=round(max(edge_emp, 0.0), 4),
+            odd_decimal=obter_odd_opcao("X"),
         ))
+
+        p_emp = palpites[-1]
+        if p_emp.odd_decimal is not None:
+            p_emp.ev = round((p_emp.probabilidade * p_emp.odd_decimal) - 1.0, 4)
+            p_emp.valor_esperado_positivo = bool(p_emp.ev >= ODDS_MIN_EV)
 
     if predicao.status == "FINISHED" and predicao.placar_casa is not None and predicao.placar_visitante is not None:
         home_g = predicao.placar_casa
@@ -619,6 +1055,9 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
     dados = {
         "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "total_jogos": len(predicoes),
+        "odds_debug_visual": ODDS_DEBUG_VISUAL,
+        "odds_only_value_games": ODDS_ONLY_VALUE_GAMES,
+        "odds_min_ev": ODDS_MIN_EV,
         "jogos": [],
     }
 
@@ -655,7 +1094,20 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
             f"{tendencia_txt}"
         )
 
-        palpites = [asdict(item) for item in gerar_palpites(pred)]
+        palpites_brutos = gerar_palpites(pred)
+        palpites = [asdict(item) for item in palpites_brutos]
+        odds_integradas = any(item.get("odd_decimal") is not None for item in palpites)
+        odds_valor_alto = any(item.get("valor_esperado_positivo") for item in palpites)
+
+        # Alertas contextuais para o front-end
+        alertas = []
+        fadiga_casa = detectar_fadiga(pred.historico_casa, pred.data_jogo)
+        fadiga_visit = detectar_fadiga(pred.historico_visitante, pred.data_jogo)
+        if fadiga_casa < 1.0:
+            alertas.append(f"{pred.time_casa} jogou recentemente — possível desgaste físico.")
+        if fadiga_visit < 1.0:
+            alertas.append(f"{pred.time_visitante} jogou recentemente — possível desgaste físico.")
+
         dados["jogos"].append(
             {
                 "competicao": pred.competicao,
@@ -699,6 +1151,10 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
                     "casa": pred.tendencia_casa,
                     "visitante": pred.tendencia_visitante,
                 },
+                "alertas": alertas,
+                "odds_debug": pred.odds_debug,
+                "odds_integradas": odds_integradas,
+                "odds_valor_alto": odds_valor_alto,
                 "historico": {
                     "casa": _normalizar_historico_para_front(pred.historico_casa, pred.time_casa),
                     "visitante": _normalizar_historico_para_front(pred.historico_visitante, pred.time_visitante),
@@ -758,7 +1214,11 @@ def exibir_predicoes(predicoes: List[PredicaoJogo]) -> None:
         print(f"\n  💡 Palpites:")
         for p in palpites:
             icon_conf = "🟢" if p.confianca == "HIGH" else "🟡" if p.confianca == "MEDIUM" else "🔴"
-            print(f"     {icon_conf} [{p.tipo}] {p.opcao}: {p.probabilidade*100:.1f}% ({p.confianca}) - {p.justificativa}")
+            extra = ""
+            if p.odd_decimal is not None and p.ev is not None:
+                sinal_valor = "💰" if p.valor_esperado_positivo else ""
+                extra = f" | odd {p.odd_decimal:.2f} | EV {p.ev*100:.1f}% {sinal_valor}"
+            print(f"     {icon_conf} [{p.tipo}] {p.opcao}: {p.probabilidade*100:.1f}% ({p.confianca}) - {p.justificativa}{extra}")
         
         print("\n" + "-" * 100 + "\n")
 
@@ -785,6 +1245,12 @@ def main():
 
         except Exception as e:
             print(f"⚠️  Erro ao processar jogo: {e}")
+
+    predicoes = aplicar_odds_e_valor(predicoes)
+    if not predicoes:
+        print("ℹ️  Nenhum jogo com valor esperado positivo para exibir no momento.")
+        exportar_predicoes_front([], "predictions.json")
+        return
     
     exibir_predicoes(predicoes)
     exportar_predicoes_front(predicoes, "predictions.json")

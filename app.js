@@ -31,23 +31,26 @@ function historyBadgeClass(result) {
 
 function translateTipType(type) {
   const labels = {
-    WINNER: "Resultado final",
-    OVER_UNDER: "Linha de gols 2,5",
-    BTTS: "Ambas marcam",
+    WINNER: "Resultado",
+    OVER_UNDER: "Quantidade de gols",
+    BTTS: "Ambos marcam",
     EMPATE: "Empate",
   };
   return labels[type] || type;
 }
 
-function translateTipOption(type, option) {
+function translateTipOption(type, option, match) {
   const upperOption = String(option || "").toUpperCase();
+  if (type === "WINNER") {
+    return resolveWinnerLabel(option, match);
+  }
   if (type === "BTTS") {
-    if (upperOption === "YES") return "Sim";
-    if (upperOption === "NO") return "Não";
+    if (upperOption === "YES") return "Sim, os dois marcam";
+    if (upperOption === "NO") return "Não, um fica sem gol";
   }
   if (type === "OVER_UNDER") {
-    if (upperOption === "OVER") return "Mais de 2,5 gols";
-    if (upperOption === "UNDER") return "Menos de 2,5 gols";
+    if (upperOption === "OVER") return "3 gols ou mais";
+    if (upperOption === "UNDER") return "Menos de 3 gols";
   }
   return option;
 }
@@ -66,6 +69,41 @@ function translateTipJustification(text) {
     .replaceAll("OVER 2.5", "tendência de mais de 2,5 gols")
     .replaceAll("BTTS YES", "tendência de ambas marcarem")
     .replaceAll("BTTS NO", "tendência de pelo menos um time não marcar");
+}
+
+function buildTipJustificationHuman(tip, match) {
+  const casa = match?.times?.casa || "Casa";
+  const visitante = match?.times?.visitante || "Visitante";
+  const prob = Math.round((tip.probabilidade || 0) * 100);
+  const xgCasa = Number(match?.gols_esperados?.casa || 0).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  const xgVisit = Number(match?.gols_esperados?.visitante || 0).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  const xgTotal = Number(match?.gols_esperados?.total || 0).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
+  if (tip.tipo === "WINNER") {
+    const vencedor = resolveWinnerLabel(tip.opcao, match);
+    if (String(tip.opcao).toUpperCase() === "X") {
+      return `${prob}% de chance de os dois times terminarem empatados.`;
+    }
+    return `O modelo dá ${prob}% de chance de vitória para o ${vencedor} neste jogo.`;
+  }
+
+  if (tip.tipo === "OVER_UNDER") {
+    if (String(tip.opcao).toUpperCase() === "UNDER") {
+      return `O jogo tem perfil fechado: são esperados cerca de ${xgTotal} gols no total. Em ${prob}% dos cenários simulados, o placar termina com 2 gols ou menos.`;
+    } else {
+      return `O jogo tem perfil aberto: são esperados cerca de ${xgTotal} gols no total. Em ${prob}% dos cenários simulados, o placar chega a 3 gols ou mais.`;
+    }
+  }
+
+  if (tip.tipo === "BTTS") {
+    if (String(tip.opcao).toUpperCase() === "YES") {
+      return `${casa} deve marcar cerca de ${xgCasa} gol(s) e ${visitante} cerca de ${xgVisit}. Há ${prob}% de chance de os dois times balançarem a rede.`;
+    } else {
+      return `${casa} tem expectativa de ${xgCasa} gol(s) e ${visitante} de ${xgVisit}. Em ${prob}% das simulações, um dos times termina sem marcar.`;
+    }
+  }
+
+  return translateTipJustification(tip.justificativa);
 }
 
 function translateQuickRead(text) {
@@ -225,36 +263,86 @@ function renderHistory(listEl, items) {
   }
 }
 
+function buildSummaryNarrative(match) {
+  const casa = match?.times?.casa || "Casa";
+  const visitante = match?.times?.visitante || "Visitante";
+  const favNome = match?.favorito?.nome || casa;
+  const favProb = Math.round((match?.favorito?.prob || 0) * 100);
+  const xgTotalNum = Number(match?.gols_esperados?.total || 0);
+  const xgFmt = xgTotalNum.toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  const underProb = Math.round((match?.mercados?.under_25 || 0) * 100);
+  const bttsNoProb = Math.round((match?.mercados?.btts_no || 0) * 100);
+
+  let parts = [];
+
+  if (favProb >= 60) {
+    parts.push(`O ${favNome} entra como grande favorito, com ${favProb}% de chance de vencer.`);
+  } else if (favProb >= 50) {
+    parts.push(`O ${favNome} tem leve vantagem: ${favProb}% de chance de vitória, mas o jogo pode surpreender.`);
+  } else {
+    parts.push(`Jogo equilibrado — o ${favNome} aparece à frente com ${favProb}% de probabilidade de vitória, mas qualquer resultado é possível.`);
+  }
+
+  if (underProb >= 60) {
+    parts.push(`Esperamos um jogo fechado, com cerca de ${xgFmt} gols no total.`);
+  } else if (underProb >= 50) {
+    parts.push(`O volume de gols deve ser moderado: cerca de ${xgFmt} gols esperados.`);
+  } else {
+    parts.push(`Jogo com potencial para mais gols: o modelo projeta cerca de ${xgFmt} gols no total.`);
+  }
+
+  if (bttsNoProb >= 60) {
+    parts.push(`Um dos times deve terminar sem marcar.`);
+  } else if (bttsNoProb >= 50) {
+    parts.push(`Há mais chance de um dos times não marcar do que de os dois balançarem a rede.`);
+  } else {
+    parts.push(`Os dois times têm boas chances de marcar.`);
+  }
+
+  return parts.join(" ");
+}
+
 function renderTips(container, tips, match) {
   container.innerHTML = "";
-  const casa = match?.times?.casa || "Time da casa";
-  const visitante = match?.times?.visitante || "Visitante";
-  const favorito = match?.favorito?.nome || casa;
 
-  const pCasa = pct(match?.probabilidades?.casa || 0);
-  const pEmpate = pct(match?.probabilidades?.empate || 0);
-  const pVisitante = pct(match?.probabilidades?.visitante || 0);
-  const pUnder25 = pct(match?.mercados?.under_25 || 0);
-  const pOver25 = pct(match?.mercados?.over_25 || 0);
-  const pBttsYes = pct(match?.mercados?.btts_yes || 0);
-  const pBttsNo = pct(match?.mercados?.btts_no || 0);
-  const xgTotal = Number(match?.gols_esperados?.total || 0).toLocaleString("pt-BR", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
+  if (state.raw?.odds_debug_visual && match?.odds_debug) {
+    const debug = match.odds_debug;
+    const debugBox = document.createElement("details");
+    debugBox.className = "odds-debug";
+    const evFilter = debug?.ev_filter === "pass" ? "aprovado" : debug?.ev_filter === "fail" ? "reprovado" : "--";
+    const sportKey = debug?.sport_key || "--";
+    debugBox.innerHTML = `
+      <summary>Debug Odds: ${debug?.status || "--"}</summary>
+      <div class="odds-debug-body">
+        <div><strong>Competição:</strong> ${debug?.competition || "--"}</div>
+        <div><strong>Sport key:</strong> ${sportKey}</div>
+        <div><strong>Motivo:</strong> ${debug?.reason || "--"}</div>
+        <div><strong>Filtro EV:</strong> ${evFilter}</div>
+        <div><strong>Detalhe EV:</strong> ${debug?.ev_reason || "--"}</div>
+        <div><strong>Match ID Odds:</strong> ${debug?.odds_match_id || "--"}</div>
+      </div>
+    `;
+    container.appendChild(debugBox);
+  }
+
+  // Alertas contextuais (ex: fadiga por back-to-back)
+  (match?.alertas || []).forEach(alerta => {
+    const alertEl = document.createElement("div");
+    alertEl.className = "tip-alerta";
+    alertEl.textContent = "⚠️ " + alerta;
+    container.appendChild(alertEl);
   });
-
-  const summary = `${favorito} com maior probabilidade de vitória: ${pct(match?.favorito?.prob || 0)}. `
-    + `Vitória do ${casa}: ${pCasa}, empate: ${pEmpate}, vitória do ${visitante}: ${pVisitante}. `
-    + `Tendência de gols: mais de 2,5 gols em ${pOver25} e menos de 2,5 gols em ${pUnder25}. `
-    + `Ambas marcam: sim em ${pBttsYes} e não em ${pBttsNo}. `
-    + `Total de gols esperados (xG): ${xgTotal}.`;
 
   const summaryBox = document.createElement("div");
   summaryBox.className = "tip-summary";
-  summaryBox.textContent = summary;
+  summaryBox.textContent = buildSummaryNarrative(match);
   container.appendChild(summaryBox);
 
-  (tips || []).forEach(tip => {
+  const baseTips = tips || [];
+  const valueTips = baseTips.filter((tip) => tip.valor_esperado_positivo === true);
+  const tipsToRender = valueTips.length ? valueTips : baseTips;
+
+  tipsToRender.forEach(tip => {
     const tipEl = document.createElement("div");
     tipEl.className = "tip";
     
@@ -265,11 +353,18 @@ function renderTips(container, tips, match) {
       resultMark = '<span class="tip-mark tip-mark--erro">❌ Erro</span>';
     }
 
+    let valueBadge = "";
+    if (Number.isFinite(tip.odd_decimal) && Number.isFinite(tip.ev)) {
+      const evPct = pct(tip.ev || 0);
+      valueBadge = ` <span class="tip-value ${tip.valor_esperado_positivo ? "is-positive" : ""}">odd ${Number(tip.odd_decimal).toFixed(2)} | EV ${evPct}</span>`;
+    }
+
     tipEl.innerHTML = `
       <div class="tag">${translateTipType(tip.tipo)}</div>
       <div class="conf ${confidenceClass(tip.confianca)}">${confidenceLabel(tip.confianca)}</div>
       <div class="tip-desc">
-        ${translateTipOption(tip.tipo, tip.opcao)} — <span class="tip-just">${translateTipJustification(tip.justificativa)}</span>
+        <strong>${translateTipOption(tip.tipo, tip.opcao, match)}</strong> — <span class="tip-just">${buildTipJustificationHuman(tip, match)}</span>
+        ${valueBadge}
         ${resultMark}
       </div>
     `;
@@ -324,6 +419,18 @@ function renderCards() {
       badge.className = "card-status-badge card-status-badge--live";
       badge.textContent = "Ao Vivo";
       node.querySelector(".card-head").appendChild(badge);
+    }
+
+    if (match.odds_valor_alto) {
+      const valueBadge = document.createElement("span");
+      valueBadge.className = "card-status-badge card-status-badge--value";
+      valueBadge.textContent = "Possibilidade alta";
+      node.querySelector(".card-head").appendChild(valueBadge);
+    } else if (match.odds_integradas) {
+      const oddsBadge = document.createElement("span");
+      oddsBadge.className = "card-status-badge card-status-badge--odds";
+      oddsBadge.textContent = "Odds integradas";
+      node.querySelector(".card-head").appendChild(oddsBadge);
     }
 
     const miniOdds = document.createElement("div");
