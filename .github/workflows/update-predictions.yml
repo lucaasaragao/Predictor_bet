@@ -38,7 +38,7 @@ jobs:
         run: |
           # Extract jogos from previous version (ignoring generated_at timestamp)
           if git show HEAD:predictions.json > /tmp/predictions_old.json 2>/dev/null; then
-            OLD_JOGOS=$(jq -c '.jogos' /tmp/predictions_old.json 2>/dev/null || echo "null")
+            OLD_JOGOS=$(jq -c '.jogos' /tmp/predictions_old.json || echo "null")
           else
             OLD_JOGOS="null"
           fi
