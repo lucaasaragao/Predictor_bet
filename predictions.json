@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-04-21 02:21:20",
+  "generated_at": "2026-04-21 18:16:16",
   "total_jogos": 13,
-  "odds_debug_visual": true,
+  "odds_debug_visual": false,
   "odds_only_value_games": true,
   "odds_min_ev": 0.03,
   "jogos": [
     {
       "competicao": "Primera Division",
       "data": "2026-04-21T17:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Mallorca",
@@ -63,18 +63,14 @@
       },
       "alertas": [],
       "odds_debug": {
-        "enabled": "true",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
+        "enabled": "false",
+        "status": "skip_no_api_key",
+        "reason": "ODDS_API_KEY não configurada",
         "competition": "Primera Division",
-        "sport_key": "soccer_spain_la_liga",
-        "odds_match_id": "4c05627297ffdfd1bb17dfcc1dd3b6d6",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "sport_key": "soccer_spain_la_liga"
       },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
+      "odds_integradas": false,
+      "odds_valor_alto": false,
       "historico": {
         "casa": [
           {
@@ -169,9 +165,9 @@
           "confianca": "HIGH",
           "justificativa": "Mallorca projeta ≈1.8 gol(s) vs ≈0.8 do adversário. Prob vitória: 62.5% (margem: 40.1 p.p.)",
           "edge": 0.4012,
-          "odd_decimal": 2.66,
-          "ev": 0.6629,
-          "valor_esperado_positivo": true,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
           "resultado_verificador": null
         },
         {
@@ -203,10 +199,10 @@
     {
       "competicao": "Primera Division",
       "data": "2026-04-21T17:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 1,
+        "visitante": 0
       },
       "times": {
         "casa": "Athletic",
@@ -258,13 +254,11 @@
       },
       "alertas": [],
       "odds_debug": {
-        "enabled": "true",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
+        "enabled": "false",
+        "status": "skip_no_api_key",
+        "reason": "ODDS_API_KEY não configurada",
         "competition": "Primera Division",
-        "sport_key": "soccer_spain_la_liga",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "sport_key": "soccer_spain_la_liga"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
@@ -402,130 +396,128 @@
         "visitante": null
       },
       "times": {
-        "casa": "Stoke",
-        "visitante": "Millwall"
+        "casa": "Norwich",
+        "visitante": "Derby County"
       },
       "probabilidades": {
-        "casa": 0.2917472639294546,
-        "empate": 0.24401148472310769,
-        "visitante": 0.4639009308147415
+        "casa": 0.7998921236413157,
+        "empate": 0.1208177190722941,
+        "visitante": 0.06872931211373064
       },
       "favorito": {
-        "nome": "Millwall",
-        "prob": 0.4639009308147415,
-        "vantagem": 0.17215366688528688
+        "nome": "Norwich",
+        "prob": 0.7998921236413157,
+        "vantagem": 0.6790744045690216
       },
       "gols_esperados": {
-        "casa": 1.2423905882352941,
-        "visitante": 1.6290909090909094,
-        "total": 2.8714814973262035
+        "casa": 2.934959001782531,
+        "visitante": 0.7714224598930481,
+        "total": 3.706381461675579
       },
       "mercados": {
-        "under_25": 0.4529309913195261,
-        "over_25": 0.5470690086804739,
-        "btts_yes": 0.571567547551314,
-        "btts_no": 0.428432452448686
+        "under_25": 0.29491559005465184,
+        "over_25": 0.7050844099453482,
+        "btts_yes": 0.503399818040156,
+        "btts_no": 0.496600181959844
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.4454545454545455,
-          "ataque": 0.8800000000000001,
-          "defesa": 0.52,
+          "forma_recente": 0.8181818181818182,
+          "ataque": 0.5599999999999999,
+          "defesa": 0.6799999999999999,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.639909090909091
+          "score_total": 0.7223636363636364
         },
         "visitante": {
-          "forma_recente": 0.7727272727272727,
-          "ataque": 0.64,
-          "defesa": 0.76,
+          "forma_recente": 0.5818181818181819,
+          "ataque": 0.48,
+          "defesa": 0.19999999999999996,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.7224545454545455
+          "score_total": 0.5036363636363637
         }
       },
-      "leitura_rapida": "Millwall favorito (46%, risco moderado). Mercado de gols equilibrado (xG total ≈2.9). | Forma recente: Millwall em alta.",
+      "leitura_rapida": "Norwich favorito (80%, risco forte). Jogo mais aberto (xG total ≈3.7). Over 2.5 com 71%. | Forma recente: Norwich em alta.",
       "tendencia": {
-        "casa": "estavel",
-        "visitante": "em alta"
+        "casa": "em alta",
+        "visitante": "estavel"
       },
       "alertas": [],
       "odds_debug": {
-        "enabled": "true",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
+        "enabled": "false",
+        "status": "skip_no_api_key",
+        "reason": "ODDS_API_KEY não configurada",
         "competition": "Championship",
-        "sport_key": "soccer_efl_champ",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "sport_key": "soccer_efl_champ"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
       "historico": {
         "casa": [
           {
-            "data": "25/02 20:00",
-            "mandante": "Stoke",
-            "visitante": "Oxford United",
-            "placar": "2 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "28/02 15:00",
-            "mandante": "Coventry City",
-            "visitante": "Stoke",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "07/03 15:00",
-            "mandante": "Swansea",
-            "visitante": "Stoke",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "10/03 20:00",
-            "mandante": "Stoke",
-            "visitante": "Ipswich Town",
-            "placar": "3 x 3",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "14/03 15:00",
-            "mandante": "Stoke",
-            "visitante": "Watford",
-            "placar": "3 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
             "data": "25/02 19:45",
-            "mandante": "Millwall",
-            "visitante": "Birmingham",
-            "placar": "3 x 0",
+            "mandante": "Norwich",
+            "visitante": "Sheffield Wed",
+            "placar": "2 x 0",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
           {
-            "data": "28/02 15:00",
-            "mandante": "Preston NE",
-            "visitante": "Millwall",
+            "data": "28/02 12:30",
+            "mandante": "Leicester City",
+            "visitante": "Norwich",
             "placar": "0 x 2",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
           {
-            "data": "07/03 12:30",
+            "data": "11/03 19:45",
+            "mandante": "Norwich",
+            "visitante": "Sheffield Utd",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "14/03 15:00",
+            "mandante": "Norwich",
+            "visitante": "Preston NE",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "18/03 19:45",
+            "mandante": "Southampton",
+            "visitante": "Norwich",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "24/02 19:45",
             "mandante": "Hull City",
-            "visitante": "Millwall",
-            "placar": "1 x 3",
+            "visitante": "Derby County",
+            "placar": "4 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "28/02 12:30",
+            "mandante": "Derby County",
+            "visitante": "Blackburn",
+            "placar": "3 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "07/03 15:00",
+            "mandante": "Derby County",
+            "visitante": "Sheffield Wed",
+            "placar": "2 x 1",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
@@ -534,27 +526,27 @@
             "mandante": "Millwall",
             "visitante": "Derby County",
             "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "14/03 15:00",
-            "mandante": "Millwall",
-            "visitante": "Blackburn",
-            "placar": "1 x 2",
             "resultado": "D",
             "resultado_label": "Derrota"
+          },
+          {
+            "data": "16/03 20:00",
+            "mandante": "Portsmouth",
+            "visitante": "Derby County",
+            "placar": "0 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
           }
         ]
       },
       "palpites": [
         {
           "tipo": "WINNER",
-          "opcao": "2",
-          "probabilidade": 0.4639009308147415,
-          "confianca": "MEDIUM",
-          "justificativa": "Millwall projeta ≈1.6 gol(s) vs ≈1.2 do adversário. Prob vitória: 46.4% (margem: 17.2 p.p.)",
-          "edge": 0.1722,
+          "opcao": "1",
+          "probabilidade": 0.7998921236413157,
+          "confianca": "HIGH",
+          "justificativa": "Norwich projeta ≈2.9 gol(s) vs ≈0.8 do adversário. Prob vitória: 80.0% (margem: 67.9 p.p.)",
+          "edge": 0.6791,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -563,10 +555,10 @@
         {
           "tipo": "OVER_UNDER",
           "opcao": "OVER",
-          "probabilidade": 0.5470690086804739,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.9. OVER 2.5: 54.7% de probabilidade",
-          "edge": 0.0471,
+          "probabilidade": 0.7050844099453482,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈3.7. OVER 2.5: 70.5% de probabilidade",
+          "edge": 0.2051,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -575,10 +567,10 @@
         {
           "tipo": "BTTS",
           "opcao": "YES",
-          "probabilidade": 0.571567547551314,
-          "confianca": "MEDIUM",
-          "justificativa": "xG: 1.2 (casa) x 1.6 (fora). Ambas marcam - Sim: 57.2%",
-          "edge": 0.0716,
+          "probabilidade": 0.503399818040156,
+          "confianca": "LOW",
+          "justificativa": "xG: 2.9 (casa) x 0.8 (fora). Ambas marcam - Sim: 50.3%",
+          "edge": 0.0034,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -644,13 +636,11 @@
       },
       "alertas": [],
       "odds_debug": {
-        "enabled": "true",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (9.9 p.p. < 10.0 p.p.)",
+        "enabled": "false",
+        "status": "skip_no_api_key",
+        "reason": "ODDS_API_KEY não configurada",
         "competition": "Championship",
-        "sport_key": "soccer_efl_champ",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "sport_key": "soccer_efl_champ"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
@@ -837,13 +827,11 @@
       },
       "alertas": [],
       "odds_debug": {
-        "enabled": "true",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
+        "enabled": "false",
+        "status": "skip_no_api_key",
+        "reason": "ODDS_API_KEY não configurada",
         "competition": "Championship",
-        "sport_key": "soccer_efl_champ",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "sport_key": "soccer_efl_champ"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
@@ -981,130 +969,128 @@
         "visitante": null
       },
       "times": {
-        "casa": "Norwich",
-        "visitante": "Derby County"
+        "casa": "Stoke",
+        "visitante": "Millwall"
       },
       "probabilidades": {
-        "casa": 0.7998921236413157,
-        "empate": 0.1208177190722941,
-        "visitante": 0.06872931211373064
+        "casa": 0.2917472639294546,
+        "empate": 0.24401148472310769,
+        "visitante": 0.4639009308147415
       },
       "favorito": {
-        "nome": "Norwich",
-        "prob": 0.7998921236413157,
-        "vantagem": 0.6790744045690216
+        "nome": "Millwall",
+        "prob": 0.4639009308147415,
+        "vantagem": 0.17215366688528688
       },
       "gols_esperados": {
-        "casa": 2.934959001782531,
-        "visitante": 0.7714224598930481,
-        "total": 3.706381461675579
+        "casa": 1.2423905882352941,
+        "visitante": 1.6290909090909094,
+        "total": 2.8714814973262035
       },
       "mercados": {
-        "under_25": 0.29491559005465184,
-        "over_25": 0.7050844099453482,
-        "btts_yes": 0.503399818040156,
-        "btts_no": 0.496600181959844
+        "under_25": 0.4529309913195261,
+        "over_25": 0.5470690086804739,
+        "btts_yes": 0.571567547551314,
+        "btts_no": 0.428432452448686
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.8181818181818182,
-          "ataque": 0.5599999999999999,
-          "defesa": 0.6799999999999999,
+          "forma_recente": 0.4454545454545455,
+          "ataque": 0.8800000000000001,
+          "defesa": 0.52,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.7223636363636364
+          "score_total": 0.639909090909091
         },
         "visitante": {
-          "forma_recente": 0.5818181818181819,
-          "ataque": 0.48,
-          "defesa": 0.19999999999999996,
+          "forma_recente": 0.7727272727272727,
+          "ataque": 0.64,
+          "defesa": 0.76,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.5036363636363637
+          "score_total": 0.7224545454545455
         }
       },
-      "leitura_rapida": "Norwich favorito (80%, risco forte). Jogo mais aberto (xG total ≈3.7). Over 2.5 com 71%. | Forma recente: Norwich em alta.",
+      "leitura_rapida": "Millwall favorito (46%, risco moderado). Mercado de gols equilibrado (xG total ≈2.9). | Forma recente: Millwall em alta.",
       "tendencia": {
-        "casa": "em alta",
-        "visitante": "estavel"
+        "casa": "estavel",
+        "visitante": "em alta"
       },
       "alertas": [],
       "odds_debug": {
-        "enabled": "true",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
+        "enabled": "false",
+        "status": "skip_no_api_key",
+        "reason": "ODDS_API_KEY não configurada",
         "competition": "Championship",
-        "sport_key": "soccer_efl_champ",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "sport_key": "soccer_efl_champ"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
       "historico": {
         "casa": [
           {
-            "data": "25/02 19:45",
-            "mandante": "Norwich",
-            "visitante": "Sheffield Wed",
-            "placar": "2 x 0",
+            "data": "25/02 20:00",
+            "mandante": "Stoke",
+            "visitante": "Oxford United",
+            "placar": "2 x 1",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
           {
-            "data": "28/02 12:30",
-            "mandante": "Leicester City",
-            "visitante": "Norwich",
+            "data": "28/02 15:00",
+            "mandante": "Coventry City",
+            "visitante": "Stoke",
+            "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "07/03 15:00",
+            "mandante": "Swansea",
+            "visitante": "Stoke",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "10/03 20:00",
+            "mandante": "Stoke",
+            "visitante": "Ipswich Town",
+            "placar": "3 x 3",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "14/03 15:00",
+            "mandante": "Stoke",
+            "visitante": "Watford",
+            "placar": "3 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "25/02 19:45",
+            "mandante": "Millwall",
+            "visitante": "Birmingham",
+            "placar": "3 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "28/02 15:00",
+            "mandante": "Preston NE",
+            "visitante": "Millwall",
             "placar": "0 x 2",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
           {
-            "data": "11/03 19:45",
-            "mandante": "Norwich",
-            "visitante": "Sheffield Utd",
-            "placar": "2 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "14/03 15:00",
-            "mandante": "Norwich",
-            "visitante": "Preston NE",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "18/03 19:45",
-            "mandante": "Southampton",
-            "visitante": "Norwich",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "24/02 19:45",
+            "data": "07/03 12:30",
             "mandante": "Hull City",
-            "visitante": "Derby County",
-            "placar": "4 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "28/02 12:30",
-            "mandante": "Derby County",
-            "visitante": "Blackburn",
-            "placar": "3 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "07/03 15:00",
-            "mandante": "Derby County",
-            "visitante": "Sheffield Wed",
-            "placar": "2 x 1",
+            "visitante": "Millwall",
+            "placar": "1 x 3",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
@@ -1113,27 +1099,27 @@
             "mandante": "Millwall",
             "visitante": "Derby County",
             "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "16/03 20:00",
-            "mandante": "Portsmouth",
-            "visitante": "Derby County",
-            "placar": "0 x 1",
             "resultado": "V",
             "resultado_label": "Vitoria"
+          },
+          {
+            "data": "14/03 15:00",
+            "mandante": "Millwall",
+            "visitante": "Blackburn",
+            "placar": "1 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
           }
         ]
       },
       "palpites": [
         {
           "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.7998921236413157,
-          "confianca": "HIGH",
-          "justificativa": "Norwich projeta ≈2.9 gol(s) vs ≈0.8 do adversário. Prob vitória: 80.0% (margem: 67.9 p.p.)",
-          "edge": 0.6791,
+          "opcao": "2",
+          "probabilidade": 0.4639009308147415,
+          "confianca": "MEDIUM",
+          "justificativa": "Millwall projeta ≈1.6 gol(s) vs ≈1.2 do adversário. Prob vitória: 46.4% (margem: 17.2 p.p.)",
+          "edge": 0.1722,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -1142,10 +1128,10 @@
         {
           "tipo": "OVER_UNDER",
           "opcao": "OVER",
-          "probabilidade": 0.7050844099453482,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈3.7. OVER 2.5: 70.5% de probabilidade",
-          "edge": 0.2051,
+          "probabilidade": 0.5470690086804739,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.9. OVER 2.5: 54.7% de probabilidade",
+          "edge": 0.0471,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -1154,10 +1140,10 @@
         {
           "tipo": "BTTS",
           "opcao": "YES",
-          "probabilidade": 0.503399818040156,
-          "confianca": "LOW",
-          "justificativa": "xG: 2.9 (casa) x 0.8 (fora). Ambas marcam - Sim: 50.3%",
-          "edge": 0.0034,
+          "probabilidade": 0.571567547551314,
+          "confianca": "MEDIUM",
+          "justificativa": "xG: 1.2 (casa) x 1.6 (fora). Ambas marcam - Sim: 57.2%",
+          "edge": 0.0716,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -1223,13 +1209,11 @@
       },
       "alertas": [],
       "odds_debug": {
-        "enabled": "true",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
+        "enabled": "false",
+        "status": "skip_no_api_key",
+        "reason": "ODDS_API_KEY não configurada",
         "competition": "Championship",
-        "sport_key": "soccer_efl_champ",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "sport_key": "soccer_efl_champ"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
@@ -1367,396 +1351,6 @@
         "visitante": null
       },
       "times": {
-        "casa": "Southampton",
-        "visitante": "Bristol City"
-      },
-      "probabilidades": {
-        "casa": 0.8777860045807968,
-        "empate": 0.09113803289263837,
-        "visitante": 0.02283494709931614
-      },
-      "favorito": {
-        "nome": "Southampton",
-        "prob": 0.8777860045807968,
-        "vantagem": 0.7866479716881585
-      },
-      "gols_esperados": {
-        "casa": 2.8067393939393948,
-        "visitante": 0.3,
-        "total": 3.1067393939393946
-      },
-      "mercados": {
-        "under_25": 0.40794708918672107,
-        "over_25": 0.5920529108132789,
-        "btts_yes": 0.24139085872798346,
-        "btts_no": 0.7586091412720165
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.9272727272727272,
-          "ataque": 1.0,
-          "defesa": 0.92,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.9185454545454546
-        },
-        "visitante": {
-          "forma_recente": 0.38181818181818183,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.49363636363636365
-        }
-      },
-      "leitura_rapida": "Southampton favorito (88%, risco forte). Jogo mais aberto (xG total ≈3.1). Over 2.5 com 59%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "true",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
-        "competition": "Championship",
-        "sport_key": "soccer_efl_champ",
-        "odds_match_id": "7ab95619c6e18e166f2e94f01e893f0f",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
-      },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
-      "historico": {
-        "casa": [
-          {
-            "data": "24/02 20:00",
-            "mandante": "Southampton",
-            "visitante": "QPR",
-            "placar": "5 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "28/02 15:00",
-            "mandante": "Sheffield Wed",
-            "visitante": "Southampton",
-            "placar": "1 x 3",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "11/03 19:45",
-            "mandante": "West Brom",
-            "visitante": "Southampton",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "14/03 12:30",
-            "mandante": "Coventry City",
-            "visitante": "Southampton",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "18/03 19:45",
-            "mandante": "Southampton",
-            "visitante": "Norwich",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "24/02 19:45",
-            "mandante": "Blackburn",
-            "visitante": "Bristol City",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "27/02 20:00",
-            "mandante": "Bristol City",
-            "visitante": "Watford",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "07/03 15:00",
-            "mandante": "Bristol City",
-            "visitante": "Coventry City",
-            "placar": "0 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "10/03 19:45",
-            "mandante": "Leicester City",
-            "visitante": "Bristol City",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "14/03 12:30",
-            "mandante": "Middlesbrough",
-            "visitante": "Bristol City",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.8777860045807968,
-          "confianca": "HIGH",
-          "justificativa": "Southampton projeta ≈2.8 gol(s) vs ≈0.3 do adversário. Prob vitória: 87.8% (margem: 78.7 p.p.)",
-          "edge": 0.7866,
-          "odd_decimal": 1.47,
-          "ev": 0.2903,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.5920529108132789,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈3.1. OVER 2.5: 59.2% de probabilidade",
-          "edge": 0.0921,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.7586091412720165,
-          "confianca": "HIGH",
-          "justificativa": "xG: 2.8 (casa) x 0.3 (fora). Ambas marcam - Nao: 75.9%",
-          "edge": 0.2586,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Championship",
-      "data": "2026-04-21T18:45:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "Coventry City",
-        "visitante": "Portsmouth"
-      },
-      "probabilidades": {
-        "casa": 0.8571710276152138,
-        "empate": 0.06944980222719134,
-        "visitante": 0.033660150361411185
-      },
-      "favorito": {
-        "nome": "Coventry City",
-        "prob": 0.8571710276152138,
-        "vantagem": 0.7877212253880225
-      },
-      "gols_esperados": {
-        "casa": 3.7923080213903746,
-        "visitante": 0.7308377896613192,
-        "total": 4.523145811051694
-      },
-      "mercados": {
-        "under_25": 0.21071037201238996,
-        "over_25": 0.78928962798761,
-        "btts_yes": 0.4862113296360151,
-        "btts_no": 0.5137886703639849
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.8363636363636364,
-          "ataque": 0.72,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.7527272727272728
-        },
-        "visitante": {
-          "forma_recente": 0.2727272727272727,
-          "ataque": 0.4,
-          "defesa": 0.19999999999999996,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.37545454545454543
-        }
-      },
-      "leitura_rapida": "Coventry City favorito (86%, risco forte). Jogo mais aberto (xG total ≈4.5). Over 2.5 com 79%. | Forma recente: Coventry City em alta.",
-      "tendencia": {
-        "casa": "em alta",
-        "visitante": "estavel"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "true",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
-        "competition": "Championship",
-        "sport_key": "soccer_efl_champ",
-        "odds_match_id": "8133f9c199cee1e7871263183de2b10f",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
-      },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
-      "historico": {
-        "casa": [
-          {
-            "data": "25/02 19:45",
-            "mandante": "Sheffield Utd",
-            "visitante": "Coventry City",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "28/02 15:00",
-            "mandante": "Coventry City",
-            "visitante": "Stoke",
-            "placar": "2 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "07/03 15:00",
-            "mandante": "Bristol City",
-            "visitante": "Coventry City",
-            "placar": "0 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "11/03 20:00",
-            "mandante": "Coventry City",
-            "visitante": "Preston NE",
-            "placar": "3 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "14/03 12:30",
-            "mandante": "Coventry City",
-            "visitante": "Southampton",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "28/02 12:30",
-            "mandante": "Portsmouth",
-            "visitante": "Hull City",
-            "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "07/03 12:30",
-            "mandante": "Blackburn",
-            "visitante": "Portsmouth",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "10/03 19:45",
-            "mandante": "Portsmouth",
-            "visitante": "Swansea",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "16/03 20:00",
-            "mandante": "Portsmouth",
-            "visitante": "Derby County",
-            "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "21/03 15:00",
-            "mandante": "QPR",
-            "visitante": "Portsmouth",
-            "placar": "6 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.8571710276152138,
-          "confianca": "HIGH",
-          "justificativa": "Coventry City projeta ≈3.8 gol(s) vs ≈0.7 do adversário. Prob vitória: 85.7% (margem: 78.8 p.p.)",
-          "edge": 0.7877,
-          "odd_decimal": 1.69,
-          "ev": 0.4486,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.78928962798761,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈4.5. OVER 2.5: 78.9% de probabilidade",
-          "edge": 0.2893,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.5137886703639849,
-          "confianca": "LOW",
-          "justificativa": "xG: 3.8 (casa) x 0.7 (fora). Ambas marcam - Nao: 51.4%",
-          "edge": 0.0138,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Championship",
-      "data": "2026-04-21T18:45:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
         "casa": "Oxford United",
         "visitante": "Wrexham"
       },
@@ -1806,13 +1400,11 @@
       },
       "alertas": [],
       "odds_debug": {
-        "enabled": "true",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
+        "enabled": "false",
+        "status": "skip_no_api_key",
+        "reason": "ODDS_API_KEY não configurada",
         "competition": "Championship",
-        "sport_key": "soccer_efl_champ",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "sport_key": "soccer_efl_champ"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
@@ -1942,6 +1534,388 @@
       ]
     },
     {
+      "competicao": "Championship",
+      "data": "2026-04-21T18:45:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Southampton",
+        "visitante": "Bristol City"
+      },
+      "probabilidades": {
+        "casa": 0.8777860045807968,
+        "empate": 0.09113803289263837,
+        "visitante": 0.02283494709931614
+      },
+      "favorito": {
+        "nome": "Southampton",
+        "prob": 0.8777860045807968,
+        "vantagem": 0.7866479716881585
+      },
+      "gols_esperados": {
+        "casa": 2.8067393939393948,
+        "visitante": 0.3,
+        "total": 3.1067393939393946
+      },
+      "mercados": {
+        "under_25": 0.40794708918672107,
+        "over_25": 0.5920529108132789,
+        "btts_yes": 0.24139085872798346,
+        "btts_no": 0.7586091412720165
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.9272727272727272,
+          "ataque": 1.0,
+          "defesa": 0.92,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.9185454545454546
+        },
+        "visitante": {
+          "forma_recente": 0.38181818181818183,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.49363636363636365
+        }
+      },
+      "leitura_rapida": "Southampton favorito (88%, risco forte). Jogo mais aberto (xG total ≈3.1). Over 2.5 com 59%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "skip_no_api_key",
+        "reason": "ODDS_API_KEY não configurada",
+        "competition": "Championship",
+        "sport_key": "soccer_efl_champ"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "24/02 20:00",
+            "mandante": "Southampton",
+            "visitante": "QPR",
+            "placar": "5 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "28/02 15:00",
+            "mandante": "Sheffield Wed",
+            "visitante": "Southampton",
+            "placar": "1 x 3",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "11/03 19:45",
+            "mandante": "West Brom",
+            "visitante": "Southampton",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "14/03 12:30",
+            "mandante": "Coventry City",
+            "visitante": "Southampton",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "18/03 19:45",
+            "mandante": "Southampton",
+            "visitante": "Norwich",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "24/02 19:45",
+            "mandante": "Blackburn",
+            "visitante": "Bristol City",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "27/02 20:00",
+            "mandante": "Bristol City",
+            "visitante": "Watford",
+            "placar": "1 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "07/03 15:00",
+            "mandante": "Bristol City",
+            "visitante": "Coventry City",
+            "placar": "0 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "10/03 19:45",
+            "mandante": "Leicester City",
+            "visitante": "Bristol City",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "14/03 12:30",
+            "mandante": "Middlesbrough",
+            "visitante": "Bristol City",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.8777860045807968,
+          "confianca": "HIGH",
+          "justificativa": "Southampton projeta ≈2.8 gol(s) vs ≈0.3 do adversário. Prob vitória: 87.8% (margem: 78.7 p.p.)",
+          "edge": 0.7866,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER",
+          "probabilidade": 0.5920529108132789,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈3.1. OVER 2.5: 59.2% de probabilidade",
+          "edge": 0.0921,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.7586091412720165,
+          "confianca": "HIGH",
+          "justificativa": "xG: 2.8 (casa) x 0.3 (fora). Ambas marcam - Nao: 75.9%",
+          "edge": 0.2586,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Championship",
+      "data": "2026-04-21T18:45:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Coventry City",
+        "visitante": "Portsmouth"
+      },
+      "probabilidades": {
+        "casa": 0.8571710276152138,
+        "empate": 0.06944980222719134,
+        "visitante": 0.033660150361411185
+      },
+      "favorito": {
+        "nome": "Coventry City",
+        "prob": 0.8571710276152138,
+        "vantagem": 0.7877212253880225
+      },
+      "gols_esperados": {
+        "casa": 3.7923080213903746,
+        "visitante": 0.7308377896613192,
+        "total": 4.523145811051694
+      },
+      "mercados": {
+        "under_25": 0.21071037201238996,
+        "over_25": 0.78928962798761,
+        "btts_yes": 0.4862113296360151,
+        "btts_no": 0.5137886703639849
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.8363636363636364,
+          "ataque": 0.72,
+          "defesa": 0.6,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.7527272727272728
+        },
+        "visitante": {
+          "forma_recente": 0.2727272727272727,
+          "ataque": 0.4,
+          "defesa": 0.19999999999999996,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.37545454545454543
+        }
+      },
+      "leitura_rapida": "Coventry City favorito (86%, risco forte). Jogo mais aberto (xG total ≈4.5). Over 2.5 com 79%. | Forma recente: Coventry City em alta.",
+      "tendencia": {
+        "casa": "em alta",
+        "visitante": "estavel"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "skip_no_api_key",
+        "reason": "ODDS_API_KEY não configurada",
+        "competition": "Championship",
+        "sport_key": "soccer_efl_champ"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "25/02 19:45",
+            "mandante": "Sheffield Utd",
+            "visitante": "Coventry City",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "28/02 15:00",
+            "mandante": "Coventry City",
+            "visitante": "Stoke",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "07/03 15:00",
+            "mandante": "Bristol City",
+            "visitante": "Coventry City",
+            "placar": "0 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "11/03 20:00",
+            "mandante": "Coventry City",
+            "visitante": "Preston NE",
+            "placar": "3 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "14/03 12:30",
+            "mandante": "Coventry City",
+            "visitante": "Southampton",
+            "placar": "1 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "28/02 12:30",
+            "mandante": "Portsmouth",
+            "visitante": "Hull City",
+            "placar": "0 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "07/03 12:30",
+            "mandante": "Blackburn",
+            "visitante": "Portsmouth",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "10/03 19:45",
+            "mandante": "Portsmouth",
+            "visitante": "Swansea",
+            "placar": "1 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "16/03 20:00",
+            "mandante": "Portsmouth",
+            "visitante": "Derby County",
+            "placar": "0 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "21/03 15:00",
+            "mandante": "QPR",
+            "visitante": "Portsmouth",
+            "placar": "6 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.8571710276152138,
+          "confianca": "HIGH",
+          "justificativa": "Coventry City projeta ≈3.8 gol(s) vs ≈0.7 do adversário. Prob vitória: 85.7% (margem: 78.8 p.p.)",
+          "edge": 0.7877,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER",
+          "probabilidade": 0.78928962798761,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈4.5. OVER 2.5: 78.9% de probabilidade",
+          "edge": 0.2893,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.5137886703639849,
+          "confianca": "LOW",
+          "justificativa": "xG: 3.8 (casa) x 0.7 (fora). Ambas marcam - Nao: 51.4%",
+          "edge": 0.0138,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
       "competicao": "Premier League",
       "data": "2026-04-21T19:00:00Z",
       "status": "TIMED",
@@ -1999,13 +1973,11 @@
       },
       "alertas": [],
       "odds_debug": {
-        "enabled": "true",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
+        "enabled": "false",
+        "status": "skip_no_api_key",
+        "reason": "ODDS_API_KEY não configurada",
         "competition": "Premier League",
-        "sport_key": "soccer_epl",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "sport_key": "soccer_epl"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
@@ -2192,18 +2164,14 @@
       },
       "alertas": [],
       "odds_debug": {
-        "enabled": "true",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
+        "enabled": "false",
+        "status": "skip_no_api_key",
+        "reason": "ODDS_API_KEY não configurada",
         "competition": "Primera Division",
-        "sport_key": "soccer_spain_la_liga",
-        "odds_match_id": "7759c10d8fefa09122099f380241a8be",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "sport_key": "soccer_spain_la_liga"
       },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
+      "odds_integradas": false,
+      "odds_valor_alto": false,
       "historico": {
         "casa": [
           {
@@ -2298,9 +2266,9 @@
           "confianca": "HIGH",
           "justificativa": "Girona projeta ≈2.0 gol(s) vs ≈0.6 do adversário. Prob vitória: 69.3% (margem: 49.4 p.p.)",
           "edge": 0.4935,
-          "odd_decimal": 2.55,
-          "ev": 0.7673,
-          "valor_esperado_positivo": true,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
           "resultado_verificador": null
         },
         {
@@ -2387,17 +2355,13 @@
       },
       "alertas": [],
       "odds_debug": {
-        "enabled": "true",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
+        "enabled": "false",
+        "status": "skip_no_api_key",
+        "reason": "ODDS_API_KEY não configurada",
         "competition": "Primera Division",
-        "sport_key": "soccer_spain_la_liga",
-        "odds_match_id": "ce727a41a47d5e86ddee97c7cd14928d",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "sport_key": "soccer_spain_la_liga"
       },
-      "odds_integradas": true,
+      "odds_integradas": false,
       "odds_valor_alto": false,
       "historico": {
         "casa": [
@@ -2493,8 +2457,8 @@
           "confianca": "HIGH",
           "justificativa": "Real Madrid projeta ≈4.3 gol(s) vs ≈1.8 do adversário. Prob vitória: 72.6% (margem: 62.3 p.p.)",
           "edge": 0.623,
-          "odd_decimal": 1.28,
-          "ev": -0.0711,
+          "odd_decimal": null,
+          "ev": null,
           "valor_esperado_positivo": false,
           "resultado_verificador": null
         },
