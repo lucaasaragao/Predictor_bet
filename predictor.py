@@ -35,6 +35,9 @@ COMPETICOES_PERMITIDAS = {
     "Serie A",
     "Primeira Liga",
     "Championship", # Segunda divisão inglesa
+    "Bundesliga",
+    "Eredivisie",
+    "Ligue 1",
 }
 
 
@@ -91,27 +94,17 @@ class BetSuggestion:
     confianca: str             # HIGH, MEDIUM, LOW
     justificativa: str
     resultado_verificador: Optional[str] = None
-    resultado_verificador: Optional[str] = None
 
 
 def buscar_jogos_permitidos() -> List[Dict]:
-    """Busca jogos das competições permitidas nos próximos 7 dias"""
-
-    hoje = datetime.now()
-    date_from = hoje.strftime("%Y-%m-%d")
-    date_to = (hoje + timedelta(days=7)).strftime("%Y-%m-%d")
+    """Busca jogos das competições permitidas do dia atual"""
 
     url = f"{API_BASE}/matches/"
-    params = {
-        "dateFrom": date_from,
-        "dateTo": date_to,
-        "status": "SCHEDULED",
-    }
 
-    print(f"📅 Buscando jogos de {date_from} até {date_to} (status=SCHEDULED)...")
+    print("📅 Buscando jogos de hoje...")
 
     try:
-        response = requests.get(url, headers=HEADERS, params=params, timeout=30)
+        response = requests.get(url, headers=HEADERS, timeout=30)
     except requests.exceptions.RequestException as e:
         print(f"❌ Erro de conexão ao buscar jogos: {e}")
         return []
@@ -527,27 +520,6 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
                 f"Empate com {predicao.prob_empate*100:.1f}% de probabilidade"
             ),
         ))
-    if predicao.status == "FINISHED" and predicao.placar_casa is not None and predicao.placar_visitante is not None:
-        home_g = predicao.placar_casa
-        away_g = predicao.placar_visitante
-        for p in palpites:
-            if p.tipo == "WINNER":
-                if home_g > away_g and p.opcao == "1": p.resultado_verificador = "ACERTO"
-                elif home_g == away_g and p.opcao == "X": p.resultado_verificador = "ACERTO"
-                elif home_g < away_g and p.opcao == "2": p.resultado_verificador = "ACERTO"
-                else: p.resultado_verificador = "ERRO"
-            elif p.tipo == "OVER_UNDER":
-                total = home_g + away_g
-                if total > 2.5 and p.opcao == "OVER": p.resultado_verificador = "ACERTO"
-                elif total < 2.5 and p.opcao == "UNDER": p.resultado_verificador = "ACERTO"
-                else: p.resultado_verificador = "ERRO"
-            elif p.tipo == "BTTS":
-                if home_g > 0 and away_g > 0 and p.opcao == "YES": p.resultado_verificador = "ACERTO"
-                elif (home_g == 0 or away_g == 0) and p.opcao == "NO": p.resultado_verificador = "ACERTO"
-                else: p.resultado_verificador = "ERRO"
-            elif p.tipo == "EMPATE":
-                if home_g == away_g and p.opcao == "X": p.resultado_verificador = "ACERTO"
-                else: p.resultado_verificador = "ERRO"
 
     if predicao.status == "FINISHED" and predicao.placar_casa is not None and predicao.placar_visitante is not None:
         home_g = predicao.placar_casa
