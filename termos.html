@@ -7,10 +7,21 @@
   <meta name="description" content="Termos de uso do Radar de Palpites em linguagem simples e direta." />
   <meta property="og:title" content="Termos de Uso — Radar de Palpites" />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>" />
+  <meta name="color-scheme" content="dark light" />
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('radar-theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (error) {}
+    })();
+  </script>
+  <link rel="icon" href="assets/fav-icon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
     .legal-page {
@@ -34,7 +45,7 @@
       font-size: 11px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--green);
+      color: var(--primary);
       margin-bottom: 0.5rem;
     }
     .legal-title {
@@ -104,10 +115,8 @@
   </style>
 </head>
 <body>
-  <div class="bg-noise" aria-hidden="true"></div>
-
   <div class="legal-page">
-    <a href="index.html" class="legal-back">← Voltar ao Radar de Palpites</a>
+    <a href="index.html" class="legal-back">← Voltar ao Palpitando</a>
 
     <p class="legal-eyebrow">Radar de Palpites</p>
     <h1 class="legal-title">Termos de Uso</h1>
@@ -179,7 +188,7 @@
 
     <div class="legal-section">
       <h2>8. Contato</h2>
-      <p>Se tiver dúvidas sobre estes termos, entre em contato pelo <a href="https://www.linkedin.com/in/lucas-aragao-magno/" target="_blank" rel="noopener noreferrer" style="color: var(--green); text-decoration: none;">LinkedIn</a>.</p>
+      <p>Se tiver dúvidas sobre estes termos, entre em contato pelo <a href="https://www.linkedin.com/in/lucas-aragao-magno/" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">LinkedIn</a>.</p>
     </div>
   </div>
 

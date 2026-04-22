@@ -3,16 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Radar de Palpites — Probabilidades de Futebol</title>
+  <title>Palpitando | Decisão Rápida com Dados</title>
   <meta name="description" content="Probabilidades e leituras rápidas de jogos de futebol com base em dados estatísticos." />
-  <meta property="og:title" content="Radar de Palpites" />
+  <meta property="og:title" content="Palpitando" />
   <meta property="og:description" content="Probabilidades e leituras rápidas de jogos de futebol com base em dados estatísticos." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
+  <meta name="color-scheme" content="dark light" />
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('radar-theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (error) {
+      }
+    })();
+  </script>
   <link rel="icon" href="assets/fav-icon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4097064526819391"
      crossorigin="anonymous"></script>
@@ -44,66 +56,54 @@
   </div>
 
   <div id="siteContent" hidden>
-  <div class="bg-noise" aria-hidden="true"></div>
   <header class="topbar">
     <div class="topbar__brand">
-      <!-- <img src="assets/logo.png" alt="Radar de Palpites" class="brand-logo" /> -->
-      <p class="eyebrow">
-        <span class="eyebrow__dot" aria-hidden="true"></span>
-        Football Intelligence
-      </p>
-      <h1>
-        <img class="h1__icon-img" src="assets/fav-icon.png" alt="" aria-hidden="true" />
-        Radar de Palpites
-      </h1>
-      <div class="feature-chips" aria-label="Funcionalidades">
-        <span class="chip"><img src="assets/palpite.png" class="chip-icon" alt="" aria-hidden="true" />Favoritos</span>
-        <span class="chip"><img src="assets/Probabilidade.png" class="chip-icon" alt="" aria-hidden="true" />Probabilidade de gols</span>
-        <span class="chip">BTTS</span>
-        <span class="chip"><img src="assets/historico.png" class="chip-icon" alt="" aria-hidden="true" />Últimos jogos</span>
+      <div class="brand-logo-container">
+        <img class="brand-logo brand-logo--dark" src="assets/logo_escura_2.png" alt="Palpitando" />
+        <img class="brand-logo brand-logo--light" src="assets/Logo_branca_2.png" alt="Palpitando" />
       </div>
     </div>
     <div class="meta">
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Ativar tema claro" aria-pressed="false">
+        <span class="theme-toggle__icon" aria-hidden="true"></span>
+        <span class="theme-toggle__label">Modo claro</span>
+      </button>
       <div>
         <span>Atualizado em</span>
         <strong id="generatedAt">--</strong>
       </div>
       <div>
-        <span>Jogos</span>
+        <span>Jogos de hoje</span>
         <strong id="totalJogos">--</strong>
-      </div>
-      <div class="meta__status">
-        <span>Status</span>
-        <strong class="status-live">
-          <span class="status-live__dot" aria-hidden="true"></span>
-          Ao vivo
-        </strong>
       </div>
     </div>
   </header>
 
   <main>
     <section class="toolbar">
-      <label>
-        <span class="label-with-icon">Competição</span>
-        <select id="competitionFilter">
-          <option value="">Todas</option>
-        </select>
-      </label>
-      <label>
-        Confiança mínima dos palpites
-        <select id="confidenceFilter">
-          <option value="LOW">Baixa</option>
-          <option value="MEDIUM">Média</option>
-          <option value="HIGH">Alta</option>
-        </select>
-      </label>
+      <div class="toolbar-left">
+        <div class="filter-group">
+          <span class="filter-label">Competição</span>
+          <select id="competitionFilter">
+            <option value="">Todas</option>
+          </select>
+        </div>
+      </div>
 
-      <div class="confidence-legend" aria-live="polite">
-        <span id="confChipLow" class="legend-chip legend-chip--low">Baixa: entradas com probabilidades baixas</span>
-        <span id="confChipMedium" class="legend-chip legend-chip--medium">Média: entradas com probabilidades médias</span>
-        <span id="confChipHigh" class="legend-chip legend-chip--high">Alta: entradas com probabilidades altas</span>
-        <span id="confidenceHelp" class="legend-count"></span>
+      <div class="toolbar-right">
+        <div class="filter-group">
+          <span class="filter-label">Confiança</span>
+          <div class="filter-chips" role="group" aria-label="Nível de confiança">
+            <button id="confChipHigh" class="filter-chip legend-chip legend-chip--high" type="button" data-confidence="HIGH" aria-pressed="false">Alta</button>
+            <button id="confChipMedium" class="filter-chip legend-chip legend-chip--medium" type="button" data-confidence="MEDIUM" aria-pressed="false">Média</button>
+            <button id="confChipLow" class="filter-chip legend-chip legend-chip--low is-active" type="button" data-confidence="LOW" aria-pressed="true">Baixa</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="toolbar-footer" aria-live="polite">
+        <span id="confidenceHelp" class="results"></span>
+        <button id="clearFilters" class="clear-filters" type="button">Limpar filtros</button>
       </div>
     </section>
 
@@ -113,13 +113,19 @@
   <template id="matchCardTemplate">
     <article class="card">
       <div class="card-head">
-        <p class="competition"></p>
+        <div class="card-head-top">
+          <div class="card-meta">
+            <p class="competition"></p>
+            <p class="match-date" hidden></p>
+          </div>
+          <div class="card-badges"></div>
+        </div>
         <h2 class="match-title"></h2>
       </div>
 
       <div class="card-body">
         <div class="card-body-inner">
-          <div class="grid-2">
+          <div class="grid-2 grid-2--stacked">
             <section class="panel emphasis">
               <h3>Time mais provável</h3>
               <p class="favorite-line"></p>

@@ -10,8 +10,60 @@ const confidenceRank = {
   HIGH: 3,
 };
 
+const THEME_STORAGE_KEY = "radar-theme";
+
 function pct(value) {
   return `${(value * 100).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`;
+}
+
+function getCurrentTheme() {
+  return document.documentElement.dataset.theme === "light" ? "light" : "dark";
+}
+
+function getThemeIconSvg(isLight) {
+  return isLight
+    ? '<svg viewBox="0 0 20 20" focusable="false" aria-hidden="true"><circle cx="10" cy="10" r="6" fill="currentColor" opacity="0.16"></circle><path d="M10 4a6 6 0 1 0 0 12a6 6 0 0 1 0-12Z" fill="currentColor"></path></svg>'
+    : '<svg viewBox="0 0 20 20" focusable="false" aria-hidden="true"><circle cx="10" cy="10" r="6" fill="currentColor" opacity="0.16"></circle><path d="M10 4a6 6 0 0 1 0 12Z" fill="currentColor"></path></svg>';
+}
+
+function applyTheme(theme) {
+  const nextTheme = theme === "light" ? "light" : "dark";
+  document.documentElement.dataset.theme = nextTheme;
+
+  const themeToggle = document.getElementById("themeToggle");
+  if (!themeToggle) return;
+
+  const themeLabel = themeToggle.querySelector(".theme-toggle__label");
+  const themeIcon = themeToggle.querySelector(".theme-toggle__icon");
+  const isLight = nextTheme === "light";
+
+  themeToggle.setAttribute("aria-pressed", String(isLight));
+  themeToggle.setAttribute("aria-label", isLight ? "Ativar tema escuro" : "Ativar tema claro");
+
+  if (themeLabel) {
+    themeLabel.textContent = isLight ? "Modo escuro" : "Modo claro";
+  }
+
+  if (themeIcon) {
+    themeIcon.innerHTML = getThemeIconSvg(isLight);
+  }
+}
+
+function setupThemeToggle() {
+  const themeToggle = document.getElementById("themeToggle");
+  if (!themeToggle) return;
+
+  applyTheme(getCurrentTheme());
+
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = getCurrentTheme() === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
+
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+    } catch (error) {
+    }
+  });
 }
 
 function confidenceClass(conf) {
@@ -21,6 +73,62 @@ function confidenceClass(conf) {
 function confidenceLabel(conf) {
   const labels = { LOW: "Baixa", MEDIUM: "Média", HIGH: "Alta" };
   return labels[(conf || "LOW").toUpperCase()] || conf;
+}
+
+function parseGeneratedAt(value) {
+  if (!value) return null;
+
+  const normalized = String(value).trim().replace(" ", "T");
+  const parsedDate = new Date(normalized);
+  if (Number.isNaN(parsedDate.getTime())) {
+    return null;
+  }
+
+  return parsedDate;
+}
+
+function formatGeneratedAt(value, compact = false) {
+  const parsedDate = parseGeneratedAt(value);
+  if (!parsedDate) {
+    return value || "--";
+  }
+
+  return new Intl.DateTimeFormat("pt-BR", {
+    day: "2-digit",
+    month: "2-digit",
+    ...(compact ? {} : { year: "numeric" }),
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(parsedDate);
+}
+
+function syncHeaderMeta() {
+  const generatedAtEl = document.getElementById("generatedAt");
+  if (!generatedAtEl) return;
+
+  const rawGeneratedAt = state.raw?.generated_at || "--";
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+  generatedAtEl.textContent = formatGeneratedAt(rawGeneratedAt, isMobile);
+  generatedAtEl.title = rawGeneratedAt;
+  generatedAtEl.setAttribute("aria-label", `Atualizado em ${formatGeneratedAt(rawGeneratedAt, false)}`);
+}
+
+function setupMobileTopbar() {
+  const topbar = document.querySelector(".topbar");
+  if (!topbar) return;
+
+  const mobileQuery = window.matchMedia("(max-width: 768px)");
+
+  const syncTopbarState = () => {
+    const isMobile = mobileQuery.matches;
+    topbar.classList.toggle("is-scrolled", isMobile && window.scrollY > 16);
+  };
+
+  syncTopbarState();
+  window.addEventListener("scroll", syncTopbarState, { passive: true });
+  mobileQuery.addEventListener("change", syncTopbarState);
+  window.addEventListener("resize", syncTopbarState);
 }
 
 function historyBadgeClass(result) {
@@ -77,7 +185,6 @@ function buildTipJustificationHuman(tip, match) {
   const prob = Math.round((tip.probabilidade || 0) * 100);
   const xgCasa = Number(match?.gols_esperados?.casa || 0).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   const xgVisit = Number(match?.gols_esperados?.visitante || 0).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
-  const xgTotal = Number(match?.gols_esperados?.total || 0).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 
   if (tip.tipo === "WINNER") {
     const vencedor = resolveWinnerLabel(tip.opcao, match);
@@ -89,9 +196,9 @@ function buildTipJustificationHuman(tip, match) {
 
   if (tip.tipo === "OVER_UNDER") {
     if (String(tip.opcao).toUpperCase() === "UNDER") {
-      return `O jogo tem perfil fechado: são esperados cerca de ${xgTotal} gols no total. Em ${prob}% dos cenários simulados, o placar termina com 2 gols ou menos.`;
+      return `A linha de 2,5 gols aponta para um jogo mais fechado. Em ${prob}% dos cenários simulados, a partida termina com até 2 gols.`;
     } else {
-      return `O jogo tem perfil aberto: são esperados cerca de ${xgTotal} gols no total. Em ${prob}% dos cenários simulados, o placar chega a 3 gols ou mais.`;
+      return `A linha de 2,5 gols aponta para um jogo mais aberto. Em ${prob}% dos cenários simulados, a partida termina com 3 gols ou mais.`;
     }
   }
 
@@ -111,7 +218,9 @@ function translateQuickRead(text) {
     .replaceAll("UNDER 2.5", "Menos de 2,5 gols")
     .replaceAll("OVER 2.5", "Mais de 2,5 gols")
     .replaceAll("em alta", "\u2197 em alta")
-    .replaceAll("em baixa", "\u2198 em baixa");
+    .replaceAll("em baixa", "\u2198 em baixa")
+    .replace(/xG total\s*[\u2248~]?\s*\d+(?:[\.,]\d+)?/gi, "linha de 2,5 gols")
+    .replace(/\s*—\s*/g, ". ");
 }
 
 async function loadData() {
@@ -130,8 +239,8 @@ async function loadData() {
 }
 
 function fillHeader(data) {
-  document.getElementById("generatedAt").textContent = data.generated_at || "--";
   document.getElementById("totalJogos").textContent = String(data.total_jogos ?? data.jogos?.length ?? 0);
+  syncHeaderMeta();
 }
 
 function fillCompetitionFilter(data) {
@@ -175,10 +284,16 @@ function updateConfidenceHelp(visibleCount) {
     : (state.raw?.jogos || []).filter(passesFilters).length;
   const selected = (state.minConfidence || "LOW").toUpperCase();
 
-  Object.values(chips).forEach((chip) => chip?.classList.remove("is-active"));
-  chips[selected]?.classList.add("is-active");
+  Object.values(chips).forEach((chip) => {
+    if (!chip) return;
+    chip.classList.remove("is-active");
+    chip.setAttribute("aria-pressed", "false");
+  });
 
-  helpEl.textContent = `Mostrando ${shown}/${total} jogos`;
+  if (chips[selected]) {
+    chips[selected].classList.add("is-active");
+    chips[selected].setAttribute("aria-pressed", "true");
+  }
 }
 
 function renderProbabilities(container, match) {
@@ -203,16 +318,56 @@ function renderProbabilities(container, match) {
   });
 }
 
-function buildMiniOddsSummary(match) {
-  const rows = [
-    { name: match.times.casa, value: match.probabilidades.casa },
-    { name: "Empate", value: match.probabilidades.empate },
-    { name: match.times.visitante, value: match.probabilidades.visitante },
-  ].sort((a, b) => b.value - a.value);
+function getPrimaryTip(match) {
+  const tips = match?.palpites || [];
+  return tips.find((tip) => tip.valor_esperado_positivo === true) || tips[0] || null;
+}
 
-  return rows
-    .map((row) => `<div class="mini-odd-row"><span class="mini-odd-name">${row.name}</span><strong class="mini-odd-value">${pct(row.value)}</strong></div>`)
-    .join("");
+function buildGoalsProbabilityLabel(match) {
+  const under = Number(match?.mercados?.under_25);
+  const over = Number(match?.mercados?.over_25);
+
+  if (!Number.isFinite(under) && !Number.isFinite(over)) {
+    return "Dados indisponíveis";
+  }
+
+  if (!Number.isFinite(over) || (Number.isFinite(under) && under >= over)) {
+    return `Menos de 2,5 (${pct(under)})`;
+  }
+
+  return `Mais de 2,5 (${pct(over)})`;
+}
+
+function buildCardSnapshot(match) {
+  const primaryTip = getPrimaryTip(match);
+  const probability = Math.round((match?.favorito?.prob || 0) * 100);
+  const bestBet = primaryTip
+    ? translateTipOption(primaryTip.tipo, primaryTip.opcao, match)
+    : "Sem sugestão disponível";
+  const confidence = primaryTip ? confidenceLabel(primaryTip.confianca) : "Baixa";
+  const confidenceTone = primaryTip ? confidenceClass(primaryTip.confianca) : "low";
+  const goalsProbability = buildGoalsProbabilityLabel(match);
+
+  return `
+    <div class="card-snapshot-grid">
+      <div class="snapshot-item">
+        <span class="snapshot-label">Probabilidade</span>
+        <strong class="highlight">${probability}%</strong>
+      </div>
+      <div class="snapshot-item snapshot-item--wide">
+        <span class="snapshot-label">Melhor aposta</span>
+        <strong class="highlight highlight--secondary">${bestBet}</strong>
+      </div>
+      <div class="snapshot-item">
+        <span class="snapshot-label">Confiança</span>
+        <span class="conf ${confidenceTone}">${confidence}</span>
+      </div>
+      <div class="snapshot-item">
+        <span class="snapshot-label">Probabilidade de gols</span>
+        <strong class="highlight highlight--secondary">${goalsProbability}</strong>
+      </div>
+    </div>
+  `;
 }
 
 function setCardExpanded(cardEl, expanded) {
@@ -268,8 +423,6 @@ function buildSummaryNarrative(match) {
   const visitante = match?.times?.visitante || "Visitante";
   const favNome = match?.favorito?.nome || casa;
   const favProb = Math.round((match?.favorito?.prob || 0) * 100);
-  const xgTotalNum = Number(match?.gols_esperados?.total || 0);
-  const xgFmt = xgTotalNum.toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   const underProb = Math.round((match?.mercados?.under_25 || 0) * 100);
   const bttsNoProb = Math.round((match?.mercados?.btts_no || 0) * 100);
 
@@ -280,15 +433,15 @@ function buildSummaryNarrative(match) {
   } else if (favProb >= 50) {
     parts.push(`O ${favNome} tem leve vantagem: ${favProb}% de chance de vitória, mas o jogo pode surpreender.`);
   } else {
-    parts.push(`Jogo equilibrado — o ${favNome} aparece à frente com ${favProb}% de probabilidade de vitória, mas qualquer resultado é possível.`);
+    parts.push(`Jogo equilibrado, com o ${favNome} à frente em ${favProb}% de probabilidade de vitória. Ainda assim, qualquer resultado é possível.`);
   }
 
   if (underProb >= 60) {
-    parts.push(`Esperamos um jogo fechado, com cerca de ${xgFmt} gols no total.`);
+    parts.push(`A tendência principal do mercado é menos de 2,5 gols.`);
   } else if (underProb >= 50) {
-    parts.push(`O volume de gols deve ser moderado: cerca de ${xgFmt} gols esperados.`);
+    parts.push(`A linha de 2,5 gols está equilibrada, com leve inclinação para menos de 2,5.`);
   } else {
-    parts.push(`Jogo com potencial para mais gols: o modelo projeta cerca de ${xgFmt} gols no total.`);
+    parts.push(`A tendência principal do mercado é mais de 2,5 gols.`);
   }
 
   if (bttsNoProb >= 60) {
@@ -363,7 +516,7 @@ function renderTips(container, tips, match) {
       <div class="tag">${translateTipType(tip.tipo)}</div>
       <div class="conf ${confidenceClass(tip.confianca)}">${confidenceLabel(tip.confianca)}</div>
       <div class="tip-desc">
-        <strong>${translateTipOption(tip.tipo, tip.opcao, match)}</strong> — <span class="tip-just">${buildTipJustificationHuman(tip, match)}</span>
+        <strong>${translateTipOption(tip.tipo, tip.opcao, match)}</strong>. <span class="tip-just">${buildTipJustificationHuman(tip, match)}</span>
         ${valueBadge}
         ${resultMark}
       </div>
@@ -389,17 +542,23 @@ function renderCards() {
   filtered.forEach((match) => {
     const node = template.content.cloneNode(true);
     const cardEl = node.querySelector(".card");
+    const cardBadgesEl = node.querySelector(".card-badges");
 
-    let compStr = match.competicao;
+    let matchDateLabel = "";
     if (match.data) {
         const dateObj = new Date(match.data);
         const day = dateObj.getDate().toString().padStart(2, '0');
         const month = (dateObj.getMonth() + 1).toString().padStart(2, '0');
         const hours = dateObj.getHours().toString().padStart(2, '0');
         const minutes = dateObj.getMinutes().toString().padStart(2, '0');
-        compStr += ` • ${day}/${month} às ${hours}:${minutes}`;
+        matchDateLabel = `${day}/${month} às ${hours}:${minutes}`;
     }
-    node.querySelector(".competition").textContent = compStr;
+    node.querySelector(".competition").textContent = match.competicao;
+    const matchDateEl = node.querySelector(".match-date");
+    if (matchDateLabel) {
+      matchDateEl.textContent = matchDateLabel;
+      matchDateEl.hidden = false;
+    }
     
     let titleContent = `${match.times.casa} x ${match.times.visitante}`;
     if (match.status === "FINISHED" && match.placar_atual && match.placar_atual.casa !== null) {
@@ -413,29 +572,29 @@ function renderCards() {
       const badge = document.createElement("span");
       badge.className = "card-status-badge card-status-badge--finished";
       badge.textContent = "Finalizado";
-      node.querySelector(".card-head").appendChild(badge);
+      cardBadgesEl.appendChild(badge);
     } else if (match.status === "IN_PLAY" || match.status === "PAUSED") {
       const badge = document.createElement("span");
       badge.className = "card-status-badge card-status-badge--live";
       badge.textContent = "Ao Vivo";
-      node.querySelector(".card-head").appendChild(badge);
+      cardBadgesEl.appendChild(badge);
     }
 
     if (match.odds_valor_alto) {
       const valueBadge = document.createElement("span");
       valueBadge.className = "card-status-badge card-status-badge--value";
       valueBadge.textContent = "Possibilidade alta";
-      node.querySelector(".card-head").appendChild(valueBadge);
+      cardBadgesEl.appendChild(valueBadge);
     } else if (match.odds_integradas) {
       const oddsBadge = document.createElement("span");
       oddsBadge.className = "card-status-badge card-status-badge--odds";
       oddsBadge.textContent = "Odds integradas";
-      node.querySelector(".card-head").appendChild(oddsBadge);
+      cardBadgesEl.appendChild(oddsBadge);
     }
 
     const miniOdds = document.createElement("div");
-    miniOdds.className = "mini-odds";
-    miniOdds.innerHTML = buildMiniOddsSummary(match);
+    miniOdds.className = "card-snapshot";
+    miniOdds.innerHTML = buildCardSnapshot(match);
     node.querySelector(".card-head").insertAdjacentElement("afterend", miniOdds);
 
     setCardExpanded(cardEl, false);
@@ -494,13 +653,30 @@ function setupFilters() {
     renderCards();
   });
 
-  document.getElementById("confidenceFilter").addEventListener("change", (event) => {
-    state.minConfidence = event.target.value;
+  document.querySelectorAll(".filter-chip[data-confidence]").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      state.minConfidence = chip.dataset.confidence || "LOW";
+      renderCards();
+    });
+  });
+
+  document.getElementById("clearFilters")?.addEventListener("click", () => {
+    state.competition = "";
+    state.minConfidence = "LOW";
+
+    const competitionFilter = document.getElementById("competitionFilter");
+    if (competitionFilter) {
+      competitionFilter.value = "";
+    }
+
     renderCards();
   });
 }
 
 (async function init() {
+  setupThemeToggle();
+  setupMobileTopbar();
+
   try {
     const data = await loadData();
     state.raw = data;
@@ -516,3 +692,5 @@ function setupFilters() {
     errContainer.appendChild(errDiv);
   }
 })();
+
+window.addEventListener("resize", syncHeaderMeta);
