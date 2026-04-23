@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23 18:44:38",
+  "generated_at": "2026-04-23 19:30:48",
   "total_jogos": 6,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -8,7 +8,7 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-04-23T16:45:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 0,
         "visitante": 0
@@ -168,7 +168,7 @@
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -180,7 +180,7 @@
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -192,16 +192,16 @@
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
     {
       "competicao": "Primera Division",
       "data": "2026-04-23T17:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
-        "casa": 1,
+        "casa": 2,
         "visitante": 0
       },
       "times": {
@@ -209,48 +209,48 @@
         "visitante": "Sevilla FC"
       },
       "probabilidades": {
-        "casa": 0.760453378750395,
-        "empate": 0.13846054571588226,
-        "visitante": 0.092757314236806
+        "casa": 0.7825132037280859,
+        "empate": 0.1397943635556406,
+        "visitante": 0.07254277762066386
       },
       "favorito": {
         "nome": "Levante",
-        "prob": 0.760453378750395,
-        "vantagem": 0.6219928330345127
+        "prob": 0.7825132037280859,
+        "vantagem": 0.6427188401724453
       },
       "gols_esperados": {
-        "casa": 2.8117603946441156,
-        "visitante": 0.9023255813953487,
-        "total": 3.714085976039464
+        "casa": 2.58419410047317,
+        "visitante": 0.6590154032014496,
+        "total": 3.2432095036746196
       },
       "mercados": {
-        "under_25": 0.291385777653398,
-        "over_25": 0.708614222346602,
-        "btts_yes": 0.5537012795932322,
-        "btts_no": 0.44629872040676777
+        "under_25": 0.37610867150301763,
+        "over_25": 0.6238913284969824,
+        "btts_yes": 0.4437354155943183,
+        "btts_no": 0.5562645844056817
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.26363636363636367,
-          "ataque": 0.5333333333333333,
-          "defesa": 0.6,
+          "forma_recente": 0.35454545454545455,
+          "ataque": 0.5714285714285714,
+          "defesa": 0.6571428571428571,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.5056060606060606
+          "score_total": 0.5583766233766234
         },
         "visitante": {
-          "forma_recente": 0.4,
-          "ataque": 0.48,
-          "defesa": 0.040000000000000036,
+          "forma_recente": 0.4727272727272727,
+          "ataque": 0.4,
+          "defesa": 0.19999999999999996,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.40800000000000003
+          "score_total": 0.44545454545454544
         }
       },
-      "leitura_rapida": "Levante favorito (76%, risco forte). Jogo mais aberto (xG total ≈3.7). Over 2.5 com 71%. | Forma recente: Levante em baixa, Sevilla FC em baixa.",
+      "leitura_rapida": "Levante favorito (78%, risco forte). Jogo mais aberto (xG total ≈3.2). Over 2.5 com 62%. | Forma recente: Levante em baixa.",
       "tendencia": {
         "casa": "em baixa",
-        "visitante": "em baixa"
+        "visitante": "estavel"
       },
       "alertas": [],
       "odds_debug": {
@@ -264,14 +264,6 @@
       "odds_valor_alto": false,
       "historico": {
         "casa": [
-          {
-            "data": "08/02 15:15",
-            "mandante": "Athletic",
-            "visitante": "Levante",
-            "placar": "4 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
           {
             "data": "15/02 17:30",
             "mandante": "Levante",
@@ -303,17 +295,17 @@
             "placar": "2 x 0",
             "resultado": "V",
             "resultado_label": "Vitoria"
+          },
+          {
+            "data": "07/03 15:15",
+            "mandante": "Levante",
+            "visitante": "Girona",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
           }
         ],
         "visitante": [
-          {
-            "data": "02/02 20:00",
-            "mandante": "Mallorca",
-            "visitante": "Sevilla FC",
-            "placar": "4 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
           {
             "data": "08/02 15:15",
             "mandante": "Sevilla FC",
@@ -345,6 +337,14 @@
             "placar": "2 x 2",
             "resultado": "E",
             "resultado_label": "Empate"
+          },
+          {
+            "data": "08/03 17:30",
+            "mandante": "Sevilla FC",
+            "visitante": "Rayo Vallecano",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
           }
         ]
       },
@@ -352,38 +352,38 @@
         {
           "tipo": "WINNER",
           "opcao": "1",
-          "probabilidade": 0.760453378750395,
+          "probabilidade": 0.7825132037280859,
           "confianca": "HIGH",
-          "justificativa": "Levante projeta ≈2.8 gol(s) vs ≈0.9 do adversário. Prob vitória: 76.0% (margem: 62.2 p.p.)",
-          "edge": 0.622,
+          "justificativa": "Levante projeta ≈2.6 gol(s) vs ≈0.7 do adversário. Prob vitória: 78.3% (margem: 64.3 p.p.)",
+          "edge": 0.6427,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "OVER",
-          "probabilidade": 0.708614222346602,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈3.7. OVER 2.5: 70.9% de probabilidade",
-          "edge": 0.2086,
+          "probabilidade": 0.6238913284969824,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈3.2. OVER 2.5: 62.4% de probabilidade",
+          "edge": 0.1239,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.5537012795932322,
+          "opcao": "NO",
+          "probabilidade": 0.5562645844056817,
           "confianca": "LOW",
-          "justificativa": "xG: 2.8 (casa) x 0.9 (fora). Ambas marcam - Sim: 55.4%",
-          "edge": 0.0537,
+          "justificativa": "xG: 2.6 (casa) x 0.7 (fora). Ambas marcam - Nao: 55.6%",
+          "edge": 0.0563,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -772,10 +772,10 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-04-23T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 1,
+        "visitante": 0
       },
       "times": {
         "casa": "PSV",
