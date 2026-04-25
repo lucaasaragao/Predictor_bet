@@ -1226,6 +1226,32 @@ select optgroup {
   padding: 0.5rem 0;
 }
 
+.tip-card__result {
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  align-self: flex-start;
+}
+.tip-card__result--acerto { background: var(--primary-soft); color: var(--primary); }
+.tip-card__result--erro   { background: var(--red-dim);      color: var(--red); }
+
+.tip-card--recovery {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 1px var(--amber-dim);
+}
+.tip-card__rank--recovery {
+  background: var(--amber-dim);
+  color: var(--amber);
+  font-size: 0.68rem;
+}
+.tip-card__recovery-note {
+  font-size: 0.72rem;
+  color: var(--amber);
+  opacity: 0.85;
+  margin-top: 0.25rem;
+}
+
 @media (max-width: 600px) {
   .tips-cards {
     grid-template-columns: 1fr 1fr;

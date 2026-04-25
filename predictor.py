@@ -1301,6 +1301,34 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
         "taxa": round(total_acertos / total_com_resultado, 3) if total_com_resultado else None,
     }
 
+    # Congela as dicas do dia no primeiro run; preserva nas atualizações seguintes
+    hoje = datetime.now().strftime("%Y-%m-%d")
+    daily_tips_ids = None
+    try:
+        with open(caminho_saida, "r", encoding="utf-8") as f_existing:
+            existing_data = json.load(f_existing)
+        if existing_data.get("daily_tips_date") == hoje:
+            daily_tips_ids = existing_data.get("daily_tips_ids")
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
+
+    if daily_tips_ids is None:
+        _excluidas_dicas = {"Campeonato Brasileiro Série A", "Campeonato Brasileiro Série B"}
+        candidatos_dicas = [
+            j for j in dados["jogos"]
+            if j["status"] not in ("FINISHED", "AWARDED") and j["competicao"] not in _excluidas_dicas
+        ]
+        candidatos_dicas.sort(key=lambda j: j["favorito"]["prob"], reverse=True)
+        n_total = len(dados["jogos"])
+        n_dicas = 3 if n_total >= 10 else (2 if n_total > 5 else 1)
+        daily_tips_ids = [
+            {"casa": j["times"]["casa"], "visitante": j["times"]["visitante"], "data": j["data"]}
+            for j in candidatos_dicas[:n_dicas]
+        ]
+
+    dados["daily_tips_ids"] = daily_tips_ids
+    dados["daily_tips_date"] = hoje
+
     with open(caminho_saida, "w", encoding="utf-8") as arquivo_saida:
         json.dump(dados, arquivo_saida, ensure_ascii=False, indent=2)
 

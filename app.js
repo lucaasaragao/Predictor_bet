@@ -671,18 +671,82 @@ function renderTips(container, tips, match) {
   });
 }
 
+function getRecoveryTip(data, dailyGames) {
+  const dailyKeys = new Set(dailyGames.map((g) => `${g.times.casa}|${g.times.visitante}`));
+  const confScore = { HIGH: 3, MEDIUM: 2, LOW: 1 };
+
+  let best = null;
+  let bestScore = -1;
+
+  for (const game of data.jogos || []) {
+    if (game.status === "FINISHED") continue;
+    if (dailyKeys.has(`${game.times.casa}|${game.times.visitante}`)) continue;
+    if (COMPETICOES_EXCLUIDAS_DICAS.has(game.competicao)) continue;
+
+    for (const tip of game.palpites || []) {
+      const score = (confScore[tip.confianca] || 1) * 10 + (tip.probabilidade || 0);
+      if (score > bestScore) {
+        bestScore = score;
+        best = { game, tip };
+      }
+    }
+  }
+
+  return best;
+}
+
+function renderRecoveryCard(container, recovery) {
+  const { game, tip } = recovery;
+  const prob = Math.round((tip.probabilidade || 0) * 100);
+  const confidenceTone = confidenceClass(tip.confianca);
+  const confidenceText = confidenceLabel(tip.confianca);
+  const betLabel = translateTipOption(tip.tipo, tip.opcao, game);
+
+  const card = document.createElement("article");
+  card.className = "tip-card tip-card--recovery";
+  card.innerHTML = `
+    <div class="tip-card__top">
+      <span class="tip-card__rank tip-card__rank--recovery">↩ Recuperação</span>
+      <span class="tip-card__competition">${game.competicao}</span>
+      <span class="conf ${confidenceTone} tip-card__conf">${confidenceText}</span>
+    </div>
+    <div class="tip-card__teams">${game.times.casa} <span class="tip-card__vs">x</span> ${game.times.visitante}</div>
+    <div class="tip-card__prob">
+      <span class="tip-card__prob-value tip-card__prob-value--high">${prob}%</span>
+      <span class="tip-card__prob-label">probabilidade</span>
+    </div>
+    <div class="tip-card__bet">
+      <span class="tip-card__bet-label">Apostar em</span>
+      <strong class="tip-card__bet-value">${betLabel}</strong>
+    </div>
+    <div class="tip-card__recovery-note">Sugestão mais conservadora para recuperar.</div>
+  `;
+  container.appendChild(card);
+}
+
 function renderTipsSection(data) {
   const container = document.getElementById("tipsCards");
   const badge = document.getElementById("tipsBadge");
   if (!container) return;
 
-  const total = data.total_jogos ?? (data.jogos || []).length;
-  const count = total >= LIMITE_JOGOS_TRES_DICAS ? 3 : total > LIMITE_JOGOS_DUAS_DICAS ? 2 : 1;
-
-  const topGames = (data.jogos || [])
-    .filter((j) => j.status !== "FINISHED" && !COMPETICOES_EXCLUIDAS_DICAS.has(j.competicao))
-    .sort((a, b) => (b.favorito?.prob || 0) - (a.favorito?.prob || 0))
-    .slice(0, count);
+  // Usa dicas congeladas no início do dia, com fallback dinâmico
+  let topGames = [];
+  if (data.daily_tips_ids && data.daily_tips_ids.length) {
+    topGames = data.daily_tips_ids
+      .map((id) =>
+        (data.jogos || []).find(
+          (j) => j.times.casa === id.casa && j.times.visitante === id.visitante && j.data === id.data
+        )
+      )
+      .filter(Boolean);
+  } else {
+    const total = data.total_jogos ?? (data.jogos || []).length;
+    const count = total >= LIMITE_JOGOS_TRES_DICAS ? 3 : total > LIMITE_JOGOS_DUAS_DICAS ? 2 : 1;
+    topGames = (data.jogos || [])
+      .filter((j) => j.status !== "FINISHED" && !COMPETICOES_EXCLUIDAS_DICAS.has(j.competicao))
+      .sort((a, b) => (b.favorito?.prob || 0) - (a.favorito?.prob || 0))
+      .slice(0, count);
+  }
 
   if (badge) {
     badge.textContent = `${topGames.length} dica${topGames.length !== 1 ? "s" : ""}`;
@@ -695,18 +759,29 @@ function renderTipsSection(data) {
     return;
   }
 
+  let hasError = false;
+
   topGames.forEach((match, index) => {
     const prob = Math.round((match.favorito?.prob || 0) * 100);
     const primaryTip = getPrimaryTip(match);
-    const bestBet = primaryTip
-      ? translateTipOption(primaryTip.tipo, primaryTip.opcao, match)
-      : "—";
+    const bestBet = primaryTip ? translateTipOption(primaryTip.tipo, primaryTip.opcao, match) : "—";
     const confidenceTone = primaryTip ? confidenceClass(primaryTip.confianca) : "low";
     const confidenceText = primaryTip ? confidenceLabel(primaryTip.confianca) : "Baixa";
 
-    const probClass = prob >= PROB_VITORIA_ALTA * 100 ? "tip-card__prob-value--high"
+    const probClass =
+      prob >= PROB_VITORIA_ALTA * 100 ? "tip-card__prob-value--high"
       : prob >= PROB_VITORIA_MEDIA * 100 ? "tip-card__prob-value--mid"
       : "tip-card__prob-value--low";
+
+    const resultado = primaryTip?.resultado_verificador;
+    if (resultado === "ERRO") hasError = true;
+
+    let resultMark = "";
+    if (resultado === "ACERTO") {
+      resultMark = '<span class="tip-card__result tip-card__result--acerto">✅ Acerto</span>';
+    } else if (resultado === "ERRO") {
+      resultMark = '<span class="tip-card__result tip-card__result--erro">❌ Errou</span>';
+    }
 
     const card = document.createElement("article");
     card.className = "tip-card";
@@ -725,9 +800,15 @@ function renderTipsSection(data) {
         <span class="tip-card__bet-label">Apostar em</span>
         <strong class="tip-card__bet-value">${bestBet}</strong>
       </div>
+      ${resultMark}
     `;
     container.appendChild(card);
   });
+
+  if (hasError) {
+    const recovery = getRecoveryTip(data, topGames);
+    if (recovery) renderRecoveryCard(container, recovery);
+  }
 }
 
 function renderCards() {
