@@ -57,6 +57,35 @@ COMPETICAO_PARA_ODDS_SPORT = {
 # Vantagem de mando de campo (multiplicador sobre λ)
 HOME_ADVANTAGE = 1.22
 
+# Pesos do score composto de time (soma = 1.0)
+PESO_FORMA_RECENTE   = 0.35
+PESO_ATAQUE          = 0.25
+PESO_DEFESA          = 0.20
+PESO_MANDO_CAMPO     = 0.10
+PESO_H2H             = 0.10
+
+# Fator de mando de campo no score (diferente do HOME_ADVANTAGE do modelo Poisson)
+FATOR_MANDO_CASA = 1.1
+FATOR_MANDO_FORA = 0.9
+
+# Fadiga por jogos consecutivos
+FADIGA_BACK_TO_BACK    = 0.86   # jogou há ≤2 dias
+FADIGA_SEQUENCIA_CURTA = 0.93   # jogou há ≤4 dias
+DIAS_BACK_TO_BACK      = 2
+DIAS_SEQUENCIA_CURTA   = 4
+
+# Limites de clamp para força de ataque/defesa (modelo Dixon-Coles)
+CLAMP_FORCA_MIN = 0.3
+CLAMP_FORCA_MAX = 3.0
+
+# Limites de clamp para λ final (gols esperados)
+CLAMP_LAMBDA_MIN = 0.3
+CLAMP_LAMBDA_MAX = 5.0
+
+# Fator de forma recente aplicado sobre λ: 0.85 + forma_recente * 0.30
+FATOR_FORMA_BASE   = 0.85
+FATOR_FORMA_ESCALA = 0.30
+
 # Média histórica de gols por jogo por liga (fonte: dados públicos últimas 3 temporadas)
 # Usada para normalizar força de ataque/defesa relativa à liga (modelo Dixon-Coles)
 MEDIA_GOLS_LIGA: dict[str, float] = {
@@ -289,30 +318,30 @@ def calcular_tendencia_forma(historico: List[Dict], team_id: int) -> str:
     """Compara forma dos últimos 3 vs últimos 5 jogos para detectar time em alta/baixa"""
 
     def aproveitamento(matches: List[Dict]) -> float:
-        pts = 0
-        total = len(matches) * 3
+        pontos = 0
+        total_pontos_disputa = len(matches) * 3
         for m in matches:
             home_id = m.get("homeTeam", {}).get("id")
-            h = m.get("score", {}).get("fullTime", {}).get("home", 0) or 0
-            a = m.get("score", {}).get("fullTime", {}).get("away", 0) or 0
+            gols_casa = m.get("score", {}).get("fullTime", {}).get("home", 0) or 0
+            gols_fora = m.get("score", {}).get("fullTime", {}).get("away", 0) or 0
             if home_id == team_id:
-                if h > a: pts += 3
-                elif h == a: pts += 1
+                if gols_casa > gols_fora: pontos += 3
+                elif gols_casa == gols_fora: pontos += 1
             else:
-                if a > h: pts += 3
-                elif a == h: pts += 1
-        return pts / total if total else 0.5
+                if gols_fora > gols_casa: pontos += 3
+                elif gols_fora == gols_casa: pontos += 1
+        return pontos / total_pontos_disputa if total_pontos_disputa else 0.5
 
     if len(historico) < 3:
         return "indefinida"
 
     forma_3 = aproveitamento(historico[:3])
     forma_5 = aproveitamento(historico[:5]) if len(historico) >= 5 else forma_3
-    diff = forma_3 - forma_5
+    diferenca_forma = forma_3 - forma_5
 
-    if diff > 0.15:
+    if diferenca_forma > 0.15:
         return "em alta"
-    elif diff < -0.15:
+    elif diferenca_forma < -0.15:
         return "em baixa"
     return "estavel"
 
@@ -376,15 +405,15 @@ def calcular_score_time(historico: List[Dict], h2h: List[Dict], team_id: int, eh
     # Normalizar estatísticas
     ataque = min(stats.gols_marcados_media / 2.5, 1.0)  # 0-2.5 gols = 0-100%
     defesa = max(1.0 - (stats.gols_sofridos_media / 2.5), 0.0)
-    fator_mando = 1.1 if eh_em_casa else 0.9
+    fator_mando = FATOR_MANDO_CASA if eh_em_casa else FATOR_MANDO_FORA
     
     # Scores ponderados
     score_total = (
-        forma * 0.35 +
-        ataque * 0.25 +
-        defesa * 0.20 +
-        (fator_mando / 1.0) * 0.10 +
-        h2h_factor * 0.10
+        forma * PESO_FORMA_RECENTE +
+        ataque * PESO_ATAQUE +
+        defesa * PESO_DEFESA +
+        (fator_mando / 1.0) * PESO_MANDO_CAMPO +
+        h2h_factor * PESO_H2H
     )
     
     return ScoreTempo(
@@ -508,19 +537,19 @@ def _nomes_equivalentes(a: str, b: str) -> bool:
        e ambos compartilham ao menos um token de comprimento > 3 — cobre casos
        como "Man" / "Manchester" com "United" em comum.
     """
-    ca, cb = _canonicalizar_nome_time(a), _canonicalizar_nome_time(b)
-    if ca == cb:
+    nome_canonico_a, nome_canonico_b = _canonicalizar_nome_time(a), _canonicalizar_nome_time(b)
+    if nome_canonico_a == nome_canonico_b:
         return True
-    ta = set(ca.split())
-    tb = set(cb.split())
-    comuns = {t for t in ta & tb if len(t) > 3}
-    if not comuns:
+    tokens_a = set(nome_canonico_a.split())
+    tokens_b = set(nome_canonico_b.split())
+    tokens_em_comum = {token for token in tokens_a & tokens_b if len(token) > 3}
+    if not tokens_em_comum:
         return False
-    for ta_tok in ta:
-        if len(ta_tok) < 3:
+    for token_a in tokens_a:
+        if len(token_a) < 3:
             continue
-        for tb_tok in tb:
-            if tb_tok.startswith(ta_tok) or ta_tok.startswith(tb_tok):
+        for token_b in tokens_b:
+            if token_b.startswith(token_a) or token_a.startswith(token_b):
                 return True
     return False
 
@@ -639,15 +668,15 @@ def _aplicar_odds_por_sport(candidatos_por_sport: Dict[str, List[PredicaoJogo]])
             )
 
         eventos_indexados = []
-        for ev in eventos_odds:
-            home = _normalizar_nome_time(ev.get("home_team"))
-            away = _normalizar_nome_time(ev.get("away_team"))
-            odds_h2h = _escolher_melhor_odd_h2h(ev)
+        for evento in eventos_odds:
+            home = _normalizar_nome_time(evento.get("home_team"))
+            away = _normalizar_nome_time(evento.get("away_team"))
+            odds_h2h = _escolher_melhor_odd_h2h(evento)
             if not home or not away or not odds_h2h:
                 continue
             eventos_indexados.append(
                 {
-                    "id": ev.get("id"),
+                    "id": evento.get("id"),
                     "home": home,
                     "away": away,
                     "odds": odds_h2h,
@@ -656,9 +685,9 @@ def _aplicar_odds_por_sport(candidatos_por_sport: Dict[str, List[PredicaoJogo]])
 
         for pred in candidatos_por_sport[sport_key]:
             match_ev = next(
-                (ev for ev in eventos_indexados
-                 if _nomes_equivalentes(ev["home"], pred.time_casa)
-                 and _nomes_equivalentes(ev["away"], pred.time_visitante)),
+                (evento for evento in eventos_indexados
+                 if _nomes_equivalentes(evento["home"], pred.time_casa)
+                 and _nomes_equivalentes(evento["away"], pred.time_visitante)),
                 None,
             )
             if not match_ev:
@@ -741,11 +770,11 @@ def aplicar_odds_e_valor(predicoes: List[PredicaoJogo]) -> List[PredicaoJogo]:
         eventos_indexados: Dict[str, List[Dict]] = {}
         sport_keys_relevantes = set(candidatos_por_sport.keys())
         eventos_relevantes = 0
-        for ev in eventos_odds:
-            sport_key = ev.get("sport_key")
-            home = _normalizar_nome_time(ev.get("home_team"))
-            away = _normalizar_nome_time(ev.get("away_team"))
-            odds_h2h = _escolher_melhor_odd_h2h(ev)
+        for evento in eventos_odds:
+            sport_key = evento.get("sport_key")
+            home = _normalizar_nome_time(evento.get("home_team"))
+            away = _normalizar_nome_time(evento.get("away_team"))
+            odds_h2h = _escolher_melhor_odd_h2h(evento)
             if not sport_key or not home or not away or not odds_h2h:
                 continue
 
@@ -753,7 +782,7 @@ def aplicar_odds_e_valor(predicoes: List[PredicaoJogo]) -> List[PredicaoJogo]:
                 eventos_relevantes += 1
 
             eventos_indexados.setdefault(sport_key, []).append({
-                "id": ev.get("id"),
+                "id": evento.get("id"),
                 "home": home,
                 "away": away,
                 "odds": odds_h2h,
@@ -763,9 +792,9 @@ def aplicar_odds_e_valor(predicoes: List[PredicaoJogo]) -> List[PredicaoJogo]:
             pool = eventos_indexados.get(sport_key, [])
             for pred in jogos:
                 match_ev = next(
-                    (ev for ev in pool
-                     if _nomes_equivalentes(ev["home"], pred.time_casa)
-                     and _nomes_equivalentes(ev["away"], pred.time_visitante)),
+                    (evento for evento in pool
+                     if _nomes_equivalentes(evento["home"], pred.time_casa)
+                     and _nomes_equivalentes(evento["away"], pred.time_visitante)),
                     None,
                 )
                 if not match_ev:
@@ -837,14 +866,14 @@ def prever_jogo(match: Dict) -> PredicaoJogo:
     def_away = stats_away.gols_sofridos_media / media_por_time if media_por_time else 1.0
 
     # Clamp: evitar distorções com poucos jogos no histórico
-    atk_home = max(0.3, min(atk_home, 3.0))
-    def_home = max(0.3, min(def_home, 3.0))
-    atk_away = max(0.3, min(atk_away, 3.0))
-    def_away = max(0.3, min(def_away, 3.0))
+    atk_home = max(CLAMP_FORCA_MIN, min(atk_home, CLAMP_FORCA_MAX))
+    def_home = max(CLAMP_FORCA_MIN, min(def_home, CLAMP_FORCA_MAX))
+    atk_away = max(CLAMP_FORCA_MIN, min(atk_away, CLAMP_FORCA_MAX))
+    def_away = max(CLAMP_FORCA_MIN, min(def_away, CLAMP_FORCA_MAX))
 
     # Fator de forma recente (±15% sobre λ com base nos últimos jogos)
-    forma_fator_home = 0.85 + (score_home.forma_recente * 0.30)
-    forma_fator_away = 0.85 + (score_away.forma_recente * 0.30)
+    forma_fator_home = FATOR_FORMA_BASE + (score_home.forma_recente * FATOR_FORMA_ESCALA)
+    forma_fator_away = FATOR_FORMA_BASE + (score_away.forma_recente * FATOR_FORMA_ESCALA)
 
     # Fadiga (back-to-back)
     fadiga_home = detectar_fadiga(hist_home, match.get("utcDate", ""))
@@ -854,9 +883,9 @@ def prever_jogo(match: Dict) -> PredicaoJogo:
     lambda_home = atk_home * def_away * media_por_time * HOME_ADVANTAGE * forma_fator_home * fadiga_home
     lambda_away = atk_away * def_home * media_por_time * forma_fator_away * fadiga_away
 
-    # Clamp final de λ em valores plausíveis (0.3–5.0 gols)
-    lambda_home = max(0.3, min(lambda_home, 5.0))
-    lambda_away = max(0.3, min(lambda_away, 5.0))
+    # Clamp final de λ em valores plausíveis
+    lambda_home = max(CLAMP_LAMBDA_MIN, min(lambda_home, CLAMP_LAMBDA_MAX))
+    lambda_away = max(CLAMP_LAMBDA_MIN, min(lambda_away, CLAMP_LAMBDA_MAX))
     # --- fim Dixon-Coles ---
 
     mercados = calcular_probabilidades_mercado(lambda_home, lambda_away)
@@ -1272,8 +1301,8 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
         "taxa": round(total_acertos / total_com_resultado, 3) if total_com_resultado else None,
     }
 
-    with open(caminho_saida, "w", encoding="utf-8") as file_handle:
-        json.dump(dados, file_handle, ensure_ascii=False, indent=2)
+    with open(caminho_saida, "w", encoding="utf-8") as arquivo_saida:
+        json.dump(dados, arquivo_saida, ensure_ascii=False, indent=2)
 
 
 def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.json") -> None:
@@ -1282,8 +1311,8 @@ def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.j
     agora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     try:
-        with open(caminho, "r", encoding="utf-8") as fh:
-            historico = json.load(fh)
+        with open(caminho, "r", encoding="utf-8") as arquivo_leitura:
+            historico = json.load(arquivo_leitura)
     except (FileNotFoundError, json.JSONDecodeError):
         historico = {"dias": []}
 
@@ -1297,17 +1326,17 @@ def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.j
     total_acertos = 0
     total_com_resultado = 0
 
-    for pred in finalizados:
-        palpites_pred = gerar_palpites(pred)
+    for predicao_finalizada in finalizados:
+        palpites_pred = gerar_palpites(predicao_finalizada)
         com_resultado = [p for p in palpites_pred if p.resultado_verificador is not None]
         if not com_resultado:
             continue
 
         jogos_dia.append({
-            "casa": pred.time_casa,
-            "visitante": pred.time_visitante,
-            "competicao": pred.competicao,
-            "placar": f"{pred.placar_casa}-{pred.placar_visitante}",
+            "casa": predicao_finalizada.time_casa,
+            "visitante": predicao_finalizada.time_visitante,
+            "competicao": predicao_finalizada.competicao,
+            "placar": f"{predicao_finalizada.placar_casa}-{predicao_finalizada.placar_visitante}",
             "palpites": [
                 {
                     "tipo": p.tipo,
@@ -1320,16 +1349,16 @@ def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.j
             ],
         })
 
-        for p in com_resultado:
-            m = mercados_stats.setdefault(p.tipo, {"acertos": 0, "total": 0})
-            m["total"] += 1
-            if p.resultado_verificador == "ACERTO":
-                m["acertos"] += 1
+        for palpite in com_resultado:
+            estatisticas = mercados_stats.setdefault(palpite.tipo, {"acertos": 0, "total": 0})
+            estatisticas["total"] += 1
+            if palpite.resultado_verificador == "ACERTO":
+                estatisticas["acertos"] += 1
                 total_acertos += 1
             total_com_resultado += 1
 
-    for m in mercados_stats.values():
-        m["taxa"] = round(m["acertos"] / m["total"], 3) if m["total"] else 0.0
+    for estatisticas in mercados_stats.values():
+        estatisticas["taxa"] = round(estatisticas["acertos"] / estatisticas["total"], 3) if estatisticas["total"] else 0.0
 
     entrada = {
         "data": hoje,
@@ -1351,8 +1380,8 @@ def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.j
 
     historico["dias"] = dias[:2]
 
-    with open(caminho, "w", encoding="utf-8") as fh:
-        json.dump(historico, fh, ensure_ascii=False, indent=2)
+    with open(caminho, "w", encoding="utf-8") as arquivo_escrita:
+        json.dump(historico, arquivo_escrita, ensure_ascii=False, indent=2)
 
     if total_com_resultado:
         print(f"📈 Histórico: {total_acertos}/{total_com_resultado} acertos hoje ({entrada['taxa_geral']*100:.0f}%) → {caminho}")

@@ -1065,3 +1065,173 @@ select optgroup {
 .admin-tip em { font-style: normal; opacity: 0.7; font-size: 0.7rem; }
 .admin-tip--ok  { background: var(--primary-dim); color: var(--primary); }
 .admin-tip--err { background: var(--red-dim);     color: var(--red); }
+
+/* ============================================================
+   SEÇÃO DICAS DO DIA
+   ============================================================ */
+.tips-section {
+  padding: 1.5rem max(1rem, env(safe-area-inset-left)) 0;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.tips-section__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.tips-section__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.tips-section__badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: var(--mono);
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid rgba(59, 130, 246, 0.28);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tips-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.875rem;
+}
+
+.tip-card {
+  background: var(--surface);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.tip-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.tip-card__top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tip-card__rank {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: 0.1rem 0.45rem;
+  line-height: 1.4;
+}
+
+.tip-card__competition {
+  font-size: 0.72rem;
+  color: var(--text-2);
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tip-card__conf {
+  font-size: 0.7rem !important;
+  padding: 0.1rem 0.5rem !important;
+}
+
+.tip-card__teams {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.tip-card__vs {
+  opacity: 0.45;
+  font-weight: 400;
+  margin: 0 0.2em;
+}
+
+.tip-card__prob {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tip-card__prob-value {
+  font-family: var(--mono);
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.tip-card__prob-value--high { color: var(--success); }
+.tip-card__prob-value--mid  { color: var(--warning); }
+.tip-card__prob-value--low  { color: var(--text-3); }
+
+.tip-card__prob-label {
+  font-size: 0.8rem;
+  color: var(--text-2);
+  line-height: 1.3;
+}
+
+.tip-card__bet {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--line);
+}
+
+.tip-card__bet-label {
+  font-size: 0.7rem;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.tip-card__bet-value {
+  font-size: 0.9rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.tips-section__empty {
+  color: var(--text-2);
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+  .tips-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .tip-card__prob-value {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .tips-cards {
+    grid-template-columns: 1fr;
+  }
+}

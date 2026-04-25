@@ -12,7 +12,15 @@ const confidenceRank = {
 
 const THEME_STORAGE_KEY = "radar-theme";
 
-function pct(value) {
+// Limites de quantidade de jogos para definir o número de dicas exibidas
+const LIMITE_JOGOS_TRES_DICAS = 10;
+const LIMITE_JOGOS_DUAS_DICAS = 5;
+
+// Thresholds de probabilidade para coloração das dicas
+const PROB_VITORIA_ALTA = 0.70;
+const PROB_VITORIA_MEDIA = 0.55;
+
+function formatarPorcentagem(value) {
   return `${(value * 100).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`;
 }
 
@@ -242,13 +250,13 @@ function fillHeader(data) {
   document.getElementById("totalJogos").textContent = String(data.total_jogos ?? data.jogos?.length ?? 0);
   syncHeaderMeta();
 
-  const ah = data.acertos_hoje;
-  if (ah && ah.total > 0 && ah.taxa != null) {
-    const badge = document.getElementById("acertosHoje");
-    const val = document.getElementById("acertosHojeVal");
-    if (badge && val) {
-      val.textContent = `${ah.acertos}/${ah.total} (${pct(ah.taxa)})`;
-      badge.hidden = false;
+  const acertosHoje = data.acertos_hoje;
+  if (acertosHoje && acertosHoje.total > 0 && acertosHoje.taxa != null) {
+    const elementoBadge = document.getElementById("acertosHoje");
+    const elementoContador = document.getElementById("acertosHojeVal");
+    if (elementoBadge && elementoContador) {
+      elementoContador.textContent = `${acertosHoje.acertos}/${acertosHoje.total} (${formatarPorcentagem(acertosHoje.taxa)})`;
+      elementoBadge.hidden = false;
     }
   }
 }
@@ -276,14 +284,14 @@ function renderAdminPanel(data) {
     const taxa = dia.taxa_geral ?? 0;
     const taxaClass = taxa >= 0.6 ? "good" : taxa >= 0.4 ? "mid" : "bad";
     const taxaLabel = dia.total_palpites
-      ? `${dia.total_acertos}/${dia.total_palpites} acertos · ${pct(taxa)}`
+      ? `${dia.total_acertos}/${dia.total_palpites} acertos · ${formatarPorcentagem(taxa)}`
       : "Sem resultados ainda";
 
     const mercadosHtml = Object.entries(dia.mercados || {})
       .map(([tipo, m]) => `
         <div class="admin-mercado">
           <span class="admin-mercado__nome">${tipo}</span>
-          <span class="admin-mercado__stats">${m.acertos}/${m.total} · ${pct(m.taxa)}</span>
+          <span class="admin-mercado__stats">${m.acertos}/${m.total} · ${formatarPorcentagem(m.taxa)}</span>
         </div>`)
       .join("");
 
@@ -410,10 +418,6 @@ function updateConfidenceHelp(visibleCount) {
     HIGH: document.getElementById("confChipHigh"),
   };
 
-  const total = (state.raw?.jogos || []).length;
-  const shown = Number.isFinite(visibleCount)
-    ? visibleCount
-    : (state.raw?.jogos || []).filter(passesFilters).length;
   const selected = (state.minConfidence || "LOW").toUpperCase();
 
   Object.values(chips).forEach((chip) => {
@@ -443,7 +447,7 @@ function renderProbabilities(container, match) {
     line.className = "prob-row";
     line.innerHTML = `
       <span class="prob-name">${row.name}</span>
-      <strong class="prob-value">${pct(row.value)}</strong>
+      <strong class="prob-value">${formatarPorcentagem(row.value)}</strong>
       <div class="prob-track"><div class="prob-fill ${level}" style="width:${Math.max(0, Math.min(100, row.value * 100))}%"></div></div>
     `;
     container.appendChild(line);
@@ -464,10 +468,10 @@ function buildGoalsProbabilityLabel(match) {
   }
 
   if (!Number.isFinite(over) || (Number.isFinite(under) && under >= over)) {
-    return `Menos de 2,5 (${pct(under)})`;
+    return `Menos de 2,5 (${formatarPorcentagem(under)})`;
   }
 
-  return `Mais de 2,5 (${pct(over)})`;
+  return `Mais de 2,5 (${formatarPorcentagem(over)})`;
 }
 
 function buildCardSnapshot(match) {
@@ -640,7 +644,7 @@ function renderTips(container, tips, match) {
 
     let valueBadge = "";
     if (Number.isFinite(tip.odd_decimal) && Number.isFinite(tip.ev)) {
-      const evPct = pct(tip.ev || 0);
+      const evPct = formatarPorcentagem(tip.ev || 0);
       valueBadge = ` <span class="tip-value ${tip.valor_esperado_positivo ? "is-positive" : ""}">odd ${Number(tip.odd_decimal).toFixed(2)} | EV ${evPct}</span>`;
     }
 
@@ -654,6 +658,65 @@ function renderTips(container, tips, match) {
       </div>
     `;
     container.appendChild(tipEl);
+  });
+}
+
+function renderTipsSection(data) {
+  const container = document.getElementById("tipsCards");
+  const badge = document.getElementById("tipsBadge");
+  if (!container) return;
+
+  const total = data.total_jogos ?? (data.jogos || []).length;
+  const count = total >= LIMITE_JOGOS_TRES_DICAS ? 3 : total > LIMITE_JOGOS_DUAS_DICAS ? 2 : 1;
+
+  const topGames = (data.jogos || [])
+    .filter((j) => j.status !== "FINISHED")
+    .sort((a, b) => (b.favorito?.prob || 0) - (a.favorito?.prob || 0))
+    .slice(0, count);
+
+  if (badge) {
+    badge.textContent = `${topGames.length} dica${topGames.length !== 1 ? "s" : ""}`;
+  }
+
+  container.innerHTML = "";
+
+  if (!topGames.length) {
+    container.innerHTML = '<p class="tips-section__empty">Sem jogos disponíveis para dicas no momento.</p>';
+    return;
+  }
+
+  topGames.forEach((match, index) => {
+    const prob = Math.round((match.favorito?.prob || 0) * 100);
+    const primaryTip = getPrimaryTip(match);
+    const bestBet = primaryTip
+      ? translateTipOption(primaryTip.tipo, primaryTip.opcao, match)
+      : "—";
+    const confidenceTone = primaryTip ? confidenceClass(primaryTip.confianca) : "low";
+    const confidenceText = primaryTip ? confidenceLabel(primaryTip.confianca) : "Baixa";
+
+    const probClass = prob >= PROB_VITORIA_ALTA * 100 ? "tip-card__prob-value--high"
+      : prob >= PROB_VITORIA_MEDIA * 100 ? "tip-card__prob-value--mid"
+      : "tip-card__prob-value--low";
+
+    const card = document.createElement("article");
+    card.className = "tip-card";
+    card.innerHTML = `
+      <div class="tip-card__top">
+        <span class="tip-card__rank">#${index + 1}</span>
+        <span class="tip-card__competition">${match.competicao}</span>
+        <span class="conf ${confidenceTone} tip-card__conf">${confidenceText}</span>
+      </div>
+      <div class="tip-card__teams">${match.times.casa} <span class="tip-card__vs">x</span> ${match.times.visitante}</div>
+      <div class="tip-card__prob">
+        <span class="tip-card__prob-value ${probClass}">${prob}%</span>
+        <span class="tip-card__prob-label">vitória — <strong>${match.favorito?.nome || "—"}</strong></span>
+      </div>
+      <div class="tip-card__bet">
+        <span class="tip-card__bet-label">Apostar em</span>
+        <strong class="tip-card__bet-value">${bestBet}</strong>
+      </div>
+    `;
+    container.appendChild(card);
   });
 }
 
@@ -737,7 +800,7 @@ function renderCards() {
     bindCardToggle(cardEl);
 
     node.querySelector(".favorite-line").textContent =
-      `${match.favorito.nome} com maior probabilidade de vitória, com ${pct(match.favorito.prob)} de chance e margem estimada de ${pct(match.favorito.vantagem)}.`;
+      `${match.favorito.nome} com maior probabilidade de vitória, com ${formatarPorcentagem(match.favorito.prob)} de chance e margem estimada de ${formatarPorcentagem(match.favorito.vantagem)}.`;
     node.querySelector(".quick-read").textContent = translateQuickRead(match.leitura_rapida);
 
     // Tendência de forma
@@ -767,10 +830,10 @@ function renderCards() {
     const marketList = node.querySelector(".market-list");
     marketList.innerHTML = `
       <li class="market-xg"><span>Gols esperados (xG) por time</span><strong>${match.times.casa}: ${xgCasa} | ${match.times.visitante}: ${xgFora}</strong></li>
-      <li><span>Menos de 2,5 gols</span><strong>${pct(match.mercados.under_25)}</strong></li>
-      <li><span>Mais de 2,5 gols</span><strong>${pct(match.mercados.over_25)}</strong></li>
-      <li><span>Ambas Marcam - Sim</span><strong>${pct(match.mercados.btts_yes)}</strong></li>
-      <li><span>Ambas Marcam - Não</span><strong>${pct(match.mercados.btts_no)}</strong></li>
+      <li><span>Menos de 2,5 gols</span><strong>${formatarPorcentagem(match.mercados.under_25)}</strong></li>
+      <li><span>Mais de 2,5 gols</span><strong>${formatarPorcentagem(match.mercados.over_25)}</strong></li>
+      <li><span>Ambas Marcam - Sim</span><strong>${formatarPorcentagem(match.mercados.btts_yes)}</strong></li>
+      <li><span>Ambas Marcam - Não</span><strong>${formatarPorcentagem(match.mercados.btts_no)}</strong></li>
     `;
 
     renderHistory(node.querySelector(".home-history"), match.historico.casa);
@@ -817,6 +880,7 @@ function setupFilters() {
     state.raw = data;
     fillHeader(data);
     fillCompetitionFilter(data);
+    renderTipsSection(data);
     setupFilters();
     renderCards();
   } catch (error) {
