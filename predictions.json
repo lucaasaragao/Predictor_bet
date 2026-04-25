@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25 12:03:21",
+  "generated_at": "2026-04-25 12:21:21",
   "total_jogos": 41,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -169,8 +169,8 @@
           "confianca": "HIGH",
           "justificativa": "Fulham projeta ≈2.3 gol(s) vs ≈0.7 do adversário. Prob vitória: 73.8% (margem: 57.3 p.p.)",
           "edge": 0.573,
-          "odd_decimal": 2.72,
-          "ev": 1.0083,
+          "odd_decimal": 1.59,
+          "ev": 0.174,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -205,7 +205,7 @@
       "data": "2026-04-25T11:30:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 0,
+        "casa": 1,
         "visitante": 0
       },
       "times": {
@@ -389,202 +389,6 @@
           "confianca": "MEDIUM",
           "justificativa": "xG: 0.9 (casa) x 1.0 (fora). Ambas marcam - Nao: 64.7%",
           "edge": 0.1475,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Championship",
-      "data": "2026-04-25T11:30:00Z",
-      "status": "IN_PLAY",
-      "placar_atual": {
-        "casa": 1,
-        "visitante": 0
-      },
-      "times": {
-        "casa": "Middlesbrough",
-        "visitante": "Watford"
-      },
-      "probabilidades": {
-        "casa": 0.4459814844226406,
-        "empate": 0.35010175219644146,
-        "visitante": 0.20390796052298127
-      },
-      "favorito": {
-        "nome": "Middlesbrough",
-        "prob": 0.4459814844226406,
-        "vantagem": 0.09587973222619911
-      },
-      "gols_esperados": {
-        "casa": 0.9767098181818182,
-        "visitante": 0.5564527629233512,
-        "total": 1.5331625811051695
-      },
-      "mercados": {
-        "under_25": 0.8004862868918715,
-        "over_25": 0.1995137131081285,
-        "btts_yes": 0.2660613032826055,
-        "btts_no": 0.7339386967173944
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.4636363636363637,
-          "ataque": 0.24,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.5022727272727273
-        },
-        "visitante": {
-          "forma_recente": 0.21818181818181823,
-          "ataque": 0.33333333333333337,
-          "defesa": 0.19999999999999996,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.3396969696969697
-        }
-      },
-      "leitura_rapida": "Middlesbrough favorito (45%, risco alto). Jogo fechado esperado (xG total ≈1.5). Under 2.5 com 80%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [
-        "Middlesbrough jogou recentemente — possível desgaste físico.",
-        "Watford jogou recentemente — possível desgaste físico."
-      ],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (9.6 p.p. < 10.0 p.p.)",
-        "competition": "Championship",
-        "sport_key": "soccer_efl_champ",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "22/04 18:45",
-            "mandante": "Middlesbrough",
-            "visitante": "Sheffield Wed",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "19/04 11:00",
-            "mandante": "Ipswich Town",
-            "visitante": "Middlesbrough",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "11/04 14:00",
-            "mandante": "Middlesbrough",
-            "visitante": "Portsmouth",
-            "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "06/04 16:30",
-            "mandante": "Swansea",
-            "visitante": "Middlesbrough",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "03/04 11:30",
-            "mandante": "Middlesbrough",
-            "visitante": "Millwall",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "21/04 18:45",
-            "mandante": "West Brom",
-            "visitante": "Watford",
-            "placar": "3 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "18/04 14:00",
-            "mandante": "Watford",
-            "visitante": "Sheffield Utd",
-            "placar": "0 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "11/04 14:00",
-            "mandante": "Oxford United",
-            "visitante": "Watford",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "06/04 14:00",
-            "mandante": "Watford",
-            "visitante": "Charlton",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "03/04 14:00",
-            "mandante": "QPR",
-            "visitante": "Watford",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.4459814844226406,
-          "confianca": "LOW",
-          "justificativa": "Middlesbrough projeta ≈1.0 gol(s) vs ≈0.6 do adversário. Prob vitória: 44.6% (margem: 9.6 p.p.)",
-          "edge": 0.0959,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.8004862868918715,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈1.5. UNDER 2.5: 80.0% de probabilidade",
-          "edge": 0.3005,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.7339386967173944,
-          "confianca": "HIGH",
-          "justificativa": "xG: 1.0 (casa) x 0.6 (fora). Ambas marcam - Nao: 73.4%",
-          "edge": 0.2339,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -791,12 +595,208 @@
       ]
     },
     {
+      "competicao": "Championship",
+      "data": "2026-04-25T11:30:00Z",
+      "status": "IN_PLAY",
+      "placar_atual": {
+        "casa": 1,
+        "visitante": 0
+      },
+      "times": {
+        "casa": "Middlesbrough",
+        "visitante": "Watford"
+      },
+      "probabilidades": {
+        "casa": 0.4459814844226406,
+        "empate": 0.35010175219644146,
+        "visitante": 0.20390796052298127
+      },
+      "favorito": {
+        "nome": "Middlesbrough",
+        "prob": 0.4459814844226406,
+        "vantagem": 0.09587973222619911
+      },
+      "gols_esperados": {
+        "casa": 0.9767098181818182,
+        "visitante": 0.5564527629233512,
+        "total": 1.5331625811051695
+      },
+      "mercados": {
+        "under_25": 0.8004862868918715,
+        "over_25": 0.1995137131081285,
+        "btts_yes": 0.2660613032826055,
+        "btts_no": 0.7339386967173944
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.4636363636363637,
+          "ataque": 0.24,
+          "defesa": 0.6,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.5022727272727273
+        },
+        "visitante": {
+          "forma_recente": 0.21818181818181823,
+          "ataque": 0.33333333333333337,
+          "defesa": 0.19999999999999996,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.3396969696969697
+        }
+      },
+      "leitura_rapida": "Middlesbrough favorito (45%, risco alto). Jogo fechado esperado (xG total ≈1.5). Under 2.5 com 80%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "alertas": [
+        "Middlesbrough jogou recentemente — possível desgaste físico.",
+        "Watford jogou recentemente — possível desgaste físico."
+      ],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "skip_edge_gate",
+        "reason": "edge abaixo do gate (9.6 p.p. < 10.0 p.p.)",
+        "competition": "Championship",
+        "sport_key": "soccer_efl_champ",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "22/04 18:45",
+            "mandante": "Middlesbrough",
+            "visitante": "Sheffield Wed",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "19/04 11:00",
+            "mandante": "Ipswich Town",
+            "visitante": "Middlesbrough",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "11/04 14:00",
+            "mandante": "Middlesbrough",
+            "visitante": "Portsmouth",
+            "placar": "0 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "06/04 16:30",
+            "mandante": "Swansea",
+            "visitante": "Middlesbrough",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "03/04 11:30",
+            "mandante": "Middlesbrough",
+            "visitante": "Millwall",
+            "placar": "1 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "21/04 18:45",
+            "mandante": "West Brom",
+            "visitante": "Watford",
+            "placar": "3 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "18/04 14:00",
+            "mandante": "Watford",
+            "visitante": "Sheffield Utd",
+            "placar": "0 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "11/04 14:00",
+            "mandante": "Oxford United",
+            "visitante": "Watford",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "06/04 14:00",
+            "mandante": "Watford",
+            "visitante": "Charlton",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "03/04 14:00",
+            "mandante": "QPR",
+            "visitante": "Watford",
+            "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.4459814844226406,
+          "confianca": "LOW",
+          "justificativa": "Middlesbrough projeta ≈1.0 gol(s) vs ≈0.6 do adversário. Prob vitória: 44.6% (margem: 9.6 p.p.)",
+          "edge": 0.0959,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER",
+          "probabilidade": 0.8004862868918715,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈1.5. UNDER 2.5: 80.0% de probabilidade",
+          "edge": 0.3005,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.7339386967173944,
+          "confianca": "HIGH",
+          "justificativa": "xG: 1.0 (casa) x 0.6 (fora). Ambas marcam - Nao: 73.4%",
+          "edge": 0.2339,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
       "competicao": "Primera Division",
       "data": "2026-04-25T12:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Alavés",
@@ -957,8 +957,8 @@
           "confianca": "HIGH",
           "justificativa": "Alavés projeta ≈2.4 gol(s) vs ≈1.0 do adversário. Prob vitória: 68.6% (margem: 51.0 p.p.)",
           "edge": 0.5103,
-          "odd_decimal": 2.18,
-          "ev": 0.4957,
+          "odd_decimal": 4.1,
+          "ev": 1.813,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -1152,8 +1152,8 @@
           "confianca": "HIGH",
           "justificativa": "Olympique Lyon projeta ≈2.1 gol(s) vs ≈1.0 do adversário. Prob vitória: 63.2% (margem: 42.9 p.p.)",
           "edge": 0.4288,
-          "odd_decimal": 1.64,
-          "ev": 0.0361,
+          "odd_decimal": 1.69,
+          "ev": 0.0677,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -2350,202 +2350,6 @@
         "visitante": null
       },
       "times": {
-        "casa": "Stoke",
-        "visitante": "Portsmouth"
-      },
-      "probabilidades": {
-        "casa": 0.8047094837265406,
-        "empate": 0.07239822636569297,
-        "visitante": 0.05002253780416346
-      },
-      "favorito": {
-        "nome": "Stoke",
-        "prob": 0.8047094837265406,
-        "vantagem": 0.7323112573608477
-      },
-      "gols_esperados": {
-        "casa": 4.324504641711232,
-        "visitante": 1.1829732620320859,
-        "total": 5.507477903743318
-      },
-      "mercados": {
-        "under_25": 0.16078505548226274,
-        "over_25": 0.8392149445177373,
-        "btts_yes": 0.633895772936902,
-        "btts_no": 0.366104227063098
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.2818181818181818,
-          "ataque": 0.8,
-          "defesa": 0.36,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.5306363636363637
-        },
-        "visitante": {
-          "forma_recente": 0.5454545454545454,
-          "ataque": 0.4,
-          "defesa": 0.0,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.4309090909090909
-        }
-      },
-      "leitura_rapida": "Stoke favorito (80%, risco forte). Jogo mais aberto (xG total ≈5.5). Over 2.5 com 84%. | Forma recente: Stoke em baixa.",
-      "tendencia": {
-        "casa": "em baixa",
-        "visitante": "estavel"
-      },
-      "alertas": [
-        "Stoke jogou recentemente — possível desgaste físico.",
-        "Portsmouth jogou recentemente — possível desgaste físico."
-      ],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "Championship",
-        "sport_key": "soccer_efl_champ",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "21/04 18:45",
-            "mandante": "Stoke",
-            "visitante": "Millwall",
-            "placar": "1 x 3",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "18/04 14:00",
-            "mandante": "Wrexham",
-            "visitante": "Stoke",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "11/04 14:00",
-            "mandante": "Stoke",
-            "visitante": "Blackburn",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "06/04 14:00",
-            "mandante": "Derby County",
-            "visitante": "Stoke",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "03/04 14:00",
-            "mandante": "Stoke",
-            "visitante": "Sheffield Wed",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "21/04 18:45",
-            "mandante": "Coventry City",
-            "visitante": "Portsmouth",
-            "placar": "5 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "18/04 11:30",
-            "mandante": "Portsmouth",
-            "visitante": "Leicester City",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "14/04 19:00",
-            "mandante": "Portsmouth",
-            "visitante": "Ipswich Town",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "11/04 14:00",
-            "mandante": "Middlesbrough",
-            "visitante": "Portsmouth",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "06/04 11:30",
-            "mandante": "Portsmouth",
-            "visitante": "Oxford United",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.8047094837265406,
-          "confianca": "HIGH",
-          "justificativa": "Stoke projeta ≈4.3 gol(s) vs ≈1.2 do adversário. Prob vitória: 80.5% (margem: 73.2 p.p.)",
-          "edge": 0.7323,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.8392149445177373,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈5.5. OVER 2.5: 83.9% de probabilidade",
-          "edge": 0.3392,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.633895772936902,
-          "confianca": "MEDIUM",
-          "justificativa": "xG: 4.3 (casa) x 1.2 (fora). Ambas marcam - Sim: 63.4%",
-          "edge": 0.1339,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Championship",
-      "data": "2026-04-25T14:00:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
         "casa": "Norwich",
         "visitante": "Swansea"
       },
@@ -3117,6 +2921,202 @@
           "confianca": "MEDIUM",
           "justificativa": "xG: 2.1 (casa) x 1.2 (fora). Ambas marcam - Sim: 61.5%",
           "edge": 0.1152,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Championship",
+      "data": "2026-04-25T14:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Stoke",
+        "visitante": "Portsmouth"
+      },
+      "probabilidades": {
+        "casa": 0.8047094837265406,
+        "empate": 0.07239822636569297,
+        "visitante": 0.05002253780416346
+      },
+      "favorito": {
+        "nome": "Stoke",
+        "prob": 0.8047094837265406,
+        "vantagem": 0.7323112573608477
+      },
+      "gols_esperados": {
+        "casa": 4.324504641711232,
+        "visitante": 1.1829732620320859,
+        "total": 5.507477903743318
+      },
+      "mercados": {
+        "under_25": 0.16078505548226274,
+        "over_25": 0.8392149445177373,
+        "btts_yes": 0.633895772936902,
+        "btts_no": 0.366104227063098
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.2818181818181818,
+          "ataque": 0.8,
+          "defesa": 0.36,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.5306363636363637
+        },
+        "visitante": {
+          "forma_recente": 0.5454545454545454,
+          "ataque": 0.4,
+          "defesa": 0.0,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.4309090909090909
+        }
+      },
+      "leitura_rapida": "Stoke favorito (80%, risco forte). Jogo mais aberto (xG total ≈5.5). Over 2.5 com 84%. | Forma recente: Stoke em baixa.",
+      "tendencia": {
+        "casa": "em baixa",
+        "visitante": "estavel"
+      },
+      "alertas": [
+        "Stoke jogou recentemente — possível desgaste físico.",
+        "Portsmouth jogou recentemente — possível desgaste físico."
+      ],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Championship",
+        "sport_key": "soccer_efl_champ",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "21/04 18:45",
+            "mandante": "Stoke",
+            "visitante": "Millwall",
+            "placar": "1 x 3",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "18/04 14:00",
+            "mandante": "Wrexham",
+            "visitante": "Stoke",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "11/04 14:00",
+            "mandante": "Stoke",
+            "visitante": "Blackburn",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "06/04 14:00",
+            "mandante": "Derby County",
+            "visitante": "Stoke",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "03/04 14:00",
+            "mandante": "Stoke",
+            "visitante": "Sheffield Wed",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "21/04 18:45",
+            "mandante": "Coventry City",
+            "visitante": "Portsmouth",
+            "placar": "5 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "18/04 11:30",
+            "mandante": "Portsmouth",
+            "visitante": "Leicester City",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "14/04 19:00",
+            "mandante": "Portsmouth",
+            "visitante": "Ipswich Town",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "11/04 14:00",
+            "mandante": "Middlesbrough",
+            "visitante": "Portsmouth",
+            "placar": "0 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "06/04 11:30",
+            "mandante": "Portsmouth",
+            "visitante": "Oxford United",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.8047094837265406,
+          "confianca": "HIGH",
+          "justificativa": "Stoke projeta ≈4.3 gol(s) vs ≈1.2 do adversário. Prob vitória: 80.5% (margem: 73.2 p.p.)",
+          "edge": 0.7323,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER",
+          "probabilidade": 0.8392149445177373,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈5.5. OVER 2.5: 83.9% de probabilidade",
+          "edge": 0.3392,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.633895772936902,
+          "confianca": "MEDIUM",
+          "justificativa": "xG: 4.3 (casa) x 1.2 (fora). Ambas marcam - Sim: 63.4%",
+          "edge": 0.1339,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
