@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-04-25",
-      "ultima_atualizacao": "2026-04-25 15:27:26",
-      "finalizados": 7,
-      "taxa_geral": 0.762,
-      "total_acertos": 16,
-      "total_palpites": 21,
+      "ultima_atualizacao": "2026-04-25 15:45:41",
+      "finalizados": 10,
+      "taxa_geral": 0.767,
+      "total_acertos": 23,
+      "total_palpites": 30,
       "mercados": {
         "WINNER": {
-          "acertos": 6,
-          "total": 7,
-          "taxa": 0.857
+          "acertos": 7,
+          "total": 10,
+          "taxa": 0.7
         },
         "OVER_UNDER": {
-          "acertos": 5,
-          "total": 7,
-          "taxa": 0.714
+          "acertos": 8,
+          "total": 10,
+          "taxa": 0.8
         },
         "BTTS": {
-          "acertos": 5,
-          "total": 7,
-          "taxa": 0.714
+          "acertos": 8,
+          "total": 10,
+          "taxa": 0.8
         }
       },
       "jogos": [
@@ -171,6 +171,35 @@
           ]
         },
         {
+          "casa": "Parma",
+          "visitante": "AC Pisa",
+          "competicao": "Serie A",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.841,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "HIGH",
+              "probabilidade": 0.765,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
           "casa": "Olympique Lyon",
           "visitante": "Auxerre",
           "competicao": "Ligue 1",
@@ -200,30 +229,88 @@
           ]
         },
         {
-          "casa": "Parma",
-          "visitante": "AC Pisa",
-          "competicao": "Serie A",
-          "placar": "1-0",
+          "casa": "Mainz",
+          "visitante": "Bayern",
+          "competicao": "Bundesliga",
+          "placar": "3-4",
           "palpites": [
             {
               "tipo": "WINNER",
-              "opcao": "1",
+              "opcao": "2",
               "confianca": "HIGH",
-              "probabilidade": 0.841,
+              "probabilidade": 0.763,
               "resultado": "ACERTO"
             },
             {
               "tipo": "OVER_UNDER",
               "opcao": "OVER",
-              "confianca": "LOW",
-              "probabilidade": 0.508,
-              "resultado": "ERRO"
+              "confianca": "HIGH",
+              "probabilidade": 0.858,
+              "resultado": "ACERTO"
             },
             {
               "tipo": "BTTS",
-              "opcao": "NO",
+              "opcao": "YES",
               "confianca": "HIGH",
-              "probabilidade": 0.765,
+              "probabilidade": 0.713,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "casa": "Augsburg",
+          "visitante": "Frankfurt",
+          "competicao": "Bundesliga",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.479,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER",
+              "confianca": "LOW",
+              "probabilidade": 0.513,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.52,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "casa": "1. FC Köln",
+          "visitante": "Leverkusen",
+          "competicao": "Bundesliga",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.408,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "HIGH",
+              "probabilidade": 0.752,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.74,
               "resultado": "ACERTO"
             }
           ]
