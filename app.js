@@ -16,6 +16,12 @@ const THEME_STORAGE_KEY = "radar-theme";
 const LIMITE_JOGOS_TRES_DICAS = 10;
 const LIMITE_JOGOS_DUAS_DICAS = 5;
 
+// Competições excluídas da seção de dicas
+const COMPETICOES_EXCLUIDAS_DICAS = new Set([
+  "Campeonato Brasileiro Série A",
+  "Campeonato Brasileiro Série B",
+]);
+
 // Thresholds de probabilidade para coloração das dicas
 const PROB_VITORIA_ALTA = 0.70;
 const PROB_VITORIA_MEDIA = 0.55;
@@ -670,7 +676,7 @@ function renderTipsSection(data) {
   const count = total >= LIMITE_JOGOS_TRES_DICAS ? 3 : total > LIMITE_JOGOS_DUAS_DICAS ? 2 : 1;
 
   const topGames = (data.jogos || [])
-    .filter((j) => j.status !== "FINISHED")
+    .filter((j) => j.status !== "FINISHED" && !COMPETICOES_EXCLUIDAS_DICAS.has(j.competicao))
     .sort((a, b) => (b.favorito?.prob || 0) - (a.favorito?.prob || 0))
     .slice(0, count);
 
