@@ -2,26 +2,31 @@
   "dias": [
     {
       "data": "2026-04-25",
-      "ultima_atualizacao": "2026-04-25 16:21:09",
-      "finalizados": 21,
-      "taxa_geral": 0.683,
-      "total_acertos": 43,
-      "total_palpites": 63,
+      "ultima_atualizacao": "2026-04-25 16:41:44",
+      "finalizados": 23,
+      "taxa_geral": 0.686,
+      "total_acertos": 48,
+      "total_palpites": 70,
       "mercados": {
         "WINNER": {
-          "acertos": 12,
-          "total": 21,
-          "taxa": 0.571
+          "acertos": 14,
+          "total": 23,
+          "taxa": 0.609
         },
         "OVER_UNDER": {
-          "acertos": 16,
-          "total": 21,
-          "taxa": 0.762
+          "acertos": 18,
+          "total": 23,
+          "taxa": 0.783
         },
         "BTTS": {
-          "acertos": 15,
-          "total": 21,
-          "taxa": 0.714
+          "acertos": 16,
+          "total": 23,
+          "taxa": 0.696
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
       "jogos": [
@@ -171,35 +176,6 @@
           ]
         },
         {
-          "casa": "Olympique Lyon",
-          "visitante": "Auxerre",
-          "competicao": "Ligue 1",
-          "placar": "3-2",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.691,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER",
-              "confianca": "HIGH",
-              "probabilidade": 0.712,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.617,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
           "casa": "Parma",
           "visitante": "AC Pisa",
           "competicao": "Serie A",
@@ -224,6 +200,35 @@
               "opcao": "NO",
               "confianca": "HIGH",
               "probabilidade": 0.765,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "casa": "Olympique Lyon",
+          "visitante": "Auxerre",
+          "competicao": "Ligue 1",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.691,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "HIGH",
+              "probabilidade": 0.712,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.617,
               "resultado": "ACERTO"
             }
           ]
@@ -287,6 +292,35 @@
           ]
         },
         {
+          "casa": "Mainz",
+          "visitante": "Bayern",
+          "competicao": "Bundesliga",
+          "placar": "3-4",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "HIGH",
+              "probabilidade": 0.763,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "HIGH",
+              "probabilidade": 0.858,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.713,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
           "casa": "Augsburg",
           "visitante": "Frankfurt",
           "competicao": "Bundesliga",
@@ -345,31 +379,31 @@
           ]
         },
         {
-          "casa": "Mainz",
-          "visitante": "Bayern",
-          "competicao": "Bundesliga",
-          "placar": "3-4",
+          "casa": "West Ham",
+          "visitante": "Everton",
+          "competicao": "Premier League",
+          "placar": "2-1",
           "palpites": [
             {
               "tipo": "WINNER",
-              "opcao": "2",
+              "opcao": "1",
               "confianca": "HIGH",
-              "probabilidade": 0.763,
+              "probabilidade": 0.759,
               "resultado": "ACERTO"
             },
             {
               "tipo": "OVER_UNDER",
               "opcao": "OVER",
-              "confianca": "HIGH",
-              "probabilidade": 0.858,
+              "confianca": "LOW",
+              "probabilidade": 0.548,
               "resultado": "ACERTO"
             },
             {
               "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "HIGH",
-              "probabilidade": 0.713,
-              "resultado": "ACERTO"
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.602,
+              "resultado": "ERRO"
             }
           ]
         },
@@ -461,35 +495,6 @@
           ]
         },
         {
-          "casa": "West Ham",
-          "visitante": "Everton",
-          "competicao": "Premier League",
-          "placar": "2-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.759,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER",
-              "confianca": "LOW",
-              "probabilidade": 0.548,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.602,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
           "casa": "Oxford United",
           "visitante": "Sheffield Wed",
           "competicao": "Championship",
@@ -544,6 +549,35 @@
               "confianca": "HIGH",
               "probabilidade": 0.726,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "casa": "Wolverhampton",
+          "visitante": "Tottenham",
+          "competicao": "Premier League",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.602,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "LOW",
+              "probabilidade": 0.505,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.515,
+              "resultado": "ACERTO"
             }
           ]
         },
@@ -606,31 +640,67 @@
           ]
         },
         {
-          "casa": "Wolverhampton",
-          "visitante": "Tottenham",
-          "competicao": "Premier League",
-          "placar": "0-1",
+          "casa": "Getafe",
+          "visitante": "Barça",
+          "competicao": "Primera Division",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.419,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER",
+              "confianca": "HIGH",
+              "probabilidade": 0.735,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "HIGH",
+              "probabilidade": 0.661,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.325,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "casa": "Feyenoord",
+          "visitante": "Groningen",
+          "competicao": "Eredivisie",
+          "placar": "3-1",
           "palpites": [
             {
               "tipo": "WINNER",
               "opcao": "1",
               "confianca": "HIGH",
-              "probabilidade": 0.602,
-              "resultado": "ERRO"
+              "probabilidade": 0.749,
+              "resultado": "ACERTO"
             },
             {
               "tipo": "OVER_UNDER",
               "opcao": "OVER",
               "confianca": "LOW",
-              "probabilidade": 0.505,
-              "resultado": "ERRO"
+              "probabilidade": 0.552,
+              "resultado": "ACERTO"
             },
             {
               "tipo": "BTTS",
               "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.515,
-              "resultado": "ACERTO"
+              "confianca": "MEDIUM",
+              "probabilidade": 0.587,
+              "resultado": "ERRO"
             }
           ]
         }
