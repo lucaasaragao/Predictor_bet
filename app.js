@@ -25,6 +25,7 @@ const COMPETICOES_EXCLUIDAS_DICAS = new Set([
 // Thresholds de probabilidade para coloração das dicas
 const PROB_VITORIA_ALTA = 0.70;
 const PROB_VITORIA_MEDIA = 0.55;
+const TIMEZONE_FORTALEZA = "America/Fortaleza";
 
 function formatarPorcentagem(value) {
   return `${(value * 100).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`;
@@ -93,7 +94,9 @@ function parseGeneratedAt(value) {
   if (!value) return null;
 
   const normalized = String(value).trim().replace(" ", "T");
-  const parsedDate = new Date(normalized);
+  const hasTimezone = /([zZ]|[+-]\d{2}:?\d{2})$/.test(normalized);
+  const isoValue = hasTimezone ? normalized : `${normalized}Z`;
+  const parsedDate = new Date(isoValue);
   if (Number.isNaN(parsedDate.getTime())) {
     return null;
   }
@@ -108,6 +111,7 @@ function formatGeneratedAt(value, compact = false) {
   }
 
   return new Intl.DateTimeFormat("pt-BR", {
+    timeZone: TIMEZONE_FORTALEZA,
     day: "2-digit",
     month: "2-digit",
     ...(compact ? {} : { year: "numeric" }),
