@@ -76,6 +76,10 @@
         <span>Jogos de hoje</span>
         <strong id="totalJogos">--</strong>
       </div>
+      <div id="acertosHoje" hidden>
+        <span>Acertos hoje</span>
+        <strong id="acertosHojeVal">--</strong>
+      </div>
     </div>
   </header>
 
@@ -163,7 +167,7 @@
   <!-- FOOTER -->
   <footer class="app-footer">
     <div class="footer-content">
-      <div class="footer-copyright">© 2026 Lucas Aragão</div>
+      <div class="footer-copyright" id="footerCopyright" style="cursor:default">© 2026 Lucas Aragão</div>
       <div class="footer-links">
         <a href="termos.html" class="footer-link">Termos de uso</a>
         <span class="footer-separator">•</span>
@@ -182,6 +186,19 @@
   </footer>
 
   </div><!-- /#siteContent -->
+
+  <!-- ── Painel Admin — fora do #siteContent para não ser bloqueado pelo age gate ── -->
+  <div id="adminPanel" class="admin-panel" hidden role="dialog" aria-modal="true" aria-label="Painel de histórico">
+    <div class="admin-panel__inner">
+      <div class="admin-panel__header">
+        <h2 class="admin-panel__title">Histórico de Acertos</h2>
+        <button id="adminClose" class="admin-panel__close" type="button" aria-label="Fechar painel">×</button>
+      </div>
+      <div id="adminContent" class="admin-panel__content">
+        <p class="admin-loading">Carregando...</p>
+      </div>
+    </div>
+  </div>
 
   <script>
     (function () {

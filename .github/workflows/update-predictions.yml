@@ -28,20 +28,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Generate predictions.json
+      - name: Generate predictions.json and history.json
         env:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python predictor.py
 
       - name: Commit and push if changed
         run: |
-          if git diff --quiet -- predictions.json; then
-            echo "No changes in predictions.json"
+          if git diff --quiet -- predictions.json history.json; then
+            echo "No changes"
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add predictions.json
+          git add predictions.json history.json
           git commit -m "chore: update predictions.json"
           git push

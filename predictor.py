@@ -193,32 +193,34 @@ def buscar_jogos_permitidos() -> List[Dict]:
 
 
 def buscar_historico_time(team_id: int, limit: int = 10) -> List[Dict]:
-    """Busca histórico de um time"""
-    
+    """Busca histórico de um time, retornando do mais recente para o mais antigo."""
     url = f"{API_BASE}/teams/{team_id}/matches"
     params = {"limit": limit, "status": "FINISHED"}
-    
+
     try:
         response = requests.get(url, headers=HEADERS, params=params, timeout=30)
         if response.status_code != 200:
             return []
-        return response.json().get("matches", [])
+        matches = response.json().get("matches", [])
+        matches.sort(key=lambda m: m.get("utcDate", ""), reverse=True)
+        return matches
     except Exception as e:
         print(f"⚠️  Erro ao buscar histórico: {e}")
         return []
 
 
 def buscar_h2h(team_id1: int, team_id2: int, limit: int = 5) -> List[Dict]:
-    """Busca confrontos diretos entre dois times"""
-    
+    """Busca confrontos diretos entre dois times, do mais recente para o mais antigo."""
     url = f"{API_BASE}/matches/{team_id1}/head2head/{team_id2}"
     params = {"limit": limit}
-    
+
     try:
         response = requests.get(url, headers=HEADERS, params=params, timeout=30)
         if response.status_code != 200:
             return []
-        return response.json().get("matches", [])
+        matches = response.json().get("matches", [])
+        matches.sort(key=lambda m: m.get("utcDate", ""), reverse=True)
+        return matches
     except Exception as e:
         return []
 
@@ -435,6 +437,94 @@ def _normalizar_nome_time(nome: str) -> str:
     return " ".join(limpo.split())
 
 
+# Mapeia nomes abreviados (shortName da football-data.org) para a forma canônica
+# usada pelas odds APIs. Chave e valor são saídas de _normalizar_nome_time().
+_ALIASES_TIME: Dict[str, str] = {
+    # Premier League
+    "man united": "manchester united",
+    "man utd": "manchester united",
+    "man city": "manchester city",
+    "spurs": "tottenham hotspur",
+    "wolves": "wolverhampton wanderers",
+    "wolverhampton": "wolverhampton wanderers",
+    "forest": "nottingham forest",
+    "nott forest": "nottingham forest",
+    "nottm forest": "nottingham forest",
+    "newcastle": "newcastle united",
+    "sheff utd": "sheffield united",
+    "brighton": "brighton hove albion",
+    "west brom": "west bromwich albion",
+    # Bundesliga
+    "bayern": "bayern munich",
+    "dortmund": "borussia dortmund",
+    "leverkusen": "bayer leverkusen",
+    "gladbach": "borussia monchengladbach",
+    "frankfurt": "eintracht frankfurt",
+    "eintracht": "eintracht frankfurt",
+    "leipzig": "rb leipzig",
+    # La Liga
+    "atletico": "atletico madrid",
+    "atletico de madrid": "atletico madrid",
+    "betis": "real betis",
+    "celta": "celta vigo",
+    "celta de vigo": "celta vigo",
+    "alaves": "deportivo alaves",
+    "athletic": "athletic bilbao",
+    "rayo": "rayo vallecano",
+    # Serie A
+    "inter": "inter milan",
+    "milan": "ac milan",
+    "roma": "as roma",
+    # Ligue 1
+    "psg": "paris saint-germain",
+    "paris sg": "paris saint-germain",
+    "lyon": "olympique lyonnais",
+    "marseille": "olympique de marseille",
+    # Portugal
+    "sporting": "sporting cp",
+    "sporting lisbon": "sporting cp",
+    # Países Baixos
+    "psv": "psv eindhoven",
+    "az": "az alkmaar",
+    # Brasil
+    "atletico-mg": "atletico mineiro",
+    "atletico mg": "atletico mineiro",
+    "vasco": "vasco da gama",
+}
+
+
+def _canonicalizar_nome_time(nome: str) -> str:
+    """Normaliza + resolve alias de sigla/abreviação para comparação de odds."""
+    norm = _normalizar_nome_time(nome)
+    return _ALIASES_TIME.get(norm, norm)
+
+
+def _nomes_equivalentes(a: str, b: str) -> bool:
+    """True se dois nomes (raw ou normalizados) se referem ao mesmo time.
+
+    Tentativas em ordem:
+    1. Igualdade exata após normalização + alias.
+    2. Um token de comprimento > 2 de A é prefixo de um token de B (ou vice-versa)
+       e ambos compartilham ao menos um token de comprimento > 3 — cobre casos
+       como "Man" / "Manchester" com "United" em comum.
+    """
+    ca, cb = _canonicalizar_nome_time(a), _canonicalizar_nome_time(b)
+    if ca == cb:
+        return True
+    ta = set(ca.split())
+    tb = set(cb.split())
+    comuns = {t for t in ta & tb if len(t) > 3}
+    if not comuns:
+        return False
+    for ta_tok in ta:
+        if len(ta_tok) < 3:
+            continue
+        for tb_tok in tb:
+            if tb_tok.startswith(ta_tok) or ta_tok.startswith(tb_tok):
+                return True
+    return False
+
+
 def _escolher_melhor_odd_h2h(evento_odds: Dict) -> Dict[str, float]:
     melhores: Dict[str, float] = {}
     for book in evento_odds.get("bookmakers", []):
@@ -565,9 +655,12 @@ def _aplicar_odds_por_sport(candidatos_por_sport: Dict[str, List[PredicaoJogo]])
             )
 
         for pred in candidatos_por_sport[sport_key]:
-            home_pred = _normalizar_nome_time(pred.time_casa)
-            away_pred = _normalizar_nome_time(pred.time_visitante)
-            match_ev = next((ev for ev in eventos_indexados if ev["home"] == home_pred and ev["away"] == away_pred), None)
+            match_ev = next(
+                (ev for ev in eventos_indexados
+                 if _nomes_equivalentes(ev["home"], pred.time_casa)
+                 and _nomes_equivalentes(ev["away"], pred.time_visitante)),
+                None,
+            )
             if not match_ev:
                 pred.odds_debug["status"] = "no_event_match"
                 pred.odds_debug["reason"] = "não encontrou evento equivalente na consulta por liga"
@@ -645,7 +738,7 @@ def aplicar_odds_e_valor(predicoes: List[PredicaoJogo]) -> List[PredicaoJogo]:
                 f"usado {quota_headers.get('x-requests-used')} | restante {quota_headers.get('x-requests-remaining')}"
             )
 
-        eventos_indexados: Dict[str, Dict[Tuple[str, str], Dict]] = {}
+        eventos_indexados: Dict[str, List[Dict]] = {}
         sport_keys_relevantes = set(candidatos_por_sport.keys())
         eventos_relevantes = 0
         for ev in eventos_odds:
@@ -656,21 +749,25 @@ def aplicar_odds_e_valor(predicoes: List[PredicaoJogo]) -> List[PredicaoJogo]:
             if not sport_key or not home or not away or not odds_h2h:
                 continue
 
-             
             if sport_key in sport_keys_relevantes:
                 eventos_relevantes += 1
 
-            eventos_indexados.setdefault(sport_key, {})[(home, away)] = {
+            eventos_indexados.setdefault(sport_key, []).append({
                 "id": ev.get("id"),
+                "home": home,
+                "away": away,
                 "odds": odds_h2h,
-            }
+            })
 
         for sport_key, jogos in candidatos_por_sport.items():
-            pool = eventos_indexados.get(sport_key, {})
+            pool = eventos_indexados.get(sport_key, [])
             for pred in jogos:
-                home_pred = _normalizar_nome_time(pred.time_casa)
-                away_pred = _normalizar_nome_time(pred.time_visitante)
-                match_ev = pool.get((home_pred, away_pred))
+                match_ev = next(
+                    (ev for ev in pool
+                     if _nomes_equivalentes(ev["home"], pred.time_casa)
+                     and _nomes_equivalentes(ev["away"], pred.time_visitante)),
+                    None,
+                )
                 if not match_ev:
                     pred.odds_debug["status"] = "no_event_match"
                     pred.odds_debug["reason"] = "não encontrou evento equivalente no retorno do endpoint upcoming"
@@ -812,17 +909,13 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
         if not nome_alvo:
             return None
 
-        # Match robusto por nome normalizado para lidar com variações de acento/sigla.
-        alvo_norm = _normalizar_nome_time(nome_alvo)
         for nome_odds, odd in odds_h2h.items():
-            nome_norm = _normalizar_nome_time(nome_odds)
-            if nome_norm == alvo_norm:
+            if _nomes_equivalentes(nome_odds, nome_alvo):
                 return float(odd)
 
         if str(opcao).upper() == "X":
             for nome_odds, odd in odds_h2h.items():
-                n = _normalizar_nome_time(nome_odds)
-                if n in ("draw", "empate"):
+                if _normalizar_nome_time(nome_odds) in ("draw", "empate"):
                     return float(odd)
         return None
 
@@ -1163,8 +1256,108 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
             }
         )
 
+    total_acertos = sum(
+        1 for j in dados["jogos"]
+        for p in j.get("palpites", [])
+        if p.get("resultado_verificador") == "ACERTO"
+    )
+    total_com_resultado = sum(
+        1 for j in dados["jogos"]
+        for p in j.get("palpites", [])
+        if p.get("resultado_verificador") is not None
+    )
+    dados["acertos_hoje"] = {
+        "acertos": total_acertos,
+        "total": total_com_resultado,
+        "taxa": round(total_acertos / total_com_resultado, 3) if total_com_resultado else None,
+    }
+
     with open(caminho_saida, "w", encoding="utf-8") as file_handle:
         json.dump(dados, file_handle, ensure_ascii=False, indent=2)
+
+
+def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.json") -> None:
+    """Acumula resultados dos jogos finalizados em history.json (últimos 2 dias)."""
+    hoje = datetime.now().strftime("%Y-%m-%d")
+    agora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    try:
+        with open(caminho, "r", encoding="utf-8") as fh:
+            historico = json.load(fh)
+    except (FileNotFoundError, json.JSONDecodeError):
+        historico = {"dias": []}
+
+    finalizados = [
+        p for p in predicoes
+        if p.status == "FINISHED" and p.placar_casa is not None and p.placar_visitante is not None
+    ]
+
+    mercados_stats: Dict[str, Dict] = {}
+    jogos_dia = []
+    total_acertos = 0
+    total_com_resultado = 0
+
+    for pred in finalizados:
+        palpites_pred = gerar_palpites(pred)
+        com_resultado = [p for p in palpites_pred if p.resultado_verificador is not None]
+        if not com_resultado:
+            continue
+
+        jogos_dia.append({
+            "casa": pred.time_casa,
+            "visitante": pred.time_visitante,
+            "competicao": pred.competicao,
+            "placar": f"{pred.placar_casa}-{pred.placar_visitante}",
+            "palpites": [
+                {
+                    "tipo": p.tipo,
+                    "opcao": p.opcao,
+                    "confianca": p.confianca,
+                    "probabilidade": round(p.probabilidade, 3),
+                    "resultado": p.resultado_verificador,
+                }
+                for p in com_resultado
+            ],
+        })
+
+        for p in com_resultado:
+            m = mercados_stats.setdefault(p.tipo, {"acertos": 0, "total": 0})
+            m["total"] += 1
+            if p.resultado_verificador == "ACERTO":
+                m["acertos"] += 1
+                total_acertos += 1
+            total_com_resultado += 1
+
+    for m in mercados_stats.values():
+        m["taxa"] = round(m["acertos"] / m["total"], 3) if m["total"] else 0.0
+
+    entrada = {
+        "data": hoje,
+        "ultima_atualizacao": agora,
+        "finalizados": len(finalizados),
+        "taxa_geral": round(total_acertos / total_com_resultado, 3) if total_com_resultado else 0.0,
+        "total_acertos": total_acertos,
+        "total_palpites": total_com_resultado,
+        "mercados": mercados_stats,
+        "jogos": jogos_dia,
+    }
+
+    dias = historico.get("dias", [])
+    idx = next((i for i, d in enumerate(dias) if d["data"] == hoje), None)
+    if idx is not None:
+        dias[idx] = entrada
+    else:
+        dias.insert(0, entrada)
+
+    historico["dias"] = dias[:2]
+
+    with open(caminho, "w", encoding="utf-8") as fh:
+        json.dump(historico, fh, ensure_ascii=False, indent=2)
+
+    if total_com_resultado:
+        print(f"📈 Histórico: {total_acertos}/{total_com_resultado} acertos hoje ({entrada['taxa_geral']*100:.0f}%) → {caminho}")
+    else:
+        print(f"📈 Histórico atualizado ({len(finalizados)} finalizado(s), sem resultado verificável ainda) → {caminho}")
 
 
 def exibir_predicoes(predicoes: List[PredicaoJogo]) -> None:
@@ -1236,13 +1429,12 @@ def main():
     print(f"📊 Encontrados {len(jogos)} jogo(s). Analisando...\n")
     
     predicoes = []
-    print("⏳ Processando jogos... (Aguardando ~12s por partida para evitar bloqueios da API)")
+    print(f"⏳ Processando jogos... (~{len(jogos) * 12 // 60} min estimados)")
     for match in jogos:
         try:
             pred = prever_jogo(match)
             predicoes.append(pred)
-            time.sleep(12)  # Respeita o limite de 10 requests por minuto do TIER_ONE
-
+            time.sleep(12)
         except Exception as e:
             print(f"⚠️  Erro ao processar jogo: {e}")
 
@@ -1251,10 +1443,13 @@ def main():
         print("ℹ️  Nenhum jogo com valor esperado positivo para exibir no momento.")
         exportar_predicoes_front([], "predictions.json")
         return
-    
+
+    predicoes.sort(key=lambda p: p.data_jogo)
+
     exibir_predicoes(predicoes)
     exportar_predicoes_front(predicoes, "predictions.json")
-    print("💾 Arquivo para front gerado em: predictions.json")
+    atualizar_historico(predicoes, "history.json")
+    print("💾 Arquivos gerados: predictions.json | history.json")
 
 
 if __name__ == "__main__":

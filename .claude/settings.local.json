@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(PYTHONUTF8=1 FOOTBALL_DATA_TOKEN='3262708d0153474c9a44a0fd1218dee4' ODDS_API_KEY='4633bf8cffda0a6d69adc5397f9c49ac' .venv/Scripts/python.exe predictor.py)",
+      "Bash(PYTHONUTF8=1 .venv/Scripts/python.exe -c \"import json; d=json.load\\(open\\('history.json'\\)\\); print\\(json.dumps\\(d, ensure_ascii=False, indent=2\\)\\)\")"
+    ]
+  }
+}

@@ -241,6 +241,138 @@ async function loadData() {
 function fillHeader(data) {
   document.getElementById("totalJogos").textContent = String(data.total_jogos ?? data.jogos?.length ?? 0);
   syncHeaderMeta();
+
+  const ah = data.acertos_hoje;
+  if (ah && ah.total > 0 && ah.taxa != null) {
+    const badge = document.getElementById("acertosHoje");
+    const val = document.getElementById("acertosHojeVal");
+    if (badge && val) {
+      val.textContent = `${ah.acertos}/${ah.total} (${pct(ah.taxa)})`;
+      badge.hidden = false;
+    }
+  }
+}
+
+async function loadHistory() {
+  const resp = await fetch(`history.json?v=${Date.now()}`, { cache: "no-store" });
+  if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+  return resp.json();
+}
+
+function renderAdminPanel(data) {
+  const content = document.getElementById("adminContent");
+  if (!content) return;
+
+  const dias = data?.dias || [];
+  if (!dias.length) {
+    content.innerHTML = '<p class="admin-empty">Nenhum histórico disponível ainda.</p>';
+    return;
+  }
+
+  content.innerHTML = dias.map((dia) => {
+    const dataFmt = new Date(dia.data + "T12:00:00").toLocaleDateString("pt-BR", {
+      weekday: "short", day: "2-digit", month: "2-digit",
+    });
+    const taxa = dia.taxa_geral ?? 0;
+    const taxaClass = taxa >= 0.6 ? "good" : taxa >= 0.4 ? "mid" : "bad";
+    const taxaLabel = dia.total_palpites
+      ? `${dia.total_acertos}/${dia.total_palpites} acertos · ${pct(taxa)}`
+      : "Sem resultados ainda";
+
+    const mercadosHtml = Object.entries(dia.mercados || {})
+      .map(([tipo, m]) => `
+        <div class="admin-mercado">
+          <span class="admin-mercado__nome">${tipo}</span>
+          <span class="admin-mercado__stats">${m.acertos}/${m.total} · ${pct(m.taxa)}</span>
+        </div>`)
+      .join("");
+
+    const jogosHtml = (dia.jogos || []).map((j) => {
+      const tips = j.palpites
+        .map((p) => {
+          const ok = p.resultado === "ACERTO";
+          return `<span class="admin-tip admin-tip--${ok ? "ok" : "err"}">${p.tipo} ${p.opcao} <em>${p.confianca}</em></span>`;
+        })
+        .join("");
+      return `
+        <div class="admin-jogo">
+          <div class="admin-jogo__match">${j.casa} <span class="admin-placar">${j.placar}</span> ${j.visitante}</div>
+          <div class="admin-jogo__tips">${tips}</div>
+        </div>`;
+    }).join("");
+
+    return `
+      <div class="admin-dia">
+        <div class="admin-dia__header">
+          <strong>${dataFmt}</strong>
+          <span class="admin-dia__taxa admin-dia__taxa--${taxaClass}">${taxaLabel}</span>
+        </div>
+        ${mercadosHtml ? `<div class="admin-dia__mercados">${mercadosHtml}</div>` : ""}
+        ${jogosHtml ? `<div class="admin-dia__jogos">${jogosHtml}</div>` : ""}
+      </div>`;
+  }).join("");
+}
+
+async function openAdminPanel() {
+  const panel = document.getElementById("adminPanel");
+  if (!panel || !panel.hidden) return;
+
+  panel.hidden = false;
+  document.body.style.overflow = "hidden";
+
+  const content = document.getElementById("adminContent");
+  if (content) content.innerHTML = '<p class="admin-loading">Carregando...</p>';
+
+  try {
+    const data = await loadHistory();
+    renderAdminPanel(data);
+  } catch (err) {
+    if (content) content.innerHTML = `<p class="admin-empty">Erro ao carregar histórico: ${err.message}</p>`;
+  }
+}
+
+function closeAdminPanel() {
+  const panel = document.getElementById("adminPanel");
+  if (!panel) return;
+  panel.hidden = true;
+  document.body.style.overflow = "";
+  history.replaceState(null, "", window.location.pathname);
+}
+
+function initAdminPanel() {
+  const panel = document.getElementById("adminPanel");
+  if (!panel) return;
+
+  document.getElementById("adminClose")?.addEventListener("click", closeAdminPanel);
+
+  panel.addEventListener("click", (e) => {
+    if (e.target === panel) closeAdminPanel();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !panel.hidden) closeAdminPanel();
+  });
+
+  // Gatilho 1: URL hash #admin (na carga da página)
+  if (window.location.hash === "#admin") openAdminPanel();
+
+  // Gatilho 2: hashchange (usuário adiciona #admin na URL enquanto na página)
+  window.addEventListener("hashchange", () => {
+    if (window.location.hash === "#admin") openAdminPanel();
+  });
+
+  // Gatilho 3: triple-click no copyright do footer
+  let clickCount = 0;
+  let clickTimer = null;
+  document.getElementById("footerCopyright")?.addEventListener("click", () => {
+    clickCount++;
+    clearTimeout(clickTimer);
+    clickTimer = setTimeout(() => { clickCount = 0; }, 600);
+    if (clickCount >= 3) {
+      clickCount = 0;
+      openAdminPanel();
+    }
+  });
 }
 
 function fillCompetitionFilter(data) {
@@ -531,7 +663,9 @@ function renderCards() {
 
   container.innerHTML = "";
 
-  const filtered = (state.raw?.jogos || []).filter(passesFilters);
+  const filtered = (state.raw?.jogos || [])
+    .filter(passesFilters)
+    .sort((a, b) => new Date(a.data) - new Date(b.data));
   updateConfidenceHelp(filtered.length);
 
   if (!filtered.length) {
@@ -676,6 +810,7 @@ function setupFilters() {
 (async function init() {
   setupThemeToggle();
   setupMobileTopbar();
+  initAdminPanel();
 
   try {
     const data = await loadData();
