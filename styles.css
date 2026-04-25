@@ -777,7 +777,12 @@ select optgroup {
   cursor: pointer; transition: all var(--transition); border: none;
 }
 .age-gate__btn--yes { background: var(--text); color: var(--bg); }
-.age-gate__btn--yes:hover { background: #fff; }
+.age-gate__btn--yes:hover,
+.age-gate__btn--yes:focus-visible {
+  background: var(--text);
+  color: var(--bg);
+  filter: brightness(1.08);
+}
 .age-gate__btn--no { background: transparent; color: var(--text-2); border: 1px solid var(--line); }
 .age-gate__btn--no:hover { background: var(--bg-3); color: var(--text); border-color: var(--line-2); }
 
