@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26 12:03:12",
+  "generated_at": "2026-04-26 12:25:39",
   "total_jogos": 29,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -204,9 +204,9 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-04-26T10:15:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
-        "casa": 4,
+        "casa": 5,
         "visitante": 0
       },
       "times": {
@@ -214,65 +214,74 @@
         "visitante": "Utrecht"
       },
       "probabilidades": {
-        "casa": 0.08333531903931198,
-        "empate": 0.15214578221045594,
-        "visitante": 0.7606083345964905
+        "casa": 0.4498971499682616,
+        "empate": 0.24093236832573364,
+        "visitante": 0.3087831372471638
       },
       "favorito": {
-        "nome": "Utrecht",
-        "prob": 0.7606083345964905,
-        "vantagem": 0.6084625523860345
+        "nome": "Excelsior",
+        "prob": 0.4498971499682616,
+        "vantagem": 0.1411140127210978
       },
       "gols_esperados": {
-        "casa": 0.6852475524475524,
-        "visitante": 2.4650349650349646,
-        "total": 3.150282517482517
+        "casa": 1.6462127350427347,
+        "visitante": 1.32491452991453,
+        "total": 2.9711272649572646
       },
       "mercados": {
-        "under_25": 0.39428694491950855,
-        "over_25": 0.6057130550804914,
-        "btts_yes": 0.4519286467711365,
-        "btts_no": 0.5480713532288635
+        "under_25": 0.43007715147557946,
+        "over_25": 0.5699228485244205,
+        "btts_yes": 0.5923514811929567,
+        "btts_no": 0.40764851880704334
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.2090909090909091,
-          "ataque": 0.32,
-          "defesa": 0.28,
+          "forma_recente": 0.34545454545454546,
+          "ataque": 0.5599999999999999,
+          "defesa": 0.44000000000000006,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.3691818181818182
+          "score_total": 0.508909090909091
         },
         "visitante": {
-          "forma_recente": 0.7272727272727273,
-          "ataque": 0.8,
-          "defesa": 0.52,
+          "forma_recente": 0.6000000000000001,
+          "ataque": 0.6666666666666667,
+          "defesa": 0.2666666666666667,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.6985454545454546
+          "score_total": 0.5700000000000001
         }
       },
-      "leitura_rapida": "Utrecht favorito (76%, risco forte). Jogo mais aberto (xG total ≈3.2). Over 2.5 com 61%.",
+      "leitura_rapida": "Excelsior favorito (45%, risco alto). Jogo mais aberto (xG total ≈3.0). Over 2.5 com 57%. | Forma recente: Utrecht em baixa.",
       "tendencia": {
         "casa": "estavel",
-        "visitante": "estavel"
+        "visitante": "em baixa"
       },
-      "alertas": [],
+      "alertas": [
+        "Excelsior jogou recentemente — possível desgaste físico.",
+        "Utrecht jogou recentemente — possível desgaste físico."
+      ],
       "odds_debug": {
         "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
         "competition": "Eredivisie",
         "sport_key": "soccer_netherlands_eredivisie",
-        "odds_match_id": "44309fcaa85b8681c4639ea9287270d1",
-        "bookmakers_outcomes": "2",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
       },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
+      "odds_integradas": false,
+      "odds_valor_alto": false,
       "historico": {
         "casa": [
+          {
+            "data": "26/04 10:15",
+            "mandante": "Excelsior",
+            "visitante": "Utrecht",
+            "placar": "5 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
           {
             "data": "12/04 12:30",
             "mandante": "Zwolle",
@@ -304,17 +313,17 @@
             "placar": "2 x 1",
             "resultado": "D",
             "resultado_label": "Derrota"
-          },
-          {
-            "data": "07/03 20:00",
-            "mandante": "Excelsior",
-            "visitante": "Heerenveen",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
           }
         ],
         "visitante": [
+          {
+            "data": "26/04 10:15",
+            "mandante": "Excelsior",
+            "visitante": "Utrecht",
+            "placar": "5 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
           {
             "data": "11/04 14:30",
             "mandante": "Utrecht",
@@ -346,53 +355,45 @@
             "placar": "0 x 2",
             "resultado": "V",
             "resultado_label": "Vitoria"
-          },
-          {
-            "data": "06/03 19:00",
-            "mandante": "Heracles",
-            "visitante": "Utrecht",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
           }
         ]
       },
       "palpites": [
         {
           "tipo": "WINNER",
-          "opcao": "2",
-          "probabilidade": 0.7606083345964905,
-          "confianca": "HIGH",
-          "justificativa": "Utrecht projeta ≈2.5 gol(s) vs ≈0.7 do adversário. Prob vitória: 76.1% (margem: 60.8 p.p.)",
-          "edge": 0.6085,
-          "odd_decimal": 26.0,
-          "ev": 18.7758,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "opcao": "1",
+          "probabilidade": 0.4498971499682616,
+          "confianca": "MEDIUM",
+          "justificativa": "Excelsior projeta ≈1.6 gol(s) vs ≈1.3 do adversário. Prob vitória: 45.0% (margem: 14.1 p.p.)",
+          "edge": 0.1411,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "OVER",
-          "probabilidade": 0.6057130550804914,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈3.2. OVER 2.5: 60.6% de probabilidade",
-          "edge": 0.1057,
+          "probabilidade": 0.5699228485244205,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈3.0. OVER 2.5: 57.0% de probabilidade",
+          "edge": 0.0699,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.5480713532288635,
-          "confianca": "LOW",
-          "justificativa": "xG: 0.7 (casa) x 2.5 (fora). Ambas marcam - Nao: 54.8%",
-          "edge": 0.0481,
+          "opcao": "YES",
+          "probabilidade": 0.5923514811929567,
+          "confianca": "MEDIUM",
+          "justificativa": "xG: 1.6 (casa) x 1.3 (fora). Ambas marcam - Sim: 59.2%",
+          "edge": 0.0924,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -560,8 +561,8 @@
           "confianca": "HIGH",
           "justificativa": "Fiorentina projeta ≈1.6 gol(s) vs ≈0.6 do adversário. Prob vitória: 60.5% (margem: 35.3 p.p.)",
           "edge": 0.3529,
-          "odd_decimal": 3.3,
-          "ev": 0.995,
+          "odd_decimal": 20.0,
+          "ev": 11.0909,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -594,7 +595,7 @@
     {
       "competicao": "Championship",
       "data": "2026-04-26T11:00:00Z",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "placar_atual": {
         "casa": 1,
         "visitante": 1
@@ -758,8 +759,8 @@
           "confianca": "HIGH",
           "justificativa": "Coventry City projeta ≈2.9 gol(s) vs ≈0.9 do adversário. Prob vitória: 78.2% (margem: 65.5 p.p.)",
           "edge": 0.6555,
-          "odd_decimal": 2.28,
-          "ev": 0.7836,
+          "odd_decimal": 2.9,
+          "ev": 1.2686,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -792,10 +793,10 @@
     {
       "competicao": "Primera Division",
       "data": "2026-04-26T12:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Rayo Vallecano",
@@ -956,8 +957,8 @@
           "confianca": "HIGH",
           "justificativa": "Rayo Vallecano projeta ≈3.5 gol(s) vs ≈0.3 do adversário. Prob vitória: 90.1% (margem: 84.3 p.p.)",
           "edge": 0.8433,
-          "odd_decimal": 2.78,
-          "ev": 1.506,
+          "odd_decimal": 7.0,
+          "ev": 5.3101,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -2157,199 +2158,6 @@
         "visitante": null
       },
       "times": {
-        "casa": "Le Havre",
-        "visitante": "FC Metz"
-      },
-      "probabilidades": {
-        "casa": 0.7961820689915343,
-        "empate": 0.15953171722848464,
-        "visitante": 0.04287098417742125
-      },
-      "favorito": {
-        "nome": "Le Havre",
-        "prob": 0.7961820689915343,
-        "vantagem": 0.6366503517630497
-      },
-      "gols_esperados": {
-        "casa": 2.0835064935064933,
-        "visitante": 0.3,
-        "total": 2.383506493506493
-      },
-      "mercados": {
-        "under_25": 0.5754390569213294,
-        "over_25": 0.42456094307867065,
-        "btts_yes": 0.2265486822857126,
-        "btts_no": 0.7734513177142874
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.35454545454545455,
-          "ataque": 0.4,
-          "defesa": 0.6799999999999999,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.5200909090909092
-        },
-        "visitante": {
-          "forma_recente": 0.14545454545454548,
-          "ataque": 0.1,
-          "defesa": 0.09999999999999998,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.2359090909090909
-        }
-      },
-      "leitura_rapida": "Le Havre favorito (80%, risco forte). Mercado de gols equilibrado (xG total ≈2.4).",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "Ligue 1",
-        "sport_key": "soccer_france_ligue_one",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "18/04 17:00",
-            "mandante": "Angers SCO",
-            "visitante": "Le Havre",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "12/04 15:15",
-            "mandante": "Nice",
-            "visitante": "Le Havre",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "05/04 15:15",
-            "mandante": "Le Havre",
-            "visitante": "Auxerre",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "22/03 16:15",
-            "mandante": "Paris FC",
-            "visitante": "Le Havre",
-            "placar": "3 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "15/03 16:15",
-            "mandante": "Le Havre",
-            "visitante": "Olympique Lyon",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "19/04 15:15",
-            "mandante": "FC Metz",
-            "visitante": "Paris FC",
-            "placar": "1 x 3",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "10/04 19:05",
-            "mandante": "Marseille",
-            "visitante": "FC Metz",
-            "placar": "3 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "05/04 15:15",
-            "mandante": "FC Metz",
-            "visitante": "Nantes",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "22/03 16:15",
-            "mandante": "Stade Rennais",
-            "visitante": "FC Metz",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "15/03 16:15",
-            "mandante": "FC Metz",
-            "visitante": "Toulouse",
-            "placar": "3 x 4",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.7961820689915343,
-          "confianca": "HIGH",
-          "justificativa": "Le Havre projeta ≈2.1 gol(s) vs ≈0.3 do adversário. Prob vitória: 79.6% (margem: 63.7 p.p.)",
-          "edge": 0.6367,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.5754390569213294,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈2.4. UNDER 2.5: 57.5% de probabilidade",
-          "edge": 0.0754,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.7734513177142874,
-          "confianca": "HIGH",
-          "justificativa": "xG: 2.1 (casa) x 0.3 (fora). Ambas marcam - Nao: 77.3%",
-          "edge": 0.2735,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Ligue 1",
-      "data": "2026-04-26T15:15:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
         "casa": "Paris FC",
         "visitante": "Lille"
       },
@@ -2722,6 +2530,199 @@
           "confianca": "HIGH",
           "justificativa": "xG: 2.1 (casa) x 0.3 (fora). Ambas marcam - Nao: 77.4%",
           "edge": 0.2738,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Ligue 1",
+      "data": "2026-04-26T15:15:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Le Havre",
+        "visitante": "FC Metz"
+      },
+      "probabilidades": {
+        "casa": 0.7961820689915343,
+        "empate": 0.15953171722848464,
+        "visitante": 0.04287098417742125
+      },
+      "favorito": {
+        "nome": "Le Havre",
+        "prob": 0.7961820689915343,
+        "vantagem": 0.6366503517630497
+      },
+      "gols_esperados": {
+        "casa": 2.0835064935064933,
+        "visitante": 0.3,
+        "total": 2.383506493506493
+      },
+      "mercados": {
+        "under_25": 0.5754390569213294,
+        "over_25": 0.42456094307867065,
+        "btts_yes": 0.2265486822857126,
+        "btts_no": 0.7734513177142874
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.35454545454545455,
+          "ataque": 0.4,
+          "defesa": 0.6799999999999999,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.5200909090909092
+        },
+        "visitante": {
+          "forma_recente": 0.14545454545454548,
+          "ataque": 0.1,
+          "defesa": 0.09999999999999998,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.2359090909090909
+        }
+      },
+      "leitura_rapida": "Le Havre favorito (80%, risco forte). Mercado de gols equilibrado (xG total ≈2.4).",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Ligue 1",
+        "sport_key": "soccer_france_ligue_one",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "18/04 17:00",
+            "mandante": "Angers SCO",
+            "visitante": "Le Havre",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "12/04 15:15",
+            "mandante": "Nice",
+            "visitante": "Le Havre",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "05/04 15:15",
+            "mandante": "Le Havre",
+            "visitante": "Auxerre",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "22/03 16:15",
+            "mandante": "Paris FC",
+            "visitante": "Le Havre",
+            "placar": "3 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "15/03 16:15",
+            "mandante": "Le Havre",
+            "visitante": "Olympique Lyon",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "19/04 15:15",
+            "mandante": "FC Metz",
+            "visitante": "Paris FC",
+            "placar": "1 x 3",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "10/04 19:05",
+            "mandante": "Marseille",
+            "visitante": "FC Metz",
+            "placar": "3 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "05/04 15:15",
+            "mandante": "FC Metz",
+            "visitante": "Nantes",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "22/03 16:15",
+            "mandante": "Stade Rennais",
+            "visitante": "FC Metz",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "15/03 16:15",
+            "mandante": "FC Metz",
+            "visitante": "Toulouse",
+            "placar": "3 x 4",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.7961820689915343,
+          "confianca": "HIGH",
+          "justificativa": "Le Havre projeta ≈2.1 gol(s) vs ≈0.3 do adversário. Prob vitória: 79.6% (margem: 63.7 p.p.)",
+          "edge": 0.6367,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER",
+          "probabilidade": 0.5754390569213294,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈2.4. UNDER 2.5: 57.5% de probabilidade",
+          "edge": 0.0754,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.7734513177142874,
+          "confianca": "HIGH",
+          "justificativa": "xG: 2.1 (casa) x 0.3 (fora). Ambas marcam - Nao: 77.3%",
+          "edge": 0.2735,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -3712,199 +3713,6 @@
       ]
     },
     {
-      "competicao": "Serie A",
-      "data": "2026-04-26T18:45:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "Milan",
-        "visitante": "Juventus"
-      },
-      "probabilidades": {
-        "casa": 0.3585560783074624,
-        "empate": 0.2027741978036372,
-        "visitante": 0.4359304269201887
-      },
-      "favorito": {
-        "nome": "Juventus",
-        "prob": 0.4359304269201887,
-        "vantagem": 0.0773743486127263
-      },
-      "gols_esperados": {
-        "casa": 1.9573236363636366,
-        "visitante": 2.163127272727272,
-        "total": 4.120450909090909
-      },
-      "mercados": {
-        "under_25": 0.22371949405883362,
-        "over_25": 0.7762805059411664,
-        "btts_yes": 0.7576589185084418,
-        "btts_no": 0.2423410814915582
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5090909090909091,
-          "ataque": 0.4,
-          "defesa": 0.44000000000000006,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.5261818181818183
-        },
-        "visitante": {
-          "forma_recente": 0.8454545454545456,
-          "ataque": 0.7,
-          "defesa": 0.19999999999999996,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.650909090909091
-        }
-      },
-      "leitura_rapida": "Juventus favorito (44%, risco alto). Jogo mais aberto (xG total ≈4.1). Over 2.5 com 78%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (7.7 p.p. < 10.0 p.p.)",
-        "competition": "Serie A",
-        "sport_key": "soccer_italy_serie_a",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "19/04 13:00",
-            "mandante": "Verona",
-            "visitante": "Milan",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "11/04 16:00",
-            "mandante": "Milan",
-            "visitante": "Udinese",
-            "placar": "0 x 3",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "06/04 18:45",
-            "mandante": "Napoli",
-            "visitante": "Milan",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "21/03 17:00",
-            "mandante": "Milan",
-            "visitante": "Torino",
-            "placar": "3 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "15/03 19:45",
-            "mandante": "Lazio",
-            "visitante": "Milan",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "19/04 18:45",
-            "mandante": "Juventus",
-            "visitante": "Bologna",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "11/04 18:45",
-            "mandante": "Atalanta",
-            "visitante": "Juventus",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "06/04 16:00",
-            "mandante": "Juventus",
-            "visitante": "Genoa",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "21/03 19:45",
-            "mandante": "Juventus",
-            "visitante": "Sassuolo",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "14/03 19:45",
-            "mandante": "Udinese",
-            "visitante": "Juventus",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "2",
-          "probabilidade": 0.4359304269201887,
-          "confianca": "LOW",
-          "justificativa": "Juventus projeta ≈2.2 gol(s) vs ≈2.0 do adversário. Prob vitória: 43.6% (margem: 7.7 p.p.)",
-          "edge": 0.0774,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.7762805059411664,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈4.1. OVER 2.5: 77.6% de probabilidade",
-          "edge": 0.2763,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.7576589185084418,
-          "confianca": "HIGH",
-          "justificativa": "xG: 2.0 (casa) x 2.2 (fora). Ambas marcam - Sim: 75.8%",
-          "edge": 0.2577,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
       "competicao": "Ligue 1",
       "data": "2026-04-26T18:45:00Z",
       "status": "TIMED",
@@ -4090,6 +3898,199 @@
           "confianca": "MEDIUM",
           "justificativa": "xG: 2.3 (casa) x 0.6 (fora). Ambas marcam - Nao: 58.1%",
           "edge": 0.0809,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Serie A",
+      "data": "2026-04-26T18:45:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Milan",
+        "visitante": "Juventus"
+      },
+      "probabilidades": {
+        "casa": 0.3585560783074624,
+        "empate": 0.2027741978036372,
+        "visitante": 0.4359304269201887
+      },
+      "favorito": {
+        "nome": "Juventus",
+        "prob": 0.4359304269201887,
+        "vantagem": 0.0773743486127263
+      },
+      "gols_esperados": {
+        "casa": 1.9573236363636366,
+        "visitante": 2.163127272727272,
+        "total": 4.120450909090909
+      },
+      "mercados": {
+        "under_25": 0.22371949405883362,
+        "over_25": 0.7762805059411664,
+        "btts_yes": 0.7576589185084418,
+        "btts_no": 0.2423410814915582
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.5090909090909091,
+          "ataque": 0.4,
+          "defesa": 0.44000000000000006,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.5261818181818183
+        },
+        "visitante": {
+          "forma_recente": 0.8454545454545456,
+          "ataque": 0.7,
+          "defesa": 0.19999999999999996,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.650909090909091
+        }
+      },
+      "leitura_rapida": "Juventus favorito (44%, risco alto). Jogo mais aberto (xG total ≈4.1). Over 2.5 com 78%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "skip_edge_gate",
+        "reason": "edge abaixo do gate (7.7 p.p. < 10.0 p.p.)",
+        "competition": "Serie A",
+        "sport_key": "soccer_italy_serie_a",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "19/04 13:00",
+            "mandante": "Verona",
+            "visitante": "Milan",
+            "placar": "0 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "11/04 16:00",
+            "mandante": "Milan",
+            "visitante": "Udinese",
+            "placar": "0 x 3",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "06/04 18:45",
+            "mandante": "Napoli",
+            "visitante": "Milan",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "21/03 17:00",
+            "mandante": "Milan",
+            "visitante": "Torino",
+            "placar": "3 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "15/03 19:45",
+            "mandante": "Lazio",
+            "visitante": "Milan",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "19/04 18:45",
+            "mandante": "Juventus",
+            "visitante": "Bologna",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "11/04 18:45",
+            "mandante": "Atalanta",
+            "visitante": "Juventus",
+            "placar": "0 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "06/04 16:00",
+            "mandante": "Juventus",
+            "visitante": "Genoa",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "21/03 19:45",
+            "mandante": "Juventus",
+            "visitante": "Sassuolo",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "14/03 19:45",
+            "mandante": "Udinese",
+            "visitante": "Juventus",
+            "placar": "0 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "2",
+          "probabilidade": 0.4359304269201887,
+          "confianca": "LOW",
+          "justificativa": "Juventus projeta ≈2.2 gol(s) vs ≈2.0 do adversário. Prob vitória: 43.6% (margem: 7.7 p.p.)",
+          "edge": 0.0774,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER",
+          "probabilidade": 0.7762805059411664,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈4.1. OVER 2.5: 77.6% de probabilidade",
+          "edge": 0.2763,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.7576589185084418,
+          "confianca": "HIGH",
+          "justificativa": "xG: 2.0 (casa) x 2.2 (fora). Ambas marcam - Sim: 75.8%",
+          "edge": 0.2577,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -4893,199 +4894,6 @@
         "visitante": null
       },
       "times": {
-        "casa": "Bragantino",
-        "visitante": "Palmeiras"
-      },
-      "probabilidades": {
-        "casa": 0.4589785368761586,
-        "empate": 0.23590185081749018,
-        "visitante": 0.3046278151986345
-      },
-      "favorito": {
-        "nome": "Bragantino",
-        "prob": 0.4589785368761586,
-        "vantagem": 0.15435072167752406
-      },
-      "gols_esperados": {
-        "casa": 1.7122807017543862,
-        "visitante": 1.3553429027113237,
-        "total": 3.0676236044657097
-      },
-      "mercados": {
-        "under_25": 0.40870333786679613,
-        "over_25": 0.5912966621332039,
-        "btts_yes": 0.6078473900832593,
-        "btts_no": 0.3921526099167407
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5,
-          "ataque": 0.8,
-          "defesa": 0.44000000000000006,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.6230000000000001
-        },
-        "visitante": {
-          "forma_recente": 0.8454545454545456,
-          "ataque": 0.4,
-          "defesa": 0.6799999999999999,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.671909090909091
-        }
-      },
-      "leitura_rapida": "Bragantino favorito (46%, risco moderado). Jogo mais aberto (xG total ≈3.1). Over 2.5 com 59%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "Campeonato Brasileiro Série A",
-        "sport_key": "soccer_brazil_campeonato",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "19/04 21:30",
-            "mandante": "Bragantino",
-            "visitante": "Clube do Remo",
-            "placar": "4 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "12/04 21:30",
-            "mandante": "Cruzeiro",
-            "visitante": "Bragantino",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "05/04 23:00",
-            "mandante": "Mirassol",
-            "visitante": "Bragantino",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "03/04 00:30",
-            "mandante": "Bragantino",
-            "visitante": "Flamengo",
-            "placar": "3 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "21/03 19:00",
-            "mandante": "Bragantino",
-            "visitante": "Botafogo",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "19/04 21:30",
-            "mandante": "Palmeiras",
-            "visitante": "Paranaense",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "16/04 22:00",
-            "mandante": "Palmeiras",
-            "visitante": "Cristal",
-            "placar": "2 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "12/04 21:30",
-            "mandante": "Corinthians",
-            "visitante": "Palmeiras",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "09/04 00:30",
-            "mandante": "Junior",
-            "visitante": "Palmeiras",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "05/04 22:30",
-            "mandante": "Bahia",
-            "visitante": "Palmeiras",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.4589785368761586,
-          "confianca": "MEDIUM",
-          "justificativa": "Bragantino projeta ≈1.7 gol(s) vs ≈1.4 do adversário. Prob vitória: 45.9% (margem: 15.4 p.p.)",
-          "edge": 0.1544,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.5912966621332039,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈3.1. OVER 2.5: 59.1% de probabilidade",
-          "edge": 0.0913,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.6078473900832593,
-          "confianca": "MEDIUM",
-          "justificativa": "xG: 1.7 (casa) x 1.4 (fora). Ambas marcam - Sim: 60.8%",
-          "edge": 0.1078,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Campeonato Brasileiro Série A",
-      "data": "2026-04-26T21:30:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
         "casa": "Paranaense",
         "visitante": "Vitória"
       },
@@ -5272,56 +5080,56 @@
     },
     {
       "competicao": "Campeonato Brasileiro Série A",
-      "data": "2026-04-26T23:30:00Z",
+      "data": "2026-04-26T21:30:00Z",
       "status": "TIMED",
       "placar_atual": {
         "casa": null,
         "visitante": null
       },
       "times": {
-        "casa": "Mineiro",
-        "visitante": "Flamengo"
+        "casa": "Bragantino",
+        "visitante": "Palmeiras"
       },
       "probabilidades": {
-        "casa": 0.44337324851098725,
-        "empate": 0.22466427269241118,
-        "visitante": 0.3311132656822016
+        "casa": 0.4589785368761586,
+        "empate": 0.23590185081749018,
+        "visitante": 0.3046278151986345
       },
       "favorito": {
-        "nome": "Mineiro",
-        "prob": 0.44337324851098725,
-        "vantagem": 0.11225998282878563
+        "nome": "Bragantino",
+        "prob": 0.4589785368761586,
+        "vantagem": 0.15435072167752406
       },
       "gols_esperados": {
-        "casa": 1.831945773524721,
-        "visitante": 1.560446570972887,
-        "total": 3.3923923444976083
+        "casa": 1.7122807017543862,
+        "visitante": 1.3553429027113237,
+        "total": 3.0676236044657097
       },
       "mercados": {
-        "under_25": 0.3420588975003058,
-        "over_25": 0.6579411024996942,
-        "btts_yes": 0.6628023034522112,
-        "btts_no": 0.33719769654778875
+        "under_25": 0.40870333786679613,
+        "over_25": 0.5912966621332039,
+        "btts_yes": 0.6078473900832593,
+        "btts_no": 0.3921526099167407
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.4272727272727272,
-          "ataque": 0.7,
-          "defesa": 0.6,
+          "forma_recente": 0.5,
+          "ataque": 0.8,
+          "defesa": 0.44000000000000006,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.6045454545454545
+          "score_total": 0.6230000000000001
         },
         "visitante": {
-          "forma_recente": 0.8727272727272727,
-          "ataque": 0.64,
-          "defesa": 0.6,
+          "forma_recente": 0.8454545454545456,
+          "ataque": 0.4,
+          "defesa": 0.6799999999999999,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.7254545454545455
+          "score_total": 0.671909090909091
         }
       },
-      "leitura_rapida": "Mineiro favorito (44%, risco alto). Jogo mais aberto (xG total ≈3.4). Over 2.5 com 66%.",
+      "leitura_rapida": "Bragantino favorito (46%, risco moderado). Jogo mais aberto (xG total ≈3.1). Over 2.5 com 59%.",
       "tendencia": {
         "casa": "estavel",
         "visitante": "estavel"
@@ -5341,84 +5149,84 @@
       "historico": {
         "casa": [
           {
-            "data": "19/04 19:00",
-            "mandante": "Coritiba",
-            "visitante": "Mineiro",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
+            "data": "19/04 21:30",
+            "mandante": "Bragantino",
+            "visitante": "Clube do Remo",
+            "placar": "4 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
           },
           {
-            "data": "11/04 23:00",
-            "mandante": "Santos",
-            "visitante": "Mineiro",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "05/04 20:30",
-            "mandante": "Mineiro",
-            "visitante": "Paranaense",
+            "data": "12/04 21:30",
+            "mandante": "Cruzeiro",
+            "visitante": "Bragantino",
             "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "05/04 23:00",
+            "mandante": "Mirassol",
+            "visitante": "Bragantino",
+            "placar": "0 x 1",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
           {
-            "data": "02/04 22:00",
-            "mandante": "Chapecoense",
-            "visitante": "Mineiro",
-            "placar": "0 x 4",
+            "data": "03/04 00:30",
+            "mandante": "Bragantino",
+            "visitante": "Flamengo",
+            "placar": "3 x 0",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
           {
-            "data": "21/03 21:30",
-            "mandante": "Fluminense",
-            "visitante": "Mineiro",
-            "placar": "1 x 0",
+            "data": "21/03 19:00",
+            "mandante": "Bragantino",
+            "visitante": "Botafogo",
+            "placar": "1 x 2",
             "resultado": "D",
             "resultado_label": "Derrota"
           }
         ],
         "visitante": [
           {
-            "data": "19/04 22:30",
-            "mandante": "Flamengo",
-            "visitante": "Bahia",
-            "placar": "2 x 0",
+            "data": "19/04 21:30",
+            "mandante": "Palmeiras",
+            "visitante": "Paranaense",
+            "placar": "1 x 0",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
           {
-            "data": "17/04 00:30",
-            "mandante": "Flamengo",
-            "visitante": "Independiente",
-            "placar": "4 x 1",
+            "data": "16/04 22:00",
+            "mandante": "Palmeiras",
+            "visitante": "Cristal",
+            "placar": "2 x 1",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
           {
-            "data": "12/04 21:00",
-            "mandante": "Fluminense",
-            "visitante": "Flamengo",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
+            "data": "12/04 21:30",
+            "mandante": "Corinthians",
+            "visitante": "Palmeiras",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
           },
           {
             "data": "09/04 00:30",
-            "mandante": "Cusco",
-            "visitante": "Flamengo",
-            "placar": "0 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
+            "mandante": "Junior",
+            "visitante": "Palmeiras",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
           },
           {
-            "data": "05/04 20:30",
-            "mandante": "Flamengo",
-            "visitante": "Santos",
-            "placar": "3 x 1",
+            "data": "05/04 22:30",
+            "mandante": "Bahia",
+            "visitante": "Palmeiras",
+            "placar": "1 x 2",
             "resultado": "V",
             "resultado_label": "Vitoria"
           }
@@ -5428,10 +5236,10 @@
         {
           "tipo": "WINNER",
           "opcao": "1",
-          "probabilidade": 0.44337324851098725,
-          "confianca": "LOW",
-          "justificativa": "Mineiro projeta ≈1.8 gol(s) vs ≈1.6 do adversário. Prob vitória: 44.3% (margem: 11.2 p.p.)",
-          "edge": 0.1123,
+          "probabilidade": 0.4589785368761586,
+          "confianca": "MEDIUM",
+          "justificativa": "Bragantino projeta ≈1.7 gol(s) vs ≈1.4 do adversário. Prob vitória: 45.9% (margem: 15.4 p.p.)",
+          "edge": 0.1544,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -5440,10 +5248,10 @@
         {
           "tipo": "OVER_UNDER",
           "opcao": "OVER",
-          "probabilidade": 0.6579411024996942,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈3.4. OVER 2.5: 65.8% de probabilidade",
-          "edge": 0.1579,
+          "probabilidade": 0.5912966621332039,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈3.1. OVER 2.5: 59.1% de probabilidade",
+          "edge": 0.0913,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -5452,10 +5260,10 @@
         {
           "tipo": "BTTS",
           "opcao": "YES",
-          "probabilidade": 0.6628023034522112,
-          "confianca": "HIGH",
-          "justificativa": "xG: 1.8 (casa) x 1.6 (fora). Ambas marcam - Sim: 66.3%",
-          "edge": 0.1628,
+          "probabilidade": 0.6078473900832593,
+          "confianca": "MEDIUM",
+          "justificativa": "xG: 1.7 (casa) x 1.4 (fora). Ambas marcam - Sim: 60.8%",
+          "edge": 0.1078,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -5655,11 +5463,204 @@
           "resultado_verificador": null
         }
       ]
+    },
+    {
+      "competicao": "Campeonato Brasileiro Série A",
+      "data": "2026-04-26T23:30:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Mineiro",
+        "visitante": "Flamengo"
+      },
+      "probabilidades": {
+        "casa": 0.44337324851098725,
+        "empate": 0.22466427269241118,
+        "visitante": 0.3311132656822016
+      },
+      "favorito": {
+        "nome": "Mineiro",
+        "prob": 0.44337324851098725,
+        "vantagem": 0.11225998282878563
+      },
+      "gols_esperados": {
+        "casa": 1.831945773524721,
+        "visitante": 1.560446570972887,
+        "total": 3.3923923444976083
+      },
+      "mercados": {
+        "under_25": 0.3420588975003058,
+        "over_25": 0.6579411024996942,
+        "btts_yes": 0.6628023034522112,
+        "btts_no": 0.33719769654778875
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.4272727272727272,
+          "ataque": 0.7,
+          "defesa": 0.6,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.6045454545454545
+        },
+        "visitante": {
+          "forma_recente": 0.8727272727272727,
+          "ataque": 0.64,
+          "defesa": 0.6,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.7254545454545455
+        }
+      },
+      "leitura_rapida": "Mineiro favorito (44%, risco alto). Jogo mais aberto (xG total ≈3.4). Over 2.5 com 66%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Campeonato Brasileiro Série A",
+        "sport_key": "soccer_brazil_campeonato",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "19/04 19:00",
+            "mandante": "Coritiba",
+            "visitante": "Mineiro",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "11/04 23:00",
+            "mandante": "Santos",
+            "visitante": "Mineiro",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "05/04 20:30",
+            "mandante": "Mineiro",
+            "visitante": "Paranaense",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "02/04 22:00",
+            "mandante": "Chapecoense",
+            "visitante": "Mineiro",
+            "placar": "0 x 4",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "21/03 21:30",
+            "mandante": "Fluminense",
+            "visitante": "Mineiro",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "19/04 22:30",
+            "mandante": "Flamengo",
+            "visitante": "Bahia",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "17/04 00:30",
+            "mandante": "Flamengo",
+            "visitante": "Independiente",
+            "placar": "4 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "12/04 21:00",
+            "mandante": "Fluminense",
+            "visitante": "Flamengo",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "09/04 00:30",
+            "mandante": "Cusco",
+            "visitante": "Flamengo",
+            "placar": "0 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "05/04 20:30",
+            "mandante": "Flamengo",
+            "visitante": "Santos",
+            "placar": "3 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.44337324851098725,
+          "confianca": "LOW",
+          "justificativa": "Mineiro projeta ≈1.8 gol(s) vs ≈1.6 do adversário. Prob vitória: 44.3% (margem: 11.2 p.p.)",
+          "edge": 0.1123,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER",
+          "probabilidade": 0.6579411024996942,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈3.4. OVER 2.5: 65.8% de probabilidade",
+          "edge": 0.1579,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.6628023034522112,
+          "confianca": "HIGH",
+          "justificativa": "xG: 1.8 (casa) x 1.6 (fora). Ambas marcam - Sim: 66.3%",
+          "edge": 0.1628,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
     }
   ],
   "acertos_hoje": {
-    "acertos": 2,
-    "total": 3,
+    "acertos": 4,
+    "total": 6,
     "taxa": 0.667
   },
   "daily_tips_ids": [],

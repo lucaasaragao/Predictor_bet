@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-04-26",
-      "ultima_atualizacao": "2026-04-26 12:03:12",
-      "finalizados": 1,
+      "ultima_atualizacao": "2026-04-26 12:25:39",
+      "finalizados": 2,
       "taxa_geral": 0.667,
-      "total_acertos": 2,
-      "total_palpites": 3,
+      "total_acertos": 4,
+      "total_palpites": 6,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 1,
+          "acertos": 2,
+          "total": 2,
           "taxa": 1.0
         },
         "OVER_UNDER": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         },
         "BTTS": {
           "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
+          "total": 2,
+          "taxa": 0.5
         }
       },
       "jogos": [
@@ -51,6 +51,35 @@
               "confianca": "HIGH",
               "probabilidade": 0.765,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "casa": "Excelsior",
+          "visitante": "Utrecht",
+          "competicao": "Eredivisie",
+          "placar": "5-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.45,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "LOW",
+              "probabilidade": 0.57,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.592,
+              "resultado": "ERRO"
             }
           ]
         }
