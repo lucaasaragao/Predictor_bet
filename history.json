@@ -2,13 +2,59 @@
   "dias": [
     {
       "data": "2026-04-26",
-      "ultima_atualizacao": "2026-04-26 02:08:18",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "jogos": []
+      "ultima_atualizacao": "2026-04-26 03:36:16",
+      "finalizados": 1,
+      "taxa_geral": 0.667,
+      "total_acertos": 2,
+      "total_palpites": 3,
+      "mercados": {
+        "WINNER": {
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
+        },
+        "OVER_UNDER": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
+        },
+        "BTTS": {
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
+        }
+      },
+      "jogos": [
+        {
+          "casa": "São Paulo",
+          "visitante": "Mirassol",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.839,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "LOW",
+              "probabilidade": 0.502,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "HIGH",
+              "probabilidade": 0.765,
+              "resultado": "ACERTO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-04-25",
