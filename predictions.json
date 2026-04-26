@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26 01:18:35",
+  "generated_at": "2026-04-26 02:08:18",
   "total_jogos": 29,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -8,9 +8,9 @@
     {
       "competicao": "Campeonato Brasileiro Série A",
       "data": "2026-04-26T00:00:00Z",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 0,
+        "casa": 1,
         "visitante": 0
       },
       "times": {
@@ -18,50 +18,53 @@
         "visitante": "Mirassol"
       },
       "probabilidades": {
-        "casa": 0.8993752180698358,
-        "empate": 0.06379275844916804,
-        "visitante": 0.016662813772397686
+        "casa": 0.8386267505707893,
+        "empate": 0.12540473236119076,
+        "visitante": 0.03266152906232637
       },
       "favorito": {
         "nome": "São Paulo",
-        "prob": 0.8993752180698358,
-        "vantagem": 0.8355824596206678
+        "prob": 0.8386267505707893,
+        "vantagem": 0.7132220182095985
       },
       "gols_esperados": {
-        "casa": 3.312484848484849,
-        "visitante": 0.33173843700159494,
-        "total": 3.644223285486444
+        "casa": 2.3961544258373206,
+        "visitante": 0.3,
+        "total": 2.6961544258373205
       },
       "mercados": {
-        "under_25": 0.31516281355145803,
-        "over_25": 0.684837186448542,
-        "btts_yes": 0.2663468682175931,
-        "btts_no": 0.7336531317824069
+        "under_25": 0.4978739757888452,
+        "over_25": 0.5021260242111548,
+        "btts_yes": 0.23472163401287835,
+        "btts_no": 0.7652783659871216
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.3909090909090909,
-          "ataque": 0.8,
+          "forma_recente": 0.4727272727272727,
+          "ataque": 0.7,
           "defesa": 0.8,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.6568181818181819
+          "score_total": 0.6604545454545455
         },
         "visitante": {
-          "forma_recente": 0.3181818181818182,
-          "ataque": 0.32,
-          "defesa": 0.36,
+          "forma_recente": 0.2727272727272727,
+          "ataque": 0.26666666666666666,
+          "defesa": 0.4,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.40336363636363637
+          "score_total": 0.38212121212121214
         }
       },
-      "leitura_rapida": "São Paulo favorito (90%, risco forte). Jogo mais aberto (xG total ≈3.6). Over 2.5 com 68%.",
+      "leitura_rapida": "São Paulo favorito (84%, risco forte). Mercado de gols equilibrado (xG total ≈2.7).",
       "tendencia": {
         "casa": "estavel",
         "visitante": "estavel"
       },
-      "alertas": [],
+      "alertas": [
+        "São Paulo jogou recentemente — possível desgaste físico.",
+        "Mirassol jogou recentemente — possível desgaste físico."
+      ],
       "odds_debug": {
         "enabled": "false",
         "status": "matched",
@@ -70,13 +73,21 @@
         "sport_key": "soccer_brazil_campeonato",
         "odds_match_id": "d934e9ad3b78b84954399c508e74b9ac",
         "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
       },
       "odds_integradas": true,
-      "odds_valor_alto": true,
+      "odds_valor_alto": false,
       "historico": {
         "casa": [
+          {
+            "data": "26/04 00:00",
+            "mandante": "São Paulo",
+            "visitante": "Mirassol",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
           {
             "data": "18/04 21:30",
             "mandante": "Vasco da Gama",
@@ -108,17 +119,17 @@
             "placar": "1 x 1",
             "resultado": "E",
             "resultado_label": "Empate"
-          },
-          {
-            "data": "22/03 00:00",
-            "mandante": "São Paulo",
-            "visitante": "Palmeiras",
-            "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
           }
         ],
         "visitante": [
+          {
+            "data": "26/04 00:00",
+            "mandante": "São Paulo",
+            "visitante": "Mirassol",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
           {
             "data": "19/04 14:00",
             "mandante": "Internacional",
@@ -150,14 +161,6 @@
             "placar": "1 x 0",
             "resultado": "V",
             "resultado_label": "Vitoria"
-          },
-          {
-            "data": "05/04 23:00",
-            "mandante": "Mirassol",
-            "visitante": "Bragantino",
-            "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
           }
         ]
       },
@@ -165,22 +168,22 @@
         {
           "tipo": "WINNER",
           "opcao": "1",
-          "probabilidade": 0.8993752180698358,
+          "probabilidade": 0.8386267505707893,
           "confianca": "HIGH",
-          "justificativa": "São Paulo projeta ≈3.3 gol(s) vs ≈0.3 do adversário. Prob vitória: 89.9% (margem: 83.6 p.p.)",
-          "edge": 0.8356,
-          "odd_decimal": 2.76,
-          "ev": 1.4823,
-          "valor_esperado_positivo": true,
+          "justificativa": "São Paulo projeta ≈2.4 gol(s) vs ≈0.3 do adversário. Prob vitória: 83.9% (margem: 71.3 p.p.)",
+          "edge": 0.7132,
+          "odd_decimal": 1.03,
+          "ev": -0.1362,
+          "valor_esperado_positivo": false,
           "resultado_verificador": null
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "OVER",
-          "probabilidade": 0.684837186448542,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈3.6. OVER 2.5: 68.5% de probabilidade",
-          "edge": 0.1848,
+          "probabilidade": 0.5021260242111548,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.7. OVER 2.5: 50.2% de probabilidade",
+          "edge": 0.0021,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -189,10 +192,10 @@
         {
           "tipo": "BTTS",
           "opcao": "NO",
-          "probabilidade": 0.7336531317824069,
+          "probabilidade": 0.7652783659871216,
           "confianca": "HIGH",
-          "justificativa": "xG: 3.3 (casa) x 0.3 (fora). Ambas marcam - Nao: 73.4%",
-          "edge": 0.2337,
+          "justificativa": "xG: 2.4 (casa) x 0.3 (fora). Ambas marcam - Nao: 76.5%",
+          "edge": 0.2653,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
