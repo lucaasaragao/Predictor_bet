@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26 11:44:20",
+  "generated_at": "2026-04-26 12:03:12",
   "total_jogos": 29,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -206,7 +206,7 @@
       "data": "2026-04-26T10:15:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 3,
+        "casa": 4,
         "visitante": 0
       },
       "times": {
@@ -265,7 +265,7 @@
         "competition": "Eredivisie",
         "sport_key": "soccer_netherlands_eredivisie",
         "odds_match_id": "44309fcaa85b8681c4639ea9287270d1",
-        "bookmakers_outcomes": "3",
+        "bookmakers_outcomes": "2",
         "ev_filter": "pass",
         "ev_reason": "há palpite com EV >= 3.0%"
       },
@@ -365,8 +365,8 @@
           "confianca": "HIGH",
           "justificativa": "Utrecht projeta ≈2.5 gol(s) vs ≈0.7 do adversário. Prob vitória: 76.1% (margem: 60.8 p.p.)",
           "edge": 0.6085,
-          "odd_decimal": 130.0,
-          "ev": 97.8791,
+          "odd_decimal": 26.0,
+          "ev": 18.7758,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -399,7 +399,7 @@
     {
       "competicao": "Serie A",
       "data": "2026-04-26T10:30:00Z",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "placar_atual": {
         "casa": 0,
         "visitante": 0
@@ -560,8 +560,8 @@
           "confianca": "HIGH",
           "justificativa": "Fiorentina projeta ≈1.6 gol(s) vs ≈0.6 do adversário. Prob vitória: 60.5% (margem: 35.3 p.p.)",
           "edge": 0.3529,
-          "odd_decimal": 2.5,
-          "ev": 0.5114,
+          "odd_decimal": 3.3,
+          "ev": 0.995,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -594,7 +594,7 @@
     {
       "competicao": "Championship",
       "data": "2026-04-26T11:00:00Z",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "placar_atual": {
         "casa": 1,
         "visitante": 1
@@ -758,8 +758,8 @@
           "confianca": "HIGH",
           "justificativa": "Coventry City projeta ≈2.9 gol(s) vs ≈0.9 do adversário. Prob vitória: 78.2% (margem: 65.5 p.p.)",
           "edge": 0.6555,
-          "odd_decimal": 2.25,
-          "ev": 0.7601,
+          "odd_decimal": 2.28,
+          "ev": 0.7836,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -851,15 +851,17 @@
       ],
       "odds_debug": {
         "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
         "competition": "Primera Division",
         "sport_key": "soccer_spain_la_liga",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "odds_match_id": "a5462613d6a6b17b8f0d92b23f97e070",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%"
       },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
+      "odds_integradas": true,
+      "odds_valor_alto": true,
       "historico": {
         "casa": [
           {
@@ -954,9 +956,9 @@
           "confianca": "HIGH",
           "justificativa": "Rayo Vallecano projeta ≈3.5 gol(s) vs ≈0.3 do adversário. Prob vitória: 90.1% (margem: 84.3 p.p.)",
           "edge": 0.8433,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
+          "odd_decimal": 2.78,
+          "ev": 1.506,
+          "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
         {
@@ -2155,201 +2157,6 @@
         "visitante": null
       },
       "times": {
-        "casa": "Stade Rennais",
-        "visitante": "Nantes"
-      },
-      "probabilidades": {
-        "casa": 0.7946609234877982,
-        "empate": 0.1607284818311864,
-        "visitante": 0.04323595474621985
-      },
-      "favorito": {
-        "nome": "Stade Rennais",
-        "prob": 0.7946609234877982,
-        "vantagem": 0.6339324416566118
-      },
-      "gols_esperados": {
-        "casa": 2.073753535353535,
-        "visitante": 0.3,
-        "total": 2.3737535353535346
-      },
-      "mercados": {
-        "under_25": 0.577955484751021,
-        "over_25": 0.422044515248979,
-        "btts_yes": 0.2262429709799311,
-        "btts_no": 0.7737570290200689
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.8090909090909091,
-          "ataque": 0.5599999999999999,
-          "defesa": 0.6799999999999999,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.7191818181818181
-        },
-        "visitante": {
-          "forma_recente": 0.27272727272727276,
-          "ataque": 0.08,
-          "defesa": 0.44000000000000006,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.3434545454545455
-        }
-      },
-      "leitura_rapida": "Stade Rennais favorito (79%, risco forte). Mercado de gols equilibrado (xG total ≈2.4). | Forma recente: Stade Rennais em alta.",
-      "tendencia": {
-        "casa": "em alta",
-        "visitante": "estavel"
-      },
-      "alertas": [
-        "Nantes jogou recentemente — possível desgaste físico."
-      ],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "Ligue 1",
-        "sport_key": "soccer_france_ligue_one",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "19/04 15:15",
-            "mandante": "Strasbourg",
-            "visitante": "Stade Rennais",
-            "placar": "0 x 3",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "11/04 19:05",
-            "mandante": "Stade Rennais",
-            "visitante": "Angers SCO",
-            "placar": "2 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "04/04 17:00",
-            "mandante": "Brest",
-            "visitante": "Stade Rennais",
-            "placar": "3 x 4",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "22/03 16:15",
-            "mandante": "Stade Rennais",
-            "visitante": "FC Metz",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "15/03 19:45",
-            "mandante": "Stade Rennais",
-            "visitante": "Lille",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "22/04 17:00",
-            "mandante": "PSG",
-            "visitante": "Nantes",
-            "placar": "3 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "19/04 15:15",
-            "mandante": "Nantes",
-            "visitante": "Brest",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "11/04 17:00",
-            "mandante": "Auxerre",
-            "visitante": "Nantes",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "05/04 15:15",
-            "mandante": "FC Metz",
-            "visitante": "Nantes",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "22/03 19:45",
-            "mandante": "Nantes",
-            "visitante": "Strasbourg",
-            "placar": "2 x 3",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.7946609234877982,
-          "confianca": "HIGH",
-          "justificativa": "Stade Rennais projeta ≈2.1 gol(s) vs ≈0.3 do adversário. Prob vitória: 79.5% (margem: 63.4 p.p.)",
-          "edge": 0.6339,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.577955484751021,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈2.4. UNDER 2.5: 57.8% de probabilidade",
-          "edge": 0.078,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.7737570290200689,
-          "confianca": "HIGH",
-          "justificativa": "xG: 2.1 (casa) x 0.3 (fora). Ambas marcam - Nao: 77.4%",
-          "edge": 0.2738,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Ligue 1",
-      "data": "2026-04-26T15:15:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
         "casa": "Le Havre",
         "visitante": "FC Metz"
       },
@@ -2720,6 +2527,201 @@
           "confianca": "LOW",
           "justificativa": "xG: 0.8 (casa) x 3.1 (fora). Ambas marcam - Sim: 53.3%",
           "edge": 0.0325,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Ligue 1",
+      "data": "2026-04-26T15:15:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Stade Rennais",
+        "visitante": "Nantes"
+      },
+      "probabilidades": {
+        "casa": 0.7946609234877982,
+        "empate": 0.1607284818311864,
+        "visitante": 0.04323595474621985
+      },
+      "favorito": {
+        "nome": "Stade Rennais",
+        "prob": 0.7946609234877982,
+        "vantagem": 0.6339324416566118
+      },
+      "gols_esperados": {
+        "casa": 2.073753535353535,
+        "visitante": 0.3,
+        "total": 2.3737535353535346
+      },
+      "mercados": {
+        "under_25": 0.577955484751021,
+        "over_25": 0.422044515248979,
+        "btts_yes": 0.2262429709799311,
+        "btts_no": 0.7737570290200689
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.8090909090909091,
+          "ataque": 0.5599999999999999,
+          "defesa": 0.6799999999999999,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.7191818181818181
+        },
+        "visitante": {
+          "forma_recente": 0.27272727272727276,
+          "ataque": 0.08,
+          "defesa": 0.44000000000000006,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.3434545454545455
+        }
+      },
+      "leitura_rapida": "Stade Rennais favorito (79%, risco forte). Mercado de gols equilibrado (xG total ≈2.4). | Forma recente: Stade Rennais em alta.",
+      "tendencia": {
+        "casa": "em alta",
+        "visitante": "estavel"
+      },
+      "alertas": [
+        "Nantes jogou recentemente — possível desgaste físico."
+      ],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Ligue 1",
+        "sport_key": "soccer_france_ligue_one",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "19/04 15:15",
+            "mandante": "Strasbourg",
+            "visitante": "Stade Rennais",
+            "placar": "0 x 3",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "11/04 19:05",
+            "mandante": "Stade Rennais",
+            "visitante": "Angers SCO",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "04/04 17:00",
+            "mandante": "Brest",
+            "visitante": "Stade Rennais",
+            "placar": "3 x 4",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "22/03 16:15",
+            "mandante": "Stade Rennais",
+            "visitante": "FC Metz",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "15/03 19:45",
+            "mandante": "Stade Rennais",
+            "visitante": "Lille",
+            "placar": "1 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "22/04 17:00",
+            "mandante": "PSG",
+            "visitante": "Nantes",
+            "placar": "3 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "19/04 15:15",
+            "mandante": "Nantes",
+            "visitante": "Brest",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "11/04 17:00",
+            "mandante": "Auxerre",
+            "visitante": "Nantes",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "05/04 15:15",
+            "mandante": "FC Metz",
+            "visitante": "Nantes",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "22/03 19:45",
+            "mandante": "Nantes",
+            "visitante": "Strasbourg",
+            "placar": "2 x 3",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.7946609234877982,
+          "confianca": "HIGH",
+          "justificativa": "Stade Rennais projeta ≈2.1 gol(s) vs ≈0.3 do adversário. Prob vitória: 79.5% (margem: 63.4 p.p.)",
+          "edge": 0.6339,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER",
+          "probabilidade": 0.577955484751021,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈2.4. UNDER 2.5: 57.8% de probabilidade",
+          "edge": 0.078,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.7737570290200689,
+          "confianca": "HIGH",
+          "justificativa": "xG: 2.1 (casa) x 0.3 (fora). Ambas marcam - Nao: 77.4%",
+          "edge": 0.2738,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -5277,199 +5279,6 @@
         "visitante": null
       },
       "times": {
-        "casa": "Fluminense",
-        "visitante": "Chapecoense"
-      },
-      "probabilidades": {
-        "casa": 0.8948995938313081,
-        "empate": 0.0638160965648428,
-        "visitante": 0.018575578970196318
-      },
-      "favorito": {
-        "nome": "Fluminense",
-        "prob": 0.8948995938313081,
-        "vantagem": 0.8310834972664654
-      },
-      "gols_esperados": {
-        "casa": 3.38944019138756,
-        "visitante": 0.37990909090909086,
-        "total": 3.769349282296651
-      },
-      "mercados": {
-        "under_25": 0.29659202343620783,
-        "over_25": 0.7034079765637922,
-        "btts_yes": 0.2982382355775565,
-        "btts_no": 0.7017617644224434
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5181818181818183,
-          "ataque": 0.72,
-          "defesa": 0.44000000000000006,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.6093636363636364
-        },
-        "visitante": {
-          "forma_recente": 0.18181818181818182,
-          "ataque": 0.1,
-          "defesa": 0.30000000000000004,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.28863636363636364
-        }
-      },
-      "leitura_rapida": "Fluminense favorito (89%, risco forte). Jogo mais aberto (xG total ≈3.8). Over 2.5 com 70%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "Campeonato Brasileiro Série A",
-        "sport_key": "soccer_brazil_campeonato",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "19/04 19:00",
-            "mandante": "Santos",
-            "visitante": "Fluminense",
-            "placar": "2 x 3",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "16/04 00:30",
-            "mandante": "Fluminense",
-            "visitante": "Rivadavia",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "12/04 21:00",
-            "mandante": "Fluminense",
-            "visitante": "Flamengo",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "07/04 22:00",
-            "mandante": "La Guaira",
-            "visitante": "Fluminense",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "04/04 23:30",
-            "mandante": "Coritiba",
-            "visitante": "Fluminense",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "18/04 21:30",
-            "mandante": "Chapecoense",
-            "visitante": "Botafogo",
-            "placar": "1 x 4",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "12/04 14:00",
-            "mandante": "Paranaense",
-            "visitante": "Chapecoense",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "05/04 19:00",
-            "mandante": "Chapecoense",
-            "visitante": "Vitória",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "02/04 22:00",
-            "mandante": "Chapecoense",
-            "visitante": "Mineiro",
-            "placar": "0 x 4",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "22/03 21:30",
-            "mandante": "Internacional",
-            "visitante": "Chapecoense",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.8948995938313081,
-          "confianca": "HIGH",
-          "justificativa": "Fluminense projeta ≈3.4 gol(s) vs ≈0.4 do adversário. Prob vitória: 89.5% (margem: 83.1 p.p.)",
-          "edge": 0.8311,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.7034079765637922,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈3.8. OVER 2.5: 70.3% de probabilidade",
-          "edge": 0.2034,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.7017617644224434,
-          "confianca": "HIGH",
-          "justificativa": "xG: 3.4 (casa) x 0.4 (fora). Ambas marcam - Nao: 70.2%",
-          "edge": 0.2018,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Campeonato Brasileiro Série A",
-      "data": "2026-04-26T23:30:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
         "casa": "Mineiro",
         "visitante": "Flamengo"
       },
@@ -5647,6 +5456,199 @@
           "confianca": "HIGH",
           "justificativa": "xG: 1.8 (casa) x 1.6 (fora). Ambas marcam - Sim: 66.3%",
           "edge": 0.1628,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Campeonato Brasileiro Série A",
+      "data": "2026-04-26T23:30:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Fluminense",
+        "visitante": "Chapecoense"
+      },
+      "probabilidades": {
+        "casa": 0.8948995938313081,
+        "empate": 0.0638160965648428,
+        "visitante": 0.018575578970196318
+      },
+      "favorito": {
+        "nome": "Fluminense",
+        "prob": 0.8948995938313081,
+        "vantagem": 0.8310834972664654
+      },
+      "gols_esperados": {
+        "casa": 3.38944019138756,
+        "visitante": 0.37990909090909086,
+        "total": 3.769349282296651
+      },
+      "mercados": {
+        "under_25": 0.29659202343620783,
+        "over_25": 0.7034079765637922,
+        "btts_yes": 0.2982382355775565,
+        "btts_no": 0.7017617644224434
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.5181818181818183,
+          "ataque": 0.72,
+          "defesa": 0.44000000000000006,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.6093636363636364
+        },
+        "visitante": {
+          "forma_recente": 0.18181818181818182,
+          "ataque": 0.1,
+          "defesa": 0.30000000000000004,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.28863636363636364
+        }
+      },
+      "leitura_rapida": "Fluminense favorito (89%, risco forte). Jogo mais aberto (xG total ≈3.8). Over 2.5 com 70%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Campeonato Brasileiro Série A",
+        "sport_key": "soccer_brazil_campeonato",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "19/04 19:00",
+            "mandante": "Santos",
+            "visitante": "Fluminense",
+            "placar": "2 x 3",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "16/04 00:30",
+            "mandante": "Fluminense",
+            "visitante": "Rivadavia",
+            "placar": "1 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "12/04 21:00",
+            "mandante": "Fluminense",
+            "visitante": "Flamengo",
+            "placar": "1 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "07/04 22:00",
+            "mandante": "La Guaira",
+            "visitante": "Fluminense",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "04/04 23:30",
+            "mandante": "Coritiba",
+            "visitante": "Fluminense",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "18/04 21:30",
+            "mandante": "Chapecoense",
+            "visitante": "Botafogo",
+            "placar": "1 x 4",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "12/04 14:00",
+            "mandante": "Paranaense",
+            "visitante": "Chapecoense",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "05/04 19:00",
+            "mandante": "Chapecoense",
+            "visitante": "Vitória",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "02/04 22:00",
+            "mandante": "Chapecoense",
+            "visitante": "Mineiro",
+            "placar": "0 x 4",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "22/03 21:30",
+            "mandante": "Internacional",
+            "visitante": "Chapecoense",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.8948995938313081,
+          "confianca": "HIGH",
+          "justificativa": "Fluminense projeta ≈3.4 gol(s) vs ≈0.4 do adversário. Prob vitória: 89.5% (margem: 83.1 p.p.)",
+          "edge": 0.8311,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER",
+          "probabilidade": 0.7034079765637922,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈3.8. OVER 2.5: 70.3% de probabilidade",
+          "edge": 0.2034,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.7017617644224434,
+          "confianca": "HIGH",
+          "justificativa": "xG: 3.4 (casa) x 0.4 (fora). Ambas marcam - Nao: 70.2%",
+          "edge": 0.2018,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
