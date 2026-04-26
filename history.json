@@ -2,26 +2,31 @@
   "dias": [
     {
       "data": "2026-04-26",
-      "ultima_atualizacao": "2026-04-26 12:25:39",
-      "finalizados": 2,
-      "taxa_geral": 0.667,
-      "total_acertos": 4,
-      "total_palpites": 6,
+      "ultima_atualizacao": "2026-04-26 12:45:05",
+      "finalizados": 3,
+      "taxa_geral": 0.8,
+      "total_acertos": 8,
+      "total_palpites": 10,
       "mercados": {
         "WINNER": {
-          "acertos": 2,
-          "total": 2,
+          "acertos": 3,
+          "total": 3,
           "taxa": 1.0
         },
         "OVER_UNDER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "acertos": 2,
+          "total": 3,
+          "taxa": 0.667
         },
         "BTTS": {
+          "acertos": 2,
+          "total": 3,
+          "taxa": 0.667
+        },
+        "EMPATE": {
           "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "total": 1,
+          "taxa": 1.0
         }
       },
       "jogos": [
@@ -80,6 +85,42 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.592,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "casa": "Fiorentina",
+          "visitante": "Sassuolo",
+          "competicao": "Serie A",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.47,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER",
+              "confianca": "HIGH",
+              "probabilidade": 0.931,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "HIGH",
+              "probabilidade": 0.878,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.47,
+              "resultado": "ACERTO"
             }
           ]
         }
