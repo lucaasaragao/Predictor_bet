@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26 12:45:05",
+  "generated_at": "2026-04-26 13:12:18",
   "total_jogos": 29,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -608,9 +608,9 @@
     {
       "competicao": "Championship",
       "data": "2026-04-26T11:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
-        "casa": 1,
+        "casa": 3,
         "visitante": 1
       },
       "times": {
@@ -618,47 +618,47 @@
         "visitante": "Wrexham"
       },
       "probabilidades": {
-        "casa": 0.7822757530292608,
-        "empate": 0.12681125667007986,
-        "visitante": 0.08020643854667707
+        "casa": 0.8536434089637468,
+        "empate": 0.06123816144368985,
+        "visitante": 0.03035196873217627
       },
       "favorito": {
         "nome": "Coventry City",
-        "prob": 0.7822757530292608,
-        "vantagem": 0.6554644963591809
+        "prob": 0.8536434089637468,
+        "vantagem": 0.7924052475200569
       },
       "gols_esperados": {
-        "casa": 2.94218476530006,
-        "visitante": 0.8672263814616757,
-        "total": 3.8094111467617355
+        "casa": 4.059649673202614,
+        "visitante": 0.7783434343434344,
+        "total": 4.8379931075460485
       },
       "mercados": {
-        "under_25": 0.2780865557405183,
-        "over_25": 0.7219134442594817,
-        "btts_yes": 0.5430857911387107,
-        "btts_no": 0.4569142088612893
+        "under_25": 0.19374337450846557,
+        "over_25": 0.8062566254915344,
+        "btts_yes": 0.5018815931280891,
+        "btts_no": 0.4981184068719109
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.7090909090909091,
-          "ataque": 0.9333333333333333,
+          "forma_recente": 0.7545454545454544,
+          "ataque": 1.0,
           "defesa": 0.6,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.7615151515151516
+          "score_total": 0.7940909090909091
         },
         "visitante": {
-          "forma_recente": 0.5636363636363636,
+          "forma_recente": 0.4636363636363637,
           "ataque": 0.4666666666666667,
-          "defesa": 0.4666666666666667,
+          "defesa": 0.2666666666666667,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.5472727272727272
+          "score_total": 0.4722727272727273
         }
       },
-      "leitura_rapida": "Coventry City favorito (78%, risco forte). Jogo mais aberto (xG total ≈3.8). Over 2.5 com 72%. | Forma recente: Wrexham em alta.",
+      "leitura_rapida": "Coventry City favorito (85%, risco forte). Jogo mais aberto (xG total ≈4.8). Over 2.5 com 81%. | Forma recente: Coventry City em alta, Wrexham em alta.",
       "tendencia": {
-        "casa": "estavel",
+        "casa": "em alta",
         "visitante": "em alta"
       },
       "alertas": [
@@ -667,19 +667,25 @@
       ],
       "odds_debug": {
         "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
         "competition": "Championship",
         "sport_key": "soccer_efl_champ",
-        "odds_match_id": "5611ae1218ebc90aa1aa24fd70261e7c",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
       },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
+      "odds_integradas": false,
+      "odds_valor_alto": false,
       "historico": {
         "casa": [
+          {
+            "data": "26/04 11:00",
+            "mandante": "Coventry City",
+            "visitante": "Wrexham",
+            "placar": "3 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
           {
             "data": "21/04 18:45",
             "mandante": "Coventry City",
@@ -711,17 +717,17 @@
             "placar": "0 x 0",
             "resultado": "E",
             "resultado_label": "Empate"
-          },
-          {
-            "data": "03/04 19:00",
-            "mandante": "Coventry City",
-            "visitante": "Derby County",
-            "placar": "3 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
           }
         ],
         "visitante": [
+          {
+            "data": "26/04 11:00",
+            "mandante": "Coventry City",
+            "visitante": "Wrexham",
+            "placar": "3 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
           {
             "data": "21/04 18:45",
             "mandante": "Oxford United",
@@ -753,14 +759,6 @@
             "placar": "1 x 5",
             "resultado": "D",
             "resultado_label": "Derrota"
-          },
-          {
-            "data": "03/04 14:00",
-            "mandante": "West Brom",
-            "visitante": "Wrexham",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
           }
         ]
       },
@@ -768,45 +766,45 @@
         {
           "tipo": "WINNER",
           "opcao": "1",
-          "probabilidade": 0.7822757530292608,
+          "probabilidade": 0.8536434089637468,
           "confianca": "HIGH",
-          "justificativa": "Coventry City projeta ≈2.9 gol(s) vs ≈0.9 do adversário. Prob vitória: 78.2% (margem: 65.5 p.p.)",
-          "edge": 0.6555,
-          "odd_decimal": 3.51,
-          "ev": 1.7458,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "justificativa": "Coventry City projeta ≈4.1 gol(s) vs ≈0.8 do adversário. Prob vitória: 85.4% (margem: 79.2 p.p.)",
+          "edge": 0.7924,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "OVER",
-          "probabilidade": 0.7219134442594817,
+          "probabilidade": 0.8062566254915344,
           "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈3.8. OVER 2.5: 72.2% de probabilidade",
-          "edge": 0.2219,
+          "justificativa": "Gols esperados no jogo: ≈4.8. OVER 2.5: 80.6% de probabilidade",
+          "edge": 0.3063,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
           "opcao": "YES",
-          "probabilidade": 0.5430857911387107,
+          "probabilidade": 0.5018815931280891,
           "confianca": "LOW",
-          "justificativa": "xG: 2.9 (casa) x 0.9 (fora). Ambas marcam - Sim: 54.3%",
-          "edge": 0.0431,
+          "justificativa": "xG: 4.1 (casa) x 0.8 (fora). Ambas marcam - Sim: 50.2%",
+          "edge": 0.0019,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
     {
       "competicao": "Primera Division",
       "data": "2026-04-26T12:00:00Z",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "placar_atual": {
         "casa": 1,
         "visitante": 1
@@ -970,8 +968,8 @@
           "confianca": "HIGH",
           "justificativa": "Rayo Vallecano projeta ≈3.5 gol(s) vs ≈0.3 do adversário. Prob vitória: 90.1% (margem: 84.3 p.p.)",
           "edge": 0.8433,
-          "odd_decimal": 2.9,
-          "ev": 1.6142,
+          "odd_decimal": 3.25,
+          "ev": 1.9297,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -1197,10 +1195,10 @@
     {
       "competicao": "Ligue 1",
       "data": "2026-04-26T13:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Lorient",
@@ -1358,8 +1356,8 @@
           "confianca": "HIGH",
           "justificativa": "Lorient projeta ≈2.6 gol(s) vs ≈1.0 do adversário. Prob vitória: 72.0% (margem: 56.3 p.p.)",
           "edge": 0.5632,
-          "odd_decimal": 2.22,
-          "ev": 0.5993,
+          "odd_decimal": 2.44,
+          "ev": 0.7578,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -1392,10 +1390,10 @@
     {
       "competicao": "Serie A",
       "data": "2026-04-26T13:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Genoa",
@@ -1641,15 +1639,17 @@
       "alertas": [],
       "odds_debug": {
         "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
         "competition": "Bundesliga",
         "sport_key": "soccer_germany_bundesliga",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "odds_match_id": "b104ec3a106ddc5715a4da26d894567f",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%"
       },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
+      "odds_integradas": true,
+      "odds_valor_alto": true,
       "historico": {
         "casa": [
           {
@@ -1744,9 +1744,9 @@
           "confianca": "HIGH",
           "justificativa": "Stuttgart projeta ≈2.8 gol(s) vs ≈0.5 do adversário. Prob vitória: 82.5% (margem: 70.8 p.p.)",
           "edge": 0.7084,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
+          "odd_decimal": 1.6,
+          "ev": 0.3207,
+          "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
         {
@@ -4909,199 +4909,6 @@
         "visitante": null
       },
       "times": {
-        "casa": "Bragantino",
-        "visitante": "Palmeiras"
-      },
-      "probabilidades": {
-        "casa": 0.4589785368761586,
-        "empate": 0.23590185081749018,
-        "visitante": 0.3046278151986345
-      },
-      "favorito": {
-        "nome": "Bragantino",
-        "prob": 0.4589785368761586,
-        "vantagem": 0.15435072167752406
-      },
-      "gols_esperados": {
-        "casa": 1.7122807017543862,
-        "visitante": 1.3553429027113237,
-        "total": 3.0676236044657097
-      },
-      "mercados": {
-        "under_25": 0.40870333786679613,
-        "over_25": 0.5912966621332039,
-        "btts_yes": 0.6078473900832593,
-        "btts_no": 0.3921526099167407
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5,
-          "ataque": 0.8,
-          "defesa": 0.44000000000000006,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.6230000000000001
-        },
-        "visitante": {
-          "forma_recente": 0.8454545454545456,
-          "ataque": 0.4,
-          "defesa": 0.6799999999999999,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.671909090909091
-        }
-      },
-      "leitura_rapida": "Bragantino favorito (46%, risco moderado). Jogo mais aberto (xG total ≈3.1). Over 2.5 com 59%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "Campeonato Brasileiro Série A",
-        "sport_key": "soccer_brazil_campeonato",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "19/04 21:30",
-            "mandante": "Bragantino",
-            "visitante": "Clube do Remo",
-            "placar": "4 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "12/04 21:30",
-            "mandante": "Cruzeiro",
-            "visitante": "Bragantino",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "05/04 23:00",
-            "mandante": "Mirassol",
-            "visitante": "Bragantino",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "03/04 00:30",
-            "mandante": "Bragantino",
-            "visitante": "Flamengo",
-            "placar": "3 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "21/03 19:00",
-            "mandante": "Bragantino",
-            "visitante": "Botafogo",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "19/04 21:30",
-            "mandante": "Palmeiras",
-            "visitante": "Paranaense",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "16/04 22:00",
-            "mandante": "Palmeiras",
-            "visitante": "Cristal",
-            "placar": "2 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "12/04 21:30",
-            "mandante": "Corinthians",
-            "visitante": "Palmeiras",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "09/04 00:30",
-            "mandante": "Junior",
-            "visitante": "Palmeiras",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "05/04 22:30",
-            "mandante": "Bahia",
-            "visitante": "Palmeiras",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.4589785368761586,
-          "confianca": "MEDIUM",
-          "justificativa": "Bragantino projeta ≈1.7 gol(s) vs ≈1.4 do adversário. Prob vitória: 45.9% (margem: 15.4 p.p.)",
-          "edge": 0.1544,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.5912966621332039,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈3.1. OVER 2.5: 59.1% de probabilidade",
-          "edge": 0.0913,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.6078473900832593,
-          "confianca": "MEDIUM",
-          "justificativa": "xG: 1.7 (casa) x 1.4 (fora). Ambas marcam - Sim: 60.8%",
-          "edge": 0.1078,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Campeonato Brasileiro Série A",
-      "data": "2026-04-26T21:30:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
         "casa": "Paranaense",
         "visitante": "Vitória"
       },
@@ -5279,6 +5086,199 @@
           "confianca": "HIGH",
           "justificativa": "xG: 5.0 (casa) x 0.3 (fora). Ambas marcam - Nao: 76.5%",
           "edge": 0.265,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Campeonato Brasileiro Série A",
+      "data": "2026-04-26T21:30:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Bragantino",
+        "visitante": "Palmeiras"
+      },
+      "probabilidades": {
+        "casa": 0.4589785368761586,
+        "empate": 0.23590185081749018,
+        "visitante": 0.3046278151986345
+      },
+      "favorito": {
+        "nome": "Bragantino",
+        "prob": 0.4589785368761586,
+        "vantagem": 0.15435072167752406
+      },
+      "gols_esperados": {
+        "casa": 1.7122807017543862,
+        "visitante": 1.3553429027113237,
+        "total": 3.0676236044657097
+      },
+      "mercados": {
+        "under_25": 0.40870333786679613,
+        "over_25": 0.5912966621332039,
+        "btts_yes": 0.6078473900832593,
+        "btts_no": 0.3921526099167407
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.5,
+          "ataque": 0.8,
+          "defesa": 0.44000000000000006,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.6230000000000001
+        },
+        "visitante": {
+          "forma_recente": 0.8454545454545456,
+          "ataque": 0.4,
+          "defesa": 0.6799999999999999,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.671909090909091
+        }
+      },
+      "leitura_rapida": "Bragantino favorito (46%, risco moderado). Jogo mais aberto (xG total ≈3.1). Over 2.5 com 59%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Campeonato Brasileiro Série A",
+        "sport_key": "soccer_brazil_campeonato",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "19/04 21:30",
+            "mandante": "Bragantino",
+            "visitante": "Clube do Remo",
+            "placar": "4 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "12/04 21:30",
+            "mandante": "Cruzeiro",
+            "visitante": "Bragantino",
+            "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "05/04 23:00",
+            "mandante": "Mirassol",
+            "visitante": "Bragantino",
+            "placar": "0 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "03/04 00:30",
+            "mandante": "Bragantino",
+            "visitante": "Flamengo",
+            "placar": "3 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "21/03 19:00",
+            "mandante": "Bragantino",
+            "visitante": "Botafogo",
+            "placar": "1 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "19/04 21:30",
+            "mandante": "Palmeiras",
+            "visitante": "Paranaense",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "16/04 22:00",
+            "mandante": "Palmeiras",
+            "visitante": "Cristal",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "12/04 21:30",
+            "mandante": "Corinthians",
+            "visitante": "Palmeiras",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "09/04 00:30",
+            "mandante": "Junior",
+            "visitante": "Palmeiras",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "05/04 22:30",
+            "mandante": "Bahia",
+            "visitante": "Palmeiras",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.4589785368761586,
+          "confianca": "MEDIUM",
+          "justificativa": "Bragantino projeta ≈1.7 gol(s) vs ≈1.4 do adversário. Prob vitória: 45.9% (margem: 15.4 p.p.)",
+          "edge": 0.1544,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER",
+          "probabilidade": 0.5912966621332039,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈3.1. OVER 2.5: 59.1% de probabilidade",
+          "edge": 0.0913,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.6078473900832593,
+          "confianca": "MEDIUM",
+          "justificativa": "xG: 1.7 (casa) x 1.4 (fora). Ambas marcam - Sim: 60.8%",
+          "edge": 0.1078,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -5674,9 +5674,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 8,
-    "total": 10,
-    "taxa": 0.8
+    "acertos": 11,
+    "total": 13,
+    "taxa": 0.846
   },
   "daily_tips_ids": [],
   "daily_tips_date": "2026-04-26"
