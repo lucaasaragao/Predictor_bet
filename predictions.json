@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27 17:48:33",
+  "generated_at": "2026-04-27 18:27:38",
   "total_jogos": 5,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -169,8 +169,8 @@
           "confianca": "MEDIUM",
           "justificativa": "Atalanta projeta ≈1.1 gol(s) vs ≈0.6 do adversário. Prob vitória: 48.4% (margem: 15.9 p.p.)",
           "edge": 0.1593,
-          "odd_decimal": 6.4,
-          "ev": 2.1004,
+          "odd_decimal": 400.0,
+          "ev": 192.7763,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -364,8 +364,8 @@
           "confianca": "MEDIUM",
           "justificativa": "Udinese projeta ≈1.3 gol(s) vs ≈1.0 do adversário. Prob vitória: 42.4% (margem: 13.0 p.p.)",
           "edge": 0.1296,
-          "odd_decimal": 3.9,
-          "ev": 0.6532,
+          "odd_decimal": 3.7,
+          "ev": 0.5684,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -757,8 +757,8 @@
           "confianca": "HIGH",
           "justificativa": "Espanyol projeta ≈2.1 gol(s) vs ≈0.5 do adversário. Prob vitória: 75.4% (margem: 58.2 p.p.)",
           "edge": 0.5815,
-          "odd_decimal": 2.22,
-          "ev": 0.6737,
+          "odd_decimal": 2.2,
+          "ev": 0.6586,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -849,15 +849,17 @@
       ],
       "odds_debug": {
         "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
         "competition": "Primeira Liga",
         "sport_key": "soccer_portugal_primeira_liga",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "odds_match_id": "c35cec8c25a5e2bc1ca9bfa3b870c161",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%"
       },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
+      "odds_integradas": true,
+      "odds_valor_alto": true,
       "historico": {
         "casa": [
           {
@@ -952,9 +954,9 @@
           "confianca": "HIGH",
           "justificativa": "Gil Vicente projeta ≈2.8 gol(s) vs ≈0.3 do adversário. Prob vitória: 87.5% (margem: 78.2 p.p.)",
           "edge": 0.7824,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
+          "odd_decimal": 1.78,
+          "ev": 0.5577,
+          "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
         {
