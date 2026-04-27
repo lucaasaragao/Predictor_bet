@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27 13:11:22",
+  "generated_at": "2026-04-27 14:01:41",
   "total_jogos": 5,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -259,17 +259,15 @@
       "alertas": [],
       "odds_debug": {
         "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
         "competition": "Serie A",
         "sport_key": "soccer_italy_serie_a",
-        "odds_match_id": "aa8294b91a1920474d420d34851aaceb",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
       },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
+      "odds_integradas": false,
+      "odds_valor_alto": false,
       "historico": {
         "casa": [
           {
@@ -364,9 +362,9 @@
           "confianca": "MEDIUM",
           "justificativa": "Udinese projeta ≈1.3 gol(s) vs ≈1.0 do adversário. Prob vitória: 42.4% (margem: 13.0 p.p.)",
           "edge": 0.1296,
-          "odd_decimal": 4.1,
-          "ev": 0.7379,
-          "valor_esperado_positivo": true,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
           "resultado_verificador": null
         },
         {
@@ -388,204 +386,6 @@
           "confianca": "LOW",
           "justificativa": "xG: 1.0 (casa) x 1.3 (fora). Ambas marcam - Nao: 54.2%",
           "edge": 0.0421,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Primera Division",
-      "data": "2026-04-27T19:00:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "Espanyol",
-        "visitante": "Levante"
-      },
-      "probabilidades": {
-        "casa": 0.7539048658480613,
-        "empate": 0.17238152303264914,
-        "visitante": 0.07216006154784488
-      },
-      "favorito": {
-        "nome": "Espanyol",
-        "prob": 0.7539048658480613,
-        "vantagem": 0.5815233428154121
-      },
-      "gols_esperados": {
-        "casa": 2.1151481324876675,
-        "visitante": 0.48529090909090894,
-        "total": 2.6004390415785763
-      },
-      "mercados": {
-        "under_25": 0.5198729120329952,
-        "over_25": 0.4801270879670048,
-        "btts_yes": 0.3375101079281564,
-        "btts_no": 0.6624898920718436
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.17272727272727273,
-          "ataque": 0.5333333333333333,
-          "defesa": 0.33333333333333326,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.42045454545454547
-        },
-        "visitante": {
-          "forma_recente": 0.6454545454545454,
-          "ataque": 0.13333333333333333,
-          "defesa": 0.19999999999999996,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.4392424242424242
-        }
-      },
-      "leitura_rapida": "Espanyol favorito (75%, risco forte). Mercado de gols equilibrado (xG total ≈2.6).",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [
-        "Espanyol jogou recentemente — possível desgaste físico.",
-        "Levante jogou recentemente — possível desgaste físico."
-      ],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
-        "competition": "Primera Division",
-        "sport_key": "soccer_spain_la_liga",
-        "odds_match_id": "b68fd46a853603c38e3f4750b40181a0",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
-      },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
-      "historico": {
-        "casa": [
-          {
-            "data": "23/04 18:00",
-            "mandante": "Rayo Vallecano",
-            "visitante": "Espanyol",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "11/04 16:30",
-            "mandante": "Barça",
-            "visitante": "Espanyol",
-            "placar": "4 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "04/04 16:30",
-            "mandante": "Real Betis",
-            "visitante": "Espanyol",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "21/03 15:15",
-            "mandante": "Espanyol",
-            "visitante": "Getafe",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "15/03 13:00",
-            "mandante": "Mallorca",
-            "visitante": "Espanyol",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "23/04 17:00",
-            "mandante": "Levante",
-            "visitante": "Sevilla FC",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "13/04 19:00",
-            "mandante": "Levante",
-            "visitante": "Getafe",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "04/04 12:00",
-            "mandante": "Real Sociedad",
-            "visitante": "Levante",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "21/03 17:30",
-            "mandante": "Levante",
-            "visitante": "Real Oviedo",
-            "placar": "4 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "16/03 20:00",
-            "mandante": "Rayo Vallecano",
-            "visitante": "Levante",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.7539048658480613,
-          "confianca": "HIGH",
-          "justificativa": "Espanyol projeta ≈2.1 gol(s) vs ≈0.5 do adversário. Prob vitória: 75.4% (margem: 58.2 p.p.)",
-          "edge": 0.5815,
-          "odd_decimal": 2.14,
-          "ev": 0.6134,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.5198729120329952,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.6. UNDER 2.5: 52.0% de probabilidade",
-          "edge": 0.0199,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.6624898920718436,
-          "confianca": "HIGH",
-          "justificativa": "xG: 2.1 (casa) x 0.5 (fora). Ambas marcam - Nao: 66.2%",
-          "edge": 0.1625,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -652,17 +452,15 @@
       "alertas": [],
       "odds_debug": {
         "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
         "competition": "Premier League",
         "sport_key": "soccer_epl",
-        "odds_match_id": "ea38471acf4d5944929f9025e151376d",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
       },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
+      "odds_integradas": false,
+      "odds_valor_alto": false,
       "historico": {
         "casa": [
           {
@@ -757,9 +555,9 @@
           "confianca": "HIGH",
           "justificativa": "Man United projeta ≈2.0 gol(s) vs ≈1.4 do adversário. Prob vitória: 51.8% (margem: 25.1 p.p.)",
           "edge": 0.2512,
-          "odd_decimal": 2.0,
-          "ev": 0.0364,
-          "valor_esperado_positivo": true,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
           "resultado_verificador": null
         },
         {
@@ -781,6 +579,202 @@
           "confianca": "HIGH",
           "justificativa": "xG: 2.0 (casa) x 1.4 (fora). Ambas marcam - Sim: 66.1%",
           "edge": 0.161,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Primera Division",
+      "data": "2026-04-27T19:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Espanyol",
+        "visitante": "Levante"
+      },
+      "probabilidades": {
+        "casa": 0.7539048658480613,
+        "empate": 0.17238152303264914,
+        "visitante": 0.07216006154784488
+      },
+      "favorito": {
+        "nome": "Espanyol",
+        "prob": 0.7539048658480613,
+        "vantagem": 0.5815233428154121
+      },
+      "gols_esperados": {
+        "casa": 2.1151481324876675,
+        "visitante": 0.48529090909090894,
+        "total": 2.6004390415785763
+      },
+      "mercados": {
+        "under_25": 0.5198729120329952,
+        "over_25": 0.4801270879670048,
+        "btts_yes": 0.3375101079281564,
+        "btts_no": 0.6624898920718436
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.17272727272727273,
+          "ataque": 0.5333333333333333,
+          "defesa": 0.33333333333333326,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.42045454545454547
+        },
+        "visitante": {
+          "forma_recente": 0.6454545454545454,
+          "ataque": 0.13333333333333333,
+          "defesa": 0.19999999999999996,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.4392424242424242
+        }
+      },
+      "leitura_rapida": "Espanyol favorito (75%, risco forte). Mercado de gols equilibrado (xG total ≈2.6).",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "alertas": [
+        "Espanyol jogou recentemente — possível desgaste físico.",
+        "Levante jogou recentemente — possível desgaste físico."
+      ],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Primera Division",
+        "sport_key": "soccer_spain_la_liga",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "23/04 18:00",
+            "mandante": "Rayo Vallecano",
+            "visitante": "Espanyol",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "11/04 16:30",
+            "mandante": "Barça",
+            "visitante": "Espanyol",
+            "placar": "4 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "04/04 16:30",
+            "mandante": "Real Betis",
+            "visitante": "Espanyol",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "21/03 15:15",
+            "mandante": "Espanyol",
+            "visitante": "Getafe",
+            "placar": "1 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "15/03 13:00",
+            "mandante": "Mallorca",
+            "visitante": "Espanyol",
+            "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "23/04 17:00",
+            "mandante": "Levante",
+            "visitante": "Sevilla FC",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "13/04 19:00",
+            "mandante": "Levante",
+            "visitante": "Getafe",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "04/04 12:00",
+            "mandante": "Real Sociedad",
+            "visitante": "Levante",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "21/03 17:30",
+            "mandante": "Levante",
+            "visitante": "Real Oviedo",
+            "placar": "4 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "16/03 20:00",
+            "mandante": "Rayo Vallecano",
+            "visitante": "Levante",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.7539048658480613,
+          "confianca": "HIGH",
+          "justificativa": "Espanyol projeta ≈2.1 gol(s) vs ≈0.5 do adversário. Prob vitória: 75.4% (margem: 58.2 p.p.)",
+          "edge": 0.5815,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER",
+          "probabilidade": 0.5198729120329952,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.6. UNDER 2.5: 52.0% de probabilidade",
+          "edge": 0.0199,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.6624898920718436,
+          "confianca": "HIGH",
+          "justificativa": "xG: 2.1 (casa) x 0.5 (fora). Ambas marcam - Nao: 66.2%",
+          "edge": 0.1625,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
