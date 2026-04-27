@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27 21:02:06",
+  "generated_at": "2026-04-27 21:40:06",
   "total_jogos": 5,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -264,7 +264,7 @@
       "odds_debug": {
         "enabled": "false",
         "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "reason": "não encontrou evento equivalente na consulta por liga",
         "competition": "Serie A",
         "sport_key": "soccer_italy_serie_a",
         "ev_filter": "fail",
@@ -463,7 +463,7 @@
         "reason": "odds h2h encontradas com sucesso",
         "competition": "Premier League",
         "sport_key": "soccer_epl",
-        "odds_match_id": "ea38471acf4d5944929f9025e151376d",
+        "odds_match_id": "c1c798a177c51362dce45113112e0d3d",
         "bookmakers_outcomes": "3",
         "ev_filter": "fail",
         "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
@@ -564,8 +564,8 @@
           "confianca": "HIGH",
           "justificativa": "Man United projeta ≈2.3 gol(s) vs ≈1.0 do adversário. Prob vitória: 66.1% (margem: 47.5 p.p.)",
           "edge": 0.4746,
-          "odd_decimal": 1.04,
-          "ev": -0.3126,
+          "odd_decimal": 1.36,
+          "ev": -0.1011,
           "valor_esperado_positivo": false,
           "resultado_verificador": "ACERTO"
         },
@@ -598,7 +598,7 @@
     {
       "competicao": "Primera Division",
       "data": "2026-04-27T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 0,
         "visitante": 0
@@ -657,17 +657,15 @@
       ],
       "odds_debug": {
         "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente na consulta por liga",
         "competition": "Primera Division",
         "sport_key": "soccer_spain_la_liga",
-        "odds_match_id": "b68fd46a853603c38e3f4750b40181a0",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
       },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
+      "odds_integradas": false,
+      "odds_valor_alto": false,
       "historico": {
         "casa": [
           {
@@ -762,10 +760,10 @@
           "confianca": "MEDIUM",
           "justificativa": "Espanyol projeta ≈1.1 gol(s) vs ≈0.3 do adversário. Prob vitória: 56.0% (margem: 23.0 p.p.)",
           "edge": 0.2302,
-          "odd_decimal": 80.0,
-          "ev": 43.7715,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -777,7 +775,7 @@
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -789,14 +787,14 @@
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
     {
       "competicao": "Primeira Liga",
       "data": "2026-04-27T19:15:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 2,
         "visitante": 1
@@ -806,67 +804,74 @@
         "visitante": "Casa Pia"
       },
       "probabilidades": {
-        "casa": 0.8751023601390236,
-        "empate": 0.09269741078649045,
-        "visitante": 0.024055660124801415
+        "casa": 0.8980719963421627,
+        "empate": 0.06919784896925207,
+        "visitante": 0.01693128801725496
       },
       "favorito": {
         "nome": "Gil Vicente",
-        "prob": 0.8751023601390236,
-        "vantagem": 0.7824049493525332
+        "prob": 0.8980719963421627,
+        "vantagem": 0.8288741473729107
       },
       "gols_esperados": {
-        "casa": 2.800848685199098,
-        "visitante": 0.3119727272727273,
-        "total": 3.1128214124718254
+        "casa": 3.1620517906336087,
+        "visitante": 0.3027337841222139,
+        "total": 3.4647855747558225
       },
       "mercados": {
-        "under_25": 0.40653869457518166,
-        "over_25": 0.5934613054248183,
-        "btts_yes": 0.24953259399769992,
-        "btts_no": 0.7504674060023001
+        "under_25": 0.3432084627145414,
+        "over_25": 0.6567915372854586,
+        "btts_yes": 0.24601844888491392,
+        "btts_no": 0.753981551115086
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.38181818181818183,
-          "ataque": 0.64,
-          "defesa": 0.52,
+          "forma_recente": 0.4818181818181818,
+          "ataque": 0.6666666666666667,
+          "defesa": 0.5333333333333333,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.5576363636363637
+          "score_total": 0.601969696969697
         },
         "visitante": {
-          "forma_recente": 0.2727272727272727,
-          "ataque": 0.08,
-          "defesa": 0.28,
+          "forma_recente": 0.20909090909090908,
+          "ataque": 0.16,
+          "defesa": 0.11999999999999988,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.3114545454545455
+          "score_total": 0.27718181818181814
         }
       },
-      "leitura_rapida": "Gil Vicente favorito (88%, risco forte). Jogo mais aberto (xG total ≈3.1). Over 2.5 com 59%.",
+      "leitura_rapida": "Gil Vicente favorito (90%, risco forte). Jogo mais aberto (xG total ≈3.5). Over 2.5 com 66%.",
       "tendencia": {
         "casa": "estavel",
         "visitante": "estavel"
       },
       "alertas": [
+        "Gil Vicente jogou recentemente — possível desgaste físico.",
         "Casa Pia jogou recentemente — possível desgaste físico."
       ],
       "odds_debug": {
         "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
         "competition": "Primeira Liga",
         "sport_key": "soccer_portugal_primeira_liga",
-        "odds_match_id": "c35cec8c25a5e2bc1ca9bfa3b870c161",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
       },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
+      "odds_integradas": false,
+      "odds_valor_alto": false,
       "historico": {
         "casa": [
+          {
+            "data": "27/04 19:15",
+            "mandante": "Gil Vicente",
+            "visitante": "Casa Pia",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
           {
             "data": "18/04 19:30",
             "mandante": "Gil Vicente",
@@ -898,17 +903,17 @@
             "placar": "1 x 0",
             "resultado": "D",
             "resultado_label": "Derrota"
-          },
-          {
-            "data": "14/03 18:00",
-            "mandante": "Gil Vicente",
-            "visitante": "Alverca",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
           }
         ],
         "visitante": [
+          {
+            "data": "27/04 19:15",
+            "mandante": "Gil Vicente",
+            "visitante": "Casa Pia",
+            "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
           {
             "data": "23/04 18:00",
             "mandante": "Casa Pia",
@@ -940,14 +945,6 @@
             "placar": "1 x 1",
             "resultado": "E",
             "resultado_label": "Empate"
-          },
-          {
-            "data": "20/03 20:15",
-            "mandante": "Amadora",
-            "visitante": "Casa Pia",
-            "placar": "4 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
           }
         ]
       },
@@ -955,45 +952,45 @@
         {
           "tipo": "WINNER",
           "opcao": "1",
-          "probabilidade": 0.8751023601390236,
+          "probabilidade": 0.8980719963421627,
           "confianca": "HIGH",
-          "justificativa": "Gil Vicente projeta ≈2.8 gol(s) vs ≈0.3 do adversário. Prob vitória: 87.5% (margem: 78.2 p.p.)",
-          "edge": 0.7824,
-          "odd_decimal": 3.22,
-          "ev": 1.8178,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "justificativa": "Gil Vicente projeta ≈3.2 gol(s) vs ≈0.3 do adversário. Prob vitória: 89.8% (margem: 82.9 p.p.)",
+          "edge": 0.8289,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "OVER",
-          "probabilidade": 0.5934613054248183,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈3.1. OVER 2.5: 59.3% de probabilidade",
-          "edge": 0.0935,
+          "probabilidade": 0.6567915372854586,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈3.5. OVER 2.5: 65.7% de probabilidade",
+          "edge": 0.1568,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
           "opcao": "NO",
-          "probabilidade": 0.7504674060023001,
+          "probabilidade": 0.753981551115086,
           "confianca": "HIGH",
-          "justificativa": "xG: 2.8 (casa) x 0.3 (fora). Ambas marcam - Nao: 75.0%",
-          "edge": 0.2505,
+          "justificativa": "xG: 3.2 (casa) x 0.3 (fora). Ambas marcam - Nao: 75.4%",
+          "edge": 0.254,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     }
   ],
   "acertos_hoje": {
-    "acertos": 6,
-    "total": 9,
+    "acertos": 10,
+    "total": 15,
     "taxa": 0.667
   },
   "daily_tips_ids": [],
