@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27 20:24:28",
+  "generated_at": "2026-04-27 21:02:06",
   "total_jogos": 5,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -204,75 +204,84 @@
     {
       "competicao": "Serie A",
       "data": "2026-04-27T18:45:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
-        "casa": 1,
-        "visitante": 1
+        "casa": 3,
+        "visitante": 3
       },
       "times": {
         "casa": "Lazio",
         "visitante": "Udinese"
       },
       "probabilidades": {
-        "casa": 0.2943088381769937,
-        "empate": 0.28173797509386994,
-        "visitante": 0.42388649541594375
+        "casa": 0.29222880697886117,
+        "empate": 0.22094731195770906,
+        "visitante": 0.48581895338836356
       },
       "favorito": {
         "nome": "Udinese",
-        "prob": 0.42388649541594375,
-        "vantagem": 0.12957765723895004
+        "prob": 0.48581895338836356,
+        "vantagem": 0.1935901464095024
       },
       "gols_esperados": {
-        "casa": 1.0106036363636366,
-        "visitante": 1.2730181818181818,
-        "total": 2.2836218181818184
+        "casa": 1.4562743389090909,
+        "visitante": 1.9263999999999997,
+        "total": 3.3826743389090907
       },
       "mercados": {
-        "under_25": 0.6004533282358261,
-        "over_25": 0.3995466717641739,
-        "btts_yes": 0.4578865894584019,
-        "btts_no": 0.5421134105415981
+        "under_25": 0.3440988131782571,
+        "over_25": 0.6559011868217429,
+        "btts_yes": 0.6543989222104515,
+        "btts_no": 0.3456010777895485
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.618181818181818,
-          "ataque": 0.4,
-          "defesa": 0.6,
+          "forma_recente": 0.6090909090909091,
+          "ataque": 0.5599999999999999,
+          "defesa": 0.44000000000000006,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.5963636363636363
+          "score_total": 0.6011818181818183
         },
         "visitante": {
-          "forma_recente": 0.4818181818181818,
-          "ataque": 0.64,
-          "defesa": 0.6,
+          "forma_recente": 0.5,
+          "ataque": 0.8,
+          "defesa": 0.52,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.5886363636363636
+          "score_total": 0.619
         }
       },
-      "leitura_rapida": "Udinese favorito (42%, risco alto). Jogo fechado esperado (xG total ≈2.3). Under 2.5 com 60%. | Forma recente: Lazio em baixa.",
+      "leitura_rapida": "Udinese favorito (49%, risco moderado). Jogo mais aberto (xG total ≈3.4). Over 2.5 com 66%.",
       "tendencia": {
-        "casa": "em baixa",
+        "casa": "estavel",
         "visitante": "estavel"
       },
-      "alertas": [],
+      "alertas": [
+        "Lazio jogou recentemente — possível desgaste físico.",
+        "Udinese jogou recentemente — possível desgaste físico."
+      ],
       "odds_debug": {
         "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
         "competition": "Serie A",
         "sport_key": "soccer_italy_serie_a",
-        "odds_match_id": "aa8294b91a1920474d420d34851aaceb",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
       },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
+      "odds_integradas": false,
+      "odds_valor_alto": false,
       "historico": {
         "casa": [
+          {
+            "data": "27/04 18:45",
+            "mandante": "Lazio",
+            "visitante": "Udinese",
+            "placar": "3 x 3",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
           {
             "data": "18/04 16:00",
             "mandante": "Napoli",
@@ -304,17 +313,17 @@
             "placar": "0 x 2",
             "resultado": "V",
             "resultado_label": "Vitoria"
-          },
-          {
-            "data": "15/03 19:45",
-            "mandante": "Lazio",
-            "visitante": "Milan",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
           }
         ],
         "visitante": [
+          {
+            "data": "27/04 18:45",
+            "mandante": "Lazio",
+            "visitante": "Udinese",
+            "placar": "3 x 3",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
           {
             "data": "18/04 13:00",
             "mandante": "Udinese",
@@ -346,14 +355,6 @@
             "placar": "0 x 2",
             "resultado": "V",
             "resultado_label": "Vitoria"
-          },
-          {
-            "data": "14/03 19:45",
-            "mandante": "Udinese",
-            "visitante": "Juventus",
-            "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
           }
         ]
       },
@@ -361,98 +362,101 @@
         {
           "tipo": "WINNER",
           "opcao": "2",
-          "probabilidade": 0.42388649541594375,
+          "probabilidade": 0.48581895338836356,
           "confianca": "MEDIUM",
-          "justificativa": "Udinese projeta ≈1.3 gol(s) vs ≈1.0 do adversário. Prob vitória: 42.4% (margem: 13.0 p.p.)",
-          "edge": 0.1296,
-          "odd_decimal": 56.0,
-          "ev": 22.7376,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "justificativa": "Udinese projeta ≈1.9 gol(s) vs ≈1.5 do adversário. Prob vitória: 48.6% (margem: 19.4 p.p.)",
+          "edge": 0.1936,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.6004533282358261,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈2.3. UNDER 2.5: 60.0% de probabilidade",
-          "edge": 0.1005,
+          "opcao": "OVER",
+          "probabilidade": 0.6559011868217429,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈3.4. OVER 2.5: 65.6% de probabilidade",
+          "edge": 0.1559,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.5421134105415981,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.0 (casa) x 1.3 (fora). Ambas marcam - Nao: 54.2%",
-          "edge": 0.0421,
+          "opcao": "YES",
+          "probabilidade": 0.6543989222104515,
+          "confianca": "HIGH",
+          "justificativa": "xG: 1.5 (casa) x 1.9 (fora). Ambas marcam - Sim: 65.4%",
+          "edge": 0.1544,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
     {
       "competicao": "Premier League",
       "data": "2026-04-27T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 2,
-        "visitante": 0
+        "visitante": 1
       },
       "times": {
         "casa": "Man United",
         "visitante": "Brentford"
       },
       "probabilidades": {
-        "casa": 0.518213910211995,
-        "empate": 0.21338884486760443,
-        "visitante": 0.2670007549880003
+        "casa": 0.6609667828340933,
+        "empate": 0.18638906203577188,
+        "visitante": 0.15019188407982628
       },
       "favorito": {
         "nome": "Man United",
-        "prob": 0.518213910211995,
-        "vantagem": 0.25121315522399473
+        "prob": 0.6609667828340933,
+        "vantagem": 0.4745777207983214
       },
       "gols_esperados": {
-        "casa": 2.048882352941176,
-        "visitante": 1.4271657754010698,
-        "total": 3.4760481283422457
+        "casa": 2.277942245989304,
+        "visitante": 0.9896898395721926,
+        "total": 3.2676320855614964
       },
       "mercados": {
-        "under_25": 0.3266965482129607,
-        "over_25": 0.6733034517870393,
-        "btts_yes": 0.6609876010724665,
-        "btts_no": 0.33901239892753354
+        "under_25": 0.36842055686967257,
+        "over_25": 0.6315794431303274,
+        "btts_yes": 0.5623663376311933,
+        "btts_no": 0.43763366236880674
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.6272727272727272,
-          "ataque": 0.8800000000000001,
-          "defesa": 0.52,
+          "forma_recente": 0.6818181818181818,
+          "ataque": 0.8,
+          "defesa": 0.6,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.7035454545454546
+          "score_total": 0.7186363636363636
         },
         "visitante": {
-          "forma_recente": 0.5363636363636364,
+          "forma_recente": 0.42727272727272736,
           "ataque": 0.64,
-          "defesa": 0.6,
+          "defesa": 0.44000000000000006,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.6077272727272728
+          "score_total": 0.5375454545454547
         }
       },
-      "leitura_rapida": "Man United favorito (52%, risco moderado). Jogo mais aberto (xG total ≈3.5). Over 2.5 com 67%.",
+      "leitura_rapida": "Man United favorito (66%, risco forte). Jogo mais aberto (xG total ≈3.3). Over 2.5 com 63%.",
       "tendencia": {
         "casa": "estavel",
         "visitante": "estavel"
       },
-      "alertas": [],
+      "alertas": [
+        "Man United jogou recentemente — possível desgaste físico.",
+        "Brentford jogou recentemente — possível desgaste físico."
+      ],
       "odds_debug": {
         "enabled": "false",
         "status": "matched",
@@ -468,6 +472,14 @@
       "odds_valor_alto": false,
       "historico": {
         "casa": [
+          {
+            "data": "27/04 19:00",
+            "mandante": "Man United",
+            "visitante": "Brentford",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
           {
             "data": "18/04 19:00",
             "mandante": "Chelsea",
@@ -499,17 +511,17 @@
             "placar": "3 x 1",
             "resultado": "V",
             "resultado_label": "Vitoria"
-          },
-          {
-            "data": "04/03 20:15",
-            "mandante": "Newcastle",
-            "visitante": "Man United",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
           }
         ],
         "visitante": [
+          {
+            "data": "27/04 19:00",
+            "mandante": "Man United",
+            "visitante": "Brentford",
+            "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
           {
             "data": "18/04 11:30",
             "mandante": "Brentford",
@@ -541,14 +553,6 @@
             "placar": "2 x 2",
             "resultado": "E",
             "resultado_label": "Empate"
-          },
-          {
-            "data": "03/03 19:30",
-            "mandante": "Bournemouth",
-            "visitante": "Brentford",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
           }
         ]
       },
@@ -556,38 +560,38 @@
         {
           "tipo": "WINNER",
           "opcao": "1",
-          "probabilidade": 0.518213910211995,
+          "probabilidade": 0.6609667828340933,
           "confianca": "HIGH",
-          "justificativa": "Man United projeta ≈2.0 gol(s) vs ≈1.4 do adversário. Prob vitória: 51.8% (margem: 25.1 p.p.)",
-          "edge": 0.2512,
-          "odd_decimal": 1.07,
-          "ev": -0.4455,
+          "justificativa": "Man United projeta ≈2.3 gol(s) vs ≈1.0 do adversário. Prob vitória: 66.1% (margem: 47.5 p.p.)",
+          "edge": 0.4746,
+          "odd_decimal": 1.04,
+          "ev": -0.3126,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "OVER",
-          "probabilidade": 0.6733034517870393,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈3.5. OVER 2.5: 67.3% de probabilidade",
-          "edge": 0.1733,
+          "probabilidade": 0.6315794431303274,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈3.3. OVER 2.5: 63.2% de probabilidade",
+          "edge": 0.1316,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
           "opcao": "YES",
-          "probabilidade": 0.6609876010724665,
-          "confianca": "HIGH",
-          "justificativa": "xG: 2.0 (casa) x 1.4 (fora). Ambas marcam - Sim: 66.1%",
-          "edge": 0.161,
+          "probabilidade": 0.5623663376311933,
+          "confianca": "LOW",
+          "justificativa": "xG: 2.3 (casa) x 1.0 (fora). Ambas marcam - Sim: 56.2%",
+          "edge": 0.0624,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -604,45 +608,45 @@
         "visitante": "Levante"
       },
       "probabilidades": {
-        "casa": 0.7539048658480613,
-        "empate": 0.17238152303264914,
-        "visitante": 0.07216006154784488
+        "casa": 0.5596435929869276,
+        "empate": 0.32946901778537646,
+        "visitante": 0.11086452005458837
       },
       "favorito": {
         "nome": "Espanyol",
-        "prob": 0.7539048658480613,
-        "vantagem": 0.5815233428154121
+        "prob": 0.5596435929869276,
+        "vantagem": 0.2301745752015511
       },
       "gols_esperados": {
-        "casa": 2.1151481324876675,
-        "visitante": 0.48529090909090894,
-        "total": 2.6004390415785763
+        "casa": 1.1201818181818182,
+        "visitante": 0.3365727272727272,
+        "total": 1.4567545454545454
       },
       "mercados": {
-        "under_25": 0.5198729120329952,
-        "over_25": 0.4801270879670048,
-        "btts_yes": 0.3375101079281564,
-        "btts_no": 0.6624898920718436
+        "under_25": 0.8196443498917814,
+        "over_25": 0.18035565010821858,
+        "btts_yes": 0.19255025925833813,
+        "btts_no": 0.8074497407416619
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.17272727272727273,
-          "ataque": 0.5333333333333333,
-          "defesa": 0.33333333333333326,
+          "forma_recente": 0.22727272727272727,
+          "ataque": 0.4,
+          "defesa": 0.5,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.42045454545454547
+          "score_total": 0.4395454545454545
         },
         "visitante": {
-          "forma_recente": 0.6454545454545454,
-          "ataque": 0.13333333333333333,
-          "defesa": 0.19999999999999996,
+          "forma_recente": 0.6454545454545455,
+          "ataque": 0.1,
+          "defesa": 0.4,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.4392424242424242
+          "score_total": 0.47090909090909094
         }
       },
-      "leitura_rapida": "Espanyol favorito (75%, risco forte). Mercado de gols equilibrado (xG total ≈2.6).",
+      "leitura_rapida": "Espanyol favorito (56%, risco moderado). Jogo fechado esperado (xG total ≈1.5). Under 2.5 com 82%.",
       "tendencia": {
         "casa": "estavel",
         "visitante": "estavel"
@@ -666,6 +670,14 @@
       "odds_valor_alto": true,
       "historico": {
         "casa": [
+          {
+            "data": "27/04 19:00",
+            "mandante": "Espanyol",
+            "visitante": "Levante",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
           {
             "data": "23/04 18:00",
             "mandante": "Rayo Vallecano",
@@ -697,17 +709,17 @@
             "placar": "1 x 2",
             "resultado": "D",
             "resultado_label": "Derrota"
-          },
-          {
-            "data": "15/03 13:00",
-            "mandante": "Mallorca",
-            "visitante": "Espanyol",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
           }
         ],
         "visitante": [
+          {
+            "data": "27/04 19:00",
+            "mandante": "Espanyol",
+            "visitante": "Levante",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
           {
             "data": "23/04 17:00",
             "mandante": "Levante",
@@ -739,14 +751,6 @@
             "placar": "4 x 2",
             "resultado": "V",
             "resultado_label": "Vitoria"
-          },
-          {
-            "data": "16/03 20:00",
-            "mandante": "Rayo Vallecano",
-            "visitante": "Levante",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
           }
         ]
       },
@@ -754,22 +758,22 @@
         {
           "tipo": "WINNER",
           "opcao": "1",
-          "probabilidade": 0.7539048658480613,
-          "confianca": "HIGH",
-          "justificativa": "Espanyol projeta ≈2.1 gol(s) vs ≈0.5 do adversário. Prob vitória: 75.4% (margem: 58.2 p.p.)",
-          "edge": 0.5815,
-          "odd_decimal": 3.0,
-          "ev": 1.2617,
+          "probabilidade": 0.5596435929869276,
+          "confianca": "MEDIUM",
+          "justificativa": "Espanyol projeta ≈1.1 gol(s) vs ≈0.3 do adversário. Prob vitória: 56.0% (margem: 23.0 p.p.)",
+          "edge": 0.2302,
+          "odd_decimal": 80.0,
+          "ev": 43.7715,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "UNDER",
-          "probabilidade": 0.5198729120329952,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.6. UNDER 2.5: 52.0% de probabilidade",
-          "edge": 0.0199,
+          "probabilidade": 0.8196443498917814,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈1.5. UNDER 2.5: 82.0% de probabilidade",
+          "edge": 0.3196,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -778,10 +782,10 @@
         {
           "tipo": "BTTS",
           "opcao": "NO",
-          "probabilidade": 0.6624898920718436,
+          "probabilidade": 0.8074497407416619,
           "confianca": "HIGH",
-          "justificativa": "xG: 2.1 (casa) x 0.5 (fora). Ambas marcam - Nao: 66.2%",
-          "edge": 0.1625,
+          "justificativa": "xG: 1.1 (casa) x 0.3 (fora). Ambas marcam - Nao: 80.7%",
+          "edge": 0.3074,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -792,9 +796,9 @@
     {
       "competicao": "Primeira Liga",
       "data": "2026-04-27T19:15:00Z",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 1,
+        "casa": 2,
         "visitante": 1
       },
       "times": {
@@ -955,8 +959,8 @@
           "confianca": "HIGH",
           "justificativa": "Gil Vicente projeta ≈2.8 gol(s) vs ≈0.3 do adversário. Prob vitória: 87.5% (margem: 78.2 p.p.)",
           "edge": 0.7824,
-          "odd_decimal": 2.6,
-          "ev": 1.2753,
+          "odd_decimal": 3.22,
+          "ev": 1.8178,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -988,9 +992,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 1,
-    "total": 3,
-    "taxa": 0.333
+    "acertos": 6,
+    "total": 9,
+    "taxa": 0.667
   },
   "daily_tips_ids": [],
   "daily_tips_date": "2026-04-27"
