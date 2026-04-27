@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27 17:12:47",
+  "generated_at": "2026-04-27 17:48:33",
   "total_jogos": 5,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -10,8 +10,8 @@
       "data": "2026-04-27T16:30:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 2,
-        "visitante": 0
+        "casa": 3,
+        "visitante": 2
       },
       "times": {
         "casa": "Cagliari",
@@ -169,8 +169,8 @@
           "confianca": "MEDIUM",
           "justificativa": "Atalanta projeta ≈1.1 gol(s) vs ≈0.6 do adversário. Prob vitória: 48.4% (margem: 15.9 p.p.)",
           "edge": 0.1593,
-          "odd_decimal": 10.5,
-          "ev": 4.0866,
+          "odd_decimal": 6.4,
+          "ev": 2.1004,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -364,8 +364,8 @@
           "confianca": "MEDIUM",
           "justificativa": "Udinese projeta ≈1.3 gol(s) vs ≈1.0 do adversário. Prob vitória: 42.4% (margem: 13.0 p.p.)",
           "edge": 0.1296,
-          "odd_decimal": 3.95,
-          "ev": 0.6744,
+          "odd_decimal": 3.9,
+          "ev": 0.6532,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -559,8 +559,8 @@
           "confianca": "HIGH",
           "justificativa": "Man United projeta ≈2.0 gol(s) vs ≈1.4 do adversário. Prob vitória: 51.8% (margem: 25.1 p.p.)",
           "edge": 0.2512,
-          "odd_decimal": 2.06,
-          "ev": 0.0675,
+          "odd_decimal": 2.05,
+          "ev": 0.0623,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -652,15 +652,17 @@
       ],
       "odds_debug": {
         "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
         "competition": "Primera Division",
         "sport_key": "soccer_spain_la_liga",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "odds_match_id": "b68fd46a853603c38e3f4750b40181a0",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%"
       },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
+      "odds_integradas": true,
+      "odds_valor_alto": true,
       "historico": {
         "casa": [
           {
@@ -755,9 +757,9 @@
           "confianca": "HIGH",
           "justificativa": "Espanyol projeta ≈2.1 gol(s) vs ≈0.5 do adversário. Prob vitória: 75.4% (margem: 58.2 p.p.)",
           "edge": 0.5815,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
+          "odd_decimal": 2.22,
+          "ev": 0.6737,
+          "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
         {
