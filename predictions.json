@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27 18:27:38",
+  "generated_at": "2026-04-27 19:04:16",
   "total_jogos": 5,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -8,7 +8,7 @@
     {
       "competicao": "Serie A",
       "data": "2026-04-27T16:30:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 3,
         "visitante": 2
@@ -18,65 +18,74 @@
         "visitante": "Atalanta"
       },
       "probabilidades": {
-        "casa": 0.19043811704727573,
-        "empate": 0.32510022574381714,
-        "visitante": 0.4844407423903819
+        "casa": 0.37977789798064104,
+        "empate": 0.2769609701433531,
+        "visitante": 0.34318754592285805
       },
       "favorito": {
-        "nome": "Atalanta",
-        "prob": 0.4844407423903819,
-        "vantagem": 0.15934051664656473
+        "nome": "Cagliari",
+        "prob": 0.37977789798064104,
+        "vantagem": 0.03659035205778299
       },
       "gols_esperados": {
-        "casa": 0.5735330909090909,
-        "visitante": 1.1047272727272726,
-        "total": 1.6782603636363636
+        "casa": 1.233392888888889,
+        "visitante": 1.158029090909091,
+        "total": 2.39142197979798
       },
       "mercados": {
-        "under_25": 0.7629715930514473,
-        "over_25": 0.23702840694855268,
-        "btts_yes": 0.29185717571368786,
-        "btts_no": 0.7081428242863121
+        "under_25": 0.5720250855187765,
+        "over_25": 0.42797491448122355,
+        "btts_yes": 0.48604116624111104,
+        "btts_no": 0.513958833758889
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.22727272727272727,
-          "ataque": 0.16,
-          "defesa": 0.6,
+          "forma_recente": 0.3727272727272727,
+          "ataque": 0.33333333333333337,
+          "defesa": 0.5333333333333333,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.39954545454545454
+          "score_total": 0.4804545454545454
         },
         "visitante": {
-          "forma_recente": 0.45454545454545453,
-          "ataque": 0.5599999999999999,
-          "defesa": 0.36,
+          "forma_recente": 0.3727272727272727,
+          "ataque": 0.6,
+          "defesa": 0.2666666666666667,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.5110909090909092
+          "score_total": 0.47378787878787876
         }
       },
-      "leitura_rapida": "Atalanta favorito (48%, risco moderado). Jogo fechado esperado (xG total ≈1.7). Under 2.5 com 76%.",
+      "leitura_rapida": "Cagliari favorito (38%, risco alto). Mercado de gols equilibrado (xG total ≈2.4). | Forma recente: Cagliari em alta, Atalanta em baixa.",
       "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
+        "casa": "em alta",
+        "visitante": "em baixa"
       },
-      "alertas": [],
+      "alertas": [
+        "Cagliari jogou recentemente — possível desgaste físico.",
+        "Atalanta jogou recentemente — possível desgaste físico."
+      ],
       "odds_debug": {
         "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
+        "status": "skip_edge_gate",
+        "reason": "edge abaixo do gate (3.7 p.p. < 10.0 p.p.)",
         "competition": "Serie A",
         "sport_key": "soccer_italy_serie_a",
-        "odds_match_id": "3f0e9a96dbc83fd4b0c62cd12357b6a8",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
       },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
+      "odds_integradas": false,
+      "odds_valor_alto": false,
       "historico": {
         "casa": [
+          {
+            "data": "27/04 16:30",
+            "mandante": "Cagliari",
+            "visitante": "Atalanta",
+            "placar": "3 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
           {
             "data": "17/04 18:45",
             "mandante": "Inter",
@@ -108,17 +117,17 @@
             "placar": "0 x 1",
             "resultado": "D",
             "resultado_label": "Derrota"
-          },
-          {
-            "data": "15/03 14:00",
-            "mandante": "AC Pisa",
-            "visitante": "Cagliari",
-            "placar": "3 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
           }
         ],
         "visitante": [
+          {
+            "data": "27/04 16:30",
+            "mandante": "Cagliari",
+            "visitante": "Atalanta",
+            "placar": "3 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
           {
             "data": "18/04 18:45",
             "mandante": "Roma",
@@ -150,63 +159,55 @@
             "placar": "1 x 0",
             "resultado": "V",
             "resultado_label": "Vitoria"
-          },
-          {
-            "data": "18/03 20:00",
-            "mandante": "Bayern",
-            "visitante": "Atalanta",
-            "placar": "4 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
           }
         ]
       },
       "palpites": [
         {
           "tipo": "WINNER",
-          "opcao": "2",
-          "probabilidade": 0.4844407423903819,
-          "confianca": "MEDIUM",
-          "justificativa": "Atalanta projeta ≈1.1 gol(s) vs ≈0.6 do adversário. Prob vitória: 48.4% (margem: 15.9 p.p.)",
-          "edge": 0.1593,
-          "odd_decimal": 400.0,
-          "ev": 192.7763,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "opcao": "1",
+          "probabilidade": 0.37977789798064104,
+          "confianca": "LOW",
+          "justificativa": "Cagliari projeta ≈1.2 gol(s) vs ≈1.2 do adversário. Prob vitória: 38.0% (margem: 3.7 p.p.)",
+          "edge": 0.0366,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "UNDER",
-          "probabilidade": 0.7629715930514473,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈1.7. UNDER 2.5: 76.3% de probabilidade",
-          "edge": 0.263,
+          "probabilidade": 0.5720250855187765,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈2.4. UNDER 2.5: 57.2% de probabilidade",
+          "edge": 0.072,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
           "opcao": "NO",
-          "probabilidade": 0.7081428242863121,
-          "confianca": "HIGH",
-          "justificativa": "xG: 0.6 (casa) x 1.1 (fora). Ambas marcam - Nao: 70.8%",
-          "edge": 0.2081,
+          "probabilidade": 0.513958833758889,
+          "confianca": "LOW",
+          "justificativa": "xG: 1.2 (casa) x 1.2 (fora). Ambas marcam - Nao: 51.4%",
+          "edge": 0.014,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
     {
       "competicao": "Serie A",
       "data": "2026-04-27T18:45:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Lazio",
@@ -364,8 +365,8 @@
           "confianca": "MEDIUM",
           "justificativa": "Udinese projeta ≈1.3 gol(s) vs ≈1.0 do adversário. Prob vitória: 42.4% (margem: 13.0 p.p.)",
           "edge": 0.1296,
-          "odd_decimal": 3.7,
-          "ev": 0.5684,
+          "odd_decimal": 3.75,
+          "ev": 0.5896,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -559,8 +560,8 @@
           "confianca": "HIGH",
           "justificativa": "Man United projeta ≈2.0 gol(s) vs ≈1.4 do adversário. Prob vitória: 51.8% (margem: 25.1 p.p.)",
           "edge": 0.2512,
-          "odd_decimal": 2.05,
-          "ev": 0.0623,
+          "odd_decimal": 2.06,
+          "ev": 0.0675,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -757,8 +758,8 @@
           "confianca": "HIGH",
           "justificativa": "Espanyol projeta ≈2.1 gol(s) vs ≈0.5 do adversário. Prob vitória: 75.4% (margem: 58.2 p.p.)",
           "edge": 0.5815,
-          "odd_decimal": 2.2,
-          "ev": 0.6586,
+          "odd_decimal": 2.24,
+          "ev": 0.6887,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -954,8 +955,8 @@
           "confianca": "HIGH",
           "justificativa": "Gil Vicente projeta ≈2.8 gol(s) vs ≈0.3 do adversário. Prob vitória: 87.5% (margem: 78.2 p.p.)",
           "edge": 0.7824,
-          "odd_decimal": 1.78,
-          "ev": 0.5577,
+          "odd_decimal": 1.86,
+          "ev": 0.6277,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -987,9 +988,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 1,
+    "total": 3,
+    "taxa": 0.333
   },
   "daily_tips_ids": [],
   "daily_tips_date": "2026-04-27"
