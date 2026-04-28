@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28 20:57:44",
+  "generated_at": "2026-04-28 21:03:24",
   "total_jogos": 5,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -214,47 +214,47 @@
         "visitante": "Bayern"
       },
       "probabilidades": {
-        "casa": 0.32253871024016223,
-        "empate": 0.15412782265962957,
-        "visitante": 0.47987490975031805
+        "casa": 0.5361476929567778,
+        "empate": 0.11737304467098643,
+        "visitante": 0.19737401406343674
       },
       "favorito": {
-        "nome": "Bayern",
-        "prob": 0.47987490975031805,
-        "vantagem": 0.15733619951015582
+        "nome": "PSG",
+        "prob": 0.5361476929567778,
+        "vantagem": 0.33877367889334103
       },
       "gols_esperados": {
-        "casa": 3.028100495867768,
-        "visitante": 3.612601652892562,
-        "total": 6.6407021487603295
+        "casa": 5.0,
+        "visitante": 3.246393388429752,
+        "total": 8.246393388429752
       },
       "mercados": {
-        "under_25": 0.08223717351977844,
-        "over_25": 0.9177628264802216,
-        "btts_yes": 0.8843128860046229,
-        "btts_no": 0.11568711399537712
+        "under_25": 0.1604449553090389,
+        "over_25": 0.8395550446909611,
+        "btts_yes": 0.8108170961702752,
+        "btts_no": 0.1891829038297248
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.8363636363636363,
+          "forma_recente": 0.8727272727272727,
           "ataque": 1.0,
-          "defesa": 0.4666666666666667,
+          "defesa": 0.4,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.7960606060606061
+          "score_total": 0.7954545454545455
         },
         "visitante": {
-          "forma_recente": 0.9818181818181817,
+          "forma_recente": 0.8090909090909091,
           "ataque": 1.0,
-          "defesa": 0.4666666666666667,
+          "defesa": 0.19999999999999996,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.8269696969696969
+          "score_total": 0.7131818181818183
         }
       },
-      "leitura_rapida": "Bayern favorito (48%, risco moderado). Jogo mais aberto (xG total ≈6.6). Over 2.5 com 92%.",
+      "leitura_rapida": "PSG favorito (54%, risco moderado). Jogo mais aberto (xG total ≈8.2). Over 2.5 com 84%. | Forma recente: PSG em alta.",
       "tendencia": {
-        "casa": "estavel",
+        "casa": "em alta",
         "visitante": "estavel"
       },
       "alertas": [
@@ -269,13 +269,21 @@
         "sport_key": "soccer_uefa_champs_league",
         "odds_match_id": "9ee53c45ff32f7ea5b6e638b023f07d5",
         "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
       },
       "odds_integradas": true,
-      "odds_valor_alto": true,
+      "odds_valor_alto": false,
       "historico": {
         "casa": [
+          {
+            "data": "28/04 19:00",
+            "mandante": "PSG",
+            "visitante": "Bayern",
+            "placar": "5 x 4",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
           {
             "data": "25/04 17:00",
             "mandante": "Angers SCO",
@@ -307,17 +315,17 @@
             "placar": "0 x 2",
             "resultado": "V",
             "resultado_label": "Vitoria"
-          },
-          {
-            "data": "08/04 19:00",
-            "mandante": "PSG",
-            "visitante": "Liverpool",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
           }
         ],
         "visitante": [
+          {
+            "data": "28/04 19:00",
+            "mandante": "PSG",
+            "visitante": "Bayern",
+            "placar": "5 x 4",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
           {
             "data": "25/04 13:30",
             "mandante": "Mainz",
@@ -349,37 +357,29 @@
             "placar": "0 x 5",
             "resultado": "V",
             "resultado_label": "Vitoria"
-          },
-          {
-            "data": "07/04 19:00",
-            "mandante": "Real Madrid",
-            "visitante": "Bayern",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
           }
         ]
       },
       "palpites": [
         {
           "tipo": "WINNER",
-          "opcao": "2",
-          "probabilidade": 0.47987490975031805,
-          "confianca": "MEDIUM",
-          "justificativa": "Bayern projeta ≈3.6 gol(s) vs ≈3.0 do adversário. Prob vitória: 48.0% (margem: 15.7 p.p.)",
-          "edge": 0.1573,
-          "odd_decimal": 1000.0,
-          "ev": 478.8749,
-          "valor_esperado_positivo": true,
+          "opcao": "1",
+          "probabilidade": 0.5361476929567778,
+          "confianca": "HIGH",
+          "justificativa": "PSG projeta ≈5.0 gol(s) vs ≈3.2 do adversário. Prob vitória: 53.6% (margem: 33.9 p.p.)",
+          "edge": 0.3388,
+          "odd_decimal": 1.34,
+          "ev": -0.2816,
+          "valor_esperado_positivo": false,
           "resultado_verificador": null
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "OVER",
-          "probabilidade": 0.9177628264802216,
+          "probabilidade": 0.8395550446909611,
           "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈6.6. OVER 2.5: 91.8% de probabilidade",
-          "edge": 0.4178,
+          "justificativa": "Gols esperados no jogo: ≈8.2. OVER 2.5: 84.0% de probabilidade",
+          "edge": 0.3396,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -388,167 +388,10 @@
         {
           "tipo": "BTTS",
           "opcao": "YES",
-          "probabilidade": 0.8843128860046229,
+          "probabilidade": 0.8108170961702752,
           "confianca": "HIGH",
-          "justificativa": "xG: 3.0 (casa) x 3.6 (fora). Ambas marcam - Sim: 88.4%",
-          "edge": 0.3843,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Copa Libertadores",
-      "data": "2026-04-28T22:00:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "Lanús",
-        "visitante": "LDU de Quito"
-      },
-      "probabilidades": {
-        "casa": 0.2318056643916513,
-        "empate": 0.554074110368728,
-        "visitante": 0.21412021544320134
-      },
-      "favorito": {
-        "nome": "Empate",
-        "prob": 0.554074110368728,
-        "vantagem": 0.3222684459770767
-      },
-      "gols_esperados": {
-        "casa": 0.3688894736842105,
-        "visitante": 0.345,
-        "total": 0.7138894736842105
-      },
-      "mercados": {
-        "under_25": 0.9641468258379302,
-        "over_25": 0.03585317416206978,
-        "btts_yes": 0.09001348250986506,
-        "btts_no": 0.9099865174901349
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5263157894736842,
-          "ataque": 0.4,
-          "defesa": 1.0,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.6442105263157896
-        },
-        "visitante": {
-          "forma_recente": 1.0,
-          "ataque": 0.4,
-          "defesa": 1.0,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.7899999999999999
-        }
-      },
-      "leitura_rapida": "Empate favorito (55%, risco moderado). Jogo fechado esperado (xG total ≈0.7). Under 2.5 com 96%.",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "Copa Libertadores",
-        "sport_key": "soccer_conmebol_libertadores",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "16/04 22:00",
-            "mandante": "Lanús",
-            "visitante": "Always Ready",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "08/04 22:00",
-            "mandante": "Mirassol",
-            "visitante": "Lanús",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "15/04 02:00",
-            "mandante": "LDU de Quito",
-            "visitante": "Mirassol",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "08/04 00:00",
-            "mandante": "Always Ready",
-            "visitante": "LDU de Quito",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "X",
-          "probabilidade": 0.554074110368728,
-          "confianca": "HIGH",
-          "justificativa": "Jogo muito equilibrado. Prob empate: 55.4% (margem: 32.2 p.p.)",
-          "edge": 0.3223,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.9641468258379302,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈0.7. UNDER 2.5: 96.4% de probabilidade",
-          "edge": 0.4641,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.9099865174901349,
-          "confianca": "HIGH",
-          "justificativa": "xG: 0.4 (casa) x 0.3 (fora). Ambas marcam - Nao: 91.0%",
-          "edge": 0.41,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "EMPATE",
-          "opcao": "X",
-          "probabilidade": 0.554074110368728,
-          "confianca": "MEDIUM",
-          "justificativa": "Ambas defesas solidas (100% / 100% de aproveitamento defensivo). Empate com 55.4% de probabilidade",
-          "edge": 0.3223,
+          "justificativa": "xG: 5.0 (casa) x 3.2 (fora). Ambas marcam - Sim: 81.1%",
+          "edge": 0.3108,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -706,6 +549,163 @@
           "confianca": "MEDIUM",
           "justificativa": "Ambas defesas solidas (60% / 100% de aproveitamento defensivo). Empate com 58.9% de probabilidade",
           "edge": 0.3749,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Copa Libertadores",
+      "data": "2026-04-28T22:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Lanús",
+        "visitante": "LDU de Quito"
+      },
+      "probabilidades": {
+        "casa": 0.2318056643916513,
+        "empate": 0.554074110368728,
+        "visitante": 0.21412021544320134
+      },
+      "favorito": {
+        "nome": "Empate",
+        "prob": 0.554074110368728,
+        "vantagem": 0.3222684459770767
+      },
+      "gols_esperados": {
+        "casa": 0.3688894736842105,
+        "visitante": 0.345,
+        "total": 0.7138894736842105
+      },
+      "mercados": {
+        "under_25": 0.9641468258379302,
+        "over_25": 0.03585317416206978,
+        "btts_yes": 0.09001348250986506,
+        "btts_no": 0.9099865174901349
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.5263157894736842,
+          "ataque": 0.4,
+          "defesa": 1.0,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.6442105263157896
+        },
+        "visitante": {
+          "forma_recente": 1.0,
+          "ataque": 0.4,
+          "defesa": 1.0,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.7899999999999999
+        }
+      },
+      "leitura_rapida": "Empate favorito (55%, risco moderado). Jogo fechado esperado (xG total ≈0.7). Under 2.5 com 96%.",
+      "tendencia": {
+        "casa": "indefinida",
+        "visitante": "indefinida"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Copa Libertadores",
+        "sport_key": "soccer_conmebol_libertadores",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "16/04 22:00",
+            "mandante": "Lanús",
+            "visitante": "Always Ready",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "08/04 22:00",
+            "mandante": "Mirassol",
+            "visitante": "Lanús",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "15/04 02:00",
+            "mandante": "LDU de Quito",
+            "visitante": "Mirassol",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "08/04 00:00",
+            "mandante": "Always Ready",
+            "visitante": "LDU de Quito",
+            "placar": "0 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "X",
+          "probabilidade": 0.554074110368728,
+          "confianca": "HIGH",
+          "justificativa": "Jogo muito equilibrado. Prob empate: 55.4% (margem: 32.2 p.p.)",
+          "edge": 0.3223,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER",
+          "probabilidade": 0.9641468258379302,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈0.7. UNDER 2.5: 96.4% de probabilidade",
+          "edge": 0.4641,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.9099865174901349,
+          "confianca": "HIGH",
+          "justificativa": "xG: 0.4 (casa) x 0.3 (fora). Ambas marcam - Nao: 91.0%",
+          "edge": 0.41,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "EMPATE",
+          "opcao": "X",
+          "probabilidade": 0.554074110368728,
+          "confianca": "MEDIUM",
+          "justificativa": "Ambas defesas solidas (100% / 100% de aproveitamento defensivo). Empate com 55.4% de probabilidade",
+          "edge": 0.3223,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
