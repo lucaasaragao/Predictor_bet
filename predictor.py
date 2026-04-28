@@ -836,8 +836,8 @@ def aplicar_odds_e_valor(predicoes: List[PredicaoJogo]) -> List[PredicaoJogo]:
 def prever_jogo(match: Dict) -> PredicaoJogo:
     """Prevê resultado de um jogo"""
     
-    home_team = match.get("homeTeam", {})
-    away_team = match.get("awayTeam", {})
+    home_team = match.get("homeTeam") or {}
+    away_team = match.get("awayTeam") or {}
     home_id = home_team.get("id")
     away_id = away_team.get("id")
     
@@ -899,8 +899,8 @@ def prever_jogo(match: Dict) -> PredicaoJogo:
 
     return PredicaoJogo(
         data_jogo=match.get("utcDate", ""),
-        time_casa=home_team.get("shortName") or home_team.get("name", ""),
-        time_visitante=away_team.get("shortName") or away_team.get("name", ""),
+        time_casa=home_team.get("shortName") or home_team.get("name") or "Time da casa",
+        time_visitante=away_team.get("shortName") or away_team.get("name") or "Time visitante",
         status=match.get("status", "SCHEDULED"),
         placar_casa=placar_casa,
         placar_visitante=placar_visitante,
@@ -1425,22 +1425,25 @@ def exibir_predicoes(predicoes: List[PredicaoJogo]) -> None:
     print("=" * 100 + "\n")
     
     for pred in predicoes:
+        nome_casa = pred.time_casa or "Time da casa"
+        nome_visitante = pred.time_visitante or "Time visitante"
+
         mercados = calcular_probabilidades_mercado(
             pred.gols_esperados_casa,
             pred.gols_esperados_visitante,
         )
 
         ranking = [
-            (pred.time_casa, pred.prob_casa),
+            (nome_casa, pred.prob_casa),
             ("Empate", pred.prob_empate),
-            (pred.time_visitante, pred.prob_visitante),
+            (nome_visitante, pred.prob_visitante),
         ]
         ranking.sort(key=lambda item: item[1], reverse=True)
         favorito, prob_favorito = ranking[0]
         segunda_forca, prob_segunda = ranking[1]
         diferenca = max(0.0, prob_favorito - prob_segunda)
 
-        print(f"🏟️  {pred.time_casa} vs {pred.time_visitante}")
+        print(f"🏟️  {nome_casa} vs {nome_visitante}")
         print(f"  ├─ Mercado 1X2: Casa {pred.prob_casa*100:>5.1f}% | X {pred.prob_empate*100:>5.1f}% | Fora {pred.prob_visitante*100:>5.1f}%")
         print(f"  ├─ Ranking de chance:")
         print(f"  │    1) {ranking[0][0]:<18} {ranking[0][1]*100:>5.1f}% [{_barra_percentual(ranking[0][1])}]")
@@ -1450,8 +1453,8 @@ def exibir_predicoes(predicoes: List[PredicaoJogo]) -> None:
         print(f"  ├─ Gols esperados (xG simplificado): {pred.gols_esperados_casa:.2f} x {pred.gols_esperados_visitante:.2f} | total {pred.gols_esperados_casa + pred.gols_esperados_visitante:.2f}")
         print(f"  ├─ Mercado de gols: Under 2.5 {mercados['under_25']*100:.1f}% | Over 2.5 {mercados['over_25']*100:.1f}%")
         print(f"  ├─ Ambos marcam (BTTS): SIM {mercados['btts_yes']*100:.1f}% | NÃO {mercados['btts_no']*100:.1f}%")
-        print(f"  ├─ Score {pred.time_casa}: {pred.score_casa.score_total:.2f} (Forma: {pred.score_casa.forma_recente:.2f}, Ataque: {pred.score_casa.ataque:.2f}, Defesa: {pred.score_casa.defesa:.2f})")
-        print(f"  ├─ Score {pred.time_visitante}: {pred.score_visitante.score_total:.2f} (Forma: {pred.score_visitante.forma_recente:.2f}, Ataque: {pred.score_visitante.ataque:.2f}, Defesa: {pred.score_visitante.defesa:.2f})")
+        print(f"  ├─ Score {nome_casa}: {pred.score_casa.score_total:.2f} (Forma: {pred.score_casa.forma_recente:.2f}, Ataque: {pred.score_casa.ataque:.2f}, Defesa: {pred.score_casa.defesa:.2f})")
+        print(f"  ├─ Score {nome_visitante}: {pred.score_visitante.score_total:.2f} (Forma: {pred.score_visitante.forma_recente:.2f}, Ataque: {pred.score_visitante.ataque:.2f}, Defesa: {pred.score_visitante.defesa:.2f})")
         print("  └─ Cartões e escanteios: ainda não modelados por falta de dados confiáveis neste endpoint.")
 
         leitura = (
