@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28 19:12:09",
+  "generated_at": "2026-04-28 20:57:44",
   "total_jogos": 5,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -8,77 +8,84 @@
     {
       "competicao": "Championship",
       "data": "2026-04-28T18:45:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
-        "casa": 0,
-        "visitante": 0
+        "casa": 2,
+        "visitante": 2
       },
       "times": {
         "casa": "Southampton",
         "visitante": "Ipswich Town"
       },
       "probabilidades": {
-        "casa": 0.7080838666756464,
-        "empate": 0.18400630319612177,
-        "visitante": 0.10624859421831549
+        "casa": 0.6374047878226656,
+        "empate": 0.20325189019865092,
+        "visitante": 0.15801710780353656
       },
       "favorito": {
         "nome": "Southampton",
-        "prob": 0.7080838666756464,
-        "vantagem": 0.5240775634795246
+        "prob": 0.6374047878226656,
+        "vantagem": 0.4341528976240147
       },
       "gols_esperados": {
-        "casa": 2.13815329768271,
-        "visitante": 0.6851165775401069,
-        "total": 2.8232698752228167
+        "casa": 2.0604610134963077,
+        "visitante": 0.9146031746031746,
+        "total": 2.9750641880994824
       },
       "mercados": {
-        "under_25": 0.4655864778516994,
-        "over_25": 0.5344135221483006,
-        "btts_yes": 0.43668339873206724,
-        "btts_no": 0.5633166012679327
+        "under_25": 0.43012611213959595,
+        "over_25": 0.569873887860404,
+        "btts_yes": 0.5221770313145992,
+        "btts_no": 0.47782296868540075
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.8909090909090908,
+          "forma_recente": 0.8181818181818182,
           "ataque": 0.8,
-          "defesa": 0.76,
+          "defesa": 0.6666666666666666,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.8238181818181818
+          "score_total": 0.7796969696969698
         },
         "visitante": {
-          "forma_recente": 0.6454545454545454,
-          "ataque": 0.6,
-          "defesa": 0.6,
+          "forma_recente": 0.6181818181818182,
+          "ataque": 0.6285714285714286,
+          "defesa": 0.5428571428571429,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.6359090909090909
+          "score_total": 0.6220779220779221
         }
       },
-      "leitura_rapida": "Southampton favorito (71%, risco forte). Mercado de gols equilibrado (xG total ≈2.8).",
+      "leitura_rapida": "Southampton favorito (64%, risco forte). Jogo mais aberto (xG total ≈3.0). Over 2.5 com 57%. | Forma recente: Southampton em baixa, Ipswich Town em alta.",
       "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
+        "casa": "em baixa",
+        "visitante": "em alta"
       },
       "alertas": [
+        "Southampton jogou recentemente — possível desgaste físico.",
         "Ipswich Town jogou recentemente — possível desgaste físico."
       ],
       "odds_debug": {
         "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
         "competition": "Championship",
         "sport_key": "soccer_efl_champ",
-        "odds_match_id": "de3efd9a1b07c22949d3610df7bdc8e9",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
       },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
+      "odds_integradas": false,
+      "odds_valor_alto": false,
       "historico": {
         "casa": [
+          {
+            "data": "28/04 18:45",
+            "mandante": "Southampton",
+            "visitante": "Ipswich Town",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
           {
             "data": "21/04 18:45",
             "mandante": "Southampton",
@@ -110,17 +117,17 @@
             "placar": "2 x 1",
             "resultado": "V",
             "resultado_label": "Vitoria"
-          },
-          {
-            "data": "07/04 19:00",
-            "mandante": "Wrexham",
-            "visitante": "Southampton",
-            "placar": "1 x 5",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
           }
         ],
         "visitante": [
+          {
+            "data": "28/04 18:45",
+            "mandante": "Southampton",
+            "visitante": "Ipswich Town",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
           {
             "data": "25/04 11:30",
             "mandante": "West Brom",
@@ -152,14 +159,6 @@
             "placar": "2 x 0",
             "resultado": "D",
             "resultado_label": "Derrota"
-          },
-          {
-            "data": "11/04 11:30",
-            "mandante": "Norwich",
-            "visitante": "Ipswich Town",
-            "placar": "0 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
           }
         ]
       },
@@ -167,38 +166,38 @@
         {
           "tipo": "WINNER",
           "opcao": "1",
-          "probabilidade": 0.7080838666756464,
+          "probabilidade": 0.6374047878226656,
           "confianca": "HIGH",
-          "justificativa": "Southampton projeta ≈2.1 gol(s) vs ≈0.7 do adversário. Prob vitória: 70.8% (margem: 52.4 p.p.)",
-          "edge": 0.5241,
-          "odd_decimal": 2.66,
-          "ev": 0.8835,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "justificativa": "Southampton projeta ≈2.1 gol(s) vs ≈0.9 do adversário. Prob vitória: 63.7% (margem: 43.4 p.p.)",
+          "edge": 0.4342,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "OVER",
-          "probabilidade": 0.5344135221483006,
+          "probabilidade": 0.569873887860404,
           "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.8. OVER 2.5: 53.4% de probabilidade",
-          "edge": 0.0344,
+          "justificativa": "Gols esperados no jogo: ≈3.0. OVER 2.5: 57.0% de probabilidade",
+          "edge": 0.0699,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.5633166012679327,
+          "opcao": "YES",
+          "probabilidade": 0.5221770313145992,
           "confianca": "LOW",
-          "justificativa": "xG: 2.1 (casa) x 0.7 (fora). Ambas marcam - Nao: 56.3%",
-          "edge": 0.0633,
+          "justificativa": "xG: 2.1 (casa) x 0.9 (fora). Ambas marcam - Sim: 52.2%",
+          "edge": 0.0222,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -207,8 +206,8 @@
       "data": "2026-04-28T19:00:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 0,
-        "visitante": 0
+        "casa": 5,
+        "visitante": 4
       },
       "times": {
         "casa": "PSG",
@@ -369,8 +368,8 @@
           "confianca": "MEDIUM",
           "justificativa": "Bayern projeta ≈3.6 gol(s) vs ≈3.0 do adversário. Prob vitória: 48.0% (margem: 15.7 p.p.)",
           "edge": 0.1573,
-          "odd_decimal": 2.75,
-          "ev": 0.3197,
+          "odd_decimal": 1000.0,
+          "ev": 478.8749,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -393,163 +392,6 @@
           "confianca": "HIGH",
           "justificativa": "xG: 3.0 (casa) x 3.6 (fora). Ambas marcam - Sim: 88.4%",
           "edge": 0.3843,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Copa Libertadores",
-      "data": "2026-04-28T22:00:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "Libertad",
-        "visitante": "Independiente"
-      },
-      "probabilidades": {
-        "casa": 0.19629969638744404,
-        "empate": 0.5892885000686537,
-        "visitante": 0.21441180005453606
-      },
-      "favorito": {
-        "nome": "Empate",
-        "prob": 0.5892885000686537,
-        "vantagem": 0.37487670001411766
-      },
-      "gols_esperados": {
-        "casa": 0.3,
-        "visitante": 0.3236842105263158,
-        "total": 0.6236842105263158
-      },
-      "mercados": {
-        "under_25": 0.9744804303887389,
-        "over_25": 0.025519569611261096,
-        "btts_yes": 0.07166928855809006,
-        "btts_no": 0.9283307114419099
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.0,
-          "ataque": 0.0,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.28
-        },
-        "visitante": {
-          "forma_recente": 0.7631578947368421,
-          "ataque": 0.0,
-          "defesa": 1.0,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.6071052631578948
-        }
-      },
-      "leitura_rapida": "Empate favorito (59%, risco moderado). Jogo fechado esperado (xG total ≈0.6). Under 2.5 com 97%.",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "Copa Libertadores",
-        "sport_key": "soccer_conmebol_libertadores",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "15/04 22:00",
-            "mandante": "Libertad",
-            "visitante": "Rosario",
-            "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "09/04 22:00",
-            "mandante": "Universidad Central de Venezuela FC",
-            "visitante": "Libertad",
-            "placar": "3 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "16/04 02:00",
-            "mandante": "Independiente",
-            "visitante": "Universidad Central de Venezuela FC",
-            "placar": "3 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "09/04 22:00",
-            "mandante": "Rosario",
-            "visitante": "Independiente",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "X",
-          "probabilidade": 0.5892885000686537,
-          "confianca": "HIGH",
-          "justificativa": "Jogo muito equilibrado. Prob empate: 58.9% (margem: 37.5 p.p.)",
-          "edge": 0.3749,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.9744804303887389,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈0.6. UNDER 2.5: 97.4% de probabilidade",
-          "edge": 0.4745,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.9283307114419099,
-          "confianca": "HIGH",
-          "justificativa": "xG: 0.3 (casa) x 0.3 (fora). Ambas marcam - Nao: 92.8%",
-          "edge": 0.4283,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "EMPATE",
-          "opcao": "X",
-          "probabilidade": 0.5892885000686537,
-          "confianca": "MEDIUM",
-          "justificativa": "Ambas defesas solidas (60% / 100% de aproveitamento defensivo). Empate com 58.9% de probabilidade",
-          "edge": 0.3749,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -716,6 +558,163 @@
     },
     {
       "competicao": "Copa Libertadores",
+      "data": "2026-04-28T22:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Libertad",
+        "visitante": "Independiente"
+      },
+      "probabilidades": {
+        "casa": 0.19629969638744404,
+        "empate": 0.5892885000686537,
+        "visitante": 0.21441180005453606
+      },
+      "favorito": {
+        "nome": "Empate",
+        "prob": 0.5892885000686537,
+        "vantagem": 0.37487670001411766
+      },
+      "gols_esperados": {
+        "casa": 0.3,
+        "visitante": 0.3236842105263158,
+        "total": 0.6236842105263158
+      },
+      "mercados": {
+        "under_25": 0.9744804303887389,
+        "over_25": 0.025519569611261096,
+        "btts_yes": 0.07166928855809006,
+        "btts_no": 0.9283307114419099
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.0,
+          "ataque": 0.0,
+          "defesa": 0.6,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.28
+        },
+        "visitante": {
+          "forma_recente": 0.7631578947368421,
+          "ataque": 0.0,
+          "defesa": 1.0,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.6071052631578948
+        }
+      },
+      "leitura_rapida": "Empate favorito (59%, risco moderado). Jogo fechado esperado (xG total ≈0.6). Under 2.5 com 97%.",
+      "tendencia": {
+        "casa": "indefinida",
+        "visitante": "indefinida"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Copa Libertadores",
+        "sport_key": "soccer_conmebol_libertadores",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "15/04 22:00",
+            "mandante": "Libertad",
+            "visitante": "Rosario",
+            "placar": "0 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "09/04 22:00",
+            "mandante": "Universidad Central de Venezuela FC",
+            "visitante": "Libertad",
+            "placar": "3 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "16/04 02:00",
+            "mandante": "Independiente",
+            "visitante": "Universidad Central de Venezuela FC",
+            "placar": "3 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "09/04 22:00",
+            "mandante": "Rosario",
+            "visitante": "Independiente",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "X",
+          "probabilidade": 0.5892885000686537,
+          "confianca": "HIGH",
+          "justificativa": "Jogo muito equilibrado. Prob empate: 58.9% (margem: 37.5 p.p.)",
+          "edge": 0.3749,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER",
+          "probabilidade": 0.9744804303887389,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈0.6. UNDER 2.5: 97.4% de probabilidade",
+          "edge": 0.4745,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.9283307114419099,
+          "confianca": "HIGH",
+          "justificativa": "xG: 0.3 (casa) x 0.3 (fora). Ambas marcam - Nao: 92.8%",
+          "edge": 0.4283,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "EMPATE",
+          "opcao": "X",
+          "probabilidade": 0.5892885000686537,
+          "confianca": "MEDIUM",
+          "justificativa": "Ambas defesas solidas (60% / 100% de aproveitamento defensivo). Empate com 58.9% de probabilidade",
+          "edge": 0.3749,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Copa Libertadores",
       "data": "2026-04-29T00:00:00Z",
       "status": "TIMED",
       "placar_atual": {
@@ -873,9 +872,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 2,
+    "total": 3,
+    "taxa": 0.667
   },
   "daily_tips_ids": [
     {
