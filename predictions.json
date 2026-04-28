@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28 17:15:06",
+  "generated_at": "2026-04-28 17:56:49",
   "total_jogos": 5,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -171,8 +171,8 @@
           "confianca": "HIGH",
           "justificativa": "Southampton projeta ≈2.1 gol(s) vs ≈0.7 do adversário. Prob vitória: 70.8% (margem: 52.4 p.p.)",
           "edge": 0.5241,
-          "odd_decimal": 2.3,
-          "ev": 0.6286,
+          "odd_decimal": 2.24,
+          "ev": 0.5861,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -264,17 +264,15 @@
       ],
       "odds_debug": {
         "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
         "competition": "UEFA Champions League",
         "sport_key": "soccer_uefa_champs_league",
-        "odds_match_id": "9ee53c45ff32f7ea5b6e638b023f07d5",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
       },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
+      "odds_integradas": false,
+      "odds_valor_alto": false,
       "historico": {
         "casa": [
           {
@@ -369,9 +367,9 @@
           "confianca": "MEDIUM",
           "justificativa": "Bayern projeta ≈3.6 gol(s) vs ≈3.0 do adversário. Prob vitória: 48.0% (margem: 15.7 p.p.)",
           "edge": 0.1573,
-          "odd_decimal": 2.75,
-          "ev": 0.3197,
-          "valor_esperado_positivo": true,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
           "resultado_verificador": null
         },
         {
@@ -460,7 +458,7 @@
       "odds_debug": {
         "enabled": "false",
         "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
         "competition": "Copa Libertadores",
         "sport_key": "soccer_conmebol_libertadores",
         "ev_filter": "fail",
@@ -617,7 +615,7 @@
       "odds_debug": {
         "enabled": "false",
         "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
         "competition": "Copa Libertadores",
         "sport_key": "soccer_conmebol_libertadores",
         "ev_filter": "fail",
