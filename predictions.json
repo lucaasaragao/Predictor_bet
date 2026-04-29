@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29 00:31:29",
+  "generated_at": "2026-04-29 01:18:27",
   "total_jogos": 9,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -8,10 +8,10 @@
     {
       "competicao": "Copa Libertadores",
       "data": "2026-04-29T00:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 1
       },
       "times": {
         "casa": "Universidad Central de Venezuela FC",
@@ -165,10 +165,10 @@
     {
       "competicao": "Copa Libertadores",
       "data": "2026-04-29T00:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Cruzeiro",
@@ -326,6 +326,175 @@
           "confianca": "HIGH",
           "justificativa": "xG: 1.8 (casa) x 1.9 (fora). Ambas marcam - Sim: 70.5%",
           "edge": 0.2053,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Copa Libertadores",
+      "data": "2026-04-29T02:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Cristal",
+        "visitante": "Junior"
+      },
+      "probabilidades": {
+        "casa": 0.844696923425023,
+        "empate": 0.08638742564159364,
+        "visitante": 0.04396290521203291
+      },
+      "favorito": {
+        "nome": "Cristal",
+        "prob": 0.844696923425023,
+        "vantagem": 0.7583094977834294
+      },
+      "gols_esperados": {
+        "casa": 3.4525170068027204,
+        "visitante": 0.736842105263158,
+        "total": 4.189359112065878
+      },
+      "mercados": {
+        "under_25": 0.23660203357124454,
+        "over_25": 0.7633979664287555,
+        "btts_yes": 0.4918569129278973,
+        "btts_no": 0.5081430870721027
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.6333333333333333,
+          "ataque": 1.0,
+          "defesa": 0.0,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.6316666666666667
+        },
+        "visitante": {
+          "forma_recente": 0.2368421052631579,
+          "ataque": 0.0,
+          "defesa": 0.6,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.34289473684210525
+        }
+      },
+      "leitura_rapida": "Cristal favorito (84%, risco forte). Jogo mais aberto (xG total ≈4.2). Over 2.5 com 76%. | Forma recente: Cristal em baixa.",
+      "tendencia": {
+        "casa": "em baixa",
+        "visitante": "indefinida"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente na consulta por liga",
+        "competition": "Copa Libertadores",
+        "sport_key": "soccer_conmebol_libertadores",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "16/04 22:00",
+            "mandante": "Palmeiras",
+            "visitante": "Cristal",
+            "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "09/04 02:00",
+            "mandante": "Cristal",
+            "visitante": "Cerro Porteño",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "11/03 22:00",
+            "mandante": "Cristal",
+            "visitante": "Carabobo",
+            "placar": "4 x 4",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "04/03 22:00",
+            "mandante": "Carabobo",
+            "visitante": "Cristal",
+            "placar": "0 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "25/02 00:30",
+            "mandante": "Cristal",
+            "visitante": "2 de Mayo",
+            "placar": "5 x 4",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "14/04 22:00",
+            "mandante": "Cerro Porteño",
+            "visitante": "Junior",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "09/04 00:30",
+            "mandante": "Junior",
+            "visitante": "Palmeiras",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.844696923425023,
+          "confianca": "HIGH",
+          "justificativa": "Cristal projeta ≈3.5 gol(s) vs ≈0.7 do adversário. Prob vitória: 84.5% (margem: 75.8 p.p.)",
+          "edge": 0.7583,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER",
+          "probabilidade": 0.7633979664287555,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈4.2. OVER 2.5: 76.3% de probabilidade",
+          "edge": 0.2634,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.5081430870721027,
+          "confianca": "LOW",
+          "justificativa": "xG: 3.5 (casa) x 0.7 (fora). Ambas marcam - Nao: 50.8%",
+          "edge": 0.0081,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -507,175 +676,6 @@
           "confianca": "MEDIUM",
           "justificativa": "Ambas defesas solidas (87% / 100% de aproveitamento defensivo). Empate com 40.8% de probabilidade",
           "edge": 0.1009,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Copa Libertadores",
-      "data": "2026-04-29T02:00:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "Cristal",
-        "visitante": "Junior"
-      },
-      "probabilidades": {
-        "casa": 0.844696923425023,
-        "empate": 0.08638742564159364,
-        "visitante": 0.04396290521203291
-      },
-      "favorito": {
-        "nome": "Cristal",
-        "prob": 0.844696923425023,
-        "vantagem": 0.7583094977834294
-      },
-      "gols_esperados": {
-        "casa": 3.4525170068027204,
-        "visitante": 0.736842105263158,
-        "total": 4.189359112065878
-      },
-      "mercados": {
-        "under_25": 0.23660203357124454,
-        "over_25": 0.7633979664287555,
-        "btts_yes": 0.4918569129278973,
-        "btts_no": 0.5081430870721027
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.6333333333333333,
-          "ataque": 1.0,
-          "defesa": 0.0,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.6316666666666667
-        },
-        "visitante": {
-          "forma_recente": 0.2368421052631579,
-          "ataque": 0.0,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.34289473684210525
-        }
-      },
-      "leitura_rapida": "Cristal favorito (84%, risco forte). Jogo mais aberto (xG total ≈4.2). Over 2.5 com 76%. | Forma recente: Cristal em baixa.",
-      "tendencia": {
-        "casa": "em baixa",
-        "visitante": "indefinida"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
-        "competition": "Copa Libertadores",
-        "sport_key": "soccer_conmebol_libertadores",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "16/04 22:00",
-            "mandante": "Palmeiras",
-            "visitante": "Cristal",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "09/04 02:00",
-            "mandante": "Cristal",
-            "visitante": "Cerro Porteño",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "11/03 22:00",
-            "mandante": "Cristal",
-            "visitante": "Carabobo",
-            "placar": "4 x 4",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "04/03 22:00",
-            "mandante": "Carabobo",
-            "visitante": "Cristal",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "25/02 00:30",
-            "mandante": "Cristal",
-            "visitante": "2 de Mayo",
-            "placar": "5 x 4",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "14/04 22:00",
-            "mandante": "Cerro Porteño",
-            "visitante": "Junior",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "09/04 00:30",
-            "mandante": "Junior",
-            "visitante": "Palmeiras",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.844696923425023,
-          "confianca": "HIGH",
-          "justificativa": "Cristal projeta ≈3.5 gol(s) vs ≈0.7 do adversário. Prob vitória: 84.5% (margem: 75.8 p.p.)",
-          "edge": 0.7583,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.7633979664287555,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈4.2. OVER 2.5: 76.3% de probabilidade",
-          "edge": 0.2634,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.5081430870721027,
-          "confianca": "LOW",
-          "justificativa": "xG: 3.5 (casa) x 0.7 (fora). Ambas marcam - Nao: 50.8%",
-          "edge": 0.0081,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -1046,8 +1046,8 @@
           "confianca": "HIGH",
           "justificativa": "Sporting CP projeta ≈4.9 gol(s) vs ≈0.9 do adversário. Prob vitória: 81.6% (margem: 77.6 p.p.)",
           "edge": 0.7761,
-          "odd_decimal": 1.14,
-          "ev": -0.0696,
+          "odd_decimal": 1.15,
+          "ev": -0.0614,
           "valor_esperado_positivo": false,
           "resultado_verificador": null
         },
@@ -1070,6 +1070,151 @@
           "confianca": "LOW",
           "justificativa": "xG: 4.9 (casa) x 0.9 (fora). Ambas marcam - Sim: 51.1%",
           "edge": 0.0112,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Copa Libertadores",
+      "data": "2026-04-29T22:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Platense",
+        "visitante": "Santa Fe"
+      },
+      "probabilidades": {
+        "casa": 0.3575609037163309,
+        "empate": 0.39931183683393695,
+        "visitante": 0.2431259940803941
+      },
+      "favorito": {
+        "nome": "Empate",
+        "prob": 0.39931183683393695,
+        "vantagem": 0.041750933117606026
+      },
+      "gols_esperados": {
+        "casa": 0.737778947368421,
+        "visitante": 0.5526315789473684,
+        "total": 1.2904105263157892
+      },
+      "mercados": {
+        "under_25": 0.8593163765350395,
+        "over_25": 0.14068362346496055,
+        "btts_yes": 0.22154894455623161,
+        "btts_no": 0.7784510554437684
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.5263157894736842,
+          "ataque": 0.0,
+          "defesa": 0.19999999999999996,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.3842105263157895
+        },
+        "visitante": {
+          "forma_recente": 0.2368421052631579,
+          "ataque": 0.0,
+          "defesa": 0.19999999999999996,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.26289473684210524
+        }
+      },
+      "leitura_rapida": "Empate favorito (40%, risco alto). Jogo fechado esperado (xG total ≈1.3). Under 2.5 com 86%.",
+      "tendencia": {
+        "casa": "indefinida",
+        "visitante": "indefinida"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "skip_edge_gate",
+        "reason": "edge abaixo do gate (4.2 p.p. < 10.0 p.p.)",
+        "competition": "Copa Libertadores",
+        "sport_key": "soccer_conmebol_libertadores",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "17/04 00:30",
+            "mandante": "Peñarol",
+            "visitante": "Platense",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "10/04 00:00",
+            "mandante": "Platense",
+            "visitante": "Corinthians",
+            "placar": "0 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "16/04 00:30",
+            "mandante": "Corinthians",
+            "visitante": "Santa Fe",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "10/04 02:00",
+            "mandante": "Santa Fe",
+            "visitante": "Peñarol",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "X",
+          "probabilidade": 0.39931183683393695,
+          "confianca": "LOW",
+          "justificativa": "Jogo muito equilibrado. Prob empate: 39.9% (margem: 4.2 p.p.)",
+          "edge": 0.0418,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER",
+          "probabilidade": 0.8593163765350395,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈1.3. UNDER 2.5: 85.9% de probabilidade",
+          "edge": 0.3593,
+          "odd_decimal": null,
+          "ev": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.7784510554437684,
+          "confianca": "HIGH",
+          "justificativa": "xG: 0.7 (casa) x 0.6 (fora). Ambas marcam - Nao: 77.8%",
+          "edge": 0.2785,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -1253,151 +1398,6 @@
           "confianca": "MEDIUM",
           "justificativa": "Ambas defesas solidas (60% / 60% de aproveitamento defensivo). Empate com 54.6% de probabilidade",
           "edge": 0.2699,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Copa Libertadores",
-      "data": "2026-04-29T22:00:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "Platense",
-        "visitante": "Santa Fe"
-      },
-      "probabilidades": {
-        "casa": 0.3575609037163309,
-        "empate": 0.39931183683393695,
-        "visitante": 0.2431259940803941
-      },
-      "favorito": {
-        "nome": "Empate",
-        "prob": 0.39931183683393695,
-        "vantagem": 0.041750933117606026
-      },
-      "gols_esperados": {
-        "casa": 0.737778947368421,
-        "visitante": 0.5526315789473684,
-        "total": 1.2904105263157892
-      },
-      "mercados": {
-        "under_25": 0.8593163765350395,
-        "over_25": 0.14068362346496055,
-        "btts_yes": 0.22154894455623161,
-        "btts_no": 0.7784510554437684
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5263157894736842,
-          "ataque": 0.0,
-          "defesa": 0.19999999999999996,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.3842105263157895
-        },
-        "visitante": {
-          "forma_recente": 0.2368421052631579,
-          "ataque": 0.0,
-          "defesa": 0.19999999999999996,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.26289473684210524
-        }
-      },
-      "leitura_rapida": "Empate favorito (40%, risco alto). Jogo fechado esperado (xG total ≈1.3). Under 2.5 com 86%.",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (4.2 p.p. < 10.0 p.p.)",
-        "competition": "Copa Libertadores",
-        "sport_key": "soccer_conmebol_libertadores",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "17/04 00:30",
-            "mandante": "Peñarol",
-            "visitante": "Platense",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "10/04 00:00",
-            "mandante": "Platense",
-            "visitante": "Corinthians",
-            "placar": "0 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "16/04 00:30",
-            "mandante": "Corinthians",
-            "visitante": "Santa Fe",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "10/04 02:00",
-            "mandante": "Santa Fe",
-            "visitante": "Peñarol",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "X",
-          "probabilidade": 0.39931183683393695,
-          "confianca": "LOW",
-          "justificativa": "Jogo muito equilibrado. Prob empate: 39.9% (margem: 4.2 p.p.)",
-          "edge": 0.0418,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.8593163765350395,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈1.3. UNDER 2.5: 85.9% de probabilidade",
-          "edge": 0.3593,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.7784510554437684,
-          "confianca": "HIGH",
-          "justificativa": "xG: 0.7 (casa) x 0.6 (fora). Ambas marcam - Nao: 77.8%",
-          "edge": 0.2785,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
