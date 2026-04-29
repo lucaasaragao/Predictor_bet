@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29 01:18:27",
+  "generated_at": "2026-04-29 02:06:26",
   "total_jogos": 9,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -18,54 +18,57 @@
         "visitante": "Rosario"
       },
       "probabilidades": {
-        "casa": 0.40034265509788813,
-        "empate": 0.3089559490998985,
-        "visitante": 0.29067848425428106
+        "casa": 0.0288224736008208,
+        "empate": 0.08430554211436136,
+        "visitante": 0.8725464799475504
       },
       "favorito": {
-        "nome": "Universidad Central de Venezuela FC",
-        "prob": 0.40034265509788813,
-        "vantagem": 0.09138670599798965
+        "nome": "Rosario",
+        "prob": 0.8725464799475504,
+        "vantagem": 0.788240937833189
       },
       "gols_esperados": {
-        "casa": 1.089331578947368,
-        "visitante": 0.8807733619763695,
-        "total": 1.9701049409237377
+        "casa": 0.4432869999999999,
+        "visitante": 3.104580498866213,
+        "total": 3.547867498866213
       },
       "mercados": {
-        "under_25": 0.6847904331620891,
-        "over_25": 0.31520956683791096,
-        "btts_yes": 0.38852492372983977,
-        "btts_no": 0.6114750762701602
+        "under_25": 0.3264099152154126,
+        "over_25": 0.6735900847845874,
+        "btts_yes": 0.33689003611403157,
+        "btts_no": 0.6631099638859684
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.4736842105263158,
-          "ataque": 1.0,
-          "defesa": 0.6,
+          "forma_recente": 0.2962962962962963,
+          "ataque": 0.6,
+          "defesa": 0.19999999999999996,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.6957894736842105
+          "score_total": 0.45370370370370366
         },
         "visitante": {
-          "forma_recente": 0.7631578947368421,
-          "ataque": 0.4,
+          "forma_recente": 0.8518518518518517,
+          "ataque": 0.8,
           "defesa": 1.0,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.7071052631578948
+          "score_total": 0.8381481481481482
         }
       },
-      "leitura_rapida": "Universidad Central de Venezuela FC favorito (40%, risco alto). Jogo fechado esperado (xG total ≈2.0). Under 2.5 com 68%.",
+      "leitura_rapida": "Rosario favorito (87%, risco forte). Jogo mais aberto (xG total ≈3.5). Over 2.5 com 67%.",
       "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
+        "casa": "estavel",
+        "visitante": "estavel"
       },
-      "alertas": [],
+      "alertas": [
+        "Universidad Central de Venezuela FC jogou recentemente — possível desgaste físico.",
+        "Rosario jogou recentemente — possível desgaste físico."
+      ],
       "odds_debug": {
         "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (9.1 p.p. < 10.0 p.p.)",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente na consulta por liga",
         "competition": "Copa Libertadores",
         "sport_key": "soccer_conmebol_libertadores",
         "ev_filter": "fail",
@@ -75,6 +78,14 @@
       "odds_valor_alto": false,
       "historico": {
         "casa": [
+          {
+            "data": "29/04 00:00",
+            "mandante": "Universidad Central de Venezuela FC",
+            "visitante": "Rosario",
+            "placar": "0 x 3",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
           {
             "data": "16/04 02:00",
             "mandante": "Independiente",
@@ -93,6 +104,14 @@
           }
         ],
         "visitante": [
+          {
+            "data": "29/04 00:00",
+            "mandante": "Universidad Central de Venezuela FC",
+            "visitante": "Rosario",
+            "placar": "0 x 3",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
           {
             "data": "15/04 22:00",
             "mandante": "Libertad",
@@ -114,11 +133,11 @@
       "palpites": [
         {
           "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.40034265509788813,
-          "confianca": "LOW",
-          "justificativa": "Universidad Central de Venezuela FC projeta ≈1.1 gol(s) vs ≈0.9 do adversário. Prob vitória: 40.0% (margem: 9.1 p.p.)",
-          "edge": 0.0914,
+          "opcao": "2",
+          "probabilidade": 0.8725464799475504,
+          "confianca": "HIGH",
+          "justificativa": "Rosario projeta ≈3.1 gol(s) vs ≈0.4 do adversário. Prob vitória: 87.3% (margem: 78.8 p.p.)",
+          "edge": 0.7882,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -126,11 +145,11 @@
         },
         {
           "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.6847904331620891,
+          "opcao": "OVER",
+          "probabilidade": 0.6735900847845874,
           "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈2.0. UNDER 2.5: 68.5% de probabilidade",
-          "edge": 0.1848,
+          "justificativa": "Gols esperados no jogo: ≈3.5. OVER 2.5: 67.4% de probabilidade",
+          "edge": 0.1736,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
@@ -139,22 +158,10 @@
         {
           "tipo": "BTTS",
           "opcao": "NO",
-          "probabilidade": 0.6114750762701602,
-          "confianca": "MEDIUM",
-          "justificativa": "xG: 1.1 (casa) x 0.9 (fora). Ambas marcam - Nao: 61.1%",
-          "edge": 0.1115,
-          "odd_decimal": null,
-          "ev": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "EMPATE",
-          "opcao": "X",
-          "probabilidade": 0.3089559490998985,
-          "confianca": "LOW",
-          "justificativa": "Ambas defesas solidas (60% / 100% de aproveitamento defensivo). Empate com 30.9% de probabilidade",
-          "edge": 0.0,
+          "probabilidade": 0.6631099638859684,
+          "confianca": "HIGH",
+          "justificativa": "xG: 0.4 (casa) x 3.1 (fora). Ambas marcam - Nao: 66.3%",
+          "edge": 0.1631,
           "odd_decimal": null,
           "ev": null,
           "valor_esperado_positivo": false,
