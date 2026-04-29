@@ -1,370 +1,10 @@
 {
-  "generated_at": "2026-04-29 12:55:48",
-  "total_jogos": 9,
+  "generated_at": "2026-04-29 13:32:32",
+  "total_jogos": 7,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
   "odds_min_ev": 0.03,
   "jogos": [
-    {
-      "competicao": "Copa Libertadores",
-      "data": "2026-04-29T00:00:00Z",
-      "status": "PAUSED",
-      "placar_atual": {
-        "casa": 0,
-        "visitante": 1
-      },
-      "times": {
-        "casa": "Universidad Central de Venezuela FC",
-        "visitante": "Rosario"
-      },
-      "probabilidades": {
-        "casa": 0.23113635590729226,
-        "empate": 0.25412265414762686,
-        "visitante": 0.5145112033954166
-      },
-      "favorito": {
-        "nome": "Rosario",
-        "prob": 0.5145112033954166,
-        "vantagem": 0.2603885492477897
-      },
-      "gols_esperados": {
-        "casa": 0.9558375937500001,
-        "visitante": 1.562264927012472,
-        "total": 2.518102520762472
-      },
-      "mercados": {
-        "under_25": 0.5394077996416646,
-        "over_25": 0.4605922003583353,
-        "btts_yes": 0.48631905879859094,
-        "btts_no": 0.5136809412014091
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.2962962962962963,
-          "ataque": 0.6,
-          "defesa": 0.19999999999999996,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.45370370370370366
-        },
-        "visitante": {
-          "forma_recente": 0.8518518518518517,
-          "ataque": 0.8,
-          "defesa": 1.0,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.8381481481481482
-        }
-      },
-      "leitura_rapida": "Rosario favorito (51%, risco moderado). Mercado de gols equilibrado (xG total ≈2.5).",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [
-        "Universidad Central de Venezuela FC jogou recentemente — possível desgaste físico.",
-        "Rosario jogou recentemente — possível desgaste físico."
-      ],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
-        "competition": "Copa Libertadores",
-        "sport_key": "soccer_conmebol_libertadores",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
-        "pre_match_locked": "true",
-        "pre_match_lock_reason": "snapshot_pre_jogo"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "29/04 00:00",
-            "mandante": "Universidad Central de Venezuela FC",
-            "visitante": "Rosario",
-            "placar": "0 x 3",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "16/04 02:00",
-            "mandante": "Independiente",
-            "visitante": "Universidad Central de Venezuela FC",
-            "placar": "3 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "09/04 22:00",
-            "mandante": "Universidad Central de Venezuela FC",
-            "visitante": "Libertad",
-            "placar": "3 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "29/04 00:00",
-            "mandante": "Universidad Central de Venezuela FC",
-            "visitante": "Rosario",
-            "placar": "0 x 3",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "15/04 22:00",
-            "mandante": "Libertad",
-            "visitante": "Rosario",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "09/04 22:00",
-            "mandante": "Rosario",
-            "visitante": "Independiente",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "2",
-          "probabilidade": 0.5145112033954166,
-          "confianca": "HIGH",
-          "justificativa": "Rosario projeta ≈1.6 gol(s) vs ≈1.0 do adversário. Prob vitória: 51.5% (margem: 26.0 p.p.)",
-          "edge": 0.2604,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.5394077996416646,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.5. UNDER 2.5: 53.9% de probabilidade",
-          "edge": 0.0394,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.5136809412014091,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.0 (casa) x 1.6 (fora). Ambas marcam - Nao: 51.4%",
-          "edge": 0.0137,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Copa Libertadores",
-      "data": "2026-04-29T00:30:00Z",
-      "status": "IN_PLAY",
-      "placar_atual": {
-        "casa": 0,
-        "visitante": 0
-      },
-      "times": {
-        "casa": "Cruzeiro",
-        "visitante": "Boca Juniors"
-      },
-      "probabilidades": {
-        "casa": 0.5476570849586941,
-        "empate": 0.2654487393029451,
-        "visitante": 0.1867437870180856
-      },
-      "favorito": {
-        "nome": "Cruzeiro",
-        "prob": 0.5476570849586941,
-        "vantagem": 0.28220834565574904
-      },
-      "gols_esperados": {
-        "casa": 1.471764630867347,
-        "visitante": 0.735211330782313,
-        "total": 2.2069759616496603
-      },
-      "mercados": {
-        "under_25": 0.6209941782099437,
-        "over_25": 0.3790058217900562,
-        "btts_yes": 0.40103007715636035,
-        "btts_no": 0.5989699228436396
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.7636363636363637,
-          "ataque": 0.6,
-          "defesa": 0.8,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.7372727272727273
-        },
-        "visitante": {
-          "forma_recente": 0.6296296296296297,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.5803703703703704
-        }
-      },
-      "leitura_rapida": "Cruzeiro favorito (55%, risco moderado). Jogo fechado esperado (xG total ≈2.2). Under 2.5 com 62%. | Forma recente: Cruzeiro em alta.",
-      "tendencia": {
-        "casa": "em alta",
-        "visitante": "estavel"
-      },
-      "alertas": [
-        "Cruzeiro jogou recentemente — possível desgaste físico.",
-        "Boca Juniors jogou recentemente — possível desgaste físico."
-      ],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
-        "competition": "Copa Libertadores",
-        "sport_key": "soccer_conmebol_libertadores",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
-        "pre_match_locked": "true",
-        "pre_match_lock_reason": "snapshot_pre_jogo"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "29/04 00:30",
-            "mandante": "Cruzeiro",
-            "visitante": "Boca Juniors",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "25/04 21:30",
-            "mandante": "Clube do Remo",
-            "visitante": "Cruzeiro",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "18/04 23:30",
-            "mandante": "Cruzeiro",
-            "visitante": "Grêmio",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "15/04 22:00",
-            "mandante": "Cruzeiro",
-            "visitante": "Univ Católica",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "12/04 21:30",
-            "mandante": "Cruzeiro",
-            "visitante": "Bragantino",
-            "placar": "2 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "29/04 00:30",
-            "mandante": "Cruzeiro",
-            "visitante": "Boca Juniors",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "15/04 00:00",
-            "mandante": "Boca Juniors",
-            "visitante": "Barcelona SC",
-            "placar": "3 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "08/04 00:30",
-            "mandante": "Univ Católica",
-            "visitante": "Boca Juniors",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.5476570849586941,
-          "confianca": "HIGH",
-          "justificativa": "Cruzeiro projeta ≈1.5 gol(s) vs ≈0.7 do adversário. Prob vitória: 54.8% (margem: 28.2 p.p.)",
-          "edge": 0.2822,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.6209941782099437,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈2.2. UNDER 2.5: 62.1% de probabilidade",
-          "edge": 0.121,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.5989699228436396,
-          "confianca": "MEDIUM",
-          "justificativa": "xG: 1.5 (casa) x 0.7 (fora). Ambas marcam - Nao: 59.9%",
-          "edge": 0.099,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
     {
       "competicao": "Copa Libertadores",
       "data": "2026-04-29T02:00:00Z",
@@ -1107,9 +747,9 @@
           "justificativa": "Sporting CP projeta ≈2.4 gol(s) vs ≈1.0 do adversário. Prob vitória: 69.2% (margem: 52.0 p.p.)",
           "edge": 0.5205,
           "odd_decimal": 1.14,
-          "ev": -0.2151,
+          "ev": -0.2161,
           "ev_bruto": -0.211,
-          "prob_mercado_justa": 0.8817,
+          "prob_mercado_justa": 0.8829,
           "valor_esperado_positivo": false,
           "resultado_verificador": null
         },
@@ -1134,157 +774,6 @@
           "confianca": "LOW",
           "justificativa": "xG: 2.4 (casa) x 1.0 (fora). Ambas marcam - Sim: 56.8%",
           "edge": 0.0683,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Copa Libertadores",
-      "data": "2026-04-29T22:00:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "Platense",
-        "visitante": "Santa Fe"
-      },
-      "probabilidades": {
-        "casa": 0.44584039271434583,
-        "empate": 0.2733097716596083,
-        "visitante": 0.28075187756683206
-      },
-      "favorito": {
-        "nome": "Platense",
-        "prob": 0.44584039271434583,
-        "vantagem": 0.16508851514751377
-      },
-      "gols_esperados": {
-        "casa": 1.3575132631578948,
-        "visitante": 1.016842105263158,
-        "total": 2.3743553684210528
-      },
-      "mercados": {
-        "under_25": 0.5765209005042262,
-        "over_25": 0.4234790994957737,
-        "btts_yes": 0.4739754604793682,
-        "btts_no": 0.5260245395206318
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5263157894736842,
-          "ataque": 0.0,
-          "defesa": 0.19999999999999996,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.3842105263157895
-        },
-        "visitante": {
-          "forma_recente": 0.2368421052631579,
-          "ataque": 0.0,
-          "defesa": 0.19999999999999996,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.26289473684210524
-        }
-      },
-      "leitura_rapida": "Platense favorito (45%, risco alto). Mercado de gols equilibrado (xG total ≈2.4).",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
-        "competition": "Copa Libertadores",
-        "sport_key": "soccer_conmebol_libertadores",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "17/04 00:30",
-            "mandante": "Peñarol",
-            "visitante": "Platense",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "10/04 00:00",
-            "mandante": "Platense",
-            "visitante": "Corinthians",
-            "placar": "0 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "16/04 00:30",
-            "mandante": "Corinthians",
-            "visitante": "Santa Fe",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "10/04 02:00",
-            "mandante": "Santa Fe",
-            "visitante": "Peñarol",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.44584039271434583,
-          "confianca": "MEDIUM",
-          "justificativa": "Platense projeta ≈1.4 gol(s) vs ≈1.0 do adversário. Prob vitória: 44.6% (margem: 16.5 p.p.)",
-          "edge": 0.1651,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.5765209005042262,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈2.4. UNDER 2.5: 57.7% de probabilidade",
-          "edge": 0.0765,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.5260245395206318,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.4 (casa) x 1.0 (fora). Ambas marcam - Nao: 52.6%",
-          "edge": 0.026,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
@@ -1476,6 +965,157 @@
           "confianca": "LOW",
           "justificativa": "Ambas defesas solidas (60% / 60% de aproveitamento defensivo). Empate com 33.6% de probabilidade",
           "edge": 0.0,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Copa Libertadores",
+      "data": "2026-04-29T22:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Platense",
+        "visitante": "Santa Fe"
+      },
+      "probabilidades": {
+        "casa": 0.44584039271434583,
+        "empate": 0.2733097716596083,
+        "visitante": 0.28075187756683206
+      },
+      "favorito": {
+        "nome": "Platense",
+        "prob": 0.44584039271434583,
+        "vantagem": 0.16508851514751377
+      },
+      "gols_esperados": {
+        "casa": 1.3575132631578948,
+        "visitante": 1.016842105263158,
+        "total": 2.3743553684210528
+      },
+      "mercados": {
+        "under_25": 0.5765209005042262,
+        "over_25": 0.4234790994957737,
+        "btts_yes": 0.4739754604793682,
+        "btts_no": 0.5260245395206318
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.5263157894736842,
+          "ataque": 0.0,
+          "defesa": 0.19999999999999996,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.3842105263157895
+        },
+        "visitante": {
+          "forma_recente": 0.2368421052631579,
+          "ataque": 0.0,
+          "defesa": 0.19999999999999996,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.26289473684210524
+        }
+      },
+      "leitura_rapida": "Platense favorito (45%, risco alto). Mercado de gols equilibrado (xG total ≈2.4).",
+      "tendencia": {
+        "casa": "indefinida",
+        "visitante": "indefinida"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente na consulta por liga",
+        "competition": "Copa Libertadores",
+        "sport_key": "soccer_conmebol_libertadores",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "17/04 00:30",
+            "mandante": "Peñarol",
+            "visitante": "Platense",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "10/04 00:00",
+            "mandante": "Platense",
+            "visitante": "Corinthians",
+            "placar": "0 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "16/04 00:30",
+            "mandante": "Corinthians",
+            "visitante": "Santa Fe",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "10/04 02:00",
+            "mandante": "Santa Fe",
+            "visitante": "Peñarol",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.44584039271434583,
+          "confianca": "MEDIUM",
+          "justificativa": "Platense projeta ≈1.4 gol(s) vs ≈1.0 do adversário. Prob vitória: 44.6% (margem: 16.5 p.p.)",
+          "edge": 0.1651,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER",
+          "probabilidade": 0.5765209005042262,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈2.4. UNDER 2.5: 57.7% de probabilidade",
+          "edge": 0.0765,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.5260245395206318,
+          "confianca": "LOW",
+          "justificativa": "xG: 1.4 (casa) x 1.0 (fora). Ambas marcam - Nao: 52.6%",
+          "edge": 0.026,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
