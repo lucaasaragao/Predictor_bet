@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29 04:49:14",
+  "generated_at": "2026-04-29 07:06:01",
   "total_jogos": 9,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -8,10 +8,10 @@
     {
       "competicao": "Copa Libertadores",
       "data": "2026-04-29T00:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 1
       },
       "times": {
         "casa": "Universidad Central de Venezuela FC",
@@ -72,7 +72,9 @@
         "competition": "Copa Libertadores",
         "sport_key": "soccer_conmebol_libertadores",
         "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
@@ -178,10 +180,10 @@
     {
       "competicao": "Copa Libertadores",
       "data": "2026-04-29T00:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Cruzeiro",
@@ -242,7 +244,9 @@
         "competition": "Copa Libertadores",
         "sport_key": "soccer_conmebol_libertadores",
         "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
@@ -1102,10 +1106,10 @@
           "confianca": "HIGH",
           "justificativa": "Sporting CP projeta ≈2.4 gol(s) vs ≈1.0 do adversário. Prob vitória: 69.2% (margem: 52.0 p.p.)",
           "edge": 0.5205,
-          "odd_decimal": 1.14,
-          "ev": -0.2095,
-          "ev_bruto": -0.211,
-          "prob_mercado_justa": 0.8755,
+          "odd_decimal": 1.15,
+          "ev": -0.2054,
+          "ev_bruto": -0.2041,
+          "prob_mercado_justa": 0.871,
           "valor_esperado_positivo": false,
           "resultado_verificador": null
         },
