@@ -12,7 +12,7 @@ import unicodedata
 import requests
 from datetime import datetime, timedelta
 from typing import Optional, List, Dict, Tuple
-from math import factorial, e
+from math import factorial, e, log
 from dataclasses import dataclass, asdict, field
 
 TOKEN_ENV_VAR = "FOOTBALL_DATA_TOKEN"
@@ -38,6 +38,9 @@ ODDS_ONLY_VALUE_GAMES = os.getenv("ODDS_ONLY_VALUE_GAMES", "true").lower() == "t
 ODDS_MAX_SPORT_CALLS = int(os.getenv("ODDS_MAX_SPORT_CALLS", "3"))
 ODDS_USE_UPCOMING = os.getenv("ODDS_USE_UPCOMING", "true").lower() == "true"
 ODDS_DEBUG_VISUAL = os.getenv("ODDS_DEBUG_VISUAL", "false").lower() == "true"
+SHRINKAGE_K_JOGOS = float(os.getenv("SHRINKAGE_K_JOGOS", "6"))
+SHRINKAGE_PESO_MIN = float(os.getenv("SHRINKAGE_PESO_MIN", "0.20"))
+EVAL_EPSILON = 1e-6
 
 COMPETICAO_PARA_ODDS_SPORT = {
     "Premier League": "soccer_epl",
@@ -120,6 +123,8 @@ COMPETICOES_PERMITIDAS = {
     "Ligue 1",
 }
 
+PRE_MATCH_STATUSES = {"SCHEDULED", "TIMED"}
+
 
 @dataclass
 class EstatisticaTime:
@@ -179,6 +184,8 @@ class BetSuggestion:
     edge: float = 0.0          # margem de vantagem sobre a segunda melhor opção
     odd_decimal: Optional[float] = None
     ev: Optional[float] = None
+    ev_bruto: Optional[float] = None
+    prob_mercado_justa: Optional[float] = None
     valor_esperado_positivo: bool = False
     resultado_verificador: Optional[str] = None
 
@@ -290,6 +297,24 @@ def calcular_estatisticas(historico: List[Dict], team_id: int, eh_em_casa: bool)
         cartoes_media=2.0,      # Placeholder
         jogos=len(gols_marcados)
     )
+
+
+def _media_com_shrinkage(media_time: float, media_liga: float, jogos: int) -> float:
+    """Combina média do time com média da liga para reduzir ruido em amostra curta."""
+    if jogos <= 0:
+        return media_liga
+
+    if SHRINKAGE_K_JOGOS <= 0:
+        peso_time = 1.0
+    else:
+        peso_time = jogos / (jogos + SHRINKAGE_K_JOGOS)
+
+    peso_time = max(SHRINKAGE_PESO_MIN, min(1.0, peso_time))
+    return (peso_time * media_time) + ((1.0 - peso_time) * media_liga)
+
+
+def _clip_probabilidade(prob: float, epsilon: float = EVAL_EPSILON) -> float:
+    return max(epsilon, min(1.0 - epsilon, prob))
 
 
 def detectar_fadiga(historico: List[Dict], data_jogo_utc: str) -> float:
@@ -714,6 +739,51 @@ def _mapear_opcao_para_nome(opcao: str, pred: PredicaoJogo) -> str:
     return ""
 
 
+def _probabilidades_justas_1x2(pred: PredicaoJogo) -> Dict[str, float]:
+    """Converte odds 1X2 em probabilidades justas (sem overround / de-vig)."""
+    odds_h2h = pred.odds_h2h or {}
+
+    def _buscar_odd(opcao: str) -> Optional[float]:
+        nome_alvo = _mapear_opcao_para_nome(opcao, pred)
+        if not nome_alvo:
+            return None
+
+        for nome_odds, odd in odds_h2h.items():
+            if _nomes_equivalentes(nome_odds, nome_alvo):
+                try:
+                    odd_decimal = float(odd)
+                except (TypeError, ValueError):
+                    return None
+                return odd_decimal if odd_decimal > 1.0 else None
+
+        if opcao == "X":
+            for nome_odds, odd in odds_h2h.items():
+                if _normalizar_nome_time(nome_odds) in ("draw", "empate"):
+                    try:
+                        odd_decimal = float(odd)
+                    except (TypeError, ValueError):
+                        return None
+                    return odd_decimal if odd_decimal > 1.0 else None
+        return None
+
+    odd_1 = _buscar_odd("1")
+    odd_x = _buscar_odd("X")
+    odd_2 = _buscar_odd("2")
+    if not odd_1 or not odd_x or not odd_2:
+        return {}
+
+    inv = {
+        "1": 1.0 / odd_1,
+        "X": 1.0 / odd_x,
+        "2": 1.0 / odd_2,
+    }
+    soma_inv = sum(inv.values())
+    if soma_inv <= 0:
+        return {}
+
+    return {opcao: valor / soma_inv for opcao, valor in inv.items()}
+
+
 def aplicar_odds_e_valor(predicoes: List[PredicaoJogo]) -> List[PredicaoJogo]:
     for pred in predicoes:
         pred.odds_debug = {
@@ -859,11 +929,17 @@ def prever_jogo(match: Dict) -> PredicaoJogo:
     media_liga = MEDIA_GOLS_LIGA.get(competicao_nome, MEDIA_GOLS_DEFAULT)
     media_por_time = media_liga / 2.0  # média de gols marcados por time por jogo na liga
 
+    # Shrinkage: reduz volatilidade quando há poucos jogos casa/fora no recorte.
+    home_marcados_aj = _media_com_shrinkage(stats_home.gols_marcados_media, media_por_time, stats_home.jogos)
+    home_sofridos_aj = _media_com_shrinkage(stats_home.gols_sofridos_media, media_por_time, stats_home.jogos)
+    away_marcados_aj = _media_com_shrinkage(stats_away.gols_marcados_media, media_por_time, stats_away.jogos)
+    away_sofridos_aj = _media_com_shrinkage(stats_away.gols_sofridos_media, media_por_time, stats_away.jogos)
+
     # Força ofensiva/defensiva relativa à média da liga
-    atk_home = stats_home.gols_marcados_media / media_por_time if media_por_time else 1.0
-    def_home = stats_home.gols_sofridos_media / media_por_time if media_por_time else 1.0
-    atk_away = stats_away.gols_marcados_media / media_por_time if media_por_time else 1.0
-    def_away = stats_away.gols_sofridos_media / media_por_time if media_por_time else 1.0
+    atk_home = home_marcados_aj / media_por_time if media_por_time else 1.0
+    def_home = home_sofridos_aj / media_por_time if media_por_time else 1.0
+    atk_away = away_marcados_aj / media_por_time if media_por_time else 1.0
+    def_away = away_sofridos_aj / media_por_time if media_por_time else 1.0
 
     # Clamp: evitar distorções com poucos jogos no histórico
     atk_home = max(CLAMP_FORCA_MIN, min(atk_home, CLAMP_FORCA_MAX))
@@ -948,6 +1024,8 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
                     return float(odd)
         return None
 
+    probs_mercado_justas = _probabilidades_justas_1x2(predicao)
+
     # ── Palpite: Vencedor ──────────────────────────────────────────────────────
     probs_1x2 = sorted(
         [(predicao.prob_casa, "1"), (predicao.prob_empate, "X"), (predicao.prob_visitante, "2")],
@@ -996,7 +1074,13 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
 
     p_winner = palpites[-1]
     if p_winner.odd_decimal is not None:
-        p_winner.ev = round((p_winner.probabilidade * p_winner.odd_decimal) - 1.0, 4)
+        p_winner.ev_bruto = round((p_winner.probabilidade * p_winner.odd_decimal) - 1.0, 4)
+        prob_justa = probs_mercado_justas.get(p_winner.opcao)
+        if prob_justa is not None and prob_justa > 0:
+            p_winner.prob_mercado_justa = round(prob_justa, 4)
+            p_winner.ev = round((p_winner.probabilidade / prob_justa) - 1.0, 4)
+        else:
+            p_winner.ev = p_winner.ev_bruto
         p_winner.valor_esperado_positivo = bool(p_winner.ev >= ODDS_MIN_EV)
 
     # ── Palpite: Over/Under 2.5 ────────────────────────────────────────────────
@@ -1076,7 +1160,13 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
 
         p_emp = palpites[-1]
         if p_emp.odd_decimal is not None:
-            p_emp.ev = round((p_emp.probabilidade * p_emp.odd_decimal) - 1.0, 4)
+            p_emp.ev_bruto = round((p_emp.probabilidade * p_emp.odd_decimal) - 1.0, 4)
+            prob_justa = probs_mercado_justas.get("X")
+            if prob_justa is not None and prob_justa > 0:
+                p_emp.prob_mercado_justa = round(prob_justa, 4)
+                p_emp.ev = round((p_emp.probabilidade / prob_justa) - 1.0, 4)
+            else:
+                p_emp.ev = p_emp.ev_bruto
             p_emp.valor_esperado_positivo = bool(p_emp.ev >= ODDS_MIN_EV)
 
     if predicao.status == "FINISHED" and predicao.placar_casa is not None and predicao.placar_visitante is not None:
@@ -1171,6 +1261,140 @@ def _normalizar_historico_para_front(historico: List[Dict], team_name: str, limi
         )
 
     return historico_saida
+
+
+def _normalizar_data_chave(data_utc: str) -> str:
+    """Normaliza data para chave estável de identificação de jogo."""
+    texto = str(data_utc or "")
+    if not texto:
+        return ""
+    try:
+        dt = datetime.fromisoformat(texto.replace("Z", "+00:00"))
+        return dt.strftime("%Y-%m-%dT%H:%M")
+    except ValueError:
+        return texto[:16]
+
+
+def _chave_jogo(data_utc: str, time_casa: str, time_visitante: str) -> str:
+    data_norm = _normalizar_data_chave(data_utc)
+    casa_norm = _normalizar_nome_time(time_casa)
+    visit_norm = _normalizar_nome_time(time_visitante)
+    return f"{data_norm}|{casa_norm}|{visit_norm}"
+
+
+def _carregar_snapshots_pre_jogo(caminho_predicoes: str) -> Dict[str, Dict]:
+    """Carrega snapshot do estado pré-jogo salvo no predictions.json anterior."""
+    try:
+        with open(caminho_predicoes, "r", encoding="utf-8") as arquivo:
+            dados = json.load(arquivo)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+    snapshots: Dict[str, Dict] = {}
+    for jogo in dados.get("jogos", []):
+        status = str(jogo.get("status", "")).upper()
+        if status not in PRE_MATCH_STATUSES:
+            continue
+
+        times = jogo.get("times", {})
+        probs = jogo.get("probabilidades", {})
+        gols_esp = jogo.get("gols_esperados", {})
+        scores = jogo.get("scores", {})
+
+        chave = _chave_jogo(
+            jogo.get("data", ""),
+            times.get("casa", ""),
+            times.get("visitante", ""),
+        )
+        if not chave:
+            continue
+
+        snapshots[chave] = {
+            "prob_casa": probs.get("casa"),
+            "prob_empate": probs.get("empate"),
+            "prob_visitante": probs.get("visitante"),
+            "gols_casa": gols_esp.get("casa"),
+            "gols_visitante": gols_esp.get("visitante"),
+            "score_casa": scores.get("casa", {}),
+            "score_visitante": scores.get("visitante", {}),
+            "tendencia": jogo.get("tendencia", {}),
+        }
+
+    return snapshots
+
+
+def congelar_modelo_pre_jogo(predicoes: List[PredicaoJogo], caminho_predicoes: str = "predictions.json") -> List[PredicaoJogo]:
+    """Evita drift de favorito após início da partida usando snapshot pré-jogo.
+
+    Regras:
+    - Jogos pré-jogo (SCHEDULED/TIMED): seguem cálculo atual.
+    - Jogos iniciados/finalizados: usam snapshot pré-jogo salvo anteriormente.
+    - Jogos iniciados sem snapshot: removidos da saída para não contaminar métricas.
+    """
+    snapshots = _carregar_snapshots_pre_jogo(caminho_predicoes)
+    if not snapshots:
+        return predicoes
+
+    saida: List[PredicaoJogo] = []
+    travados = 0
+    removidos_sem_baseline = 0
+
+    for pred in predicoes:
+        status = str(pred.status or "").upper()
+        if status in PRE_MATCH_STATUSES:
+            saida.append(pred)
+            continue
+
+        chave = _chave_jogo(pred.data_jogo, pred.time_casa, pred.time_visitante)
+        snap = snapshots.get(chave)
+        if not snap:
+            removidos_sem_baseline += 1
+            continue
+
+        try:
+            pred.prob_casa = float(snap.get("prob_casa", pred.prob_casa))
+            pred.prob_empate = float(snap.get("prob_empate", pred.prob_empate))
+            pred.prob_visitante = float(snap.get("prob_visitante", pred.prob_visitante))
+            pred.gols_esperados_casa = float(snap.get("gols_casa", pred.gols_esperados_casa))
+            pred.gols_esperados_visitante = float(snap.get("gols_visitante", pred.gols_esperados_visitante))
+        except (TypeError, ValueError):
+            pass
+
+        score_casa = snap.get("score_casa", {}) or {}
+        score_visitante = snap.get("score_visitante", {}) or {}
+
+        pred.score_casa = ScoreTempo(
+            forma_recente=float(score_casa.get("forma_recente", pred.score_casa.forma_recente)),
+            ataque=float(score_casa.get("ataque", pred.score_casa.ataque)),
+            defesa=float(score_casa.get("defesa", pred.score_casa.defesa)),
+            fator_mando=float(score_casa.get("fator_mando", pred.score_casa.fator_mando)),
+            h2h_factor=float(score_casa.get("h2h_factor", pred.score_casa.h2h_factor)),
+            score_total=float(score_casa.get("score_total", pred.score_casa.score_total)),
+        )
+        pred.score_visitante = ScoreTempo(
+            forma_recente=float(score_visitante.get("forma_recente", pred.score_visitante.forma_recente)),
+            ataque=float(score_visitante.get("ataque", pred.score_visitante.ataque)),
+            defesa=float(score_visitante.get("defesa", pred.score_visitante.defesa)),
+            fator_mando=float(score_visitante.get("fator_mando", pred.score_visitante.fator_mando)),
+            h2h_factor=float(score_visitante.get("h2h_factor", pred.score_visitante.h2h_factor)),
+            score_total=float(score_visitante.get("score_total", pred.score_visitante.score_total)),
+        )
+
+        tendencia = snap.get("tendencia", {}) or {}
+        pred.tendencia_casa = str(tendencia.get("casa", pred.tendencia_casa))
+        pred.tendencia_visitante = str(tendencia.get("visitante", pred.tendencia_visitante))
+
+        pred.odds_debug["pre_match_locked"] = "true"
+        pred.odds_debug["pre_match_lock_reason"] = "snapshot_pre_jogo"
+        travados += 1
+        saida.append(pred)
+
+    if travados:
+        print(f"🔒 Predições travadas no baseline pré-jogo para {travados} jogo(s) iniciado(s)/finalizado(s).")
+    if removidos_sem_baseline:
+        print(f"⚠️  {removidos_sem_baseline} jogo(s) iniciado(s)/finalizado(s) sem baseline pré-jogo foram ignorados para evitar viés.")
+
+    return saida
 
 
 def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str = "predictions.json") -> None:
@@ -1350,6 +1574,11 @@ def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.j
     ]
 
     mercados_stats: Dict[str, Dict] = {}
+    metricas_prob = {
+        "1X2": {"n": 0, "brier_soma": 0.0, "logloss_soma": 0.0},
+        "OVER_UNDER": {"n": 0, "brier_soma": 0.0, "logloss_soma": 0.0},
+        "BTTS": {"n": 0, "brier_soma": 0.0, "logloss_soma": 0.0},
+    }
     jogos_dia = []
     total_acertos = 0
     total_com_resultado = 0
@@ -1385,8 +1614,61 @@ def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.j
                 total_acertos += 1
             total_com_resultado += 1
 
+        total_gols = predicao_finalizada.placar_casa + predicao_finalizada.placar_visitante
+        mercados_partida = calcular_probabilidades_mercado(
+            predicao_finalizada.gols_esperados_casa,
+            predicao_finalizada.gols_esperados_visitante,
+        )
+
+        # Avaliacao probabilistica multiclasse para 1X2.
+        if predicao_finalizada.placar_casa > predicao_finalizada.placar_visitante:
+            idx_real = 0
+        elif predicao_finalizada.placar_casa == predicao_finalizada.placar_visitante:
+            idx_real = 1
+        else:
+            idx_real = 2
+
+        probs_1x2 = [
+            predicao_finalizada.prob_casa,
+            predicao_finalizada.prob_empate,
+            predicao_finalizada.prob_visitante,
+        ]
+        one_hot_1x2 = [1.0 if i == idx_real else 0.0 for i in range(3)]
+        brier_1x2 = sum((probs_1x2[i] - one_hot_1x2[i]) ** 2 for i in range(3))
+        logloss_1x2 = -log(_clip_probabilidade(probs_1x2[idx_real]))
+        metricas_prob["1X2"]["n"] += 1
+        metricas_prob["1X2"]["brier_soma"] += brier_1x2
+        metricas_prob["1X2"]["logloss_soma"] += logloss_1x2
+
+        # Avaliacao binaria para OVER/UNDER 2.5.
+        y_over = 1.0 if total_gols > 2.5 else 0.0
+        p_over = _clip_probabilidade(mercados_partida["over_25"])
+        brier_over = (p_over - y_over) ** 2
+        logloss_over = -(y_over * log(p_over) + (1.0 - y_over) * log(1.0 - p_over))
+        metricas_prob["OVER_UNDER"]["n"] += 1
+        metricas_prob["OVER_UNDER"]["brier_soma"] += brier_over
+        metricas_prob["OVER_UNDER"]["logloss_soma"] += logloss_over
+
+        # Avaliacao binaria para BTTS.
+        y_btts = 1.0 if (predicao_finalizada.placar_casa > 0 and predicao_finalizada.placar_visitante > 0) else 0.0
+        p_btts = _clip_probabilidade(mercados_partida["btts_yes"])
+        brier_btts = (p_btts - y_btts) ** 2
+        logloss_btts = -(y_btts * log(p_btts) + (1.0 - y_btts) * log(1.0 - p_btts))
+        metricas_prob["BTTS"]["n"] += 1
+        metricas_prob["BTTS"]["brier_soma"] += brier_btts
+        metricas_prob["BTTS"]["logloss_soma"] += logloss_btts
+
     for estatisticas in mercados_stats.values():
         estatisticas["taxa"] = round(estatisticas["acertos"] / estatisticas["total"], 3) if estatisticas["total"] else 0.0
+
+    metricas_prob_resumo: Dict[str, Dict[str, Optional[float]]] = {}
+    for mercado, valores in metricas_prob.items():
+        n = valores["n"]
+        metricas_prob_resumo[mercado] = {
+            "n": n,
+            "brier": round(valores["brier_soma"] / n, 4) if n else None,
+            "log_loss": round(valores["logloss_soma"] / n, 4) if n else None,
+        }
 
     entrada = {
         "data": hoje,
@@ -1396,6 +1678,7 @@ def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.j
         "total_acertos": total_acertos,
         "total_palpites": total_com_resultado,
         "mercados": mercados_stats,
+        "metricas_probabilisticas": metricas_prob_resumo,
         "jogos": jogos_dia,
     }
 
@@ -1412,7 +1695,14 @@ def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.j
         json.dump(historico, arquivo_escrita, ensure_ascii=False, indent=2)
 
     if total_com_resultado:
-        print(f"📈 Histórico: {total_acertos}/{total_com_resultado} acertos hoje ({entrada['taxa_geral']*100:.0f}%) → {caminho}")
+        brier_1x2 = entrada["metricas_probabilisticas"]["1X2"]["brier"]
+        logloss_1x2 = entrada["metricas_probabilisticas"]["1X2"]["log_loss"]
+        print(
+            f"📈 Histórico: {total_acertos}/{total_com_resultado} acertos hoje ({entrada['taxa_geral']*100:.0f}%)"
+            f" | Brier 1X2: {brier_1x2 if brier_1x2 is not None else '-'}"
+            f" | LogLoss 1X2: {logloss_1x2 if logloss_1x2 is not None else '-'}"
+            f" → {caminho}"
+        )
     else:
         print(f"📈 Histórico atualizado ({len(finalizados)} finalizado(s), sem resultado verificável ainda) → {caminho}")
 
@@ -1470,7 +1760,14 @@ def exibir_predicoes(predicoes: List[PredicaoJogo]) -> None:
             extra = ""
             if p.odd_decimal is not None and p.ev is not None:
                 sinal_valor = "💰" if p.valor_esperado_positivo else ""
-                extra = f" | odd {p.odd_decimal:.2f} | EV {p.ev*100:.1f}% {sinal_valor}"
+                if p.ev_bruto is not None and abs(p.ev - p.ev_bruto) > 1e-9:
+                    extra = (
+                        f" | odd {p.odd_decimal:.2f}"
+                        f" | EV justo {p.ev*100:.1f}%"
+                        f" | EV bruto {p.ev_bruto*100:.1f}% {sinal_valor}"
+                    )
+                else:
+                    extra = f" | odd {p.odd_decimal:.2f} | EV {p.ev*100:.1f}% {sinal_valor}"
             print(f"     {icon_conf} [{p.tipo}] {p.opcao}: {p.probabilidade*100:.1f}% ({p.confianca}) - {p.justificativa}{extra}")
         
         print("\n" + "-" * 100 + "\n")
@@ -1505,6 +1802,12 @@ def main():
         return
 
     predicoes.sort(key=lambda p: p.data_jogo)
+    predicoes = congelar_modelo_pre_jogo(predicoes, "predictions.json")
+
+    if not predicoes:
+        print("ℹ️  Nenhum jogo elegível após aplicar baseline pré-jogo.")
+        exportar_predicoes_front([], "predictions.json")
+        return
 
     exibir_predicoes(predicoes)
     exportar_predicoes_front(predicoes, "predictions.json")
