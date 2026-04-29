@@ -10,7 +10,8 @@ import time
 import unicodedata
 
 import requests
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 from typing import Optional, List, Dict, Tuple
 from math import factorial, e, log
 from dataclasses import dataclass, asdict, field
@@ -106,6 +107,9 @@ MEDIA_GOLS_LIGA: dict[str, float] = {
     "Eredivisie": 3.12,
 }
 MEDIA_GOLS_DEFAULT = 2.55  # fallback para ligas sem mapeamento
+
+# Timezone oficial da aplicação para definir "jogos de hoje" no Brasil.
+APP_TIMEZONE = ZoneInfo(os.getenv("APP_TIMEZONE", "America/Sao_Paulo"))
 
 # Competições permitidas
 COMPETICOES_PERMITIDAS = {
@@ -211,18 +215,41 @@ def buscar_jogos_permitidos() -> List[Dict]:
     todos_matches = dados.get("matches", [])
     print(f"🔎 API retornou {len(todos_matches)} jogo(s) no período.")
 
+    hoje_local = datetime.now(APP_TIMEZONE).date()
+
+    def data_local_jogo(match: Dict) -> Optional[datetime.date]:
+        data_utc = str(match.get("utcDate", "") or "")
+        if not data_utc:
+            return None
+        try:
+            dt = datetime.fromisoformat(data_utc.replace("Z", "+00:00"))
+        except ValueError:
+            return None
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(APP_TIMEZONE).date()
+
     # Filtrar por competições permitidas
     jogos_permitidos = []
     competicoes_rejeitadas = set()
+    jogos_fora_do_dia_local = 0
     for match in todos_matches:
         competicao = match.get("competition", {}).get("name", "")
-        if competicao in COMPETICOES_PERMITIDAS:
-            jogos_permitidos.append(match)
-        else:
+        if competicao not in COMPETICOES_PERMITIDAS:
             competicoes_rejeitadas.add(competicao)
+            continue
+
+        data_jogo_local = data_local_jogo(match)
+        if data_jogo_local != hoje_local:
+            jogos_fora_do_dia_local += 1
+            continue
+
+        jogos_permitidos.append(match)
 
     if competicoes_rejeitadas:
         print(f"⚠️  Competições ignoradas (não estão na lista permitida): {sorted(competicoes_rejeitadas)}")
+    if jogos_fora_do_dia_local:
+        print(f"🗓️  {jogos_fora_do_dia_local} jogo(s) ignorado(s) por não serem do dia local ({hoje_local}).")
 
     print(f"✅ {len(jogos_permitidos)} jogo(s) encontrado(s) nas competições permitidas.")
     return jogos_permitidos
