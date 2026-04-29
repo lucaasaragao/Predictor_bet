@@ -1,571 +1,10 @@
 {
-  "generated_at": "2026-04-29 19:32:47",
-  "total_jogos": 5,
+  "generated_at": "2026-04-29 20:05:50",
+  "total_jogos": 3,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
   "odds_min_ev": 0.03,
   "jogos": [
-    {
-      "competicao": "UEFA Champions League",
-      "data": "2026-04-29T19:00:00Z",
-      "status": "IN_PLAY",
-      "placar_atual": {
-        "casa": 0,
-        "visitante": 0
-      },
-      "times": {
-        "casa": "Atleti",
-        "visitante": "Arsenal"
-      },
-      "probabilidades": {
-        "casa": 0.4394960091267236,
-        "empate": 0.2492313495557791,
-        "visitante": 0.311009338786493
-      },
-      "favorito": {
-        "nome": "Atleti",
-        "prob": 0.4394960091267236,
-        "vantagem": 0.1284866703402306
-      },
-      "gols_esperados": {
-        "casa": 1.549221285123967,
-        "visitante": 1.2640453794139745,
-        "total": 2.8132666645379416
-      },
-      "mercados": {
-        "under_25": 0.46656054849388684,
-        "over_25": 0.5334394515061132,
-        "btts_yes": 0.5648938397435961,
-        "btts_no": 0.4351061602564039
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.34545454545454546,
-          "ataque": 0.8800000000000001,
-          "defesa": 0.36,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.572909090909091
-        },
-        "visitante": {
-          "forma_recente": 0.6090909090909091,
-          "ataque": 0.4,
-          "defesa": 0.7,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.5931818181818183
-        }
-      },
-      "leitura_rapida": "Atleti favorito (44%, risco alto). Mercado de gols equilibrado (xG total ≈2.8).",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [
-        "Atleti jogou recentemente — possível desgaste físico.",
-        "Arsenal jogou recentemente — possível desgaste físico."
-      ],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "UEFA Champions League",
-        "sport_key": "soccer_uefa_champs_league",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
-        "pre_match_locked": "true",
-        "pre_match_lock_reason": "snapshot_pre_jogo"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "25/04 19:00",
-            "mandante": "Atleti",
-            "visitante": "Athletic",
-            "placar": "3 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "22/04 17:00",
-            "mandante": "Elche",
-            "visitante": "Atleti",
-            "placar": "3 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "14/04 19:00",
-            "mandante": "Atleti",
-            "visitante": "Barça",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "11/04 19:00",
-            "mandante": "Sevilla FC",
-            "visitante": "Atleti",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "08/04 19:00",
-            "mandante": "Barça",
-            "visitante": "Atleti",
-            "placar": "0 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "25/04 16:30",
-            "mandante": "Arsenal",
-            "visitante": "Newcastle",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "19/04 15:30",
-            "mandante": "Man City",
-            "visitante": "Arsenal",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "15/04 19:00",
-            "mandante": "Arsenal",
-            "visitante": "Sporting CP",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "11/04 11:30",
-            "mandante": "Arsenal",
-            "visitante": "Bournemouth",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "07/04 19:00",
-            "mandante": "Sporting CP",
-            "visitante": "Arsenal",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.4394960091267236,
-          "confianca": "MEDIUM",
-          "justificativa": "Atleti projeta ≈1.5 gol(s) vs ≈1.3 do adversário. Prob vitória: 43.9% (margem: 12.8 p.p.)",
-          "edge": 0.1285,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.5334394515061132,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.8. OVER 2.5: 53.3% de probabilidade",
-          "edge": 0.0334,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.5648938397435961,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.5 (casa) x 1.3 (fora). Ambas marcam - Sim: 56.5%",
-          "edge": 0.0649,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Primeira Liga",
-      "data": "2026-04-29T19:15:00Z",
-      "status": "IN_PLAY",
-      "placar_atual": {
-        "casa": 0,
-        "visitante": 0
-      },
-      "times": {
-        "casa": "Sporting CP",
-        "visitante": "Tondela"
-      },
-      "probabilidades": {
-        "casa": 0.6920651632952295,
-        "empate": 0.17160288854249262,
-        "visitante": 0.13258054866027358
-      },
-      "favorito": {
-        "nome": "Sporting CP",
-        "prob": 0.6920651632952295,
-        "vantagem": 0.5204622747527369
-      },
-      "gols_esperados": {
-        "casa": 2.4467899390196846,
-        "visitante": 0.9800031276333585,
-        "total": 3.426793066653043
-      },
-      "mercados": {
-        "under_25": 0.33835148280629457,
-        "over_25": 0.6616485171937054,
-        "btts_yes": 0.5682639940289932,
-        "btts_no": 0.4317360059710068
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5181818181818181,
-          "ataque": 1.0,
-          "defesa": 0.5,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.6913636363636363
-        },
-        "visitante": {
-          "forma_recente": 0.24545454545454548,
-          "ataque": 0.4,
-          "defesa": 0.09999999999999998,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.3459090909090909
-        }
-      },
-      "leitura_rapida": "Sporting CP favorito (69%, risco forte). Jogo mais aberto (xG total ≈3.4). Over 2.5 com 66%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [
-        "Sporting CP jogou recentemente — possível desgaste físico.",
-        "Tondela jogou recentemente — possível desgaste físico."
-      ],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
-        "competition": "Primeira Liga",
-        "sport_key": "soccer_portugal_primeira_liga",
-        "odds_match_id": "6d093ca5250b051f120c9659c81484e9",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
-        "pre_match_locked": "true",
-        "pre_match_lock_reason": "snapshot_pre_jogo"
-      },
-      "odds_integradas": true,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "26/04 19:30",
-            "mandante": "AVS",
-            "visitante": "Sporting CP",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "19/04 17:15",
-            "mandante": "Sporting CP",
-            "visitante": "SL Benfica",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "15/04 19:00",
-            "mandante": "Arsenal",
-            "visitante": "Sporting CP",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "11/04 19:30",
-            "mandante": "Amadora",
-            "visitante": "Sporting CP",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "07/04 19:00",
-            "mandante": "Sporting CP",
-            "visitante": "Arsenal",
-            "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "25/04 14:30",
-            "mandante": "Tondela",
-            "visitante": "CD Nacional",
-            "placar": "0 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "19/04 19:30",
-            "mandante": "Porto",
-            "visitante": "Tondela",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "13/04 19:15",
-            "mandante": "Tondela",
-            "visitante": "Gil Vicente",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "03/04 17:00",
-            "mandante": "Vitória SC",
-            "visitante": "Tondela",
-            "placar": "5 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "21/03 20:30",
-            "mandante": "Tondela",
-            "visitante": "AVS",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.6920651632952295,
-          "confianca": "HIGH",
-          "justificativa": "Sporting CP projeta ≈2.4 gol(s) vs ≈1.0 do adversário. Prob vitória: 69.2% (margem: 52.0 p.p.)",
-          "edge": 0.5205,
-          "odd_decimal": 1.12,
-          "ev": -0.2255,
-          "ev_bruto": -0.2249,
-          "prob_mercado_justa": 0.8936,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.6616485171937054,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈3.4. OVER 2.5: 66.2% de probabilidade",
-          "edge": 0.1616,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.5682639940289932,
-          "confianca": "LOW",
-          "justificativa": "xG: 2.4 (casa) x 1.0 (fora). Ambas marcam - Sim: 56.8%",
-          "edge": 0.0683,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Copa Libertadores",
-      "data": "2026-04-29T22:00:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "Platense",
-        "visitante": "Santa Fe"
-      },
-      "probabilidades": {
-        "casa": 0.44584039271434583,
-        "empate": 0.2733097716596083,
-        "visitante": 0.28075187756683206
-      },
-      "favorito": {
-        "nome": "Platense",
-        "prob": 0.44584039271434583,
-        "vantagem": 0.16508851514751377
-      },
-      "gols_esperados": {
-        "casa": 1.3575132631578948,
-        "visitante": 1.016842105263158,
-        "total": 2.3743553684210528
-      },
-      "mercados": {
-        "under_25": 0.5765209005042262,
-        "over_25": 0.4234790994957737,
-        "btts_yes": 0.4739754604793682,
-        "btts_no": 0.5260245395206318
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5263157894736842,
-          "ataque": 0.0,
-          "defesa": 0.19999999999999996,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.3842105263157895
-        },
-        "visitante": {
-          "forma_recente": 0.2368421052631579,
-          "ataque": 0.0,
-          "defesa": 0.19999999999999996,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.26289473684210524
-        }
-      },
-      "leitura_rapida": "Platense favorito (45%, risco alto). Mercado de gols equilibrado (xG total ≈2.4).",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "Copa Libertadores",
-        "sport_key": "soccer_conmebol_libertadores",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "17/04 00:30",
-            "mandante": "Peñarol",
-            "visitante": "Platense",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "10/04 00:00",
-            "mandante": "Platense",
-            "visitante": "Corinthians",
-            "placar": "0 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "16/04 00:30",
-            "mandante": "Corinthians",
-            "visitante": "Santa Fe",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "10/04 02:00",
-            "mandante": "Santa Fe",
-            "visitante": "Peñarol",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.44584039271434583,
-          "confianca": "MEDIUM",
-          "justificativa": "Platense projeta ≈1.4 gol(s) vs ≈1.0 do adversário. Prob vitória: 44.6% (margem: 16.5 p.p.)",
-          "edge": 0.1651,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.5765209005042262,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈2.4. UNDER 2.5: 57.7% de probabilidade",
-          "edge": 0.0765,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.5260245395206318,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.4 (casa) x 1.0 (fora). Ambas marcam - Nao: 52.6%",
-          "edge": 0.026,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
     {
       "competicao": "Copa Libertadores",
       "data": "2026-04-29T22:00:00Z",
@@ -748,6 +187,157 @@
           "confianca": "LOW",
           "justificativa": "Ambas defesas solidas (60% / 60% de aproveitamento defensivo). Empate com 33.6% de probabilidade",
           "edge": 0.0,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Copa Libertadores",
+      "data": "2026-04-29T22:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Platense",
+        "visitante": "Santa Fe"
+      },
+      "probabilidades": {
+        "casa": 0.44584039271434583,
+        "empate": 0.2733097716596083,
+        "visitante": 0.28075187756683206
+      },
+      "favorito": {
+        "nome": "Platense",
+        "prob": 0.44584039271434583,
+        "vantagem": 0.16508851514751377
+      },
+      "gols_esperados": {
+        "casa": 1.3575132631578948,
+        "visitante": 1.016842105263158,
+        "total": 2.3743553684210528
+      },
+      "mercados": {
+        "under_25": 0.5765209005042262,
+        "over_25": 0.4234790994957737,
+        "btts_yes": 0.4739754604793682,
+        "btts_no": 0.5260245395206318
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.5263157894736842,
+          "ataque": 0.0,
+          "defesa": 0.19999999999999996,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.3842105263157895
+        },
+        "visitante": {
+          "forma_recente": 0.2368421052631579,
+          "ataque": 0.0,
+          "defesa": 0.19999999999999996,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.26289473684210524
+        }
+      },
+      "leitura_rapida": "Platense favorito (45%, risco alto). Mercado de gols equilibrado (xG total ≈2.4).",
+      "tendencia": {
+        "casa": "indefinida",
+        "visitante": "indefinida"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Copa Libertadores",
+        "sport_key": "soccer_conmebol_libertadores",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "17/04 00:30",
+            "mandante": "Peñarol",
+            "visitante": "Platense",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "10/04 00:00",
+            "mandante": "Platense",
+            "visitante": "Corinthians",
+            "placar": "0 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "16/04 00:30",
+            "mandante": "Corinthians",
+            "visitante": "Santa Fe",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "10/04 02:00",
+            "mandante": "Santa Fe",
+            "visitante": "Peñarol",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.44584039271434583,
+          "confianca": "MEDIUM",
+          "justificativa": "Platense projeta ≈1.4 gol(s) vs ≈1.0 do adversário. Prob vitória: 44.6% (margem: 16.5 p.p.)",
+          "edge": 0.1651,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER",
+          "probabilidade": 0.5765209005042262,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈2.4. UNDER 2.5: 57.7% de probabilidade",
+          "edge": 0.0765,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.5260245395206318,
+          "confianca": "LOW",
+          "justificativa": "xG: 1.4 (casa) x 1.0 (fora). Ambas marcam - Nao: 52.6%",
+          "edge": 0.026,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
