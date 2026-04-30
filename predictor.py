@@ -11,7 +11,7 @@ import unicodedata
 
 import requests
 from datetime import datetime, timedelta, timezone
-from zoneinfo import ZoneInfo
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 from typing import Optional, List, Dict, Tuple
 from math import factorial, e, log
 from dataclasses import dataclass, asdict, field
@@ -108,8 +108,22 @@ MEDIA_GOLS_LIGA: dict[str, float] = {
 }
 MEDIA_GOLS_DEFAULT = 2.55  # fallback para ligas sem mapeamento
 
+
+def carregar_timezone_app() -> timezone:
+    """Carrega o fuso da aplicação com fallback quando tzdata não está disponível."""
+    timezone_key = os.getenv("APP_TIMEZONE", "America/Sao_Paulo")
+    try:
+        return ZoneInfo(timezone_key)
+    except ZoneInfoNotFoundError:
+        print(
+            f"WARNING: timezone '{timezone_key}' indisponivel no ambiente. "
+            "Usando fallback UTC-03:00."
+        )
+        return timezone(timedelta(hours=-3))
+
+
 # Timezone oficial da aplicação para definir "jogos de hoje" no Brasil.
-APP_TIMEZONE = ZoneInfo(os.getenv("APP_TIMEZONE", "America/Sao_Paulo"))
+APP_TIMEZONE = carregar_timezone_app()
 
 # Competições permitidas
 COMPETICOES_PERMITIDAS = {
@@ -198,14 +212,21 @@ def buscar_jogos_permitidos() -> List[Dict]:
     """Busca jogos das competições permitidas do dia atual"""
 
     url = f"{API_BASE}/matches/"
-    hoje_utc = datetime.now(timezone.utc).date()
-    amanha_utc = hoje_utc + timedelta(days=1)
+    agora_local = datetime.now(APP_TIMEZONE)
+    hoje_local = agora_local.date()
+    inicio_local = datetime.combine(hoje_local, datetime.min.time(), tzinfo=APP_TIMEZONE)
+    fim_local = inicio_local + timedelta(days=1)
+    inicio_utc = inicio_local.astimezone(timezone.utc)
+    fim_utc = fim_local.astimezone(timezone.utc)
     params = {
-        "dateFrom": hoje_utc.isoformat(),
-        "dateTo": amanha_utc.isoformat(),
+        "dateFrom": inicio_utc.date().isoformat(),
+        "dateTo": fim_utc.date().isoformat(),
     }
 
-    print(f"📅 Buscando jogos no período UTC {params['dateFrom']} até {params['dateTo']}...")
+    print(
+        f"📅 Buscando jogos do dia local {hoje_local} "
+        f"(janela UTC {params['dateFrom']} até {params['dateTo']})..."
+    )
 
     try:
         response = requests.get(url, headers=HEADERS, params=params, timeout=30)
@@ -221,19 +242,38 @@ def buscar_jogos_permitidos() -> List[Dict]:
     todos_matches = dados.get("matches", [])
     print(f"🔎 API retornou {len(todos_matches)} jogo(s) no período.")
 
+    def data_local_jogo(match: Dict) -> Optional[datetime.date]:
+        data_utc = str(match.get("utcDate", "") or "")
+        if not data_utc:
+            return None
+        try:
+            dt = datetime.fromisoformat(data_utc.replace("Z", "+00:00"))
+        except ValueError:
+            return None
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(APP_TIMEZONE).date()
+
     # Filtrar por competições permitidas
     jogos_permitidos = []
     competicoes_rejeitadas = set()
+    jogos_fora_do_dia_local = 0
     for match in todos_matches:
         competicao = match.get("competition", {}).get("name", "")
         if competicao not in COMPETICOES_PERMITIDAS:
             competicoes_rejeitadas.add(competicao)
             continue
 
+        if data_local_jogo(match) != hoje_local:
+            jogos_fora_do_dia_local += 1
+            continue
+
         jogos_permitidos.append(match)
 
     if competicoes_rejeitadas:
         print(f"⚠️  Competições ignoradas (não estão na lista permitida): {sorted(competicoes_rejeitadas)}")
+    if jogos_fora_do_dia_local:
+        print(f"🗓️  {jogos_fora_do_dia_local} jogo(s) ignorado(s) por não serem do dia local ({hoje_local}).")
 
     print(f"✅ {len(jogos_permitidos)} jogo(s) encontrado(s) nas competições permitidas.")
     return jogos_permitidos
@@ -1410,7 +1450,7 @@ def congelar_modelo_pre_jogo(predicoes: List[PredicaoJogo], caminho_predicoes: s
 
 def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str = "predictions.json") -> None:
     dados = {
-        "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "generated_at": datetime.now(APP_TIMEZONE).isoformat(timespec="seconds"),
         "total_jogos": len(predicoes),
         "odds_debug_visual": ODDS_DEBUG_VISUAL,
         "odds_only_value_games": ODDS_ONLY_VALUE_GAMES,
@@ -1537,7 +1577,7 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
     }
 
     # Congela as dicas do dia no primeiro run; preserva nas atualizações seguintes
-    hoje = datetime.now().strftime("%Y-%m-%d")
+    hoje = datetime.now(APP_TIMEZONE).date().isoformat()
     daily_tips_ids = None
     try:
         with open(caminho_saida, "r", encoding="utf-8") as f_existing:
@@ -1547,7 +1587,17 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
     except (FileNotFoundError, json.JSONDecodeError):
         pass
 
-    if daily_tips_ids is None:
+    jogos_ids_validos = {
+        (j["times"]["casa"], j["times"]["visitante"], j["data"])
+        for j in dados["jogos"]
+    }
+    if daily_tips_ids:
+        daily_tips_ids = [
+            item for item in daily_tips_ids
+            if (item.get("casa"), item.get("visitante"), item.get("data")) in jogos_ids_validos
+        ]
+
+    if not daily_tips_ids:
         _excluidas_dicas = {"Campeonato Brasileiro Série A", "Campeonato Brasileiro Série B"}
         candidatos_dicas = [
             j for j in dados["jogos"]
@@ -1570,8 +1620,9 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
 
 def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.json") -> None:
     """Acumula resultados dos jogos finalizados em history.json (últimos 2 dias)."""
-    hoje = datetime.now().strftime("%Y-%m-%d")
-    agora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    agora_local = datetime.now(APP_TIMEZONE)
+    hoje = agora_local.date().isoformat()
+    agora = agora_local.isoformat(timespec="seconds")
 
     try:
         with open(caminho, "r", encoding="utf-8") as arquivo_leitura:
