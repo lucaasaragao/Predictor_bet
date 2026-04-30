@@ -961,10 +961,23 @@ function setupFilters() {
   });
 }
 
+function registerServiceWorker() {
+  if (!("serviceWorker" in navigator)) return;
+
+  window.addEventListener("load", async () => {
+    try {
+      await navigator.serviceWorker.register("./service-worker.js");
+    } catch (error) {
+      console.warn("Falha ao registrar service worker:", error);
+    }
+  });
+}
+
 (async function init() {
   setupThemeToggle();
   setupMobileTopbar();
   initAdminPanel();
+  registerServiceWorker();
 
   try {
     const data = await loadData();
