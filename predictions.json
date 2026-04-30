@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30 01:06:21",
+  "generated_at": "2026-04-30 02:03:29",
   "total_jogos": 4,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -8,10 +8,10 @@
     {
       "competicao": "Copa Libertadores",
       "data": "2026-04-30T00:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 2
       },
       "times": {
         "casa": "Barcelona SC",
@@ -61,7 +61,10 @@
         "casa": "estavel",
         "visitante": "indefinida"
       },
-      "alertas": [],
+      "alertas": [
+        "Barcelona SC jogou recentemente — possível desgaste físico.",
+        "Univ Católica jogou recentemente — possível desgaste físico."
+      ],
       "odds_debug": {
         "enabled": "false",
         "status": "no_event_match",
@@ -69,12 +72,22 @@
         "competition": "Copa Libertadores",
         "sport_key": "soccer_conmebol_libertadores",
         "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
       "historico": {
         "casa": [
+          {
+            "data": "30/04 00:00",
+            "mandante": "Barcelona SC",
+            "visitante": "Univ Católica",
+            "placar": "1 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
           {
             "data": "15/04 00:00",
             "mandante": "Boca Juniors",
@@ -106,17 +119,17 @@
             "placar": "1 x 1",
             "resultado": "E",
             "resultado_label": "Empate"
-          },
-          {
-            "data": "26/02 00:30",
-            "mandante": "Argentinos Jrs",
-            "visitante": "Barcelona SC",
-            "placar": "4 x 6",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
           }
         ],
         "visitante": [
+          {
+            "data": "30/04 00:00",
+            "mandante": "Barcelona SC",
+            "visitante": "Univ Católica",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
           {
             "data": "15/04 22:00",
             "mandante": "Cruzeiro",
@@ -183,187 +196,10 @@
     {
       "competicao": "Copa Libertadores",
       "data": "2026-04-30T00:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "Estudiantes LP",
-        "visitante": "Flamengo"
-      },
-      "probabilidades": {
-        "casa": 0.36187863167061185,
-        "empate": 0.2363567540836684,
-        "visitante": 0.4012941167698594
-      },
-      "favorito": {
-        "nome": "Flamengo",
-        "prob": 0.4012941167698594,
-        "vantagem": 0.03941548509924753
-      },
-      "gols_esperados": {
-        "casa": 1.5261204081632653,
-        "visitante": 1.6178811428571436,
-        "total": 3.144001551020409
-      },
-      "mercados": {
-        "under_25": 0.3921836051712123,
-        "over_25": 0.6078163948287877,
-        "btts_yes": 0.627042276775241,
-        "btts_no": 0.37295772322475895
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.7631578947368421,
-          "ataque": 0.8,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.7471052631578948
-        },
-        "visitante": {
-          "forma_recente": 0.9,
-          "ataque": 0.8,
-          "defesa": 0.6666666666666666,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.7883333333333333
-        }
-      },
-      "leitura_rapida": "Flamengo favorito (40%, risco alto). Jogo mais aberto (xG total ≈3.1). Over 2.5 com 61%.",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "estavel"
-      },
-      "alertas": [
-        "Flamengo jogou recentemente — possível desgaste físico."
-      ],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (3.9 p.p. < 10.0 p.p.)",
-        "competition": "Copa Libertadores",
-        "sport_key": "soccer_conmebol_libertadores",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "14/04 22:00",
-            "mandante": "Estudiantes LP",
-            "visitante": "Cusco",
-            "placar": "2 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "09/04 00:00",
-            "mandante": "Independiente",
-            "visitante": "Estudiantes LP",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "26/04 23:30",
-            "mandante": "Mineiro",
-            "visitante": "Flamengo",
-            "placar": "0 x 4",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "19/04 22:30",
-            "mandante": "Flamengo",
-            "visitante": "Bahia",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "17/04 00:30",
-            "mandante": "Flamengo",
-            "visitante": "Independiente",
-            "placar": "4 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "12/04 21:00",
-            "mandante": "Fluminense",
-            "visitante": "Flamengo",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "09/04 00:30",
-            "mandante": "Cusco",
-            "visitante": "Flamengo",
-            "placar": "0 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "2",
-          "probabilidade": 0.4012941167698594,
-          "confianca": "LOW",
-          "justificativa": "Flamengo projeta ≈1.6 gol(s) vs ≈1.5 do adversário. Prob vitória: 40.1% (margem: 3.9 p.p.)",
-          "edge": 0.0394,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.6078163948287877,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈3.1. OVER 2.5: 60.8% de probabilidade",
-          "edge": 0.1078,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.627042276775241,
-          "confianca": "MEDIUM",
-          "justificativa": "xG: 1.5 (casa) x 1.6 (fora). Ambas marcam - Sim: 62.7%",
-          "edge": 0.127,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Copa Libertadores",
-      "data": "2026-04-30T00:30:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Cerro Porteño",
@@ -423,7 +259,9 @@
         "competition": "Copa Libertadores",
         "sport_key": "soccer_conmebol_libertadores",
         "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
@@ -539,6 +377,185 @@
           "confianca": "LOW",
           "justificativa": "Ambas defesas solidas (100% / 84% de aproveitamento defensivo). Empate com 31.4% de probabilidade",
           "edge": 0.0,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Copa Libertadores",
+      "data": "2026-04-30T00:30:00Z",
+      "status": "IN_PLAY",
+      "placar_atual": {
+        "casa": 0,
+        "visitante": 0
+      },
+      "times": {
+        "casa": "Estudiantes LP",
+        "visitante": "Flamengo"
+      },
+      "probabilidades": {
+        "casa": 0.36187863167061185,
+        "empate": 0.2363567540836684,
+        "visitante": 0.4012941167698594
+      },
+      "favorito": {
+        "nome": "Flamengo",
+        "prob": 0.4012941167698594,
+        "vantagem": 0.03941548509924753
+      },
+      "gols_esperados": {
+        "casa": 1.5261204081632653,
+        "visitante": 1.6178811428571436,
+        "total": 3.144001551020409
+      },
+      "mercados": {
+        "under_25": 0.3921836051712123,
+        "over_25": 0.6078163948287877,
+        "btts_yes": 0.627042276775241,
+        "btts_no": 0.37295772322475895
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.7631578947368421,
+          "ataque": 0.8,
+          "defesa": 0.6,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.7471052631578948
+        },
+        "visitante": {
+          "forma_recente": 0.9,
+          "ataque": 0.8,
+          "defesa": 0.6666666666666666,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.7883333333333333
+        }
+      },
+      "leitura_rapida": "Flamengo favorito (40%, risco alto). Jogo mais aberto (xG total ≈3.1). Over 2.5 com 61%.",
+      "tendencia": {
+        "casa": "indefinida",
+        "visitante": "estavel"
+      },
+      "alertas": [
+        "Flamengo jogou recentemente — possível desgaste físico."
+      ],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "skip_edge_gate",
+        "reason": "edge abaixo do gate (3.9 p.p. < 10.0 p.p.)",
+        "competition": "Copa Libertadores",
+        "sport_key": "soccer_conmebol_libertadores",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "14/04 22:00",
+            "mandante": "Estudiantes LP",
+            "visitante": "Cusco",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "09/04 00:00",
+            "mandante": "Independiente",
+            "visitante": "Estudiantes LP",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "26/04 23:30",
+            "mandante": "Mineiro",
+            "visitante": "Flamengo",
+            "placar": "0 x 4",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "19/04 22:30",
+            "mandante": "Flamengo",
+            "visitante": "Bahia",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "17/04 00:30",
+            "mandante": "Flamengo",
+            "visitante": "Independiente",
+            "placar": "4 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "12/04 21:00",
+            "mandante": "Fluminense",
+            "visitante": "Flamengo",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "09/04 00:30",
+            "mandante": "Cusco",
+            "visitante": "Flamengo",
+            "placar": "0 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "2",
+          "probabilidade": 0.4012941167698594,
+          "confianca": "LOW",
+          "justificativa": "Flamengo projeta ≈1.6 gol(s) vs ≈1.5 do adversário. Prob vitória: 40.1% (margem: 3.9 p.p.)",
+          "edge": 0.0394,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER",
+          "probabilidade": 0.6078163948287877,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈3.1. OVER 2.5: 60.8% de probabilidade",
+          "edge": 0.1078,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.627042276775241,
+          "confianca": "MEDIUM",
+          "justificativa": "xG: 1.5 (casa) x 1.6 (fora). Ambas marcam - Sim: 62.7%",
+          "edge": 0.127,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
