@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T06:56:57-03:00",
+  "generated_at": "2026-05-01T07:33:43-03:00",
   "total_jogos": 3,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -169,10 +169,10 @@
           "confianca": "MEDIUM",
           "justificativa": "AC Pisa projeta ≈1.3 gol(s) vs ≈0.9 do adversário. Prob vitória: 43.6% (margem: 14.9 p.p.)",
           "edge": 0.1494,
-          "odd_decimal": 3.75,
-          "ev": 0.6372,
-          "ev_bruto": 0.6359,
-          "prob_mercado_justa": 0.2665,
+          "odd_decimal": 3.7,
+          "ev": 0.6211,
+          "ev_bruto": 0.6141,
+          "prob_mercado_justa": 0.2691,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -197,6 +197,207 @@
           "confianca": "LOW",
           "justificativa": "xG: 1.3 (casa) x 0.9 (fora). Ambas marcam - Nao: 56.4%",
           "edge": 0.0644,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Primera Division",
+      "data": "2026-05-01T19:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Girona",
+        "visitante": "Mallorca"
+      },
+      "probabilidades": {
+        "casa": 0.609007604752116,
+        "empate": 0.20022643764592282,
+        "visitante": 0.18890941728332292
+      },
+      "favorito": {
+        "nome": "Girona",
+        "prob": 0.609007604752116,
+        "vantagem": 0.40878116710619317
+      },
+      "gols_esperados": {
+        "casa": 2.172688128387469,
+        "visitante": 1.130568994810686,
+        "total": 3.303257123198155
+      },
+      "mercados": {
+        "under_25": 0.3606293020380318,
+        "over_25": 0.6393706979619682,
+        "btts_yes": 0.598780379527881,
+        "btts_no": 0.401219620472119
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.36363636363636365,
+          "ataque": 0.72,
+          "defesa": 0.52,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.5712727272727273
+        },
+        "visitante": {
+          "forma_recente": 0.48181818181818187,
+          "ataque": 0.4,
+          "defesa": 0.19999999999999996,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.44863636363636367
+        }
+      },
+      "leitura_rapida": "Girona favorito (61%, risco forte). Jogo mais aberto (xG total ≈3.3). Over 2.5 com 64%. | Forma recente: Girona em baixa.",
+      "tendencia": {
+        "casa": "em baixa",
+        "visitante": "estavel"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
+        "competition": "Primera Division",
+        "sport_key": "soccer_spain_la_liga",
+        "odds_match_id": "5dff5ca82fe03448a191bd58dd473321",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%"
+      },
+      "odds_integradas": true,
+      "odds_valor_alto": true,
+      "historico": {
+        "casa": [
+          {
+            "data": "25/04 16:30",
+            "mandante": "Valencia",
+            "visitante": "Girona",
+            "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "21/04 19:30",
+            "mandante": "Girona",
+            "visitante": "Real Betis",
+            "placar": "2 x 3",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "10/04 19:00",
+            "mandante": "Real Madrid",
+            "visitante": "Girona",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "06/04 19:00",
+            "mandante": "Girona",
+            "visitante": "Villarreal",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "21/03 17:30",
+            "mandante": "Osasuna",
+            "visitante": "Girona",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "25/04 12:00",
+            "mandante": "Alavés",
+            "visitante": "Mallorca",
+            "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "21/04 17:00",
+            "mandante": "Mallorca",
+            "visitante": "Valencia",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "12/04 14:15",
+            "mandante": "Mallorca",
+            "visitante": "Rayo Vallecano",
+            "placar": "3 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "04/04 14:15",
+            "mandante": "Mallorca",
+            "visitante": "Real Madrid",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "21/03 13:00",
+            "mandante": "Elche",
+            "visitante": "Mallorca",
+            "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.609007604752116,
+          "confianca": "HIGH",
+          "justificativa": "Girona projeta ≈2.2 gol(s) vs ≈1.1 do adversário. Prob vitória: 60.9% (margem: 40.9 p.p.)",
+          "edge": 0.4088,
+          "odd_decimal": 2.14,
+          "ev": 0.3146,
+          "ev_bruto": 0.3033,
+          "prob_mercado_justa": 0.4633,
+          "valor_esperado_positivo": true,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER",
+          "probabilidade": 0.6393706979619682,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈3.3. OVER 2.5: 63.9% de probabilidade",
+          "edge": 0.1394,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.598780379527881,
+          "confianca": "MEDIUM",
+          "justificativa": "xG: 2.2 (casa) x 1.1 (fora). Ambas marcam - Sim: 59.9%",
+          "edge": 0.0988,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
@@ -398,207 +599,6 @@
           "confianca": "LOW",
           "justificativa": "xG: 2.2 (casa) x 0.9 (fora). Ambas marcam - Sim: 50.6%",
           "edge": 0.0062,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Primera Division",
-      "data": "2026-05-01T19:00:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "Girona",
-        "visitante": "Mallorca"
-      },
-      "probabilidades": {
-        "casa": 0.609007604752116,
-        "empate": 0.20022643764592282,
-        "visitante": 0.18890941728332292
-      },
-      "favorito": {
-        "nome": "Girona",
-        "prob": 0.609007604752116,
-        "vantagem": 0.40878116710619317
-      },
-      "gols_esperados": {
-        "casa": 2.172688128387469,
-        "visitante": 1.130568994810686,
-        "total": 3.303257123198155
-      },
-      "mercados": {
-        "under_25": 0.3606293020380318,
-        "over_25": 0.6393706979619682,
-        "btts_yes": 0.598780379527881,
-        "btts_no": 0.401219620472119
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.36363636363636365,
-          "ataque": 0.72,
-          "defesa": 0.52,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.5712727272727273
-        },
-        "visitante": {
-          "forma_recente": 0.48181818181818187,
-          "ataque": 0.4,
-          "defesa": 0.19999999999999996,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.44863636363636367
-        }
-      },
-      "leitura_rapida": "Girona favorito (61%, risco forte). Jogo mais aberto (xG total ≈3.3). Over 2.5 com 64%. | Forma recente: Girona em baixa.",
-      "tendencia": {
-        "casa": "em baixa",
-        "visitante": "estavel"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
-        "competition": "Primera Division",
-        "sport_key": "soccer_spain_la_liga",
-        "odds_match_id": "5dff5ca82fe03448a191bd58dd473321",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
-      },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
-      "historico": {
-        "casa": [
-          {
-            "data": "25/04 16:30",
-            "mandante": "Valencia",
-            "visitante": "Girona",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "21/04 19:30",
-            "mandante": "Girona",
-            "visitante": "Real Betis",
-            "placar": "2 x 3",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "10/04 19:00",
-            "mandante": "Real Madrid",
-            "visitante": "Girona",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "06/04 19:00",
-            "mandante": "Girona",
-            "visitante": "Villarreal",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "21/03 17:30",
-            "mandante": "Osasuna",
-            "visitante": "Girona",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "25/04 12:00",
-            "mandante": "Alavés",
-            "visitante": "Mallorca",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "21/04 17:00",
-            "mandante": "Mallorca",
-            "visitante": "Valencia",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "12/04 14:15",
-            "mandante": "Mallorca",
-            "visitante": "Rayo Vallecano",
-            "placar": "3 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "04/04 14:15",
-            "mandante": "Mallorca",
-            "visitante": "Real Madrid",
-            "placar": "2 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "21/03 13:00",
-            "mandante": "Elche",
-            "visitante": "Mallorca",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.609007604752116,
-          "confianca": "HIGH",
-          "justificativa": "Girona projeta ≈2.2 gol(s) vs ≈1.1 do adversário. Prob vitória: 60.9% (margem: 40.9 p.p.)",
-          "edge": 0.4088,
-          "odd_decimal": 2.13,
-          "ev": 0.2977,
-          "ev_bruto": 0.2972,
-          "prob_mercado_justa": 0.4693,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.6393706979619682,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈3.3. OVER 2.5: 63.9% de probabilidade",
-          "edge": 0.1394,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.598780379527881,
-          "confianca": "MEDIUM",
-          "justificativa": "xG: 2.2 (casa) x 1.1 (fora). Ambas marcam - Sim: 59.9%",
-          "edge": 0.0988,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
