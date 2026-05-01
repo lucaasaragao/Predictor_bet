@@ -2,30 +2,76 @@
   "dias": [
     {
       "data": "2026-05-01",
-      "ultima_atualizacao": "2026-05-01T17:36:38-03:00",
-      "finalizados": 0,
+      "ultima_atualizacao": "2026-05-01T18:01:18-03:00",
+      "finalizados": 1,
       "taxa_geral": 0.0,
       "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "total_palpites": 3,
+      "mercados": {
+        "WINNER": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.8105,
+          "log_loss": 1.3157
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.4638,
+          "log_loss": 1.1426
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.3754,
+          "log_loss": 0.9485
+        }
+      },
+      "jogos": [
+        {
+          "casa": "AC Pisa",
+          "visitante": "Lecce",
+          "competicao": "Serie A",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.427,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER",
+              "confianca": "HIGH",
+              "probabilidade": 0.681,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.613,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-04-30",
