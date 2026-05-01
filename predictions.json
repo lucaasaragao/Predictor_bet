@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T20:59:26-03:00",
+  "generated_at": "2026-04-30T22:10:58-03:00",
   "total_jogos": 3,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -8,10 +8,10 @@
     {
       "competicao": "Copa Libertadores",
       "data": "2026-04-30T22:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 2,
+        "visitante": 0
       },
       "times": {
         "casa": "Club Bolívar",
@@ -62,6 +62,7 @@
         "visitante": "em alta"
       },
       "alertas": [
+        "Club Bolívar jogou recentemente — possível desgaste físico.",
         "Fluminense jogou recentemente — possível desgaste físico."
       ],
       "odds_debug": {
@@ -71,12 +72,22 @@
         "competition": "Copa Libertadores",
         "sport_key": "soccer_conmebol_libertadores",
         "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
       "historico": {
         "casa": [
+          {
+            "data": "30/04 22:00",
+            "mandante": "Club Bolívar",
+            "visitante": "Fluminense",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
           {
             "data": "15/04 00:00",
             "mandante": "Club Bolívar",
@@ -95,6 +106,14 @@
           }
         ],
         "visitante": [
+          {
+            "data": "30/04 22:00",
+            "mandante": "Club Bolívar",
+            "visitante": "Fluminense",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
           {
             "data": "26/04 23:30",
             "mandante": "Fluminense",
@@ -126,14 +145,6 @@
             "placar": "1 x 2",
             "resultado": "D",
             "resultado_label": "Derrota"
-          },
-          {
-            "data": "07/04 22:00",
-            "mandante": "La Guaira",
-            "visitante": "Fluminense",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
           }
         ]
       },
@@ -150,7 +161,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -164,7 +175,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -178,17 +189,17 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
     {
       "competicao": "Copa Libertadores",
       "data": "2026-04-30T22:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 4,
+        "visitante": 1
       },
       "times": {
         "casa": "Rivadavia",
@@ -249,7 +260,9 @@
         "competition": "Copa Libertadores",
         "sport_key": "soccer_conmebol_libertadores",
         "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
@@ -320,7 +333,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -334,7 +347,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -348,17 +361,17 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
     {
       "competicao": "Copa Libertadores",
       "data": "2026-05-01T00:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 2,
+        "visitante": 0
       },
       "times": {
         "casa": "Corinthians",
@@ -418,7 +431,9 @@
         "competition": "Copa Libertadores",
         "sport_key": "soccer_conmebol_libertadores",
         "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
@@ -545,9 +560,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 3,
+    "total": 6,
+    "taxa": 0.5
   },
   "daily_tips_ids": [
     {
