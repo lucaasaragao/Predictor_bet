@@ -1,180 +1,10 @@
 {
-  "generated_at": "2026-04-30T23:03:08-03:00",
+  "generated_at": "2026-04-30T23:26:35-03:00",
   "total_jogos": 3,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
   "odds_min_ev": 0.03,
   "jogos": [
-    {
-      "competicao": "Copa Libertadores",
-      "data": "2026-04-30T22:00:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 4,
-        "visitante": 1
-      },
-      "times": {
-        "casa": "Rivadavia",
-        "visitante": "La Guaira"
-      },
-      "probabilidades": {
-        "casa": 0.714483246688876,
-        "empate": 0.17096162873780135,
-        "visitante": 0.11162765918153132
-      },
-      "favorito": {
-        "nome": "Rivadavia",
-        "prob": 0.714483246688876,
-        "vantagem": 0.5435216179510747
-      },
-      "gols_esperados": {
-        "casa": 2.3473290567602043,
-        "visitante": 0.8088293296485263,
-        "total": 3.1561583864087304
-      },
-      "mercados": {
-        "under_25": 0.39205610503507704,
-        "over_25": 0.607943894964923,
-        "btts_yes": 0.49996124895158167,
-        "btts_no": 0.5000387510484183
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 1.0,
-          "ataque": 1.0,
-          "defesa": 0.8,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.92
-        },
-        "visitante": {
-          "forma_recente": 0.3148148148148148,
-          "ataque": 0.4,
-          "defesa": 0.0,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.3501851851851852
-        }
-      },
-      "leitura_rapida": "Rivadavia favorito (71%, risco forte). Jogo mais aberto (xG total ≈3.2). Over 2.5 com 61%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [
-        "Rivadavia jogou recentemente — possível desgaste físico.",
-        "La Guaira jogou recentemente — possível desgaste físico."
-      ],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
-        "competition": "Copa Libertadores",
-        "sport_key": "soccer_conmebol_libertadores",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "30/04 22:00",
-            "mandante": "Rivadavia",
-            "visitante": "La Guaira",
-            "placar": "4 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "16/04 00:30",
-            "mandante": "Fluminense",
-            "visitante": "Rivadavia",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "07/04 22:00",
-            "mandante": "Rivadavia",
-            "visitante": "Club Bolívar",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "30/04 22:00",
-            "mandante": "Rivadavia",
-            "visitante": "La Guaira",
-            "placar": "4 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "15/04 00:00",
-            "mandante": "Club Bolívar",
-            "visitante": "La Guaira",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "07/04 22:00",
-            "mandante": "La Guaira",
-            "visitante": "Fluminense",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.714483246688876,
-          "confianca": "HIGH",
-          "justificativa": "Rivadavia projeta ≈2.3 gol(s) vs ≈0.8 do adversário. Prob vitória: 71.4% (margem: 54.4 p.p.)",
-          "edge": 0.5435,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.607943894964923,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈3.2. OVER 2.5: 60.8% de probabilidade",
-          "edge": 0.1079,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.5000387510484183,
-          "confianca": "LOW",
-          "justificativa": "xG: 2.3 (casa) x 0.8 (fora). Ambas marcam - Nao: 50.0%",
-          "edge": 0.0,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        }
-      ]
-    },
     {
       "competicao": "Copa Libertadores",
       "data": "2026-04-30T22:00:00Z",
@@ -358,6 +188,176 @@
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
           "resultado_verificador": "ACERTO"
+        }
+      ]
+    },
+    {
+      "competicao": "Copa Libertadores",
+      "data": "2026-04-30T22:00:00Z",
+      "status": "FINISHED",
+      "placar_atual": {
+        "casa": 4,
+        "visitante": 1
+      },
+      "times": {
+        "casa": "Rivadavia",
+        "visitante": "La Guaira"
+      },
+      "probabilidades": {
+        "casa": 0.714483246688876,
+        "empate": 0.17096162873780135,
+        "visitante": 0.11162765918153132
+      },
+      "favorito": {
+        "nome": "Rivadavia",
+        "prob": 0.714483246688876,
+        "vantagem": 0.5435216179510747
+      },
+      "gols_esperados": {
+        "casa": 2.3473290567602043,
+        "visitante": 0.8088293296485263,
+        "total": 3.1561583864087304
+      },
+      "mercados": {
+        "under_25": 0.39205610503507704,
+        "over_25": 0.607943894964923,
+        "btts_yes": 0.49996124895158167,
+        "btts_no": 0.5000387510484183
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 1.0,
+          "ataque": 1.0,
+          "defesa": 0.8,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.92
+        },
+        "visitante": {
+          "forma_recente": 0.3148148148148148,
+          "ataque": 0.4,
+          "defesa": 0.0,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.3501851851851852
+        }
+      },
+      "leitura_rapida": "Rivadavia favorito (71%, risco forte). Jogo mais aberto (xG total ≈3.2). Over 2.5 com 61%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "alertas": [
+        "Rivadavia jogou recentemente — possível desgaste físico.",
+        "La Guaira jogou recentemente — possível desgaste físico."
+      ],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente na consulta por liga",
+        "competition": "Copa Libertadores",
+        "sport_key": "soccer_conmebol_libertadores",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "30/04 22:00",
+            "mandante": "Rivadavia",
+            "visitante": "La Guaira",
+            "placar": "4 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "16/04 00:30",
+            "mandante": "Fluminense",
+            "visitante": "Rivadavia",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "07/04 22:00",
+            "mandante": "Rivadavia",
+            "visitante": "Club Bolívar",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "30/04 22:00",
+            "mandante": "Rivadavia",
+            "visitante": "La Guaira",
+            "placar": "4 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "15/04 00:00",
+            "mandante": "Club Bolívar",
+            "visitante": "La Guaira",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "07/04 22:00",
+            "mandante": "La Guaira",
+            "visitante": "Fluminense",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.714483246688876,
+          "confianca": "HIGH",
+          "justificativa": "Rivadavia projeta ≈2.3 gol(s) vs ≈0.8 do adversário. Prob vitória: 71.4% (margem: 54.4 p.p.)",
+          "edge": 0.5435,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": "ACERTO"
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER",
+          "probabilidade": 0.607943894964923,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈3.2. OVER 2.5: 60.8% de probabilidade",
+          "edge": 0.1079,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": "ACERTO"
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.5000387510484183,
+          "confianca": "LOW",
+          "justificativa": "xG: 2.3 (casa) x 0.8 (fora). Ambas marcam - Nao: 50.0%",
+          "edge": 0.0,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": "ERRO"
         }
       ]
     },
