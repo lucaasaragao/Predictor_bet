@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T15:43:18-03:00",
+  "generated_at": "2026-05-01T16:28:42-03:00",
   "total_jogos": 3,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -8,10 +8,10 @@
     {
       "competicao": "Serie A",
       "data": "2026-05-01T18:45:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "AC Pisa",
@@ -71,7 +71,9 @@
         "odds_match_id": "d1280e2e5067d1465f49862c52c1bdbc",
         "bookmakers_outcomes": "3",
         "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "ev_reason": "há palpite com EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
       "odds_integradas": true,
       "odds_valor_alto": true,
@@ -169,10 +171,10 @@
           "confianca": "MEDIUM",
           "justificativa": "AC Pisa projeta ≈1.3 gol(s) vs ≈0.9 do adversário. Prob vitória: 43.6% (margem: 14.9 p.p.)",
           "edge": 0.1494,
-          "odd_decimal": 3.64,
-          "ev": 0.5803,
-          "ev_bruto": 0.5879,
-          "prob_mercado_justa": 0.276,
+          "odd_decimal": 4.3,
+          "ev": 0.8517,
+          "ev_bruto": 0.8758,
+          "prob_mercado_justa": 0.2356,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -209,10 +211,10 @@
     {
       "competicao": "Premier League",
       "data": "2026-05-01T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 1,
+        "visitante": 0
       },
       "times": {
         "casa": "Leeds United",
@@ -265,14 +267,18 @@
       "alertas": [],
       "odds_debug": {
         "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
         "competition": "Premier League",
         "sport_key": "soccer_epl",
+        "odds_match_id": "eaaf4ed0986f4f5414fc727f5c235d48",
+        "bookmakers_outcomes": "3",
         "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
-      "odds_integradas": false,
+      "odds_integradas": true,
       "odds_valor_alto": false,
       "historico": {
         "casa": [
@@ -368,10 +374,10 @@
           "confianca": "HIGH",
           "justificativa": "Leeds United projeta ≈2.2 gol(s) vs ≈0.9 do adversário. Prob vitória: 67.4% (margem: 48.3 p.p.)",
           "edge": 0.4835,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
+          "odd_decimal": 1.15,
+          "ev": -0.2236,
+          "ev_bruto": -0.2254,
+          "prob_mercado_justa": 0.8675,
           "valor_esperado_positivo": false,
           "resultado_verificador": null
         },
@@ -408,10 +414,10 @@
     {
       "competicao": "Primera Division",
       "data": "2026-05-01T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Girona",
@@ -464,15 +470,19 @@
       "alertas": [],
       "odds_debug": {
         "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
         "competition": "Primera Division",
         "sport_key": "soccer_spain_la_liga",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "odds_match_id": "5dff5ca82fe03448a191bd58dd473321",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
+      "odds_integradas": true,
+      "odds_valor_alto": true,
       "historico": {
         "casa": [
           {
@@ -567,11 +577,11 @@
           "confianca": "HIGH",
           "justificativa": "Girona projeta ≈2.2 gol(s) vs ≈1.1 do adversário. Prob vitória: 60.9% (margem: 40.9 p.p.)",
           "edge": 0.4088,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
+          "odd_decimal": 2.2,
+          "ev": 0.3127,
+          "ev_bruto": 0.3398,
+          "prob_mercado_justa": 0.4639,
+          "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
         {
