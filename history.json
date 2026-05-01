@@ -2,10 +2,10 @@
   "dias": [
     {
       "data": "2026-04-30",
-      "ultima_atualizacao": "2026-04-30T22:10:58-03:00",
+      "ultima_atualizacao": "2026-04-30T23:03:08-03:00",
       "finalizados": 2,
-      "taxa_geral": 0.5,
-      "total_acertos": 3,
+      "taxa_geral": 0.833,
+      "total_acertos": 5,
       "total_palpites": 6,
       "mercados": {
         "WINNER": {
@@ -14,63 +14,34 @@
           "taxa": 1.0
         },
         "OVER_UNDER": {
+          "acertos": 2,
+          "total": 2,
+          "taxa": 1.0
+        },
+        "BTTS": {
           "acertos": 1,
           "total": 2,
           "taxa": 0.5
-        },
-        "BTTS": {
-          "acertos": 0,
-          "total": 2,
-          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
           "n": 2,
-          "brier": 0.3112,
-          "log_loss": 0.597
+          "brier": 0.2258,
+          "log_loss": 0.4831
         },
         "OVER_UNDER": {
           "n": 2,
-          "brier": 0.2032,
-          "log_loss": 0.5982
+          "brier": 0.1748,
+          "log_loss": 0.541
         },
         "BTTS": {
           "n": 2,
-          "brier": 0.2722,
-          "log_loss": 0.7376
+          "brier": 0.2327,
+          "log_loss": 0.6584
         }
       },
       "jogos": [
-        {
-          "casa": "Club Bolívar",
-          "visitante": "Fluminense",
-          "competicao": "Copa Libertadores",
-          "placar": "2-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.424,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER",
-              "confianca": "LOW",
-              "probabilidade": 0.503,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.542,
-              "resultado": "ERRO"
-            }
-          ]
-        },
         {
           "casa": "Rivadavia",
           "visitante": "La Guaira",
@@ -97,6 +68,35 @@
               "confianca": "LOW",
               "probabilidade": 0.5,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "casa": "Club Bolívar",
+          "visitante": "Fluminense",
+          "competicao": "Copa Libertadores",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.533,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER",
+              "confianca": "LOW",
+              "probabilidade": 0.557,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.536,
+              "resultado": "ACERTO"
             }
           ]
         }
