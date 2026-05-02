@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T15:07:45-03:00",
+  "generated_at": "2026-05-02T15:35:19-03:00",
   "total_jogos": 11,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -8,10 +8,10 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-05-02T18:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 1,
+        "visitante": 1
       },
       "times": {
         "casa": "Ajax",
@@ -71,7 +71,9 @@
         "odds_match_id": "e6ef453d54e329be6b6e852a23d5441a",
         "bookmakers_outcomes": "3",
         "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "ev_reason": "há palpite com EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
       "odds_integradas": true,
       "odds_valor_alto": true,
@@ -169,10 +171,10 @@
           "confianca": "HIGH",
           "justificativa": "Ajax projeta ≈2.3 gol(s) vs ≈1.5 do adversário. Prob vitória: 55.5% (margem: 30.8 p.p.)",
           "edge": 0.3084,
-          "odd_decimal": 4.3,
-          "ev": 0.9691,
-          "ev_bruto": 1.3852,
-          "prob_mercado_justa": 0.2817,
+          "odd_decimal": 2.64,
+          "ev": 0.4532,
+          "ev_bruto": 0.4644,
+          "prob_mercado_justa": 0.3817,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -464,15 +466,17 @@
       "alertas": [],
       "odds_debug": {
         "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
         "competition": "Campeonato Brasileiro Série A",
         "sport_key": "soccer_brazil_campeonato",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "odds_match_id": "08321fb719f43181716978144d2034eb",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%"
       },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
+      "odds_integradas": true,
+      "odds_valor_alto": true,
       "historico": {
         "casa": [
           {
@@ -567,11 +571,11 @@
           "confianca": "HIGH",
           "justificativa": "Botafogo projeta ≈2.1 gol(s) vs ≈1.0 do adversário. Prob vitória: 63.5% (margem: 43.7 p.p.)",
           "edge": 0.4371,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
+          "odd_decimal": 1.62,
+          "ev": 0.0334,
+          "ev_bruto": 0.0292,
+          "prob_mercado_justa": 0.6148,
+          "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
         {
@@ -595,205 +599,6 @@
           "confianca": "LOW",
           "justificativa": "xG: 2.1 (casa) x 1.0 (fora). Ambas marcam - Sim: 55.5%",
           "edge": 0.0551,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Primera Division",
-      "data": "2026-05-02T19:00:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "Osasuna",
-        "visitante": "Barça"
-      },
-      "probabilidades": {
-        "casa": 0.37286207784192116,
-        "empate": 0.24617674419642185,
-        "visitante": 0.3806699808254916
-      },
-      "favorito": {
-        "nome": "Barça",
-        "prob": 0.3806699808254916,
-        "vantagem": 0.007807902983570425
-      },
-      "gols_esperados": {
-        "casa": 1.4573681428406688,
-        "visitante": 1.4749669908386187,
-        "total": 2.9323351336792873
-      },
-      "mercados": {
-        "under_25": 0.4388106495953109,
-        "over_25": 0.5611893504046891,
-        "btts_yes": 0.5914139679040019,
-        "btts_no": 0.4085860320959981
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5090909090909091,
-          "ataque": 0.64,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.6181818181818183
-        },
-        "visitante": {
-          "forma_recente": 0.881818181818182,
-          "ataque": 0.7,
-          "defesa": 0.7,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.7636363636363637
-        }
-      },
-      "leitura_rapida": "Barça favorito (38%, risco alto). Jogo mais aberto (xG total ≈2.9). Over 2.5 com 56%. | Forma recente: Barça em alta.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "em alta"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (0.8 p.p. < 10.0 p.p.)",
-        "competition": "Primera Division",
-        "sport_key": "soccer_spain_la_liga",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "26/04 16:30",
-            "mandante": "Osasuna",
-            "visitante": "Sevilla FC",
-            "placar": "2 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "21/04 17:00",
-            "mandante": "Athletic",
-            "visitante": "Osasuna",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "12/04 12:00",
-            "mandante": "Osasuna",
-            "visitante": "Real Betis",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "05/04 19:00",
-            "mandante": "Alavés",
-            "visitante": "Osasuna",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "21/03 17:30",
-            "mandante": "Osasuna",
-            "visitante": "Girona",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "25/04 14:15",
-            "mandante": "Getafe",
-            "visitante": "Barça",
-            "placar": "0 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "22/04 19:30",
-            "mandante": "Barça",
-            "visitante": "Celta",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "14/04 19:00",
-            "mandante": "Atleti",
-            "visitante": "Barça",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "11/04 16:30",
-            "mandante": "Barça",
-            "visitante": "Espanyol",
-            "placar": "4 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "08/04 19:00",
-            "mandante": "Barça",
-            "visitante": "Atleti",
-            "placar": "0 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "2",
-          "probabilidade": 0.3806699808254916,
-          "confianca": "LOW",
-          "justificativa": "Barça projeta ≈1.5 gol(s) vs ≈1.5 do adversário. Prob vitória: 38.1% (margem: 0.8 p.p.)",
-          "edge": 0.0078,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.5611893504046891,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.9. OVER 2.5: 56.1% de probabilidade",
-          "edge": 0.0612,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.5914139679040019,
-          "confianca": "MEDIUM",
-          "justificativa": "xG: 1.5 (casa) x 1.5 (fora). Ambas marcam - Sim: 59.1%",
-          "edge": 0.0914,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
@@ -993,6 +798,205 @@
           "confianca": "HIGH",
           "justificativa": "xG: 2.5 (casa) x 1.6 (fora). Ambas marcam - Sim: 72.8%",
           "edge": 0.2278,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Primera Division",
+      "data": "2026-05-02T19:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Osasuna",
+        "visitante": "Barça"
+      },
+      "probabilidades": {
+        "casa": 0.37286207784192116,
+        "empate": 0.24617674419642185,
+        "visitante": 0.3806699808254916
+      },
+      "favorito": {
+        "nome": "Barça",
+        "prob": 0.3806699808254916,
+        "vantagem": 0.007807902983570425
+      },
+      "gols_esperados": {
+        "casa": 1.4573681428406688,
+        "visitante": 1.4749669908386187,
+        "total": 2.9323351336792873
+      },
+      "mercados": {
+        "under_25": 0.4388106495953109,
+        "over_25": 0.5611893504046891,
+        "btts_yes": 0.5914139679040019,
+        "btts_no": 0.4085860320959981
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.5090909090909091,
+          "ataque": 0.64,
+          "defesa": 0.6,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.6181818181818183
+        },
+        "visitante": {
+          "forma_recente": 0.881818181818182,
+          "ataque": 0.7,
+          "defesa": 0.7,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.7636363636363637
+        }
+      },
+      "leitura_rapida": "Barça favorito (38%, risco alto). Jogo mais aberto (xG total ≈2.9). Over 2.5 com 56%. | Forma recente: Barça em alta.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "em alta"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "skip_edge_gate",
+        "reason": "edge abaixo do gate (0.8 p.p. < 10.0 p.p.)",
+        "competition": "Primera Division",
+        "sport_key": "soccer_spain_la_liga",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "26/04 16:30",
+            "mandante": "Osasuna",
+            "visitante": "Sevilla FC",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "21/04 17:00",
+            "mandante": "Athletic",
+            "visitante": "Osasuna",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "12/04 12:00",
+            "mandante": "Osasuna",
+            "visitante": "Real Betis",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "05/04 19:00",
+            "mandante": "Alavés",
+            "visitante": "Osasuna",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "21/03 17:30",
+            "mandante": "Osasuna",
+            "visitante": "Girona",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "25/04 14:15",
+            "mandante": "Getafe",
+            "visitante": "Barça",
+            "placar": "0 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "22/04 19:30",
+            "mandante": "Barça",
+            "visitante": "Celta",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "14/04 19:00",
+            "mandante": "Atleti",
+            "visitante": "Barça",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "11/04 16:30",
+            "mandante": "Barça",
+            "visitante": "Espanyol",
+            "placar": "4 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "08/04 19:00",
+            "mandante": "Barça",
+            "visitante": "Atleti",
+            "placar": "0 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "2",
+          "probabilidade": 0.3806699808254916,
+          "confianca": "LOW",
+          "justificativa": "Barça projeta ≈1.5 gol(s) vs ≈1.5 do adversário. Prob vitória: 38.1% (margem: 0.8 p.p.)",
+          "edge": 0.0078,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER",
+          "probabilidade": 0.5611893504046891,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.9. OVER 2.5: 56.1% de probabilidade",
+          "edge": 0.0612,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.5914139679040019,
+          "confianca": "MEDIUM",
+          "justificativa": "xG: 1.5 (casa) x 1.5 (fora). Ambas marcam - Sim: 59.1%",
+          "edge": 0.0914,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
@@ -1409,6 +1413,205 @@
         "visitante": null
       },
       "times": {
+        "casa": "Vitória",
+        "visitante": "Coritiba"
+      },
+      "probabilidades": {
+        "casa": 0.5003697944899155,
+        "empate": 0.2845243276430279,
+        "visitante": 0.21503072260585226
+      },
+      "favorito": {
+        "nome": "Vitória",
+        "prob": 0.5003697944899155,
+        "vantagem": 0.2158454668468876
+      },
+      "gols_esperados": {
+        "casa": 1.3262438657123647,
+        "visitante": 0.7629150592484214,
+        "total": 2.089158924960786
+      },
+      "mercados": {
+        "under_25": 0.6526345050982321,
+        "over_25": 0.347365494901768,
+        "btts_yes": 0.39197313061399647,
+        "btts_no": 0.6080268693860036
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.45454545454545453,
+          "ataque": 0.48,
+          "defesa": 0.84,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.6070909090909091
+        },
+        "visitante": {
+          "forma_recente": 0.5181818181818182,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.5413636363636364
+        }
+      },
+      "leitura_rapida": "Vitória favorito (50%, risco moderado). Jogo fechado esperado (xG total ≈2.1). Under 2.5 com 65%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Campeonato Brasileiro Série A",
+        "sport_key": "soccer_brazil_campeonato",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "26/04 21:30",
+            "mandante": "Paranaense",
+            "visitante": "Vitória",
+            "placar": "3 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "18/04 23:00",
+            "mandante": "Vitória",
+            "visitante": "Corinthians",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "11/04 19:30",
+            "mandante": "Vitória",
+            "visitante": "São Paulo",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "05/04 19:00",
+            "mandante": "Chapecoense",
+            "visitante": "Vitória",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "01/04 23:00",
+            "mandante": "Cruzeiro",
+            "visitante": "Vitória",
+            "placar": "3 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "26/04 19:00",
+            "mandante": "Grêmio",
+            "visitante": "Coritiba",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "19/04 19:00",
+            "mandante": "Coritiba",
+            "visitante": "Mineiro",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "12/04 19:00",
+            "mandante": "Botafogo",
+            "visitante": "Coritiba",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "04/04 23:30",
+            "mandante": "Coritiba",
+            "visitante": "Fluminense",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "01/04 23:30",
+            "mandante": "Coritiba",
+            "visitante": "Vasco da Gama",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.5003697944899155,
+          "confianca": "MEDIUM",
+          "justificativa": "Vitória projeta ≈1.3 gol(s) vs ≈0.8 do adversário. Prob vitória: 50.0% (margem: 21.6 p.p.)",
+          "edge": 0.2158,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER",
+          "probabilidade": 0.6526345050982321,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈2.1. UNDER 2.5: 65.3% de probabilidade",
+          "edge": 0.1526,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.6080268693860036,
+          "confianca": "MEDIUM",
+          "justificativa": "xG: 1.3 (casa) x 0.8 (fora). Ambas marcam - Nao: 60.8%",
+          "edge": 0.108,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Campeonato Brasileiro Série A",
+      "data": "2026-05-02T21:30:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
         "casa": "Palmeiras",
         "visitante": "Santos"
       },
@@ -1592,205 +1795,6 @@
           "confianca": "LOW",
           "justificativa": "xG: 1.9 (casa) x 1.0 (fora). Ambas marcam - Sim: 54.2%",
           "edge": 0.042,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Campeonato Brasileiro Série A",
-      "data": "2026-05-02T21:30:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "Vitória",
-        "visitante": "Coritiba"
-      },
-      "probabilidades": {
-        "casa": 0.5003697944899155,
-        "empate": 0.2845243276430279,
-        "visitante": 0.21503072260585226
-      },
-      "favorito": {
-        "nome": "Vitória",
-        "prob": 0.5003697944899155,
-        "vantagem": 0.2158454668468876
-      },
-      "gols_esperados": {
-        "casa": 1.3262438657123647,
-        "visitante": 0.7629150592484214,
-        "total": 2.089158924960786
-      },
-      "mercados": {
-        "under_25": 0.6526345050982321,
-        "over_25": 0.347365494901768,
-        "btts_yes": 0.39197313061399647,
-        "btts_no": 0.6080268693860036
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.45454545454545453,
-          "ataque": 0.48,
-          "defesa": 0.84,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.6070909090909091
-        },
-        "visitante": {
-          "forma_recente": 0.5181818181818182,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.5413636363636364
-        }
-      },
-      "leitura_rapida": "Vitória favorito (50%, risco moderado). Jogo fechado esperado (xG total ≈2.1). Under 2.5 com 65%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "Campeonato Brasileiro Série A",
-        "sport_key": "soccer_brazil_campeonato",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "26/04 21:30",
-            "mandante": "Paranaense",
-            "visitante": "Vitória",
-            "placar": "3 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "18/04 23:00",
-            "mandante": "Vitória",
-            "visitante": "Corinthians",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "11/04 19:30",
-            "mandante": "Vitória",
-            "visitante": "São Paulo",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "05/04 19:00",
-            "mandante": "Chapecoense",
-            "visitante": "Vitória",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "01/04 23:00",
-            "mandante": "Cruzeiro",
-            "visitante": "Vitória",
-            "placar": "3 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "26/04 19:00",
-            "mandante": "Grêmio",
-            "visitante": "Coritiba",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "19/04 19:00",
-            "mandante": "Coritiba",
-            "visitante": "Mineiro",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "12/04 19:00",
-            "mandante": "Botafogo",
-            "visitante": "Coritiba",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "04/04 23:30",
-            "mandante": "Coritiba",
-            "visitante": "Fluminense",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "01/04 23:30",
-            "mandante": "Coritiba",
-            "visitante": "Vasco da Gama",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.5003697944899155,
-          "confianca": "MEDIUM",
-          "justificativa": "Vitória projeta ≈1.3 gol(s) vs ≈0.8 do adversário. Prob vitória: 50.0% (margem: 21.6 p.p.)",
-          "edge": 0.2158,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.6526345050982321,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈2.1. UNDER 2.5: 65.3% de probabilidade",
-          "edge": 0.1526,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.6080268693860036,
-          "confianca": "MEDIUM",
-          "justificativa": "xG: 1.3 (casa) x 0.8 (fora). Ambas marcam - Nao: 60.8%",
-          "edge": 0.108,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
