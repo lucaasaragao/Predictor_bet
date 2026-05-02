@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-02",
-      "ultima_atualizacao": "2026-05-02T20:20:24-03:00",
-      "finalizados": 7,
-      "taxa_geral": 0.524,
-      "total_acertos": 11,
-      "total_palpites": 21,
+      "ultima_atualizacao": "2026-05-02T20:56:52-03:00",
+      "finalizados": 9,
+      "taxa_geral": 0.556,
+      "total_acertos": 15,
+      "total_palpites": 27,
       "mercados": {
         "WINNER": {
-          "acertos": 2,
-          "total": 7,
-          "taxa": 0.286
+          "acertos": 4,
+          "total": 9,
+          "taxa": 0.444
         },
         "OVER_UNDER": {
-          "acertos": 4,
-          "total": 7,
-          "taxa": 0.571
+          "acertos": 5,
+          "total": 9,
+          "taxa": 0.556
         },
         "BTTS": {
-          "acertos": 5,
-          "total": 7,
-          "taxa": 0.714
+          "acertos": 6,
+          "total": 9,
+          "taxa": 0.667
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 7,
-          "brier": 0.8309,
-          "log_loss": 1.3579
+          "n": 9,
+          "brier": 0.7165,
+          "log_loss": 1.1923
         },
         "OVER_UNDER": {
-          "n": 7,
-          "brier": 0.3194,
-          "log_loss": 0.8558
+          "n": 9,
+          "brier": 0.3172,
+          "log_loss": 0.8473
         },
         "BTTS": {
-          "n": 7,
-          "brier": 0.1686,
-          "log_loss": 0.5208
+          "n": 9,
+          "brier": 0.1955,
+          "log_loss": 0.5772
         }
       },
       "jogos": [
@@ -249,6 +249,66 @@
               "confianca": "LOW",
               "probabilidade": 0.549,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-02T21:30:00Z",
+          "casa": "Vitória",
+          "visitante": "Coritiba",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "4-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.5,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER",
+              "confianca": "HIGH",
+              "probabilidade": 0.653,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.608,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-02T21:30:00Z",
+          "casa": "Palmeiras",
+          "visitante": "Santos",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.587,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "LOW",
+              "probabilidade": 0.561,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.542,
+              "resultado": "ACERTO"
             }
           ]
         }
