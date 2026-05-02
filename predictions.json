@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T12:12:50-03:00",
+  "generated_at": "2026-05-02T12:45:09-03:00",
   "total_jogos": 19,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -8,10 +8,10 @@
     {
       "competicao": "Ligue 1",
       "data": "2026-05-02T15:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 1,
+        "visitante": 1
       },
       "times": {
         "casa": "PSG",
@@ -72,11 +72,13 @@
         "sport_key": "soccer_france_ligue_one",
         "odds_match_id": "2bf852c3fac0dd8a9be7ced65931e78b",
         "bookmakers_outcomes": "3",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
       "odds_integradas": true,
-      "odds_valor_alto": false,
+      "odds_valor_alto": true,
       "historico": {
         "casa": [
           {
@@ -171,11 +173,11 @@
           "confianca": "HIGH",
           "justificativa": "PSG projeta ≈3.2 gol(s) vs ≈1.2 do adversário. Prob vitória: 74.3% (margem: 61.4 p.p.)",
           "edge": 0.6137,
-          "odd_decimal": 1.6,
-          "ev": -0.0447,
-          "ev_bruto": 0.1894,
-          "prob_mercado_justa": 0.7781,
-          "valor_esperado_positivo": false,
+          "odd_decimal": 1.63,
+          "ev": 0.1943,
+          "ev_bruto": 0.2117,
+          "prob_mercado_justa": 0.6224,
+          "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
         {
@@ -373,9 +375,9 @@
           "justificativa": "Como 1907 projeta ≈2.4 gol(s) vs ≈1.4 do adversário. Prob vitória: 58.2% (margem: 35.8 p.p.)",
           "edge": 0.3582,
           "odd_decimal": 2.34,
-          "ev": 0.3605,
+          "ev": 0.3604,
           "ev_bruto": 0.3607,
-          "prob_mercado_justa": 0.4274,
+          "prob_mercado_justa": 0.4275,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -400,205 +402,6 @@
           "confianca": "HIGH",
           "justificativa": "xG: 2.4 (casa) x 1.4 (fora). Ambas marcam - Sim: 69.0%",
           "edge": 0.1897,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Bundesliga",
-      "data": "2026-05-02T16:30:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "Leverkusen",
-        "visitante": "RB Leipzig"
-      },
-      "probabilidades": {
-        "casa": 0.4066222459573093,
-        "empate": 0.2104354762561021,
-        "visitante": 0.3811296227643356
-      },
-      "favorito": {
-        "nome": "Leverkusen",
-        "prob": 0.4066222459573093,
-        "vantagem": 0.025492623192973685
-      },
-      "gols_esperados": {
-        "casa": 1.9718688,
-        "visitante": 1.9062198807749633,
-        "total": 3.8780886807749635
-      },
-      "mercados": {
-        "under_25": 0.25832881179485023,
-        "over_25": 0.7416711882051498,
-        "btts_yes": 0.7313018931070581,
-        "btts_no": 0.26869810689294193
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.6090909090909091,
-          "ataque": 0.9,
-          "defesa": 0.30000000000000004,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.6581818181818183
-        },
-        "visitante": {
-          "forma_recente": 0.8818181818181817,
-          "ataque": 0.7,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.7436363636363635
-        }
-      },
-      "leitura_rapida": "Leverkusen favorito (41%, risco alto). Jogo mais aberto (xG total ≈3.9). Over 2.5 com 74%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (2.5 p.p. < 10.0 p.p.)",
-        "competition": "Bundesliga",
-        "sport_key": "soccer_germany_bundesliga",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "25/04 13:30",
-            "mandante": "1. FC Köln",
-            "visitante": "Leverkusen",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "18/04 13:30",
-            "mandante": "Leverkusen",
-            "visitante": "Augsburg",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "11/04 13:30",
-            "mandante": "Dortmund",
-            "visitante": "Leverkusen",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "04/04 13:30",
-            "mandante": "Leverkusen",
-            "visitante": "Wolfsburg",
-            "placar": "6 x 3",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "21/03 14:30",
-            "mandante": "Heidenheim",
-            "visitante": "Leverkusen",
-            "placar": "3 x 3",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "24/04 18:30",
-            "mandante": "RB Leipzig",
-            "visitante": "Union Berlin",
-            "placar": "3 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "18/04 16:30",
-            "mandante": "Frankfurt",
-            "visitante": "RB Leipzig",
-            "placar": "1 x 3",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "11/04 13:30",
-            "mandante": "RB Leipzig",
-            "visitante": "M'gladbach",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "04/04 13:30",
-            "mandante": "Bremen",
-            "visitante": "RB Leipzig",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "20/03 19:30",
-            "mandante": "RB Leipzig",
-            "visitante": "Hoffenheim",
-            "placar": "5 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.4066222459573093,
-          "confianca": "LOW",
-          "justificativa": "Leverkusen projeta ≈2.0 gol(s) vs ≈1.9 do adversário. Prob vitória: 40.7% (margem: 2.5 p.p.)",
-          "edge": 0.0255,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.7416711882051498,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈3.9. OVER 2.5: 74.2% de probabilidade",
-          "edge": 0.2417,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.7313018931070581,
-          "confianca": "HIGH",
-          "justificativa": "xG: 2.0 (casa) x 1.9 (fora). Ambas marcam - Sim: 73.1%",
-          "edge": 0.2313,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
@@ -1009,6 +812,205 @@
       ]
     },
     {
+      "competicao": "Bundesliga",
+      "data": "2026-05-02T16:30:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Leverkusen",
+        "visitante": "RB Leipzig"
+      },
+      "probabilidades": {
+        "casa": 0.4066222459573093,
+        "empate": 0.2104354762561021,
+        "visitante": 0.3811296227643356
+      },
+      "favorito": {
+        "nome": "Leverkusen",
+        "prob": 0.4066222459573093,
+        "vantagem": 0.025492623192973685
+      },
+      "gols_esperados": {
+        "casa": 1.9718688,
+        "visitante": 1.9062198807749633,
+        "total": 3.8780886807749635
+      },
+      "mercados": {
+        "under_25": 0.25832881179485023,
+        "over_25": 0.7416711882051498,
+        "btts_yes": 0.7313018931070581,
+        "btts_no": 0.26869810689294193
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.6090909090909091,
+          "ataque": 0.9,
+          "defesa": 0.30000000000000004,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.6581818181818183
+        },
+        "visitante": {
+          "forma_recente": 0.8818181818181817,
+          "ataque": 0.7,
+          "defesa": 0.6,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.7436363636363635
+        }
+      },
+      "leitura_rapida": "Leverkusen favorito (41%, risco alto). Jogo mais aberto (xG total ≈3.9). Over 2.5 com 74%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "skip_edge_gate",
+        "reason": "edge abaixo do gate (2.5 p.p. < 10.0 p.p.)",
+        "competition": "Bundesliga",
+        "sport_key": "soccer_germany_bundesliga",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "25/04 13:30",
+            "mandante": "1. FC Köln",
+            "visitante": "Leverkusen",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "18/04 13:30",
+            "mandante": "Leverkusen",
+            "visitante": "Augsburg",
+            "placar": "1 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "11/04 13:30",
+            "mandante": "Dortmund",
+            "visitante": "Leverkusen",
+            "placar": "0 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "04/04 13:30",
+            "mandante": "Leverkusen",
+            "visitante": "Wolfsburg",
+            "placar": "6 x 3",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "21/03 14:30",
+            "mandante": "Heidenheim",
+            "visitante": "Leverkusen",
+            "placar": "3 x 3",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "24/04 18:30",
+            "mandante": "RB Leipzig",
+            "visitante": "Union Berlin",
+            "placar": "3 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "18/04 16:30",
+            "mandante": "Frankfurt",
+            "visitante": "RB Leipzig",
+            "placar": "1 x 3",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "11/04 13:30",
+            "mandante": "RB Leipzig",
+            "visitante": "M'gladbach",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "04/04 13:30",
+            "mandante": "Bremen",
+            "visitante": "RB Leipzig",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "20/03 19:30",
+            "mandante": "RB Leipzig",
+            "visitante": "Hoffenheim",
+            "placar": "5 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.4066222459573093,
+          "confianca": "LOW",
+          "justificativa": "Leverkusen projeta ≈2.0 gol(s) vs ≈1.9 do adversário. Prob vitória: 40.7% (margem: 2.5 p.p.)",
+          "edge": 0.0255,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER",
+          "probabilidade": 0.7416711882051498,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈3.9. OVER 2.5: 74.2% de probabilidade",
+          "edge": 0.2417,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.7313018931070581,
+          "confianca": "HIGH",
+          "justificativa": "xG: 2.0 (casa) x 1.9 (fora). Ambas marcam - Sim: 73.1%",
+          "edge": 0.2313,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
       "competicao": "Eredivisie",
       "data": "2026-05-02T16:45:00Z",
       "status": "TIMED",
@@ -1208,205 +1210,6 @@
       ]
     },
     {
-      "competicao": "Primeira Liga",
-      "data": "2026-05-02T17:00:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "Famalicão",
-        "visitante": "SL Benfica"
-      },
-      "probabilidades": {
-        "casa": 0.5000068582718444,
-        "empate": 0.2499384074555494,
-        "visitante": 0.24978429745121125
-      },
-      "favorito": {
-        "nome": "Famalicão",
-        "prob": 0.5000068582718444,
-        "vantagem": 0.25006845081629503
-      },
-      "gols_esperados": {
-        "casa": 1.595762939799194,
-        "visitante": 1.0503249231609864,
-        "total": 2.6460878629601803
-      },
-      "mercados": {
-        "under_25": 0.5071924011949063,
-        "over_25": 0.4928075988050938,
-        "btts_yes": 0.5181723401135152,
-        "btts_no": 0.4818276598864848
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.7363636363636363,
-          "ataque": 0.5,
-          "defesa": 0.9,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.7227272727272728
-        },
-        "visitante": {
-          "forma_recente": 0.8636363636363636,
-          "ataque": 0.64,
-          "defesa": 0.52,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.7062727272727273
-        }
-      },
-      "leitura_rapida": "Famalicão favorito (50%, risco moderado). Mercado de gols equilibrado (xG total ≈2.6).",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "Primeira Liga",
-        "sport_key": "soccer_portugal_primeira_liga",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "26/04 14:30",
-            "mandante": "Estoril Praia",
-            "visitante": "Famalicão",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "19/04 19:30",
-            "mandante": "Braga",
-            "visitante": "Famalicão",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "10/04 19:45",
-            "mandante": "Famalicão",
-            "visitante": "Moreirense",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "04/04 19:30",
-            "mandante": "Porto",
-            "visitante": "Famalicão",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "21/03 15:30",
-            "mandante": "Famalicão",
-            "visitante": "CD Nacional",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "25/04 17:00",
-            "mandante": "SL Benfica",
-            "visitante": "Moreirense",
-            "placar": "4 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "19/04 17:15",
-            "mandante": "Sporting CP",
-            "visitante": "SL Benfica",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "12/04 17:00",
-            "mandante": "SL Benfica",
-            "visitante": "CD Nacional",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "06/04 19:45",
-            "mandante": "Casa Pia",
-            "visitante": "SL Benfica",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "21/03 18:00",
-            "mandante": "SL Benfica",
-            "visitante": "Vitória SC",
-            "placar": "3 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.5000068582718444,
-          "confianca": "HIGH",
-          "justificativa": "Famalicão projeta ≈1.6 gol(s) vs ≈1.1 do adversário. Prob vitória: 50.0% (margem: 25.0 p.p.)",
-          "edge": 0.2501,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.5071924011949063,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.6. UNDER 2.5: 50.7% de probabilidade",
-          "edge": 0.0072,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.5181723401135152,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.6 (casa) x 1.1 (fora). Ambas marcam - Sim: 51.8%",
-          "edge": 0.0182,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
       "competicao": "Ligue 1",
       "data": "2026-05-02T17:00:00Z",
       "status": "TIMED",
@@ -1596,6 +1399,205 @@
           "confianca": "HIGH",
           "justificativa": "xG: 1.6 (casa) x 2.4 (fora). Ambas marcam - Sim: 73.1%",
           "edge": 0.2312,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Primeira Liga",
+      "data": "2026-05-02T17:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Famalicão",
+        "visitante": "SL Benfica"
+      },
+      "probabilidades": {
+        "casa": 0.5000068582718444,
+        "empate": 0.2499384074555494,
+        "visitante": 0.24978429745121125
+      },
+      "favorito": {
+        "nome": "Famalicão",
+        "prob": 0.5000068582718444,
+        "vantagem": 0.25006845081629503
+      },
+      "gols_esperados": {
+        "casa": 1.595762939799194,
+        "visitante": 1.0503249231609864,
+        "total": 2.6460878629601803
+      },
+      "mercados": {
+        "under_25": 0.5071924011949063,
+        "over_25": 0.4928075988050938,
+        "btts_yes": 0.5181723401135152,
+        "btts_no": 0.4818276598864848
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.7363636363636363,
+          "ataque": 0.5,
+          "defesa": 0.9,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.7227272727272728
+        },
+        "visitante": {
+          "forma_recente": 0.8636363636363636,
+          "ataque": 0.64,
+          "defesa": 0.52,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.7062727272727273
+        }
+      },
+      "leitura_rapida": "Famalicão favorito (50%, risco moderado). Mercado de gols equilibrado (xG total ≈2.6).",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Primeira Liga",
+        "sport_key": "soccer_portugal_primeira_liga",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "26/04 14:30",
+            "mandante": "Estoril Praia",
+            "visitante": "Famalicão",
+            "placar": "0 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "19/04 19:30",
+            "mandante": "Braga",
+            "visitante": "Famalicão",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "10/04 19:45",
+            "mandante": "Famalicão",
+            "visitante": "Moreirense",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "04/04 19:30",
+            "mandante": "Porto",
+            "visitante": "Famalicão",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "21/03 15:30",
+            "mandante": "Famalicão",
+            "visitante": "CD Nacional",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "25/04 17:00",
+            "mandante": "SL Benfica",
+            "visitante": "Moreirense",
+            "placar": "4 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "19/04 17:15",
+            "mandante": "Sporting CP",
+            "visitante": "SL Benfica",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "12/04 17:00",
+            "mandante": "SL Benfica",
+            "visitante": "CD Nacional",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "06/04 19:45",
+            "mandante": "Casa Pia",
+            "visitante": "SL Benfica",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "21/03 18:00",
+            "mandante": "SL Benfica",
+            "visitante": "Vitória SC",
+            "placar": "3 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.5000068582718444,
+          "confianca": "HIGH",
+          "justificativa": "Famalicão projeta ≈1.6 gol(s) vs ≈1.1 do adversário. Prob vitória: 50.0% (margem: 25.0 p.p.)",
+          "edge": 0.2501,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER",
+          "probabilidade": 0.5071924011949063,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.6. UNDER 2.5: 50.7% de probabilidade",
+          "edge": 0.0072,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.5181723401135152,
+          "confianca": "LOW",
+          "justificativa": "xG: 1.6 (casa) x 1.1 (fora). Ambas marcam - Sim: 51.8%",
+          "edge": 0.0182,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
@@ -2004,205 +2006,6 @@
       ]
     },
     {
-      "competicao": "Eredivisie",
-      "data": "2026-05-02T19:00:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "NEC",
-        "visitante": "Telstar"
-      },
-      "probabilidades": {
-        "casa": 0.5726491786057893,
-        "empate": 0.186688800868617,
-        "visitante": 0.23608242400035387
-      },
-      "favorito": {
-        "nome": "NEC",
-        "prob": 0.5726491786057893,
-        "vantagem": 0.3365667546054355
-      },
-      "gols_esperados": {
-        "casa": 2.5082668087614857,
-        "visitante": 1.5912778130959948,
-        "total": 4.099544621857481
-      },
-      "mercados": {
-        "under_25": 0.22845701636471294,
-        "over_25": 0.7715429836352871,
-        "btts_yes": 0.7278284287982736,
-        "btts_no": 0.2721715712017264
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.6272727272727273,
-          "ataque": 0.72,
-          "defesa": 0.28,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.6155454545454546
-        },
-        "visitante": {
-          "forma_recente": 0.5,
-          "ataque": 0.5599999999999999,
-          "defesa": 0.11999999999999988,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.4789999999999999
-        }
-      },
-      "leitura_rapida": "NEC favorito (57%, risco moderado). Jogo mais aberto (xG total ≈4.1). Over 2.5 com 77%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "Eredivisie",
-        "sport_key": "soccer_netherlands_eredivisie",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "25/04 19:00",
-            "mandante": "Twente",
-            "visitante": "NEC",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "12/04 12:30",
-            "mandante": "NEC",
-            "visitante": "Feyenoord",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "04/04 19:00",
-            "mandante": "Excelsior",
-            "visitante": "NEC",
-            "placar": "0 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "22/03 11:15",
-            "mandante": "NEC",
-            "visitante": "Heerenveen",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "14/03 17:45",
-            "mandante": "PSV",
-            "visitante": "NEC",
-            "placar": "2 x 3",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "22/04 18:00",
-            "mandante": "Telstar",
-            "visitante": "Sparta",
-            "placar": "4 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "11/04 14:30",
-            "mandante": "Utrecht",
-            "visitante": "Telstar",
-            "placar": "4 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "04/04 16:45",
-            "mandante": "Telstar",
-            "visitante": "Groningen",
-            "placar": "0 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "22/03 15:45",
-            "mandante": "Telstar",
-            "visitante": "PSV",
-            "placar": "3 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "14/03 19:00",
-            "mandante": "Heerenveen",
-            "visitante": "Telstar",
-            "placar": "3 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.5726491786057893,
-          "confianca": "HIGH",
-          "justificativa": "NEC projeta ≈2.5 gol(s) vs ≈1.6 do adversário. Prob vitória: 57.3% (margem: 33.7 p.p.)",
-          "edge": 0.3366,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.7715429836352871,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈4.1. OVER 2.5: 77.2% de probabilidade",
-          "edge": 0.2715,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.7278284287982736,
-          "confianca": "HIGH",
-          "justificativa": "xG: 2.5 (casa) x 1.6 (fora). Ambas marcam - Sim: 72.8%",
-          "edge": 0.2278,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
       "competicao": "Campeonato Brasileiro Série A",
       "data": "2026-05-02T19:00:00Z",
       "status": "TIMED",
@@ -2591,6 +2394,205 @@
           "confianca": "MEDIUM",
           "justificativa": "xG: 1.5 (casa) x 1.5 (fora). Ambas marcam - Sim: 59.1%",
           "edge": 0.0914,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Eredivisie",
+      "data": "2026-05-02T19:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "NEC",
+        "visitante": "Telstar"
+      },
+      "probabilidades": {
+        "casa": 0.5726491786057893,
+        "empate": 0.186688800868617,
+        "visitante": 0.23608242400035387
+      },
+      "favorito": {
+        "nome": "NEC",
+        "prob": 0.5726491786057893,
+        "vantagem": 0.3365667546054355
+      },
+      "gols_esperados": {
+        "casa": 2.5082668087614857,
+        "visitante": 1.5912778130959948,
+        "total": 4.099544621857481
+      },
+      "mercados": {
+        "under_25": 0.22845701636471294,
+        "over_25": 0.7715429836352871,
+        "btts_yes": 0.7278284287982736,
+        "btts_no": 0.2721715712017264
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.6272727272727273,
+          "ataque": 0.72,
+          "defesa": 0.28,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.6155454545454546
+        },
+        "visitante": {
+          "forma_recente": 0.5,
+          "ataque": 0.5599999999999999,
+          "defesa": 0.11999999999999988,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.4789999999999999
+        }
+      },
+      "leitura_rapida": "NEC favorito (57%, risco moderado). Jogo mais aberto (xG total ≈4.1). Over 2.5 com 77%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Eredivisie",
+        "sport_key": "soccer_netherlands_eredivisie",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "25/04 19:00",
+            "mandante": "Twente",
+            "visitante": "NEC",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "12/04 12:30",
+            "mandante": "NEC",
+            "visitante": "Feyenoord",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "04/04 19:00",
+            "mandante": "Excelsior",
+            "visitante": "NEC",
+            "placar": "0 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "22/03 11:15",
+            "mandante": "NEC",
+            "visitante": "Heerenveen",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "14/03 17:45",
+            "mandante": "PSV",
+            "visitante": "NEC",
+            "placar": "2 x 3",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "22/04 18:00",
+            "mandante": "Telstar",
+            "visitante": "Sparta",
+            "placar": "4 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "11/04 14:30",
+            "mandante": "Utrecht",
+            "visitante": "Telstar",
+            "placar": "4 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "04/04 16:45",
+            "mandante": "Telstar",
+            "visitante": "Groningen",
+            "placar": "0 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "22/03 15:45",
+            "mandante": "Telstar",
+            "visitante": "PSV",
+            "placar": "3 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "14/03 19:00",
+            "mandante": "Heerenveen",
+            "visitante": "Telstar",
+            "placar": "3 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.5726491786057893,
+          "confianca": "HIGH",
+          "justificativa": "NEC projeta ≈2.5 gol(s) vs ≈1.6 do adversário. Prob vitória: 57.3% (margem: 33.7 p.p.)",
+          "edge": 0.3366,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER",
+          "probabilidade": 0.7715429836352871,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈4.1. OVER 2.5: 77.2% de probabilidade",
+          "edge": 0.2715,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.7278284287982736,
+          "confianca": "HIGH",
+          "justificativa": "xG: 2.5 (casa) x 1.6 (fora). Ambas marcam - Sim: 72.8%",
+          "edge": 0.2278,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
@@ -3007,205 +3009,6 @@
         "visitante": null
       },
       "times": {
-        "casa": "Vitória",
-        "visitante": "Coritiba"
-      },
-      "probabilidades": {
-        "casa": 0.5003697944899155,
-        "empate": 0.2845243276430279,
-        "visitante": 0.21503072260585226
-      },
-      "favorito": {
-        "nome": "Vitória",
-        "prob": 0.5003697944899155,
-        "vantagem": 0.2158454668468876
-      },
-      "gols_esperados": {
-        "casa": 1.3262438657123647,
-        "visitante": 0.7629150592484214,
-        "total": 2.089158924960786
-      },
-      "mercados": {
-        "under_25": 0.6526345050982321,
-        "over_25": 0.347365494901768,
-        "btts_yes": 0.39197313061399647,
-        "btts_no": 0.6080268693860036
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.45454545454545453,
-          "ataque": 0.48,
-          "defesa": 0.84,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.6070909090909091
-        },
-        "visitante": {
-          "forma_recente": 0.5181818181818182,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.5413636363636364
-        }
-      },
-      "leitura_rapida": "Vitória favorito (50%, risco moderado). Jogo fechado esperado (xG total ≈2.1). Under 2.5 com 65%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "Campeonato Brasileiro Série A",
-        "sport_key": "soccer_brazil_campeonato",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "26/04 21:30",
-            "mandante": "Paranaense",
-            "visitante": "Vitória",
-            "placar": "3 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "18/04 23:00",
-            "mandante": "Vitória",
-            "visitante": "Corinthians",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "11/04 19:30",
-            "mandante": "Vitória",
-            "visitante": "São Paulo",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "05/04 19:00",
-            "mandante": "Chapecoense",
-            "visitante": "Vitória",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "01/04 23:00",
-            "mandante": "Cruzeiro",
-            "visitante": "Vitória",
-            "placar": "3 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "26/04 19:00",
-            "mandante": "Grêmio",
-            "visitante": "Coritiba",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "19/04 19:00",
-            "mandante": "Coritiba",
-            "visitante": "Mineiro",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "12/04 19:00",
-            "mandante": "Botafogo",
-            "visitante": "Coritiba",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "04/04 23:30",
-            "mandante": "Coritiba",
-            "visitante": "Fluminense",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "01/04 23:30",
-            "mandante": "Coritiba",
-            "visitante": "Vasco da Gama",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.5003697944899155,
-          "confianca": "MEDIUM",
-          "justificativa": "Vitória projeta ≈1.3 gol(s) vs ≈0.8 do adversário. Prob vitória: 50.0% (margem: 21.6 p.p.)",
-          "edge": 0.2158,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.6526345050982321,
-          "confianca": "HIGH",
-          "justificativa": "Gols esperados no jogo: ≈2.1. UNDER 2.5: 65.3% de probabilidade",
-          "edge": 0.1526,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.6080268693860036,
-          "confianca": "MEDIUM",
-          "justificativa": "xG: 1.3 (casa) x 0.8 (fora). Ambas marcam - Nao: 60.8%",
-          "edge": 0.108,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Campeonato Brasileiro Série A",
-      "data": "2026-05-02T21:30:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
         "casa": "Palmeiras",
         "visitante": "Santos"
       },
@@ -3389,6 +3192,205 @@
           "confianca": "LOW",
           "justificativa": "xG: 1.9 (casa) x 1.0 (fora). Ambas marcam - Sim: 54.2%",
           "edge": 0.042,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Campeonato Brasileiro Série A",
+      "data": "2026-05-02T21:30:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Vitória",
+        "visitante": "Coritiba"
+      },
+      "probabilidades": {
+        "casa": 0.5003697944899155,
+        "empate": 0.2845243276430279,
+        "visitante": 0.21503072260585226
+      },
+      "favorito": {
+        "nome": "Vitória",
+        "prob": 0.5003697944899155,
+        "vantagem": 0.2158454668468876
+      },
+      "gols_esperados": {
+        "casa": 1.3262438657123647,
+        "visitante": 0.7629150592484214,
+        "total": 2.089158924960786
+      },
+      "mercados": {
+        "under_25": 0.6526345050982321,
+        "over_25": 0.347365494901768,
+        "btts_yes": 0.39197313061399647,
+        "btts_no": 0.6080268693860036
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.45454545454545453,
+          "ataque": 0.48,
+          "defesa": 0.84,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.6070909090909091
+        },
+        "visitante": {
+          "forma_recente": 0.5181818181818182,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.5413636363636364
+        }
+      },
+      "leitura_rapida": "Vitória favorito (50%, risco moderado). Jogo fechado esperado (xG total ≈2.1). Under 2.5 com 65%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Campeonato Brasileiro Série A",
+        "sport_key": "soccer_brazil_campeonato",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "26/04 21:30",
+            "mandante": "Paranaense",
+            "visitante": "Vitória",
+            "placar": "3 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "18/04 23:00",
+            "mandante": "Vitória",
+            "visitante": "Corinthians",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "11/04 19:30",
+            "mandante": "Vitória",
+            "visitante": "São Paulo",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "05/04 19:00",
+            "mandante": "Chapecoense",
+            "visitante": "Vitória",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "01/04 23:00",
+            "mandante": "Cruzeiro",
+            "visitante": "Vitória",
+            "placar": "3 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "26/04 19:00",
+            "mandante": "Grêmio",
+            "visitante": "Coritiba",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "19/04 19:00",
+            "mandante": "Coritiba",
+            "visitante": "Mineiro",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "12/04 19:00",
+            "mandante": "Botafogo",
+            "visitante": "Coritiba",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "04/04 23:30",
+            "mandante": "Coritiba",
+            "visitante": "Fluminense",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "01/04 23:30",
+            "mandante": "Coritiba",
+            "visitante": "Vasco da Gama",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.5003697944899155,
+          "confianca": "MEDIUM",
+          "justificativa": "Vitória projeta ≈1.3 gol(s) vs ≈0.8 do adversário. Prob vitória: 50.0% (margem: 21.6 p.p.)",
+          "edge": 0.2158,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER",
+          "probabilidade": 0.6526345050982321,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈2.1. UNDER 2.5: 65.3% de probabilidade",
+          "edge": 0.1526,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.6080268693860036,
+          "confianca": "MEDIUM",
+          "justificativa": "xG: 1.3 (casa) x 0.8 (fora). Ambas marcam - Nao: 60.8%",
+          "edge": 0.108,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
