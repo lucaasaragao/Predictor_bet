@@ -25,6 +25,8 @@ Primeira Liga, Eredivisie, Brasileirão Série A/B, UEFA Champions League, Copa 
   "total_jogos": 41,
   "daily_tips_ids": [{"casa": "...", "visitante": "...", "data": "ISO"}],
   "daily_tips_date": "YYYY-MM-DD",
+  "recovery_tip": {"ativo": false},
+  "recovery_tip_date": "YYYY-MM-DD",
   "jogos": [{ "competicao", "data", "status", "times", "probabilidades",
               "favorito", "gols_esperados", "mercados", "palpites", ... }],
   "acertos_hoje": { "acertos", "total", "taxa" }
@@ -40,15 +42,24 @@ Primeira Liga, Eredivisie, Brasileirão Série A/B, UEFA Champions League, Copa 
 - Exclui Brasileirão A/B das dicas; mostra 1–3 dicas conforme total de jogos (>10→3, >5→2, else 1)
 
 ### Dica de Recuperação
-- Aparece quando qualquer dica do dia tem `resultado_verificador === "ERRO"` (jogo finalizado errado)
-- Função `getRecoveryTip`: busca o melhor palpite disponível entre jogos **não finalizados** e **fora das dicas do dia**
-- Score de recuperação: `confiança × 10 + probabilidade` — prioriza HIGH → MEDIUM → maior prob
+- Regra atual: ativa **somente** quando a dica #1 (maior prioridade do dia) falha (`resultado_verificador === "ERRO"`)
+- No backend, a recuperação é persistida em `recovery_tip` no `predictions.json` para manter estabilidade no restante do dia
+- Seleção da recuperação: maior `probabilidade` entre palpites elegíveis fora das dicas fixas do dia; em empate, usa confiança como desempate
 - Renderizada como card âmbar (`tip-card--recovery`) com label "↩ Recuperação"
 
 ### Verificação de Resultados
 - Após jogos finalizados, `resultado_verificador` = "ACERTO" ou "ERRO" em cada palpite
 - Tip cards das dicas do dia mostram badge ✅ Acerto / ❌ Errou conforme resultado
-- `history.json` acumula os últimos 2 dias de resultados (painel admin via triple-click no footer ou `#admin`)
+- `history.json` acumula os últimos 2 dias de resultados com merge por jogo (não sobrescreve o dia e não perde partidas já registradas)
+
+## Fluxo Atual (Resumo)
+1. Busca jogos do dia na API.
+2. Filtra por competições permitidas e dia local da aplicação.
+3. Analisa os jogos e gera probabilidades/mercados/palpites.
+4. Aplica baseline pré-jogo para evitar drift após início da partida.
+5. Congela `daily_tips_ids` no primeiro run do dia.
+6. Ativa `recovery_tip` apenas se a dica #1 falhar.
+7. Atualiza `history.json` em modo acumulativo (merge), preservando jogos já registrados no dia.
 
 ## Filtros do Frontend
 - Por competição (select)

@@ -142,6 +142,7 @@ COMPETICOES_PERMITIDAS = {
 }
 
 PRE_MATCH_STATUSES = {"SCHEDULED", "TIMED"}
+SNAPSHOT_BASELINE_SOURCE_STATUSES = PRE_MATCH_STATUSES | {"IN_PLAY", "PAUSED"}
 
 
 @dataclass
@@ -1245,6 +1246,51 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
     return palpites
 
 
+def _verificar_palpites_dict(palpites: List[Dict], placar_casa: int, placar_visitante: int) -> None:
+    """Atualiza resultado_verificador nos palpites (lista de dicts) com base no placar final.
+
+    Mesma lógica de `gerar_palpites`, mas opera sobre dicts do JSON em vez de
+    dataclasses BetSuggestion — usada pelo caminho de atualização leve.
+    """
+    home_g, away_g = placar_casa, placar_visitante
+    for p in palpites:
+        tipo  = p.get("tipo")
+        opcao = p.get("opcao")
+        if tipo == "WINNER":
+            if   home_g > away_g  and opcao == "1": p["resultado_verificador"] = "ACERTO"
+            elif home_g == away_g and opcao == "X": p["resultado_verificador"] = "ACERTO"
+            elif home_g < away_g  and opcao == "2": p["resultado_verificador"] = "ACERTO"
+            else:                                    p["resultado_verificador"] = "ERRO"
+        elif tipo == "OVER_UNDER":
+            total = home_g + away_g
+            if   total > 2.5  and opcao == "OVER":  p["resultado_verificador"] = "ACERTO"
+            elif total <= 2.5 and opcao == "UNDER":  p["resultado_verificador"] = "ACERTO"
+            else:                                    p["resultado_verificador"] = "ERRO"
+        elif tipo == "BTTS":
+            ambos = home_g > 0 and away_g > 0
+            if   ambos     and opcao == "YES": p["resultado_verificador"] = "ACERTO"
+            elif not ambos and opcao == "NO":  p["resultado_verificador"] = "ACERTO"
+            else:                              p["resultado_verificador"] = "ERRO"
+        elif tipo == "EMPATE":
+            if home_g == away_g and opcao == "X": p["resultado_verificador"] = "ACERTO"
+            else:                                  p["resultado_verificador"] = "ERRO"
+
+
+def _extrair_placar_jogo_json(jogo: Dict) -> Tuple[Optional[int], Optional[int]]:
+    """Lê o placar do jogo no formato atual (placar_atual) com fallback legado."""
+    placar = jogo.get("placar_atual") or {}
+    casa = placar.get("casa")
+    visitante = placar.get("visitante")
+
+    # Compatibilidade com arquivos antigos que usavam campos no nível raiz.
+    if casa is None:
+        casa = jogo.get("placar_casa")
+    if visitante is None:
+        visitante = jogo.get("placar_visitante")
+
+    return casa, visitante
+
+
 def _barra_percentual(valor: float, largura: int = 18) -> str:
     preenchido = int(max(0.0, min(1.0, valor)) * largura)
     return "#" * preenchido + "-" * (largura - preenchido)
@@ -1344,7 +1390,7 @@ def _carregar_snapshots_pre_jogo(caminho_predicoes: str) -> Dict[str, Dict]:
     snapshots: Dict[str, Dict] = {}
     for jogo in dados.get("jogos", []):
         status = str(jogo.get("status", "")).upper()
-        if status not in PRE_MATCH_STATUSES:
+        if status not in SNAPSHOT_BASELINE_SOURCE_STATUSES:
             continue
 
         times = jogo.get("times", {})
@@ -1449,8 +1495,10 @@ def congelar_modelo_pre_jogo(predicoes: List[PredicaoJogo], caminho_predicoes: s
 
 
 def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str = "predictions.json") -> None:
+    hoje_str = datetime.now(APP_TIMEZONE).date().isoformat()
     dados = {
         "generated_at": datetime.now(APP_TIMEZONE).isoformat(timespec="seconds"),
+        "analysis_date": hoje_str,   # Marca que a análise completa foi feita hoje
         "total_jogos": len(predicoes),
         "odds_debug_visual": ODDS_DEBUG_VISUAL,
         "odds_only_value_games": ODDS_ONLY_VALUE_GAMES,
@@ -1579,6 +1627,7 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
     # Congela as dicas do dia no primeiro run; preserva nas atualizações seguintes
     hoje = datetime.now(APP_TIMEZONE).date().isoformat()
     daily_tips_ids = None
+    existing_data: Dict = {}
     try:
         with open(caminho_saida, "r", encoding="utf-8") as f_existing:
             existing_data = json.load(f_existing)
@@ -1586,16 +1635,6 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
             daily_tips_ids = existing_data.get("daily_tips_ids")
     except (FileNotFoundError, json.JSONDecodeError):
         pass
-
-    jogos_ids_validos = {
-        (j["times"]["casa"], j["times"]["visitante"], j["data"])
-        for j in dados["jogos"]
-    }
-    if daily_tips_ids:
-        daily_tips_ids = [
-            item for item in daily_tips_ids
-            if (item.get("casa"), item.get("visitante"), item.get("data")) in jogos_ids_validos
-        ]
 
     if not daily_tips_ids:
         _excluidas_dicas = {"Campeonato Brasileiro Série A", "Campeonato Brasileiro Série B"}
@@ -1614,8 +1653,292 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
     dados["daily_tips_ids"] = daily_tips_ids
     dados["daily_tips_date"] = hoje
 
+    def _chave_id_jogo(jogo: Dict) -> Tuple[str, str, str]:
+        return (jogo.get("times", {}).get("casa", ""), jogo.get("times", {}).get("visitante", ""), jogo.get("data", ""))
+
+    def _palpite_principal(jogo: Dict) -> Optional[Dict]:
+        palpites = jogo.get("palpites", []) or []
+        return next((p for p in palpites if p.get("valor_esperado_positivo") is True), palpites[0] if palpites else None)
+
+    ids_dicas = {
+        (item.get("casa", ""), item.get("visitante", ""), item.get("data", ""))
+        for item in (daily_tips_ids or [])
+    }
+
+    jogos_por_id: Dict[Tuple[str, str, str], Dict] = {
+        _chave_id_jogo(jogo): jogo
+        for jogo in dados["jogos"]
+    }
+
+    dica_1 = None
+    for item in (daily_tips_ids or []):
+        jid = (item.get("casa", ""), item.get("visitante", ""), item.get("data", ""))
+        jogo = jogos_por_id.get(jid)
+        if jogo:
+            dica_1 = jogo
+            break
+
+    palpite_dica_1 = _palpite_principal(dica_1) if dica_1 else None
+    erro_na_dica_1 = (palpite_dica_1 or {}).get("resultado_verificador") == "ERRO"
+
+    recovery_tip = None
+    if existing_data.get("daily_tips_date") == hoje:
+        recovery_tip = existing_data.get("recovery_tip")
+
+    recovery_ativo_existente = bool((recovery_tip or {}).get("ativo"))
+    if erro_na_dica_1 or recovery_ativo_existente:
+        if not recovery_ativo_existente:
+            _excluidas_dicas = {"Campeonato Brasileiro Série A", "Campeonato Brasileiro Série B"}
+            melhor_jogo = None
+            melhor_palpite = None
+            melhor_prob = -1.0
+            melhor_conf = -1
+            score_confianca = {"HIGH": 3, "MEDIUM": 2, "LOW": 1}
+
+            for jogo in dados["jogos"]:
+                jid = _chave_id_jogo(jogo)
+                if jid in ids_dicas:
+                    continue
+                if jogo.get("status") in ("FINISHED", "AWARDED"):
+                    continue
+                if jogo.get("competicao") in _excluidas_dicas:
+                    continue
+
+                for palpite in jogo.get("palpites", []) or []:
+                    conf = str(palpite.get("confianca", "LOW")).upper()
+                    prob = float(palpite.get("probabilidade") or 0.0)
+                    conf_score = score_confianca.get(conf, 1)
+                    if prob > melhor_prob or (prob == melhor_prob and conf_score > melhor_conf):
+                        melhor_prob = prob
+                        melhor_conf = conf_score
+                        melhor_jogo = jogo
+                        melhor_palpite = palpite
+
+            if melhor_jogo and melhor_palpite:
+                recovery_tip = {
+                    "ativo": True,
+                    "disparado_em": datetime.now(APP_TIMEZONE).isoformat(timespec="seconds"),
+                    "jogo": {
+                        "casa": melhor_jogo.get("times", {}).get("casa", ""),
+                        "visitante": melhor_jogo.get("times", {}).get("visitante", ""),
+                        "data": melhor_jogo.get("data", ""),
+                        "competicao": melhor_jogo.get("competicao", ""),
+                    },
+                    "palpite": {
+                        "tipo": melhor_palpite.get("tipo"),
+                        "opcao": melhor_palpite.get("opcao"),
+                        "probabilidade": melhor_palpite.get("probabilidade"),
+                        "confianca": melhor_palpite.get("confianca"),
+                    },
+                }
+
+    dados["recovery_tip"] = recovery_tip if recovery_tip else {"ativo": False}
+    dados["recovery_tip_date"] = hoje
+
     with open(caminho_saida, "w", encoding="utf-8") as arquivo_saida:
         json.dump(dados, arquivo_saida, ensure_ascii=False, indent=2)
+
+
+def atualizar_historico_do_json(dados_predictions: Dict, caminho: str = "history.json") -> None:
+    """Versão leve de atualizar_historico: lê jogos finalizados diretamente do
+    dicionário predictions (já em memória) em vez de receber List[PredicaoJogo].
+
+    Usada pelo caminho de atualização rápida para não reprocessar análises.
+    """
+    agora_local = datetime.now(APP_TIMEZONE)
+    hoje = agora_local.date().isoformat()
+    agora = agora_local.isoformat(timespec="seconds")
+
+    try:
+        with open(caminho, "r", encoding="utf-8") as f:
+            historico = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        historico = {"dias": []}
+
+    dias = historico.get("dias", [])
+    idx_existente = next((i for i, d in enumerate(dias) if d["data"] == hoje), None)
+    dia_existente = dias[idx_existente] if idx_existente is not None else {}
+    jogos_existentes = list(dia_existente.get("jogos", []) or [])
+
+    def _chave_hist(data_jogo: str, casa: str, visitante: str) -> Tuple[str, str, str]:
+        return (
+            _normalizar_data_chave(data_jogo),
+            _normalizar_nome_time(casa),
+            _normalizar_nome_time(visitante),
+        )
+
+    chaves_existentes = {
+        _chave_hist(j.get("data_jogo", ""), j.get("casa", ""), j.get("visitante", ""))
+        for j in jogos_existentes
+    }
+
+    mercados_stats: Dict[str, Dict] = {}
+    metricas_prob = {
+        "1X2":       {"n": 0, "brier_soma": 0.0, "logloss_soma": 0.0},
+        "OVER_UNDER": {"n": 0, "brier_soma": 0.0, "logloss_soma": 0.0},
+        "BTTS":       {"n": 0, "brier_soma": 0.0, "logloss_soma": 0.0},
+    }
+    jogos_novos = []
+
+    finalizados_json = []
+    for j in dados_predictions.get("jogos", []):
+        if j.get("status") not in ("FINISHED", "AWARDED"):
+            continue
+        placar_casa, placar_visit = _extrair_placar_jogo_json(j)
+        if placar_casa is None or placar_visit is None:
+            continue
+        finalizados_json.append(j)
+
+    for jogo in finalizados_json:
+        times = jogo.get("times", {})
+        casa = times.get("casa", "")
+        visitante = times.get("visitante", "")
+        chave = _chave_hist(jogo.get("data", ""), casa, visitante)
+        if chave in chaves_existentes:
+            # Atualizar resultado_verificador nos jogos existentes se mudou
+            for j_ex in jogos_existentes:
+                if _chave_hist(j_ex.get("data_jogo", ""), j_ex.get("casa", ""), j_ex.get("visitante", "")) == chave:
+                    palpites_json = {p["tipo"]: p for p in jogo.get("palpites", []) if "tipo" in p}
+                    for p_ex in j_ex.get("palpites", []):
+                        tipo = p_ex.get("tipo")
+                        atualizado = palpites_json.get(tipo, {})
+                        novo_res = atualizado.get("resultado_verificador")
+                        if novo_res and not p_ex.get("resultado"):
+                            p_ex["resultado"] = novo_res
+            continue
+
+        palpites_raw = jogo.get("palpites", []) or []
+        com_resultado = [p for p in palpites_raw if p.get("resultado_verificador") is not None]
+        if not com_resultado:
+            continue
+
+        placar_casa_raw, placar_visit_raw = _extrair_placar_jogo_json(jogo)
+        if placar_casa_raw is None or placar_visit_raw is None:
+            continue
+        placar_casa = int(placar_casa_raw)
+        placar_visit = int(placar_visit_raw)
+
+        jogos_novos.append({
+            "data_jogo": jogo.get("data", ""),
+            "casa": casa,
+            "visitante": visitante,
+            "competicao": jogo.get("competicao", ""),
+            "placar": f"{placar_casa}-{placar_visit}",
+            "palpites": [
+                {
+                    "tipo": p.get("tipo"),
+                    "opcao": p.get("opcao"),
+                    "confianca": p.get("confianca"),
+                    "probabilidade": round(float(p.get("probabilidade") or 0), 3),
+                    "resultado": p.get("resultado_verificador"),
+                }
+                for p in com_resultado
+            ],
+        })
+
+        # Métricas probabilísticas
+        prob_casa   = float(jogo.get("probabilidades", {}).get("casa", 0.5) or 0.5)
+        prob_emp    = float(jogo.get("probabilidades", {}).get("empate", 0.25) or 0.25)
+        prob_visit  = float(jogo.get("probabilidades", {}).get("visitante", 0.25) or 0.25)
+        over_25     = float(jogo.get("mercados", {}).get("over_25", 0.5) or 0.5)
+        btts_yes    = float(jogo.get("mercados", {}).get("btts_yes", 0.5) or 0.5)
+        total_gols  = placar_casa + placar_visit
+
+        if placar_casa > placar_visit:   idx_real = 0
+        elif placar_casa == placar_visit: idx_real = 1
+        else:                             idx_real = 2
+
+        probs_1x2  = [prob_casa, prob_emp, prob_visit]
+        one_hot    = [1.0 if i == idx_real else 0.0 for i in range(3)]
+        brier_1x2  = sum((probs_1x2[i] - one_hot[i]) ** 2 for i in range(3))
+        logloss_1x2 = -log(_clip_probabilidade(probs_1x2[idx_real]))
+        metricas_prob["1X2"]["n"] += 1
+        metricas_prob["1X2"]["brier_soma"]   += brier_1x2
+        metricas_prob["1X2"]["logloss_soma"] += logloss_1x2
+
+        y_over  = 1.0 if total_gols > 2.5 else 0.0
+        p_over  = _clip_probabilidade(over_25)
+        metricas_prob["OVER_UNDER"]["n"] += 1
+        metricas_prob["OVER_UNDER"]["brier_soma"]   += (p_over - y_over) ** 2
+        metricas_prob["OVER_UNDER"]["logloss_soma"] += -(y_over * log(p_over) + (1 - y_over) * log(1 - p_over))
+
+        y_btts  = 1.0 if (placar_casa > 0 and placar_visit > 0) else 0.0
+        p_btts  = _clip_probabilidade(btts_yes)
+        metricas_prob["BTTS"]["n"] += 1
+        metricas_prob["BTTS"]["brier_soma"]   += (p_btts - y_btts) ** 2
+        metricas_prob["BTTS"]["logloss_soma"] += -(y_btts * log(p_btts) + (1 - y_btts) * log(1 - p_btts))
+
+    jogos_dia = jogos_existentes + jogos_novos
+    total_acertos = 0
+    total_com_resultado = 0
+
+    for jogo_hist in jogos_dia:
+        for palpite in jogo_hist.get("palpites", []):
+            resultado = palpite.get("resultado")
+            tipo = palpite.get("tipo")
+            if resultado is None or not tipo:
+                continue
+            est = mercados_stats.setdefault(tipo, {"acertos": 0, "total": 0})
+            est["total"] += 1
+            total_com_resultado += 1
+            if resultado == "ACERTO":
+                est["acertos"] += 1
+                total_acertos += 1
+
+    for est in mercados_stats.values():
+        est["taxa"] = round(est["acertos"] / est["total"], 3) if est["total"] else 0.0
+
+    metricas_resumo: Dict[str, Dict] = {}
+    metricas_antigas = dia_existente.get("metricas_probabilisticas", {}) if dia_existente else {}
+    for mercado, valores in metricas_prob.items():
+        n_novo = valores["n"]
+        antigo = metricas_antigas.get(mercado, {}) if isinstance(metricas_antigas, dict) else {}
+        n_antigo = int(antigo.get("n") or 0)
+        brier_ant = antigo.get("brier")
+        logloss_ant = antigo.get("log_loss")
+        soma_b_ant  = (float(brier_ant)   * n_antigo) if (n_antigo and brier_ant   is not None) else 0.0
+        soma_l_ant  = (float(logloss_ant) * n_antigo) if (n_antigo and logloss_ant is not None) else 0.0
+        n_total = n_antigo + n_novo
+        soma_b  = soma_b_ant  + valores["brier_soma"]
+        soma_l  = soma_l_ant  + valores["logloss_soma"]
+        metricas_resumo[mercado] = {
+            "n": n_total,
+            "brier":    round(soma_b / n_total, 4) if n_total else None,
+            "log_loss": round(soma_l / n_total, 4) if n_total else None,
+        }
+
+    entrada = {
+        "data": hoje,
+        "ultima_atualizacao": agora,
+        "finalizados": len(jogos_dia),
+        "taxa_geral": round(total_acertos / total_com_resultado, 3) if total_com_resultado else 0.0,
+        "total_acertos": total_acertos,
+        "total_palpites": total_com_resultado,
+        "mercados": mercados_stats,
+        "metricas_probabilisticas": metricas_resumo,
+        "jogos": jogos_dia,
+    }
+
+    if idx_existente is not None:
+        dias[idx_existente] = entrada
+    else:
+        dias.insert(0, entrada)
+
+    historico["dias"] = dias[:2]
+    with open(caminho, "w", encoding="utf-8") as f:
+        json.dump(historico, f, ensure_ascii=False, indent=2)
+
+    if total_com_resultado:
+        b = entrada["metricas_probabilisticas"]["1X2"]["brier"]
+        l = entrada["metricas_probabilisticas"]["1X2"]["log_loss"]
+        print(
+            f"📈 Histórico: {total_acertos}/{total_com_resultado} acertos hoje ({entrada['taxa_geral']*100:.0f}%)"
+            f" | Brier 1X2: {b if b is not None else '-'}"
+            f" | LogLoss 1X2: {l if l is not None else '-'}"
+            f" → {caminho}"
+        )
+    else:
+        print(f"📈 Histórico atualizado (sem resultado verificável ainda) → {caminho}")
 
 
 def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.json") -> None:
@@ -1630,6 +1953,23 @@ def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.j
     except (FileNotFoundError, json.JSONDecodeError):
         historico = {"dias": []}
 
+    dias = historico.get("dias", [])
+    idx_existente = next((i for i, d in enumerate(dias) if d["data"] == hoje), None)
+    dia_existente = dias[idx_existente] if idx_existente is not None else {}
+    jogos_existentes = list(dia_existente.get("jogos", []) or [])
+
+    def _chave_historico_jogo(data_jogo: str, casa: str, visitante: str) -> Tuple[str, str, str]:
+        return (
+            _normalizar_data_chave(data_jogo),
+            _normalizar_nome_time(casa),
+            _normalizar_nome_time(visitante),
+        )
+
+    chaves_existentes = {
+        _chave_historico_jogo(j.get("data_jogo", ""), j.get("casa", ""), j.get("visitante", ""))
+        for j in jogos_existentes
+    }
+
     finalizados = [
         p for p in predicoes
         if p.status == "FINISHED" and p.placar_casa is not None and p.placar_visitante is not None
@@ -1641,17 +1981,24 @@ def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.j
         "OVER_UNDER": {"n": 0, "brier_soma": 0.0, "logloss_soma": 0.0},
         "BTTS": {"n": 0, "brier_soma": 0.0, "logloss_soma": 0.0},
     }
-    jogos_dia = []
-    total_acertos = 0
-    total_com_resultado = 0
+    jogos_novos = []
 
     for predicao_finalizada in finalizados:
+        chave_jogo = _chave_historico_jogo(
+            predicao_finalizada.data_jogo,
+            predicao_finalizada.time_casa,
+            predicao_finalizada.time_visitante,
+        )
+        if chave_jogo in chaves_existentes:
+            continue
+
         palpites_pred = gerar_palpites(predicao_finalizada)
         com_resultado = [p for p in palpites_pred if p.resultado_verificador is not None]
         if not com_resultado:
             continue
 
-        jogos_dia.append({
+        jogos_novos.append({
+            "data_jogo": predicao_finalizada.data_jogo,
             "casa": predicao_finalizada.time_casa,
             "visitante": predicao_finalizada.time_visitante,
             "competicao": predicao_finalizada.competicao,
@@ -1667,14 +2014,6 @@ def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.j
                 for p in com_resultado
             ],
         })
-
-        for palpite in com_resultado:
-            estatisticas = mercados_stats.setdefault(palpite.tipo, {"acertos": 0, "total": 0})
-            estatisticas["total"] += 1
-            if palpite.resultado_verificador == "ACERTO":
-                estatisticas["acertos"] += 1
-                total_acertos += 1
-            total_com_resultado += 1
 
         total_gols = predicao_finalizada.placar_casa + predicao_finalizada.placar_visitante
         mercados_partida = calcular_probabilidades_mercado(
@@ -1720,22 +2059,55 @@ def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.j
         metricas_prob["BTTS"]["brier_soma"] += brier_btts
         metricas_prob["BTTS"]["logloss_soma"] += logloss_btts
 
+    jogos_dia = jogos_existentes + jogos_novos
+    total_acertos = 0
+    total_com_resultado = 0
+
+    for jogo in jogos_dia:
+        for palpite in jogo.get("palpites", []):
+            resultado = palpite.get("resultado")
+            tipo = palpite.get("tipo")
+            if resultado is None or not tipo:
+                continue
+            estatisticas = mercados_stats.setdefault(tipo, {"acertos": 0, "total": 0})
+            estatisticas["total"] += 1
+            total_com_resultado += 1
+            if resultado == "ACERTO":
+                estatisticas["acertos"] += 1
+                total_acertos += 1
+
     for estatisticas in mercados_stats.values():
         estatisticas["taxa"] = round(estatisticas["acertos"] / estatisticas["total"], 3) if estatisticas["total"] else 0.0
 
     metricas_prob_resumo: Dict[str, Dict[str, Optional[float]]] = {}
+    metricas_antigas = dia_existente.get("metricas_probabilisticas", {}) if dia_existente else {}
     for mercado, valores in metricas_prob.items():
-        n = valores["n"]
+        n_novo = valores["n"]
+        soma_brier_novo = valores["brier_soma"]
+        soma_logloss_novo = valores["logloss_soma"]
+
+        antigo = metricas_antigas.get(mercado, {}) if isinstance(metricas_antigas, dict) else {}
+        n_antigo = int(antigo.get("n") or 0)
+        brier_antigo = antigo.get("brier")
+        logloss_antigo = antigo.get("log_loss")
+
+        soma_brier_antigo = (float(brier_antigo) * n_antigo) if (n_antigo and brier_antigo is not None) else 0.0
+        soma_logloss_antigo = (float(logloss_antigo) * n_antigo) if (n_antigo and logloss_antigo is not None) else 0.0
+
+        n_total = n_antigo + n_novo
+        soma_brier_total = soma_brier_antigo + soma_brier_novo
+        soma_logloss_total = soma_logloss_antigo + soma_logloss_novo
+
         metricas_prob_resumo[mercado] = {
-            "n": n,
-            "brier": round(valores["brier_soma"] / n, 4) if n else None,
-            "log_loss": round(valores["logloss_soma"] / n, 4) if n else None,
+            "n": n_total,
+            "brier": round(soma_brier_total / n_total, 4) if n_total else None,
+            "log_loss": round(soma_logloss_total / n_total, 4) if n_total else None,
         }
 
     entrada = {
         "data": hoje,
         "ultima_atualizacao": agora,
-        "finalizados": len(finalizados),
+        "finalizados": len(jogos_dia),
         "taxa_geral": round(total_acertos / total_com_resultado, 3) if total_com_resultado else 0.0,
         "total_acertos": total_acertos,
         "total_palpites": total_com_resultado,
@@ -1744,10 +2116,8 @@ def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.j
         "jogos": jogos_dia,
     }
 
-    dias = historico.get("dias", [])
-    idx = next((i for i, d in enumerate(dias) if d["data"] == hoje), None)
-    if idx is not None:
-        dias[idx] = entrada
+    if idx_existente is not None:
+        dias[idx_existente] = entrada
     else:
         dias.insert(0, entrada)
 
@@ -1767,6 +2137,191 @@ def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.j
         )
     else:
         print(f"📈 Histórico atualizado ({len(finalizados)} finalizado(s), sem resultado verificável ainda) → {caminho}")
+
+
+def atualizar_status_jogos(
+    caminho_predicoes: str = "predictions.json",
+    caminho_historico: str = "history.json",
+) -> None:
+    """Atualização leve: atualiza só status, placar e resultado_verificador.
+
+    Executado quando a análise completa do dia já foi realizada. Faz apenas
+    1 chamada de API (busca os jogos do dia) em vez de N × 3 chamadas mais
+    N × 12 s de espera da análise completa. Todas as probabilidades, scores,
+    gols esperados e palpites são preservados intactos do run anterior.
+    """
+    print("🔄 Análise já concluída hoje — atualizando apenas status e placares...")
+
+    # ── 1. Buscar estado atual dos jogos (1 chamada de API) ──────────────────
+    matches_atuais = buscar_jogos_permitidos()
+    lookup: Dict[str, Dict] = {}
+    for m in matches_atuais:
+        home = m.get("homeTeam", {}).get("shortName") or m.get("homeTeam", {}).get("name", "")
+        away = m.get("awayTeam", {}).get("shortName") or m.get("awayTeam", {}).get("name", "")
+        lookup[_chave_jogo(m.get("utcDate", ""), home, away)] = m
+
+    # ── 2. Carregar predictions existente ────────────────────────────────────
+    try:
+        with open(caminho_predicoes, "r", encoding="utf-8") as f:
+            dados = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError) as exc:
+        print(f"❌ Não foi possível ler {caminho_predicoes}: {exc}")
+        return
+
+    hoje = datetime.now(APP_TIMEZONE).date().isoformat()
+    atualizados = 0
+
+    # ── 3. Aplicar updates de status/placar ──────────────────────────────────
+    for jogo in dados.get("jogos", []):
+        times = jogo.get("times", {})
+        chave = _chave_jogo(
+            jogo.get("data", ""),
+            times.get("casa", ""),
+            times.get("visitante", ""),
+        )
+        match = lookup.get(chave)
+        if not match:
+            continue
+
+        novo_status = match.get("status", jogo.get("status"))
+        ft = match.get("score", {}).get("fullTime", {})
+        novo_casa = ft.get("home")
+        novo_visit = ft.get("away")
+        placar_atual = jogo.get("placar_atual")
+        if not isinstance(placar_atual, dict):
+            placar_atual = {}
+            jogo["placar_atual"] = placar_atual
+
+        casa_ant, visit_ant = _extrair_placar_jogo_json(jogo)
+
+        mudou = (
+            jogo.get("status") != novo_status
+            or (novo_casa is not None and casa_ant != novo_casa)
+            or (novo_visit is not None and visit_ant != novo_visit)
+        )
+        if not mudou:
+            continue
+
+        atualizados    += 1
+        jogo["status"] = novo_status
+        if novo_casa is not None:
+            placar_atual["casa"] = novo_casa
+            if "placar_casa" in jogo:
+                del jogo["placar_casa"]
+        if novo_visit is not None:
+            placar_atual["visitante"] = novo_visit
+            if "placar_visitante" in jogo:
+                del jogo["placar_visitante"]
+
+        # Re-verificar palpites se jogo finalizado
+        if novo_status in ("FINISHED", "AWARDED") and novo_casa is not None and novo_visit is not None:
+            _verificar_palpites_dict(jogo.get("palpites", []), int(novo_casa), int(novo_visit))
+
+    print(f"{'✅' if atualizados else 'ℹ️ '} {atualizados} jogo(s) com mudanças de status/placar.")
+
+    # ── 4. Recalcular acertos_hoje ───────────────────────────────────────────
+    total_acertos = sum(
+        1 for j in dados["jogos"]
+        for p in j.get("palpites", [])
+        if p.get("resultado_verificador") == "ACERTO"
+    )
+    total_com_resultado = sum(
+        1 for j in dados["jogos"]
+        for p in j.get("palpites", [])
+        if p.get("resultado_verificador") is not None
+    )
+    dados["acertos_hoje"] = {
+        "acertos":      total_acertos,
+        "total":        total_com_resultado,
+        "taxa": round(total_acertos / total_com_resultado, 3) if total_com_resultado else None,
+    }
+
+    # ── 5. Recovery tip ──────────────────────────────────────────────────────
+    # Reutiliza a mesma lógica do exportar_predicoes_front sem duplicar código.
+    # Determinar se dica_1 falhou.
+    def _chave_id(jogo: Dict) -> Tuple[str, str, str]:
+        return (
+            jogo.get("times", {}).get("casa", ""),
+            jogo.get("times", {}).get("visitante", ""),
+            jogo.get("data", ""),
+        )
+
+    daily_tips_ids = dados.get("daily_tips_ids") or []
+    ids_dicas = {
+        (item.get("casa", ""), item.get("visitante", ""), item.get("data", ""))
+        for item in daily_tips_ids
+    }
+    jogos_por_id: Dict[Tuple[str, str, str], Dict] = {
+        _chave_id(j): j for j in dados.get("jogos", [])
+    }
+
+    dica_1 = None
+    for item in daily_tips_ids:
+        jid = (item.get("casa", ""), item.get("visitante", ""), item.get("data", ""))
+        j = jogos_por_id.get(jid)
+        if j:
+            dica_1 = j
+            break
+
+    def _palpite_principal(jogo: Optional[Dict]) -> Optional[Dict]:
+        if not jogo:
+            return None
+        pals = jogo.get("palpites", []) or []
+        return next((p for p in pals if p.get("valor_esperado_positivo")), pals[0] if pals else None)
+
+    palpite_dica_1 = _palpite_principal(dica_1)
+    erro_na_dica_1 = (palpite_dica_1 or {}).get("resultado_verificador") == "ERRO"
+
+    recovery_tip = dados.get("recovery_tip") if dados.get("recovery_tip_date") == hoje else None
+    recovery_ativo = bool((recovery_tip or {}).get("ativo"))
+
+    if erro_na_dica_1 or recovery_ativo:
+        if not recovery_ativo:
+            _excluidas = {"Campeonato Brasileiro Série A", "Campeonato Brasileiro Série B"}
+            melhor_jogo, melhor_palpite, melhor_prob, melhor_conf = None, None, -1.0, -1
+            score_conf = {"HIGH": 3, "MEDIUM": 2, "LOW": 1}
+            for jogo in dados.get("jogos", []):
+                if _chave_id(jogo) in ids_dicas: continue
+                if jogo.get("status") in ("FINISHED", "AWARDED"): continue
+                if jogo.get("competicao") in _excluidas: continue
+                for p in jogo.get("palpites", []) or []:
+                    conf = str(p.get("confianca", "LOW")).upper()
+                    prob = float(p.get("probabilidade") or 0.0)
+                    cs = score_conf.get(conf, 1)
+                    if prob > melhor_prob or (prob == melhor_prob and cs > melhor_conf):
+                        melhor_prob, melhor_conf = prob, cs
+                        melhor_jogo, melhor_palpite = jogo, p
+            if melhor_jogo and melhor_palpite:
+                recovery_tip = {
+                    "ativo": True,
+                    "disparado_em": datetime.now(APP_TIMEZONE).isoformat(timespec="seconds"),
+                    "jogo": {
+                        "casa":       melhor_jogo.get("times", {}).get("casa", ""),
+                        "visitante":  melhor_jogo.get("times", {}).get("visitante", ""),
+                        "data":       melhor_jogo.get("data", ""),
+                        "competicao": melhor_jogo.get("competicao", ""),
+                    },
+                    "palpite": {
+                        "tipo":         melhor_palpite.get("tipo"),
+                        "opcao":        melhor_palpite.get("opcao"),
+                        "probabilidade":melhor_palpite.get("probabilidade"),
+                        "confianca":    melhor_palpite.get("confianca"),
+                    },
+                }
+
+    dados["recovery_tip"]      = recovery_tip if recovery_tip else {"ativo": False}
+    dados["recovery_tip_date"] = hoje
+
+    # ── 6. Timestamp e salvar ─────────────────────────────────────────────────
+    dados["generated_at"] = datetime.now(APP_TIMEZONE).isoformat(timespec="seconds")
+
+    with open(caminho_predicoes, "w", encoding="utf-8") as f:
+        json.dump(dados, f, ensure_ascii=False, indent=2)
+    print(f"💾 {caminho_predicoes} atualizado.")
+
+    # ── 7. Atualizar histórico ────────────────────────────────────────────────
+    atualizar_historico_do_json(dados, caminho_historico)
+    print("💾 Arquivos atualizados: predictions.json | history.json")
 
 
 def exibir_predicoes(predicoes: List[PredicaoJogo]) -> None:
@@ -1836,8 +2391,30 @@ def exibir_predicoes(predicoes: List[PredicaoJogo]) -> None:
 
 
 def main():
-    """Fluxo principal"""
-    
+    """Fluxo principal.
+
+    Decisão de execução:
+    - Se predictions.json já tiver `analysis_date == hoje` → atualização leve
+      (1 chamada de API, sem re-analisar histórico/H2H dos times).
+    - Caso contrário → análise completa (pipeline original).
+    """
+    hoje = datetime.now(APP_TIMEZONE).date().isoformat()
+
+    # Verificar se a análise do dia já foi concluída
+    analysis_done = False
+    try:
+        with open("predictions.json", "r", encoding="utf-8") as _f:
+            _existing = json.load(_f)
+        if _existing.get("analysis_date") == hoje and _existing.get("jogos"):
+            analysis_done = True
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
+
+    if analysis_done:
+        atualizar_status_jogos("predictions.json", "history.json")
+        return
+
+    # ── Análise completa (primeiro run do dia) ────────────────────────────────
     print("🌐 Buscando jogos das competições permitidas...")
     jogos = buscar_jogos_permitidos()
     

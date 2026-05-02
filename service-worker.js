@@ -1,4 +1,4 @@
-const CACHE_VERSION = "v1";
+const CACHE_VERSION = "v3";
 const APP_SHELL_CACHE = `palpitando-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `palpitando-data-${CACHE_VERSION}`;
 
@@ -83,7 +83,11 @@ self.addEventListener("fetch", (event) => {
     url.pathname.endsWith("/predictions.json") ||
     url.pathname.endsWith("/history.json") ||
     url.pathname.endsWith("predictions.json") ||
-    url.pathname.endsWith("history.json");
+    url.pathname.endsWith("history.json") ||
+    url.pathname.endsWith("/predictions_nba.json") ||
+    url.pathname.endsWith("/history_nba.json") ||
+    url.pathname.endsWith("predictions_nba.json") ||
+    url.pathname.endsWith("history_nba.json");
 
   if (isJsonData) {
     event.respondWith(networkFirst(request, DATA_CACHE));

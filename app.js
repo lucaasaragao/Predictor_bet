@@ -1,5 +1,7 @@
 const state = {
   raw: null,
+  rawNba: null,
+  sport: "football",
   competition: "",
   minConfidence: "LOW",
 };
@@ -161,8 +163,33 @@ function translateTipType(type) {
     OVER_UNDER: "Quantidade de gols",
     BTTS: "Ambos marcam",
     EMPATE: "Empate",
+    SPREAD: "Vantagem de pontos",
   };
   return labels[type] || type;
+}
+
+function translateTipTypeNba(type) {
+  const labels = {
+    WINNER: "Vencedor",
+    OVER_UNDER: "Total de pontos",
+    SPREAD: "Vantagem de pontos",
+  };
+  return labels[type] || type;
+}
+
+function translateTipOptionNba(tipo, opcao, match) {
+  const upper = String(opcao || "").toUpperCase();
+  if (tipo === "WINNER") {
+    if (upper === "CASA") return match?.times?.casa || "Casa";
+    if (upper === "VISIT") return match?.times?.visitante || "Visitante";
+  }
+  if (tipo === "OVER_UNDER") {
+    const linha = match?.mercados?.over_linha || "";
+    const linhaStr = linha ? ` ${linha}` : "";
+    if (upper === "OVER") return `Mais de${linhaStr} pts`;
+    if (upper === "UNDER") return `Menos de${linhaStr} pts`;
+  }
+  return opcao;
 }
 
 function translateTipOption(type, option, match) {
@@ -239,6 +266,21 @@ function translateQuickRead(text) {
     .replaceAll("em baixa", "\u2198 em baixa")
     .replace(/xG total\s*[\u2248~]?\s*\d+(?:[\.,]\d+)?/gi, "linha de 2,5 gols")
     .replace(/\s*—\s*/g, ". ");
+}
+
+async function loadNbaData() {
+  try {
+    const response = await fetch("predictions_nba.json", { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error(`Não foi possível carregar predictions_nba.json (HTTP ${response.status})`);
+    }
+    return response.json();
+  } catch (error) {
+    if (error instanceof TypeError) {
+      throw new Error("Falha de rede ao carregar predictions_nba.json.");
+    }
+    throw error;
+  }
 }
 
 async function loadData() {
@@ -394,13 +436,17 @@ function initAdminPanel() {
 }
 
 function fillCompetitionFilter(data) {
-  const select = document.getElementById("competitionFilter");
+  const list = document.getElementById("competitionSelectList");
+  if (!list) return;
   const competitions = [...new Set((data.jogos || []).map((item) => item.competicao))].sort();
   competitions.forEach((name) => {
-    const option = document.createElement("option");
-    option.value = name;
-    option.textContent = name;
-    select.appendChild(option);
+    const li = document.createElement("li");
+    li.className = "custom-select__option";
+    li.setAttribute("role", "option");
+    li.setAttribute("data-value", name);
+    li.setAttribute("tabindex", "-1");
+    li.textContent = name;
+    list.appendChild(li);
   });
 }
 
@@ -696,7 +742,9 @@ function getRecoveryTip(data, dailyGames) {
 }
 
 function renderRecoveryCard(container, recovery) {
-  const { game, tip } = recovery;
+  const game = recovery?.game || recovery?.jogo;
+  const tip = recovery?.tip || recovery?.palpite;
+  if (!game || !tip) return;
   const prob = Math.round((tip.probabilidade || 0) * 100);
   const confidenceTone = confidenceClass(tip.confianca);
   const confidenceText = confidenceLabel(tip.confianca);
@@ -759,7 +807,8 @@ function renderTipsSection(data) {
     return;
   }
 
-  let hasError = false;
+  const tipDica1 = topGames.length ? getPrimaryTip(topGames[0]) : null;
+  const hasError = tipDica1?.resultado_verificador === "ERRO";
 
   topGames.forEach((match, index) => {
     const prob = Math.round((match.favorito?.prob || 0) * 100);
@@ -774,7 +823,6 @@ function renderTipsSection(data) {
       : "tip-card__prob-value--low";
 
     const resultado = primaryTip?.resultado_verificador;
-    if (resultado === "ERRO") hasError = true;
 
     let resultMark = "";
     if (resultado === "ACERTO") {
@@ -805,7 +853,9 @@ function renderTipsSection(data) {
     container.appendChild(card);
   });
 
-  if (hasError) {
+  if (data?.recovery_tip?.ativo) {
+    renderRecoveryCard(container, data.recovery_tip);
+  } else if (hasError) {
     const recovery = getRecoveryTip(data, topGames);
     if (recovery) renderRecoveryCard(container, recovery);
   }
@@ -936,11 +986,6 @@ function renderCards() {
 }
 
 function setupFilters() {
-  document.getElementById("competitionFilter").addEventListener("change", (event) => {
-    state.competition = event.target.value;
-    renderCards();
-  });
-
   document.querySelectorAll(".filter-chip[data-confidence]").forEach((chip) => {
     chip.addEventListener("click", () => {
       state.minConfidence = chip.dataset.confidence || "LOW";
@@ -951,14 +996,59 @@ function setupFilters() {
   document.getElementById("clearFilters")?.addEventListener("click", () => {
     state.competition = "";
     state.minConfidence = "LOW";
-
-    const competitionFilter = document.getElementById("competitionFilter");
-    if (competitionFilter) {
-      competitionFilter.value = "";
-    }
-
+    const wrapper = document.getElementById("competitionSelectWrapper");
+    if (wrapper?._reset) wrapper._reset();
     renderCards();
   });
+}
+
+function setupCompetitionDropdown() {
+  const wrapper = document.getElementById("competitionSelectWrapper");
+  const btn     = document.getElementById("competitionSelectBtn");
+  const list    = document.getElementById("competitionSelectList");
+  const valueEl = document.getElementById("competitionSelectValue");
+  if (!wrapper || !btn || !list || !valueEl) return;
+
+  const openDropdown = () => {
+    wrapper.classList.add("is-open");
+    btn.setAttribute("aria-expanded", "true");
+  };
+
+  const closeDropdown = () => {
+    wrapper.classList.remove("is-open");
+    btn.setAttribute("aria-expanded", "false");
+  };
+
+  const selectOption = (value, label) => {
+    state.competition = value;
+    valueEl.textContent = label;
+    list.querySelectorAll(".custom-select__option").forEach((opt) => {
+      opt.classList.toggle("custom-select__option--active", opt.dataset.value === value);
+    });
+    closeDropdown();
+    renderCards();
+  };
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    wrapper.classList.contains("is-open") ? closeDropdown() : openDropdown();
+  });
+
+  list.addEventListener("click", (e) => {
+    const opt = e.target.closest(".custom-select__option");
+    if (!opt) return;
+    selectOption(opt.dataset.value, opt.textContent.trim());
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!wrapper.contains(e.target)) closeDropdown();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && wrapper.classList.contains("is-open")) closeDropdown();
+  });
+
+  wrapper._reset = () => selectOption("", "Todas");
 }
 
 function registerServiceWorker() {
@@ -966,7 +1056,8 @@ function registerServiceWorker() {
 
   window.addEventListener("load", async () => {
     try {
-      await navigator.serviceWorker.register("./service-worker.js");
+      const registration = await navigator.serviceWorker.register("./service-worker.js?v=3");
+      registration.update();
     } catch (error) {
       console.warn("Falha ao registrar service worker:", error);
     }
@@ -978,12 +1069,14 @@ function registerServiceWorker() {
   setupMobileTopbar();
   initAdminPanel();
   registerServiceWorker();
+  setupSportSelector();
 
   try {
     const data = await loadData();
     state.raw = data;
     fillHeader(data);
     fillCompetitionFilter(data);
+    setupCompetitionDropdown();
     renderTipsSection(data);
     setupFilters();
     renderCards();
@@ -997,3 +1090,307 @@ function registerServiceWorker() {
 })();
 
 window.addEventListener("resize", syncHeaderMeta);
+
+function setupSportSelector() {
+  const buttons = document.querySelectorAll(".sport-btn");
+  if (!buttons.length) return;
+
+  const footballSections = [
+    document.getElementById("tipsSection"),
+    document.querySelector("main"),
+  ];
+  const nbaSections = [
+    document.getElementById("tipsSectionNba"),
+    document.getElementById("nbaCardsContainer"),
+  ];
+  const comingSoon = document.getElementById("basketballComingSoon");
+
+  const applySportView = (sport) => {
+    state.sport = sport;
+    const isFootball = sport === "football";
+
+    footballSections.forEach((el) => { if (el) el.hidden = !isFootball; });
+    nbaSections.forEach((el) => { if (el) el.hidden = isFootball; });
+    if (comingSoon) comingSoon.hidden = true;
+
+    buttons.forEach((b) => {
+      const active = b.dataset.sport === sport;
+      b.classList.toggle("sport-btn--active", active);
+      b.setAttribute("aria-pressed", String(active));
+    });
+
+    if (!isFootball && state.rawNba === null) {
+      const nbaContainer = document.getElementById("nbaCardsContainer");
+      if (nbaContainer) nbaContainer.innerHTML = '<div class="empty">Carregando dados da NBA...</div>';
+
+      loadNbaData()
+        .then((data) => {
+          state.rawNba = data;
+          renderTipsSectionNba(data);
+          renderCardsNba();
+        })
+        .catch((err) => {
+          if (comingSoon) {
+            comingSoon.hidden = false;
+            nbaSections.forEach((el) => { if (el) el.hidden = true; });
+          } else if (nbaContainer) {
+            nbaContainer.innerHTML = `<div class="empty">Erro ao carregar NBA: ${err.message}</div>`;
+          }
+        });
+    } else if (!isFootball && state.rawNba !== null) {
+      renderCardsNba();
+    }
+  };
+
+  const activeBtn = document.querySelector(".sport-btn.sport-btn--active") || buttons[0];
+  applySportView(activeBtn?.dataset?.sport || "football");
+
+  buttons.forEach((btn) => {
+    btn.setAttribute("aria-pressed", String(btn.classList.contains("sport-btn--active")));
+    btn.addEventListener("click", () => applySportView(btn.dataset.sport || "football"));
+  });
+}
+
+function statusDisplayNba(match) {
+  const periodos = { 1: "1º Quarto", 2: "2º Quarto", 3: "3º Quarto", 4: "4º Quarto" };
+  if (match.status === "IN_PLAY") {
+    const p = periodos[match.periodo] || "Ao Vivo";
+    const t = match.tempo ? ` — ${match.tempo}` : "";
+    return `${p}${t}`;
+  }
+  if (match.status === "FINISHED") return "Final";
+  return match.status_display || "Agendado";
+}
+
+function renderTipsSectionNba(data) {
+  const container = document.getElementById("tipsCardsNba");
+  const badge = document.getElementById("tipsBadgeNba");
+  if (!container) return;
+
+  let topGames = [];
+  if (data.daily_tips_ids && data.daily_tips_ids.length) {
+    topGames = data.daily_tips_ids
+      .map((id) =>
+        (data.jogos || []).find(
+          (j) => j.times.casa === id.casa && j.times.visitante === id.visitante && j.data === id.data
+        )
+      )
+      .filter(Boolean);
+  } else {
+    topGames = (data.jogos || [])
+      .filter((j) => j.status !== "FINISHED")
+      .sort((a, b) => (b.favorito?.prob || 0) - (a.favorito?.prob || 0))
+      .slice(0, 3);
+  }
+
+  if (badge) badge.textContent = `${topGames.length} dica${topGames.length !== 1 ? "s" : ""}`;
+
+  container.innerHTML = "";
+  if (!topGames.length) {
+    container.innerHTML = '<p class="tips-section__empty">Sem jogos NBA disponíveis para dicas.</p>';
+    return;
+  }
+
+  topGames.forEach((match, index) => {
+    const prob = Math.round((match.favorito?.prob || 0) * 100);
+    const primaryTip = match.palpites?.[0] || null;
+    const bestBet = primaryTip ? translateTipOptionNba(primaryTip.tipo, primaryTip.opcao, match) : "—";
+    const confidenceTone = primaryTip ? confidenceClass(primaryTip.confianca) : "low";
+    const confidenceText = primaryTip ? confidenceLabel(primaryTip.confianca) : "Baixa";
+    const probClass = prob >= 70 ? "tip-card__prob-value--high" : prob >= 55 ? "tip-card__prob-value--mid" : "tip-card__prob-value--low";
+
+    const card = document.createElement("article");
+    card.className = "tip-card tip-card--nba";
+    card.innerHTML = `
+      <div class="tip-card__top">
+        <span class="tip-card__rank">#${index + 1}</span>
+        <span class="tip-card__competition">NBA</span>
+        <span class="conf ${confidenceTone} tip-card__conf">${confidenceText}</span>
+      </div>
+      <div class="tip-card__teams">
+        ${match.times.abrev_casa || match.times.casa}
+        <span class="tip-card__vs">x</span>
+        ${match.times.abrev_visit || match.times.visitante}
+      </div>
+      <div class="tip-card__prob">
+        <span class="tip-card__prob-value ${probClass}">${prob}%</span>
+        <span class="tip-card__prob-label">vitória — <strong>${match.favorito?.nome || "—"}</strong></span>
+      </div>
+      <div class="tip-card__bet">
+        <span class="tip-card__bet-label">Apostar em</span>
+        <strong class="tip-card__bet-value">${bestBet}</strong>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+function renderCardsNba() {
+  const container = document.getElementById("nbaCardsContainer");
+  if (!container) return;
+  container.innerHTML = "";
+
+  const jogos = (state.rawNba?.jogos || []);
+  if (!jogos.length) {
+    container.innerHTML = '<div class="empty">Nenhum jogo NBA hoje.</div>';
+    return;
+  }
+
+  jogos.forEach((match) => {
+    const card = document.createElement("article");
+    card.className = "card card--nba is-collapsed";
+    card.setAttribute("role", "button");
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("aria-expanded", "false");
+
+    // Título com placar se disponível
+    let titulo = `${match.times.abrev_casa} x ${match.times.abrev_visit}`;
+    if (match.status === "FINISHED" && match.placar_casa !== null) {
+      titulo = `${match.times.abrev_casa} ${match.placar_casa} x ${match.placar_visitante} ${match.times.abrev_visit}`;
+    } else if (match.status === "IN_PLAY") {
+      titulo = `${match.times.abrev_casa} ${match.placar_casa ?? 0} x ${match.placar_visitante ?? 0} ${match.times.abrev_visit}`;
+    }
+
+    // Badge de status
+    let badgeHtml = "";
+    if (match.status === "FINISHED") {
+      badgeHtml = '<span class="card-status-badge card-status-badge--finished">Final</span>';
+    } else if (match.status === "IN_PLAY") {
+      badgeHtml = `<span class="card-status-badge card-status-badge--live">${statusDisplayNba(match)}</span>`;
+    }
+
+    // Quarters
+    let quartersHtml = "";
+    const qc = match.quarters?.casa || [];
+    const qv = match.quarters?.visitante || [];
+    const temQuarters = qc.some((q) => q !== null && q !== undefined);
+    if (temQuarters) {
+      const qLabels = ["Q1", "Q2", "Q3", "Q4"];
+      const qHeaders = qLabels.map((q) => `<th>${q}</th>`).join("");
+      const qCasa = qLabels.map((_, i) => `<td>${qc[i] ?? "—"}</td>`).join("");
+      const qVisit = qLabels.map((_, i) => `<td>${qv[i] ?? "—"}</td>`).join("");
+      quartersHtml = `
+        <div class="nba-quarters">
+          <table class="quarters-table">
+            <thead><tr><th>Time</th>${qHeaders}<th>Total</th></tr></thead>
+            <tbody>
+              <tr><td class="qt-team">${match.times.abrev_casa}</td>${qCasa}<td class="qt-total">${match.placar_casa ?? "—"}</td></tr>
+              <tr><td class="qt-team">${match.times.abrev_visit}</td>${qVisit}<td class="qt-total">${match.placar_visitante ?? "—"}</td></tr>
+            </tbody>
+          </table>
+        </div>`;
+    }
+
+    // Probabilidades
+    const probCasaPct = Math.round((match.probabilidades?.casa || 0) * 100);
+    const probVisitPct = Math.round((match.probabilidades?.visitante || 0) * 100);
+
+    // Mercados
+    const totalEsp = match.pts_esperados?.total || 0;
+    const overLinha = match.mercados?.over_linha || "";
+    const probOver = Math.round((match.mercados?.prob_over || 0) * 100);
+    const probUnder = 100 - probOver;
+    const spreadDisplay = match.spread_esperado >= 0
+      ? `${match.times.abrev_casa} -${Math.abs(match.spread_esperado)}`
+      : `${match.times.abrev_visit} -${Math.abs(match.spread_esperado)}`;
+
+    // Forma
+    const formaCasaPct = Math.round((match.forma?.casa || 0.5) * 100);
+    const formaVisitPct = Math.round((match.forma?.visitante || 0.5) * 100);
+
+    // Palpites
+    let tipsHtml = "";
+    (match.palpites || []).forEach((tip) => {
+      let resultMark = "";
+      if (tip.resultado_verificador === "ACERTO") resultMark = '<span class="tip-mark tip-mark--acerto">✅ Acerto</span>';
+      if (tip.resultado_verificador === "ERRO") resultMark = '<span class="tip-mark tip-mark--erro">❌ Erro</span>';
+      const opcaoLabel = translateTipOptionNba(tip.tipo, tip.opcao, match);
+      tipsHtml += `
+        <div class="tip">
+          <div class="tag">${translateTipTypeNba(tip.tipo)}</div>
+          <div class="conf ${confidenceClass(tip.confianca)}">${confidenceLabel(tip.confianca)}</div>
+          <div class="tip-desc"><strong>${opcaoLabel}</strong>. <span class="tip-just">${tip.justificativa || ""}</span>${resultMark}</div>
+        </div>`;
+    });
+
+    card.innerHTML = `
+      <div class="card-head">
+        <div class="card-head-top">
+          <div class="card-meta"><p class="competition">NBA</p></div>
+          <div class="card-badges">${badgeHtml}</div>
+        </div>
+        <h2 class="match-title">${titulo}</h2>
+      </div>
+      <div class="card-snapshot">
+        <div class="card-snapshot-grid">
+          <div class="snapshot-item">
+            <span class="snapshot-label">Probabilidade</span>
+            <strong class="highlight">${Math.round(match.favorito?.prob * 100 || 0)}%</strong>
+          </div>
+          <div class="snapshot-item snapshot-item--wide">
+            <span class="snapshot-label">Favorito</span>
+            <strong class="highlight highlight--secondary">${match.favorito?.nome || "—"}</strong>
+          </div>
+          <div class="snapshot-item">
+            <span class="snapshot-label">Spread</span>
+            <strong class="highlight highlight--secondary">${spreadDisplay}</strong>
+          </div>
+          <div class="snapshot-item">
+            <span class="snapshot-label">Total esperado</span>
+            <strong class="highlight highlight--secondary">${totalEsp} pts</strong>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-body-inner">
+          <div class="grid-2 grid-2--stacked">
+            <section class="panel emphasis">
+              <h3>Favorito</h3>
+              <p class="favorite-line">${match.leitura_rapida || ""}</p>
+              <div class="prob-bars">
+                <div class="prob-row">
+                  <span class="prob-name">${match.times.casa}</span>
+                  <strong class="prob-value">${probCasaPct}%</strong>
+                  <div class="prob-track"><div class="prob-fill h" style="width:${probCasaPct}%"></div></div>
+                </div>
+                <div class="prob-row">
+                  <span class="prob-name">${match.times.visitante}</span>
+                  <strong class="prob-value">${probVisitPct}%</strong>
+                  <div class="prob-track"><div class="prob-fill l" style="width:${probVisitPct}%"></div></div>
+                </div>
+              </div>
+            </section>
+            <section class="panel">
+              <h3>Mercados</h3>
+              <ul class="market-list">
+                <li class="market-xg"><span>Pontos esperados (casa)</span><strong>${match.pts_esperados?.casa || "—"}</strong></li>
+                <li class="market-xg"><span>Pontos esperados (visit.)</span><strong>${match.pts_esperados?.visitante || "—"}</strong></li>
+                <li><span>Over ${overLinha}</span><strong>${probOver}%</strong></li>
+                <li><span>Under ${overLinha}</span><strong>${probUnder}%</strong></li>
+                <li><span>Spread esperado</span><strong>${spreadDisplay}</strong></li>
+              </ul>
+            </section>
+          </div>
+          ${quartersHtml}
+          <div class="grid-2">
+            <section class="panel">
+              <h3>Forma recente — Casa</h3>
+              <p class="nba-forma">${match.times.casa}: <strong>${formaCasaPct}%</strong> de vitórias recentes</p>
+            </section>
+            <section class="panel">
+              <h3>Forma recente — Visitante</h3>
+              <p class="nba-forma">${match.times.visitante}: <strong>${formaVisitPct}%</strong> de vitórias recentes</p>
+            </section>
+          </div>
+          <section class="panel">
+            <h3>Sugestões do modelo</h3>
+            <div class="tips">${tipsHtml}</div>
+          </section>
+        </div>
+      </div>
+    `;
+
+    bindCardToggle(card);
+    container.appendChild(card);
+  });
+}

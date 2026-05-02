@@ -34,15 +34,20 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python predictor.py
 
+      - name: Generate predictions_nba.json and history_nba.json
+        env:
+          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
+        run: python predictor_nba.py
+
       - name: Commit and push if changed
         run: |
-          if git diff --quiet -- predictions.json history.json; then
+          if git diff --quiet -- predictions.json history.json predictions_nba.json history_nba.json; then
             echo "No changes"
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add predictions.json history.json
-          git commit -m "chore: update predictions.json"
+          git add predictions.json history.json predictions_nba.json history_nba.json
+          git commit -m "chore: update predictions"
           git push

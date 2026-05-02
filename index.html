@@ -31,8 +31,8 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Outfit:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260503" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4097064526819391"
      crossorigin="anonymous"></script>
 </head>
@@ -90,6 +90,37 @@
     </div>
   </header>
 
+  <!-- ── Sport Selector ── -->
+  <nav class="sport-selector" aria-label="Modalidade">
+    <button class="sport-btn sport-btn--active" data-sport="football" type="button">
+      <span class="sport-btn__icon" aria-hidden="true">⚽</span>
+      <span>Futebol</span>
+    </button>
+    <button class="sport-btn" data-sport="basketball" type="button">
+      <span class="sport-btn__icon" aria-hidden="true">🏀</span>
+      <span>Basquete</span>
+    </button>
+  </nav>
+
+  <!-- ── Basketball Coming Soon (fallback de erro) ── -->
+  <div id="basketballComingSoon" class="sport-coming-soon" hidden>
+    <span class="sport-coming-soon__icon" aria-hidden="true">🏀</span>
+    <p class="sport-coming-soon__title">Dados indisponíveis</p>
+    <p class="sport-coming-soon__sub">Não foi possível carregar os palpites da NBA. Tente novamente mais tarde.</p>
+  </div>
+
+  <!-- ── NBA: Dicas do Dia ── -->
+  <section id="tipsSectionNba" class="tips-section" aria-label="Dicas NBA do dia" hidden>
+    <div class="tips-section__header">
+      <h2 class="tips-section__title">Dicas NBA do dia</h2>
+      <span class="tips-section__badge" id="tipsBadgeNba"></span>
+    </div>
+    <div id="tipsCardsNba" class="tips-cards"></div>
+  </section>
+
+  <!-- ── NBA: Cards de Jogos ── -->
+  <div id="nbaCardsContainer" class="cards" hidden></div>
+
   <!-- ── Dicas do Dia ── -->
   <section id="tipsSection" class="tips-section" aria-label="Dicas do dia">
     <div class="tips-section__header">
@@ -104,9 +135,21 @@
       <div class="toolbar-left">
         <div class="filter-group">
           <span class="filter-label">Competição</span>
-          <select id="competitionFilter">
-            <option value="">Todas</option>
-          </select>
+          <div class="custom-select" id="competitionSelectWrapper">
+            <button class="custom-select__btn" type="button" id="competitionSelectBtn"
+              aria-haspopup="listbox" aria-expanded="false" aria-label="Filtrar por competição">
+              <span class="custom-select__value" id="competitionSelectValue">Todas</span>
+              <svg class="custom-select__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="custom-select__list" id="competitionSelectList" role="listbox"
+              aria-label="Competições disponíveis">
+              <li class="custom-select__option custom-select__option--active" role="option"
+                data-value="" tabindex="-1">Todas</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -243,6 +286,6 @@
       });
     })();
   </script>
-  <script src="app.js"></script>
+  <script src="app.js?v=20260503"></script>
 </body>
 </html>

@@ -61,8 +61,12 @@ Componentes principais:
 - cards colapsaveis
 - tema claro/escuro
 - dicas do dia congeladas
-- dica de recuperacao quando uma dica do dia falha
+- dica de recuperacao quando a dica #1 falha
 - painel admin com historico (via #admin ou triple-click no rodape)
+
+8. Historico acumulativo por dia:
+- nao sobrescreve o dia inteiro a cada execucao
+- faz merge por jogo finalizado e preserva partidas ja registradas (ex.: PSG/Bayer)
 
 ## Modelo de Predicao
 
@@ -122,6 +126,10 @@ Campos principais por dia:
 7. mercados (acertos/total/taxa)
 8. metricas_probabilisticas (Brier e Log Loss por mercado)
 9. jogos
+
+Observacao de comportamento:
+
+1. o dia atual e atualizado de forma acumulativa (merge por jogo), evitando perda de jogos ja registrados em execucoes subsequentes
 
 ## Requisitos
 
@@ -215,6 +223,16 @@ Comportamento atual:
 3. instala requests
 4. roda predictor.py
 5. commita predictions.json e history.json se houver mudanca
+
+## Fluxo Atual (execucao)
+
+1. busca jogos do dia na football-data.org
+2. filtra por competicoes permitidas e dia local da aplicacao
+3. calcula probabilidades/mercados/palpites por jogo
+4. aplica baseline pre-jogo para estabilizar partidas em andamento/finalizadas
+5. congela dicas do dia no primeiro run do dia
+6. ativa recovery_tip apenas se a dica #1 falhar; escolhe a maior probabilidade disponivel fora das dicas fixas
+7. atualiza history.json com merge acumulativo por jogo
 
 Secrets recomendados no repositorio:
 
