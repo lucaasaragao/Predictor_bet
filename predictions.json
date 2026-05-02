@@ -1,5 +1,6 @@
 {
-  "generated_at": "2026-05-02T15:35:19-03:00",
+  "generated_at": "2026-05-02T16:51:31-03:00",
+  "analysis_date": "2026-05-02",
   "total_jogos": 11,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
@@ -171,10 +172,10 @@
           "confianca": "HIGH",
           "justificativa": "Ajax projeta ≈2.3 gol(s) vs ≈1.5 do adversário. Prob vitória: 55.5% (margem: 30.8 p.p.)",
           "edge": 0.3084,
-          "odd_decimal": 2.64,
-          "ev": 0.4532,
-          "ev_bruto": 0.4644,
-          "prob_mercado_justa": 0.3817,
+          "odd_decimal": 251.0,
+          "ev": 130.2038,
+          "ev_bruto": 138.2304,
+          "prob_mercado_justa": 0.0042,
           "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
@@ -211,10 +212,10 @@
     {
       "competicao": "Serie A",
       "data": "2026-05-02T18:45:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Atalanta",
@@ -272,7 +273,9 @@
         "competition": "Serie A",
         "sport_key": "soccer_italy_serie_a",
         "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
@@ -408,213 +411,12 @@
       ]
     },
     {
-      "competicao": "Campeonato Brasileiro Série A",
-      "data": "2026-05-02T19:00:00Z",
-      "status": "TIMED",
-      "placar_atual": {
-        "casa": null,
-        "visitante": null
-      },
-      "times": {
-        "casa": "Botafogo",
-        "visitante": "Clube do Remo"
-      },
-      "probabilidades": {
-        "casa": 0.6353127396643202,
-        "empate": 0.19823869826370094,
-        "visitante": 0.16474202225861165
-      },
-      "favorito": {
-        "nome": "Botafogo",
-        "prob": 0.6353127396643202,
-        "vantagem": 0.4370740414006193
-      },
-      "gols_esperados": {
-        "casa": 2.1456584327836867,
-        "visitante": 0.9938501113791238,
-        "total": 3.1395085441628106
-      },
-      "mercados": {
-        "under_25": 0.39437773423286127,
-        "over_25": 0.6056222657671387,
-        "btts_yes": 0.5550869208421482,
-        "btts_no": 0.44491307915785183
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.6363636363636364,
-          "ataque": 0.5599999999999999,
-          "defesa": 0.19999999999999996,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.5627272727272727
-        },
-        "visitante": {
-          "forma_recente": 0.23636363636363636,
-          "ataque": 0.16,
-          "defesa": 0.19999999999999996,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.30272727272727273
-        }
-      },
-      "leitura_rapida": "Botafogo favorito (64%, risco forte). Jogo mais aberto (xG total ≈3.1). Over 2.5 com 61%. | Forma recente: Botafogo em baixa.",
-      "tendencia": {
-        "casa": "em baixa",
-        "visitante": "estavel"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
-        "competition": "Campeonato Brasileiro Série A",
-        "sport_key": "soccer_brazil_campeonato",
-        "odds_match_id": "08321fb719f43181716978144d2034eb",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
-      },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
-      "historico": {
-        "casa": [
-          {
-            "data": "25/04 21:30",
-            "mandante": "Botafogo",
-            "visitante": "Internacional",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "18/04 21:30",
-            "mandante": "Chapecoense",
-            "visitante": "Botafogo",
-            "placar": "1 x 4",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "12/04 19:00",
-            "mandante": "Botafogo",
-            "visitante": "Coritiba",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "05/04 00:00",
-            "mandante": "Vasco da Gama",
-            "visitante": "Botafogo",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "01/04 22:30",
-            "mandante": "Botafogo",
-            "visitante": "Mirassol",
-            "placar": "3 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "25/04 21:30",
-            "mandante": "Clube do Remo",
-            "visitante": "Cruzeiro",
-            "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "19/04 21:30",
-            "mandante": "Bragantino",
-            "visitante": "Clube do Remo",
-            "placar": "4 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "11/04 19:30",
-            "mandante": "Clube do Remo",
-            "visitante": "Vasco da Gama",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "05/04 23:30",
-            "mandante": "Grêmio",
-            "visitante": "Clube do Remo",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "02/04 22:00",
-            "mandante": "Santos",
-            "visitante": "Clube do Remo",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.6353127396643202,
-          "confianca": "HIGH",
-          "justificativa": "Botafogo projeta ≈2.1 gol(s) vs ≈1.0 do adversário. Prob vitória: 63.5% (margem: 43.7 p.p.)",
-          "edge": 0.4371,
-          "odd_decimal": 1.62,
-          "ev": 0.0334,
-          "ev_bruto": 0.0292,
-          "prob_mercado_justa": 0.6148,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.6056222657671387,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈3.1. OVER 2.5: 60.6% de probabilidade",
-          "edge": 0.1056,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.5550869208421482,
-          "confianca": "LOW",
-          "justificativa": "xG: 2.1 (casa) x 1.0 (fora). Ambas marcam - Sim: 55.5%",
-          "edge": 0.0551,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        }
-      ]
-    },
-    {
       "competicao": "Eredivisie",
       "data": "2026-05-02T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 1
       },
       "times": {
         "casa": "NEC",
@@ -672,7 +474,9 @@
         "competition": "Eredivisie",
         "sport_key": "soccer_netherlands_eredivisie",
         "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
@@ -810,10 +614,10 @@
     {
       "competicao": "Primera Division",
       "data": "2026-05-02T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Osasuna",
@@ -871,7 +675,9 @@
         "competition": "Primera Division",
         "sport_key": "soccer_spain_la_liga",
         "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
@@ -1007,12 +813,215 @@
       ]
     },
     {
+      "competicao": "Campeonato Brasileiro Série A",
+      "data": "2026-05-02T19:00:00Z",
+      "status": "IN_PLAY",
+      "placar_atual": {
+        "casa": 1,
+        "visitante": 0
+      },
+      "times": {
+        "casa": "Botafogo",
+        "visitante": "Clube do Remo"
+      },
+      "probabilidades": {
+        "casa": 0.6353127396643202,
+        "empate": 0.19823869826370094,
+        "visitante": 0.16474202225861165
+      },
+      "favorito": {
+        "nome": "Botafogo",
+        "prob": 0.6353127396643202,
+        "vantagem": 0.4370740414006193
+      },
+      "gols_esperados": {
+        "casa": 2.1456584327836867,
+        "visitante": 0.9938501113791238,
+        "total": 3.1395085441628106
+      },
+      "mercados": {
+        "under_25": 0.39437773423286127,
+        "over_25": 0.6056222657671387,
+        "btts_yes": 0.5550869208421482,
+        "btts_no": 0.44491307915785183
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.6363636363636364,
+          "ataque": 0.5599999999999999,
+          "defesa": 0.19999999999999996,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.5627272727272727
+        },
+        "visitante": {
+          "forma_recente": 0.23636363636363636,
+          "ataque": 0.16,
+          "defesa": 0.19999999999999996,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.30272727272727273
+        }
+      },
+      "leitura_rapida": "Botafogo favorito (64%, risco forte). Jogo mais aberto (xG total ≈3.1). Over 2.5 com 61%. | Forma recente: Botafogo em baixa.",
+      "tendencia": {
+        "casa": "em baixa",
+        "visitante": "estavel"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
+        "competition": "Campeonato Brasileiro Série A",
+        "sport_key": "soccer_brazil_campeonato",
+        "odds_match_id": "08321fb719f43181716978144d2034eb",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
+      },
+      "odds_integradas": true,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "25/04 21:30",
+            "mandante": "Botafogo",
+            "visitante": "Internacional",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "18/04 21:30",
+            "mandante": "Chapecoense",
+            "visitante": "Botafogo",
+            "placar": "1 x 4",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "12/04 19:00",
+            "mandante": "Botafogo",
+            "visitante": "Coritiba",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "05/04 00:00",
+            "mandante": "Vasco da Gama",
+            "visitante": "Botafogo",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "01/04 22:30",
+            "mandante": "Botafogo",
+            "visitante": "Mirassol",
+            "placar": "3 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "25/04 21:30",
+            "mandante": "Clube do Remo",
+            "visitante": "Cruzeiro",
+            "placar": "0 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "19/04 21:30",
+            "mandante": "Bragantino",
+            "visitante": "Clube do Remo",
+            "placar": "4 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "11/04 19:30",
+            "mandante": "Clube do Remo",
+            "visitante": "Vasco da Gama",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "05/04 23:30",
+            "mandante": "Grêmio",
+            "visitante": "Clube do Remo",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "02/04 22:00",
+            "mandante": "Santos",
+            "visitante": "Clube do Remo",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.6353127396643202,
+          "confianca": "HIGH",
+          "justificativa": "Botafogo projeta ≈2.1 gol(s) vs ≈1.0 do adversário. Prob vitória: 63.5% (margem: 43.7 p.p.)",
+          "edge": 0.4371,
+          "odd_decimal": 1.23,
+          "ev": -0.2155,
+          "ev_bruto": -0.2186,
+          "prob_mercado_justa": 0.8099,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER",
+          "probabilidade": 0.6056222657671387,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈3.1. OVER 2.5: 60.6% de probabilidade",
+          "edge": 0.1056,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.5550869208421482,
+          "confianca": "LOW",
+          "justificativa": "xG: 2.1 (casa) x 1.0 (fora). Ambas marcam - Sim: 55.5%",
+          "edge": 0.0551,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
       "competicao": "Ligue 1",
       "data": "2026-05-02T19:05:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Nice",
@@ -1065,15 +1074,19 @@
       "alertas": [],
       "odds_debug": {
         "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
         "competition": "Ligue 1",
         "sport_key": "soccer_france_ligue_one",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "odds_match_id": "553c24488d26dcdee9a4d8bec80703af",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
+      "odds_integradas": true,
+      "odds_valor_alto": true,
       "historico": {
         "casa": [
           {
@@ -1168,11 +1181,11 @@
           "confianca": "HIGH",
           "justificativa": "RC Lens projeta ≈2.5 gol(s) vs ≈1.6 do adversário. Prob vitória: 57.2% (margem: 33.4 p.p.)",
           "edge": 0.334,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
+          "odd_decimal": 1.95,
+          "ev": 0.095,
+          "ev_bruto": 0.1146,
+          "prob_mercado_justa": 0.522,
+          "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
         {
@@ -1208,10 +1221,10 @@
     {
       "competicao": "Primeira Liga",
       "data": "2026-05-02T19:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Porto",
@@ -1264,14 +1277,18 @@
       "alertas": [],
       "odds_debug": {
         "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
         "competition": "Primeira Liga",
         "sport_key": "soccer_portugal_primeira_liga",
+        "odds_match_id": "110926424fe87203e3a5ce0c3bd24ef1",
+        "bookmakers_outcomes": "3",
         "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
-      "odds_integradas": false,
+      "odds_integradas": true,
       "odds_valor_alto": false,
       "historico": {
         "casa": [
@@ -1367,10 +1384,10 @@
           "confianca": "HIGH",
           "justificativa": "Porto projeta ≈2.3 gol(s) vs ≈1.0 do adversário. Prob vitória: 66.6% (margem: 47.9 p.p.)",
           "edge": 0.4793,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
+          "odd_decimal": 1.27,
+          "ev": -0.1654,
+          "ev_bruto": -0.1545,
+          "prob_mercado_justa": 0.7977,
           "valor_esperado_positivo": false,
           "resultado_verificador": null
         },
@@ -2217,5 +2234,9 @@
       "data": "2026-05-02T19:30:00Z"
     }
   ],
-  "daily_tips_date": "2026-05-02"
+  "daily_tips_date": "2026-05-02",
+  "recovery_tip": {
+    "ativo": false
+  },
+  "recovery_tip_date": "2026-05-02"
 }
