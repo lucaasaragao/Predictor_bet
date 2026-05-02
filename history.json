@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-02",
-      "ultima_atualizacao": "2026-05-02T17:56:09-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.5,
-      "total_acertos": 3,
-      "total_palpites": 6,
+      "ultima_atualizacao": "2026-05-02T18:16:19-03:00",
+      "finalizados": 5,
+      "taxa_geral": 0.6,
+      "total_acertos": 9,
+      "total_palpites": 15,
       "mercados": {
         "WINNER": {
-          "acertos": 0,
-          "total": 2,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 5,
+          "taxa": 0.2
         },
         "OVER_UNDER": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
+          "acertos": 4,
+          "total": 5,
+          "taxa": 0.8
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "acertos": 4,
+          "total": 5,
+          "taxa": 0.8
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.9172,
-          "log_loss": 1.4845
+          "n": 5,
+          "brier": 0.9208,
+          "log_loss": 1.484
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.1519,
-          "log_loss": 0.4835
+          "n": 5,
+          "brier": 0.251,
+          "log_loss": 0.7089
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.1841,
-          "log_loss": 0.5526
+          "n": 5,
+          "brier": 0.1609,
+          "log_loss": 0.5061
         }
       },
       "jogos": [
@@ -99,6 +99,96 @@
               "confianca": "LOW",
               "probabilidade": 0.53,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-02T19:00:00Z",
+          "casa": "Osasuna",
+          "visitante": "Barça",
+          "competicao": "Primera Division",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.381,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "LOW",
+              "probabilidade": 0.561,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.591,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-02T19:00:00Z",
+          "casa": "Botafogo",
+          "visitante": "Clube do Remo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.635,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.606,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.555,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-02T19:05:00Z",
+          "casa": "Nice",
+          "visitante": "RC Lens",
+          "competicao": "Ligue 1",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "HIGH",
+              "probabilidade": 0.572,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "HIGH",
+              "probabilidade": 0.777,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.733,
+              "resultado": "ACERTO"
             }
           ]
         }
