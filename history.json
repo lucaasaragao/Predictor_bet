@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-03",
-      "ultima_atualizacao": "2026-05-03T16:59:30-03:00",
-      "finalizados": 22,
-      "taxa_geral": 0.53,
-      "total_acertos": 35,
-      "total_palpites": 66,
+      "ultima_atualizacao": "2026-05-03T17:21:45-03:00",
+      "finalizados": 23,
+      "taxa_geral": 0.536,
+      "total_acertos": 37,
+      "total_palpites": 69,
       "mercados": {
         "WINNER": {
           "acertos": 11,
-          "total": 22,
-          "taxa": 0.5
+          "total": 23,
+          "taxa": 0.478
         },
         "OVER_UNDER": {
-          "acertos": 13,
-          "total": 22,
-          "taxa": 0.591
+          "acertos": 14,
+          "total": 23,
+          "taxa": 0.609
         },
         "BTTS": {
-          "acertos": 11,
-          "total": 22,
-          "taxa": 0.5
+          "acertos": 12,
+          "total": 23,
+          "taxa": 0.522
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 22,
-          "brier": 0.6892,
-          "log_loss": 1.1204
+          "n": 23,
+          "brier": 0.7019,
+          "log_loss": 1.1377
         },
         "OVER_UNDER": {
-          "n": 22,
-          "brier": 0.2712,
-          "log_loss": 0.7435
+          "n": 23,
+          "brier": 0.2645,
+          "log_loss": 0.7293
         },
         "BTTS": {
-          "n": 22,
-          "brier": 0.2494,
-          "log_loss": 0.6911
+          "n": 23,
+          "brier": 0.2445,
+          "log_loss": 0.6811
         }
       },
       "jogos": [
@@ -698,6 +698,36 @@
               "opcao": "YES",
               "confianca": "HIGH",
               "probabilidade": 0.74,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-03T18:00:00Z",
+          "casa": "Aston Villa",
+          "visitante": "Tottenham",
+          "competicao": "Premier League",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.574,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "HIGH",
+              "probabilidade": 0.659,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.631,
               "resultado": "ACERTO"
             }
           ]
