@@ -2,7 +2,7 @@ name: Update predictions.json
 
 on:
   schedule:
-    - cron: "*/20 * * * *"
+    - cron: "*/3 * * * *"
   workflow_dispatch:
 
 permissions:
