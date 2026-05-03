@@ -1021,9 +1021,7 @@ def prever_jogo(match: Dict) -> PredicaoJogo:
     tendencia_casa = calcular_tendencia_forma(hist_home, home_id)
     tendencia_visitante = calcular_tendencia_forma(hist_away, away_id)
     
-    score_real = match.get("score", {}).get("fullTime", {})
-    placar_casa = score_real.get("home") if score_real else None
-    placar_visitante = score_real.get("away") if score_real else None
+    placar_casa, placar_visitante = _extrair_placar_partida_api(match)
 
     return PredicaoJogo(
         data_jogo=match.get("utcDate", ""),
@@ -1289,6 +1287,61 @@ def _extrair_placar_jogo_json(jogo: Dict) -> Tuple[Optional[int], Optional[int]]
         visitante = jogo.get("placar_visitante")
 
     return casa, visitante
+
+
+def _coletar_placar_bloco(score: Dict, chave: str) -> Tuple[Optional[int], Optional[int]]:
+    bloco = score.get(chave) or {}
+    casa = bloco.get("home")
+    visitante = bloco.get("away")
+    if casa is None or visitante is None:
+        return None, None
+    return casa, visitante
+
+
+def _extrair_placar_partida_api(match: Dict) -> Tuple[Optional[int], Optional[int]]:
+    """Extrai placar da API com prioridade por status para evitar inconsistências."""
+    status = str(match.get("status", "")).upper()
+    score = match.get("score") or {}
+
+    if status in ("IN_PLAY", "PAUSED"):
+        full_home, full_away = _coletar_placar_bloco(score, "fullTime")
+        reg_home, reg_away = _coletar_placar_bloco(score, "regularTime")
+        half_home, half_away = _coletar_placar_bloco(score, "halfTime")
+
+        # Alguns jogos ao vivo vêm com fullTime adiantado/inconsistente.
+        # Logamos para auditoria e priorizamos regularTime/halfTime.
+        if full_home is not None and full_away is not None:
+            referencia = None
+            if reg_home is not None and reg_away is not None:
+                referencia = (reg_home, reg_away)
+            elif half_home is not None and half_away is not None:
+                referencia = (half_home, half_away)
+
+            if referencia is not None and (full_home, full_away) != referencia:
+                home = match.get("homeTeam", {}).get("shortName") or match.get("homeTeam", {}).get("name", "?")
+                away = match.get("awayTeam", {}).get("shortName") or match.get("awayTeam", {}).get("name", "?")
+                match_id = match.get("id", "?")
+                print(
+                    "WARNING: placar inconsistente em IN_PLAY/PAUSED "
+                    f"(match_id={match_id}, {home} x {away}). "
+                    f"fullTime={full_home}-{full_away}, "
+                    f"referencia={referencia[0]}-{referencia[1]}"
+                )
+
+        for chave in ("regularTime", "halfTime", "fullTime"):
+            casa, visitante = _coletar_placar_bloco(score, chave)
+            if casa is not None and visitante is not None:
+                return casa, visitante
+        return None, None
+
+    if status in ("FINISHED", "AWARDED"):
+        for chave in ("fullTime", "regularTime", "halfTime"):
+            casa, visitante = _coletar_placar_bloco(score, chave)
+            if casa is not None and visitante is not None:
+                return casa, visitante
+        return None, None
+
+    return None, None
 
 
 def _barra_percentual(valor: float, largura: int = 18) -> str:
@@ -2184,9 +2237,7 @@ def atualizar_status_jogos(
             continue
 
         novo_status = match.get("status", jogo.get("status"))
-        ft = match.get("score", {}).get("fullTime", {})
-        novo_casa = ft.get("home")
-        novo_visit = ft.get("away")
+        novo_casa, novo_visit = _extrair_placar_partida_api(match)
         placar_atual = jogo.get("placar_atual")
         if not isinstance(placar_atual, dict):
             placar_atual = {}
