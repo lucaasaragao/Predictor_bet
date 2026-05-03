@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-05-03",
+      "ultima_atualizacao": "2026-05-03T01:16:51-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-05-02",
       "ultima_atualizacao": "2026-05-02T23:44:06-03:00",
       "finalizados": 11,
@@ -368,137 +395,6 @@
               "opcao": "NO",
               "confianca": "MEDIUM",
               "probabilidade": 0.594,
-              "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-05-01",
-      "ultima_atualizacao": "2026-05-01T23:02:41-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.444,
-      "total_acertos": 4,
-      "total_palpites": 9,
-      "mercados": {
-        "WINNER": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
-        },
-        "OVER_UNDER": {
-          "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
-        },
-        "BTTS": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 3,
-          "brier": 0.6067,
-          "log_loss": 1.0212
-        },
-        "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.2999,
-          "log_loss": 0.8002
-        },
-        "BTTS": {
-          "n": 3,
-          "brier": 0.3075,
-          "log_loss": 0.8098
-        }
-      },
-      "jogos": [
-        {
-          "casa": "AC Pisa",
-          "visitante": "Lecce",
-          "competicao": "Serie A",
-          "placar": "1-2",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.427,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER",
-              "confianca": "HIGH",
-              "probabilidade": 0.681,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.613,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "casa": "Girona",
-          "visitante": "Mallorca",
-          "competicao": "Primera Division",
-          "placar": "0-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.479,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER",
-              "confianca": "LOW",
-              "probabilidade": 0.557,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.518,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "casa": "Leeds United",
-          "visitante": "Burnley",
-          "competicao": "Premier League",
-          "placar": "3-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.678,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER",
-              "confianca": "LOW",
-              "probabilidade": 0.51,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.561,
               "resultado": "ERRO"
             }
           ]
