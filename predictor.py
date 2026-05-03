@@ -1304,34 +1304,13 @@ def _extrair_placar_partida_api(match: Dict) -> Tuple[Optional[int], Optional[in
     score = match.get("score") or {}
 
     if status in ("IN_PLAY", "PAUSED"):
-        full_home, full_away = _coletar_placar_bloco(score, "fullTime")
-        reg_home, reg_away = _coletar_placar_bloco(score, "regularTime")
-        half_home, half_away = _coletar_placar_bloco(score, "halfTime")
-
-        # Alguns jogos ao vivo vêm com fullTime adiantado/inconsistente.
-        # Logamos para auditoria e priorizamos regularTime/halfTime.
-        if full_home is not None and full_away is not None:
-            referencia = None
-            if reg_home is not None and reg_away is not None:
-                referencia = (reg_home, reg_away)
-            elif half_home is not None and half_away is not None:
-                referencia = (half_home, half_away)
-
-            if referencia is not None and (full_home, full_away) != referencia:
-                home = match.get("homeTeam", {}).get("shortName") or match.get("homeTeam", {}).get("name", "?")
-                away = match.get("awayTeam", {}).get("shortName") or match.get("awayTeam", {}).get("name", "?")
-                match_id = match.get("id", "?")
-                print(
-                    "WARNING: placar inconsistente em IN_PLAY/PAUSED "
-                    f"(match_id={match_id}, {home} x {away}). "
-                    f"fullTime={full_home}-{full_away}, "
-                    f"referencia={referencia[0]}-{referencia[1]}"
-                )
-
-        for chave in ("regularTime", "halfTime", "fullTime"):
+        # football-data.org usa fullTime como placar ao vivo durante IN_PLAY.
+        # regularTime e halfTime só são populados em marcos (intervalo, fim de jogo).
+        # Prioridade: fullTime → regularTime → halfTime.
+        for chave in ("fullTime", "regularTime", "halfTime"):
             casa, visitante = _coletar_placar_bloco(score, chave)
             if casa is not None and visitante is not None:
-                return casa, visitante
+                return int(casa), int(visitante)
         return None, None
 
     if status in ("FINISHED", "AWARDED"):
