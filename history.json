@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-03",
-      "ultima_atualizacao": "2026-05-03T13:46:49-03:00",
-      "finalizados": 13,
-      "taxa_geral": 0.641,
+      "ultima_atualizacao": "2026-05-03T14:10:21-03:00",
+      "finalizados": 14,
+      "taxa_geral": 0.595,
       "total_acertos": 25,
-      "total_palpites": 39,
+      "total_palpites": 42,
       "mercados": {
         "WINNER": {
           "acertos": 7,
-          "total": 13,
-          "taxa": 0.538
+          "total": 14,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
           "acertos": 10,
-          "total": 13,
-          "taxa": 0.769
+          "total": 14,
+          "taxa": 0.714
         },
         "BTTS": {
           "acertos": 8,
-          "total": 13,
-          "taxa": 0.615
+          "total": 14,
+          "taxa": 0.571
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 13,
-          "brier": 0.6534,
-          "log_loss": 1.0713
+          "n": 14,
+          "brier": 0.6609,
+          "log_loss": 1.0821
         },
         "OVER_UNDER": {
-          "n": 13,
-          "brier": 0.226,
-          "log_loss": 0.6462
+          "n": 14,
+          "brier": 0.2399,
+          "log_loss": 0.6747
         },
         "BTTS": {
-          "n": 13,
-          "brier": 0.2371,
-          "log_loss": 0.6675
+          "n": 14,
+          "brier": 0.2445,
+          "log_loss": 0.6825
         }
       },
       "jogos": [
@@ -429,6 +429,36 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.649,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-03T14:45:00Z",
+          "casa": "Sparta",
+          "visitante": "Go Ahead",
+          "competicao": "Eredivisie",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.43,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.648,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.584,
+              "resultado": "ERRO"
             }
           ]
         }
