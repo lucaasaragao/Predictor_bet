@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T22:42:45-03:00",
+  "generated_at": "2026-05-02T23:44:07-03:00",
   "analysis_date": "2026-05-02",
   "total_jogos": 1,
   "temporada": 2025,
@@ -8,30 +8,30 @@
       "game_id": 21682743,
       "competicao": "NBA",
       "data": "2026-05-02T00:00:00.000Z",
-      "status": "IN_PLAY",
-      "status_display": "4th Qtr",
+      "status": "FINISHED",
+      "status_display": "Final",
       "periodo": 4,
-      "tempo": "Q4 6:18",
+      "tempo": "Final",
       "times": {
         "casa": "Boston Celtics",
         "visitante": "Philadelphia 76ers",
         "abrev_casa": "BOS",
         "abrev_visit": "PHI"
       },
-      "placar_casa": 91,
-      "placar_visitante": 95,
+      "placar_casa": 100,
+      "placar_visitante": 109,
       "quarters": {
         "casa": [
           19,
           31,
           25,
-          16
+          25
         ],
         "visitante": [
           32,
           23,
           33,
-          7
+          21
         ]
       },
       "probabilidades": {
@@ -67,7 +67,7 @@
           "confianca": "HIGH",
           "justificativa": "Boston Celtics favorito com 72.8% de chance (spread esperado: +6.4 pts).",
           "edge": 0.4554,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -77,7 +77,7 @@
           "confianca": "LOW",
           "justificativa": "Total esperado de 232.8 pts. Linha: 233.5. Tendência de UNDER.",
           "edge": 0.0068,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "SPREAD",
@@ -86,7 +86,7 @@
           "confianca": "MEDIUM",
           "justificativa": "Boston Celtics favorito por ~6.4 pontos.",
           "edge": 0.32,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     }
@@ -103,8 +103,8 @@
     "ativo": false
   },
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 1,
+    "total": 3,
+    "taxa": 0.3333
   }
 }
