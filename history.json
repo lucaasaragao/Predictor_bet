@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-03",
-      "ultima_atualizacao": "2026-05-03T18:04:25-03:00",
-      "finalizados": 26,
-      "taxa_geral": 0.513,
-      "total_acertos": 40,
-      "total_palpites": 78,
+      "ultima_atualizacao": "2026-05-03T18:25:36-03:00",
+      "finalizados": 28,
+      "taxa_geral": 0.512,
+      "total_acertos": 43,
+      "total_palpites": 84,
       "mercados": {
         "WINNER": {
           "acertos": 12,
-          "total": 26,
-          "taxa": 0.462
+          "total": 28,
+          "taxa": 0.429
         },
         "OVER_UNDER": {
-          "acertos": 15,
-          "total": 26,
-          "taxa": 0.577
+          "acertos": 17,
+          "total": 28,
+          "taxa": 0.607
         },
         "BTTS": {
-          "acertos": 13,
-          "total": 26,
+          "acertos": 14,
+          "total": 28,
           "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 26,
-          "brier": 0.6849,
-          "log_loss": 1.1129
+          "n": 28,
+          "brier": 0.7216,
+          "log_loss": 1.1603
         },
         "OVER_UNDER": {
-          "n": 26,
-          "brier": 0.2636,
-          "log_loss": 0.726
+          "n": 28,
+          "brier": 0.2552,
+          "log_loss": 0.7082
         },
         "BTTS": {
-          "n": 26,
-          "brier": 0.2455,
-          "log_loss": 0.6827
+          "n": 28,
+          "brier": 0.2442,
+          "log_loss": 0.6801
         }
       },
       "jogos": [
@@ -818,6 +818,66 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.612,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-03T19:00:00Z",
+          "casa": "Flamengo",
+          "visitante": "Vasco da Gama",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.756,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "HIGH",
+              "probabilidade": 0.706,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.556,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-03T19:00:00Z",
+          "casa": "São Paulo",
+          "visitante": "Bahia",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.65,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "LOW",
+              "probabilidade": 0.547,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.507,
               "resultado": "ERRO"
             }
           ]
