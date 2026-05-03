@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T14:32:33-03:00",
+  "generated_at": "2026-05-03T14:55:13-03:00",
   "analysis_date": "2026-05-03",
   "total_jogos": 32,
   "odds_debug_visual": false,
@@ -3414,9 +3414,9 @@
     {
       "competicao": "Bundesliga",
       "data": "2026-05-03T15:30:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
-        "casa": 0,
+        "casa": 1,
         "visitante": 0
       },
       "times": {
@@ -3578,7 +3578,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -3592,7 +3592,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -3606,7 +3606,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -3814,10 +3814,10 @@
     {
       "competicao": "Primera Division",
       "data": "2026-05-03T16:30:00Z",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "placar_atual": {
         "casa": 2,
-        "visitante": 0
+        "visitante": 1
       },
       "times": {
         "casa": "Real Betis",
@@ -4212,10 +4212,10 @@
     {
       "competicao": "Bundesliga",
       "data": "2026-05-03T17:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Freiburg",
@@ -6423,9 +6423,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 30,
-    "total": 51,
-    "taxa": 0.588
+    "acertos": 31,
+    "total": 54,
+    "taxa": 0.574
   },
   "daily_tips_ids": [
     {
