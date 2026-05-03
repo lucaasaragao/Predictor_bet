@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-03",
-      "ultima_atualizacao": "2026-05-03T11:55:21-03:00",
-      "finalizados": 5,
-      "taxa_geral": 0.533,
-      "total_acertos": 8,
-      "total_palpites": 15,
+      "ultima_atualizacao": "2026-05-03T12:18:16-03:00",
+      "finalizados": 8,
+      "taxa_geral": 0.542,
+      "total_acertos": 13,
+      "total_palpites": 24,
       "mercados": {
         "WINNER": {
-          "acertos": 3,
-          "total": 5,
-          "taxa": 0.6
+          "acertos": 5,
+          "total": 8,
+          "taxa": 0.625
         },
         "OVER_UNDER": {
-          "acertos": 3,
-          "total": 5,
-          "taxa": 0.6
+          "acertos": 5,
+          "total": 8,
+          "taxa": 0.625
         },
         "BTTS": {
-          "acertos": 2,
-          "total": 5,
-          "taxa": 0.4
+          "acertos": 3,
+          "total": 8,
+          "taxa": 0.375
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 5,
-          "brier": 0.5602,
-          "log_loss": 0.9314
+          "n": 8,
+          "brier": 0.5926,
+          "log_loss": 0.9688
         },
         "OVER_UNDER": {
-          "n": 5,
-          "brier": 0.2922,
-          "log_loss": 0.7848
+          "n": 8,
+          "brier": 0.2572,
+          "log_loss": 0.7117
         },
         "BTTS": {
-          "n": 5,
-          "brier": 0.2555,
-          "log_loss": 0.7058
+          "n": 8,
+          "brier": 0.2682,
+          "log_loss": 0.731
         }
       },
       "jogos": [
@@ -189,6 +189,96 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.618,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-03T13:00:00Z",
+          "casa": "Bournemouth",
+          "visitante": "Crystal Palace",
+          "competicao": "Premier League",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.459,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.573,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.593,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-03T13:00:00Z",
+          "casa": "Sassuolo",
+          "visitante": "Milan",
+          "competicao": "Serie A",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.494,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.599,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.558,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-03T13:00:00Z",
+          "casa": "Lille",
+          "visitante": "Le Havre",
+          "competicao": "Ligue 1",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.679,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "LOW",
+              "probabilidade": 0.504,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.567,
+              "resultado": "ERRO"
             }
           ]
         }
