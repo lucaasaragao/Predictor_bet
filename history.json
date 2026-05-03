@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-03",
-      "ultima_atualizacao": "2026-05-03T14:10:21-03:00",
-      "finalizados": 14,
-      "taxa_geral": 0.595,
-      "total_acertos": 25,
-      "total_palpites": 42,
+      "ultima_atualizacao": "2026-05-03T14:32:33-03:00",
+      "finalizados": 17,
+      "taxa_geral": 0.588,
+      "total_acertos": 30,
+      "total_palpites": 51,
       "mercados": {
         "WINNER": {
-          "acertos": 7,
-          "total": 14,
-          "taxa": 0.5
+          "acertos": 9,
+          "total": 17,
+          "taxa": 0.529
         },
         "OVER_UNDER": {
-          "acertos": 10,
-          "total": 14,
-          "taxa": 0.714
+          "acertos": 12,
+          "total": 17,
+          "taxa": 0.706
         },
         "BTTS": {
-          "acertos": 8,
-          "total": 14,
-          "taxa": 0.571
+          "acertos": 9,
+          "total": 17,
+          "taxa": 0.529
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 14,
-          "brier": 0.6609,
-          "log_loss": 1.0821
+          "n": 17,
+          "brier": 0.6384,
+          "log_loss": 1.0519
         },
         "OVER_UNDER": {
-          "n": 14,
-          "brier": 0.2399,
-          "log_loss": 0.6747
+          "n": 17,
+          "brier": 0.2318,
+          "log_loss": 0.6571
         },
         "BTTS": {
-          "n": 14,
-          "brier": 0.2445,
-          "log_loss": 0.6825
+          "n": 17,
+          "brier": 0.2469,
+          "log_loss": 0.6869
         }
       },
       "jogos": [
@@ -458,6 +458,96 @@
               "opcao": "NO",
               "confianca": "MEDIUM",
               "probabilidade": 0.584,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-03T15:15:00Z",
+          "casa": "Auxerre",
+          "visitante": "Angers SCO",
+          "competicao": "Ligue 1",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.599,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER",
+              "confianca": "LOW",
+              "probabilidade": 0.566,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.576,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-03T15:15:00Z",
+          "casa": "Strasbourg",
+          "visitante": "Toulouse",
+          "competicao": "Ligue 1",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.611,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "HIGH",
+              "probabilidade": 0.71,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.66,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-03T15:15:00Z",
+          "casa": "Paris FC",
+          "visitante": "Brest",
+          "competicao": "Ligue 1",
+          "placar": "4-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.552,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.578,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.572,
               "resultado": "ERRO"
             }
           ]
