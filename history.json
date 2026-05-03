@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-03",
-      "ultima_atualizacao": "2026-05-03T14:55:13-03:00",
-      "finalizados": 18,
-      "taxa_geral": 0.574,
+      "ultima_atualizacao": "2026-05-03T15:21:29-03:00",
+      "finalizados": 19,
+      "taxa_geral": 0.544,
       "total_acertos": 31,
-      "total_palpites": 54,
+      "total_palpites": 57,
       "mercados": {
         "WINNER": {
           "acertos": 10,
-          "total": 18,
-          "taxa": 0.556
+          "total": 19,
+          "taxa": 0.526
         },
         "OVER_UNDER": {
           "acertos": 12,
-          "total": 18,
-          "taxa": 0.667
+          "total": 19,
+          "taxa": 0.632
         },
         "BTTS": {
           "acertos": 9,
-          "total": 18,
-          "taxa": 0.5
+          "total": 19,
+          "taxa": 0.474
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 18,
-          "brier": 0.6211,
-          "log_loss": 1.0285
+          "n": 19,
+          "brier": 0.6573,
+          "log_loss": 1.0752
         },
         "OVER_UNDER": {
-          "n": 18,
-          "brier": 0.2408,
-          "log_loss": 0.6754
+          "n": 19,
+          "brier": 0.2505,
+          "log_loss": 0.6954
         },
         "BTTS": {
-          "n": 18,
-          "brier": 0.2545,
-          "log_loss": 0.7023
+          "n": 19,
+          "brier": 0.2543,
+          "log_loss": 0.7018
         }
       },
       "jogos": [
@@ -578,6 +578,36 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.619,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-03T16:00:00Z",
+          "casa": "Juventus",
+          "visitante": "Verona",
+          "competicao": "Serie A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.758,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "HIGH",
+              "probabilidade": 0.652,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.5,
               "resultado": "ERRO"
             }
           ]
