@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T13:24:47-03:00",
+  "generated_at": "2026-05-03T13:46:49-03:00",
   "analysis_date": "2026-05-03",
   "total_jogos": 32,
   "odds_debug_visual": false,
@@ -2009,7 +2009,7 @@
     {
       "competicao": "Primeira Liga",
       "data": "2026-05-03T14:30:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 0,
         "visitante": 1
@@ -2175,7 +2175,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -2189,7 +2189,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -2203,14 +2203,14 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
     {
       "competicao": "Premier League",
       "data": "2026-05-03T14:30:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 3,
         "visitante": 2
@@ -2374,7 +2374,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -2388,7 +2388,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -2402,7 +2402,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -2412,7 +2412,7 @@
       "status": "IN_PLAY",
       "placar_atual": {
         "casa": 2,
-        "visitante": 1
+        "visitante": 2
       },
       "times": {
         "casa": "Sparta",
@@ -2610,9 +2610,9 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-05-03T14:45:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
-        "casa": 1,
+        "casa": 2,
         "visitante": 2
       },
       "times": {
@@ -2776,7 +2776,7 @@
           "ev_bruto": 0.6794,
           "prob_mercado_justa": 0.3378,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -2790,7 +2790,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -2804,16 +2804,16 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
     {
       "competicao": "Ligue 1",
       "data": "2026-05-03T15:15:00Z",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 1,
+        "casa": 3,
         "visitante": 0
       },
       "times": {
@@ -3012,7 +3012,7 @@
     {
       "competicao": "Ligue 1",
       "data": "2026-05-03T15:15:00Z",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "placar_atual": {
         "casa": 1,
         "visitante": 1
@@ -3215,7 +3215,7 @@
       "data": "2026-05-03T15:15:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 2,
+        "casa": 3,
         "visitante": 0
       },
       "times": {
@@ -3414,7 +3414,7 @@
     {
       "competicao": "Bundesliga",
       "data": "2026-05-03T15:30:00Z",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "placar_atual": {
         "casa": 0,
         "visitante": 0
@@ -3616,7 +3616,7 @@
       "status": "IN_PLAY",
       "placar_atual": {
         "casa": 0,
-        "visitante": 0
+        "visitante": 1
       },
       "times": {
         "casa": "Juventus",
@@ -3814,10 +3814,10 @@
     {
       "competicao": "Primera Division",
       "data": "2026-05-03T16:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Real Betis",
@@ -6423,9 +6423,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 18,
-    "total": 30,
-    "taxa": 0.6
+    "acertos": 25,
+    "total": 39,
+    "taxa": 0.641
   },
   "daily_tips_ids": [
     {

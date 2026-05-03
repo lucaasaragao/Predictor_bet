@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-03",
-      "ultima_atualizacao": "2026-05-03T13:24:47-03:00",
-      "finalizados": 10,
-      "taxa_geral": 0.6,
-      "total_acertos": 18,
-      "total_palpites": 30,
+      "ultima_atualizacao": "2026-05-03T13:46:49-03:00",
+      "finalizados": 13,
+      "taxa_geral": 0.641,
+      "total_acertos": 25,
+      "total_palpites": 39,
       "mercados": {
         "WINNER": {
-          "acertos": 6,
-          "total": 10,
-          "taxa": 0.6
+          "acertos": 7,
+          "total": 13,
+          "taxa": 0.538
         },
         "OVER_UNDER": {
-          "acertos": 7,
-          "total": 10,
-          "taxa": 0.7
+          "acertos": 10,
+          "total": 13,
+          "taxa": 0.769
         },
         "BTTS": {
-          "acertos": 5,
-          "total": 10,
-          "taxa": 0.5
+          "acertos": 8,
+          "total": 13,
+          "taxa": 0.615
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 10,
-          "brier": 0.6308,
-          "log_loss": 1.032
+          "n": 13,
+          "brier": 0.6534,
+          "log_loss": 1.0713
         },
         "OVER_UNDER": {
-          "n": 10,
-          "brier": 0.2479,
-          "log_loss": 0.6921
+          "n": 13,
+          "brier": 0.226,
+          "log_loss": 0.6462
         },
         "BTTS": {
-          "n": 10,
-          "brier": 0.2538,
-          "log_loss": 0.7018
+          "n": 13,
+          "brier": 0.2371,
+          "log_loss": 0.6675
         }
       },
       "jogos": [
@@ -338,6 +338,96 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.55,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-03T14:30:00Z",
+          "casa": "Casa Pia",
+          "visitante": "Tondela",
+          "competicao": "Primeira Liga",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.555,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER",
+              "confianca": "LOW",
+              "probabilidade": 0.527,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.519,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-03T14:30:00Z",
+          "casa": "Man United",
+          "visitante": "Liverpool",
+          "competicao": "Premier League",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.663,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.636,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-03T14:45:00Z",
+          "casa": "AZ",
+          "visitante": "Twente",
+          "competicao": "Eredivisie",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.571,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "HIGH",
+              "probabilidade": 0.679,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.649,
               "resultado": "ACERTO"
             }
           ]
