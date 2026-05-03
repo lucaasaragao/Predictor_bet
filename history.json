@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-03",
-      "ultima_atualizacao": "2026-05-03T20:28:07-03:00",
-      "finalizados": 29,
-      "taxa_geral": 0.494,
-      "total_acertos": 43,
-      "total_palpites": 87,
+      "ultima_atualizacao": "2026-05-03T20:51:15-03:00",
+      "finalizados": 31,
+      "taxa_geral": 0.516,
+      "total_acertos": 48,
+      "total_palpites": 93,
       "mercados": {
         "WINNER": {
-          "acertos": 12,
-          "total": 29,
-          "taxa": 0.414
+          "acertos": 14,
+          "total": 31,
+          "taxa": 0.452
         },
         "OVER_UNDER": {
-          "acertos": 17,
-          "total": 29,
-          "taxa": 0.586
+          "acertos": 18,
+          "total": 31,
+          "taxa": 0.581
         },
         "BTTS": {
-          "acertos": 14,
-          "total": 29,
-          "taxa": 0.483
+          "acertos": 16,
+          "total": 31,
+          "taxa": 0.516
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 29,
-          "brier": 0.7287,
-          "log_loss": 1.1716
+          "n": 31,
+          "brier": 0.7104,
+          "log_loss": 1.1467
         },
         "OVER_UNDER": {
-          "n": 29,
-          "brier": 0.2594,
-          "log_loss": 0.7166
+          "n": 31,
+          "brier": 0.2565,
+          "log_loss": 0.7105
         },
         "BTTS": {
-          "n": 29,
-          "brier": 0.2489,
-          "log_loss": 0.6897
+          "n": 31,
+          "brier": 0.2463,
+          "log_loss": 0.6845
         }
       },
       "jogos": [
@@ -909,6 +909,66 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.616,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-03T21:30:00Z",
+          "casa": "Chapecoense",
+          "visitante": "Bragantino",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.413,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER",
+              "confianca": "LOW",
+              "probabilidade": 0.518,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.527,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-03T21:30:00Z",
+          "casa": "Internacional",
+          "visitante": "Fluminense",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.503,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.598,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.56,
+              "resultado": "ACERTO"
             }
           ]
         }
