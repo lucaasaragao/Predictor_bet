@@ -1717,6 +1717,21 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
     if existing_data.get("daily_tips_date") == hoje:
         recovery_tip = existing_data.get("recovery_tip")
 
+    if recovery_tip and recovery_tip.get("ativo"):
+        jogo_recovery = recovery_tip.get("jogo") or {}
+        casa_recovery = (jogo_recovery.get("times") or {}).get("casa") or jogo_recovery.get("casa") or ""
+        visitante_recovery = (jogo_recovery.get("times") or {}).get("visitante") or jogo_recovery.get("visitante") or ""
+        recovery_tip["jogo"] = {
+            **jogo_recovery,
+            "casa": casa_recovery,
+            "visitante": visitante_recovery,
+            "times": {
+                **(jogo_recovery.get("times") or {}),
+                "casa": casa_recovery,
+                "visitante": visitante_recovery,
+            },
+        }
+
     recovery_ativo_existente = bool((recovery_tip or {}).get("ativo"))
     if erro_na_dica_1 or recovery_ativo_existente:
         if not recovery_ativo_existente:
@@ -1755,6 +1770,10 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
                         "visitante": melhor_jogo.get("times", {}).get("visitante", ""),
                         "data": melhor_jogo.get("data", ""),
                         "competicao": melhor_jogo.get("competicao", ""),
+                        "times": {
+                            "casa": melhor_jogo.get("times", {}).get("casa", ""),
+                            "visitante": melhor_jogo.get("times", {}).get("visitante", ""),
+                        },
                     },
                     "palpite": {
                         "tipo": melhor_palpite.get("tipo"),
@@ -2303,6 +2322,22 @@ def atualizar_status_jogos(
     erro_na_dica_1 = (palpite_dica_1 or {}).get("resultado_verificador") == "ERRO"
 
     recovery_tip = dados.get("recovery_tip") if dados.get("recovery_tip_date") == hoje else None
+
+    if recovery_tip and recovery_tip.get("ativo"):
+        jogo_recovery = recovery_tip.get("jogo") or {}
+        casa_recovery = (jogo_recovery.get("times") or {}).get("casa") or jogo_recovery.get("casa") or ""
+        visitante_recovery = (jogo_recovery.get("times") or {}).get("visitante") or jogo_recovery.get("visitante") or ""
+        recovery_tip["jogo"] = {
+            **jogo_recovery,
+            "casa": casa_recovery,
+            "visitante": visitante_recovery,
+            "times": {
+                **(jogo_recovery.get("times") or {}),
+                "casa": casa_recovery,
+                "visitante": visitante_recovery,
+            },
+        }
+
     recovery_ativo = bool((recovery_tip or {}).get("ativo"))
 
     if erro_na_dica_1 or recovery_ativo:
@@ -2330,6 +2365,10 @@ def atualizar_status_jogos(
                         "visitante":  melhor_jogo.get("times", {}).get("visitante", ""),
                         "data":       melhor_jogo.get("data", ""),
                         "competicao": melhor_jogo.get("competicao", ""),
+                        "times": {
+                            "casa": melhor_jogo.get("times", {}).get("casa", ""),
+                            "visitante": melhor_jogo.get("times", {}).get("visitante", ""),
+                        },
                     },
                     "palpite": {
                         "tipo":         melhor_palpite.get("tipo"),

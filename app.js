@@ -300,17 +300,41 @@ function normalizeFootballMatch(match) {
 
 function normalizeFootballData(data) {
   const jogos = Array.isArray(data?.jogos) ? data.jogos.map(normalizeFootballMatch) : [];
+  const jogosByKey = new Map(
+    jogos.map((jogo) => [`${jogo?.times?.casa || ""}|${jogo?.times?.visitante || ""}|${jogo?.data || ""}`, jogo])
+  );
+
+  const rawRecovery = data?.recovery_tip;
+  let recoveryTip = { ativo: false };
+  if (rawRecovery?.ativo) {
+    const recoveryGame = normalizeFootballMatch(rawRecovery?.jogo || {});
+    const recoveryKey = `${recoveryGame?.times?.casa || ""}|${recoveryGame?.times?.visitante || ""}|${recoveryGame?.data || ""}`;
+    const matchedGame = jogosByKey.get(recoveryKey);
+    const finalGame = matchedGame || recoveryGame;
+    const finalTeams = getTeamNames(finalGame);
+
+    if (finalTeams.casa !== "Casa" || finalTeams.visitante !== "Visitante") {
+      recoveryTip = {
+        ...rawRecovery,
+        jogo: finalGame,
+        palpite: rawRecovery?.palpite || {},
+      };
+    }
+  }
+
   return {
     ...data,
     jogos,
     daily_tips_ids: Array.isArray(data?.daily_tips_ids) ? data.daily_tips_ids : [],
+    recovery_tip: recoveryTip,
   };
 }
 
 function getTeamNames(match) {
+  const times = match?.times || {};
   return {
-    casa: match?.times?.casa || "Casa",
-    visitante: match?.times?.visitante || "Visitante",
+    casa: times.casa || match?.casa || match?.mandante || "Casa",
+    visitante: times.visitante || match?.visitante || match?.fora || "Visitante",
   };
 }
 
@@ -782,6 +806,8 @@ function renderRecoveryCard(container, recovery) {
   const tip = recovery?.tip || recovery?.palpite;
   if (!game || !tip) return;
   const teams = getTeamNames(game);
+  const kickoffLabel = game?.data ? formatGeneratedAt(game.data, true) : "--";
+  const triggerLabel = recovery?.disparado_em ? formatGeneratedAt(recovery.disparado_em, true) : "--";
   const prob = Math.round((tip.probabilidade || 0) * 100);
   const confidenceTone = confidenceClass(tip.confianca);
   const confidenceText = confidenceLabel(tip.confianca);
@@ -804,7 +830,7 @@ function renderRecoveryCard(container, recovery) {
       <span class="tip-card__bet-label">Apostar em</span>
       <strong class="tip-card__bet-value">${betLabel}</strong>
     </div>
-    <div class="tip-card__recovery-note">Sugestão mais conservadora para recuperar.</div>
+    <div class="tip-card__recovery-note">Sugestão mais conservadora para recuperar. Jogo: ${kickoffLabel} · Entrou: ${triggerLabel}</div>
   `;
   container.appendChild(card);
 }
