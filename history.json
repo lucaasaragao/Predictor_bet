@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-04",
-      "ultima_atualizacao": "2026-05-04T17:44:39-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.667,
-      "total_acertos": 4,
-      "total_palpites": 6,
+      "ultima_atualizacao": "2026-05-04T18:15:12-03:00",
+      "finalizados": 5,
+      "taxa_geral": 0.533,
+      "total_acertos": 8,
+      "total_palpites": 15,
       "mercados": {
         "WINNER": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
+          "acertos": 4,
+          "total": 5,
+          "taxa": 0.8
         },
         "OVER_UNDER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "acertos": 2,
+          "total": 5,
+          "taxa": 0.4
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "acertos": 2,
+          "total": 5,
+          "taxa": 0.4
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.289,
-          "log_loss": 0.5709
+          "n": 5,
+          "brier": 0.4083,
+          "log_loss": 0.7441
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.3196,
-          "log_loss": 0.8444
+          "n": 5,
+          "brier": 0.2953,
+          "log_loss": 0.7896
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.3142,
-          "log_loss": 0.8256
+          "n": 5,
+          "brier": 0.3332,
+          "log_loss": 0.8643
         }
       },
       "jogos": [
@@ -98,6 +98,96 @@
               "opcao": "NO",
               "confianca": "MEDIUM",
               "probabilidade": 0.635,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-04T18:45:00Z",
+          "casa": "Roma",
+          "visitante": "Fiorentina",
+          "competicao": "Serie A",
+          "placar": "4-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.563,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.642,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.621,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-04T19:00:00Z",
+          "casa": "Everton",
+          "visitante": "Man City",
+          "competicao": "Premier League",
+          "placar": "3-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.394,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER",
+              "confianca": "LOW",
+              "probabilidade": 0.54,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.511,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-04T19:00:00Z",
+          "casa": "Sevilla FC",
+          "visitante": "Real Sociedad",
+          "competicao": "Primera Division",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.502,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.646,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.643,
               "resultado": "ERRO"
             }
           ]
