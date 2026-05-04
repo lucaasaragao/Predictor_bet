@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T15:22:02-03:00",
+  "generated_at": "2026-05-04T16:00:36-03:00",
   "analysis_date": "2026-05-04",
   "total_jogos": 6,
   "odds_debug_visual": false,
@@ -210,10 +210,10 @@
     {
       "competicao": "Serie A",
       "data": "2026-05-04T16:30:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
-        "visitante": 1
+        "visitante": 2
       },
       "times": {
         "casa": "Cremonese",
@@ -376,7 +376,7 @@
           "ev_bruto": 0.2295,
           "prob_mercado_justa": 0.3882,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -390,7 +390,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -404,17 +404,17 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
     {
       "competicao": "Serie A",
       "data": "2026-05-04T18:45:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Roma",
@@ -1210,9 +1210,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 3,
-    "total": 3,
-    "taxa": 1.0
+    "acertos": 4,
+    "total": 6,
+    "taxa": 0.667
   },
   "daily_tips_ids": [
     {
