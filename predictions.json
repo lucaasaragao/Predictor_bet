@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T22:15:14-03:00",
+  "generated_at": "2026-05-03T22:58:05-03:00",
   "analysis_date": "2026-05-03",
   "total_jogos": 32,
   "odds_debug_visual": false,
@@ -612,7 +612,7 @@
       "data": "2026-05-03T12:30:00Z",
       "status": "FINISHED",
       "placar_atual": {
-        "casa": 1,
+        "casa": 2,
         "visitante": 0
       },
       "times": {
@@ -6208,10 +6208,10 @@
     {
       "competicao": "Campeonato Brasileiro Série A",
       "data": "2026-05-03T23:30:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 2,
-        "visitante": 0
+        "visitante": 1
       },
       "times": {
         "casa": "Mirassol",
@@ -6375,7 +6375,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -6389,7 +6389,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -6403,7 +6403,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "EMPATE",
@@ -6417,15 +6417,15 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     }
   ],
   "acertos_hoje": {
-    "acertos": 48,
-    "total": 93,
-    "taxa": 0.516
+    "acertos": 49,
+    "total": 97,
+    "taxa": 0.505
   },
   "daily_tips_ids": [
     {
@@ -6452,7 +6452,11 @@
       "casa": "Freiburg",
       "visitante": "Wolfsburg",
       "data": "2026-05-03T17:30:00Z",
-      "competicao": "Bundesliga"
+      "competicao": "Bundesliga",
+      "times": {
+        "casa": "Freiburg",
+        "visitante": "Wolfsburg"
+      }
     },
     "palpite": {
       "tipo": "OVER_UNDER",
