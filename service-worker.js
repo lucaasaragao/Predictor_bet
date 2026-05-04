@@ -1,4 +1,4 @@
-const CACHE_VERSION = "v4";
+const CACHE_VERSION = "v5";
 const APP_SHELL_CACHE = `palpitando-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `palpitando-data-${CACHE_VERSION}`;
 
@@ -27,16 +27,30 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    caches.keys().then((keys) =>
-      Promise.all(
-        keys
-          .filter((key) => ![APP_SHELL_CACHE, DATA_CACHE].includes(key))
-          .map((key) => caches.delete(key))
-      )
-    )
-  );
-  self.clients.claim();
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(
+      keys
+        .filter((key) => ![APP_SHELL_CACHE, DATA_CACHE].includes(key))
+        .map((key) => caches.delete(key))
+    );
+
+    await self.clients.claim();
+
+    // Garante que clientes em código antigo sejam recarregados para a versão nova.
+    const clients = await self.clients.matchAll({ type: "window", includeUncontrolled: true });
+    clients.forEach((client) => {
+      if ("navigate" in client) {
+        client.navigate(client.url);
+      }
+    });
+  })());
+});
+
+self.addEventListener("message", (event) => {
+  if (event?.data?.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
 });
 
 async function networkFirst(request, cacheName) {
@@ -91,6 +105,20 @@ self.addEventListener("fetch", (event) => {
 
   if (isJsonData) {
     event.respondWith(networkFirst(request, DATA_CACHE));
+    return;
+  }
+
+  const isSameOrigin = url.origin === self.location.origin;
+  const isCriticalAppAsset =
+    isSameOrigin && (
+      url.pathname.endsWith("/app.js") ||
+      url.pathname.endsWith("/styles.css") ||
+      url.pathname.endsWith("/index.html") ||
+      url.pathname.endsWith("/manifest.webmanifest")
+    );
+
+  if (isCriticalAppAsset) {
+    event.respondWith(networkFirst(request, APP_SHELL_CACHE));
     return;
   }
 

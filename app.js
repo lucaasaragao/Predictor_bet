@@ -1096,8 +1096,42 @@ function registerServiceWorker() {
 
   window.addEventListener("load", async () => {
     try {
-      const registration = await navigator.serviceWorker.register("./service-worker.js?v=4");
+      const registration = await navigator.serviceWorker.register("./service-worker.js?v=5");
+      let isRefreshing = false;
+
+      const requestSkipWaiting = () => {
+        if (registration.waiting) {
+          registration.waiting.postMessage({ type: "SKIP_WAITING" });
+        }
+      };
+
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        if (isRefreshing) return;
+        isRefreshing = true;
+        window.location.reload();
+      });
+
+      if (registration.waiting) {
+        requestSkipWaiting();
+      }
+
+      registration.addEventListener("updatefound", () => {
+        const newWorker = registration.installing;
+        if (!newWorker) return;
+
+        newWorker.addEventListener("statechange", () => {
+          if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+            requestSkipWaiting();
+          }
+        });
+      });
+
       registration.update();
+
+      // Revalida atualizações periodicamente para reduzir tempo de usuários em versão antiga.
+      setInterval(() => {
+        registration.update().catch(() => {});
+      }, 30 * 60 * 1000);
     } catch (error) {
       console.warn("Falha ao registrar service worker:", error);
     }
