@@ -283,13 +283,45 @@ async function loadNbaData() {
   }
 }
 
+function normalizeFootballMatch(match) {
+  const times = match?.times || {};
+  const casa = times.casa ?? match?.casa ?? match?.mandante ?? match?.home_team ?? "Casa";
+  const visitante = times.visitante ?? match?.visitante ?? match?.fora ?? match?.away_team ?? "Visitante";
+
+  return {
+    ...match,
+    times: {
+      ...times,
+      casa: String(casa),
+      visitante: String(visitante),
+    },
+  };
+}
+
+function normalizeFootballData(data) {
+  const jogos = Array.isArray(data?.jogos) ? data.jogos.map(normalizeFootballMatch) : [];
+  return {
+    ...data,
+    jogos,
+    daily_tips_ids: Array.isArray(data?.daily_tips_ids) ? data.daily_tips_ids : [],
+  };
+}
+
+function getTeamNames(match) {
+  return {
+    casa: match?.times?.casa || "Casa",
+    visitante: match?.times?.visitante || "Visitante",
+  };
+}
+
 async function loadData() {
   try {
     const response = await fetch("predictions.json", { cache: "no-store" });
     if (!response.ok) {
       throw new Error(`Não foi possível carregar predictions.json (HTTP ${response.status})`);
     }
-    return response.json();
+    const rawData = await response.json();
+    return normalizeFootballData(rawData);
   } catch (error) {
     if (error instanceof TypeError) {
       throw new Error("Falha de rede ao carregar predictions.json. Abra o projeto em servidor local (ex.: Live Server) e gere o arquivo com predictor.py.");
@@ -490,9 +522,9 @@ function updateConfidenceHelp(visibleCount) {
 
 function renderProbabilities(container, match) {
   const rows = [
-    { name: match.times.casa, value: match.probabilidades.casa },
-    { name: "Empate", value: match.probabilidades.empate },
-    { name: match.times.visitante, value: match.probabilidades.visitante },
+    { name: match?.times?.casa || "Casa", value: Number(match?.probabilidades?.casa) || 0 },
+    { name: "Empate", value: Number(match?.probabilidades?.empate) || 0 },
+    { name: match?.times?.visitante || "Visitante", value: Number(match?.probabilidades?.visitante) || 0 },
   ].sort((a, b) => b.value - a.value);
 
   const rankLevel = ["h", "m", "l"];
@@ -718,15 +750,19 @@ function renderTips(container, tips, match) {
 }
 
 function getRecoveryTip(data, dailyGames) {
-  const dailyKeys = new Set(dailyGames.map((g) => `${g.times.casa}|${g.times.visitante}`));
+  const dailyKeys = new Set(dailyGames.map((g) => {
+    const teams = getTeamNames(g);
+    return `${teams.casa}|${teams.visitante}`;
+  }));
   const confScore = { HIGH: 3, MEDIUM: 2, LOW: 1 };
 
   let best = null;
   let bestScore = -1;
 
   for (const game of data.jogos || []) {
+    const teams = getTeamNames(game);
     if (game.status === "FINISHED") continue;
-    if (dailyKeys.has(`${game.times.casa}|${game.times.visitante}`)) continue;
+    if (dailyKeys.has(`${teams.casa}|${teams.visitante}`)) continue;
     if (COMPETICOES_EXCLUIDAS_DICAS.has(game.competicao)) continue;
 
     for (const tip of game.palpites || []) {
@@ -745,6 +781,7 @@ function renderRecoveryCard(container, recovery) {
   const game = recovery?.game || recovery?.jogo;
   const tip = recovery?.tip || recovery?.palpite;
   if (!game || !tip) return;
+  const teams = getTeamNames(game);
   const prob = Math.round((tip.probabilidade || 0) * 100);
   const confidenceTone = confidenceClass(tip.confianca);
   const confidenceText = confidenceLabel(tip.confianca);
@@ -758,7 +795,7 @@ function renderRecoveryCard(container, recovery) {
       <span class="tip-card__competition">${game.competicao}</span>
       <span class="conf ${confidenceTone} tip-card__conf">${confidenceText}</span>
     </div>
-    <div class="tip-card__teams">${game.times.casa} <span class="tip-card__vs">x</span> ${game.times.visitante}</div>
+    <div class="tip-card__teams">${teams.casa} <span class="tip-card__vs">x</span> ${teams.visitante}</div>
     <div class="tip-card__prob">
       <span class="tip-card__prob-value tip-card__prob-value--high">${prob}%</span>
       <span class="tip-card__prob-label">probabilidade</span>
@@ -783,7 +820,7 @@ function renderTipsSection(data) {
     topGames = data.daily_tips_ids
       .map((id) =>
         (data.jogos || []).find(
-          (j) => j.times.casa === id.casa && j.times.visitante === id.visitante && j.data === id.data
+          (j) => j?.times?.casa === id.casa && j?.times?.visitante === id.visitante && j?.data === id.data
         )
       )
       .filter(Boolean);
@@ -811,6 +848,7 @@ function renderTipsSection(data) {
   const hasError = tipDica1?.resultado_verificador === "ERRO";
 
   topGames.forEach((match, index) => {
+    const teams = getTeamNames(match);
     const prob = Math.round((match.favorito?.prob || 0) * 100);
     const primaryTip = getPrimaryTip(match);
     const bestBet = primaryTip ? translateTipOption(primaryTip.tipo, primaryTip.opcao, match) : "—";
@@ -839,7 +877,7 @@ function renderTipsSection(data) {
         <span class="tip-card__competition">${match.competicao}</span>
         <span class="conf ${confidenceTone} tip-card__conf">${confidenceText}</span>
       </div>
-      <div class="tip-card__teams">${match.times.casa} <span class="tip-card__vs">x</span> ${match.times.visitante}</div>
+      <div class="tip-card__teams">${teams.casa} <span class="tip-card__vs">x</span> ${teams.visitante}</div>
       <div class="tip-card__prob">
         <span class="tip-card__prob-value ${probClass}">${prob}%</span>
         <span class="tip-card__prob-label">vitória — <strong>${match.favorito?.nome || "—"}</strong></span>
@@ -869,6 +907,7 @@ function renderCards() {
 
   const filtered = (state.raw?.jogos || [])
     .filter(passesFilters)
+    .map(normalizeFootballMatch)
     .sort((a, b) => new Date(a.data) - new Date(b.data));
   updateConfidenceHelp(filtered.length);
 
@@ -878,6 +917,7 @@ function renderCards() {
   }
 
   filtered.forEach((match) => {
+    const teams = getTeamNames(match);
     const node = template.content.cloneNode(true);
     const cardEl = node.querySelector(".card");
     const cardBadgesEl = node.querySelector(".card-badges");
@@ -898,11 +938,11 @@ function renderCards() {
       matchDateEl.hidden = false;
     }
     
-    let titleContent = `${match.times.casa} x ${match.times.visitante}`;
+    let titleContent = `${teams.casa} x ${teams.visitante}`;
     if (match.status === "FINISHED" && match.placar_atual && match.placar_atual.casa !== null) {
-      titleContent = `${match.times.casa} ${match.placar_atual.casa} x ${match.placar_atual.visitante} ${match.times.visitante}`;
+      titleContent = `${teams.casa} ${match.placar_atual.casa} x ${match.placar_atual.visitante} ${teams.visitante}`;
     } else if (match.status === "IN_PLAY" || match.status === "PAUSED") {
-      titleContent = `${match.times.casa} ${match.placar_atual?.casa ?? 0} x ${match.placar_atual?.visitante ?? 0} ${match.times.visitante}`;
+      titleContent = `${teams.casa} ${match.placar_atual?.casa ?? 0} x ${match.placar_atual?.visitante ?? 0} ${teams.visitante}`;
     }
     node.querySelector(".match-title").textContent = titleContent;
 
@@ -941,7 +981,7 @@ function renderCards() {
     bindCardToggle(cardEl);
 
     node.querySelector(".favorite-line").textContent =
-      `${match.favorito.nome} com maior probabilidade de vitória, com ${formatarPorcentagem(match.favorito.prob)} de chance e margem estimada de ${formatarPorcentagem(match.favorito.vantagem)}.`;
+      `${match?.favorito?.nome || teams.casa} com maior probabilidade de vitória, com ${formatarPorcentagem(match?.favorito?.prob || 0)} de chance e margem estimada de ${formatarPorcentagem(match?.favorito?.vantagem || 0)}.`;
     node.querySelector(".quick-read").textContent = translateQuickRead(match.leitura_rapida);
 
     // Tendência de forma
@@ -949,7 +989,7 @@ function renderCards() {
     const tendencia = match.tendencia || {};
     const formaLabel = { "em alta": "↗ em alta", "em baixa": "↘ em baixa", "estavel": "→ estável", "indefinida": null };
     const formaClass = { "em alta": "forma--alta", "em baixa": "forma--baixa", "estavel": "forma--estavel" };
-    [[match.times.casa, tendencia.casa], [match.times.visitante, tendencia.visitante]].forEach(([nome, tend]) => {
+    [[teams.casa, tendencia.casa], [teams.visitante, tendencia.visitante]].forEach(([nome, tend]) => {
       const label = formaLabel[tend];
       if (!label) return;
       const pill = document.createElement("span");
@@ -960,25 +1000,25 @@ function renderCards() {
 
     renderProbabilities(node.querySelector(".prob-bars"), match);
 
-    const xgCasa = Number(match.gols_esperados.casa || 0).toLocaleString("pt-BR", {
+    const xgCasa = Number(match?.gols_esperados?.casa || 0).toLocaleString("pt-BR", {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     });
-    const xgFora = Number(match.gols_esperados.visitante || 0).toLocaleString("pt-BR", {
+    const xgFora = Number(match?.gols_esperados?.visitante || 0).toLocaleString("pt-BR", {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     });
     const marketList = node.querySelector(".market-list");
     marketList.innerHTML = `
-      <li class="market-xg"><span>Gols esperados (xG) por time</span><strong>${match.times.casa}: ${xgCasa} | ${match.times.visitante}: ${xgFora}</strong></li>
-      <li><span>Menos de 2,5 gols</span><strong>${formatarPorcentagem(match.mercados.under_25)}</strong></li>
-      <li><span>Mais de 2,5 gols</span><strong>${formatarPorcentagem(match.mercados.over_25)}</strong></li>
-      <li><span>Ambas Marcam - Sim</span><strong>${formatarPorcentagem(match.mercados.btts_yes)}</strong></li>
-      <li><span>Ambas Marcam - Não</span><strong>${formatarPorcentagem(match.mercados.btts_no)}</strong></li>
+      <li class="market-xg"><span>Gols esperados (xG) por time</span><strong>${teams.casa}: ${xgCasa} | ${teams.visitante}: ${xgFora}</strong></li>
+      <li><span>Menos de 2,5 gols</span><strong>${formatarPorcentagem(match?.mercados?.under_25 || 0)}</strong></li>
+      <li><span>Mais de 2,5 gols</span><strong>${formatarPorcentagem(match?.mercados?.over_25 || 0)}</strong></li>
+      <li><span>Ambas Marcam - Sim</span><strong>${formatarPorcentagem(match?.mercados?.btts_yes || 0)}</strong></li>
+      <li><span>Ambas Marcam - Não</span><strong>${formatarPorcentagem(match?.mercados?.btts_no || 0)}</strong></li>
     `;
 
-    renderHistory(node.querySelector(".home-history"), match.historico.casa);
-    renderHistory(node.querySelector(".away-history"), match.historico.visitante);
+    renderHistory(node.querySelector(".home-history"), match?.historico?.casa || []);
+    renderHistory(node.querySelector(".away-history"), match?.historico?.visitante || []);
     renderTips(node.querySelector(".tips"), match.palpites, match);
 
     container.appendChild(node);
@@ -1056,7 +1096,7 @@ function registerServiceWorker() {
 
   window.addEventListener("load", async () => {
     try {
-      const registration = await navigator.serviceWorker.register("./service-worker.js?v=3");
+      const registration = await navigator.serviceWorker.register("./service-worker.js?v=4");
       registration.update();
     } catch (error) {
       console.warn("Falha ao registrar service worker:", error);
@@ -1172,7 +1212,7 @@ function renderTipsSectionNba(data) {
     topGames = data.daily_tips_ids
       .map((id) =>
         (data.jogos || []).find(
-          (j) => j.times.casa === id.casa && j.times.visitante === id.visitante && j.data === id.data
+          (j) => j?.times?.casa === id.casa && j?.times?.visitante === id.visitante && j?.data === id.data
         )
       )
       .filter(Boolean);
