@@ -2,30 +2,77 @@
   "dias": [
     {
       "data": "2026-05-05",
-      "ultima_atualizacao": "2026-05-05T18:01:30-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-05-05T18:31:07-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.333,
+      "total_acertos": 1,
+      "total_palpites": 3,
+      "mercados": {
+        "WINNER": {
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.2178,
+          "log_loss": 0.4789
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.3064,
+          "log_loss": 0.8064
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.2688,
+          "log_loss": 0.7308
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-05-05T19:00:00Z",
+          "casa": "Arsenal",
+          "visitante": "Atleti",
+          "competicao": "UEFA Champions League",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.619,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER",
+              "confianca": "LOW",
+              "probabilidade": 0.554,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.518,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-05-04",
