@@ -202,8 +202,12 @@ function translateTipOption(type, option, match) {
     if (upperOption === "NO") return "Não, um fica sem gol";
   }
   if (type === "OVER_UNDER") {
-    if (upperOption === "OVER") return "3 gols ou mais";
-    if (upperOption === "UNDER") return "Menos de 3 gols";
+    const ouMatch = upperOption.match(/^(OVER|UNDER)(?:_(\d+(?:\.\d+)?))?$/);
+    if (ouMatch) {
+      const side = ouMatch[1];
+      const linha = ouMatch[2] ? Number(ouMatch[2]).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : "2,5";
+      return side === "OVER" ? `Mais de ${linha} gols` : `Menos de ${linha} gols`;
+    }
   }
   return option;
 }
@@ -240,10 +244,14 @@ function buildTipJustificationHuman(tip, match) {
   }
 
   if (tip.tipo === "OVER_UNDER") {
-    if (String(tip.opcao).toUpperCase() === "UNDER") {
-      return `A linha de 2,5 gols aponta para um jogo mais fechado. Em ${prob}% dos cenários simulados, a partida termina com até 2 gols.`;
+    const parsed = parseOuOpcao(tip.opcao);
+    const linhaNum = parsed?.linha ?? 2.5;
+    const linhaStr = linhaNum.toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+    const golsThreshold = Math.ceil(linhaNum);
+    if (parsed?.side === "UNDER") {
+      return `A linha de ${linhaStr} gols aponta para um jogo mais fechado. Em ${prob}% dos cenários simulados, a partida termina com até ${golsThreshold - 1} gols.`;
     } else {
-      return `A linha de 2,5 gols aponta para um jogo mais aberto. Em ${prob}% dos cenários simulados, a partida termina com 3 gols ou mais.`;
+      return `A linha de ${linhaStr} gols aponta para um jogo mais aberto. Em ${prob}% dos cenários simulados, a partida termina com ${golsThreshold} gols ou mais.`;
     }
   }
 
@@ -708,7 +716,28 @@ function getPrimaryTip(match) {
   return tips.find((tip) => tip.valor_esperado_positivo === true) || tips[0] || null;
 }
 
+function parseOuOpcao(opcao) {
+  const m = String(opcao || "").toUpperCase().match(/^(OVER|UNDER)(?:_(\d+(?:\.\d+)?))?$/);
+  if (!m) return null;
+  return { side: m[1], linha: m[2] ? Number(m[2]) : null };
+}
+
 function buildGoalsProbabilityLabel(match) {
+  // Prefere usar o palpite OVER_UNDER real do modelo (ex: OVER_3.5)
+  const ouTip = (match?.palpites || []).find((p) => p.tipo === "OVER_UNDER");
+  if (ouTip) {
+    const parsed = parseOuOpcao(ouTip.opcao);
+    if (parsed) {
+      const prob = Math.round((ouTip.probabilidade || 0) * 100);
+      const linhaStr = parsed.linha !== null
+        ? parsed.linha.toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 })
+        : "2,5";
+      const label = parsed.side === "OVER" ? `Mais de ${linhaStr}` : `Menos de ${linhaStr}`;
+      return `${label} (${prob}%)`;
+    }
+  }
+
+  // Fallback para over/under 2.5 do mercado
   const under = Number(match?.mercados?.under_25);
   const over = Number(match?.mercados?.over_25);
 
@@ -1074,11 +1103,17 @@ function renderTipsSection(data) {
     container.appendChild(card);
   });
 
-  if (data?.recovery_tip?.ativo) {
-    renderRecoveryCard(container, data.recovery_tip);
-  } else if (hasError) {
-    const recovery = getRecoveryTip(data, topDicas.map((d) => d.jogo));
-    if (recovery) renderRecoveryCard(container, recovery);
+  const allCorrect = topDicas.length > 0 && topDicas.every(
+    ({ palpite }) => palpite?.resultado_verificador === "ACERTO"
+  );
+
+  if (!allCorrect) {
+    if (data?.recovery_tip?.ativo) {
+      renderRecoveryCard(container, data.recovery_tip);
+    } else if (hasError) {
+      const recovery = getRecoveryTip(data, topDicas.map((d) => d.jogo));
+      if (recovery) renderRecoveryCard(container, recovery);
+    }
   }
 }
 
