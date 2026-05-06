@@ -1752,22 +1752,38 @@ def _palpite_principal_front(jogo: Optional[Dict]) -> Optional[Dict]:
     return next((p for p in palpites if p.get("valor_esperado_positivo") is True), palpites[0] if palpites else None)
 
 
-def _selecionar_daily_tips_ids(jogos: List[Dict], existing_data: Dict, hoje: str) -> List[Dict[str, str]]:
+def _selecionar_daily_tips_ids(jogos: List[Dict], existing_data: Dict, hoje: str) -> List[Dict]:
+    """Seleciona top N palpites com maior probabilidade (mais seguros).
+    
+    Retorna palpites com: casa, visitante, data, tipo, opcao, probabilidade.
+    """
     if existing_data.get("daily_tips_date") == hoje and existing_data.get("daily_tips_ids"):
         return existing_data["daily_tips_ids"]
 
-    candidatos_dicas = [
-        jogo for jogo in jogos
-        if jogo["status"] not in ("FINISHED", "AWARDED")
-        and jogo["competicao"] not in COMPETICOES_EXCLUIDAS_DICAS
-    ]
-    candidatos_dicas.sort(key=lambda jogo: jogo["favorito"]["prob"], reverse=True)
+    # Coletar todos os palpites dos jogos válidos com probabilidade
+    candidatos_palpites = []
+    for jogo in jogos:
+        if (jogo["status"] in ("FINISHED", "AWARDED") or 
+            jogo["competicao"] in COMPETICOES_EXCLUIDAS_DICAS):
+            continue
+        
+        for palpite in jogo.get("palpites", []):
+            candidatos_palpites.append({
+                "casa": jogo["times"]["casa"],
+                "visitante": jogo["times"]["visitante"],
+                "data": jogo["data"],
+                "tipo": palpite.get("tipo"),
+                "opcao": palpite.get("opcao"),
+                "probabilidade": palpite.get("probabilidade", 0.0),
+            })
+    
+    # Ordenar por probabilidade (descendente)
+    candidatos_palpites.sort(key=lambda p: p.get("probabilidade", 0.0), reverse=True)
+    
     n_total = len(jogos)
     n_dicas = 3 if n_total >= 10 else (2 if n_total > 5 else 1)
-    return [
-        {"casa": jogo["times"]["casa"], "visitante": jogo["times"]["visitante"], "data": jogo["data"]}
-        for jogo in candidatos_dicas[:n_dicas]
-    ]
+    
+    return candidatos_palpites[:n_dicas]
 
 
 def _normalizar_recovery_tip(recovery_tip: Optional[Dict]) -> Optional[Dict]:
@@ -1847,18 +1863,27 @@ def _criar_recovery_tip(jogos: List[Dict], ids_dicas: set[Tuple[str, str, str]])
     }
 
 
-def _resolver_recovery_tip(jogos: List[Dict], daily_tips_ids: List[Dict[str, str]], existing_data: Dict, hoje: str) -> Dict:
+def _resolver_recovery_tip(jogos: List[Dict], daily_tips_ids: List[Dict], existing_data: Dict, hoje: str) -> Dict:
     jogos_por_id = {_chave_id_jogo_front(jogo): jogo for jogo in jogos}
 
-    dica_1 = None
+    dica_1_palpite = None
+    dica_1_jogo = None
+    
+    # Buscar o primeiro palpite (dica mais segura)
     for item in daily_tips_ids:
         jogo = jogos_por_id.get((item.get("casa", ""), item.get("visitante", ""), item.get("data", "")))
         if jogo:
-            dica_1 = jogo
+            # Buscar o palpite específico desta dica
+            for palpite in jogo.get("palpites", []):
+                if (palpite.get("tipo") == item.get("tipo") and 
+                    palpite.get("opcao") == item.get("opcao")):
+                    dica_1_palpite = palpite
+                    dica_1_jogo = jogo
+                    break
+        if dica_1_palpite:
             break
 
-    palpite_dica_1 = _palpite_principal_front(dica_1)
-    erro_na_dica_1 = (palpite_dica_1 or {}).get("resultado_verificador") == "ERRO"
+    erro_na_dica_1 = (dica_1_palpite or {}).get("resultado_verificador") == "ERRO"
     recovery_tip = None
     if existing_data.get("daily_tips_date") == hoje:
         recovery_tip = _normalizar_recovery_tip(existing_data.get("recovery_tip"))
@@ -1868,6 +1893,7 @@ def _resolver_recovery_tip(jogos: List[Dict], daily_tips_ids: List[Dict[str, str
     if not erro_na_dica_1:
         return {"ativo": False}
 
+    # Se a dica 1 errou, buscar um palpite alternativo que não seja das dicas
     ids_dicas = {
         (item.get("casa", ""), item.get("visitante", ""), item.get("data", ""))
         for item in daily_tips_ids

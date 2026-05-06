@@ -987,52 +987,62 @@ function renderTipsSection(data) {
   if (!container) return;
 
   // Usa dicas congeladas no início do dia, com fallback dinâmico
-  let topGames = [];
+  let topDicas = [];
   if (data.daily_tips_ids && data.daily_tips_ids.length) {
-    topGames = data.daily_tips_ids
-      .map((id) =>
-        (data.jogos || []).find(
-          (j) => j?.times?.casa === id.casa && j?.times?.visitante === id.visitante && j?.data === id.data
-        )
-      )
+    // New structure: daily_tips_ids contém tipo e opcao do palpite específico
+    topDicas = data.daily_tips_ids
+      .map((dica) => {
+        const jogo = (data.jogos || []).find(
+          (j) => j?.times?.casa === dica.casa && j?.times?.visitante === dica.visitante && j?.data === dica.data
+        );
+        if (!jogo) return null;
+        
+        // Se a dica tem tipo/opcao específicos, buscar esse palpite; senão pegar o principal
+        let palpite = null;
+        if (dica.tipo && dica.opcao) {
+          palpite = (jogo.palpites || []).find((p) => p.tipo === dica.tipo && p.opcao === dica.opcao);
+        }
+        palpite = palpite || getPrimaryTip(jogo);
+        
+        return { jogo, palpite, dica };
+      })
       .filter(Boolean);
   } else {
     const total = data.total_jogos ?? (data.jogos || []).length;
     const count = total >= LIMITE_JOGOS_TRES_DICAS ? 3 : total > LIMITE_JOGOS_DUAS_DICAS ? 2 : 1;
-    topGames = (data.jogos || [])
+    topDicas = (data.jogos || [])
       .filter((j) => j.status !== "FINISHED" && !COMPETICOES_EXCLUIDAS_DICAS.has(j.competicao))
       .sort((a, b) => (b.favorito?.prob || 0) - (a.favorito?.prob || 0))
-      .slice(0, count);
+      .slice(0, count)
+      .map((jogo) => ({ jogo, palpite: getPrimaryTip(jogo), dica: null }));
   }
 
   if (badge) {
-    badge.textContent = `${topGames.length} dica${topGames.length !== 1 ? "s" : ""}`;
+    badge.textContent = `${topDicas.length} dica${topDicas.length !== 1 ? "s" : ""}`;
   }
 
   container.innerHTML = "";
 
-  if (!topGames.length) {
+  if (!topDicas.length) {
     container.innerHTML = '<p class="tips-section__empty">Sem jogos disponíveis para dicas no momento.</p>';
     return;
   }
 
-  const tipDica1 = topGames.length ? getPrimaryTip(topGames[0]) : null;
-  const hasError = tipDica1?.resultado_verificador === "ERRO";
+  const hasError = topDicas[0]?.palpite?.resultado_verificador === "ERRO";
 
-  topGames.forEach((match, index) => {
-    const teams = getTeamNames(match);
-    const prob = Math.round((match.favorito?.prob || 0) * 100);
-    const primaryTip = getPrimaryTip(match);
-    const bestBet = primaryTip ? translateTipOption(primaryTip.tipo, primaryTip.opcao, match) : "—";
-    const confidenceTone = primaryTip ? confidenceClass(primaryTip.confianca) : "low";
-    const confidenceText = primaryTip ? confidenceLabel(primaryTip.confianca) : "Baixa";
+  topDicas.forEach(({ jogo, palpite }, index) => {
+    const teams = getTeamNames(jogo);
+    const prob = Math.round((palpite?.probabilidade || 0) * 100);
+    const bestBet = palpite ? translateTipOption(palpite.tipo, palpite.opcao, jogo) : "—";
+    const confidenceTone = palpite ? confidenceClass(palpite.confianca) : "low";
+    const confidenceText = palpite ? confidenceLabel(palpite.confianca) : "Baixa";
 
     const probClass =
       prob >= PROB_VITORIA_ALTA * 100 ? "tip-card__prob-value--high"
       : prob >= PROB_VITORIA_MEDIA * 100 ? "tip-card__prob-value--mid"
       : "tip-card__prob-value--low";
 
-    const resultado = primaryTip?.resultado_verificador;
+    const resultado = palpite?.resultado_verificador;
 
     let resultMark = "";
     if (resultado === "ACERTO") {
@@ -1046,13 +1056,13 @@ function renderTipsSection(data) {
     card.innerHTML = `
       <div class="tip-card__top">
         <span class="tip-card__rank">#${index + 1}</span>
-        <span class="tip-card__competition">${match.competicao}</span>
+        <span class="tip-card__competition">${jogo.competicao}</span>
         <span class="conf ${confidenceTone} tip-card__conf">${confidenceText}</span>
       </div>
       <div class="tip-card__teams">${teams.casa} <span class="tip-card__vs">x</span> ${teams.visitante}</div>
       <div class="tip-card__prob">
         <span class="tip-card__prob-value ${probClass}">${prob}%</span>
-        <span class="tip-card__prob-label">vitória — <strong>${match.favorito?.nome || "—"}</strong></span>
+        <span class="tip-card__prob-label">${palpite?.tipo === "WINNER" ? "vitória" : "probabilidade"} — <strong>${palpite?.tipo === "WINNER" ? (jogo.favorito?.nome || "—") : (palpite?.opcao || "—")}</strong></span>
       </div>
       <div class="tip-card__bet">
         <span class="tip-card__bet-label">Apostar em</span>
@@ -1066,7 +1076,7 @@ function renderTipsSection(data) {
   if (data?.recovery_tip?.ativo) {
     renderRecoveryCard(container, data.recovery_tip);
   } else if (hasError) {
-    const recovery = getRecoveryTip(data, topGames);
+    const recovery = getRecoveryTip(data, topDicas.map((d) => d.jogo));
     if (recovery) renderRecoveryCard(container, recovery);
   }
 }
@@ -1432,38 +1442,47 @@ function renderTipsSectionNba(data) {
   const badge = document.getElementById("tipsBadgeNba");
   if (!container) return;
 
-  let topGames = [];
+  let topDicas = [];
   if (data.daily_tips_ids && data.daily_tips_ids.length) {
-    topGames = data.daily_tips_ids
-      .map((id) =>
-        (data.jogos || []).find(
-          (j) => j?.times?.casa === id.casa && j?.times?.visitante === id.visitante && j?.data === id.data
-        )
-      )
+    topDicas = data.daily_tips_ids
+      .map((dica) => {
+        const jogo = (data.jogos || []).find(
+          (j) => j?.times?.casa === dica.casa && j?.times?.visitante === dica.visitante && j?.data === dica.data
+        );
+        if (!jogo) return null;
+        
+        let palpite = null;
+        if (dica.tipo && dica.opcao) {
+          palpite = (jogo.palpites || []).find((p) => p.tipo === dica.tipo && p.opcao === dica.opcao);
+        }
+        palpite = palpite || (jogo.palpites?.[0] || null);
+        
+        return { jogo, palpite };
+      })
       .filter(Boolean);
   } else {
-    topGames = (data.jogos || [])
+    topDicas = (data.jogos || [])
       .filter((j) => j.status !== "FINISHED")
       .sort((a, b) => (b.favorito?.prob || 0) - (a.favorito?.prob || 0))
-      .slice(0, 3);
+      .slice(0, 3)
+      .map((jogo) => ({ jogo, palpite: jogo.palpites?.[0] || null }));
   }
 
-  if (badge) badge.textContent = `${topGames.length} dica${topGames.length !== 1 ? "s" : ""}`;
+  if (badge) badge.textContent = `${topDicas.length} dica${topDicas.length !== 1 ? "s" : ""}`;
 
   container.innerHTML = "";
-  if (!topGames.length) {
+  if (!topDicas.length) {
     container.innerHTML = '<p class="tips-section__empty">Sem jogos NBA disponíveis para dicas.</p>';
     return;
   }
 
-  topGames.forEach((match, index) => {
-    const prob = Math.round((match.favorito?.prob || 0) * 100);
-    const primaryTip = match.palpites?.[0] || null;
-    const bestBet = primaryTip ? translateTipOptionNba(primaryTip.tipo, primaryTip.opcao, match) : "—";
-    const confidenceTone = primaryTip ? confidenceClass(primaryTip.confianca) : "low";
-    const confidenceText = primaryTip ? confidenceLabel(primaryTip.confianca) : "Baixa";
+  topDicas.forEach(({ jogo, palpite }, index) => {
+    const prob = Math.round((palpite?.probabilidade || jogo.favorito?.prob || 0) * 100);
+    const bestBet = palpite ? translateTipOptionNba(palpite.tipo, palpite.opcao, jogo) : "—";
+    const confidenceTone = palpite ? confidenceClass(palpite.confianca) : "low";
+    const confidenceText = palpite ? confidenceLabel(palpite.confianca) : "Baixa";
     const probClass = prob >= 70 ? "tip-card__prob-value--high" : prob >= 55 ? "tip-card__prob-value--mid" : "tip-card__prob-value--low";
-    const resultado = primaryTip?.resultado_verificador;
+    const resultado = palpite?.resultado_verificador;
 
     let resultMark = "";
     if (resultado === "ACERTO") {
@@ -1481,13 +1500,13 @@ function renderTipsSectionNba(data) {
         <span class="conf ${confidenceTone} tip-card__conf">${confidenceText}</span>
       </div>
       <div class="tip-card__teams">
-        ${match.times.abrev_casa || match.times.casa}
+        ${jogo.times.abrev_casa || jogo.times.casa}
         <span class="tip-card__vs">x</span>
-        ${match.times.abrev_visit || match.times.visitante}
+        ${jogo.times.abrev_visit || jogo.times.visitante}
       </div>
       <div class="tip-card__prob">
         <span class="tip-card__prob-value ${probClass}">${prob}%</span>
-        <span class="tip-card__prob-label">vitória — <strong>${match.favorito?.nome || "—"}</strong></span>
+        <span class="tip-card__prob-label">${palpite?.tipo === "WINNER" ? "vitória" : "probabilidade"} — <strong>${palpite?.tipo === "WINNER" ? (jogo.favorito?.nome || "—") : (palpite?.opcao || "—")}</strong></span>
       </div>
       <div class="tip-card__bet">
         <span class="tip-card__bet-label">Apostar em</span>
