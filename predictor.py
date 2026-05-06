@@ -1975,7 +1975,7 @@ def atualizar_historico_do_json(dados_predictions: Dict, caminho: str = "history
     else:
         dias.insert(0, entrada)
 
-    historico["dias"] = dias[:2]
+    historico["dias"] = dias[:5]
     with open(caminho, "w", encoding="utf-8") as f:
         json.dump(historico, f, ensure_ascii=False, indent=2)
 
@@ -1993,7 +1993,7 @@ def atualizar_historico_do_json(dados_predictions: Dict, caminho: str = "history
 
 
 def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.json") -> None:
-    """Acumula resultados dos jogos finalizados em history.json (últimos 2 dias)."""
+    """Acumula resultados dos jogos finalizados em history.json (últimos 5 dias)."""
     agora_local = datetime.now(APP_TIMEZONE)
     hoje = agora_local.date().isoformat()
     agora = agora_local.isoformat(timespec="seconds")
@@ -2172,7 +2172,7 @@ def atualizar_historico(predicoes: List[PredicaoJogo], caminho: str = "history.j
     else:
         dias.insert(0, entrada)
 
-    historico["dias"] = dias[:2]
+    historico["dias"] = dias[:5]
 
     with open(caminho, "w", encoding="utf-8") as arquivo_escrita:
         json.dump(historico, arquivo_escrita, ensure_ascii=False, indent=2)
@@ -2205,11 +2205,104 @@ def atualizar_status_jogos(
 
     # ── 1. Buscar estado atual dos jogos (1 chamada de API) ──────────────────
     matches_atuais = buscar_jogos_permitidos()
+
+    # Alerta de possível atraso da fonte (API mantém status pré-jogo por muito tempo).
+    stale_warning_hours = float(os.getenv("API_STALE_WARNING_HOURS", "6"))
+    agora_utc = datetime.now(timezone.utc)
+    jogos_potencialmente_desatualizados: List[Dict[str, str]] = []
+
+    for m in matches_atuais:
+        status_atual = str(m.get("status", "") or "").upper()
+        if status_atual not in PRE_MATCH_STATUSES:
+            continue
+
+        try:
+            data_jogo = datetime.fromisoformat(str(m.get("utcDate", "")).replace("Z", "+00:00"))
+            if data_jogo.tzinfo is None:
+                data_jogo = data_jogo.replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+
+        if agora_utc < data_jogo:
+            continue
+
+        last_updated_raw = str(m.get("lastUpdated", "") or "")
+        try:
+            last_updated = datetime.fromisoformat(last_updated_raw.replace("Z", "+00:00"))
+            if last_updated.tzinfo is None:
+                last_updated = last_updated.replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+
+        horas_sem_update = (agora_utc - last_updated).total_seconds() / 3600.0
+        if horas_sem_update < stale_warning_hours:
+            continue
+
+        home = m.get("homeTeam", {}).get("shortName") or m.get("homeTeam", {}).get("name", "")
+        away = m.get("awayTeam", {}).get("shortName") or m.get("awayTeam", {}).get("name", "")
+        jogos_potencialmente_desatualizados.append(
+            {
+                "id": str(m.get("id", "?")),
+                "status": status_atual,
+                "home": str(home),
+                "away": str(away),
+                "last_updated": last_updated.isoformat(),
+                "hours": f"{horas_sem_update:.1f}",
+            }
+        )
+
+    if jogos_potencialmente_desatualizados:
+        print(
+            "⚠️  API possivelmente desatualizada para "
+            f"{len(jogos_potencialmente_desatualizados)} jogo(s) do dia "
+            f"(sem atualização há >= {stale_warning_hours:.1f}h)."
+        )
+        print("⏳ Processando resultado: aguardando consolidação oficial da API para os jogos abaixo.")
+        for item in jogos_potencialmente_desatualizados:
+            print(
+                f"   - ID {item['id']} | {item['home']} x {item['away']} "
+                f"| status={item['status']} | aviso=Processando resultado "
+                f"| lastUpdated={item['last_updated']} "
+                f"({item['hours']}h)"
+            )
+
     lookup: Dict[str, Dict] = {}
     for m in matches_atuais:
         home = m.get("homeTeam", {}).get("shortName") or m.get("homeTeam", {}).get("name", "")
         away = m.get("awayTeam", {}).get("shortName") or m.get("awayTeam", {}).get("name", "")
         lookup[_chave_jogo(m.get("utcDate", ""), home, away)] = m
+
+    def _buscar_match_aproximado(jogo_json: Dict) -> Optional[Dict]:
+        """Fallback para variações de nome (shortName/nome completo) no pós-jogo."""
+        times = jogo_json.get("times", {})
+        data_norm = _normalizar_data_chave(jogo_json.get("data", ""))
+        casa_json = str(times.get("casa", "") or "")
+        visitante_json = str(times.get("visitante", "") or "")
+        competicao_json = str(jogo_json.get("competicao", "") or "")
+
+        candidatos: List[Dict] = []
+        for match in matches_atuais:
+            if _normalizar_data_chave(match.get("utcDate", "")) != data_norm:
+                continue
+
+            home_api = match.get("homeTeam", {}).get("shortName") or match.get("homeTeam", {}).get("name", "")
+            away_api = match.get("awayTeam", {}).get("shortName") or match.get("awayTeam", {}).get("name", "")
+            if _nomes_equivalentes(casa_json, home_api) and _nomes_equivalentes(visitante_json, away_api):
+                candidatos.append(match)
+
+        if not candidatos:
+            return None
+
+        if len(candidatos) == 1:
+            return candidatos[0]
+
+        # Critério de desempate: mesma competição do jogo salvo.
+        for match in candidatos:
+            comp_api = str(match.get("competition", {}).get("name", "") or "")
+            if comp_api == competicao_json:
+                return match
+
+        return candidatos[0]
 
     # ── 2. Carregar predictions existente ────────────────────────────────────
     try:
@@ -2231,6 +2324,8 @@ def atualizar_status_jogos(
             times.get("visitante", ""),
         )
         match = lookup.get(chave)
+        if not match:
+            match = _buscar_match_aproximado(jogo)
         if not match:
             continue
 

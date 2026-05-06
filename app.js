@@ -369,10 +369,133 @@ function fillHeader(data) {
   }
 }
 
-async function loadHistory() {
-  const resp = await fetch(`history.json?v=${Date.now()}`, { cache: "no-store" });
+async function fetchHistoryFile(path) {
+  const resp = await fetch(`${path}?v=${Date.now()}`, { cache: "no-store" });
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json();
+}
+
+function mergeMercados(destino, origem) {
+  const saida = { ...(destino || {}) };
+  Object.entries(origem || {}).forEach(([tipo, estat]) => {
+    const atual = saida[tipo] || { acertos: 0, total: 0 };
+    const acertos = Number(atual.acertos || 0) + Number(estat?.acertos || 0);
+    const total = Number(atual.total || 0) + Number(estat?.total || 0);
+    saida[tipo] = {
+      acertos,
+      total,
+      taxa: total > 0 ? acertos / total : 0,
+    };
+  });
+  return saida;
+}
+
+function construirMercadosNba(jogos) {
+  const mercados = {};
+  (jogos || []).forEach((jogo) => {
+    (jogo?.palpites || []).forEach((palpite) => {
+      const resultado = palpite?.resultado;
+      if (resultado !== "ACERTO" && resultado !== "ERRO") return;
+      const tipo = palpite?.tipo || "OUTRO";
+      const atual = mercados[tipo] || { acertos: 0, total: 0 };
+      atual.total += 1;
+      if (resultado === "ACERTO") atual.acertos += 1;
+      mercados[tipo] = atual;
+    });
+  });
+
+  Object.values(mercados).forEach((m) => {
+    m.taxa = m.total > 0 ? m.acertos / m.total : 0;
+  });
+
+  return mercados;
+}
+
+function normalizarDiaNba(dia) {
+  const jogos = (dia?.jogos || []).map((j) => ({
+    ...j,
+    competicao: "NBA",
+    palpites: (j?.palpites || []).map((p) => ({
+      tipo: p?.tipo,
+      opcao: p?.opcao,
+      confianca: p?.confianca,
+      resultado: p?.resultado,
+    })),
+  }));
+
+  const totalPalpites = Number(dia?.total_palpites || 0);
+  const totalAcertos = Number(dia?.total_acertos || 0);
+
+  return {
+    data: dia?.data,
+    ultima_atualizacao: dia?.ultima_atualizacao || null,
+    finalizados: Number(dia?.finalizados ?? dia?.total_jogos ?? jogos.length),
+    taxa_geral: totalPalpites > 0 ? totalAcertos / totalPalpites : 0,
+    total_acertos: totalAcertos,
+    total_palpites: totalPalpites,
+    mercados: construirMercadosNba(jogos),
+    metricas_probabilisticas: dia?.metricas_probabilisticas || {},
+    jogos,
+  };
+}
+
+function mergeHistoryDays(footballDays, nbaDays) {
+  const porData = new Map();
+
+  (footballDays || []).forEach((dia) => {
+    if (!dia?.data) return;
+    porData.set(dia.data, {
+      ...dia,
+      mercados: { ...(dia?.mercados || {}) },
+      jogos: [...(dia?.jogos || [])],
+    });
+  });
+
+  (nbaDays || []).forEach((diaNbaRaw) => {
+    const diaNba = normalizarDiaNba(diaNbaRaw);
+    if (!diaNba?.data) return;
+
+    const atual = porData.get(diaNba.data);
+    if (!atual) {
+      porData.set(diaNba.data, diaNba);
+      return;
+    }
+
+    const totalAcertos = Number(atual.total_acertos || 0) + Number(diaNba.total_acertos || 0);
+    const totalPalpites = Number(atual.total_palpites || 0) + Number(diaNba.total_palpites || 0);
+
+    porData.set(diaNba.data, {
+      ...atual,
+      finalizados: Number(atual.finalizados || 0) + Number(diaNba.finalizados || 0),
+      total_acertos: totalAcertos,
+      total_palpites: totalPalpites,
+      taxa_geral: totalPalpites > 0 ? totalAcertos / totalPalpites : 0,
+      mercados: mergeMercados(atual.mercados, diaNba.mercados),
+      jogos: [...(atual.jogos || []), ...(diaNba.jogos || [])],
+    });
+  });
+
+  return Array.from(porData.values())
+    .sort((a, b) => String(b.data || "").localeCompare(String(a.data || "")))
+    .slice(0, 5);
+}
+
+async function loadHistory() {
+  const [footballResult, nbaResult] = await Promise.allSettled([
+    fetchHistoryFile("history.json"),
+    fetchHistoryFile("history_nba.json"),
+  ]);
+
+  if (footballResult.status !== "fulfilled" && nbaResult.status !== "fulfilled") {
+    const footballErr = footballResult.status === "rejected" ? footballResult.reason?.message || "erro" : "ok";
+    const nbaErr = nbaResult.status === "rejected" ? nbaResult.reason?.message || "erro" : "ok";
+    throw new Error(`Não foi possível carregar histórico (futebol: ${footballErr}, NBA: ${nbaErr})`);
+  }
+
+  const footballDays = footballResult.status === "fulfilled" ? (footballResult.value?.dias || []) : [];
+  const nbaDays = nbaResult.status === "fulfilled" ? (nbaResult.value?.dias || []) : [];
+
+  return { dias: mergeHistoryDays(footballDays, nbaDays) };
 }
 
 function renderAdminPanel(data) {
@@ -410,9 +533,11 @@ function renderAdminPanel(data) {
           return `<span class="admin-tip admin-tip--${ok ? "ok" : "err"}">${p.tipo} ${p.opcao} <em>${p.confianca}</em></span>`;
         })
         .join("");
+      const competicaoTag = j.competicao ? `<span class="admin-jogo__comp">${j.competicao}</span> ` : "";
+
       return `
         <div class="admin-jogo">
-          <div class="admin-jogo__match">${j.casa} <span class="admin-placar">${j.placar}</span> ${j.visitante}</div>
+          <div class="admin-jogo__match">${competicaoTag}${j.casa} <span class="admin-placar">${j.placar}</span> ${j.visitante}</div>
           <div class="admin-jogo__tips">${tips}</div>
         </div>`;
     }).join("");
@@ -1298,6 +1423,14 @@ function renderTipsSectionNba(data) {
     const confidenceTone = primaryTip ? confidenceClass(primaryTip.confianca) : "low";
     const confidenceText = primaryTip ? confidenceLabel(primaryTip.confianca) : "Baixa";
     const probClass = prob >= 70 ? "tip-card__prob-value--high" : prob >= 55 ? "tip-card__prob-value--mid" : "tip-card__prob-value--low";
+    const resultado = primaryTip?.resultado_verificador;
+
+    let resultMark = "";
+    if (resultado === "ACERTO") {
+      resultMark = '<span class="tip-card__result tip-card__result--acerto">✅ Acerto</span>';
+    } else if (resultado === "ERRO") {
+      resultMark = '<span class="tip-card__result tip-card__result--erro">❌ Errou</span>';
+    }
 
     const card = document.createElement("article");
     card.className = "tip-card tip-card--nba";
@@ -1320,6 +1453,7 @@ function renderTipsSectionNba(data) {
         <span class="tip-card__bet-label">Apostar em</span>
         <strong class="tip-card__bet-value">${bestBet}</strong>
       </div>
+      ${resultMark}
     `;
     container.appendChild(card);
   });
