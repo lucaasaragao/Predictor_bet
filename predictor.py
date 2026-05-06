@@ -550,8 +550,9 @@ def calcular_probabilidades_mercado(lambda_home: float, lambda_away: float, max_
     prob_casa = sum(p for (h, a), p in matriz.items() if h > a)
     prob_empate = sum(p for (h, a), p in matriz.items() if h == a)
     prob_visitante = sum(p for (h, a), p in matriz.items() if h < a)
+    prob_over_15 = sum(p for (h, a), p in matriz.items() if (h + a) >= 2)
     prob_over_25 = sum(p for (h, a), p in matriz.items() if (h + a) >= 3)
-    prob_under_25 = 1.0 - prob_over_25
+    prob_over_35 = sum(p for (h, a), p in matriz.items() if (h + a) >= 4)
     prob_btts_yes = sum(p for (h, a), p in matriz.items() if h > 0 and a > 0)
     prob_btts_no = 1.0 - prob_btts_yes
 
@@ -559,8 +560,12 @@ def calcular_probabilidades_mercado(lambda_home: float, lambda_away: float, max_
         "casa": prob_casa,
         "empate": prob_empate,
         "visitante": prob_visitante,
+        "over_15": prob_over_15,
+        "under_15": 1.0 - prob_over_15,
         "over_25": prob_over_25,
-        "under_25": prob_under_25,
+        "under_25": 1.0 - prob_over_25,
+        "over_35": prob_over_35,
+        "under_35": 1.0 - prob_over_35,
         "btts_yes": prob_btts_yes,
         "btts_no": prob_btts_no,
     }
@@ -1165,14 +1170,26 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
             p_winner.ev = p_winner.ev_bruto
         p_winner.valor_esperado_positivo = bool(p_winner.ev >= ODDS_MIN_EV)
 
-    # ── Palpite: Over/Under 2.5 ────────────────────────────────────────────────
-    prob_over = mercados["over_25"]
-    prob_under = mercados["under_25"]
-    bet_type = "OVER" if prob_over > prob_under else "UNDER"
+    # ── Palpite: Over/Under (linha dinâmica) ──────────────────────────────────
+    total_esperado = predicao.gols_esperados_casa + predicao.gols_esperados_visitante
+    if total_esperado < 1.8:
+        linha_ou = 1.5
+        prob_over = mercados["over_15"]
+        prob_under = mercados["under_15"]
+    elif total_esperado > 3.2:
+        linha_ou = 3.5
+        prob_over = mercados["over_35"]
+        prob_under = mercados["under_35"]
+    else:
+        linha_ou = 2.5
+        prob_over = mercados["over_25"]
+        prob_under = mercados["under_25"]
+
+    side_ou = "OVER" if prob_over > prob_under else "UNDER"
     prob_ou = max(prob_over, prob_under)
     # Edge = distância de 50% (mercado binário — qualquer lado "bate" com 50%)
     edge_ou = prob_ou - 0.50
-    total_esperado = predicao.gols_esperados_casa + predicao.gols_esperados_visitante
+    opcao_ou = f"{side_ou}_{linha_ou:.1f}"
 
     if edge_ou > OU_BTTS_HIGH_THRESHOLD:
         confianca = "HIGH"
@@ -1183,12 +1200,12 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
 
     palpites.append(BetSuggestion(
         tipo="OVER_UNDER",
-        opcao=bet_type,
+        opcao=opcao_ou,
         probabilidade=prob_ou,
         confianca=confianca,
         justificativa=(
             f"Gols esperados no jogo: ≈{total_esperado:.1f}. "
-            f"{'UNDER' if bet_type == 'UNDER' else 'OVER'} 2.5: {prob_ou*100:.1f}% de probabilidade"
+            f"{side_ou} {linha_ou}: {prob_ou*100:.1f}% de probabilidade"
         ),
         edge=round(edge_ou, 4),
     ))
