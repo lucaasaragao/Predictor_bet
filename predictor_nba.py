@@ -517,7 +517,74 @@ def exportar_nba(predicoes: List[PredicaoJogoNBA], caminho: str) -> None:
 
 
 # ── Run leve: atualização de status/placar ─────────────────────────
-def atualizar_status_nba(caminho: str) -> None:
+def _atualizar_historico_nba_do_json(dados_predictions: dict, caminho_historico: str) -> None:
+    """Atualiza history_nba.json usando o conteúdo atual de predictions_nba.json.
+
+    Usado no run leve para refletir imediatamente ACERTO/ERRO dos jogos finalizados.
+    """
+    try:
+        with open(caminho_historico, "r", encoding="utf-8") as f:
+            historico = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        historico = {"dias": []}
+
+    hoje = datetime.now(APP_TIMEZONE).date().isoformat()
+    dias = historico.get("dias", [])
+    dias = [d for d in dias if d.get("data") != hoje]
+
+    jogos = dados_predictions.get("jogos", []) or []
+    jogos_hoje = []
+    total_p = 0
+    acertos = 0
+
+    for jogo in jogos:
+        palpites_saida = []
+        for p in jogo.get("palpites", []) or []:
+            resultado = p.get("resultado_verificador")
+            if resultado in ("ACERTO", "ERRO"):
+                total_p += 1
+                if resultado == "ACERTO":
+                    acertos += 1
+
+            palpites_saida.append(
+                {
+                    "tipo": p.get("tipo"),
+                    "opcao": p.get("opcao"),
+                    "confianca": p.get("confianca"),
+                    "resultado": resultado,
+                }
+            )
+
+        jogos_hoje.append(
+            {
+                "game_id": jogo.get("game_id"),
+                "casa": jogo.get("times", {}).get("casa", ""),
+                "visitante": jogo.get("times", {}).get("visitante", ""),
+                "placar": f"{jogo.get('placar_casa', '?')} x {jogo.get('placar_visitante', '?')}",
+                "status": jogo.get("status", "SCHEDULED"),
+                "palpites": palpites_saida,
+            }
+        )
+
+    taxa = round(acertos / total_p, 4) if total_p > 0 else None
+    entrada = {
+        "data": hoje,
+        "total_jogos": len(jogos),
+        "total_palpites": total_p,
+        "total_acertos": acertos,
+        "taxa_geral": taxa,
+        "jogos": jogos_hoje,
+    }
+
+    dias.insert(0, entrada)
+    historico["dias"] = dias[:60]
+
+    with open(caminho_historico, "w", encoding="utf-8") as f:
+        json.dump(historico, f, ensure_ascii=False, indent=2)
+    print(f"✅ {caminho_historico} atualizado (run leve).")
+
+
+def atualizar_status_nba(caminho: str, caminho_historico: Optional[str] = None) -> None:
     print("🔄 Run leve NBA: atualizando status/placar...")
 
     try:
@@ -599,6 +666,9 @@ def atualizar_status_nba(caminho: str) -> None:
         with open(caminho, "w", encoding="utf-8") as f:
             json.dump(dados, f, ensure_ascii=False, indent=2)
         print(f"   {caminho} atualizado.")
+
+        if caminho_historico:
+            _atualizar_historico_nba_do_json(dados, caminho_historico)
     else:
         print("   Nenhuma alteração encontrada.")
 
@@ -682,7 +752,7 @@ def main() -> None:
 
     if analysis_done:
         print("⚡ Run leve: análise completa já feita hoje.")
-        atualizar_status_nba(caminho_pred)
+        atualizar_status_nba(caminho_pred, caminho_hist)
         return
 
     # Run completo
