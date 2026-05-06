@@ -1284,8 +1284,11 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
                 else: p.resultado_verificador = "ERRO"
             elif p.tipo == "OVER_UNDER":
                 total = home_g + away_g
-                if total > 2.5 and p.opcao == "OVER": p.resultado_verificador = "ACERTO"
-                elif total < 2.5 and p.opcao == "UNDER": p.resultado_verificador = "ACERTO"
+                _ou_parts = p.opcao.split("_", 1)
+                _ou_side  = _ou_parts[0]
+                _ou_linha = float(_ou_parts[1]) if len(_ou_parts) > 1 else 2.5
+                if total > _ou_linha and _ou_side == "OVER": p.resultado_verificador = "ACERTO"
+                elif total < _ou_linha and _ou_side == "UNDER": p.resultado_verificador = "ACERTO"
                 else: p.resultado_verificador = "ERRO"
             elif p.tipo == "BTTS":
                 if home_g > 0 and away_g > 0 and p.opcao == "YES": p.resultado_verificador = "ACERTO"
@@ -1315,9 +1318,12 @@ def _verificar_palpites_dict(palpites: List[Dict], placar_casa: int, placar_visi
             else:                                    p["resultado_verificador"] = "ERRO"
         elif tipo == "OVER_UNDER":
             total = home_g + away_g
-            if   total > 2.5  and opcao == "OVER":  p["resultado_verificador"] = "ACERTO"
-            elif total <= 2.5 and opcao == "UNDER":  p["resultado_verificador"] = "ACERTO"
-            else:                                    p["resultado_verificador"] = "ERRO"
+            _ou_parts = opcao.split("_", 1)
+            _ou_side  = _ou_parts[0]
+            _ou_linha = float(_ou_parts[1]) if len(_ou_parts) > 1 else 2.5
+            if   total > _ou_linha and _ou_side == "OVER":  p["resultado_verificador"] = "ACERTO"
+            elif total < _ou_linha and _ou_side == "UNDER": p["resultado_verificador"] = "ACERTO"
+            else:                                           p["resultado_verificador"] = "ERRO"
         elif tipo == "BTTS":
             ambos = home_g > 0 and away_g > 0
             if   ambos     and opcao == "YES": p["resultado_verificador"] = "ACERTO"
