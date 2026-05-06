@@ -287,6 +287,8 @@ function normalizeFootballMatch(match) {
   const times = match?.times || {};
   const casa = times.casa ?? match?.casa ?? match?.mandante ?? match?.home_team ?? "Casa";
   const visitante = times.visitante ?? match?.visitante ?? match?.fora ?? match?.away_team ?? "Visitante";
+  const escudoCasa = times.escudo_casa ?? match?.escudo_casa ?? match?.homeTeam?.crest ?? match?.home_team_crest ?? "";
+  const escudoVisitante = times.escudo_visitante ?? match?.escudo_visitante ?? match?.awayTeam?.crest ?? match?.away_team_crest ?? "";
 
   return {
     ...match,
@@ -294,6 +296,8 @@ function normalizeFootballMatch(match) {
       ...times,
       casa: String(casa),
       visitante: String(visitante),
+      escudo_casa: escudoCasa || undefined,
+      escudo_visitante: escudoVisitante || undefined,
     },
   };
 }
@@ -335,6 +339,14 @@ function getTeamNames(match) {
   return {
     casa: times.casa || match?.casa || match?.mandante || "Casa",
     visitante: times.visitante || match?.visitante || match?.fora || "Visitante",
+  };
+}
+
+function getTeamCrests(match) {
+  const times = match?.times || {};
+  return {
+    casa: times.escudo_casa || match?.escudo_casa || match?.homeTeam?.crest || match?.home_team_crest || "",
+    visitante: times.escudo_visitante || match?.escudo_visitante || match?.awayTeam?.crest || match?.away_team_crest || "",
   };
 }
 
@@ -931,6 +943,7 @@ function renderRecoveryCard(container, recovery) {
   const tip = recovery?.tip || recovery?.palpite;
   if (!game || !tip) return;
   const teams = getTeamNames(game);
+  const escudos = getTeamCrests(game);
   const kickoffLabel = game?.data ? formatGeneratedAt(game.data, true) : "--";
   const triggerLabel = recovery?.disparado_em ? formatGeneratedAt(recovery.disparado_em, true) : "--";
   const prob = Math.round((tip.probabilidade || 0) * 100);
@@ -946,7 +959,7 @@ function renderRecoveryCard(container, recovery) {
       <span class="tip-card__competition">${game.competicao}</span>
       <span class="conf ${confidenceTone} tip-card__conf">${confidenceText}</span>
     </div>
-    <div class="tip-card__teams">${teams.casa} <span class="tip-card__vs">x</span> ${teams.visitante}</div>
+    <div class="tip-card__teams">${buildMatchTitleHtml(teams.casa, teams.visitante, "x", escudos.casa, escudos.visitante)}</div>
     <div class="tip-card__prob">
       <span class="tip-card__prob-value tip-card__prob-value--high">${prob}%</span>
       <span class="tip-card__prob-label">probabilidade</span>
@@ -1050,6 +1063,24 @@ function renderTipsSection(data) {
   }
 }
 
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function buildMatchTitleHtml(casa, visitante, vsLabel, escudoCasa, escudoVisitante) {
+  const imgCasa = escudoCasa
+    ? `<img class="team-crest" src="${escapeHtml(escudoCasa)}" alt="${escapeHtml(casa)}" onerror="this.style.display='none'">`
+    : "";
+  const imgVisitante = escudoVisitante
+    ? `<img class="team-crest" src="${escapeHtml(escudoVisitante)}" alt="${escapeHtml(visitante)}" onerror="this.style.display='none'">`
+    : "";
+  return `<span class="match-teams"><span class="match-team match-team--home">${imgCasa}<span>${escapeHtml(casa)}</span></span><span class="match-vs">${escapeHtml(vsLabel)}</span><span class="match-team match-team--away"><span>${escapeHtml(visitante)}</span>${imgVisitante}</span></span>`;
+}
+
 function renderCards() {
   const container = document.getElementById("cardsContainer");
   const template = document.getElementById("matchCardTemplate");
@@ -1089,13 +1120,14 @@ function renderCards() {
       matchDateEl.hidden = false;
     }
     
-    let titleContent = `${teams.casa} x ${teams.visitante}`;
+    const escudos = getTeamCrests(match);
+    let vsLabel = "x";
     if (match.status === "FINISHED" && match.placar_atual && match.placar_atual.casa !== null) {
-      titleContent = `${teams.casa} ${match.placar_atual.casa} x ${match.placar_atual.visitante} ${teams.visitante}`;
+      vsLabel = `${match.placar_atual.casa} x ${match.placar_atual.visitante}`;
     } else if (match.status === "IN_PLAY" || match.status === "PAUSED") {
-      titleContent = `${teams.casa} ${match.placar_atual?.casa ?? 0} x ${match.placar_atual?.visitante ?? 0} ${teams.visitante}`;
+      vsLabel = `${match.placar_atual?.casa ?? 0} x ${match.placar_atual?.visitante ?? 0}`;
     }
-    node.querySelector(".match-title").textContent = titleContent;
+    node.querySelector(".match-title").innerHTML = buildMatchTitleHtml(teams.casa, teams.visitante, vsLabel, escudos.casa, escudos.visitante);
 
     if (match.status === "FINISHED") {
       const badge = document.createElement("span");

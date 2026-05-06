@@ -190,6 +190,8 @@ class PredicaoJogo:
     odds_h2h: Optional[Dict[str, float]] = None
     odds_match_id: Optional[str] = None
     odds_debug: Dict[str, str] = field(default_factory=dict)
+    escudo_casa: Optional[str] = None
+    escudo_visitante: Optional[str] = None
 
 
 @dataclass
@@ -1027,6 +1029,8 @@ def prever_jogo(match: Dict) -> PredicaoJogo:
         data_jogo=match.get("utcDate", ""),
         time_casa=home_team.get("shortName") or home_team.get("name") or "Time da casa",
         time_visitante=away_team.get("shortName") or away_team.get("name") or "Time visitante",
+        escudo_casa=home_team.get("crest"),
+        escudo_visitante=away_team.get("crest"),
         status=match.get("status", "SCHEDULED"),
         placar_casa=placar_casa,
         placar_visitante=placar_visitante,
@@ -1597,6 +1601,8 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
                 "times": {
                     "casa": pred.time_casa,
                     "visitante": pred.time_visitante,
+                    "escudo_casa": pred.escudo_casa,
+                    "escudo_visitante": pred.escudo_visitante,
                 },
                 "probabilidades": {
                     "casa": pred.prob_casa,
@@ -1773,6 +1779,8 @@ def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str =
                         "times": {
                             "casa": melhor_jogo.get("times", {}).get("casa", ""),
                             "visitante": melhor_jogo.get("times", {}).get("visitante", ""),
+                            "escudo_casa": melhor_jogo.get("times", {}).get("escudo_casa"),
+                            "escudo_visitante": melhor_jogo.get("times", {}).get("escudo_visitante"),
                         },
                     },
                     "palpite": {

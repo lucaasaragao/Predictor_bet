@@ -736,6 +736,34 @@ select option, select optgroup { background: var(--bg-2); color: var(--text); }
   line-height: 1.2;
 }
 
+/* Escudos dos times no título do card */
+.match-teams {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.match-team {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.match-team--away { flex-direction: row-reverse; }
+
+.match-vs {
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.team-crest {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 /* ── CARD SNAPSHOT ── */
 .card-snapshot { padding: 0 1.25rem 1rem; }
 
