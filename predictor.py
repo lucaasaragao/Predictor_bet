@@ -1203,6 +1203,10 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
     else:
         confianca = "LOW"
 
+    # xG muito próximo da linha → incerteza alta, cap em MEDIUM
+    if abs(total_esperado - linha_ou) < 0.4 and confianca == "HIGH":
+        confianca = "MEDIUM"
+
     palpites.append(BetSuggestion(
         tipo="OVER_UNDER",
         opcao=opcao_ou,
@@ -1218,8 +1222,19 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
     # ── Palpite: BTTS ──────────────────────────────────────────────────────────
     btts_yes = mercados["btts_yes"]
     btts_no = mercados["btts_no"]
-    btts_opcao = "YES" if btts_yes >= btts_no else "NO"
-    btts_prob = max(btts_yes, btts_no)
+
+    # P(clean sheet) = e^(-λ): se qualquer time tem >30% de chance de não marcar,
+    # forçar NO independentemente da matriz Poisson
+    p_cs_casa = e ** (-predicao.gols_esperados_casa)
+    p_cs_visitante = e ** (-predicao.gols_esperados_visitante)
+    if p_cs_casa > 0.30 or p_cs_visitante > 0.30:
+        btts_opcao = "NO"
+        btts_prob = btts_no
+    else:
+        btts_opcao = "YES" if btts_yes >= btts_no else "NO"
+        btts_prob = max(btts_yes, btts_no)
+
+    edge_btts = btts_prob - 0.50
     edge_btts = btts_prob - 0.50
 
     if edge_btts > OU_BTTS_HIGH_THRESHOLD:
