@@ -1,12 +1,12 @@
-# Predictor Bet - Radar de Palpites de Futebol
+# Predictor Bet - Radar de Palpites de Futebol e NBA
 
-Projeto de previsao de partidas de futebol com pipeline completo:
+Projeto de previsao de partidas de futebol e NBA com pipeline completo:
 
-1. coleta dados da football-data.org
+1. coleta dados da football-data.org (futebol) e BallDontLie API (NBA)
 2. calcula probabilidades e mercados com modelo Poisson/Dixon-Coles simplificado
 3. integra odds da The Odds API para analise de valor esperado (EV)
-4. exporta predictions.json e history.json
-5. renderiza uma SPA estatica com filtros, cards, dicas do dia e painel historico
+4. exporta predictions.json, history.json, predictions_nba.json e history_nba.json
+5. renderiza uma SPA estatica com filtros, cards, dicas do dia e painel historico para futebol e NBA
 
 ## Visao Geral
 
@@ -14,25 +14,33 @@ O backend em Python gera os arquivos JSON e o frontend em HTML/CSS/JS consome es
 
 Componentes principais:
 
-1. predictor.py: motor de predicao, odds, exportacao e historico
-2. backtest.py: avaliacao offline com calibracao e acuracia
-3. app.js: renderizacao dos cards, filtros e regras de UI
-4. index.html e styles.css: estrutura visual da pagina
-5. predictions.json: snapshot principal de previsoes
-6. history.json: historico de desempenho dos ultimos dias
-7. .github/workflows/update-predictions.yml: automacao para atualizar JSON no GitHub
+1. predictor.py: motor de predicao de futebol, odds, exportacao e historico
+2. predictor_nba.py: motor de predicao NBA via BallDontLie API
+3. backtest.py: avaliacao offline com calibracao e acuracia
+4. app.js: renderizacao dos cards, filtros e regras de UI
+5. index.html e styles.css: estrutura visual da pagina
+6. predictions.json / predictions_nba.json: snapshots de previsoes por modalidade
+7. history.json / history_nba.json: historico de desempenho dos ultimos dias
+8. .github/workflows/update-predictions.yml: automacao para atualizar JSONs no GitHub
 
 ## Funcionalidades Implementadas
 
-1. Predicao por jogo:
+1. Predicao por jogo (futebol):
 - probabilidades 1X2 (casa, empate, visitante)
 - gols esperados (xG simplificado)
-- Over/Under 2.5
+- Over/Under com linha dinamica (2.5, 3.5 etc.)
 - BTTS (ambos marcam)
 
-2. Palpites por mercado:
+2. Predicao por jogo (NBA):
+- probabilidade de vitoria (WINNER)
+- Over/Under de pontos
+- Spread esperado
+- Forma recente e probabilidades por time
+- Logos dos times via ESPN CDN
+
+3. Palpites por mercado (futebol):
 - WINNER
-- OVER_UNDER
+- OVER_UNDER (linha dinamica)
 - BTTS
 - EMPATE (quando elegivel)
 
@@ -57,11 +65,12 @@ Componentes principais:
 - jogos iniciados/finalizados sem snapshot pre-jogo sao ignorados na calibracao
 
 7. Frontend:
+- abas de modalidade: Futebol e NBA
 - filtros por competicao e confianca minima
-- cards colapsaveis
+- cards colapsaveis com escudos/logos dos times
 - tema claro/escuro
-- dicas do dia congeladas
-- dica de recuperacao quando a dica #1 falha
+- dicas do dia congeladas com logos
+- dica de recuperacao quando a dica #1 falha (suprimida automaticamente se o dia fechar com acerto)
 - painel admin com historico (via #admin ou triple-click no rodape)
 
 8. Historico acumulativo por dia:
@@ -218,26 +227,29 @@ Workflow: .github/workflows/update-predictions.yml
 
 Comportamento atual:
 
-1. executa a cada 20 minutos (cron)
+1. executa a cada 3 minutos (cron `*/3 * * * *`)
 2. executa manualmente via workflow_dispatch
 3. instala requests
-4. roda predictor.py
-5. commita predictions.json e history.json se houver mudanca
+4. roda predictor.py e predictor_nba.py
+5. faz git pull --rebase antes de cada push para evitar conflitos non-fast-forward
+6. commita predictions.json, history.json, predictions_nba.json e history_nba.json se houver mudanca
 
 ## Fluxo Atual (execucao)
 
-1. busca jogos do dia na football-data.org
+1. busca jogos do dia na football-data.org (futebol) e BallDontLie (NBA)
 2. filtra por competicoes permitidas e dia local da aplicacao
-3. calcula probabilidades/mercados/palpites por jogo
+3. calcula probabilidades/mercados/palpites por jogo com linha Over/Under dinamica
 4. aplica baseline pre-jogo para estabilizar partidas em andamento/finalizadas
 5. congela dicas do dia no primeiro run do dia
 6. ativa recovery_tip apenas se a dica #1 falhar; escolhe a maior probabilidade disponivel fora das dicas fixas
-7. atualiza history.json com merge acumulativo por jogo
+7. dica de recuperacao e suprimida no frontend se todas as dicas do dia terminarem com acerto
+8. atualiza history.json e history_nba.json com merge acumulativo por jogo
 
 Secrets recomendados no repositorio:
 
 1. FOOTBALL_DATA_TOKEN
 2. ODDS_API_KEY (se usar odds)
+3. BALLDONTLIE_API_KEY (NBA)
 
 ## Troubleshooting
 
