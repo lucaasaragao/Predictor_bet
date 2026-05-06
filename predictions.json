@@ -1,162 +1,166 @@
 {
-  "generated_at": "2026-05-05T23:56:12-03:00",
-  "analysis_date": "2026-05-05",
-  "total_jogos": 5,
+  "generated_at": "2026-05-06T00:06:09-03:00",
+  "analysis_date": "2026-05-06",
+  "total_jogos": 3,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
   "odds_min_ev": 0.03,
   "jogos": [
     {
       "competicao": "UEFA Champions League",
-      "data": "2026-05-05T19:00:00Z",
-      "status": "FINISHED",
+      "data": "2026-05-06T19:00:00Z",
+      "status": "TIMED",
       "placar_atual": {
-        "casa": 1,
-        "visitante": 0
+        "casa": null,
+        "visitante": null
       },
       "times": {
-        "casa": "Arsenal",
-        "visitante": "Atleti"
+        "casa": "Bayern",
+        "visitante": "PSG",
+        "escudo_casa": "https://crests.football-data.org/5.png",
+        "escudo_visitante": "https://crests.football-data.org/524.png"
       },
       "probabilidades": {
-        "casa": 0.619433999240845,
-        "empate": 0.21125937083561225,
-        "visitante": 0.16826907803743058
+        "casa": 0.293596278205186,
+        "empate": 0.2150242614505161,
+        "visitante": 0.49137946034429786
       },
       "favorito": {
-        "nome": "Arsenal",
-        "prob": 0.619433999240845,
-        "vantagem": 0.4081746284052327
+        "nome": "PSG",
+        "prob": 0.49137946034429786,
+        "vantagem": 0.19778318213911183
       },
       "gols_esperados": {
-        "casa": 1.9806613352272722,
-        "visitante": 0.9217157196969696,
-        "total": 2.9023770549242416
+        "casa": 1.8106106206611565,
+        "visitante": 2.341144338842975,
+        "total": 4.151754959504132
       },
       "mercados": {
-        "under_25": 0.44645096790640726,
-        "over_25": 0.5535490320935927,
-        "btts_yes": 0.5184524840126059,
-        "btts_no": 0.4815475159873941
+        "under_25": 0.21745253646538776,
+        "over_25": 0.7825474635346122,
+        "btts_yes": 0.7643484117884802,
+        "btts_no": 0.23565158821151977
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.6363636363636362,
-          "ataque": 0.6,
-          "defesa": 0.8666666666666667,
+          "forma_recente": 0.7454545454545454,
+          "ataque": 1.0,
+          "defesa": 0.28,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.706060606060606
+          "score_total": 0.726909090909091
         },
         "visitante": {
-          "forma_recente": 0.4818181818181818,
-          "ataque": 0.7333333333333333,
-          "defesa": 0.2666666666666667,
+          "forma_recente": 0.8,
+          "ataque": 1.0,
+          "defesa": 1.0,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.5453030303030303
+          "score_total": 0.87
         }
       },
-      "leitura_rapida": "Arsenal favorito (62%, risco forte). Jogo mais aberto (xG total ≈2.9). Over 2.5 com 55%. | Forma recente: Arsenal em alta, Atleti em alta.",
+      "leitura_rapida": "PSG favorito (49%, risco moderado). Jogo mais aberto (xG total ≈4.2). Over 2.5 com 78%. | Forma recente: Bayern em baixa.",
       "tendencia": {
-        "casa": "em alta",
-        "visitante": "em alta"
+        "casa": "em baixa",
+        "visitante": "estavel"
       },
       "alertas": [
-        "Arsenal jogou recentemente — possível desgaste físico.",
-        "Atleti jogou recentemente — possível desgaste físico."
+        "Bayern jogou recentemente — possível desgaste físico.",
+        "PSG jogou recentemente — possível desgaste físico."
       ],
       "odds_debug": {
         "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
         "competition": "UEFA Champions League",
         "sport_key": "soccer_uefa_champs_league",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "odds_match_id": "541c5e45c0f5393079508826d283ea6e",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%"
       },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
+      "odds_integradas": true,
+      "odds_valor_alto": true,
       "historico": {
         "casa": [
           {
-            "data": "02/05 16:30",
-            "mandante": "Arsenal",
-            "visitante": "Fulham",
-            "placar": "3 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "29/04 19:00",
-            "mandante": "Atleti",
-            "visitante": "Arsenal",
-            "placar": "1 x 1",
+            "data": "02/05 13:30",
+            "mandante": "Bayern",
+            "visitante": "Heidenheim",
+            "placar": "3 x 3",
             "resultado": "E",
             "resultado_label": "Empate"
           },
           {
-            "data": "25/04 16:30",
-            "mandante": "Arsenal",
-            "visitante": "Newcastle",
-            "placar": "1 x 0",
+            "data": "28/04 19:00",
+            "mandante": "PSG",
+            "visitante": "Bayern",
+            "placar": "5 x 4",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "25/04 13:30",
+            "mandante": "Mainz",
+            "visitante": "Bayern",
+            "placar": "3 x 4",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
           {
             "data": "19/04 15:30",
-            "mandante": "Man City",
-            "visitante": "Arsenal",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "15/04 19:00",
-            "mandante": "Arsenal",
-            "visitante": "Sporting CP",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "02/05 14:15",
-            "mandante": "Valencia",
-            "visitante": "Atleti",
-            "placar": "0 x 2",
+            "mandante": "Bayern",
+            "visitante": "Stuttgart",
+            "placar": "4 x 2",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
           {
-            "data": "29/04 19:00",
-            "mandante": "Atleti",
-            "visitante": "Arsenal",
-            "placar": "1 x 1",
+            "data": "15/04 19:00",
+            "mandante": "Bayern",
+            "visitante": "Real Madrid",
+            "placar": "4 x 3",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "02/05 15:00",
+            "mandante": "PSG",
+            "visitante": "Lorient",
+            "placar": "2 x 2",
             "resultado": "E",
             "resultado_label": "Empate"
           },
           {
-            "data": "25/04 19:00",
-            "mandante": "Atleti",
-            "visitante": "Athletic",
-            "placar": "3 x 2",
+            "data": "28/04 19:00",
+            "mandante": "PSG",
+            "visitante": "Bayern",
+            "placar": "5 x 4",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "25/04 17:00",
+            "mandante": "Angers SCO",
+            "visitante": "PSG",
+            "placar": "0 x 3",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
           {
             "data": "22/04 17:00",
-            "mandante": "Elche",
-            "visitante": "Atleti",
-            "placar": "3 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
+            "mandante": "PSG",
+            "visitante": "Nantes",
+            "placar": "3 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
           },
           {
-            "data": "14/04 19:00",
-            "mandante": "Atleti",
-            "visitante": "Barça",
+            "data": "19/04 18:45",
+            "mandante": "PSG",
+            "visitante": "Olympique Lyon",
             "placar": "1 x 2",
             "resultado": "D",
             "resultado_label": "Derrota"
@@ -166,100 +170,102 @@
       "palpites": [
         {
           "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.619433999240845,
-          "confianca": "HIGH",
-          "justificativa": "Arsenal projeta ≈2.0 gol(s) vs ≈0.9 do adversário. Prob vitória: 61.9% (margem: 40.8 p.p.)",
-          "edge": 0.4082,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
+          "opcao": "2",
+          "probabilidade": 0.49137946034429786,
+          "confianca": "MEDIUM",
+          "justificativa": "PSG projeta ≈2.3 gol(s) vs ≈1.8 do adversário. Prob vitória: 49.1% (margem: 19.8 p.p.)",
+          "edge": 0.1978,
+          "odd_decimal": 4.58,
+          "ev": 1.227,
+          "ev_bruto": 1.2505,
+          "prob_mercado_justa": 0.2206,
+          "valor_esperado_positivo": true,
+          "resultado_verificador": null
         },
         {
           "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.5535490320935927,
+          "opcao": "OVER_3.5",
+          "probabilidade": 0.5941976070967498,
           "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.9. OVER 2.5: 55.4% de probabilidade",
-          "edge": 0.0535,
+          "justificativa": "Gols esperados no jogo: ≈4.2. OVER 3.5: 59.4% de probabilidade",
+          "edge": 0.0942,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
+          "resultado_verificador": null
         },
         {
           "tipo": "BTTS",
           "opcao": "YES",
-          "probabilidade": 0.5184524840126059,
-          "confianca": "LOW",
-          "justificativa": "xG: 2.0 (casa) x 0.9 (fora). Ambas marcam - Sim: 51.8%",
-          "edge": 0.0185,
+          "probabilidade": 0.7643484117884802,
+          "confianca": "HIGH",
+          "justificativa": "xG: 1.8 (casa) x 2.3 (fora). Ambas marcam - Sim: 76.4%",
+          "edge": 0.2643,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
+          "resultado_verificador": null
         }
       ]
     },
     {
       "competicao": "Copa Libertadores",
-      "data": "2026-05-05T22:00:00Z",
-      "status": "FINISHED",
+      "data": "2026-05-06T22:00:00Z",
+      "status": "TIMED",
       "placar_atual": {
-        "casa": 1,
-        "visitante": 0
+        "casa": null,
+        "visitante": null
       },
       "times": {
-        "casa": "Rosario",
-        "visitante": "Libertad"
+        "casa": "Cusco",
+        "visitante": "Estudiantes LP",
+        "escudo_casa": "https://crests.football-data.org/5683.png",
+        "escudo_visitante": "https://crests.football-data.org/2051.png"
       },
       "probabilidades": {
-        "casa": 0.5882603517754981,
-        "empate": 0.23741368498526746,
-        "visitante": 0.17392885890845236
+        "casa": 0.24731976512466083,
+        "empate": 0.303873951549199,
+        "visitante": 0.44880628332614014
       },
       "favorito": {
-        "nome": "Rosario",
-        "prob": 0.5882603517754981,
-        "vantagem": 0.3508466667902306
+        "nome": "Estudiantes LP",
+        "prob": 0.44880628332614014,
+        "vantagem": 0.14493233177694115
       },
       "gols_esperados": {
-        "casa": 1.7048551111111112,
-        "visitante": 0.8024000000000002,
-        "total": 2.507255111111111
+        "casa": 0.9789280000000002,
+        "visitante": 1.3957714285714287,
+        "total": 2.3746994285714287
       },
       "mercados": {
-        "under_25": 0.5423505256545871,
-        "over_25": 0.4576494743454129,
-        "btts_yes": 0.4512213658948317,
-        "btts_no": 0.5487786341051684
+        "under_25": 0.5763979206933587,
+        "over_25": 0.4236020793066413,
+        "btts_yes": 0.4861969501931579,
+        "btts_no": 0.5138030498068421
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.8518518518518517,
+          "forma_recente": 0.0,
           "ataque": 0.0,
-          "defesa": 1.0,
+          "defesa": 0.19999999999999996,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.6581481481481481
+          "score_total": 0.2
         },
         "visitante": {
-          "forma_recente": 0.0,
+          "forma_recente": 0.6666666666666665,
           "ataque": 0.4,
-          "defesa": 0.0,
+          "defesa": 0.6,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.24
+          "score_total": 0.5933333333333333
         }
       },
-      "leitura_rapida": "Rosario favorito (59%, risco moderado). Mercado de gols equilibrado (xG total ≈2.5).",
+      "leitura_rapida": "Estudiantes LP favorito (45%, risco alto). Mercado de gols equilibrado (xG total ≈2.4).",
       "tendencia": {
         "casa": "estavel",
         "visitante": "estavel"
@@ -279,364 +285,165 @@
       "historico": {
         "casa": [
           {
-            "data": "29/04 00:00",
-            "mandante": "Universidad Central",
-            "visitante": "Rosario",
-            "placar": "0 x 3",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
+            "data": "01/05 02:00",
+            "mandante": "Independiente",
+            "visitante": "Cusco",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
           },
           {
-            "data": "15/04 22:00",
-            "mandante": "Libertad",
-            "visitante": "Rosario",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
+            "data": "14/04 22:00",
+            "mandante": "Estudiantes LP",
+            "visitante": "Cusco",
+            "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
           },
           {
-            "data": "09/04 22:00",
-            "mandante": "Rosario",
-            "visitante": "Independiente",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
+            "data": "09/04 00:30",
+            "mandante": "Cusco",
+            "visitante": "Flamengo",
+            "placar": "0 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
           }
         ],
         "visitante": [
           {
-            "data": "28/04 22:00",
-            "mandante": "Libertad",
-            "visitante": "Independiente",
-            "placar": "2 x 3",
-            "resultado": "D",
-            "resultado_label": "Derrota"
+            "data": "30/04 00:30",
+            "mandante": "Estudiantes LP",
+            "visitante": "Flamengo",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
           },
           {
-            "data": "15/04 22:00",
-            "mandante": "Libertad",
-            "visitante": "Rosario",
-            "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
+            "data": "14/04 22:00",
+            "mandante": "Estudiantes LP",
+            "visitante": "Cusco",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
           },
           {
-            "data": "09/04 22:00",
-            "mandante": "Universidad Central",
-            "visitante": "Libertad",
-            "placar": "3 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
+            "data": "09/04 00:00",
+            "mandante": "Independiente",
+            "visitante": "Estudiantes LP",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
           }
         ]
       },
       "palpites": [
         {
           "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.5882603517754981,
-          "confianca": "HIGH",
-          "justificativa": "Rosario projeta ≈1.7 gol(s) vs ≈0.8 do adversário. Prob vitória: 58.8% (margem: 35.1 p.p.)",
-          "edge": 0.3508,
+          "opcao": "2",
+          "probabilidade": 0.44880628332614014,
+          "confianca": "MEDIUM",
+          "justificativa": "Estudiantes LP projeta ≈1.4 gol(s) vs ≈1.0 do adversário. Prob vitória: 44.9% (margem: 14.5 p.p.)",
+          "edge": 0.1449,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
+          "resultado_verificador": null
         },
         {
           "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.5423505256545871,
+          "opcao": "UNDER_2.5",
+          "probabilidade": 0.5763979206933587,
           "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.5. UNDER 2.5: 54.2% de probabilidade",
-          "edge": 0.0424,
+          "justificativa": "Gols esperados no jogo: ≈2.4. UNDER 2.5: 57.6% de probabilidade",
+          "edge": 0.0764,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
+          "resultado_verificador": null
         },
         {
           "tipo": "BTTS",
           "opcao": "NO",
-          "probabilidade": 0.5487786341051684,
+          "probabilidade": 0.5138030498068421,
           "confianca": "LOW",
-          "justificativa": "xG: 1.7 (casa) x 0.8 (fora). Ambas marcam - Nao: 54.9%",
-          "edge": 0.0488,
+          "justificativa": "xG: 1.0 (casa) x 1.4 (fora). Ambas marcam - Nao: 51.4%",
+          "edge": 0.0138,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
+          "resultado_verificador": null
         }
       ]
     },
     {
       "competicao": "Copa Libertadores",
-      "data": "2026-05-05T22:00:00Z",
-      "status": "FINISHED",
+      "data": "2026-05-06T22:00:00Z",
+      "status": "TIMED",
       "placar_atual": {
-        "casa": 0,
-        "visitante": 2
+        "casa": null,
+        "visitante": null
       },
       "times": {
-        "casa": "Cristal",
-        "visitante": "Palmeiras"
+        "casa": "La Guaira",
+        "visitante": "Club Bolívar",
+        "escudo_casa": "https://crests.football-data.org/5170.png",
+        "escudo_visitante": "https://crests.football-data.org/4261.png"
       },
       "probabilidades": {
-        "casa": 0.46310721502192054,
-        "empate": 0.2318938890559732,
-        "visitante": 0.3044037983589673
+        "casa": 0.4041350529377929,
+        "empate": 0.3494588069193687,
+        "visitante": 0.2464061401428385
       },
       "favorito": {
-        "nome": "Cristal",
-        "prob": 0.46310721502192054,
-        "vantagem": 0.15870341666295323
+        "nome": "La Guaira",
+        "prob": 0.4041350529377929,
+        "vantagem": 0.05467624601842419
       },
       "gols_esperados": {
-        "casa": 1.763888296543107,
-        "visitante": 1.391914220315399,
-        "total": 3.1558025168585058
+        "casa": 1.087697777777778,
+        "visitante": 0.7927111111111114,
+        "total": 1.8804088888888895
       },
       "mercados": {
-        "under_25": 0.3897992298350257,
-        "over_25": 0.6102007701649743,
-        "btts_yes": 0.622172964447408,
-        "btts_no": 0.377827035552592
+        "under_25": 0.7090210199169408,
+        "over_25": 0.2909789800830592,
+        "btts_yes": 0.3800134230188406,
+        "btts_no": 0.6199865769811594
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.7040816326530612,
-          "ataque": 1.0,
-          "defesa": 0.19999999999999996,
+          "forma_recente": 0.3148148148148148,
+          "ataque": 0.0,
+          "defesa": 1.0,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.6964285714285715
+          "score_total": 0.4701851851851852
         },
         "visitante": {
-          "forma_recente": 0.7454545454545454,
-          "ataque": 0.4,
-          "defesa": 0.8,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.6609090909090909
-        }
-      },
-      "leitura_rapida": "Cristal favorito (46%, risco moderado). Jogo mais aberto (xG total ≈3.2). Over 2.5 com 61%. | Forma recente: Palmeiras em baixa.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "em baixa"
-      },
-      "alertas": [
-        "Palmeiras jogou recentemente — possível desgaste físico."
-      ],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
-        "competition": "Copa Libertadores",
-        "sport_key": "soccer_conmebol_libertadores",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "29/04 02:00",
-            "mandante": "Cristal",
-            "visitante": "Junior",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "16/04 22:00",
-            "mandante": "Palmeiras",
-            "visitante": "Cristal",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "09/04 02:00",
-            "mandante": "Cristal",
-            "visitante": "Cerro Porteño",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "11/03 22:00",
-            "mandante": "Cristal",
-            "visitante": "Carabobo",
-            "placar": "4 x 4",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "04/03 22:00",
-            "mandante": "Carabobo",
-            "visitante": "Cristal",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "02/05 21:30",
-            "mandante": "Palmeiras",
-            "visitante": "Santos",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "30/04 00:30",
-            "mandante": "Cerro Porteño",
-            "visitante": "Palmeiras",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "26/04 21:30",
-            "mandante": "Bragantino",
-            "visitante": "Palmeiras",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "19/04 21:30",
-            "mandante": "Palmeiras",
-            "visitante": "Paranaense",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "16/04 22:00",
-            "mandante": "Palmeiras",
-            "visitante": "Cristal",
-            "placar": "2 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.46310721502192054,
-          "confianca": "MEDIUM",
-          "justificativa": "Cristal projeta ≈1.8 gol(s) vs ≈1.4 do adversário. Prob vitória: 46.3% (margem: 15.9 p.p.)",
-          "edge": 0.1587,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.6102007701649743,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈3.2. OVER 2.5: 61.0% de probabilidade",
-          "edge": 0.1102,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.622172964447408,
-          "confianca": "MEDIUM",
-          "justificativa": "xG: 1.8 (casa) x 1.4 (fora). Ambas marcam - Sim: 62.2%",
-          "edge": 0.1222,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        }
-      ]
-    },
-    {
-      "competicao": "Copa Libertadores",
-      "data": "2026-05-06T00:00:00Z",
-      "status": "PAUSED",
-      "placar_atual": {
-        "casa": 0,
-        "visitante": 0
-      },
-      "times": {
-        "casa": "Barcelona SC",
-        "visitante": "Boca Juniors"
-      },
-      "probabilidades": {
-        "casa": 0.3076116121455726,
-        "empate": 0.28564050435907845,
-        "visitante": 0.4066932131504681
-      },
-      "favorito": {
-        "nome": "Boca Juniors",
-        "prob": 0.4066932131504681,
-        "vantagem": 0.09908160100489549
-      },
-      "gols_esperados": {
-        "casa": 1.025020620054144,
-        "visitante": 1.2241132369614511,
-        "total": 2.249133857015595
-      },
-      "mercados": {
-        "under_25": 0.6096250282861976,
-        "over_25": 0.3903749717138024,
-        "btts_yes": 0.45264733208008967,
-        "btts_no": 0.5473526679199103
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.3061224489795918,
-          "ataque": 0.2,
-          "defesa": 0.5,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.4171428571428571
-        },
-        "visitante": {
-          "forma_recente": 0.6296296296296297,
-          "ataque": 0.4,
+          "forma_recente": 0.537037037037037,
+          "ataque": 0.0,
           "defesa": 0.6,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.5803703703703704
+          "score_total": 0.44796296296296295
         }
       },
-      "leitura_rapida": "Boca Juniors favorito (41%, risco alto). Jogo fechado esperado (xG total ≈2.2). Under 2.5 com 61%. | Forma recente: Barcelona SC em baixa.",
+      "leitura_rapida": "La Guaira favorito (40%, risco alto). Jogo fechado esperado (xG total ≈1.9). Under 2.5 com 71%.",
       "tendencia": {
-        "casa": "em baixa",
+        "casa": "estavel",
         "visitante": "estavel"
       },
       "alertas": [],
       "odds_debug": {
         "enabled": "false",
         "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (9.9 p.p. < 10.0 p.p.)",
+        "reason": "edge abaixo do gate (5.5 p.p. < 10.0 p.p.)",
         "competition": "Copa Libertadores",
         "sport_key": "soccer_conmebol_libertadores",
         "ev_filter": "fail",
@@ -647,81 +454,65 @@
       "historico": {
         "casa": [
           {
-            "data": "30/04 00:00",
-            "mandante": "Barcelona SC",
-            "visitante": "Univ Católica",
-            "placar": "1 x 2",
+            "data": "30/04 22:00",
+            "mandante": "Rivadavia",
+            "visitante": "La Guaira",
+            "placar": "4 x 1",
             "resultado": "D",
             "resultado_label": "Derrota"
           },
           {
             "data": "15/04 00:00",
-            "mandante": "Boca Juniors",
-            "visitante": "Barcelona SC",
-            "placar": "3 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "08/04 00:00",
-            "mandante": "Barcelona SC",
-            "visitante": "Cruzeiro",
-            "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "11/03 00:30",
-            "mandante": "Botafogo",
-            "visitante": "Barcelona SC",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "04/03 00:30",
-            "mandante": "Barcelona SC",
-            "visitante": "Botafogo",
+            "mandante": "Club Bolívar",
+            "visitante": "La Guaira",
             "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "07/04 22:00",
+            "mandante": "La Guaira",
+            "visitante": "Fluminense",
+            "placar": "0 x 0",
             "resultado": "E",
             "resultado_label": "Empate"
           }
         ],
         "visitante": [
           {
-            "data": "29/04 00:30",
-            "mandante": "Cruzeiro",
-            "visitante": "Boca Juniors",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
+            "data": "30/04 22:00",
+            "mandante": "Club Bolívar",
+            "visitante": "Fluminense",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
           },
           {
             "data": "15/04 00:00",
-            "mandante": "Boca Juniors",
-            "visitante": "Barcelona SC",
-            "placar": "3 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
+            "mandante": "Club Bolívar",
+            "visitante": "La Guaira",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
           },
           {
-            "data": "08/04 00:30",
-            "mandante": "Univ Católica",
-            "visitante": "Boca Juniors",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
+            "data": "07/04 22:00",
+            "mandante": "Rivadavia",
+            "visitante": "Club Bolívar",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
           }
         ]
       },
       "palpites": [
         {
           "tipo": "WINNER",
-          "opcao": "2",
-          "probabilidade": 0.4066932131504681,
+          "opcao": "1",
+          "probabilidade": 0.4041350529377929,
           "confianca": "LOW",
-          "justificativa": "Boca Juniors projeta ≈1.2 gol(s) vs ≈1.0 do adversário. Prob vitória: 40.7% (margem: 9.9 p.p.)",
-          "edge": 0.0991,
+          "justificativa": "La Guaira projeta ≈1.1 gol(s) vs ≈0.8 do adversário. Prob vitória: 40.4% (margem: 5.5 p.p.)",
+          "edge": 0.0547,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
@@ -731,11 +522,11 @@
         },
         {
           "tipo": "OVER_UNDER",
-          "opcao": "UNDER",
-          "probabilidade": 0.6096250282861976,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈2.2. UNDER 2.5: 61.0% de probabilidade",
-          "edge": 0.1096,
+          "opcao": "UNDER_2.5",
+          "probabilidade": 0.7090210199169408,
+          "confianca": "HIGH",
+          "justificativa": "Gols esperados no jogo: ≈1.9. UNDER 2.5: 70.9% de probabilidade",
+          "edge": 0.209,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
@@ -746,177 +537,24 @@
         {
           "tipo": "BTTS",
           "opcao": "NO",
-          "probabilidade": 0.5473526679199103,
+          "probabilidade": 0.6199865769811594,
           "confianca": "LOW",
-          "justificativa": "xG: 1.0 (casa) x 1.2 (fora). Ambas marcam - Nao: 54.7%",
-          "edge": 0.0474,
+          "justificativa": "xG: 1.1 (casa) x 0.8 (fora). Ambas marcam - Nao: 62.0%",
+          "edge": 0.12,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
           "resultado_verificador": null
-        }
-      ]
-    },
-    {
-      "competicao": "Copa Libertadores",
-      "data": "2026-05-06T00:00:00Z",
-      "status": "PAUSED",
-      "placar_atual": {
-        "casa": 0,
-        "visitante": 0
-      },
-      "times": {
-        "casa": "Universidad Central",
-        "visitante": "Independiente"
-      },
-      "probabilidades": {
-        "casa": 0.32821983979651587,
-        "empate": 0.23794505379572609,
-        "visitante": 0.4333939192408925
-      },
-      "favorito": {
-        "nome": "Independiente",
-        "prob": 0.4333939192408925,
-        "vantagem": 0.10517407944437662
-      },
-      "gols_esperados": {
-        "casa": 1.4138714604591838,
-        "visitante": 1.6565353954081636,
-        "total": 3.0704068558673474
-      },
-      "mercados": {
-        "under_25": 0.40804366223516864,
-        "over_25": 0.5919563377648314,
-        "btts_yes": 0.6120636235535082,
-        "btts_no": 0.3879363764464918
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.2962962962962963,
-          "ataque": 0.6,
-          "defesa": 0.19999999999999996,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.45370370370370366
         },
-        "visitante": {
-          "forma_recente": 0.8518518518518517,
-          "ataque": 0.6,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.7081481481481481
-        }
-      },
-      "leitura_rapida": "Independiente favorito (43%, risco alto). Jogo mais aberto (xG total ≈3.1). Over 2.5 com 59%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "alertas": [],
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
-        "competition": "Copa Libertadores",
-        "sport_key": "soccer_conmebol_libertadores",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "29/04 00:00",
-            "mandante": "Universidad Central",
-            "visitante": "Rosario",
-            "placar": "0 x 3",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "16/04 02:00",
-            "mandante": "Independiente",
-            "visitante": "Universidad Central",
-            "placar": "3 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "09/04 22:00",
-            "mandante": "Universidad Central",
-            "visitante": "Libertad",
-            "placar": "3 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "28/04 22:00",
-            "mandante": "Libertad",
-            "visitante": "Independiente",
-            "placar": "2 x 3",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "16/04 02:00",
-            "mandante": "Independiente",
-            "visitante": "Universidad Central",
-            "placar": "3 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "09/04 22:00",
-            "mandante": "Rosario",
-            "visitante": "Independiente",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
         {
-          "tipo": "WINNER",
-          "opcao": "2",
-          "probabilidade": 0.4333939192408925,
+          "tipo": "EMPATE",
+          "opcao": "X",
+          "probabilidade": 0.3494588069193687,
           "confianca": "LOW",
-          "justificativa": "Independiente projeta ≈1.7 gol(s) vs ≈1.4 do adversário. Prob vitória: 43.3% (margem: 10.5 p.p.)",
-          "edge": 0.1052,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER",
-          "probabilidade": 0.5919563377648314,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈3.1. OVER 2.5: 59.2% de probabilidade",
-          "edge": 0.092,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": null
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.6120636235535082,
-          "confianca": "MEDIUM",
-          "justificativa": "xG: 1.4 (casa) x 1.7 (fora). Ambas marcam - Sim: 61.2%",
-          "edge": 0.1121,
+          "justificativa": "Ambas defesas solidas (100% / 60% de aproveitamento defensivo). Empate com 34.9% de probabilidade",
+          "edge": 0.0,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
@@ -928,20 +566,20 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 4,
-    "total": 9,
-    "taxa": 0.444
+    "acertos": 0,
+    "total": 0,
+    "taxa": null
   },
   "daily_tips_ids": [
     {
-      "casa": "Arsenal",
-      "visitante": "Atleti",
-      "data": "2026-05-05T19:00:00Z"
+      "casa": "Bayern",
+      "visitante": "PSG",
+      "data": "2026-05-06T19:00:00Z"
     }
   ],
-  "daily_tips_date": "2026-05-05",
+  "daily_tips_date": "2026-05-06",
   "recovery_tip": {
     "ativo": false
   },
-  "recovery_tip_date": "2026-05-05"
+  "recovery_tip_date": "2026-05-06"
 }
