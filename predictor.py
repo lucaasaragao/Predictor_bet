@@ -143,6 +143,11 @@ COMPETICOES_PERMITIDAS = {
 
 PRE_MATCH_STATUSES = {"SCHEDULED", "TIMED"}
 SNAPSHOT_BASELINE_SOURCE_STATUSES = PRE_MATCH_STATUSES | {"IN_PLAY", "PAUSED"}
+COMPETICOES_EXCLUIDAS_DICAS = {
+    "Campeonato Brasileiro Série A",
+    "Campeonato Brasileiro Série B",
+}
+SCORE_CONFIANCA = {"HIGH": 3, "MEDIUM": 2, "LOW": 1}
 
 
 @dataclass
@@ -1530,268 +1535,299 @@ def congelar_modelo_pre_jogo(predicoes: List[PredicaoJogo], caminho_predicoes: s
     return saida
 
 
-def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str = "predictions.json") -> None:
-    hoje_str = datetime.now(APP_TIMEZONE).date().isoformat()
-    dados = {
-        "generated_at": datetime.now(APP_TIMEZONE).isoformat(timespec="seconds"),
-        "analysis_date": hoje_str,   # Marca que a análise completa foi feita hoje
-        "total_jogos": len(predicoes),
-        "odds_debug_visual": ODDS_DEBUG_VISUAL,
-        "odds_only_value_games": ODDS_ONLY_VALUE_GAMES,
-        "odds_min_ev": ODDS_MIN_EV,
-        "jogos": [],
+def _montar_ranking_1x2(pred: PredicaoJogo) -> List[Dict[str, float | str]]:
+    ranking = [
+        {"nome": pred.time_casa, "prob": pred.prob_casa},
+        {"nome": "Empate", "prob": pred.prob_empate},
+        {"nome": pred.time_visitante, "prob": pred.prob_visitante},
+    ]
+    ranking.sort(key=lambda item: item["prob"], reverse=True)
+    return ranking
+
+
+def _descrever_cenario_gols(mercados: Dict[str, float], total_gols: float) -> str:
+    if mercados["under_25"] >= 0.58:
+        return (
+            f"Jogo fechado esperado (xG total ≈{total_gols:.1f}). "
+            f"Under 2.5 com {mercados['under_25']*100:.0f}%."
+        )
+    if mercados["over_25"] >= 0.55:
+        return (
+            f"Jogo mais aberto (xG total ≈{total_gols:.1f}). "
+            f"Over 2.5 com {mercados['over_25']*100:.0f}%."
+        )
+    return f"Mercado de gols equilibrado (xG total ≈{total_gols:.1f})."
+
+
+def _montar_texto_tendencia(pred: PredicaoJogo) -> str:
+    tendencia_partes = []
+    if pred.tendencia_casa not in ("estavel", "indefinida"):
+        tendencia_partes.append(f"{pred.time_casa} {pred.tendencia_casa}")
+    if pred.tendencia_visitante not in ("estavel", "indefinida"):
+        tendencia_partes.append(f"{pred.time_visitante} {pred.tendencia_visitante}")
+    if not tendencia_partes:
+        return ""
+    return " | Forma recente: " + ", ".join(tendencia_partes) + "."
+
+
+def _montar_leitura_rapida_front(
+    pred: PredicaoJogo,
+    favorito: Dict[str, float | str],
+    mercados: Dict[str, float],
+) -> str:
+    total_gols = pred.gols_esperados_casa + pred.gols_esperados_visitante
+    confianca_fav = _texto_risco(float(favorito["prob"]))
+    return (
+        f"{favorito['nome']} favorito ({float(favorito['prob'])*100:.0f}%, risco {confianca_fav}). "
+        f"{_descrever_cenario_gols(mercados, total_gols)}"
+        f"{_montar_texto_tendencia(pred)}"
+    )
+
+
+def _coletar_alertas_front(pred: PredicaoJogo) -> List[str]:
+    alertas = []
+    fadiga_casa = detectar_fadiga(pred.historico_casa, pred.data_jogo)
+    fadiga_visit = detectar_fadiga(pred.historico_visitante, pred.data_jogo)
+    if fadiga_casa < 1.0:
+        alertas.append(f"{pred.time_casa} jogou recentemente — possível desgaste físico.")
+    if fadiga_visit < 1.0:
+        alertas.append(f"{pred.time_visitante} jogou recentemente — possível desgaste físico.")
+    return alertas
+
+
+def _serializar_jogo_front(pred: PredicaoJogo) -> Dict:
+    mercados = calcular_probabilidades_mercado(pred.gols_esperados_casa, pred.gols_esperados_visitante)
+    ranking = _montar_ranking_1x2(pred)
+    favorito = ranking[0]
+    diferenca = max(0.0, float(ranking[0]["prob"]) - float(ranking[1]["prob"]))
+    palpites = [asdict(item) for item in gerar_palpites(pred)]
+
+    return {
+        "competicao": pred.competicao,
+        "data": pred.data_jogo,
+        "status": pred.status,
+        "placar_atual": {"casa": pred.placar_casa, "visitante": pred.placar_visitante},
+        "times": {
+            "casa": pred.time_casa,
+            "visitante": pred.time_visitante,
+            "escudo_casa": pred.escudo_casa,
+            "escudo_visitante": pred.escudo_visitante,
+        },
+        "probabilidades": {
+            "casa": pred.prob_casa,
+            "empate": pred.prob_empate,
+            "visitante": pred.prob_visitante,
+        },
+        "favorito": {"nome": favorito["nome"], "prob": favorito["prob"], "vantagem": diferenca},
+        "gols_esperados": {
+            "casa": pred.gols_esperados_casa,
+            "visitante": pred.gols_esperados_visitante,
+            "total": pred.gols_esperados_casa + pred.gols_esperados_visitante,
+        },
+        "mercados": {
+            "under_25": mercados["under_25"],
+            "over_25": mercados["over_25"],
+            "btts_yes": mercados["btts_yes"],
+            "btts_no": mercados["btts_no"],
+        },
+        "scores": {"casa": asdict(pred.score_casa), "visitante": asdict(pred.score_visitante)},
+        "leitura_rapida": _montar_leitura_rapida_front(pred, favorito, mercados),
+        "tendencia": {"casa": pred.tendencia_casa, "visitante": pred.tendencia_visitante},
+        "alertas": _coletar_alertas_front(pred),
+        "odds_debug": pred.odds_debug,
+        "odds_integradas": any(item.get("odd_decimal") is not None for item in palpites),
+        "odds_valor_alto": any(item.get("valor_esperado_positivo") for item in palpites),
+        "historico": {
+            "casa": _normalizar_historico_para_front(pred.historico_casa, pred.time_casa),
+            "visitante": _normalizar_historico_para_front(pred.historico_visitante, pred.time_visitante),
+        },
+        "palpites": palpites,
     }
 
-    for pred in predicoes:
-        mercados = calcular_probabilidades_mercado(pred.gols_esperados_casa, pred.gols_esperados_visitante)
-        ranking = [
-            {"nome": pred.time_casa, "prob": pred.prob_casa},
-            {"nome": "Empate", "prob": pred.prob_empate},
-            {"nome": pred.time_visitante, "prob": pred.prob_visitante},
-        ]
-        ranking.sort(key=lambda item: item["prob"], reverse=True)
-        favorito = ranking[0]
-        diferenca = max(0.0, ranking[0]["prob"] - ranking[1]["prob"])
 
-        total_gols = pred.gols_esperados_casa + pred.gols_esperados_visitante
-        if mercados["under_25"] >= 0.58:
-            cenario_gols = f"Jogo fechado esperado (xG total ≈{total_gols:.1f}). Under 2.5 com {mercados['under_25']*100:.0f}%."
-        elif mercados["over_25"] >= 0.55:
-            cenario_gols = f"Jogo mais aberto (xG total ≈{total_gols:.1f}). Over 2.5 com {mercados['over_25']*100:.0f}%."
-        else:
-            cenario_gols = f"Mercado de gols equilibrado (xG total ≈{total_gols:.1f})."
-
-        tendencia_partes = []
-        if pred.tendencia_casa not in ("estavel", "indefinida"):
-            tendencia_partes.append(f"{pred.time_casa} {pred.tendencia_casa}")
-        if pred.tendencia_visitante not in ("estavel", "indefinida"):
-            tendencia_partes.append(f"{pred.time_visitante} {pred.tendencia_visitante}")
-        tendencia_txt = (" | Forma recente: " + ", ".join(tendencia_partes) + ".") if tendencia_partes else ""
-
-        confianca_fav = _texto_risco(favorito["prob"])
-        leitura = (
-            f"{favorito['nome']} favorito ({favorito['prob']*100:.0f}%, risco {confianca_fav}). "
-            f"{cenario_gols}"
-            f"{tendencia_txt}"
-        )
-
-        palpites_brutos = gerar_palpites(pred)
-        palpites = [asdict(item) for item in palpites_brutos]
-        odds_integradas = any(item.get("odd_decimal") is not None for item in palpites)
-        odds_valor_alto = any(item.get("valor_esperado_positivo") for item in palpites)
-
-        # Alertas contextuais para o front-end
-        alertas = []
-        fadiga_casa = detectar_fadiga(pred.historico_casa, pred.data_jogo)
-        fadiga_visit = detectar_fadiga(pred.historico_visitante, pred.data_jogo)
-        if fadiga_casa < 1.0:
-            alertas.append(f"{pred.time_casa} jogou recentemente — possível desgaste físico.")
-        if fadiga_visit < 1.0:
-            alertas.append(f"{pred.time_visitante} jogou recentemente — possível desgaste físico.")
-
-        dados["jogos"].append(
-            {
-                "competicao": pred.competicao,
-                "data": pred.data_jogo,
-                "status": pred.status,
-                "placar_atual": {
-                    "casa": pred.placar_casa,
-                    "visitante": pred.placar_visitante
-                },
-                "times": {
-                    "casa": pred.time_casa,
-                    "visitante": pred.time_visitante,
-                    "escudo_casa": pred.escudo_casa,
-                    "escudo_visitante": pred.escudo_visitante,
-                },
-                "probabilidades": {
-                    "casa": pred.prob_casa,
-                    "empate": pred.prob_empate,
-                    "visitante": pred.prob_visitante,
-                },
-                "favorito": {
-                    "nome": favorito["nome"],
-                    "prob": favorito["prob"],
-                    "vantagem": diferenca,
-                },
-                "gols_esperados": {
-                    "casa": pred.gols_esperados_casa,
-                    "visitante": pred.gols_esperados_visitante,
-                    "total": pred.gols_esperados_casa + pred.gols_esperados_visitante,
-                },
-                "mercados": {
-                    "under_25": mercados["under_25"],
-                    "over_25": mercados["over_25"],
-                    "btts_yes": mercados["btts_yes"],
-                    "btts_no": mercados["btts_no"],
-                },
-                "scores": {
-                    "casa": asdict(pred.score_casa),
-                    "visitante": asdict(pred.score_visitante),
-                },
-                "leitura_rapida": leitura,
-                "tendencia": {
-                    "casa": pred.tendencia_casa,
-                    "visitante": pred.tendencia_visitante,
-                },
-                "alertas": alertas,
-                "odds_debug": pred.odds_debug,
-                "odds_integradas": odds_integradas,
-                "odds_valor_alto": odds_valor_alto,
-                "historico": {
-                    "casa": _normalizar_historico_para_front(pred.historico_casa, pred.time_casa),
-                    "visitante": _normalizar_historico_para_front(pred.historico_visitante, pred.time_visitante),
-                },
-                "palpites": palpites,
-            }
-        )
-
+def _calcular_resumo_acertos_front(jogos: List[Dict]) -> Dict[str, Optional[float] | int]:
     total_acertos = sum(
-        1 for j in dados["jogos"]
-        for p in j.get("palpites", [])
-        if p.get("resultado_verificador") == "ACERTO"
+        1 for jogo in jogos
+        for palpite in jogo.get("palpites", [])
+        if palpite.get("resultado_verificador") == "ACERTO"
     )
     total_com_resultado = sum(
-        1 for j in dados["jogos"]
-        for p in j.get("palpites", [])
-        if p.get("resultado_verificador") is not None
+        1 for jogo in jogos
+        for palpite in jogo.get("palpites", [])
+        if palpite.get("resultado_verificador") is not None
     )
-    dados["acertos_hoje"] = {
+    return {
         "acertos": total_acertos,
         "total": total_com_resultado,
         "taxa": round(total_acertos / total_com_resultado, 3) if total_com_resultado else None,
     }
 
-    # Congela as dicas do dia no primeiro run; preserva nas atualizações seguintes
-    hoje = datetime.now(APP_TIMEZONE).date().isoformat()
-    daily_tips_ids = None
-    existing_data: Dict = {}
+
+def _carregar_json_existente(caminho_saida: str) -> Dict:
     try:
-        with open(caminho_saida, "r", encoding="utf-8") as f_existing:
-            existing_data = json.load(f_existing)
-        if existing_data.get("daily_tips_date") == hoje:
-            daily_tips_ids = existing_data.get("daily_tips_ids")
+        with open(caminho_saida, "r", encoding="utf-8") as arquivo:
+            return json.load(arquivo)
     except (FileNotFoundError, json.JSONDecodeError):
-        pass
+        return {}
 
-    if not daily_tips_ids:
-        _excluidas_dicas = {"Campeonato Brasileiro Série A", "Campeonato Brasileiro Série B"}
-        candidatos_dicas = [
-            j for j in dados["jogos"]
-            if j["status"] not in ("FINISHED", "AWARDED") and j["competicao"] not in _excluidas_dicas
-        ]
-        candidatos_dicas.sort(key=lambda j: j["favorito"]["prob"], reverse=True)
-        n_total = len(dados["jogos"])
-        n_dicas = 3 if n_total >= 10 else (2 if n_total > 5 else 1)
-        daily_tips_ids = [
-            {"casa": j["times"]["casa"], "visitante": j["times"]["visitante"], "data": j["data"]}
-            for j in candidatos_dicas[:n_dicas]
-        ]
 
-    dados["daily_tips_ids"] = daily_tips_ids
-    dados["daily_tips_date"] = hoje
+def _chave_id_jogo_front(jogo: Dict) -> Tuple[str, str, str]:
+    return (
+        jogo.get("times", {}).get("casa", ""),
+        jogo.get("times", {}).get("visitante", ""),
+        jogo.get("data", ""),
+    )
 
-    def _chave_id_jogo(jogo: Dict) -> Tuple[str, str, str]:
-        return (jogo.get("times", {}).get("casa", ""), jogo.get("times", {}).get("visitante", ""), jogo.get("data", ""))
 
-    def _palpite_principal(jogo: Dict) -> Optional[Dict]:
-        palpites = jogo.get("palpites", []) or []
-        return next((p for p in palpites if p.get("valor_esperado_positivo") is True), palpites[0] if palpites else None)
+def _palpite_principal_front(jogo: Optional[Dict]) -> Optional[Dict]:
+    if not jogo:
+        return None
+    palpites = jogo.get("palpites", []) or []
+    return next((p for p in palpites if p.get("valor_esperado_positivo") is True), palpites[0] if palpites else None)
 
-    ids_dicas = {
-        (item.get("casa", ""), item.get("visitante", ""), item.get("data", ""))
-        for item in (daily_tips_ids or [])
+
+def _selecionar_daily_tips_ids(jogos: List[Dict], existing_data: Dict, hoje: str) -> List[Dict[str, str]]:
+    if existing_data.get("daily_tips_date") == hoje and existing_data.get("daily_tips_ids"):
+        return existing_data["daily_tips_ids"]
+
+    candidatos_dicas = [
+        jogo for jogo in jogos
+        if jogo["status"] not in ("FINISHED", "AWARDED")
+        and jogo["competicao"] not in COMPETICOES_EXCLUIDAS_DICAS
+    ]
+    candidatos_dicas.sort(key=lambda jogo: jogo["favorito"]["prob"], reverse=True)
+    n_total = len(jogos)
+    n_dicas = 3 if n_total >= 10 else (2 if n_total > 5 else 1)
+    return [
+        {"casa": jogo["times"]["casa"], "visitante": jogo["times"]["visitante"], "data": jogo["data"]}
+        for jogo in candidatos_dicas[:n_dicas]
+    ]
+
+
+def _normalizar_recovery_tip(recovery_tip: Optional[Dict]) -> Optional[Dict]:
+    if not recovery_tip or not recovery_tip.get("ativo"):
+        return recovery_tip
+
+    jogo_recovery = recovery_tip.get("jogo") or {}
+    casa_recovery = (jogo_recovery.get("times") or {}).get("casa") or jogo_recovery.get("casa") or ""
+    visitante_recovery = (jogo_recovery.get("times") or {}).get("visitante") or jogo_recovery.get("visitante") or ""
+    escudo_casa = (jogo_recovery.get("times") or {}).get("escudo_casa")
+    escudo_visitante = (jogo_recovery.get("times") or {}).get("escudo_visitante")
+
+    recovery_tip["jogo"] = {
+        **jogo_recovery,
+        "casa": casa_recovery,
+        "visitante": visitante_recovery,
+        "times": {
+            **(jogo_recovery.get("times") or {}),
+            "casa": casa_recovery,
+            "visitante": visitante_recovery,
+            "escudo_casa": escudo_casa,
+            "escudo_visitante": escudo_visitante,
+        },
+    }
+    return recovery_tip
+
+
+def _criar_recovery_tip(jogos: List[Dict], ids_dicas: set[Tuple[str, str, str]]) -> Dict:
+    melhor_jogo = None
+    melhor_palpite = None
+    melhor_prob = -1.0
+    melhor_conf = -1
+
+    for jogo in jogos:
+        jid = _chave_id_jogo_front(jogo)
+        if jid in ids_dicas:
+            continue
+        if jogo.get("status") in ("FINISHED", "AWARDED"):
+            continue
+        if jogo.get("competicao") in COMPETICOES_EXCLUIDAS_DICAS:
+            continue
+
+        for palpite in jogo.get("palpites", []) or []:
+            conf = str(palpite.get("confianca", "LOW")).upper()
+            prob = float(palpite.get("probabilidade") or 0.0)
+            conf_score = SCORE_CONFIANCA.get(conf, 1)
+            if prob > melhor_prob or (prob == melhor_prob and conf_score > melhor_conf):
+                melhor_prob = prob
+                melhor_conf = conf_score
+                melhor_jogo = jogo
+                melhor_palpite = palpite
+
+    if not melhor_jogo or not melhor_palpite:
+        return {"ativo": False}
+
+    return {
+        "ativo": True,
+        "disparado_em": datetime.now(APP_TIMEZONE).isoformat(timespec="seconds"),
+        "jogo": {
+            "casa": melhor_jogo.get("times", {}).get("casa", ""),
+            "visitante": melhor_jogo.get("times", {}).get("visitante", ""),
+            "data": melhor_jogo.get("data", ""),
+            "competicao": melhor_jogo.get("competicao", ""),
+            "times": {
+                "casa": melhor_jogo.get("times", {}).get("casa", ""),
+                "visitante": melhor_jogo.get("times", {}).get("visitante", ""),
+                "escudo_casa": melhor_jogo.get("times", {}).get("escudo_casa"),
+                "escudo_visitante": melhor_jogo.get("times", {}).get("escudo_visitante"),
+            },
+        },
+        "palpite": {
+            "tipo": melhor_palpite.get("tipo"),
+            "opcao": melhor_palpite.get("opcao"),
+            "probabilidade": melhor_palpite.get("probabilidade"),
+            "confianca": melhor_palpite.get("confianca"),
+        },
     }
 
-    jogos_por_id: Dict[Tuple[str, str, str], Dict] = {
-        _chave_id_jogo(jogo): jogo
-        for jogo in dados["jogos"]
-    }
+
+def _resolver_recovery_tip(jogos: List[Dict], daily_tips_ids: List[Dict[str, str]], existing_data: Dict, hoje: str) -> Dict:
+    jogos_por_id = {_chave_id_jogo_front(jogo): jogo for jogo in jogos}
 
     dica_1 = None
-    for item in (daily_tips_ids or []):
-        jid = (item.get("casa", ""), item.get("visitante", ""), item.get("data", ""))
-        jogo = jogos_por_id.get(jid)
+    for item in daily_tips_ids:
+        jogo = jogos_por_id.get((item.get("casa", ""), item.get("visitante", ""), item.get("data", "")))
         if jogo:
             dica_1 = jogo
             break
 
-    palpite_dica_1 = _palpite_principal(dica_1) if dica_1 else None
+    palpite_dica_1 = _palpite_principal_front(dica_1)
     erro_na_dica_1 = (palpite_dica_1 or {}).get("resultado_verificador") == "ERRO"
-
     recovery_tip = None
     if existing_data.get("daily_tips_date") == hoje:
-        recovery_tip = existing_data.get("recovery_tip")
+        recovery_tip = _normalizar_recovery_tip(existing_data.get("recovery_tip"))
 
-    if recovery_tip and recovery_tip.get("ativo"):
-        jogo_recovery = recovery_tip.get("jogo") or {}
-        casa_recovery = (jogo_recovery.get("times") or {}).get("casa") or jogo_recovery.get("casa") or ""
-        visitante_recovery = (jogo_recovery.get("times") or {}).get("visitante") or jogo_recovery.get("visitante") or ""
-        recovery_tip["jogo"] = {
-            **jogo_recovery,
-            "casa": casa_recovery,
-            "visitante": visitante_recovery,
-            "times": {
-                **(jogo_recovery.get("times") or {}),
-                "casa": casa_recovery,
-                "visitante": visitante_recovery,
-            },
-        }
+    if (recovery_tip or {}).get("ativo"):
+        return recovery_tip
+    if not erro_na_dica_1:
+        return {"ativo": False}
 
-    recovery_ativo_existente = bool((recovery_tip or {}).get("ativo"))
-    if erro_na_dica_1 or recovery_ativo_existente:
-        if not recovery_ativo_existente:
-            _excluidas_dicas = {"Campeonato Brasileiro Série A", "Campeonato Brasileiro Série B"}
-            melhor_jogo = None
-            melhor_palpite = None
-            melhor_prob = -1.0
-            melhor_conf = -1
-            score_confianca = {"HIGH": 3, "MEDIUM": 2, "LOW": 1}
+    ids_dicas = {
+        (item.get("casa", ""), item.get("visitante", ""), item.get("data", ""))
+        for item in daily_tips_ids
+    }
+    return _criar_recovery_tip(jogos, ids_dicas)
 
-            for jogo in dados["jogos"]:
-                jid = _chave_id_jogo(jogo)
-                if jid in ids_dicas:
-                    continue
-                if jogo.get("status") in ("FINISHED", "AWARDED"):
-                    continue
-                if jogo.get("competicao") in _excluidas_dicas:
-                    continue
 
-                for palpite in jogo.get("palpites", []) or []:
-                    conf = str(palpite.get("confianca", "LOW")).upper()
-                    prob = float(palpite.get("probabilidade") or 0.0)
-                    conf_score = score_confianca.get(conf, 1)
-                    if prob > melhor_prob or (prob == melhor_prob and conf_score > melhor_conf):
-                        melhor_prob = prob
-                        melhor_conf = conf_score
-                        melhor_jogo = jogo
-                        melhor_palpite = palpite
+def exportar_predicoes_front(predicoes: List[PredicaoJogo], caminho_saida: str = "predictions.json") -> None:
+    hoje = datetime.now(APP_TIMEZONE).date().isoformat()
+    dados = {
+        "generated_at": datetime.now(APP_TIMEZONE).isoformat(timespec="seconds"),
+        "analysis_date": hoje,
+        "total_jogos": len(predicoes),
+        "odds_debug_visual": ODDS_DEBUG_VISUAL,
+        "odds_only_value_games": ODDS_ONLY_VALUE_GAMES,
+        "odds_min_ev": ODDS_MIN_EV,
+        "jogos": [_serializar_jogo_front(pred) for pred in predicoes],
+    }
 
-            if melhor_jogo and melhor_palpite:
-                recovery_tip = {
-                    "ativo": True,
-                    "disparado_em": datetime.now(APP_TIMEZONE).isoformat(timespec="seconds"),
-                    "jogo": {
-                        "casa": melhor_jogo.get("times", {}).get("casa", ""),
-                        "visitante": melhor_jogo.get("times", {}).get("visitante", ""),
-                        "data": melhor_jogo.get("data", ""),
-                        "competicao": melhor_jogo.get("competicao", ""),
-                        "times": {
-                            "casa": melhor_jogo.get("times", {}).get("casa", ""),
-                            "visitante": melhor_jogo.get("times", {}).get("visitante", ""),
-                            "escudo_casa": melhor_jogo.get("times", {}).get("escudo_casa"),
-                            "escudo_visitante": melhor_jogo.get("times", {}).get("escudo_visitante"),
-                        },
-                    },
-                    "palpite": {
-                        "tipo": melhor_palpite.get("tipo"),
-                        "opcao": melhor_palpite.get("opcao"),
-                        "probabilidade": melhor_palpite.get("probabilidade"),
-                        "confianca": melhor_palpite.get("confianca"),
-                    },
-                }
+    dados["acertos_hoje"] = _calcular_resumo_acertos_front(dados["jogos"])
 
-    dados["recovery_tip"] = recovery_tip if recovery_tip else {"ativo": False}
+    existing_data = _carregar_json_existente(caminho_saida)
+    daily_tips_ids = _selecionar_daily_tips_ids(dados["jogos"], existing_data, hoje)
+    dados["daily_tips_ids"] = daily_tips_ids
+    dados["daily_tips_date"] = hoje
+    dados["recovery_tip"] = _resolver_recovery_tip(dados["jogos"], daily_tips_ids, existing_data, hoje)
     dados["recovery_tip_date"] = hoje
 
     with open(caminho_saida, "w", encoding="utf-8") as arquivo_saida:
@@ -2562,57 +2598,41 @@ def exibir_predicoes(predicoes: List[PredicaoJogo]) -> None:
         print("\n" + "-" * 100 + "\n")
 
 
-def main():
-    """Fluxo principal.
+def _analise_do_dia_concluida(caminho_predicoes: str, hoje: str) -> bool:
+    dados_existentes = _carregar_json_existente(caminho_predicoes)
+    return dados_existentes.get("analysis_date") == hoje and bool(dados_existentes.get("jogos"))
 
-    Decisão de execução:
-    - Se predictions.json já tiver `analysis_date == hoje` → atualização leve
-      (1 chamada de API, sem re-analisar histórico/H2H dos times).
-    - Caso contrário → análise completa (pipeline original).
-    """
-    hoje = datetime.now(APP_TIMEZONE).date().isoformat()
 
-    # Verificar se a análise do dia já foi concluída
-    analysis_done = False
-    try:
-        with open("predictions.json", "r", encoding="utf-8") as _f:
-            _existing = json.load(_f)
-        if _existing.get("analysis_date") == hoje and _existing.get("jogos"):
-            analysis_done = True
-    except (FileNotFoundError, json.JSONDecodeError):
-        pass
-
-    if analysis_done:
-        atualizar_status_jogos("predictions.json", "history.json")
-        return
-
-    # ── Análise completa (primeiro run do dia) ────────────────────────────────
-    print("🌐 Buscando jogos das competições permitidas...")
-    jogos = buscar_jogos_permitidos()
-    
-    if not jogos:
-        print("❌ Nenhum jogo encontrado.")
-        return
-    
-    print(f"📊 Encontrados {len(jogos)} jogo(s). Analisando...\n")
-    
+def _gerar_predicoes_do_dia(jogos: List[Dict]) -> List[PredicaoJogo]:
     predicoes = []
     print(f"⏳ Processando jogos... (~{len(jogos) * 12 // 60} min estimados)")
     for match in jogos:
         try:
-            pred = prever_jogo(match)
-            predicoes.append(pred)
+            predicoes.append(prever_jogo(match))
             time.sleep(12)
         except Exception as e:
             print(f"⚠️  Erro ao processar jogo: {e}")
+    return predicoes
 
+
+def _executar_analise_completa() -> None:
+    print("🌐 Buscando jogos das competições permitidas...")
+    jogos = buscar_jogos_permitidos()
+
+    if not jogos:
+        print("❌ Nenhum jogo encontrado.")
+        return
+
+    print(f"📊 Encontrados {len(jogos)} jogo(s). Analisando...\n")
+    predicoes = _gerar_predicoes_do_dia(jogos)
     predicoes = aplicar_odds_e_valor(predicoes)
+
     if not predicoes:
         print("ℹ️  Nenhum jogo com valor esperado positivo para exibir no momento.")
         exportar_predicoes_front([], "predictions.json")
         return
 
-    predicoes.sort(key=lambda p: p.data_jogo)
+    predicoes.sort(key=lambda pred: pred.data_jogo)
     predicoes = congelar_modelo_pre_jogo(predicoes, "predictions.json")
 
     if not predicoes:
@@ -2624,6 +2644,22 @@ def main():
     exportar_predicoes_front(predicoes, "predictions.json")
     atualizar_historico(predicoes, "history.json")
     print("💾 Arquivos gerados: predictions.json | history.json")
+
+
+def main():
+    """Fluxo principal.
+
+    Decisão de execução:
+    - Se predictions.json já tiver `analysis_date == hoje` → atualização leve
+      (1 chamada de API, sem re-analisar histórico/H2H dos times).
+    - Caso contrário → análise completa (pipeline original).
+    """
+    hoje = datetime.now(APP_TIMEZONE).date().isoformat()
+
+    if _analise_do_dia_concluida("predictions.json", hoje):
+        atualizar_status_jogos("predictions.json", "history.json")
+        return
+    _executar_analise_completa()
 
 
 if __name__ == "__main__":
