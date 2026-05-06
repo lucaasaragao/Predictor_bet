@@ -877,8 +877,16 @@ function renderTips(container, tips, match) {
   container.appendChild(summaryBox);
 
   const baseTips = tips || [];
-  const valueTips = baseTips.filter((tip) => tip.valor_esperado_positivo === true);
-  const tipsToRender = valueTips.length ? valueTips : baseTips;
+  const coreMarketOrder = ["WINNER", "OVER_UNDER", "BTTS"];
+
+  // Sempre exibir os 3 mercados principais (quando existirem),
+  // mantendo ordem estável e sem ocultar mercados por filtro de EV.
+  const coreTips = coreMarketOrder
+    .map((marketType) => baseTips.find((tip) => tip.tipo === marketType))
+    .filter(Boolean);
+
+  const extraTips = baseTips.filter((tip) => !coreMarketOrder.includes(tip.tipo));
+  const tipsToRender = [...coreTips, ...extraTips];
 
   tipsToRender.forEach(tip => {
     const tipEl = document.createElement("div");
