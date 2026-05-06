@@ -108,6 +108,11 @@ MEDIA_GOLS_LIGA: dict[str, float] = {
 }
 MEDIA_GOLS_DEFAULT = 2.55  # fallback para ligas sem mapeamento
 
+# Thresholds de confiança separados para OVER/UNDER e BTTS
+# (mais altos que WINNER porque Poisson puro superestima esses mercados)
+OU_BTTS_HIGH_THRESHOLD   = 0.20
+OU_BTTS_MEDIUM_THRESHOLD = 0.12
+
 
 def carregar_timezone_app() -> timezone:
     """Carrega o fuso da aplicação com fallback quando tzdata não está disponível."""
@@ -517,18 +522,42 @@ def poisson_pmf(k: int, lambda_param: float) -> float:
     return (lambda_param ** k * e ** (-lambda_param)) / factorial(k)
 
 
+def dixon_coles_tau(h: int, a: int, lh: float, la: float, rho: float = -0.13) -> float:
+    """Fator de correção Dixon-Coles para os 4 placares baixos.
+
+    Corrige a superestimação de BTTS YES que ocorre quando gols são tratados
+    como independentes (Poisson puro). rho negativo reduz P(ambos marcam).
+    """
+    if h == 0 and a == 0:
+        return 1.0 - lh * la * rho
+    if h == 1 and a == 0:
+        return 1.0 + la * rho
+    if h == 0 and a == 1:
+        return 1.0 + lh * rho
+    if h == 1 and a == 1:
+        return 1.0 - rho
+    return 1.0
+
+
 def calcular_probabilidades_mercado(lambda_home: float, lambda_away: float, max_gols: int = 7) -> Dict[str, float]:
     """Gera probabilidades agregadas para mercados comuns via Poisson."""
     matriz = {}
     for h_gols in range(max_gols + 1):
         for a_gols in range(max_gols + 1):
-            matriz[(h_gols, a_gols)] = poisson_pmf(h_gols, lambda_home) * poisson_pmf(a_gols, lambda_away)
+            tau = dixon_coles_tau(h_gols, a_gols, lambda_home, lambda_away)
+            matriz[(h_gols, a_gols)] = poisson_pmf(h_gols, lambda_home) * poisson_pmf(a_gols, lambda_away) * tau
+
+    # Renormalizar após aplicar τ (os 4 placares baixos foram perturbados)
+    total = sum(matriz.values())
+    if total > 0:
+        matriz = {k: v / total for k, v in matriz.items()}
 
     prob_casa = sum(p for (h, a), p in matriz.items() if h > a)
     prob_empate = sum(p for (h, a), p in matriz.items() if h == a)
     prob_visitante = sum(p for (h, a), p in matriz.items() if h < a)
+    prob_over_15 = sum(p for (h, a), p in matriz.items() if (h + a) >= 2)
     prob_over_25 = sum(p for (h, a), p in matriz.items() if (h + a) >= 3)
-    prob_under_25 = 1.0 - prob_over_25
+    prob_over_35 = sum(p for (h, a), p in matriz.items() if (h + a) >= 4)
     prob_btts_yes = sum(p for (h, a), p in matriz.items() if h > 0 and a > 0)
     prob_btts_no = 1.0 - prob_btts_yes
 
@@ -536,8 +565,12 @@ def calcular_probabilidades_mercado(lambda_home: float, lambda_away: float, max_
         "casa": prob_casa,
         "empate": prob_empate,
         "visitante": prob_visitante,
+        "over_15": prob_over_15,
+        "under_15": 1.0 - prob_over_15,
         "over_25": prob_over_25,
-        "under_25": prob_under_25,
+        "under_25": 1.0 - prob_over_25,
+        "over_35": prob_over_35,
+        "under_35": 1.0 - prob_over_35,
         "btts_yes": prob_btts_yes,
         "btts_no": prob_btts_no,
     }
@@ -1142,30 +1175,42 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
             p_winner.ev = p_winner.ev_bruto
         p_winner.valor_esperado_positivo = bool(p_winner.ev >= ODDS_MIN_EV)
 
-    # ── Palpite: Over/Under 2.5 ────────────────────────────────────────────────
-    prob_over = mercados["over_25"]
-    prob_under = mercados["under_25"]
-    bet_type = "OVER" if prob_over > prob_under else "UNDER"
+    # ── Palpite: Over/Under (linha dinâmica) ──────────────────────────────────
+    total_esperado = predicao.gols_esperados_casa + predicao.gols_esperados_visitante
+    if total_esperado < 1.8:
+        linha_ou = 1.5
+        prob_over = mercados["over_15"]
+        prob_under = mercados["under_15"]
+    elif total_esperado > 3.2:
+        linha_ou = 3.5
+        prob_over = mercados["over_35"]
+        prob_under = mercados["under_35"]
+    else:
+        linha_ou = 2.5
+        prob_over = mercados["over_25"]
+        prob_under = mercados["under_25"]
+
+    side_ou = "OVER" if prob_over > prob_under else "UNDER"
     prob_ou = max(prob_over, prob_under)
     # Edge = distância de 50% (mercado binário — qualquer lado "bate" com 50%)
     edge_ou = prob_ou - 0.50
-    total_esperado = predicao.gols_esperados_casa + predicao.gols_esperados_visitante
+    opcao_ou = f"{side_ou}_{linha_ou:.1f}"
 
-    if edge_ou > 0.15:
+    if edge_ou > OU_BTTS_HIGH_THRESHOLD:
         confianca = "HIGH"
-    elif edge_ou > 0.07:
+    elif edge_ou > OU_BTTS_MEDIUM_THRESHOLD:
         confianca = "MEDIUM"
     else:
         confianca = "LOW"
 
     palpites.append(BetSuggestion(
         tipo="OVER_UNDER",
-        opcao=bet_type,
+        opcao=opcao_ou,
         probabilidade=prob_ou,
         confianca=confianca,
         justificativa=(
             f"Gols esperados no jogo: ≈{total_esperado:.1f}. "
-            f"{'UNDER' if bet_type == 'UNDER' else 'OVER'} 2.5: {prob_ou*100:.1f}% de probabilidade"
+            f"{side_ou} {linha_ou}: {prob_ou*100:.1f}% de probabilidade"
         ),
         edge=round(edge_ou, 4),
     ))
@@ -1177,9 +1222,9 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
     btts_prob = max(btts_yes, btts_no)
     edge_btts = btts_prob - 0.50
 
-    if edge_btts > 0.15:
+    if edge_btts > OU_BTTS_HIGH_THRESHOLD:
         confianca = "HIGH"
-    elif edge_btts > 0.07:
+    elif edge_btts > OU_BTTS_MEDIUM_THRESHOLD:
         confianca = "MEDIUM"
     else:
         confianca = "LOW"
