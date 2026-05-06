@@ -108,6 +108,11 @@ MEDIA_GOLS_LIGA: dict[str, float] = {
 }
 MEDIA_GOLS_DEFAULT = 2.55  # fallback para ligas sem mapeamento
 
+# Thresholds de confiança separados para OVER/UNDER e BTTS
+# (mais altos que WINNER porque Poisson puro superestima esses mercados)
+OU_BTTS_HIGH_THRESHOLD   = 0.20
+OU_BTTS_MEDIUM_THRESHOLD = 0.12
+
 
 def carregar_timezone_app() -> timezone:
     """Carrega o fuso da aplicação com fallback quando tzdata não está disponível."""
@@ -512,12 +517,35 @@ def poisson_pmf(k: int, lambda_param: float) -> float:
     return (lambda_param ** k * e ** (-lambda_param)) / factorial(k)
 
 
+def dixon_coles_tau(h: int, a: int, lh: float, la: float, rho: float = -0.13) -> float:
+    """Fator de correção Dixon-Coles para os 4 placares baixos.
+
+    Corrige a superestimação de BTTS YES que ocorre quando gols são tratados
+    como independentes (Poisson puro). rho negativo reduz P(ambos marcam).
+    """
+    if h == 0 and a == 0:
+        return 1.0 - lh * la * rho
+    if h == 1 and a == 0:
+        return 1.0 + la * rho
+    if h == 0 and a == 1:
+        return 1.0 + lh * rho
+    if h == 1 and a == 1:
+        return 1.0 - rho
+    return 1.0
+
+
 def calcular_probabilidades_mercado(lambda_home: float, lambda_away: float, max_gols: int = 7) -> Dict[str, float]:
     """Gera probabilidades agregadas para mercados comuns via Poisson."""
     matriz = {}
     for h_gols in range(max_gols + 1):
         for a_gols in range(max_gols + 1):
-            matriz[(h_gols, a_gols)] = poisson_pmf(h_gols, lambda_home) * poisson_pmf(a_gols, lambda_away)
+            tau = dixon_coles_tau(h_gols, a_gols, lambda_home, lambda_away)
+            matriz[(h_gols, a_gols)] = poisson_pmf(h_gols, lambda_home) * poisson_pmf(a_gols, lambda_away) * tau
+
+    # Renormalizar após aplicar τ (os 4 placares baixos foram perturbados)
+    total = sum(matriz.values())
+    if total > 0:
+        matriz = {k: v / total for k, v in matriz.items()}
 
     prob_casa = sum(p for (h, a), p in matriz.items() if h > a)
     prob_empate = sum(p for (h, a), p in matriz.items() if h == a)
@@ -1146,9 +1174,9 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
     edge_ou = prob_ou - 0.50
     total_esperado = predicao.gols_esperados_casa + predicao.gols_esperados_visitante
 
-    if edge_ou > 0.15:
+    if edge_ou > OU_BTTS_HIGH_THRESHOLD:
         confianca = "HIGH"
-    elif edge_ou > 0.07:
+    elif edge_ou > OU_BTTS_MEDIUM_THRESHOLD:
         confianca = "MEDIUM"
     else:
         confianca = "LOW"
@@ -1172,9 +1200,9 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
     btts_prob = max(btts_yes, btts_no)
     edge_btts = btts_prob - 0.50
 
-    if edge_btts > 0.15:
+    if edge_btts > OU_BTTS_HIGH_THRESHOLD:
         confianca = "HIGH"
-    elif edge_btts > 0.07:
+    elif edge_btts > OU_BTTS_MEDIUM_THRESHOLD:
         confianca = "MEDIUM"
     else:
         confianca = "LOW"
