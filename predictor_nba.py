@@ -601,6 +601,10 @@ def atualizar_status_nba(caminho: str, caminho_historico: Optional[str] = None) 
 
     hoje = datetime.now(APP_TIMEZONE).date().isoformat()
     datas_unicas = {j["data"][:10] for j in jogos}
+    
+    # Incluir dia anterior para capturar jogos finalizados que ficaram pendentes
+    data_anterior = (datetime.now(APP_TIMEZONE).date() - timedelta(days=1)).isoformat()
+    datas_unicas.add(data_anterior)
     jogos_api: dict = {}
 
     for data_str in datas_unicas:
@@ -754,6 +758,11 @@ def main() -> None:
         print("⚡ Run leve: análise completa já feita hoje.")
         atualizar_status_nba(caminho_pred, caminho_hist)
         return
+
+    # Antes de fazer novo run completo, finalizar jogos pendentes do arquivo atual
+    if os.path.exists(caminho_pred):
+        print("📋 Finalizando jogos pendentes antes de novo run completo...")
+        atualizar_status_nba(caminho_pred, caminho_hist)
 
     # Run completo
     print(f"🔍 Run completo NBA para {hoje}...")
