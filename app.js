@@ -1032,6 +1032,7 @@ function renderTipsSection(data) {
 
   topDicas.forEach(({ jogo, palpite }, index) => {
     const teams = getTeamNames(jogo);
+    const crests = getTeamCrests(jogo);
     const prob = Math.round((palpite?.probabilidade || 0) * 100);
     const bestBet = palpite ? translateTipOption(palpite.tipo, palpite.opcao, jogo) : "—";
     const confidenceTone = palpite ? confidenceClass(palpite.confianca) : "low";
@@ -1059,7 +1060,7 @@ function renderTipsSection(data) {
         <span class="tip-card__competition">${jogo.competicao}</span>
         <span class="conf ${confidenceTone} tip-card__conf">${confidenceText}</span>
       </div>
-      <div class="tip-card__teams">${teams.casa} <span class="tip-card__vs">x</span> ${teams.visitante}</div>
+      <div class="tip-card__teams">${buildMatchTitleHtml(teams.casa, teams.visitante, "x", crests.casa, crests.visitante)}</div>
       <div class="tip-card__prob">
         <span class="tip-card__prob-value ${probClass}">${prob}%</span>
         <span class="tip-card__prob-label">${palpite?.tipo === "WINNER" ? "vitória" : "probabilidade"} — <strong>${palpite?.tipo === "WINNER" ? (jogo.favorito?.nome || "—") : (palpite?.opcao || "—")}</strong></span>
