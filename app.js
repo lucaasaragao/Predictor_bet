@@ -1063,7 +1063,7 @@ function renderTipsSection(data) {
       <div class="tip-card__teams">${buildMatchTitleHtml(teams.casa, teams.visitante, "x", crests.casa, crests.visitante)}</div>
       <div class="tip-card__prob">
         <span class="tip-card__prob-value ${probClass}">${prob}%</span>
-        <span class="tip-card__prob-label">${palpite?.tipo === "WINNER" ? "vitória" : "probabilidade"} — <strong>${palpite?.tipo === "WINNER" ? (jogo.favorito?.nome || "—") : (palpite?.opcao || "—")}</strong></span>
+        <span class="tip-card__prob-label">${palpite?.tipo === "WINNER" ? "vitória" : translateTipType(palpite?.tipo || "")}: <strong>${palpite?.tipo === "WINNER" ? (jogo.favorito?.nome || "-") : translateTipOption(palpite?.tipo, palpite?.opcao, jogo)}</strong></span>
       </div>
       <div class="tip-card__bet">
         <span class="tip-card__bet-label">Apostar em</span>
