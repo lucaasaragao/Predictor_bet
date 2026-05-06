@@ -1032,6 +1032,7 @@ function renderTipsSection(data) {
 
   topDicas.forEach(({ jogo, palpite }, index) => {
     const teams = getTeamNames(jogo);
+    const crests = getTeamCrests(jogo);
     const prob = Math.round((palpite?.probabilidade || 0) * 100);
     const bestBet = palpite ? translateTipOption(palpite.tipo, palpite.opcao, jogo) : "—";
     const confidenceTone = palpite ? confidenceClass(palpite.confianca) : "low";
@@ -1059,10 +1060,10 @@ function renderTipsSection(data) {
         <span class="tip-card__competition">${jogo.competicao}</span>
         <span class="conf ${confidenceTone} tip-card__conf">${confidenceText}</span>
       </div>
-      <div class="tip-card__teams">${teams.casa} <span class="tip-card__vs">x</span> ${teams.visitante}</div>
+      <div class="tip-card__teams">${buildMatchTitleHtml(teams.casa, teams.visitante, "x", crests.casa, crests.visitante)}</div>
       <div class="tip-card__prob">
         <span class="tip-card__prob-value ${probClass}">${prob}%</span>
-        <span class="tip-card__prob-label">${palpite?.tipo === "WINNER" ? "vitória" : "probabilidade"} — <strong>${palpite?.tipo === "WINNER" ? (jogo.favorito?.nome || "—") : (palpite?.opcao || "—")}</strong></span>
+        <span class="tip-card__prob-label">${palpite?.tipo === "WINNER" ? "vitória" : translateTipType(palpite?.tipo || "")}: <strong>${palpite?.tipo === "WINNER" ? (jogo.favorito?.nome || "-") : translateTipOption(palpite?.tipo, palpite?.opcao, jogo)}</strong></span>
       </div>
       <div class="tip-card__bet">
         <span class="tip-card__bet-label">Apostar em</span>
@@ -1484,6 +1485,13 @@ function renderTipsSectionNba(data) {
     const probClass = prob >= 70 ? "tip-card__prob-value--high" : prob >= 55 ? "tip-card__prob-value--mid" : "tip-card__prob-value--low";
     const resultado = palpite?.resultado_verificador;
 
+    const abrevCasa = jogo.times.abrev_casa || "";
+    const abrevVisit = jogo.times.abrev_visit || "";
+    const logoCasa = abrevCasa ? `https://a.espncdn.com/i/teamlogos/nba/500/${abrevCasa.toLowerCase()}.png` : "";
+    const logoVisit = abrevVisit ? `https://a.espncdn.com/i/teamlogos/nba/500/${abrevVisit.toLowerCase()}.png` : "";
+    const nomeCasa = jogo.times.casa || abrevCasa;
+    const nomeVisit = jogo.times.visitante || abrevVisit;
+
     let resultMark = "";
     if (resultado === "ACERTO") {
       resultMark = '<span class="tip-card__result tip-card__result--acerto">✅ Acerto</span>';
@@ -1499,11 +1507,7 @@ function renderTipsSectionNba(data) {
         <span class="tip-card__competition">NBA</span>
         <span class="conf ${confidenceTone} tip-card__conf">${confidenceText}</span>
       </div>
-      <div class="tip-card__teams">
-        ${jogo.times.abrev_casa || jogo.times.casa}
-        <span class="tip-card__vs">x</span>
-        ${jogo.times.abrev_visit || jogo.times.visitante}
-      </div>
+      <div class="tip-card__teams">${buildMatchTitleHtml(nomeCasa, nomeVisit, "x", logoCasa, logoVisit)}</div>
       <div class="tip-card__prob">
         <span class="tip-card__prob-value ${probClass}">${prob}%</span>
         <span class="tip-card__prob-label">${palpite?.tipo === "WINNER" ? "vitória" : "probabilidade"} — <strong>${palpite?.tipo === "WINNER" ? (jogo.favorito?.nome || "—") : (palpite?.opcao || "—")}</strong></span>
@@ -1536,13 +1540,22 @@ function renderCardsNba() {
     card.setAttribute("tabindex", "0");
     card.setAttribute("aria-expanded", "false");
 
+    // Logos dos times via ESPN CDN
+    const abrevCasa = match.times.abrev_casa || "";
+    const abrevVisit = match.times.abrev_visit || "";
+    const logoCasa = abrevCasa ? `https://a.espncdn.com/i/teamlogos/nba/500/${abrevCasa.toLowerCase()}.png` : "";
+    const logoVisit = abrevVisit ? `https://a.espncdn.com/i/teamlogos/nba/500/${abrevVisit.toLowerCase()}.png` : "";
+
     // Título com placar se disponível
-    let titulo = `${match.times.abrev_casa} x ${match.times.abrev_visit}`;
+    let vsLabel = "x";
+    let nomeCasa = match.times.casa || abrevCasa;
+    let nomeVisit = match.times.visitante || abrevVisit;
     if (match.status === "FINISHED" && match.placar_casa !== null) {
-      titulo = `${match.times.abrev_casa} ${match.placar_casa} x ${match.placar_visitante} ${match.times.abrev_visit}`;
+      vsLabel = `${match.placar_casa} x ${match.placar_visitante}`;
     } else if (match.status === "IN_PLAY") {
-      titulo = `${match.times.abrev_casa} ${match.placar_casa ?? 0} x ${match.placar_visitante ?? 0} ${match.times.abrev_visit}`;
+      vsLabel = `${match.placar_casa ?? 0} x ${match.placar_visitante ?? 0}`;
     }
+    const titulo = buildMatchTitleHtml(nomeCasa, nomeVisit, vsLabel, logoCasa, logoVisit);
 
     // Badge de status
     let badgeHtml = "";
