@@ -2,23 +2,28 @@
   "dias": [
     {
       "data": "2026-05-06",
-      "ultima_atualizacao": "2026-05-06T21:00:54-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.333,
-      "total_acertos": 1,
-      "total_palpites": 3,
+      "ultima_atualizacao": "2026-05-06T22:06:40-03:00",
+      "finalizados": 3,
+      "taxa_geral": 0.4,
+      "total_acertos": 4,
+      "total_palpites": 10,
       "mercados": {
         "WINNER": {
           "acertos": 0,
-          "total": 1,
+          "total": 3,
           "taxa": 0.0
         },
         "OVER_UNDER": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
+          "acertos": 2,
+          "total": 3,
+          "taxa": 0.667
         },
         "BTTS": {
+          "acertos": 1,
+          "total": 3,
+          "taxa": 0.333
+        },
+        "EMPATE": {
           "acertos": 1,
           "total": 1,
           "taxa": 1.0
@@ -26,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 1,
-          "brier": 0.9438,
-          "log_loss": 1.537
+          "n": 3,
+          "brier": 0.7794,
+          "log_loss": 1.2598
         },
         "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.6124,
-          "log_loss": 1.5258
+          "n": 3,
+          "brier": 0.2922,
+          "log_loss": 0.8069
         },
         "BTTS": {
-          "n": 1,
-          "brier": 0.0555,
-          "log_loss": 0.2687
+          "n": 3,
+          "brier": 0.2346,
+          "log_loss": 0.6525
         }
       },
       "jogos": [
@@ -68,6 +73,73 @@
               "opcao": "YES",
               "confianca": "HIGH",
               "probabilidade": 0.764,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-06T22:00:00Z",
+          "casa": "Cusco",
+          "visitante": "Estudiantes LP",
+          "competicao": "Copa Libertadores",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.449,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.576,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.514,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-06T22:00:00Z",
+          "casa": "La Guaira",
+          "visitante": "Club Bolívar",
+          "competicao": "Copa Libertadores",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.404,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.709,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.62,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.349,
               "resultado": "ACERTO"
             }
           ]
