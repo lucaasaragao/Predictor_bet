@@ -1,130 +1,164 @@
 {
-  "generated_at": "2026-05-07T22:57:49-03:00",
-  "analysis_date": "2026-05-07",
-  "total_jogos": 3,
+  "generated_at": "2026-05-08T00:17:34-03:00",
+  "analysis_date": "2026-05-08",
+  "total_jogos": 4,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
   "odds_min_ev": 0.03,
   "jogos": [
     {
-      "competicao": "Copa Libertadores",
-      "data": "2026-05-07T22:00:00Z",
-      "status": "FINISHED",
+      "competicao": "Bundesliga",
+      "data": "2026-05-08T18:30:00Z",
+      "status": "TIMED",
       "placar_atual": {
-        "casa": 1,
-        "visitante": 1
+        "casa": null,
+        "visitante": null
       },
       "times": {
-        "casa": "Platense",
-        "visitante": "Peñarol",
-        "escudo_casa": "https://crests.football-data.org/7580.png",
-        "escudo_visitante": "https://crests.football-data.org/5184.png"
+        "casa": "Dortmund",
+        "visitante": "Frankfurt",
+        "escudo_casa": "https://crests.football-data.org/4.png",
+        "escudo_visitante": "https://crests.football-data.org/19.png"
       },
       "probabilidades": {
-        "casa": 0.5007513583156644,
-        "empate": 0.281290862699276,
-        "visitante": 0.21795777898505964
+        "casa": 0.5757234878584897,
+        "empate": 0.22815226850347564,
+        "visitante": 0.19612424363803463
       },
       "favorito": {
-        "nome": "Platense",
-        "prob": 0.5007513583156644,
-        "vantagem": 0.21946049561638842
+        "nome": "Dortmund",
+        "prob": 0.5757234878584897,
+        "vantagem": 0.34757121935501406
       },
       "gols_esperados": {
-        "casa": 1.5979257334183676,
-        "visitante": 0.9859709821428574,
-        "total": 2.583896715561225
+        "casa": 2.14568584522915,
+        "visitante": 1.2065401707085754,
+        "total": 3.3522260159377257
       },
       "mercados": {
-        "under_25": 0.5226194803944837,
-        "over_25": 0.47738051960551636,
-        "btts_yes": 0.5155147646026199,
-        "btts_no": 0.4844852353973801
+        "under_25": 0.3496527131569571,
+        "over_25": 0.6503472868430429,
+        "btts_yes": 0.630440205755388,
+        "btts_no": 0.36955979424461205
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.7037037037037036,
-          "ataque": 0.4,
-          "defesa": 0.4,
+          "forma_recente": 0.49090909090909085,
+          "ataque": 0.8800000000000001,
+          "defesa": 0.52,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.5862962962962963
+          "score_total": 0.6558181818181819
         },
         "visitante": {
-          "forma_recente": 0.14814814814814814,
-          "ataque": 0.2,
-          "defesa": 0.4,
+          "forma_recente": 0.4,
+          "ataque": 0.48,
+          "defesa": 0.44000000000000006,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.3218518518518519
+          "score_total": 0.48800000000000004
         }
       },
-      "leitura_rapida": "Platense favorito (50%, risco moderado). Mercado de gols equilibrado (xG total ≈2.6).",
+      "leitura_rapida": "Dortmund favorito (58%, risco moderado). Jogo mais aberto (xG total ≈3.4). Over 2.5 com 65%. | Forma recente: Frankfurt em baixa.",
       "tendencia": {
         "casa": "estavel",
-        "visitante": "estavel"
+        "visitante": "em baixa"
       },
       "alertas": [],
       "odds_debug": {
         "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
-        "competition": "Copa Libertadores",
-        "sport_key": "soccer_conmebol_libertadores",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
+        "competition": "Bundesliga",
+        "sport_key": "soccer_germany_bundesliga",
+        "odds_match_id": "cb630280897e2f77c787a961c6df64ff",
+        "bookmakers_outcomes": "3",
         "ev_filter": "fail",
         "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
       },
-      "odds_integradas": false,
+      "odds_integradas": true,
       "odds_valor_alto": false,
       "historico": {
         "casa": [
           {
-            "data": "29/04 22:00",
-            "mandante": "Platense",
-            "visitante": "Santa Fe",
-            "placar": "2 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "17/04 00:30",
-            "mandante": "Peñarol",
-            "visitante": "Platense",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "10/04 00:00",
-            "mandante": "Platense",
-            "visitante": "Corinthians",
-            "placar": "0 x 2",
+            "data": "03/05 15:30",
+            "mandante": "M'gladbach",
+            "visitante": "Dortmund",
+            "placar": "1 x 0",
             "resultado": "D",
             "resultado_label": "Derrota"
+          },
+          {
+            "data": "26/04 15:30",
+            "mandante": "Dortmund",
+            "visitante": "Freiburg",
+            "placar": "4 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "18/04 13:30",
+            "mandante": "Hoffenheim",
+            "visitante": "Dortmund",
+            "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "11/04 13:30",
+            "mandante": "Dortmund",
+            "visitante": "Leverkusen",
+            "placar": "0 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "04/04 16:30",
+            "mandante": "Stuttgart",
+            "visitante": "Dortmund",
+            "placar": "0 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
           }
         ],
         "visitante": [
           {
-            "data": "01/05 00:00",
-            "mandante": "Corinthians",
-            "visitante": "Peñarol",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "17/04 00:30",
-            "mandante": "Peñarol",
-            "visitante": "Platense",
+            "data": "02/05 13:30",
+            "mandante": "Frankfurt",
+            "visitante": "HSV",
             "placar": "1 x 2",
             "resultado": "D",
             "resultado_label": "Derrota"
           },
           {
-            "data": "10/04 02:00",
-            "mandante": "Santa Fe",
-            "visitante": "Peñarol",
+            "data": "25/04 13:30",
+            "mandante": "Augsburg",
+            "visitante": "Frankfurt",
             "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "18/04 16:30",
+            "mandante": "Frankfurt",
+            "visitante": "RB Leipzig",
+            "placar": "1 x 3",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "11/04 13:30",
+            "mandante": "Wolfsburg",
+            "visitante": "Frankfurt",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "05/04 15:30",
+            "mandante": "Frankfurt",
+            "visitante": "1. FC Köln",
+            "placar": "2 x 2",
             "resultado": "E",
             "resultado_label": "Empate"
           }
@@ -134,184 +168,200 @@
         {
           "tipo": "WINNER",
           "opcao": "1",
-          "probabilidade": 0.5007513583156644,
-          "confianca": "MEDIUM",
-          "justificativa": "Platense projeta ≈1.6 gol(s) vs ≈1.0 do adversário. Prob vitória: 50.1% (margem: 21.9 p.p.)",
-          "edge": 0.2195,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
+          "probabilidade": 0.5757234878584897,
+          "confianca": "HIGH",
+          "justificativa": "Dortmund projeta ≈2.1 gol(s) vs ≈1.2 do adversário. Prob vitória: 57.6% (margem: 34.8 p.p.)",
+          "edge": 0.3476,
+          "odd_decimal": 1.58,
+          "ev": -0.0915,
+          "ev_bruto": -0.0904,
+          "prob_mercado_justa": 0.6337,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
+          "resultado_verificador": null
         },
         {
           "tipo": "OVER_UNDER",
-          "opcao": "UNDER_2.5",
-          "probabilidade": 0.5226194803944837,
+          "opcao": "UNDER_3.5",
+          "probabilidade": 0.5698183904061039,
           "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.6. UNDER 2.5: 52.3% de probabilidade",
-          "edge": 0.0226,
+          "justificativa": "Gols esperados no jogo: ≈3.4. UNDER 3.5: 57.0% de probabilidade",
+          "edge": 0.0698,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
+          "resultado_verificador": null
         },
         {
           "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.4844852353973801,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.6 (casa) x 1.0 (fora). Ambas marcam - Nao: 48.4%",
-          "edge": -0.0155,
+          "opcao": "YES",
+          "probabilidade": 0.630440205755388,
+          "confianca": "MEDIUM",
+          "justificativa": "xG: 2.1 (casa) x 1.2 (fora). Ambas marcam - Sim: 63.0%",
+          "edge": 0.1304,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
+          "resultado_verificador": null
         }
       ]
     },
     {
-      "competicao": "Copa Libertadores",
-      "data": "2026-05-07T22:00:00Z",
-      "status": "FINISHED",
+      "competicao": "Serie A",
+      "data": "2026-05-08T18:45:00Z",
+      "status": "TIMED",
       "placar_atual": {
-        "casa": 2,
-        "visitante": 0
+        "casa": null,
+        "visitante": null
       },
       "times": {
-        "casa": "Mirassol",
-        "visitante": "LDU de Quito",
-        "escudo_casa": "https://crests.football-data.org/4364.png",
-        "escudo_visitante": "https://crests.football-data.org/4528.png"
+        "casa": "Torino",
+        "visitante": "Sassuolo",
+        "escudo_casa": "https://crests.football-data.org/586.png",
+        "escudo_visitante": "https://crests.football-data.org/471.png"
       },
       "probabilidades": {
-        "casa": 0.40551148821418376,
-        "empate": 0.32999439225696175,
-        "visitante": 0.26449411952885454
+        "casa": 0.6207003071295945,
+        "empate": 0.2239389631697302,
+        "visitante": 0.15536072970067547
       },
       "favorito": {
-        "nome": "Mirassol",
-        "prob": 0.40551148821418376,
-        "vantagem": 0.075517095957222
+        "nome": "Torino",
+        "prob": 0.6207003071295945,
+        "vantagem": 0.3967613439598643
       },
       "gols_esperados": {
-        "casa": 1.1892521405591168,
-        "visitante": 0.9133404195011338,
-        "total": 2.1025925600602506
+        "casa": 2.135,
+        "visitante": 1.0002490909090909,
+        "total": 3.135249090909091
       },
       "mercados": {
-        "under_25": 0.6489573796288219,
-        "over_25": 0.35104262037117806,
-        "btts_yes": 0.4337481811202137,
-        "btts_no": 0.5662518188797863
+        "under_25": 0.3942337015781565,
+        "over_25": 0.6057662984218435,
+        "btts_yes": 0.5694233456984202,
+        "btts_no": 0.43057665430157976
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.5454545454545454,
-          "ataque": 0.48,
-          "defesa": 0.6799999999999999,
+          "forma_recente": 0.5,
+          "ataque": 1.0,
+          "defesa": 0.6,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.606909090909091
+          "score_total": 0.705
         },
         "visitante": {
-          "forma_recente": 0.6296296296296297,
-          "ataque": 0.2,
-          "defesa": 0.8,
+          "forma_recente": 0.6181818181818183,
+          "ataque": 0.3,
+          "defesa": 0.5,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.5703703703703704
+          "score_total": 0.5313636363636364
         }
       },
-      "leitura_rapida": "Mirassol favorito (41%, risco alto). Jogo fechado esperado (xG total ≈2.1). Under 2.5 com 65%.",
+      "leitura_rapida": "Torino favorito (62%, risco forte). Jogo mais aberto (xG total ≈3.1). Over 2.5 com 61%. | Forma recente: Torino em baixa.",
       "tendencia": {
-        "casa": "estavel",
+        "casa": "em baixa",
         "visitante": "estavel"
       },
-      "alertas": [
-        "Mirassol jogou recentemente — possível desgaste físico."
-      ],
+      "alertas": [],
       "odds_debug": {
         "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (7.6 p.p. < 10.0 p.p.)",
-        "competition": "Copa Libertadores",
-        "sport_key": "soccer_conmebol_libertadores",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
+        "competition": "Serie A",
+        "sport_key": "soccer_italy_serie_a",
+        "odds_match_id": "1dc1f73ee86044140d5314edafdf5650",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%"
       },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
+      "odds_integradas": true,
+      "odds_valor_alto": true,
       "historico": {
         "casa": [
           {
-            "data": "03/05 23:30",
-            "mandante": "Mirassol",
-            "visitante": "Corinthians",
+            "data": "02/05 13:00",
+            "mandante": "Udinese",
+            "visitante": "Torino",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "26/04 16:00",
+            "mandante": "Torino",
+            "visitante": "Inter",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "19/04 10:30",
+            "mandante": "Cremonese",
+            "visitante": "Torino",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "11/04 13:00",
+            "mandante": "Torino",
+            "visitante": "Verona",
             "placar": "2 x 1",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
           {
-            "data": "29/04 22:00",
-            "mandante": "Mirassol",
-            "visitante": "Always Ready",
-            "placar": "2 x 0",
+            "data": "05/04 16:00",
+            "mandante": "AC Pisa",
+            "visitante": "Torino",
+            "placar": "0 x 1",
             "resultado": "V",
             "resultado_label": "Vitoria"
-          },
-          {
-            "data": "26/04 00:00",
-            "mandante": "São Paulo",
-            "visitante": "Mirassol",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "19/04 14:00",
-            "mandante": "Internacional",
-            "visitante": "Mirassol",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "15/04 02:00",
-            "mandante": "LDU de Quito",
-            "visitante": "Mirassol",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
           }
         ],
         "visitante": [
           {
-            "data": "28/04 22:00",
-            "mandante": "Lanús",
-            "visitante": "LDU de Quito",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "15/04 02:00",
-            "mandante": "LDU de Quito",
-            "visitante": "Mirassol",
+            "data": "03/05 13:00",
+            "mandante": "Sassuolo",
+            "visitante": "Milan",
             "placar": "2 x 0",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
           {
-            "data": "08/04 00:00",
-            "mandante": "Always Ready",
-            "visitante": "LDU de Quito",
-            "placar": "0 x 1",
+            "data": "26/04 10:30",
+            "mandante": "Fiorentina",
+            "visitante": "Sassuolo",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "17/04 16:30",
+            "mandante": "Sassuolo",
+            "visitante": "Como 1907",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "12/04 10:30",
+            "mandante": "Genoa",
+            "visitante": "Sassuolo",
+            "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "04/04 13:00",
+            "mandante": "Sassuolo",
+            "visitante": "Cagliari",
+            "placar": "2 x 1",
             "resultado": "V",
             "resultado_label": "Vitoria"
           }
@@ -321,115 +371,101 @@
         {
           "tipo": "WINNER",
           "opcao": "1",
-          "probabilidade": 0.40551148821418376,
-          "confianca": "LOW",
-          "justificativa": "Mirassol projeta ≈1.2 gol(s) vs ≈0.9 do adversário. Prob vitória: 40.6% (margem: 7.6 p.p.)",
-          "edge": 0.0755,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
+          "probabilidade": 0.6207003071295945,
+          "confianca": "HIGH",
+          "justificativa": "Torino projeta ≈2.1 gol(s) vs ≈1.0 do adversário. Prob vitória: 62.1% (margem: 39.7 p.p.)",
+          "edge": 0.3968,
+          "odd_decimal": 2.66,
+          "ev": 0.6441,
+          "ev_bruto": 0.6511,
+          "prob_mercado_justa": 0.3775,
+          "valor_esperado_positivo": true,
+          "resultado_verificador": null
         },
         {
           "tipo": "OVER_UNDER",
-          "opcao": "UNDER_2.5",
-          "probabilidade": 0.6489573796288219,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈2.1. UNDER 2.5: 64.9% de probabilidade",
-          "edge": 0.149,
+          "opcao": "OVER_2.5",
+          "probabilidade": 0.6057662984218435,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈3.1. OVER 2.5: 60.6% de probabilidade",
+          "edge": 0.1058,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
+          "resultado_verificador": null
         },
         {
           "tipo": "BTTS",
           "opcao": "NO",
-          "probabilidade": 0.5662518188797863,
+          "probabilidade": 0.43057665430157976,
           "confianca": "LOW",
-          "justificativa": "xG: 1.2 (casa) x 0.9 (fora). Ambas marcam - Nao: 56.6%",
-          "edge": 0.0663,
+          "justificativa": "xG: 2.1 (casa) x 1.0 (fora). Ambas marcam - Nao: 43.1%",
+          "edge": -0.0694,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "EMPATE",
-          "opcao": "X",
-          "probabilidade": 0.32999439225696175,
-          "confianca": "LOW",
-          "justificativa": "Ambas defesas solidas (68% / 80% de aproveitamento defensivo). Empate com 33.0% de probabilidade",
-          "edge": 0.0,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
+          "resultado_verificador": null
         }
       ]
     },
     {
-      "competicao": "Copa Libertadores",
-      "data": "2026-05-08T00:00:00Z",
-      "status": "PAUSED",
+      "competicao": "Ligue 1",
+      "data": "2026-05-08T18:45:00Z",
+      "status": "TIMED",
       "placar_atual": {
-        "casa": 0,
-        "visitante": 1
+        "casa": null,
+        "visitante": null
       },
       "times": {
-        "casa": "Coquimbo Unido",
-        "visitante": "Universitario",
-        "escudo_casa": "https://crests.football-data.org/7912.png",
-        "escudo_visitante": "https://crests.football-data.org/4268.png"
+        "casa": "RC Lens",
+        "visitante": "Nantes",
+        "escudo_casa": "https://crests.football-data.org/546.png",
+        "escudo_visitante": "https://crests.football-data.org/543.png"
       },
       "probabilidades": {
-        "casa": 0.3838224414461589,
-        "empate": 0.3328908873177281,
-        "visitante": 0.283286671236113
+        "casa": 0.7309550182469735,
+        "empate": 0.17819934298456486,
+        "visitante": 0.09084563876846166
       },
       "favorito": {
-        "nome": "Coquimbo Unido",
-        "prob": 0.3838224414461589,
-        "vantagem": 0.05093155412843081
+        "nome": "RC Lens",
+        "prob": 0.7309550182469735,
+        "vantagem": 0.5527556752624087
       },
       "gols_esperados": {
-        "casa": 1.145281777777778,
-        "visitante": 0.9492444444444447,
-        "total": 2.0945262222222225
+        "casa": 2.4874913687524596,
+        "visitante": 0.8032116489571036,
+        "total": 3.2907030177095633
       },
       "mercados": {
-        "under_25": 0.6511315406794798,
-        "over_25": 0.3488684593205202,
-        "btts_yes": 0.4353562168501024,
-        "btts_no": 0.5646437831498976
+        "under_25": 0.36279381872564775,
+        "over_25": 0.6372061812743522,
+        "btts_yes": 0.5157398546524498,
+        "btts_no": 0.48426014534755024
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.48148148148148145,
-          "ataque": 0.4,
-          "defesa": 0.6,
+          "forma_recente": 0.5454545454545454,
+          "ataque": 1.0,
+          "defesa": 0.4,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.5485185185185185
+          "score_total": 0.680909090909091
         },
         "visitante": {
-          "forma_recente": 0.5185185185185185,
-          "ataque": 0.0,
-          "defesa": 1.0,
+          "forma_recente": 0.36363636363636365,
+          "ataque": 0.08,
+          "defesa": 0.52,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.5214814814814815
+          "score_total": 0.39127272727272727
         }
       },
-      "leitura_rapida": "Coquimbo Unido favorito (38%, risco alto). Jogo fechado esperado (xG total ≈2.1). Under 2.5 com 65%.",
+      "leitura_rapida": "RC Lens favorito (73%, risco forte). Jogo mais aberto (xG total ≈3.3). Over 2.5 com 64%.",
       "tendencia": {
         "casa": "estavel",
         "visitante": "estavel"
@@ -437,63 +473,97 @@
       "alertas": [],
       "odds_debug": {
         "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (5.1 p.p. < 10.0 p.p.)",
-        "competition": "Copa Libertadores",
-        "sport_key": "soccer_conmebol_libertadores",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
+        "competition": "Ligue 1",
+        "sport_key": "soccer_france_ligue_one",
+        "odds_match_id": "e2d2faee1fcdd5f9af7d47b47e5b00ae",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%"
       },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
+      "odds_integradas": true,
+      "odds_valor_alto": true,
       "historico": {
         "casa": [
           {
-            "data": "29/04 02:00",
-            "mandante": "Tolima",
-            "visitante": "Coquimbo Unido",
+            "data": "02/05 19:05",
+            "mandante": "Nice",
+            "visitante": "RC Lens",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "24/04 18:45",
+            "mandante": "Brest",
+            "visitante": "RC Lens",
+            "placar": "3 x 3",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "17/04 18:45",
+            "mandante": "RC Lens",
+            "visitante": "Toulouse",
+            "placar": "3 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "04/04 19:05",
+            "mandante": "Lille",
+            "visitante": "RC Lens",
             "placar": "3 x 0",
             "resultado": "D",
             "resultado_label": "Derrota"
           },
           {
-            "data": "15/04 02:00",
-            "mandante": "Universitario",
-            "visitante": "Coquimbo Unido",
-            "placar": "0 x 2",
+            "data": "20/03 19:45",
+            "mandante": "RC Lens",
+            "visitante": "Angers SCO",
+            "placar": "5 x 1",
             "resultado": "V",
             "resultado_label": "Vitoria"
-          },
-          {
-            "data": "08/04 22:00",
-            "mandante": "Coquimbo Unido",
-            "visitante": "Club Nacional",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
           }
         ],
         "visitante": [
           {
-            "data": "30/04 02:00",
-            "mandante": "Universitario",
-            "visitante": "Club Nacional",
-            "placar": "4 x 2",
+            "data": "02/05 13:00",
+            "mandante": "Nantes",
+            "visitante": "Marseille",
+            "placar": "3 x 0",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
           {
-            "data": "15/04 02:00",
-            "mandante": "Universitario",
-            "visitante": "Coquimbo Unido",
-            "placar": "0 x 2",
+            "data": "26/04 15:15",
+            "mandante": "Stade Rennais",
+            "visitante": "Nantes",
+            "placar": "2 x 1",
             "resultado": "D",
             "resultado_label": "Derrota"
           },
           {
-            "data": "08/04 02:00",
-            "mandante": "Tolima",
-            "visitante": "Universitario",
+            "data": "22/04 17:00",
+            "mandante": "PSG",
+            "visitante": "Nantes",
+            "placar": "3 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "19/04 15:15",
+            "mandante": "Nantes",
+            "visitante": "Brest",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "11/04 17:00",
+            "mandante": "Auxerre",
+            "visitante": "Nantes",
             "placar": "0 x 0",
             "resultado": "E",
             "resultado_label": "Empate"
@@ -504,24 +574,24 @@
         {
           "tipo": "WINNER",
           "opcao": "1",
-          "probabilidade": 0.3838224414461589,
-          "confianca": "LOW",
-          "justificativa": "Coquimbo Unido projeta ≈1.1 gol(s) vs ≈0.9 do adversário. Prob vitória: 38.4% (margem: 5.1 p.p.)",
-          "edge": 0.0509,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
+          "probabilidade": 0.7309550182469735,
+          "confianca": "HIGH",
+          "justificativa": "RC Lens projeta ≈2.5 gol(s) vs ≈0.8 do adversário. Prob vitória: 73.1% (margem: 55.3 p.p.)",
+          "edge": 0.5528,
+          "odd_decimal": 1.48,
+          "ev": 0.084,
+          "ev_bruto": 0.0818,
+          "prob_mercado_justa": 0.6743,
+          "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
         {
           "tipo": "OVER_UNDER",
-          "opcao": "UNDER_2.5",
-          "probabilidade": 0.6511315406794798,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈2.1. UNDER 2.5: 65.1% de probabilidade",
-          "edge": 0.1511,
+          "opcao": "UNDER_3.5",
+          "probabilidade": 0.5848056888560367,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈3.3. UNDER 3.5: 58.5% de probabilidade",
+          "edge": 0.0848,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
@@ -532,10 +602,183 @@
         {
           "tipo": "BTTS",
           "opcao": "NO",
-          "probabilidade": 0.5646437831498976,
+          "probabilidade": 0.48426014534755024,
           "confianca": "LOW",
-          "justificativa": "xG: 1.1 (casa) x 0.9 (fora). Ambas marcam - Nao: 56.5%",
-          "edge": 0.0646,
+          "justificativa": "xG: 2.5 (casa) x 0.8 (fora). Ambas marcam - Nao: 48.4%",
+          "edge": -0.0157,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Primera Division",
+      "data": "2026-05-08T19:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Levante",
+        "visitante": "Osasuna",
+        "escudo_casa": "https://crests.football-data.org/88.png",
+        "escudo_visitante": "https://crests.football-data.org/79.png"
+      },
+      "probabilidades": {
+        "casa": 0.6975809532531928,
+        "empate": 0.19867358807719196,
+        "visitante": 0.10374545866961532
+      },
+      "favorito": {
+        "nome": "Levante",
+        "prob": 0.6975809532531928,
+        "vantagem": 0.49890736517600087
+      },
+      "gols_esperados": {
+        "casa": 2.27882364200141,
+        "visitante": 0.7929269959638668,
+        "total": 3.071750637965277
+      },
+      "mercados": {
+        "under_25": 0.40830914475900904,
+        "over_25": 0.591690855240991,
+        "btts_yes": 0.5021907348691687,
+        "btts_no": 0.49780926513083135
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.5454545454545455,
+          "ataque": 0.8,
+          "defesa": 0.76,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.702909090909091
+        },
+        "visitante": {
+          "forma_recente": 0.41818181818181815,
+          "ataque": 0.3,
+          "defesa": 0.30000000000000004,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.42136363636363633
+        }
+      },
+      "leitura_rapida": "Levante favorito (70%, risco forte). Jogo mais aberto (xG total ≈3.1). Over 2.5 com 59%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "alertas": [],
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Primera Division",
+        "sport_key": "soccer_spain_la_liga",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "02/05 12:00",
+            "mandante": "Villarreal",
+            "visitante": "Levante",
+            "placar": "5 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "27/04 19:00",
+            "mandante": "Espanyol",
+            "visitante": "Levante",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "23/04 17:00",
+            "mandante": "Levante",
+            "visitante": "Sevilla FC",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "13/04 19:00",
+            "mandante": "Levante",
+            "visitante": "Getafe",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "04/04 12:00",
+            "mandante": "Real Sociedad",
+            "visitante": "Levante",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "02/05 19:00",
+            "mandante": "Osasuna",
+            "visitante": "Barça",
+            "placar": "1 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "26/04 16:30",
+            "mandante": "Osasuna",
+            "visitante": "Sevilla FC",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "21/04 17:00",
+            "mandante": "Athletic",
+            "visitante": "Osasuna",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "12/04 12:00",
+            "mandante": "Osasuna",
+            "visitante": "Real Betis",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "05/04 19:00",
+            "mandante": "Alavés",
+            "visitante": "Osasuna",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.6975809532531928,
+          "confianca": "HIGH",
+          "justificativa": "Levante projeta ≈2.3 gol(s) vs ≈0.8 do adversário. Prob vitória: 69.8% (margem: 49.9 p.p.)",
+          "edge": 0.4989,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
@@ -544,12 +787,26 @@
           "resultado_verificador": null
         },
         {
-          "tipo": "EMPATE",
-          "opcao": "X",
-          "probabilidade": 0.3328908873177281,
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_2.5",
+          "probabilidade": 0.591690855240991,
           "confianca": "LOW",
-          "justificativa": "Ambas defesas solidas (60% / 100% de aproveitamento defensivo). Empate com 33.3% de probabilidade",
-          "edge": 0.0,
+          "justificativa": "Gols esperados no jogo: ≈3.1. OVER 2.5: 59.2% de probabilidade",
+          "edge": 0.0917,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.49780926513083135,
+          "confianca": "LOW",
+          "justificativa": "xG: 2.3 (casa) x 0.8 (fora). Ambas marcam - Nao: 49.8%",
+          "edge": -0.0022,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
@@ -561,23 +818,23 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 4,
-    "total": 7,
-    "taxa": 0.571
+    "acertos": 0,
+    "total": 0,
+    "taxa": null
   },
   "daily_tips_ids": [
     {
-      "casa": "Coquimbo Unido",
-      "visitante": "Universitario",
-      "data": "2026-05-08T00:00:00Z",
-      "tipo": "OVER_UNDER",
-      "opcao": "UNDER_2.5",
-      "probabilidade": 0.6511315406794798
+      "casa": "RC Lens",
+      "visitante": "Nantes",
+      "data": "2026-05-08T18:45:00Z",
+      "tipo": "WINNER",
+      "opcao": "1",
+      "probabilidade": 0.7309550182469735
     }
   ],
-  "daily_tips_date": "2026-05-07",
+  "daily_tips_date": "2026-05-08",
   "recovery_tip": {
     "ativo": false
   },
-  "recovery_tip_date": "2026-05-07"
+  "recovery_tip_date": "2026-05-08"
 }
