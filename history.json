@@ -2,30 +2,77 @@
   "dias": [
     {
       "data": "2026-05-08",
-      "ultima_atualizacao": "2026-05-08T17:06:47-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-05-08T17:33:58-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.667,
+      "total_acertos": 2,
+      "total_palpites": 3,
+      "mercados": {
+        "WINNER": {
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.2705,
+          "log_loss": 0.5521
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.1223,
+          "log_loss": 0.4302
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.1366,
+          "log_loss": 0.4613
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-05-08T18:30:00Z",
+          "casa": "Dortmund",
+          "visitante": "Frankfurt",
+          "competicao": "Bundesliga",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.576,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.57,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.63,
+              "resultado": "ACERTO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-05-07",
