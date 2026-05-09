@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-09",
-      "ultima_atualizacao": "2026-05-09T12:29:14-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.222,
-      "total_acertos": 2,
-      "total_palpites": 9,
+      "ultima_atualizacao": "2026-05-09T12:52:49-03:00",
+      "finalizados": 7,
+      "taxa_geral": 0.524,
+      "total_acertos": 11,
+      "total_palpites": 21,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "acertos": 5,
+          "total": 7,
+          "taxa": 0.714
         },
         "OVER_UNDER": {
-          "acertos": 0,
-          "total": 3,
-          "taxa": 0.0
+          "acertos": 3,
+          "total": 7,
+          "taxa": 0.429
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "acertos": 3,
+          "total": 7,
+          "taxa": 0.429
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 3,
-          "brier": 1.0461,
-          "log_loss": 1.7371
+          "n": 7,
+          "brier": 0.616,
+          "log_loss": 1.0736
         },
         "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.3379,
-          "log_loss": 0.9137
+          "n": 7,
+          "brier": 0.2478,
+          "log_loss": 0.7032
         },
         "BTTS": {
-          "n": 3,
-          "brier": 0.1965,
-          "log_loss": 0.5764
+          "n": 7,
+          "brier": 0.2109,
+          "log_loss": 0.6095
         }
       },
       "jogos": [
@@ -128,6 +128,126 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.584,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-09T13:30:00Z",
+          "casa": "Augsburg",
+          "visitante": "M'gladbach",
+          "competicao": "Bundesliga",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.552,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.519,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.702,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-09T13:30:00Z",
+          "casa": "Stuttgart",
+          "visitante": "Leverkusen",
+          "competicao": "Bundesliga",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.6,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.52,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.657,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-09T13:30:00Z",
+          "casa": "RB Leipzig",
+          "visitante": "St. Pauli",
+          "competicao": "Bundesliga",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.725,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.596,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.488,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-09T13:30:00Z",
+          "casa": "Hoffenheim",
+          "visitante": "Bremen",
+          "competicao": "Bundesliga",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.416,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.579,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.665,
               "resultado": "ERRO"
             }
           ]
