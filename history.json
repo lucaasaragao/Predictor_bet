@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-05-09",
-      "ultima_atualizacao": "2026-05-09T12:52:49-03:00",
-      "finalizados": 7,
-      "taxa_geral": 0.524,
-      "total_acertos": 11,
-      "total_palpites": 21,
+      "ultima_atualizacao": "2026-05-09T13:13:57-03:00",
+      "finalizados": 10,
+      "taxa_geral": 0.581,
+      "total_acertos": 18,
+      "total_palpites": 31,
       "mercados": {
         "WINNER": {
-          "acertos": 5,
-          "total": 7,
-          "taxa": 0.714
+          "acertos": 6,
+          "total": 10,
+          "taxa": 0.6
         },
         "OVER_UNDER": {
-          "acertos": 3,
-          "total": 7,
-          "taxa": 0.429
+          "acertos": 6,
+          "total": 10,
+          "taxa": 0.6
         },
         "BTTS": {
-          "acertos": 3,
-          "total": 7,
-          "taxa": 0.429
+          "acertos": 6,
+          "total": 10,
+          "taxa": 0.6
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 7,
-          "brier": 0.616,
-          "log_loss": 1.0736
+          "n": 10,
+          "brier": 0.5991,
+          "log_loss": 1.0306
         },
         "OVER_UNDER": {
-          "n": 7,
-          "brier": 0.2478,
-          "log_loss": 0.7032
+          "n": 10,
+          "brier": 0.2332,
+          "log_loss": 0.6694
         },
         "BTTS": {
-          "n": 7,
-          "brier": 0.2109,
-          "log_loss": 0.6095
+          "n": 10,
+          "brier": 0.2228,
+          "log_loss": 0.6348
         }
       },
       "jogos": [
@@ -249,6 +254,103 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.665,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-09T14:00:00Z",
+          "casa": "Sunderland",
+          "visitante": "Man United",
+          "competicao": "Premier League",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "HIGH",
+              "probabilidade": 0.524,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.481,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-09T14:00:00Z",
+          "casa": "Fulham",
+          "visitante": "Bournemouth",
+          "competicao": "Premier League",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.382,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.566,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.494,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.309,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-09T14:00:00Z",
+          "casa": "Brighton Hove",
+          "visitante": "Wolverhampton",
+          "competicao": "Premier League",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.727,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.591,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.525,
+              "resultado": "ACERTO"
             }
           ]
         }
