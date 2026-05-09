@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-05-09",
-      "ultima_atualizacao": "2026-05-09T15:12:23-03:00",
-      "finalizados": 11,
-      "taxa_geral": 0.559,
-      "total_acertos": 19,
-      "total_palpites": 34,
+      "ultima_atualizacao": "2026-05-09T15:37:07-03:00",
+      "finalizados": 15,
+      "taxa_geral": 0.5,
+      "total_acertos": 23,
+      "total_palpites": 46,
       "mercados": {
         "WINNER": {
-          "acertos": 7,
-          "total": 11,
-          "taxa": 0.636
+          "acertos": 9,
+          "total": 15,
+          "taxa": 0.6
         },
         "OVER_UNDER": {
-          "acertos": 6,
-          "total": 11,
-          "taxa": 0.545
+          "acertos": 8,
+          "total": 15,
+          "taxa": 0.533
         },
         "BTTS": {
           "acertos": 6,
-          "total": 11,
-          "taxa": 0.545
+          "total": 15,
+          "taxa": 0.4
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 11,
-          "brier": 0.5736,
-          "log_loss": 0.9927
+          "n": 15,
+          "brier": 0.5714,
+          "log_loss": 0.9807
         },
         "OVER_UNDER": {
-          "n": 11,
-          "brier": 0.2351,
-          "log_loss": 0.6723
+          "n": 15,
+          "brier": 0.2504,
+          "log_loss": 0.7045
         },
         "BTTS": {
-          "n": 11,
-          "brier": 0.2239,
-          "log_loss": 0.6374
+          "n": 15,
+          "brier": 0.2857,
+          "log_loss": 0.7688
         }
       },
       "jogos": [
@@ -380,6 +380,126 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.485,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-09T16:00:00Z",
+          "casa": "Lazio",
+          "visitante": "Inter",
+          "competicao": "Serie A",
+          "placar": "0-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.472,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.52,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.697,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-09T16:30:00Z",
+          "casa": "Man City",
+          "visitante": "Brentford",
+          "competicao": "Premier League",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.447,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.603,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.63,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-09T16:30:00Z",
+          "casa": "Wolfsburg",
+          "visitante": "Bayern",
+          "competicao": "Bundesliga",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.507,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.558,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.74,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-09T16:30:00Z",
+          "casa": "Atleti",
+          "visitante": "Celta",
+          "competicao": "Primera Division",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.388,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.589,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.627,
               "resultado": "ERRO"
             }
           ]
