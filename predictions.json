@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T11:12:45-03:00",
+  "generated_at": "2026-05-09T11:36:57-03:00",
   "analysis_date": "2026-05-09",
   "total_jogos": 20,
   "odds_debug_visual": false,
@@ -9,7 +9,7 @@
     {
       "competicao": "Premier League",
       "data": "2026-05-09T11:30:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
         "visitante": 2
@@ -214,7 +214,7 @@
     {
       "competicao": "Primera Division",
       "data": "2026-05-09T12:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
         "visitante": 1
@@ -382,7 +382,7 @@
           "ev_bruto": 0.4765,
           "prob_mercado_justa": 0.4271,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -396,7 +396,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -410,17 +410,17 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
     {
       "competicao": "Serie A",
       "data": "2026-05-09T13:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
         "casa": 0,
-        "visitante": 0
+        "visitante": 1
       },
       "times": {
         "casa": "Cagliari",
@@ -618,9 +618,9 @@
     {
       "competicao": "Bundesliga",
       "data": "2026-05-09T13:30:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "placar_atual": {
-        "casa": 0,
+        "casa": 2,
         "visitante": 0
       },
       "times": {
@@ -819,9 +819,9 @@
     {
       "competicao": "Bundesliga",
       "data": "2026-05-09T13:30:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "placar_atual": {
-        "casa": 0,
+        "casa": 2,
         "visitante": 1
       },
       "times": {
@@ -1022,9 +1022,9 @@
     {
       "competicao": "Bundesliga",
       "data": "2026-05-09T13:30:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "placar_atual": {
-        "casa": 0,
+        "casa": 1,
         "visitante": 0
       },
       "times": {
@@ -1225,9 +1225,9 @@
     {
       "competicao": "Bundesliga",
       "data": "2026-05-09T13:30:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "placar_atual": {
-        "casa": 0,
+        "casa": 1,
         "visitante": 0
       },
       "times": {
@@ -1426,10 +1426,10 @@
     {
       "competicao": "Premier League",
       "data": "2026-05-09T14:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Sunderland",
@@ -1629,10 +1629,10 @@
     {
       "competicao": "Premier League",
       "data": "2026-05-09T14:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Fulham",
@@ -1844,10 +1844,10 @@
     {
       "competicao": "Premier League",
       "data": "2026-05-09T14:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 2,
+        "visitante": 0
       },
       "times": {
         "casa": "Brighton Hove",
@@ -2047,10 +2047,10 @@
     {
       "competicao": "Primera Division",
       "data": "2026-05-09T14:15:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Sevilla FC",
@@ -4092,9 +4092,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 3,
-    "taxa": 0.0
+    "acertos": 1,
+    "total": 6,
+    "taxa": 0.167
   },
   "daily_tips_ids": [
     {
