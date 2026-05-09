@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-05-09",
-      "ultima_atualizacao": "2026-05-09T18:05:09-03:00",
-      "finalizados": 15,
-      "taxa_geral": 0.5,
-      "total_acertos": 23,
-      "total_palpites": 46,
+      "ultima_atualizacao": "2026-05-09T18:27:07-03:00",
+      "finalizados": 18,
+      "taxa_geral": 0.518,
+      "total_acertos": 29,
+      "total_palpites": 56,
       "mercados": {
         "WINNER": {
-          "acertos": 9,
-          "total": 15,
-          "taxa": 0.6
+          "acertos": 10,
+          "total": 18,
+          "taxa": 0.556
         },
         "OVER_UNDER": {
-          "acertos": 8,
-          "total": 15,
-          "taxa": 0.533
+          "acertos": 10,
+          "total": 18,
+          "taxa": 0.556
         },
         "BTTS": {
-          "acertos": 6,
-          "total": 15,
-          "taxa": 0.4
+          "acertos": 8,
+          "total": 18,
+          "taxa": 0.444
         },
         "EMPATE": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 15,
-          "brier": 0.5714,
-          "log_loss": 0.9807
+          "n": 18,
+          "brier": 0.5931,
+          "log_loss": 1.0072
         },
         "OVER_UNDER": {
-          "n": 15,
-          "brier": 0.2504,
-          "log_loss": 0.7045
+          "n": 18,
+          "brier": 0.2459,
+          "log_loss": 0.6928
         },
         "BTTS": {
-          "n": 15,
-          "brier": 0.2857,
-          "log_loss": 0.7688
+          "n": 18,
+          "brier": 0.2743,
+          "log_loss": 0.7443
         }
       },
       "jogos": [
@@ -501,6 +501,103 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.627,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-09T18:45:00Z",
+          "casa": "Lecce",
+          "visitante": "Juventus",
+          "competicao": "Serie A",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.479,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.517,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.473,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-09T19:00:00Z",
+          "casa": "Real Sociedad",
+          "visitante": "Real Betis",
+          "competicao": "Primera Division",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.551,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.512,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.698,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-09T19:00:00Z",
+          "casa": "Coritiba",
+          "visitante": "Internacional",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.441,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.599,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.531,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.311,
+              "resultado": "ACERTO"
             }
           ]
         }
