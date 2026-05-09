@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T12:02:45-03:00",
+  "generated_at": "2026-05-09T12:29:14-03:00",
   "analysis_date": "2026-05-09",
   "total_jogos": 20,
   "odds_debug_visual": false,
@@ -9,7 +9,7 @@
     {
       "competicao": "Premier League",
       "data": "2026-05-09T11:30:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
         "visitante": 2
@@ -214,7 +214,7 @@
     {
       "competicao": "Primera Division",
       "data": "2026-05-09T12:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
         "visitante": 1
@@ -417,10 +417,10 @@
     {
       "competicao": "Serie A",
       "data": "2026-05-09T13:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 0,
-        "visitante": 1
+        "visitante": 2
       },
       "times": {
         "casa": "Cagliari",
@@ -583,7 +583,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -597,7 +597,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -611,17 +611,17 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
     {
       "competicao": "Bundesliga",
       "data": "2026-05-09T13:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 2,
-        "visitante": 0
+        "casa": 3,
+        "visitante": 1
       },
       "times": {
         "casa": "Augsburg",
@@ -819,9 +819,9 @@
     {
       "competicao": "Bundesliga",
       "data": "2026-05-09T13:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 2,
+        "casa": 3,
         "visitante": 1
       },
       "times": {
@@ -1022,10 +1022,10 @@
     {
       "competicao": "Bundesliga",
       "data": "2026-05-09T13:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 1,
-        "visitante": 0
+        "casa": 2,
+        "visitante": 1
       },
       "times": {
         "casa": "RB Leipzig",
@@ -1225,7 +1225,7 @@
     {
       "competicao": "Bundesliga",
       "data": "2026-05-09T13:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
         "casa": 1,
         "visitante": 0
@@ -1426,7 +1426,7 @@
     {
       "competicao": "Premier League",
       "data": "2026-05-09T14:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
         "casa": 0,
         "visitante": 0
@@ -1629,10 +1629,10 @@
     {
       "competicao": "Premier League",
       "data": "2026-05-09T14:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
         "casa": 0,
-        "visitante": 0
+        "visitante": 1
       },
       "times": {
         "casa": "Fulham",
@@ -1844,7 +1844,7 @@
     {
       "competicao": "Premier League",
       "data": "2026-05-09T14:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
         "casa": 2,
         "visitante": 0
@@ -2047,7 +2047,7 @@
     {
       "competicao": "Primera Division",
       "data": "2026-05-09T14:15:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "placar_atual": {
         "casa": 0,
         "visitante": 0
@@ -4092,9 +4092,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 1,
-    "total": 6,
-    "taxa": 0.167
+    "acertos": 2,
+    "total": 9,
+    "taxa": 0.222
   },
   "daily_tips_ids": [
     {

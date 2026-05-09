@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-09",
-      "ultima_atualizacao": "2026-05-09T12:02:45-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.167,
-      "total_acertos": 1,
-      "total_palpites": 6,
+      "ultima_atualizacao": "2026-05-09T12:29:14-03:00",
+      "finalizados": 3,
+      "taxa_geral": 0.222,
+      "total_acertos": 2,
+      "total_palpites": 9,
       "mercados": {
         "WINNER": {
-          "acertos": 0,
-          "total": 2,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 3,
+          "taxa": 0.333
         },
         "OVER_UNDER": {
           "acertos": 0,
-          "total": 2,
+          "total": 3,
           "taxa": 0.0
         },
         "BTTS": {
           "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "total": 3,
+          "taxa": 0.333
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 1.2955,
-          "log_loss": 2.143
+          "n": 3,
+          "brier": 1.0461,
+          "log_loss": 1.7371
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.3644,
-          "log_loss": 0.9891
+          "n": 3,
+          "brier": 0.3379,
+          "log_loss": 0.9137
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.1243,
-          "log_loss": 0.4263
+          "n": 3,
+          "brier": 0.1965,
+          "log_loss": 0.5764
         }
       },
       "jogos": [
@@ -99,6 +99,36 @@
               "confianca": "HIGH",
               "probabilidade": 0.749,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-09T13:00:00Z",
+          "casa": "Cagliari",
+          "visitante": "Udinese",
+          "competicao": "Serie A",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.396,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.534,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.584,
+              "resultado": "ERRO"
             }
           ]
         }
