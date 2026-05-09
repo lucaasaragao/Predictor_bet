@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T22:06:05-03:00",
+  "generated_at": "2026-05-08T22:50:31-03:00",
   "analysis_date": "2026-05-08",
   "total_jogos": 2,
   "temporada": 2025,
@@ -8,30 +8,30 @@
       "game_id": 21707974,
       "competicao": "NBA",
       "data": "2026-05-08T00:00:00.000Z",
-      "status": "SCHEDULED",
-      "status_display": "2026-05-09T01:30:00Z",
-      "periodo": 0,
-      "tempo": "",
+      "status": "IN_PLAY",
+      "status_display": "1st Qtr",
+      "periodo": 1,
+      "tempo": "Q1 10:32",
       "times": {
         "casa": "Minnesota Timberwolves",
         "visitante": "San Antonio Spurs",
         "abrev_casa": "MIN",
         "abrev_visit": "SAS"
       },
-      "placar_casa": null,
-      "placar_visitante": null,
+      "placar_casa": 0,
+      "placar_visitante": 4,
       "quarters": {
         "casa": [
-          null,
-          null,
-          null,
-          null
+          0,
+          0,
+          0,
+          0
         ],
         "visitante": [
-          null,
-          null,
-          null,
-          null
+          4,
+          0,
+          0,
+          0
         ]
       },
       "probabilidades": {
@@ -94,30 +94,30 @@
       "game_id": 21708677,
       "competicao": "NBA",
       "data": "2026-05-08T00:00:00.000Z",
-      "status": "IN_PLAY",
-      "status_display": "3rd Qtr",
-      "periodo": 3,
-      "tempo": "Q3 2:07",
+      "status": "FINISHED",
+      "status_display": "Final",
+      "periodo": 4,
+      "tempo": "Final",
       "times": {
         "casa": "Philadelphia 76ers",
         "visitante": "New York Knicks",
         "abrev_casa": "PHI",
         "abrev_visit": "NYK"
       },
-      "placar_casa": 76,
-      "placar_visitante": 80,
+      "placar_casa": 94,
+      "placar_visitante": 108,
       "quarters": {
         "casa": [
           31,
           21,
           24,
-          0
+          18
         ],
         "visitante": [
           27,
           33,
-          20,
-          0
+          25,
+          23
         ]
       },
       "probabilidades": {
@@ -153,7 +153,7 @@
           "confianca": "LOW",
           "justificativa": "Philadelphia 76ers favorito com 52.9% de chance (spread esperado: +0.7 pts).",
           "edge": 0.0576,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -163,7 +163,7 @@
           "confianca": "LOW",
           "justificativa": "Total esperado de 247.9 pts. Linha: 248.5. Tendência de UNDER.",
           "edge": 0.0058,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "SPREAD",
@@ -172,7 +172,7 @@
           "confianca": "LOW",
           "justificativa": "Philadelphia 76ers favorito por ~0.7 pontos.",
           "edge": 0.035,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     }
@@ -194,8 +194,8 @@
     "ativo": false
   },
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 1,
+    "total": 3,
+    "taxa": 0.3333
   }
 }
