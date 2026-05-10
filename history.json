@@ -2,25 +2,25 @@
   "dias": [
     {
       "data": "2026-05-10",
-      "ultima_atualizacao": "2026-05-10T20:18:26-03:00",
-      "finalizados": 35,
-      "taxa_geral": 0.441,
-      "total_acertos": 49,
-      "total_palpites": 111,
+      "ultima_atualizacao": "2026-05-10T20:39:11-03:00",
+      "finalizados": 37,
+      "taxa_geral": 0.453,
+      "total_acertos": 53,
+      "total_palpites": 117,
       "mercados": {
         "WINNER": {
-          "acertos": 13,
-          "total": 35,
-          "taxa": 0.371
+          "acertos": 14,
+          "total": 37,
+          "taxa": 0.378
         },
         "OVER_UNDER": {
-          "acertos": 16,
-          "total": 35,
-          "taxa": 0.457
+          "acertos": 18,
+          "total": 37,
+          "taxa": 0.486
         },
         "BTTS": {
-          "acertos": 18,
-          "total": 35,
+          "acertos": 19,
+          "total": 37,
           "taxa": 0.514
         },
         "EMPATE": {
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 35,
-          "brier": 0.6932,
-          "log_loss": 1.1232
+          "n": 37,
+          "brier": 0.695,
+          "log_loss": 1.1216
         },
         "OVER_UNDER": {
-          "n": 35,
-          "brier": 0.2338,
-          "log_loss": 0.6622
+          "n": 37,
+          "brier": 0.2323,
+          "log_loss": 0.6591
         },
         "BTTS": {
-          "n": 35,
-          "brier": 0.2125,
-          "log_loss": 0.6168
+          "n": 37,
+          "brier": 0.2201,
+          "log_loss": 0.6322
         }
       },
       "jogos": [
@@ -1136,6 +1136,66 @@
               "confianca": "LOW",
               "probabilidade": 0.457,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-10T21:30:00Z",
+          "casa": "Mirassol",
+          "visitante": "Chapecoense",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.659,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.593,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.638,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-10T21:30:00Z",
+          "casa": "Santos",
+          "visitante": "Bragantino",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.458,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.503,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.455,
+              "resultado": "ACERTO"
             }
           ]
         }
