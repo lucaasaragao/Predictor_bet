@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-05-10",
-      "ultima_atualizacao": "2026-05-10T15:30:49-03:00",
-      "finalizados": 20,
-      "taxa_geral": 0.444,
-      "total_acertos": 28,
-      "total_palpites": 63,
+      "ultima_atualizacao": "2026-05-10T15:56:23-03:00",
+      "finalizados": 21,
+      "taxa_geral": 0.478,
+      "total_acertos": 32,
+      "total_palpites": 67,
       "mercados": {
         "WINNER": {
-          "acertos": 6,
-          "total": 20,
-          "taxa": 0.3
+          "acertos": 7,
+          "total": 21,
+          "taxa": 0.333
         },
         "OVER_UNDER": {
-          "acertos": 9,
-          "total": 20,
-          "taxa": 0.45
+          "acertos": 10,
+          "total": 21,
+          "taxa": 0.476
         },
         "BTTS": {
-          "acertos": 12,
-          "total": 20,
-          "taxa": 0.6
+          "acertos": 13,
+          "total": 21,
+          "taxa": 0.619
         },
         "EMPATE": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "acertos": 2,
+          "total": 4,
+          "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 20,
-          "brier": 0.717,
-          "log_loss": 1.1458
+          "n": 21,
+          "brier": 0.7121,
+          "log_loss": 1.1398
         },
         "OVER_UNDER": {
-          "n": 20,
-          "brier": 0.1849,
-          "log_loss": 0.5512
+          "n": 21,
+          "brier": 0.1797,
+          "log_loss": 0.5403
         },
         "BTTS": {
-          "n": 20,
-          "brier": 0.1787,
-          "log_loss": 0.5453
+          "n": 21,
+          "brier": 0.1769,
+          "log_loss": 0.5417
         }
       },
       "jogos": [
@@ -664,6 +664,43 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.608,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-10T16:30:00Z",
+          "casa": "Real Oviedo",
+          "visitante": "Getafe",
+          "competicao": "Primera Division",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.36,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.724,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.625,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.36,
               "resultado": "ACERTO"
             }
           ]
