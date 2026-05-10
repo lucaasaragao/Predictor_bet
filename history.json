@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-05-10",
-      "ultima_atualizacao": "2026-05-10T12:58:18-03:00",
-      "finalizados": 8,
-      "taxa_geral": 0.346,
-      "total_acertos": 9,
-      "total_palpites": 26,
+      "ultima_atualizacao": "2026-05-10T13:26:59-03:00",
+      "finalizados": 9,
+      "taxa_geral": 0.367,
+      "total_acertos": 11,
+      "total_palpites": 30,
       "mercados": {
         "WINNER": {
           "acertos": 3,
-          "total": 8,
-          "taxa": 0.375
+          "total": 9,
+          "taxa": 0.333
         },
         "OVER_UNDER": {
-          "acertos": 2,
-          "total": 8,
-          "taxa": 0.25
+          "acertos": 3,
+          "total": 9,
+          "taxa": 0.333
         },
         "BTTS": {
-          "acertos": 3,
-          "total": 8,
-          "taxa": 0.375
+          "acertos": 4,
+          "total": 9,
+          "taxa": 0.444
         },
         "EMPATE": {
           "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "total": 3,
+          "taxa": 0.333
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 8,
-          "brier": 0.6684,
-          "log_loss": 1.0676
+          "n": 9,
+          "brier": 0.6907,
+          "log_loss": 1.1062
         },
         "OVER_UNDER": {
-          "n": 8,
-          "brier": 0.2436,
-          "log_loss": 0.6756
+          "n": 9,
+          "brier": 0.2343,
+          "log_loss": 0.6572
         },
         "BTTS": {
-          "n": 8,
-          "brier": 0.1883,
-          "log_loss": 0.5677
+          "n": 9,
+          "brier": 0.1916,
+          "log_loss": 0.5744
         }
       },
       "jogos": [
@@ -297,6 +297,43 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.454,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-10T14:15:00Z",
+          "casa": "Athletic",
+          "visitante": "Valencia",
+          "competicao": "Primera Division",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.447,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.6,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.534,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
               "resultado": "ERRO"
             }
           ]
