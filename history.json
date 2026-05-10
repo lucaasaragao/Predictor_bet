@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-05-10",
-      "ultima_atualizacao": "2026-05-10T11:41:31-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.429,
-      "total_acertos": 3,
-      "total_palpites": 7,
+      "ultima_atualizacao": "2026-05-10T12:07:53-03:00",
+      "finalizados": 7,
+      "taxa_geral": 0.348,
+      "total_acertos": 8,
+      "total_palpites": 23,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "acertos": 2,
+          "total": 7,
+          "taxa": 0.286
         },
         "OVER_UNDER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "acertos": 2,
+          "total": 7,
+          "taxa": 0.286
         },
         "BTTS": {
+          "acertos": 3,
+          "total": 7,
+          "taxa": 0.429
+        },
+        "EMPATE": {
           "acertos": 1,
           "total": 2,
           "taxa": 0.5
-        },
-        "EMPATE": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.6587,
-          "log_loss": 1.0488
+          "n": 7,
+          "brier": 0.6926,
+          "log_loss": 1.0972
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.2195,
-          "log_loss": 0.6268
+          "n": 7,
+          "brier": 0.2413,
+          "log_loss": 0.6702
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.1622,
-          "log_loss": 0.5149
+          "n": 7,
+          "brier": 0.1858,
+          "log_loss": 0.5624
         }
       },
       "jogos": [
@@ -110,6 +110,163 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.432,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-10T13:00:00Z",
+          "casa": "Fiorentina",
+          "visitante": "Genoa",
+          "competicao": "Serie A",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.439,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.53,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.67,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.358,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-10T13:00:00Z",
+          "casa": "Burnley",
+          "visitante": "Aston Villa",
+          "competicao": "Premier League",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.405,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.567,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.497,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-10T13:00:00Z",
+          "casa": "Cremonese",
+          "visitante": "AC Pisa",
+          "competicao": "Serie A",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.569,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.572,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.558,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-10T13:00:00Z",
+          "casa": "Crystal Palace",
+          "visitante": "Everton",
+          "competicao": "Premier League",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.494,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.532,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.437,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-10T13:00:00Z",
+          "casa": "Nottingham",
+          "visitante": "Newcastle",
+          "competicao": "Premier League",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.647,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.566,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.483,
               "resultado": "ERRO"
             }
           ]
