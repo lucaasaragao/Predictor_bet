@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-05-10",
-      "ultima_atualizacao": "2026-05-10T18:04:11-03:00",
-      "finalizados": 32,
-      "taxa_geral": 0.451,
-      "total_acertos": 46,
-      "total_palpites": 102,
+      "ultima_atualizacao": "2026-05-10T18:27:56-03:00",
+      "finalizados": 34,
+      "taxa_geral": 0.454,
+      "total_acertos": 49,
+      "total_palpites": 108,
       "mercados": {
         "WINNER": {
-          "acertos": 12,
-          "total": 32,
-          "taxa": 0.375
+          "acertos": 13,
+          "total": 34,
+          "taxa": 0.382
         },
         "OVER_UNDER": {
-          "acertos": 15,
-          "total": 32,
-          "taxa": 0.469
+          "acertos": 16,
+          "total": 34,
+          "taxa": 0.471
         },
         "BTTS": {
-          "acertos": 17,
-          "total": 32,
-          "taxa": 0.531
+          "acertos": 18,
+          "total": 34,
+          "taxa": 0.529
         },
         "EMPATE": {
           "acertos": 2,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 32,
-          "brier": 0.7015,
-          "log_loss": 1.1376
+          "n": 34,
+          "brier": 0.6875,
+          "log_loss": 1.1164
         },
         "OVER_UNDER": {
-          "n": 32,
-          "brier": 0.2228,
-          "log_loss": 0.6387
+          "n": 34,
+          "brier": 0.2323,
+          "log_loss": 0.6593
         },
         "BTTS": {
-          "n": 32,
-          "brier": 0.2079,
-          "log_loss": 0.6074
+          "n": 34,
+          "brier": 0.2126,
+          "log_loss": 0.617
         }
       },
       "jogos": [
@@ -1045,6 +1045,66 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.592,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-10T19:00:00Z",
+          "casa": "PSG",
+          "visitante": "Brest",
+          "competicao": "Ligue 1",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.772,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.53,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.426,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-10T19:00:00Z",
+          "casa": "Angers SCO",
+          "visitante": "Strasbourg",
+          "competicao": "Ligue 1",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "HIGH",
+              "probabilidade": 0.532,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.522,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.496,
               "resultado": "ERRO"
             }
           ]
