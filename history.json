@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-05-10",
-      "ultima_atualizacao": "2026-05-10T14:15:19-03:00",
-      "finalizados": 17,
-      "taxa_geral": 0.426,
-      "total_acertos": 23,
-      "total_palpites": 54,
+      "ultima_atualizacao": "2026-05-10T14:38:36-03:00",
+      "finalizados": 18,
+      "taxa_geral": 0.439,
+      "total_acertos": 25,
+      "total_palpites": 57,
       "mercados": {
         "WINNER": {
           "acertos": 6,
-          "total": 17,
-          "taxa": 0.353
+          "total": 18,
+          "taxa": 0.333
         },
         "OVER_UNDER": {
-          "acertos": 6,
-          "total": 17,
-          "taxa": 0.353
+          "acertos": 7,
+          "total": 18,
+          "taxa": 0.389
         },
         "BTTS": {
-          "acertos": 10,
-          "total": 17,
-          "taxa": 0.588
+          "acertos": 11,
+          "total": 18,
+          "taxa": 0.611
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 17,
-          "brier": 0.6935,
-          "log_loss": 1.1143
+          "n": 18,
+          "brier": 0.7062,
+          "log_loss": 1.1316
         },
         "OVER_UNDER": {
-          "n": 17,
-          "brier": 0.1904,
-          "log_loss": 0.5621
+          "n": 18,
+          "brier": 0.1832,
+          "log_loss": 0.5466
         },
         "BTTS": {
-          "n": 17,
-          "brier": 0.182,
-          "log_loss": 0.5525
+          "n": 18,
+          "brier": 0.176,
+          "log_loss": 0.5395
         }
       },
       "jogos": [
@@ -574,6 +574,36 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.483,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-10T15:30:00Z",
+          "casa": "1. FC Köln",
+          "visitante": "Heidenheim",
+          "competicao": "Bundesliga",
+          "placar": "1-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.546,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.554,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.727,
               "resultado": "ACERTO"
             }
           ]
