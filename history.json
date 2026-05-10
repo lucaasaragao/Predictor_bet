@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-05-10",
-      "ultima_atualizacao": "2026-05-10T16:30:29-03:00",
-      "finalizados": 21,
-      "taxa_geral": 0.478,
-      "total_acertos": 32,
-      "total_palpites": 67,
+      "ultima_atualizacao": "2026-05-10T16:55:55-03:00",
+      "finalizados": 23,
+      "taxa_geral": 0.452,
+      "total_acertos": 33,
+      "total_palpites": 73,
       "mercados": {
         "WINNER": {
           "acertos": 7,
-          "total": 21,
-          "taxa": 0.333
+          "total": 23,
+          "taxa": 0.304
         },
         "OVER_UNDER": {
-          "acertos": 10,
-          "total": 21,
-          "taxa": 0.476
+          "acertos": 11,
+          "total": 23,
+          "taxa": 0.478
         },
         "BTTS": {
           "acertos": 13,
-          "total": 21,
-          "taxa": 0.619
+          "total": 23,
+          "taxa": 0.565
         },
         "EMPATE": {
           "acertos": 2,
@@ -31,18 +31,18 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 21,
-          "brier": 0.7121,
-          "log_loss": 1.1398
+          "n": 23,
+          "brier": 0.7368,
+          "log_loss": 1.1798
         },
         "OVER_UNDER": {
-          "n": 21,
-          "brier": 0.1797,
-          "log_loss": 0.5403
+          "n": 23,
+          "brier": 0.1796,
+          "log_loss": 0.5406
         },
         "BTTS": {
-          "n": 21,
-          "brier": 0.1769,
+          "n": 23,
+          "brier": 0.1767,
           "log_loss": 0.5417
         }
       },
@@ -702,6 +702,66 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.36,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-10T17:00:00Z",
+          "casa": "AVS",
+          "visitante": "Porto",
+          "competicao": "Primeira Liga",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.452,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.505,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.448,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-10T17:30:00Z",
+          "casa": "Mainz",
+          "visitante": "Union Berlin",
+          "competicao": "Bundesliga",
+          "placar": "1-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.638,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.551,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.386,
+              "resultado": "ERRO"
             }
           ]
         }
