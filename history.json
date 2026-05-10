@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-05-10",
+      "ultima_atualizacao": "2026-05-10T01:17:56-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-05-09",
       "ultima_atualizacao": "2026-05-09T23:41:16-03:00",
       "finalizados": 20,
@@ -1084,140 +1111,6 @@
               "confianca": "LOW",
               "probabilidade": 0.349,
               "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-05-05",
-      "ultima_atualizacao": "2026-05-05T23:56:12-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.444,
-      "total_acertos": 4,
-      "total_palpites": 9,
-      "mercados": {
-        "WINNER": {
-          "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
-        },
-        "OVER_UNDER": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
-        },
-        "BTTS": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 3,
-          "brier": 0.4087,
-          "log_loss": 0.733
-        },
-        "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.2961,
-          "log_loss": 0.7868
-        },
-        "BTTS": {
-          "n": 3,
-          "brier": 0.2865,
-          "log_loss": 0.7681
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-05-05T19:00:00Z",
-          "casa": "Arsenal",
-          "visitante": "Atleti",
-          "competicao": "UEFA Champions League",
-          "placar": "1-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.619,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER",
-              "confianca": "LOW",
-              "probabilidade": 0.554,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.518,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-05T22:00:00Z",
-          "casa": "Rosario",
-          "visitante": "Libertad",
-          "competicao": "Copa Libertadores",
-          "placar": "1-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.588,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER",
-              "confianca": "LOW",
-              "probabilidade": 0.542,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.549,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-05T22:00:00Z",
-          "casa": "Cristal",
-          "visitante": "Palmeiras",
-          "competicao": "Copa Libertadores",
-          "placar": "0-2",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.463,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.61,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.622,
-              "resultado": "ERRO"
             }
           ]
         }
