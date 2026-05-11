@@ -2,30 +2,77 @@
   "dias": [
     {
       "data": "2026-05-11",
-      "ultima_atualizacao": "2026-05-11T17:21:15-03:00",
-      "finalizados": 0,
+      "ultima_atualizacao": "2026-05-11T17:59:09-03:00",
+      "finalizados": 1,
       "taxa_geral": 0.0,
       "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "total_palpites": 3,
+      "mercados": {
+        "WINNER": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.9751,
+          "log_loss": 1.5827
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.2769,
+          "log_loss": 0.747
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.2432,
+          "log_loss": 0.6795
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-05-11T18:45:00Z",
+          "casa": "Napoli",
+          "visitante": "Bologna",
+          "competicao": "Serie A",
+          "placar": "2-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.516,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.526,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.493,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-05-10",
