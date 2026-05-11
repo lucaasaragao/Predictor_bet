@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-05-10",
-      "ultima_atualizacao": "2026-05-10T22:13:31-03:00",
-      "finalizados": 39,
-      "taxa_geral": 0.452,
-      "total_acertos": 56,
-      "total_palpites": 124,
+      "ultima_atualizacao": "2026-05-10T23:01:42-03:00",
+      "finalizados": 40,
+      "taxa_geral": 0.457,
+      "total_acertos": 58,
+      "total_palpites": 127,
       "mercados": {
         "WINNER": {
-          "acertos": 15,
-          "total": 39,
-          "taxa": 0.385
+          "acertos": 16,
+          "total": 40,
+          "taxa": 0.4
         },
         "OVER_UNDER": {
           "acertos": 19,
-          "total": 39,
-          "taxa": 0.487
+          "total": 40,
+          "taxa": 0.475
         },
         "BTTS": {
-          "acertos": 20,
-          "total": 39,
-          "taxa": 0.513
+          "acertos": 21,
+          "total": 40,
+          "taxa": 0.525
         },
         "EMPATE": {
           "acertos": 2,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 39,
-          "brier": 0.6867,
-          "log_loss": 1.1109
+          "n": 40,
+          "brier": 0.6733,
+          "log_loss": 1.0926
         },
         "OVER_UNDER": {
-          "n": 39,
-          "brier": 0.2362,
-          "log_loss": 0.6672
+          "n": 40,
+          "brier": 0.243,
+          "log_loss": 0.6818
         },
         "BTTS": {
-          "n": 39,
-          "brier": 0.2252,
-          "log_loss": 0.6427
+          "n": 40,
+          "brier": 0.2294,
+          "log_loss": 0.6513
         }
       },
       "jogos": [
@@ -1263,6 +1263,36 @@
               "confianca": "LOW",
               "probabilidade": 0.319,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-10T23:30:00Z",
+          "casa": "Vasco da Gama",
+          "visitante": "Paranaense",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.685,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.504,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.373,
+              "resultado": "ACERTO"
             }
           ]
         }
