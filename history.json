@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-12",
-      "ultima_atualizacao": "2026-05-12T18:32:05-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.5,
+      "ultima_atualizacao": "2026-05-12T18:59:48-03:00",
+      "finalizados": 3,
+      "taxa_geral": 0.333,
       "total_acertos": 3,
-      "total_palpites": 6,
+      "total_palpites": 9,
       "mercados": {
         "WINNER": {
           "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "total": 3,
+          "taxa": 0.333
         },
         "OVER_UNDER": {
           "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "total": 3,
+          "taxa": 0.333
         },
         "BTTS": {
           "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "total": 3,
+          "taxa": 0.333
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.5919,
-          "log_loss": 0.9962
+          "n": 3,
+          "brier": 0.6462,
+          "log_loss": 1.0726
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.1721,
-          "log_loss": 0.5339
+          "n": 3,
+          "brier": 0.2084,
+          "log_loss": 0.6077
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.1788,
-          "log_loss": 0.5475
+          "n": 3,
+          "brier": 0.1922,
+          "log_loss": 0.5753
         }
       },
       "jogos": [
@@ -98,6 +98,36 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.479,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-12T19:30:00Z",
+          "casa": "Osasuna",
+          "visitante": "Atleti",
+          "competicao": "Primera Division",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.409,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.53,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.468,
               "resultado": "ERRO"
             }
           ]
