@@ -2,30 +2,77 @@
   "dias": [
     {
       "data": "2026-05-12",
-      "ultima_atualizacao": "2026-05-12T15:58:53-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-05-12T16:39:56-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.333,
+      "total_acertos": 1,
+      "total_palpites": 3,
+      "mercados": {
+        "WINNER": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.9339,
+          "log_loss": 1.473
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.1263,
+          "log_loss": 0.439
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.1278,
+          "log_loss": 0.4425
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-05-12T17:00:00Z",
+          "casa": "Celta",
+          "visitante": "Levante",
+          "competicao": "Primera Division",
+          "placar": "2-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.532,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.576,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.642,
+              "resultado": "ACERTO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-05-11",
