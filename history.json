@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-05-12",
+      "ultima_atualizacao": "2026-05-12T00:19:54-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-05-11",
       "ultima_atualizacao": "2026-05-11T22:56:52-03:00",
       "finalizados": 11,
@@ -2505,122 +2532,6 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.498,
-              "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-05-07",
-      "ultima_atualizacao": "2026-05-07T22:57:49-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.571,
-      "total_acertos": 4,
-      "total_palpites": 7,
-      "mercados": {
-        "WINNER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
-        },
-        "OVER_UNDER": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
-        },
-        "BTTS": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
-        },
-        "EMPATE": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 2,
-          "brier": 0.6735,
-          "log_loss": 1.0855
-        },
-        "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.1756,
-          "log_loss": 0.5406
-        },
-        "BTTS": {
-          "n": 2,
-          "brier": 0.2114,
-          "log_loss": 0.6157
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-05-07T22:00:00Z",
-          "casa": "Platense",
-          "visitante": "Peñarol",
-          "competicao": "Copa Libertadores",
-          "placar": "1-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.501,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.523,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.484,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-07T22:00:00Z",
-          "casa": "Mirassol",
-          "visitante": "LDU de Quito",
-          "competicao": "Copa Libertadores",
-          "placar": "2-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.406,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.649,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.566,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "EMPATE",
-              "opcao": "X",
-              "confianca": "LOW",
-              "probabilidade": 0.33,
               "resultado": "ERRO"
             }
           ]
