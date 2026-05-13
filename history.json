@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-05-13",
+      "ultima_atualizacao": "2026-05-13T00:12:11-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-05-12",
       "ultima_atualizacao": "2026-05-12T22:55:11-03:00",
       "finalizados": 3,
@@ -2475,170 +2502,6 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.529,
-              "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-05-08",
-      "ultima_atualizacao": "2026-05-08T23:54:56-03:00",
-      "finalizados": 4,
-      "taxa_geral": 0.75,
-      "total_acertos": 9,
-      "total_palpites": 12,
-      "mercados": {
-        "WINNER": {
-          "acertos": 4,
-          "total": 4,
-          "taxa": 1.0
-        },
-        "OVER_UNDER": {
-          "acertos": 3,
-          "total": 4,
-          "taxa": 0.75
-        },
-        "BTTS": {
-          "acertos": 2,
-          "total": 4,
-          "taxa": 0.5
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 4,
-          "brier": 0.1856,
-          "log_loss": 0.4257
-        },
-        "OVER_UNDER": {
-          "n": 4,
-          "brier": 0.2126,
-          "log_loss": 0.6176
-        },
-        "BTTS": {
-          "n": 4,
-          "brier": 0.209,
-          "log_loss": 0.6096
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-05-08T18:30:00Z",
-          "casa": "Dortmund",
-          "visitante": "Frankfurt",
-          "competicao": "Bundesliga",
-          "placar": "3-2",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.576,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.57,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.63,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-08T18:45:00Z",
-          "casa": "Torino",
-          "visitante": "Sassuolo",
-          "competicao": "Serie A",
-          "placar": "2-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.621,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.606,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.431,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-08T18:45:00Z",
-          "casa": "RC Lens",
-          "visitante": "Nantes",
-          "competicao": "Ligue 1",
-          "placar": "1-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.731,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.585,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.484,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-08T19:00:00Z",
-          "casa": "Levante",
-          "visitante": "Osasuna",
-          "competicao": "Primera Division",
-          "placar": "3-2",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.698,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.592,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.498,
               "resultado": "ERRO"
             }
           ]
