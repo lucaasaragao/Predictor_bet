@@ -2,30 +2,137 @@
   "dias": [
     {
       "data": "2026-05-13",
-      "ultima_atualizacao": "2026-05-13T15:19:39-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-05-13T16:04:46-03:00",
+      "finalizados": 3,
+      "taxa_geral": 0.667,
+      "total_acertos": 6,
+      "total_palpites": 9,
+      "mercados": {
+        "WINNER": {
+          "acertos": 1,
+          "total": 3,
+          "taxa": 0.333
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 3,
+          "total": 3,
+          "taxa": 1.0
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 2,
+          "total": 3,
+          "taxa": 0.667
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 3,
+          "brier": 0.9415,
+          "log_loss": 1.5982
+        },
+        "OVER_UNDER": {
+          "n": 3,
+          "brier": 0.1325,
+          "log_loss": 0.4409
+        },
+        "BTTS": {
+          "n": 3,
+          "brier": 0.1857,
+          "log_loss": 0.5616
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-05-13T17:00:00Z",
+          "casa": "Espanyol",
+          "visitante": "Athletic",
+          "competicao": "Primera Division",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.377,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.547,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.478,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-13T17:00:00Z",
+          "casa": "Brest",
+          "visitante": "Strasbourg",
+          "competicao": "Ligue 1",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.419,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.611,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.641,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-13T17:00:00Z",
+          "casa": "Villarreal",
+          "visitante": "Sevilla FC",
+          "competicao": "Primera Division",
+          "placar": "2-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.807,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.613,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.395,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-05-12",

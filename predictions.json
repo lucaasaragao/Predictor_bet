@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T15:19:39-03:00",
+  "generated_at": "2026-05-13T16:04:46-03:00",
   "analysis_date": "2026-05-13",
   "total_jogos": 7,
   "odds_debug_visual": false,
@@ -9,9 +9,9 @@
     {
       "competicao": "Primera Division",
       "data": "2026-05-13T17:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
-        "casa": 0,
+        "casa": 2,
         "visitante": 0
       },
       "times": {
@@ -178,7 +178,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -192,7 +192,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -206,14 +206,14 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
     {
       "competicao": "Ligue 1",
       "data": "2026-05-13T17:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
         "visitante": 2
@@ -382,7 +382,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -396,7 +396,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -410,17 +410,17 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
     {
       "competicao": "Primera Division",
       "data": "2026-05-13T17:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 2,
-        "visitante": 2
+        "visitante": 3
       },
       "times": {
         "casa": "Villarreal",
@@ -588,7 +588,7 @@
           "ev_bruto": 0.6793,
           "prob_mercado_justa": 0.4785,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -602,7 +602,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -616,7 +616,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -1443,9 +1443,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 6,
+    "total": 9,
+    "taxa": 0.667
   },
   "daily_tips_ids": [
     {
@@ -1467,7 +1467,24 @@
   ],
   "daily_tips_date": "2026-05-13",
   "recovery_tip": {
-    "ativo": false
+    "ativo": true,
+    "disparado_em": "2026-05-13T16:04:46-03:00",
+    "jogo": {
+      "casa": "Alavés",
+      "visitante": "Barça",
+      "data": "2026-05-13T19:30:00Z",
+      "competicao": "Primera Division",
+      "times": {
+        "casa": "Alavés",
+        "visitante": "Barça"
+      }
+    },
+    "palpite": {
+      "tipo": "BTTS",
+      "opcao": "YES",
+      "probabilidade": 0.6575762634263747,
+      "confianca": "MEDIUM"
+    }
   },
   "recovery_tip_date": "2026-05-13"
 }
