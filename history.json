@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-13",
-      "ultima_atualizacao": "2026-05-13T17:23:18-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.667,
-      "total_acertos": 6,
-      "total_palpites": 9,
+      "ultima_atualizacao": "2026-05-13T18:01:40-03:00",
+      "finalizados": 4,
+      "taxa_geral": 0.75,
+      "total_acertos": 9,
+      "total_palpites": 12,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "acertos": 2,
+          "total": 4,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 3,
-          "total": 3,
+          "acertos": 4,
+          "total": 4,
           "taxa": 1.0
         },
         "BTTS": {
-          "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
+          "acertos": 3,
+          "total": 4,
+          "taxa": 0.75
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 3,
-          "brier": 0.9415,
-          "log_loss": 1.5982
+          "n": 4,
+          "brier": 0.7525,
+          "log_loss": 1.3066
         },
         "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.1325,
-          "log_loss": 0.4409
+          "n": 4,
+          "brier": 0.1219,
+          "log_loss": 0.42
         },
         "BTTS": {
-          "n": 3,
-          "brier": 0.1857,
-          "log_loss": 0.5616
+          "n": 4,
+          "brier": 0.2406,
+          "log_loss": 0.6742
         }
       },
       "jogos": [
@@ -129,6 +129,36 @@
               "confianca": "LOW",
               "probabilidade": 0.395,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-13T19:00:00Z",
+          "casa": "Man City",
+          "visitante": "Crystal Palace",
+          "competicao": "Premier League",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.649,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.513,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.364,
+              "resultado": "ACERTO"
             }
           ]
         }
