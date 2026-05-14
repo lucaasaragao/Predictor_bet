@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-14",
-      "ultima_atualizacao": "2026-05-14T18:01:39-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.167,
-      "total_acertos": 1,
-      "total_palpites": 6,
+      "ultima_atualizacao": "2026-05-14T18:35:34-03:00",
+      "finalizados": 3,
+      "taxa_geral": 0.333,
+      "total_acertos": 3,
+      "total_palpites": 9,
       "mercados": {
         "WINNER": {
-          "acertos": 0,
-          "total": 2,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 3,
+          "taxa": 0.333
         },
         "OVER_UNDER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "acertos": 2,
+          "total": 3,
+          "taxa": 0.667
         },
         "BTTS": {
           "acertos": 0,
-          "total": 2,
+          "total": 3,
           "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.8141,
-          "log_loss": 1.2869
+          "n": 3,
+          "brier": 0.6299,
+          "log_loss": 1.0378
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.2677,
-          "log_loss": 0.7287
+          "n": 3,
+          "brier": 0.3231,
+          "log_loss": 0.844
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.1986,
-          "log_loss": 0.5898
+          "n": 3,
+          "brier": 0.2665,
+          "log_loss": 0.7285
         }
       },
       "jogos": [
@@ -98,6 +98,36 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.429,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-14T19:30:00Z",
+          "casa": "Real Madrid",
+          "visitante": "Real Oviedo",
+          "competicao": "Primera Division",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.583,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.561,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.634,
               "resultado": "ERRO"
             }
           ]
