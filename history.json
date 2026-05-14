@@ -2,30 +2,77 @@
   "dias": [
     {
       "data": "2026-05-14",
-      "ultima_atualizacao": "2026-05-14T15:26:18-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-05-14T16:10:21-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.333,
+      "total_acertos": 1,
+      "total_palpites": 3,
+      "mercados": {
+        "WINNER": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.8115,
+          "log_loss": 1.2761
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.2489,
+          "log_loss": 0.6909
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.2135,
+          "log_loss": 0.62
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-05-14T17:00:00Z",
+          "casa": "Valencia",
+          "visitante": "Rayo Vallecano",
+          "competicao": "Primera Division",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.487,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.501,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.462,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-05-13",
