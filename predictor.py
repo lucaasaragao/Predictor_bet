@@ -2636,7 +2636,13 @@ def atualizar_status_jogos(
                         break
                 break
 
-    # ── 6. Timestamp e salvar ─────────────────────────────────────────────────
+    # ── 6. Revisão Gemini (se ainda não feita hoje) ───────────────────────────
+    if GEMINI_API_KEY and dados.get("gemini_revisado_em") != hoje:
+        ia_ok = revisar_predicoes_com_ia(dados.get("jogos", []))
+        if ia_ok:
+            dados["gemini_revisado_em"] = hoje
+
+    # ── 7. Timestamp e salvar ─────────────────────────────────────────────────
     dados["generated_at"] = datetime.now(APP_TIMEZONE).isoformat(timespec="seconds")
 
     with open(caminho_predicoes, "w", encoding="utf-8") as f:
@@ -2741,7 +2747,7 @@ def revisar_predicoes_com_ia(jogos: List[Dict]) -> None:
     """
     if not GEMINI_API_KEY:
         print("ℹ️  GEMINI_API_KEY não definida. Pulando revisão com IA.")
-        return
+        return False
     # ── Montar payload compacto para economizar tokens ──────────────────
     jogos_resumo = []
     for jogo in jogos:
@@ -2809,10 +2815,10 @@ JOGOS:
         data = resp.json()
     except requests.exceptions.Timeout:
         print("⚠️  Gemini: timeout após 90s — revisão ignorada neste ciclo.")
-        return
+        return False
     except requests.exceptions.ConnectionError as exc:
         print(f"⚠️  Gemini: falha de conexão (DNS/rede) — {exc}")
-        return
+        return False
     except requests.exceptions.HTTPError as exc:
         status = exc.response.status_code if exc.response is not None else "?"
         corpo  = exc.response.text[:300] if exc.response is not None else ""
@@ -2824,10 +2830,10 @@ JOGOS:
             print("⚠️  Gemini 429 — quota excedida. Revisão ignorada neste ciclo.")
         else:
             print(f"⚠️  Gemini HTTP {status}: {corpo}")
-        return
+        return False
     except requests.exceptions.RequestException as exc:
         print(f"⚠️  Gemini erro inesperado: {exc}")
-        return
+        return False
     # ── Extrair texto da resposta ────────────────────────────────────────
     try:
         candidates = data.get("candidates", [])
@@ -2835,7 +2841,7 @@ JOGOS:
     except (IndexError, KeyError, TypeError) as exc:
         print(f"⚠️  Resposta Gemini inesperada (estrutura fora do padrão): {exc}")
         print(f"    Resposta recebida: {str(data)[:300]}")
-        return
+        return False
     # Remove possível markdown ```json ... ``` que o modelo às vezes adiciona
     if texto.startswith("```"):
         linhas = texto.splitlines()
@@ -2848,7 +2854,7 @@ JOGOS:
         alertas_ia: List[Dict] = json.loads(texto)
     except json.JSONDecodeError as exc:
         print(f"⚠️  JSON inválido do Gemini: {exc}\nTexto recebido: {texto[:300]}")
-        return
+        return False
     # Indexar por (casa, visitante) para matching rápido
     mapa_alertas: Dict[tuple, Optional[str]] = {}
     for item in alertas_ia:
@@ -2872,6 +2878,7 @@ JOGOS:
         f"✅ Revisão IA concluída: {alertas_aplicados} alerta(s) gerado(s) "
         f"em {len(jogos)} jogo(s)."
     )
+    return True
 
 
 def _executar_analise_completa() -> None:
@@ -2901,9 +2908,11 @@ def _executar_analise_completa() -> None:
 
     exibir_predicoes(predicoes)
     exportar_predicoes_front(predicoes, "predictions.json")
-    # Revisão contextual com IA — roda 1x por dia, só no run completo
+    # Revisão contextual com IA — roda 1x por dia; flag impede re-chamada na pista rápida
     dados_exportados = _carregar_json_existente("predictions.json")
-    revisar_predicoes_com_ia(dados_exportados.get("jogos", []))
+    ia_ok = revisar_predicoes_com_ia(dados_exportados.get("jogos", []))
+    if ia_ok:
+        dados_exportados["gemini_revisado_em"] = datetime.now(APP_TIMEZONE).date().isoformat()
     with open("predictions.json", "w", encoding="utf-8") as _f_ia:
         json.dump(dados_exportados, _f_ia, ensure_ascii=False, indent=2)
     print("💾 predictions.json atualizado com revisão da IA.")
