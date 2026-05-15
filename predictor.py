@@ -2637,7 +2637,7 @@ def atualizar_status_jogos(
                 break
 
     # ── 6. Revisão Gemini (se ainda não feita hoje) ───────────────────────────
-    if GEMINI_API_KEY and dados.get("gemini_revisado_em") != hoje:
+    if dados.get("gemini_revisado_em") != hoje:
         ia_ok = revisar_predicoes_com_ia(dados.get("jogos", []))
         if ia_ok:
             dados["gemini_revisado_em"] = hoje
