@@ -39,6 +39,12 @@ ODDS_ONLY_VALUE_GAMES = os.getenv("ODDS_ONLY_VALUE_GAMES", "true").lower() == "t
 ODDS_MAX_SPORT_CALLS = int(os.getenv("ODDS_MAX_SPORT_CALLS", "3"))
 ODDS_USE_UPCOMING = os.getenv("ODDS_USE_UPCOMING", "true").lower() == "true"
 ODDS_DEBUG_VISUAL = os.getenv("ODDS_DEBUG_VISUAL", "false").lower() == "true"
+GEMINI_API_KEY  = os.getenv("GEMINI_API_KEY", "").strip()
+GEMINI_MODEL    = "gemini-flash-latest"
+GEMINI_ENDPOINT = (
+    "https://generativelanguage.googleapis.com/v1beta/models/"
+    f"{GEMINI_MODEL}:generateContent"
+)
 SHRINKAGE_K_JOGOS = float(os.getenv("SHRINKAGE_K_JOGOS", "6"))
 SHRINKAGE_PESO_MIN = float(os.getenv("SHRINKAGE_PESO_MIN", "0.20"))
 EVAL_EPSILON = 1e-6
@@ -59,7 +65,7 @@ COMPETICAO_PARA_ODDS_SPORT = {
 }
 
 # Vantagem de mando de campo (multiplicador sobre λ)
-HOME_ADVANTAGE = 1.22
+HOME_ADVANTAGE = 1.10
 
 # Pesos do score composto de time (soma = 1.0)
 PESO_FORMA_RECENTE   = 0.35
@@ -1127,7 +1133,7 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
     # Edge = diferença entre 1° e 2° lugar (quanto o favorito se destaca)
     edge_winner = prob_max - probs_1x2[1][0]
 
-    if edge_winner > 0.25:
+    if edge_winner > 0.35:
         confianca = "HIGH"
     elif edge_winner > 0.12:
         confianca = "MEDIUM"
@@ -1700,6 +1706,7 @@ def _serializar_jogo_front(pred: PredicaoJogo) -> Dict:
         "leitura_rapida": _montar_leitura_rapida_front(pred, favorito, mercados),
         "tendencia": {"casa": pred.tendencia_casa, "visitante": pred.tendencia_visitante},
         "alertas": _coletar_alertas_front(pred),
+        "alerta_ia": None,
         "odds_debug": pred.odds_debug,
         "odds_integradas": any(item.get("odd_decimal") is not None for item in palpites),
         "odds_valor_alto": any(item.get("valor_esperado_positivo") for item in palpites),
@@ -2707,6 +2714,149 @@ def _gerar_predicoes_do_dia(jogos: List[Dict]) -> List[PredicaoJogo]:
     return predicoes
 
 
+def revisar_predicoes_com_ia(jogos: List[Dict]) -> None:
+    """Revisão contextual diária com Gemini Flash + web search.
+    Para cada jogo, o Gemini busca contexto que o modelo estatístico não
+    captura (motivação, lesões, jogo de volta, rebaixamento confirmado,
+    poupança de titulares) e retorna um alerta curto em português ou null.
+    Modifica os dicts de jogos in-place, adicionando o campo `alerta_ia`.
+    Falhas silenciosas — nunca interrompe o fluxo principal.
+    """
+    if not GEMINI_API_KEY:
+        print("ℹ️  GEMINI_API_KEY não definida. Pulando revisão com IA.")
+        return
+    # ── Montar payload compacto para economizar tokens ──────────────────
+    jogos_resumo = []
+    for jogo in jogos:
+        times   = jogo.get("times", {})
+        fav     = jogo.get("favorito", {})
+        palpites = jogo.get("palpites", []) or []
+        winner_p = next((p for p in palpites if p.get("tipo") == "WINNER"), {})
+        def _form(historico: List[Dict]) -> str:
+            return " ".join(
+                j.get("resultado", "?") for j in (historico or [])[:3]
+            )
+        hist = jogo.get("historico", {})
+        jogos_resumo.append({
+            "competicao":   jogo.get("competicao", ""),
+            "data":         jogo.get("data", "")[:10],
+            "casa":         times.get("casa", ""),
+            "visitante":    times.get("visitante", ""),
+            "favorito":     fav.get("nome", ""),
+            "prob_fav":     round(float(fav.get("prob", 0)), 2),
+            "winner_opcao": winner_p.get("opcao", ""),
+            "winner_conf":  winner_p.get("confianca", ""),
+            "forma_casa":   _form(hist.get("casa", [])),
+            "forma_visit":  _form(hist.get("visitante", [])),
+            "alertas_modelo": jogo.get("alertas", []),
+        })
+    # ── Prompt ───────────────────────────────────────────────────────────
+    prompt = f"""Você é um analista de futebol. Analise as previsões abaixo geradas por modelo estatístico.
+Para CADA jogo, use busca na web para verificar se existe algum contexto
+importante que o modelo não captura e que possa invalidar ou enfraquecer
+a previsão. Exemplos: time já rebaixado ou campeão sem motivação, jogo de
+volta com agregado favorável ao visitante, titulares poupados para outra
+competição, lesão de jogador chave, derby com dinâmica histórica especial,
+time viajando para altitude extrema.
+REGRAS DE RESPOSTA:
+- Retorne APENAS um array JSON válido, sem markdown, sem texto adicional.
+- Um objeto por jogo, na mesma ordem recebida.
+- Campo "alerta": string curta em português (máximo 100 caracteres) OU null se não houver risco relevante.
+- Seja conservador: só alerte quando houver informação concreta, não suposições.
+FORMATO EXATO:
+[
+  {{"casa": "NomeExato", "visitante": "NomeExato", "alerta": "texto ou null"}},
+  ...
+]
+JOGOS:
+{json.dumps(jogos_resumo, ensure_ascii=False, indent=2)}
+"""
+    # ── Chamada à API ────────────────────────────────────────────────────
+    payload = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "tools": [{"google_search_retrieval": {}}],
+        "generationConfig": {
+            "temperature":      0.2,
+            "maxOutputTokens":  2048,
+        },
+    }
+    try:
+        print(f"🤖 Revisando {len(jogos)} jogo(s) com Gemini Flash ({GEMINI_MODEL})...")
+        resp = requests.post(
+            GEMINI_ENDPOINT,
+            headers={"X-goog-api-key": GEMINI_API_KEY, "Content-Type": "application/json"},
+            json=payload,
+            timeout=90,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+    except requests.exceptions.Timeout:
+        print("⚠️  Gemini: timeout após 90s — revisão ignorada neste ciclo.")
+        return
+    except requests.exceptions.ConnectionError as exc:
+        print(f"⚠️  Gemini: falha de conexão (DNS/rede) — {exc}")
+        return
+    except requests.exceptions.HTTPError as exc:
+        status = exc.response.status_code if exc.response is not None else "?"
+        corpo  = exc.response.text[:300] if exc.response is not None else ""
+        if status == 400:
+            print(f"⚠️  Gemini 400 Bad Request — payload inválido. Detalhe: {corpo}")
+        elif status in (401, 403):
+            print(f"⚠️  Gemini {status} — GEMINI_API_KEY inválida ou sem permissão. Verifique a chave.")
+        elif status == 429:
+            print("⚠️  Gemini 429 — quota excedida. Revisão ignorada neste ciclo.")
+        else:
+            print(f"⚠️  Gemini HTTP {status}: {corpo}")
+        return
+    except requests.exceptions.RequestException as exc:
+        print(f"⚠️  Gemini erro inesperado: {exc}")
+        return
+    # ── Extrair texto da resposta ────────────────────────────────────────
+    try:
+        candidates = data.get("candidates", [])
+        texto = candidates[0]["content"]["parts"][0]["text"].strip()
+    except (IndexError, KeyError, TypeError) as exc:
+        print(f"⚠️  Resposta Gemini inesperada (estrutura fora do padrão): {exc}")
+        print(f"    Resposta recebida: {str(data)[:300]}")
+        return
+    # Remove possível markdown ```json ... ``` que o modelo às vezes adiciona
+    if texto.startswith("```"):
+        linhas = texto.splitlines()
+        texto  = "\n".join(
+            l for l in linhas
+            if not l.strip().startswith("```")
+        ).strip()
+    # ── Parsear JSON e injetar alertas ───────────────────────────────────
+    try:
+        alertas_ia: List[Dict] = json.loads(texto)
+    except json.JSONDecodeError as exc:
+        print(f"⚠️  JSON inválido do Gemini: {exc}\nTexto recebido: {texto[:300]}")
+        return
+    # Indexar por (casa, visitante) para matching rápido
+    mapa_alertas: Dict[tuple, Optional[str]] = {}
+    for item in alertas_ia:
+        chave = (
+            _normalizar_nome_time(item.get("casa", "")),
+            _normalizar_nome_time(item.get("visitante", "")),
+        )
+        mapa_alertas[chave] = item.get("alerta") or None
+    alertas_aplicados = 0
+    for jogo in jogos:
+        times = jogo.get("times", {})
+        chave = (
+            _normalizar_nome_time(times.get("casa", "")),
+            _normalizar_nome_time(times.get("visitante", "")),
+        )
+        alerta = mapa_alertas.get(chave)
+        jogo["alerta_ia"] = alerta
+        if alerta:
+            alertas_aplicados += 1
+    print(
+        f"✅ Revisão IA concluída: {alertas_aplicados} alerta(s) gerado(s) "
+        f"em {len(jogos)} jogo(s)."
+    )
+
+
 def _executar_analise_completa() -> None:
     print("🌐 Buscando jogos das competições permitidas...")
     jogos = buscar_jogos_permitidos()
@@ -2734,6 +2884,12 @@ def _executar_analise_completa() -> None:
 
     exibir_predicoes(predicoes)
     exportar_predicoes_front(predicoes, "predictions.json")
+    # Revisão contextual com IA — roda 1x por dia, só no run completo
+    dados_exportados = _carregar_json_existente("predictions.json")
+    revisar_predicoes_com_ia(dados_exportados.get("jogos", []))
+    with open("predictions.json", "w", encoding="utf-8") as _f_ia:
+        json.dump(dados_exportados, _f_ia, ensure_ascii=False, indent=2)
+    print("💾 predictions.json atualizado com revisão da IA.")
     atualizar_historico(predicoes, "history.json")
     print("💾 Arquivos gerados: predictions.json | history.json")
 
