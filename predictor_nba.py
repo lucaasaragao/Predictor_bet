@@ -472,6 +472,78 @@ def _pred_para_dict(pred: PredicaoJogoNBA) -> dict:
     }
 
 
+def _criar_recovery_tip_nba(jogos: list, ids_dicas: set) -> dict:
+    """Seleciona o melhor palpite NBA fora das dicas do dia para usar como recuperação."""
+    melhor_jogo = melhor_palpite = None
+    melhor_prob = -1.0
+    melhor_conf = -1
+    score_conf = {"HIGH": 3, "MEDIUM": 2, "LOW": 1}
+    for jogo in jogos:
+        chave = (jogo.get("times", {}).get("casa", ""), jogo.get("times", {}).get("visitante", ""), jogo.get("data", ""))
+        if chave in ids_dicas:
+            continue
+        if jogo.get("status") == "FINISHED":
+            continue
+        for palpite in jogo.get("palpites", []) or []:
+            prob = float(palpite.get("probabilidade") or 0.0)
+            cs = score_conf.get(str(palpite.get("confianca", "LOW")).upper(), 1)
+            if prob > melhor_prob or (prob == melhor_prob and cs > melhor_conf):
+                melhor_prob, melhor_conf = prob, cs
+                melhor_jogo, melhor_palpite = jogo, palpite
+    if not melhor_jogo or not melhor_palpite:
+        return {"ativo": False}
+    times = melhor_jogo.get("times", {})
+    abrev_casa  = times.get("abrev_casa", "")
+    abrev_visit = times.get("abrev_visit", "")
+    return {
+        "ativo": True,
+        "disparado_em": datetime.now(APP_TIMEZONE).isoformat(timespec="seconds"),
+        "jogo": {
+            "casa":      times.get("casa", ""),
+            "visitante": times.get("visitante", ""),
+            "data":      melhor_jogo.get("data", ""),
+            "competicao": "NBA",
+            "times": {
+                "casa":              times.get("casa", ""),
+                "visitante":         times.get("visitante", ""),
+                "escudo_casa":       f"https://a.espncdn.com/i/teamlogos/nba/500/{abrev_casa.lower()}.png" if abrev_casa else "",
+                "escudo_visitante":  f"https://a.espncdn.com/i/teamlogos/nba/500/{abrev_visit.lower()}.png" if abrev_visit else "",
+            },
+        },
+        "palpite": {
+            "tipo":                melhor_palpite.get("tipo"),
+            "opcao":               melhor_palpite.get("opcao"),
+            "probabilidade":       melhor_palpite.get("probabilidade"),
+            "confianca":           melhor_palpite.get("confianca"),
+            "resultado_verificador": None,
+        },
+    }
+
+
+def _resolver_recovery_tip_nba(jogos: list, daily_tips_ids: list, existing_data: dict, hoje: str) -> dict:
+    """Resolve o recovery tip NBA: preserva o existente, cria novo se dica_1 errou."""
+    if not daily_tips_ids:
+        return {"ativo": False}
+    dica_1 = daily_tips_ids[0]
+    dica_1_jogo = next(
+        (j for j in jogos
+         if j.get("times", {}).get("casa") == dica_1.get("casa")
+         and j.get("times", {}).get("visitante") == dica_1.get("visitante")),
+        None,
+    )
+    dica_1_palpite = ((dica_1_jogo or {}).get("palpites") or [None])[0]
+    erro_na_dica_1 = (dica_1_palpite or {}).get("resultado_verificador") == "ERRO"
+
+    existing_recovery = existing_data.get("recovery_tip") if existing_data.get("daily_tips_date") == hoje else None
+    if (existing_recovery or {}).get("ativo"):
+        return existing_recovery
+    if not erro_na_dica_1:
+        return {"ativo": False}
+
+    ids_dicas = {(i.get("casa", ""), i.get("visitante", ""), i.get("data", "")) for i in daily_tips_ids}
+    return _criar_recovery_tip_nba(jogos, ids_dicas)
+
+
 def exportar_nba(predicoes: List[PredicaoJogoNBA], caminho: str) -> None:
     hoje = datetime.now(APP_TIMEZONE).date().isoformat()
     agora = datetime.now(APP_TIMEZONE).isoformat(timespec="seconds")
@@ -499,6 +571,15 @@ def exportar_nba(predicoes: List[PredicaoJogoNBA], caminho: str) -> None:
                     acertos += 1
     taxa = round(acertos / total_palpites, 4) if total_palpites > 0 else None
 
+    # Recovery tip: preservar existente ou criar se dica_1 já errou
+    existing_data: dict = {}
+    try:
+        with open(caminho, "r", encoding="utf-8") as _f:
+            existing_data = json.load(_f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
+    recovery_tip = _resolver_recovery_tip_nba(jogos, daily_tips_ids, existing_data, hoje)
+
     saida = {
         "generated_at": agora,
         "analysis_date": hoje,
@@ -507,7 +588,7 @@ def exportar_nba(predicoes: List[PredicaoJogoNBA], caminho: str) -> None:
         "jogos": jogos,
         "daily_tips_ids": daily_tips_ids,
         "daily_tips_date": hoje,
-        "recovery_tip": {"ativo": False},
+        "recovery_tip": recovery_tip,
         "acertos_hoje": {"acertos": acertos, "total": total_palpites, "taxa": taxa},
     }
 
@@ -651,6 +732,50 @@ def atualizar_status_nba(caminho: str, caminho_historico: Optional[str] = None) 
                         palpite, jogo["placar_casa"], jogo["placar_visitante"]
                     )
         alterado = True
+
+    # ── Recovery tip NBA: criar se dica_1 errou / sincronizar resultado ──────
+    hoje_str = datetime.now(APP_TIMEZONE).date().isoformat()
+    daily_tips_ids_atual = dados.get("daily_tips_ids", [])
+    rt = dados.get("recovery_tip") if dados.get("daily_tips_date") == hoje_str else None
+
+    if not (rt or {}).get("ativo"):
+        if daily_tips_ids_atual:
+            dica_1 = daily_tips_ids_atual[0]
+            dica_1_jogo = next(
+                (j for j in jogos
+                 if j.get("times", {}).get("casa") == dica_1.get("casa")
+                 and j.get("times", {}).get("visitante") == dica_1.get("visitante")),
+                None,
+            )
+            dica_1_palpite = ((dica_1_jogo or {}).get("palpites") or [None])[0]
+            if (dica_1_palpite or {}).get("resultado_verificador") == "ERRO":
+                ids_dicas = {
+                    (i.get("casa", ""), i.get("visitante", ""), i.get("data", ""))
+                    for i in daily_tips_ids_atual
+                }
+                rt = _criar_recovery_tip_nba(jogos, ids_dicas)
+                dados["recovery_tip"] = rt
+                dados["recovery_tip_date"] = hoje_str
+                alterado = True
+    else:
+        # Sincronizar resultado_verificador se o jogo de recuperação finalizou
+        rt_times = (rt.get("jogo") or {}).get("times") or {}
+        rt_casa   = rt_times.get("casa", "")
+        rt_visit  = rt_times.get("visitante", "")
+        rt_tipo   = (rt.get("palpite") or {}).get("tipo")
+        rt_opcao  = (rt.get("palpite") or {}).get("opcao")
+        for _j in jogos:
+            if (_j.get("times", {}).get("casa") == rt_casa
+                    and _j.get("times", {}).get("visitante") == rt_visit):
+                for _p in _j.get("palpites", []):
+                    if _p.get("tipo") == rt_tipo and _p.get("opcao") == rt_opcao:
+                        novo = _p.get("resultado_verificador")
+                        if novo != rt["palpite"].get("resultado_verificador"):
+                            rt["palpite"]["resultado_verificador"] = novo
+                            dados["recovery_tip"] = rt
+                            alterado = True
+                        break
+                break
 
     if alterado:
         dados["generated_at"] = datetime.now(APP_TIMEZONE).isoformat(timespec="seconds")
