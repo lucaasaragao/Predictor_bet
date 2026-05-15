@@ -2619,6 +2619,23 @@ def atualizar_status_jogos(
     dados["recovery_tip"]      = recovery_tip if recovery_tip else {"ativo": False}
     dados["recovery_tip_date"] = hoje
 
+    # Sincronizar resultado_verificador do palpite de recuperação com o jogo finalizado
+    rt = dados["recovery_tip"]
+    if rt.get("ativo") and rt.get("palpite"):
+        rt_times = (rt.get("jogo") or {}).get("times") or rt.get("jogo") or {}
+        rt_casa   = rt_times.get("casa", "")
+        rt_visit  = rt_times.get("visitante", "")
+        rt_tipo   = rt["palpite"].get("tipo")
+        rt_opcao  = rt["palpite"].get("opcao")
+        for _jogo in dados.get("jogos", []):
+            if (_jogo.get("times", {}).get("casa") == rt_casa
+                    and _jogo.get("times", {}).get("visitante") == rt_visit):
+                for _p in _jogo.get("palpites", []):
+                    if _p.get("tipo") == rt_tipo and _p.get("opcao") == rt_opcao:
+                        rt["palpite"]["resultado_verificador"] = _p.get("resultado_verificador")
+                        break
+                break
+
     # ── 6. Timestamp e salvar ─────────────────────────────────────────────────
     dados["generated_at"] = datetime.now(APP_TIMEZONE).isoformat(timespec="seconds")
 

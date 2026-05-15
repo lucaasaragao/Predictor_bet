@@ -988,6 +988,14 @@ function renderRecoveryCard(container, recovery) {
   const confidenceText = confidenceLabel(tip.confianca);
   const betLabel = translateTipOption(tip.tipo, tip.opcao, game);
 
+  const resultadoRecovery = tip.resultado_verificador;
+  let resultMarkRecovery = "";
+  if (resultadoRecovery === "ACERTO") {
+    resultMarkRecovery = '<span class="tip-card__result tip-card__result--acerto">✅ Acerto</span>';
+  } else if (resultadoRecovery === "ERRO") {
+    resultMarkRecovery = '<span class="tip-card__result tip-card__result--erro">❌ Errou</span>';
+  }
+
   const card = document.createElement("article");
   card.className = "tip-card tip-card--recovery";
   card.innerHTML = `
@@ -1006,6 +1014,7 @@ function renderRecoveryCard(container, recovery) {
       <strong class="tip-card__bet-value">${betLabel}</strong>
     </div>
     <div class="tip-card__recovery-note">Sugestão mais conservadora para recuperar. Jogo: ${kickoffLabel} · Entrou: ${triggerLabel}</div>
+    ${resultMarkRecovery}
   `;
   container.appendChild(card);
 }
@@ -1555,6 +1564,85 @@ function renderTipsSectionNba(data) {
     `;
     container.appendChild(card);
   });
+
+  const hasErrorNba = topDicas[0]?.palpite?.resultado_verificador === "ERRO";
+  const allCorrectNba = topDicas.length > 0 && topDicas.every(
+    ({ palpite }) => palpite?.resultado_verificador === "ACERTO"
+  );
+  if (!allCorrectNba && data?.recovery_tip?.ativo) {
+    renderRecoveryCardNba(container, data.recovery_tip);
+  } else if (!allCorrectNba && hasErrorNba) {
+    const ids = new Set(topDicas.map(({ jogo }) => `${jogo?.times?.casa}|${jogo?.times?.visitante}`));
+    const fallback = (data.jogos || [])
+      .filter((j) => j.status !== "FINISHED" && !ids.has(`${j?.times?.casa}|${j?.times?.visitante}`))
+      .sort((a, b) => (b.favorito?.prob || 0) - (a.favorito?.prob || 0))[0];
+    if (fallback) {
+      const p = fallback.palpites?.[0];
+      if (p) {
+        const abrevC = fallback.times?.abrev_casa || "";
+        const abrevV = fallback.times?.abrev_visit || "";
+        const fakeRt = {
+          ativo: true,
+          disparado_em: null,
+          jogo: {
+            ...fallback,
+            competicao: "NBA",
+            times: {
+              ...fallback.times,
+              escudo_casa: abrevC ? `https://a.espncdn.com/i/teamlogos/nba/500/${abrevC.toLowerCase()}.png` : "",
+              escudo_visitante: abrevV ? `https://a.espncdn.com/i/teamlogos/nba/500/${abrevV.toLowerCase()}.png` : "",
+            },
+          },
+          palpite: p,
+        };
+        renderRecoveryCardNba(container, fakeRt);
+      }
+    }
+  }
+}
+
+function renderRecoveryCardNba(container, recovery) {
+  const game = recovery?.game || recovery?.jogo;
+  const tip = recovery?.tip || recovery?.palpite;
+  if (!game || !tip) return;
+  const teams = getTeamNames(game);
+  const escudos = getTeamCrests(game);
+  const kickoffLabel = game?.data ? formatGeneratedAt(game.data, true) : "--";
+  const triggerLabel = recovery?.disparado_em ? formatGeneratedAt(recovery.disparado_em, true) : "--";
+  const prob = Math.round((tip.probabilidade || 0) * 100);
+  const confidenceTone = confidenceClass(tip.confianca);
+  const confidenceText = confidenceLabel(tip.confianca);
+  const betLabel = translateTipOptionNba(tip.tipo, tip.opcao, game);
+
+  const resultadoNba = tip.resultado_verificador;
+  let resultMarkNba = "";
+  if (resultadoNba === "ACERTO") {
+    resultMarkNba = '<span class="tip-card__result tip-card__result--acerto">✅ Acerto</span>';
+  } else if (resultadoNba === "ERRO") {
+    resultMarkNba = '<span class="tip-card__result tip-card__result--erro">❌ Errou</span>';
+  }
+
+  const card = document.createElement("article");
+  card.className = "tip-card tip-card--recovery tip-card--nba";
+  card.innerHTML = `
+    <div class="tip-card__top">
+      <span class="tip-card__rank tip-card__rank--recovery">↩ Recuperação</span>
+      <span class="tip-card__competition">NBA</span>
+      <span class="conf ${confidenceTone} tip-card__conf">${confidenceText}</span>
+    </div>
+    <div class="tip-card__teams">${buildMatchTitleHtml(teams.casa, teams.visitante, "x", escudos.casa, escudos.visitante)}</div>
+    <div class="tip-card__prob">
+      <span class="tip-card__prob-value tip-card__prob-value--high">${prob}%</span>
+      <span class="tip-card__prob-label">probabilidade</span>
+    </div>
+    <div class="tip-card__bet">
+      <span class="tip-card__bet-label">Apostar em</span>
+      <strong class="tip-card__bet-value">${betLabel}</strong>
+    </div>
+    <div class="tip-card__recovery-note">Sugestão de recuperação NBA. Jogo: ${kickoffLabel}${recovery?.disparado_em ? ` · Entrou: ${triggerLabel}` : ""}</div>
+    ${resultMarkNba}
+  `;
+  container.appendChild(card);
 }
 
 function renderCardsNba() {
