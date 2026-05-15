@@ -2775,12 +2775,11 @@ def revisar_predicoes_com_ia(jogos: List[Dict]) -> None:
         })
     # ── Prompt ───────────────────────────────────────────────────────────
     prompt = f"""Você é um analista de futebol. Analise as previsões abaixo geradas por modelo estatístico.
-Para CADA jogo, use busca na web para verificar se existe algum contexto
-importante que o modelo não captura e que possa invalidar ou enfraquecer
-a previsão. Exemplos: time já rebaixado ou campeão sem motivação, jogo de
-volta com agregado favorável ao visitante, titulares poupados para outra
-competição, lesão de jogador chave, derby com dinâmica histórica especial,
-time viajando para altitude extrema.
+Para CADA jogo, avalie se existe algum contexto importante que o modelo não
+captura e que possa invalidar ou enfraquecer a previsão. Exemplos: time já
+rebaixado ou campeão sem motivação, jogo de volta com agregado favorável ao
+visitante, titulares poupados para outra competição, lesão de jogador chave,
+derby com dinâmica histórica especial, time viajando para altitude extrema.
 REGRAS DE RESPOSTA:
 - Retorne APENAS um array JSON válido, sem markdown, sem texto adicional.
 - Um objeto por jogo, na mesma ordem recebida.
@@ -2797,7 +2796,6 @@ JOGOS:
     # ── Chamada à API ────────────────────────────────────────────────────
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "tools": [{"google_search_retrieval": {}}],
         "generationConfig": {
             "temperature":      0.2,
             "maxOutputTokens":  2048,
