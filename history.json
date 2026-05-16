@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-05-16",
-      "ultima_atualizacao": "2026-05-16T20:24:00-03:00",
-      "finalizados": 18,
-      "taxa_geral": 0.561,
-      "total_acertos": 32,
-      "total_palpites": 57,
+      "ultima_atualizacao": "2026-05-16T20:46:19-03:00",
+      "finalizados": 20,
+      "taxa_geral": 0.54,
+      "total_acertos": 34,
+      "total_palpites": 63,
       "mercados": {
         "WINNER": {
-          "acertos": 11,
-          "total": 18,
-          "taxa": 0.611
+          "acertos": 13,
+          "total": 20,
+          "taxa": 0.65
         },
         "OVER_UNDER": {
           "acertos": 12,
-          "total": 18,
-          "taxa": 0.667
+          "total": 20,
+          "taxa": 0.6
         },
         "BTTS": {
           "acertos": 9,
-          "total": 18,
-          "taxa": 0.5
+          "total": 20,
+          "taxa": 0.45
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 18,
-          "brier": 0.5561,
-          "log_loss": 0.9443
+          "n": 20,
+          "brier": 0.5535,
+          "log_loss": 0.9402
         },
         "OVER_UNDER": {
-          "n": 18,
-          "brier": 0.2407,
-          "log_loss": 0.6824
+          "n": 20,
+          "brier": 0.2483,
+          "log_loss": 0.6968
         },
         "BTTS": {
-          "n": 18,
-          "brier": 0.254,
-          "log_loss": 0.6992
+          "n": 20,
+          "brier": 0.2532,
+          "log_loss": 0.6977
         }
       },
       "jogos": [
@@ -604,6 +604,66 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.483,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-16T21:30:00Z",
+          "casa": "Internacional",
+          "visitante": "Vasco da Gama",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "4-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.449,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.555,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.496,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-16T21:30:00Z",
+          "casa": "Mineiro",
+          "visitante": "Mirassol",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.365,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.57,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.495,
               "resultado": "ERRO"
             }
           ]
