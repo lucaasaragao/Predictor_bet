@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-16",
-      "ultima_atualizacao": "2026-05-16T12:36:43-03:00",
-      "finalizados": 7,
-      "taxa_geral": 0.524,
-      "total_acertos": 11,
-      "total_palpites": 21,
+      "ultima_atualizacao": "2026-05-16T13:02:50-03:00",
+      "finalizados": 9,
+      "taxa_geral": 0.519,
+      "total_acertos": 14,
+      "total_palpites": 27,
       "mercados": {
         "WINNER": {
           "acertos": 5,
-          "total": 7,
-          "taxa": 0.714
+          "total": 9,
+          "taxa": 0.556
         },
         "OVER_UNDER": {
-          "acertos": 3,
-          "total": 7,
-          "taxa": 0.429
+          "acertos": 4,
+          "total": 9,
+          "taxa": 0.444
         },
         "BTTS": {
-          "acertos": 3,
-          "total": 7,
-          "taxa": 0.429
+          "acertos": 5,
+          "total": 9,
+          "taxa": 0.556
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 7,
-          "brier": 0.5291,
-          "log_loss": 0.8989
+          "n": 9,
+          "brier": 0.6374,
+          "log_loss": 1.0574
         },
         "OVER_UNDER": {
-          "n": 7,
-          "brier": 0.1881,
-          "log_loss": 0.5624
+          "n": 9,
+          "brier": 0.2238,
+          "log_loss": 0.6469
         },
         "BTTS": {
-          "n": 7,
-          "brier": 0.2789,
-          "log_loss": 0.7511
+          "n": 9,
+          "brier": 0.2306,
+          "log_loss": 0.6475
         }
       },
       "jogos": [
@@ -249,6 +249,66 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.653,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-16T13:30:00Z",
+          "casa": "Leverkusen",
+          "visitante": "HSV",
+          "competicao": "Bundesliga",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.649,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.626,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.735,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-16T13:30:00Z",
+          "casa": "Frankfurt",
+          "visitante": "Stuttgart",
+          "competicao": "Bundesliga",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.405,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.589,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.77,
+              "resultado": "ACERTO"
             }
           ]
         }
