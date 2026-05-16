@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-05-16",
-      "ultima_atualizacao": "2026-05-16T15:57:50-03:00",
-      "finalizados": 11,
-      "taxa_geral": 0.559,
-      "total_acertos": 19,
-      "total_palpites": 34,
+      "ultima_atualizacao": "2026-05-16T16:30:59-03:00",
+      "finalizados": 15,
+      "taxa_geral": 0.532,
+      "total_acertos": 25,
+      "total_palpites": 47,
       "mercados": {
         "WINNER": {
-          "acertos": 6,
-          "total": 11,
-          "taxa": 0.545
+          "acertos": 8,
+          "total": 15,
+          "taxa": 0.533
         },
         "OVER_UNDER": {
-          "acertos": 6,
-          "total": 11,
-          "taxa": 0.545
+          "acertos": 9,
+          "total": 15,
+          "taxa": 0.6
         },
         "BTTS": {
-          "acertos": 7,
-          "total": 11,
-          "taxa": 0.636
+          "acertos": 8,
+          "total": 15,
+          "taxa": 0.533
         },
         "EMPATE": {
           "acertos": 0,
-          "total": 1,
+          "total": 2,
           "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 11,
-          "brier": 0.6052,
-          "log_loss": 1.0135
+          "n": 15,
+          "brier": 0.5966,
+          "log_loss": 1.0007
         },
         "OVER_UNDER": {
-          "n": 11,
-          "brier": 0.2291,
-          "log_loss": 0.6561
+          "n": 15,
+          "brier": 0.2522,
+          "log_loss": 0.7074
         },
         "BTTS": {
-          "n": 11,
-          "brier": 0.2347,
-          "log_loss": 0.657
+          "n": 15,
+          "brier": 0.2471,
+          "log_loss": 0.6846
         }
       },
       "jogos": [
@@ -380,6 +380,133 @@
               "opcao": "X",
               "confianca": "LOW",
               "probabilidade": 0.337,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-16T17:00:00Z",
+          "casa": "Arouca",
+          "visitante": "Tondela",
+          "competicao": "Primeira Liga",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.58,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.585,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.427,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-16T17:00:00Z",
+          "casa": "CD Nacional",
+          "visitante": "Vitória SC",
+          "competicao": "Primeira Liga",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.53,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.599,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.562,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-16T17:00:00Z",
+          "casa": "Braga",
+          "visitante": "Amadora",
+          "competicao": "Primeira Liga",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.523,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.573,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.536,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-16T17:00:00Z",
+          "casa": "Casa Pia",
+          "visitante": "Rio Ave",
+          "competicao": "Primeira Liga",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.384,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.501,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.68,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.378,
               "resultado": "ERRO"
             }
           ]
