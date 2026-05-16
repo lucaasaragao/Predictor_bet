@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T22:10:01-03:00",
+  "generated_at": "2026-05-15T22:56:18-03:00",
   "analysis_date": "2026-05-15",
   "total_jogos": 2,
   "temporada": 2025,
@@ -8,30 +8,30 @@
       "game_id": 21707977,
       "competicao": "NBA",
       "data": "2026-05-15T00:00:00.000Z",
-      "status": "SCHEDULED",
-      "status_display": "2026-05-16T01:30:00Z",
-      "periodo": 0,
-      "tempo": "",
+      "status": "IN_PLAY",
+      "status_display": "1st Qtr",
+      "periodo": 1,
+      "tempo": "Q1 6:58",
       "times": {
         "casa": "Minnesota Timberwolves",
         "visitante": "San Antonio Spurs",
         "abrev_casa": "MIN",
         "abrev_visit": "SAS"
       },
-      "placar_casa": null,
-      "placar_visitante": null,
+      "placar_casa": 11,
+      "placar_visitante": 18,
       "quarters": {
         "casa": [
-          null,
-          null,
-          null,
-          null
+          11,
+          0,
+          0,
+          0
         ],
         "visitante": [
-          null,
-          null,
-          null,
-          null
+          18,
+          0,
+          0,
+          0
         ]
       },
       "probabilidades": {
@@ -94,30 +94,30 @@
       "game_id": 21709238,
       "competicao": "NBA",
       "data": "2026-05-15T00:00:00.000Z",
-      "status": "IN_PLAY",
-      "status_display": "4th Qtr",
+      "status": "FINISHED",
+      "status_display": "Final",
       "periodo": 4,
-      "tempo": "Q4 11:41",
+      "tempo": "Final",
       "times": {
         "casa": "Cleveland Cavaliers",
         "visitante": "Detroit Pistons",
         "abrev_casa": "CLE",
         "abrev_visit": "DET"
       },
-      "placar_casa": 70,
-      "placar_visitante": 84,
+      "placar_casa": 94,
+      "placar_visitante": 115,
       "quarters": {
         "casa": [
           25,
           26,
           19,
-          0
+          24
         ],
         "visitante": [
           27,
           27,
           30,
-          0
+          31
         ]
       },
       "probabilidades": {
@@ -153,7 +153,7 @@
           "confianca": "LOW",
           "justificativa": "Cleveland Cavaliers favorito com 54.1% de chance (spread esperado: +1.1 pts).",
           "edge": 0.0812,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -163,7 +163,7 @@
           "confianca": "LOW",
           "justificativa": "Total esperado de 244.3 pts. Linha: 244.5. Tendência de UNDER.",
           "edge": 0.0019,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "SPREAD",
@@ -172,7 +172,7 @@
           "confianca": "LOW",
           "justificativa": "Cleveland Cavaliers favorito por ~1.1 pontos.",
           "edge": 0.055,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     }
@@ -194,8 +194,8 @@
     "ativo": false
   },
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 1,
+    "total": 3,
+    "taxa": 0.3333
   }
 }
