@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-05-16",
-      "ultima_atualizacao": "2026-05-16T13:28:13-03:00",
-      "finalizados": 9,
-      "taxa_geral": 0.519,
-      "total_acertos": 14,
-      "total_palpites": 27,
+      "ultima_atualizacao": "2026-05-16T13:52:46-03:00",
+      "finalizados": 11,
+      "taxa_geral": 0.559,
+      "total_acertos": 19,
+      "total_palpites": 34,
       "mercados": {
         "WINNER": {
-          "acertos": 5,
-          "total": 9,
-          "taxa": 0.556
+          "acertos": 6,
+          "total": 11,
+          "taxa": 0.545
         },
         "OVER_UNDER": {
-          "acertos": 4,
-          "total": 9,
-          "taxa": 0.444
+          "acertos": 6,
+          "total": 11,
+          "taxa": 0.545
         },
         "BTTS": {
-          "acertos": 5,
-          "total": 9,
-          "taxa": 0.556
+          "acertos": 7,
+          "total": 11,
+          "taxa": 0.636
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 9,
-          "brier": 0.6374,
-          "log_loss": 1.0574
+          "n": 11,
+          "brier": 0.6052,
+          "log_loss": 1.0135
         },
         "OVER_UNDER": {
-          "n": 9,
-          "brier": 0.2238,
-          "log_loss": 0.6469
+          "n": 11,
+          "brier": 0.2291,
+          "log_loss": 0.6561
         },
         "BTTS": {
-          "n": 9,
-          "brier": 0.2306,
-          "log_loss": 0.6475
+          "n": 11,
+          "brier": 0.2347,
+          "log_loss": 0.657
         }
       },
       "jogos": [
@@ -309,6 +314,73 @@
               "confianca": "HIGH",
               "probabilidade": 0.77,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-16T14:30:00Z",
+          "casa": "Porto",
+          "visitante": "Santa Clara",
+          "competicao": "Primeira Liga",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.651,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.599,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.433,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-16T14:30:00Z",
+          "casa": "Moreirense",
+          "visitante": "AVS",
+          "competicao": "Primeira Liga",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.363,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.659,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.57,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.337,
+              "resultado": "ERRO"
             }
           ]
         }
