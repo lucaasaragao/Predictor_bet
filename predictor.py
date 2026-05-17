@@ -2913,30 +2913,23 @@ def revisar_predicoes_com_ia(jogos: List[Dict]) -> None:
         })
     # ── Prompt ───────────────────────────────────────────────────────────
     prompt = f"""Você é um analista de futebol. Analise as previsões abaixo geradas por modelo estatístico.
-Para CADA jogo, avalie se existe algum contexto importante que o modelo não
-captura e que possa invalidar ou enfraquecer a previsão. Exemplos: time já
-rebaixado ou campeão sem motivação, jogo de volta com agregado favorável ao
-visitante, titulares poupados para outra competição, lesão de jogador chave,
-derby com dinâmica histórica especial, time viajando para altitude extrema.
-REGRAS DE RESPOSTA:
-- Retorne APENAS um array JSON válido, sem markdown, sem texto adicional.
-- Um objeto por jogo, na mesma ordem recebida.
-- Campo "alerta": string curta em português, em UMA única linha sem quebras de linha (máximo 100 caracteres) OU null se não houver risco relevante.
+Para CADA jogo, avalie se existe algum contexto importante que o modelo não captura e que possa invalidar ou enfraquecer a previsão. Exemplos: time já rebaixado ou campeão sem motivação, jogo de volta com agregado favorável ao visitante, titulares poupados para outra competição, lesão de jogador chave, derby com dinâmica histórica especial, time viajando para altitude extrema.
+REGRAS ESTRITAS:
+- Retorne APENAS um array JSON compacto (sem indentação, sem quebras de linha entre campos).
+- Um objeto por linha, na mesma ordem recebida.
+- Campo "alerta": string curta em português, máximo 80 caracteres, SEM quebras de linha. Use null se não houver risco concreto.
 - Seja conservador: só alerte quando houver informação concreta, não suposições.
-FORMATO EXATO:
-[
-  {{"casa": "NomeExato", "visitante": "NomeExato", "alerta": "texto ou null"}},
-  ...
-]
+FORMATO EXATO (uma linha por jogo):
+[{{"casa":"NomeExato","visitante":"NomeExato","alerta":"texto"}},{{"casa":"NomeExato","visitante":"NomeExato","alerta":null}}]
 JOGOS:
-{json.dumps(jogos_resumo, ensure_ascii=False, indent=2)}
+{json.dumps(jogos_resumo, ensure_ascii=False)}
 """
     # ── Chamada à API ────────────────────────────────────────────────────
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature":        0.2,
-            "maxOutputTokens":    2048,
+            "maxOutputTokens":    4096,
             "responseMimeType":   "application/json",
         },
     }
