@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-17",
-      "ultima_atualizacao": "2026-05-17T11:24:43-03:00",
-      "finalizados": 6,
-      "taxa_geral": 0.389,
-      "total_acertos": 7,
-      "total_palpites": 18,
+      "ultima_atualizacao": "2026-05-17T11:29:32-03:00",
+      "finalizados": 8,
+      "taxa_geral": 0.375,
+      "total_acertos": 9,
+      "total_palpites": 24,
       "mercados": {
         "WINNER": {
           "acertos": 2,
-          "total": 6,
-          "taxa": 0.333
+          "total": 8,
+          "taxa": 0.25
         },
         "OVER_UNDER": {
-          "acertos": 1,
-          "total": 6,
-          "taxa": 0.167
+          "acertos": 2,
+          "total": 8,
+          "taxa": 0.25
         },
         "BTTS": {
-          "acertos": 4,
-          "total": 6,
-          "taxa": 0.667
+          "acertos": 5,
+          "total": 8,
+          "taxa": 0.625
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 6,
-          "brier": 0.775,
-          "log_loss": 1.2574
+          "n": 8,
+          "brier": 0.858,
+          "log_loss": 1.3576
         },
         "OVER_UNDER": {
-          "n": 6,
-          "brier": 0.3276,
-          "log_loss": 0.8494
+          "n": 8,
+          "brier": 0.2847,
+          "log_loss": 0.7612
         },
         "BTTS": {
-          "n": 6,
-          "brier": 0.2259,
-          "log_loss": 0.64
+          "n": 8,
+          "brier": 0.2395,
+          "log_loss": 0.6685
         }
       },
       "jogos": [
@@ -219,6 +219,66 @@
               "confianca": "HIGH",
               "probabilidade": 0.748,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T12:30:00Z",
+          "casa": "Zwolle",
+          "visitante": "Feyenoord",
+          "competicao": "Eredivisie",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.418,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.526,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.466,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T12:30:00Z",
+          "casa": "AZ",
+          "visitante": "NAC",
+          "competicao": "Eredivisie",
+          "placar": "3-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.824,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.525,
+              "resultado": "ERRO"
             }
           ]
         }
