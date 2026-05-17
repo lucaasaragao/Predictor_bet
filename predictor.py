@@ -2935,8 +2935,9 @@ JOGOS:
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
-            "temperature":      0.2,
-            "maxOutputTokens":  2048,
+            "temperature":        0.2,
+            "maxOutputTokens":    2048,
+            "responseMimeType":   "application/json",
         },
     }
     try:
@@ -2973,7 +2974,13 @@ JOGOS:
     # ── Extrair texto da resposta ────────────────────────────────────────
     try:
         candidates = data.get("candidates", [])
-        texto = candidates[0]["content"]["parts"][0]["text"].strip()
+        candidate  = candidates[0]
+        finish     = candidate.get("finishReason", "UNKNOWN")
+        if finish not in ("STOP", "MAX_TOKENS"):
+            print(f"⚠️  Gemini finishReason inesperado: {finish}")
+        if finish == "MAX_TOKENS":
+            print("⚠️  Gemini atingiu MAX_TOKENS — resposta pode estar truncada.")
+        texto = candidate["content"]["parts"][0]["text"].strip()
     except (IndexError, KeyError, TypeError) as exc:
         print(f"⚠️  Resposta Gemini inesperada (estrutura fora do padrão): {exc}")
         print(f"    Resposta recebida: {str(data)[:300]}")
