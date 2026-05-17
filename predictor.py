@@ -2886,30 +2886,36 @@ def revisar_predicoes_com_ia(jogos: List[Dict]) -> None:
     if not GEMINI_API_KEY:
         print("ℹ️  GEMINI_API_KEY não definida. Pulando revisão com IA.")
         return False
+    # ── Filtrar apenas jogos com palpite WINNER (os que aparecem pro usuário) ──
+    def _tem_winner(j: Dict) -> bool:
+        return any(p.get("tipo") == "WINNER" for p in (j.get("palpites") or []))
+
+    jogos_com_tip = [j for j in jogos if _tem_winner(j)]
+    if not jogos_com_tip:
+        print("ℹ️  Nenhum jogo com palpite WINNER hoje — revisão IA ignorada.")
+        return False
+
+    print(f"🤖 Revisando {len(jogos_com_tip)} jogo(s) com palpite (de {len(jogos)} totais) com Gemini Flash ({GEMINI_MODEL})...")
+
     # ── Montar payload compacto para economizar tokens ──────────────────
+    def _form(historico: List[Dict]) -> str:
+        return " ".join(j.get("resultado", "?") for j in (historico or [])[:3])
+
     jogos_resumo = []
-    for jogo in jogos:
-        times   = jogo.get("times", {})
-        fav     = jogo.get("favorito", {})
+    for jogo in jogos_com_tip:
+        times    = jogo.get("times", {})
+        fav      = jogo.get("favorito", {})
         palpites = jogo.get("palpites", []) or []
         winner_p = next((p for p in palpites if p.get("tipo") == "WINNER"), {})
-        def _form(historico: List[Dict]) -> str:
-            return " ".join(
-                j.get("resultado", "?") for j in (historico or [])[:3]
-            )
-        hist = jogo.get("historico", {})
+        hist     = jogo.get("historico", {})
         jogos_resumo.append({
-            "competicao":   jogo.get("competicao", ""),
-            "data":         jogo.get("data", "")[:10],
             "casa":         times.get("casa", ""),
             "visitante":    times.get("visitante", ""),
             "favorito":     fav.get("nome", ""),
             "prob_fav":     round(float(fav.get("prob", 0)), 2),
-            "winner_opcao": winner_p.get("opcao", ""),
             "winner_conf":  winner_p.get("confianca", ""),
             "forma_casa":   _form(hist.get("casa", [])),
             "forma_visit":  _form(hist.get("visitante", [])),
-            "alertas_modelo": jogo.get("alertas", []),
         })
     # ── Prompt ───────────────────────────────────────────────────────────
     prompt = f"""Você é um analista de futebol. Analise as previsões abaixo geradas por modelo estatístico.
@@ -2934,7 +2940,6 @@ JOGOS:
         },
     }
     try:
-        print(f"🤖 Revisando {len(jogos)} jogo(s) com Gemini Flash ({GEMINI_MODEL})...")
         resp = requests.post(
             GEMINI_ENDPOINT,
             headers={"X-goog-api-key": GEMINI_API_KEY, "Content-Type": "application/json"},
@@ -3023,7 +3028,7 @@ JOGOS:
         )
         mapa_alertas[chave] = item.get("alerta") or None
     alertas_aplicados = 0
-    for jogo in jogos:
+    for jogo in jogos_com_tip:
         times = jogo.get("times", {})
         chave = (
             _normalizar_nome_time(times.get("casa", "")),
@@ -3035,7 +3040,7 @@ JOGOS:
             alertas_aplicados += 1
     print(
         f"✅ Revisão IA concluída: {alertas_aplicados} alerta(s) gerado(s) "
-        f"em {len(jogos)} jogo(s)."
+        f"em {len(jogos_com_tip)} jogo(s) com palpite."
     )
     return True
 
