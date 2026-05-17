@@ -2898,6 +2898,7 @@ JOGOS:
         "generationConfig": {
             "temperature":     0.3,
             "maxOutputTokens": 2048,
+            "thinkingConfig":  {"thinkingBudget": 0},
         },
     }
     try:
@@ -2933,6 +2934,10 @@ JOGOS:
         candidates = data.get("candidates", [])
         candidate  = candidates[0]
         finish     = candidate.get("finishReason", "UNKNOWN")
+        usage      = data.get("usageMetadata", {})
+        tokens_out = usage.get("candidatesTokenCount", "?")
+        tokens_in  = usage.get("promptTokenCount", "?")
+        print(f"    tokens entrada={tokens_in} saída={tokens_out} finishReason={finish}")
         if finish == "MAX_TOKENS":
             print("⚠️  Gemini atingiu MAX_TOKENS neste batch — resultado descartado.")
             return None
@@ -2964,10 +2969,19 @@ JOGOS:
     texto = "".join(buf)
 
     try:
-        return json.loads(texto)
+        resultado = json.loads(texto)
     except json.JSONDecodeError as exc:
         print(f"⚠️  JSON inválido do Gemini: {exc} | {texto[:200]}")
         return None
+
+    for item in resultado:
+        casa = item.get("casa", "?")
+        visit = item.get("visitante", "?")
+        palpite = item.get("palpite_ia", "?")
+        conf = item.get("confianca_ia", "?")
+        nota = item.get("nota") or ""
+        print(f"    {casa} x {visit} → {palpite} [{conf}] {nota}")
+    return resultado
 
 
 def revisar_predicoes_com_ia(jogos: List[Dict]) -> bool:
