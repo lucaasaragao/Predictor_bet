@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-05-17",
-      "ultima_atualizacao": "2026-05-17T13:06:47-03:00",
-      "finalizados": 19,
+      "ultima_atualizacao": "2026-05-17T13:32:02-03:00",
+      "finalizados": 21,
       "taxa_geral": 0.508,
-      "total_acertos": 30,
-      "total_palpites": 59,
+      "total_acertos": 33,
+      "total_palpites": 65,
       "mercados": {
         "WINNER": {
           "acertos": 7,
-          "total": 19,
-          "taxa": 0.368
+          "total": 21,
+          "taxa": 0.333
         },
         "OVER_UNDER": {
-          "acertos": 11,
-          "total": 19,
-          "taxa": 0.579
+          "acertos": 13,
+          "total": 21,
+          "taxa": 0.619
         },
         "BTTS": {
-          "acertos": 11,
-          "total": 19,
-          "taxa": 0.579
+          "acertos": 12,
+          "total": 21,
+          "taxa": 0.571
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 19,
-          "brier": 0.7252,
-          "log_loss": 1.1635
+          "n": 21,
+          "brier": 0.7545,
+          "log_loss": 1.2073
         },
         "OVER_UNDER": {
-          "n": 19,
-          "brier": 0.2509,
-          "log_loss": 0.6905
+          "n": 21,
+          "brier": 0.2465,
+          "log_loss": 0.682
         },
         "BTTS": {
-          "n": 19,
-          "brier": 0.2272,
-          "log_loss": 0.6423
+          "n": 21,
+          "brier": 0.2274,
+          "log_loss": 0.6432
         }
       },
       "jogos": [
@@ -627,6 +627,66 @@
               "opcao": "X",
               "confianca": "LOW",
               "probabilidade": 0.305,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T14:00:00Z",
+          "casa": "Santos",
+          "visitante": "Coritiba",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "0-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.587,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.522,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.485,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T14:00:00Z",
+          "casa": "Brentford",
+          "visitante": "Crystal Palace",
+          "competicao": "Premier League",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.592,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.576,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.44,
               "resultado": "ERRO"
             }
           ]
