@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-05-16",
-      "ultima_atualizacao": "2026-05-16T22:16:50-03:00",
-      "finalizados": 21,
-      "taxa_geral": 0.561,
-      "total_acertos": 37,
-      "total_palpites": 66,
+      "ultima_atualizacao": "2026-05-16T23:06:22-03:00",
+      "finalizados": 22,
+      "taxa_geral": 0.557,
+      "total_acertos": 39,
+      "total_palpites": 70,
       "mercados": {
         "WINNER": {
           "acertos": 14,
-          "total": 21,
-          "taxa": 0.667
+          "total": 22,
+          "taxa": 0.636
         },
         "OVER_UNDER": {
-          "acertos": 13,
-          "total": 21,
-          "taxa": 0.619
+          "acertos": 14,
+          "total": 22,
+          "taxa": 0.636
         },
         "BTTS": {
           "acertos": 10,
-          "total": 21,
-          "taxa": 0.476
+          "total": 22,
+          "taxa": 0.455
         },
         "EMPATE": {
-          "acertos": 0,
-          "total": 3,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 4,
+          "taxa": 0.25
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 21,
-          "brier": 0.5478,
-          "log_loss": 0.9322
+          "n": 22,
+          "brier": 0.556,
+          "log_loss": 0.943
         },
         "OVER_UNDER": {
-          "n": 21,
-          "brier": 0.2456,
-          "log_loss": 0.691
+          "n": 22,
+          "brier": 0.242,
+          "log_loss": 0.6834
         },
         "BTTS": {
-          "n": 21,
-          "brier": 0.2489,
-          "log_loss": 0.6891
+          "n": 22,
+          "brier": 0.25,
+          "log_loss": 0.6915
         }
       },
       "jogos": [
@@ -694,6 +694,43 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.596,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T00:00:00Z",
+          "casa": "Palmeiras",
+          "visitante": "Cruzeiro",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.432,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.523,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
               "resultado": "ACERTO"
             }
           ]
