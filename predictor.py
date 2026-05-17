@@ -183,6 +183,16 @@ class ScoreTempo:
 
 
 @dataclass
+class TendenciaGols:
+    """Tendência de gols de um time baseada nos últimos N jogos (sinal binário)."""
+    prob_marca: float       # fração de jogos em que o time marcou ≥ 1 gol
+    prob_sofre: float       # fração de jogos em que o time sofreu ≥ 1 gol
+    sequencia_marca: int    # jogos consecutivos recentes com gol marcado
+    sequencia_sofre: int    # jogos consecutivos recentes com gol sofrido
+    jogos: int              # total de jogos analisados
+
+
+@dataclass
 class PredicaoJogo:
     """Previsão de um jogo"""
     data_jogo: str
@@ -208,6 +218,8 @@ class PredicaoJogo:
     odds_debug: Dict[str, str] = field(default_factory=dict)
     escudo_casa: Optional[str] = None
     escudo_visitante: Optional[str] = None
+    tendencia_gols_casa: Optional[TendenciaGols] = None
+    tendencia_gols_visitante: Optional[TendenciaGols] = None
 
 
 @dataclass
@@ -439,6 +451,57 @@ def calcular_tendencia_forma(historico: List[Dict], team_id: int) -> str:
     elif diferenca_forma < -0.15:
         return "em baixa"
     return "estavel"
+
+
+def calcular_tendencia_gols(historico: List[Dict], team_id: int, n: int = 10) -> TendenciaGols:
+    """Sinal binário de gols dos últimos N jogos: marcou ≥1 / sofreu ≥1 por partida.
+
+    Complementa o Poisson capturando consistência recente — um time que
+    marcou em 9 dos últimos 10 jogos tem padrão diferente de outro com λ
+    similar mas desempenho irregular.
+    """
+    marcou: List[bool] = []
+    sofreu: List[bool] = []
+
+    for match in historico[:n]:
+        home_id = match.get("homeTeam", {}).get("id")
+        ft = match.get("score", {}).get("fullTime", {})
+        g_casa = ft.get("home") or 0
+        g_fora = ft.get("away") or 0
+        if home_id == team_id:
+            marcou.append(g_casa >= 1)
+            sofreu.append(g_fora >= 1)
+        else:
+            marcou.append(g_fora >= 1)
+            sofreu.append(g_casa >= 1)
+
+    total = len(marcou)
+    if total == 0:
+        return TendenciaGols(prob_marca=0.5, prob_sofre=0.5,
+                             sequencia_marca=0, sequencia_sofre=0, jogos=0)
+
+    # Streak: quantos jogos consecutivos mais recentes com gol marcado / sofrido
+    seq_marca = 0
+    for v in marcou:
+        if v:
+            seq_marca += 1
+        else:
+            break
+
+    seq_sofre = 0
+    for v in sofreu:
+        if v:
+            seq_sofre += 1
+        else:
+            break
+
+    return TendenciaGols(
+        prob_marca=round(sum(marcou) / total, 3),
+        prob_sofre=round(sum(sofreu) / total, 3),
+        sequencia_marca=seq_marca,
+        sequencia_sofre=seq_sofre,
+        jogos=total,
+    )
 
 
 def aplicar_pesos_temporais(historico: List[Dict], team_id: int) -> float:
@@ -1066,7 +1129,9 @@ def prever_jogo(match: Dict) -> PredicaoJogo:
     
     tendencia_casa = calcular_tendencia_forma(hist_home, home_id)
     tendencia_visitante = calcular_tendencia_forma(hist_away, away_id)
-    
+    tg_home = calcular_tendencia_gols(hist_home, home_id)
+    tg_away = calcular_tendencia_gols(hist_away, away_id)
+
     placar_casa, placar_visitante = _extrair_placar_partida_api(match)
 
     return PredicaoJogo(
@@ -1090,6 +1155,8 @@ def prever_jogo(match: Dict) -> PredicaoJogo:
         historico_visitante=hist_away,
         tendencia_casa=tendencia_casa,
         tendencia_visitante=tendencia_visitante,
+        tendencia_gols_casa=tg_home,
+        tendencia_gols_visitante=tg_away,
     )
 
 
@@ -1225,9 +1292,54 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
         edge=round(edge_ou, 4),
     ))
 
+    # ── Over 1.5 sempre disponível como palpite independente ─────────────────
+    # (a linha dinâmica acima pode usar 2.5 ou 3.5; Over 1.5 existe separado)
+    tg_casa = predicao.tendencia_gols_casa
+    tg_visit = predicao.tendencia_gols_visitante
+    tem_forma = tg_casa is not None and tg_visit is not None and tg_casa.jogos >= 5 and tg_visit.jogos >= 5
+
+    prob_over15 = mercados["over_15"]
+    if tem_forma:
+        # Blenda Poisson com forma: P(ambos marcam) é subconjunto de Over 1.5
+        # + P(um time marca 2+, outro não marca) capturado via Poisson residual
+        btts_forma = tg_casa.prob_marca * tg_visit.prob_marca
+        residuo_poisson = mercados["over_15"] - mercados["btts_yes"]  # P(só um time, mas ≥2 gols)
+        prob_over15 = _clip_probabilidade(0.65 * mercados["over_15"] + 0.35 * (btts_forma + max(residuo_poisson, 0)))
+
+    edge_over15 = prob_over15 - 0.50
+    if edge_over15 > OU_BTTS_HIGH_THRESHOLD:
+        conf_over15 = "HIGH"
+    elif edge_over15 > OU_BTTS_MEDIUM_THRESHOLD:
+        conf_over15 = "MEDIUM"
+    else:
+        conf_over15 = "LOW"
+
+    forma_txt_over15 = ""
+    if tem_forma:
+        forma_txt_over15 = (
+            f" | Forma: {tg_casa.prob_marca*100:.0f}% casa marca, "
+            f"{tg_visit.prob_marca*100:.0f}% visit marca"
+        )
+    palpites.append(BetSuggestion(
+        tipo="OVER_UNDER",
+        opcao="OVER_1.5",
+        probabilidade=round(prob_over15, 4),
+        confianca=conf_over15,
+        justificativa=(
+            f"Pelo menos 2 gols no jogo. xG total: ≈{total_esperado:.1f}.{forma_txt_over15}"
+        ),
+        edge=round(edge_over15, 4),
+    ))
+
     # ── Palpite: BTTS ──────────────────────────────────────────────────────────
     btts_yes = mercados["btts_yes"]
     btts_no = mercados["btts_no"]
+
+    # Blenda Poisson (60%) com forma recente (40%) se houver dados suficientes
+    if tem_forma:
+        btts_forma = tg_casa.prob_marca * tg_visit.prob_marca
+        btts_yes = _clip_probabilidade(0.60 * btts_yes + 0.40 * btts_forma)
+        btts_no  = 1.0 - btts_yes
 
     # P(clean sheet) = e^(-λ): se qualquer time tem >30% de chance de não marcar,
     # forçar NO independentemente da matriz Poisson
@@ -1241,7 +1353,6 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
         btts_prob = max(btts_yes, btts_no)
 
     edge_btts = btts_prob - 0.50
-    edge_btts = btts_prob - 0.50
 
     if edge_btts > OU_BTTS_HIGH_THRESHOLD:
         confianca = "HIGH"
@@ -1252,14 +1363,19 @@ def gerar_palpites(predicao: PredicaoJogo) -> List[BetSuggestion]:
 
     xg_casa = predicao.gols_esperados_casa
     xg_fora = predicao.gols_esperados_visitante
+    forma_txt_btts = ""
+    if tem_forma:
+        forma_txt_btts = (
+            f" | Forma {tg_casa.sequencia_marca}j/{tg_visit.sequencia_marca}j consecutivos com gol"
+        )
     palpites.append(BetSuggestion(
         tipo="BTTS",
         opcao=btts_opcao,
-        probabilidade=btts_prob,
+        probabilidade=round(btts_prob, 4),
         confianca=confianca,
         justificativa=(
             f"xG: {xg_casa:.1f} (casa) x {xg_fora:.1f} (fora). "
-            f"Ambas marcam - {'Sim' if btts_opcao == 'YES' else 'Nao'}: {btts_prob*100:.1f}%"
+            f"Ambas marcam - {'Sim' if btts_opcao == 'YES' else 'Nao'}: {btts_prob*100:.1f}%{forma_txt_btts}"
         ),
         edge=round(edge_btts, 4),
     ))
@@ -1705,6 +1821,28 @@ def _serializar_jogo_front(pred: PredicaoJogo) -> Dict:
         "scores": {"casa": asdict(pred.score_casa), "visitante": asdict(pred.score_visitante)},
         "leitura_rapida": _montar_leitura_rapida_front(pred, favorito, mercados),
         "tendencia": {"casa": pred.tendencia_casa, "visitante": pred.tendencia_visitante},
+        "tendencia_gols": {
+            "casa": (
+                {
+                    "prob_marca": pred.tendencia_gols_casa.prob_marca,
+                    "prob_sofre": pred.tendencia_gols_casa.prob_sofre,
+                    "sequencia_marca": pred.tendencia_gols_casa.sequencia_marca,
+                    "sequencia_sofre": pred.tendencia_gols_casa.sequencia_sofre,
+                    "jogos": pred.tendencia_gols_casa.jogos,
+                }
+                if pred.tendencia_gols_casa else None
+            ),
+            "visitante": (
+                {
+                    "prob_marca": pred.tendencia_gols_visitante.prob_marca,
+                    "prob_sofre": pred.tendencia_gols_visitante.prob_sofre,
+                    "sequencia_marca": pred.tendencia_gols_visitante.sequencia_marca,
+                    "sequencia_sofre": pred.tendencia_gols_visitante.sequencia_sofre,
+                    "jogos": pred.tendencia_gols_visitante.jogos,
+                }
+                if pred.tendencia_gols_visitante else None
+            ),
+        },
         "alertas": _coletar_alertas_front(pred),
         "alerta_ia": None,
         "odds_debug": pred.odds_debug,
