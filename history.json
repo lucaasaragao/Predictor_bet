@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-05-17",
-      "ultima_atualizacao": "2026-05-17T12:54:09-03:00",
-      "finalizados": 16,
-      "taxa_geral": 0.479,
-      "total_acertos": 23,
-      "total_palpites": 48,
+      "ultima_atualizacao": "2026-05-17T13:06:47-03:00",
+      "finalizados": 19,
+      "taxa_geral": 0.508,
+      "total_acertos": 30,
+      "total_palpites": 59,
       "mercados": {
         "WINNER": {
-          "acertos": 6,
-          "total": 16,
-          "taxa": 0.375
+          "acertos": 7,
+          "total": 19,
+          "taxa": 0.368
         },
         "OVER_UNDER": {
-          "acertos": 8,
-          "total": 16,
-          "taxa": 0.5
+          "acertos": 11,
+          "total": 19,
+          "taxa": 0.579
         },
         "BTTS": {
-          "acertos": 9,
-          "total": 16,
-          "taxa": 0.562
+          "acertos": 11,
+          "total": 19,
+          "taxa": 0.579
+        },
+        "EMPATE": {
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 16,
-          "brier": 0.7321,
-          "log_loss": 1.173
+          "n": 19,
+          "brier": 0.7252,
+          "log_loss": 1.1635
         },
         "OVER_UNDER": {
-          "n": 16,
-          "brier": 0.266,
-          "log_loss": 0.7202
+          "n": 19,
+          "brier": 0.2509,
+          "log_loss": 0.6905
         },
         "BTTS": {
-          "n": 16,
-          "brier": 0.2246,
-          "log_loss": 0.6364
+          "n": 19,
+          "brier": 0.2272,
+          "log_loss": 0.6423
         }
       },
       "jogos": [
@@ -518,6 +523,110 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.498,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T14:00:00Z",
+          "casa": "Wolverhampton",
+          "visitante": "Fulham",
+          "competicao": "Premier League",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.46,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.624,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.558,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.314,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T14:00:00Z",
+          "casa": "Everton",
+          "visitante": "Sunderland",
+          "competicao": "Premier League",
+          "placar": "1-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.438,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.59,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.622,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T14:00:00Z",
+          "casa": "Leeds United",
+          "visitante": "Brighton Hove",
+          "competicao": "Premier League",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.38,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.551,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.482,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.305,
               "resultado": "ERRO"
             }
           ]
