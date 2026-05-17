@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-17",
-      "ultima_atualizacao": "2026-05-17T11:29:32-03:00",
-      "finalizados": 8,
-      "taxa_geral": 0.375,
-      "total_acertos": 9,
-      "total_palpites": 24,
+      "ultima_atualizacao": "2026-05-17T11:37:36-03:00",
+      "finalizados": 14,
+      "taxa_geral": 0.5,
+      "total_acertos": 21,
+      "total_palpites": 42,
       "mercados": {
         "WINNER": {
-          "acertos": 2,
-          "total": 8,
-          "taxa": 0.25
+          "acertos": 6,
+          "total": 14,
+          "taxa": 0.429
         },
         "OVER_UNDER": {
-          "acertos": 2,
-          "total": 8,
-          "taxa": 0.25
+          "acertos": 7,
+          "total": 14,
+          "taxa": 0.5
         },
         "BTTS": {
-          "acertos": 5,
-          "total": 8,
-          "taxa": 0.625
+          "acertos": 8,
+          "total": 14,
+          "taxa": 0.571
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 8,
-          "brier": 0.858,
-          "log_loss": 1.3576
+          "n": 14,
+          "brier": 0.7084,
+          "log_loss": 1.1485
         },
         "OVER_UNDER": {
-          "n": 8,
-          "brier": 0.2847,
-          "log_loss": 0.7612
+          "n": 14,
+          "brier": 0.2686,
+          "log_loss": 0.7248
         },
         "BTTS": {
-          "n": 8,
-          "brier": 0.2395,
-          "log_loss": 0.6685
+          "n": 14,
+          "brier": 0.2299,
+          "log_loss": 0.6465
         }
       },
       "jogos": [
@@ -279,6 +279,186 @@
               "confianca": "LOW",
               "probabilidade": 0.525,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T12:30:00Z",
+          "casa": "Utrecht",
+          "visitante": "Sittard",
+          "competicao": "Eredivisie",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.652,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.593,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.429,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T12:30:00Z",
+          "casa": "Heerenveen",
+          "visitante": "Ajax",
+          "competicao": "Eredivisie",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.546,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.583,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.632,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T12:30:00Z",
+          "casa": "Heracles",
+          "visitante": "Groningen",
+          "competicao": "Eredivisie",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.486,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.502,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.462,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T12:30:00Z",
+          "casa": "NEC",
+          "visitante": "Go Ahead",
+          "competicao": "Eredivisie",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.454,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.516,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.439,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T12:30:00Z",
+          "casa": "PSV",
+          "visitante": "Twente",
+          "competicao": "Eredivisie",
+          "placar": "5-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.465,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.711,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.833,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T12:30:00Z",
+          "casa": "Sparta",
+          "visitante": "Excelsior",
+          "competicao": "Eredivisie",
+          "placar": "2-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.389,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.582,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.621,
+              "resultado": "ACERTO"
             }
           ]
         }
