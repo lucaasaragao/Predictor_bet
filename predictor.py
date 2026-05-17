@@ -2921,7 +2921,7 @@ derby com dinâmica histórica especial, time viajando para altitude extrema.
 REGRAS DE RESPOSTA:
 - Retorne APENAS um array JSON válido, sem markdown, sem texto adicional.
 - Um objeto por jogo, na mesma ordem recebida.
-- Campo "alerta": string curta em português (máximo 100 caracteres) OU null se não houver risco relevante.
+- Campo "alerta": string curta em português, em UMA única linha sem quebras de linha (máximo 100 caracteres) OU null se não houver risco relevante.
 - Seja conservador: só alerte quando houver informação concreta, não suposições.
 FORMATO EXATO:
 [
@@ -2985,6 +2985,29 @@ JOGOS:
             l for l in linhas
             if not l.strip().startswith("```")
         ).strip()
+    # Sanitizar newlines literais dentro de strings JSON (o modelo às vezes quebra linhas)
+    # Percorre char a char para substituir \n literal por espaço apenas dentro de strings
+    _buf: List[str] = []
+    _in_str = False
+    _i = 0
+    while _i < len(texto):
+        _c = texto[_i]
+        if _c == "\\" and _in_str:
+            _buf.append(_c)
+            _i += 1
+            if _i < len(texto):
+                _buf.append(texto[_i])
+            _i += 1
+            continue
+        if _c == '"':
+            _in_str = not _in_str
+        if _c == "\n" and _in_str:
+            _buf.append(" ")
+        else:
+            _buf.append(_c)
+        _i += 1
+    texto = "".join(_buf)
+
     # ── Parsear JSON e injetar alertas ───────────────────────────────────
     try:
         alertas_ia: List[Dict] = json.loads(texto)
