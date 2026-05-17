@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-05-17",
-      "ultima_atualizacao": "2026-05-17T17:30:42-03:00",
-      "finalizados": 32,
-      "taxa_geral": 0.545,
-      "total_acertos": 55,
-      "total_palpites": 101,
+      "ultima_atualizacao": "2026-05-17T17:55:09-03:00",
+      "finalizados": 36,
+      "taxa_geral": 0.531,
+      "total_acertos": 60,
+      "total_palpites": 113,
       "mercados": {
         "WINNER": {
-          "acertos": 13,
-          "total": 32,
-          "taxa": 0.406
+          "acertos": 14,
+          "total": 36,
+          "taxa": 0.389
         },
         "OVER_UNDER": {
-          "acertos": 22,
-          "total": 32,
-          "taxa": 0.688
+          "acertos": 24,
+          "total": 36,
+          "taxa": 0.667
         },
         "BTTS": {
-          "acertos": 18,
-          "total": 32,
-          "taxa": 0.562
+          "acertos": 20,
+          "total": 36,
+          "taxa": 0.556
         },
         "EMPATE": {
           "acertos": 2,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 32,
-          "brier": 0.6931,
-          "log_loss": 1.1284
+          "n": 36,
+          "brier": 0.7215,
+          "log_loss": 1.1765
         },
         "OVER_UNDER": {
-          "n": 32,
-          "brier": 0.2415,
-          "log_loss": 0.6732
+          "n": 36,
+          "brier": 0.2485,
+          "log_loss": 0.688
         },
         "BTTS": {
-          "n": 32,
-          "brier": 0.2386,
-          "log_loss": 0.6674
+          "n": 36,
+          "brier": 0.2353,
+          "log_loss": 0.6609
         }
       },
       "jogos": [
@@ -1039,6 +1039,126 @@
               "confianca": "LOW",
               "probabilidade": 0.549,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T18:45:00Z",
+          "casa": "Udinese",
+          "visitante": "Cremonese",
+          "competicao": "Serie A",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.561,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.619,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.596,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T18:45:00Z",
+          "casa": "Cagliari",
+          "visitante": "Torino",
+          "competicao": "Serie A",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.375,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.572,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.498,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T18:45:00Z",
+          "casa": "Sassuolo",
+          "visitante": "Lecce",
+          "competicao": "Serie A",
+          "placar": "2-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.586,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.551,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.549,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T19:00:00Z",
+          "casa": "Brest",
+          "visitante": "Angers SCO",
+          "competicao": "Ligue 1",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.563,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.553,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.648,
+              "resultado": "ACERTO"
             }
           ]
         }
