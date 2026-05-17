@@ -950,6 +950,49 @@ select option, select optgroup { background: var(--bg-2); color: var(--text); }
   margin-bottom: 0.35rem;
 }
 
+.tip-analise-ia {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 12px;
+  background: rgba(138, 92, 246, 0.08);
+  border-left: 3px solid #8a5cf6;
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.35rem;
+}
+.ia-badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #8a5cf6;
+  background: rgba(138, 92, 246, 0.15);
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.ia-palpite {
+  font-weight: 600;
+  color: var(--text-1);
+}
+.ia-conf {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.ia-conf--alta   { color: var(--success); background: rgba(170,255,64,0.12); }
+.ia-conf--media  { color: var(--amber);   background: rgba(255,180,0,0.12);  }
+.ia-conf--baixa  { color: var(--text-3);  background: rgba(255,255,255,0.06);}
+.ia-nota {
+  color: var(--text-2);
+  flex-basis: 100%;
+  margin-top: 0.15rem;
+  line-height: 1.5;
+}
+:root[data-theme="light"] .tip-analise-ia { background: rgba(138,92,246,0.06); }
+:root[data-theme="light"] .ia-badge       { color: #7c3aed; background: rgba(124,58,237,0.12); }
+
 .odds-debug {
   border: 1px dashed var(--line-2);
   border-radius: var(--radius-sm);

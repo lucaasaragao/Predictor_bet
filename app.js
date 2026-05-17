@@ -900,6 +900,22 @@ function renderTips(container, tips, match) {
     container.appendChild(alertEl);
   });
 
+  // Análise Gemini IA
+  const ia = match?.analise_ia;
+  if (ia?.palpite_ia) {
+    const iaEl = document.createElement("div");
+    iaEl.className = "tip-analise-ia";
+    const opcaoLabel = ia.palpite_ia === "1" ? "Casa" : ia.palpite_ia === "2" ? "Visitante" : "Empate";
+    const confClass  = ia.confianca_ia === "alta" ? "ia-conf--alta" : ia.confianca_ia === "media" ? "ia-conf--media" : "ia-conf--baixa";
+    iaEl.innerHTML = `
+      <span class="ia-badge">✨ IA</span>
+      <span class="ia-palpite">${opcaoLabel}</span>
+      <span class="ia-conf ${confClass}">${ia.confianca_ia ?? ""}</span>
+      ${ia.nota ? `<span class="ia-nota">${ia.nota}</span>` : ""}
+    `;
+    container.appendChild(iaEl);
+  }
+
   const summaryBox = document.createElement("div");
   summaryBox.className = "tip-summary";
   summaryBox.textContent = buildSummaryNarrative(match);
