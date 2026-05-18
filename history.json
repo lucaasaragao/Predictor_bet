@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-05-17",
-      "ultima_atualizacao": "2026-05-17T21:08:57-03:00",
-      "finalizados": 48,
-      "taxa_geral": 0.523,
-      "total_acertos": 78,
-      "total_palpites": 149,
+      "ultima_atualizacao": "2026-05-17T22:17:47-03:00",
+      "finalizados": 49,
+      "taxa_geral": 0.52,
+      "total_acertos": 79,
+      "total_palpites": 152,
       "mercados": {
         "WINNER": {
           "acertos": 18,
-          "total": 48,
-          "taxa": 0.375
+          "total": 49,
+          "taxa": 0.367
         },
         "OVER_UNDER": {
-          "acertos": 31,
-          "total": 48,
-          "taxa": 0.646
+          "acertos": 32,
+          "total": 49,
+          "taxa": 0.653
         },
         "BTTS": {
           "acertos": 27,
-          "total": 48,
-          "taxa": 0.562
+          "total": 49,
+          "taxa": 0.551
         },
         "EMPATE": {
           "acertos": 2,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 48,
-          "brier": 0.7198,
-          "log_loss": 1.1745
+          "n": 49,
+          "brier": 0.7212,
+          "log_loss": 1.1762
         },
         "OVER_UNDER": {
-          "n": 48,
+          "n": 49,
           "brier": 0.2442,
-          "log_loss": 0.6788
+          "log_loss": 0.6789
         },
         "BTTS": {
-          "n": 48,
-          "brier": 0.2402,
-          "log_loss": 0.671
+          "n": 49,
+          "brier": 0.2396,
+          "log_loss": 0.6698
         }
       },
       "jogos": [
@@ -1519,6 +1519,36 @@
               "confianca": "LOW",
               "probabilidade": 0.393,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-17T22:30:00Z",
+          "casa": "Paranaense",
+          "visitante": "Flamengo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.459,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.504,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.457,
+              "resultado": "ERRO"
             }
           ]
         }
