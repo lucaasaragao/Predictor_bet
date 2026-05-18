@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-05-18",
+      "ultima_atualizacao": "2026-05-18T00:25:38-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-05-17",
       "ultima_atualizacao": "2026-05-17T23:08:12-03:00",
       "finalizados": 49,
@@ -2493,260 +2520,6 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.634,
-              "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-05-13",
-      "ultima_atualizacao": "2026-05-13T23:01:53-03:00",
-      "finalizados": 7,
-      "taxa_geral": 0.571,
-      "total_acertos": 12,
-      "total_palpites": 21,
-      "mercados": {
-        "WINNER": {
-          "acertos": 3,
-          "total": 7,
-          "taxa": 0.429
-        },
-        "OVER_UNDER": {
-          "acertos": 6,
-          "total": 7,
-          "taxa": 0.857
-        },
-        "BTTS": {
-          "acertos": 3,
-          "total": 7,
-          "taxa": 0.429
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 7,
-          "brier": 0.7393,
-          "log_loss": 1.2458
-        },
-        "OVER_UNDER": {
-          "n": 7,
-          "brier": 0.2341,
-          "log_loss": 0.6553
-        },
-        "BTTS": {
-          "n": 7,
-          "brier": 0.2958,
-          "log_loss": 0.7889
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-05-13T17:00:00Z",
-          "casa": "Espanyol",
-          "visitante": "Athletic",
-          "competicao": "Primera Division",
-          "placar": "2-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.377,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.547,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.478,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-13T17:00:00Z",
-          "casa": "Brest",
-          "visitante": "Strasbourg",
-          "competicao": "Ligue 1",
-          "placar": "1-2",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.419,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.611,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.641,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-13T17:00:00Z",
-          "casa": "Villarreal",
-          "visitante": "Sevilla FC",
-          "competicao": "Primera Division",
-          "placar": "2-3",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.807,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.613,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.395,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-13T19:00:00Z",
-          "casa": "Man City",
-          "visitante": "Crystal Palace",
-          "competicao": "Premier League",
-          "placar": "3-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.649,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.513,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.364,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-13T19:00:00Z",
-          "casa": "RC Lens",
-          "visitante": "PSG",
-          "competicao": "Ligue 1",
-          "placar": "0-2",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.456,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.568,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.667,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-13T19:30:00Z",
-          "casa": "Alavés",
-          "visitante": "Barça",
-          "competicao": "Primera Division",
-          "placar": "1-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "2",
-              "confianca": "HIGH",
-              "probabilidade": 0.513,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.563,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.658,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-13T19:30:00Z",
-          "casa": "Getafe",
-          "visitante": "Mallorca",
-          "competicao": "Primera Division",
-          "placar": "3-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.418,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.544,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.48,
               "resultado": "ERRO"
             }
           ]
