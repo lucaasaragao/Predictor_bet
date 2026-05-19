@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-05-19",
+      "ultima_atualizacao": "2026-05-19T00:23:39-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-05-18",
       "ultima_atualizacao": "2026-05-18T23:01:54-03:00",
       "finalizados": 1,
@@ -2441,140 +2468,6 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.697,
               "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-05-14",
-      "ultima_atualizacao": "2026-05-14T23:07:02-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.333,
-      "total_acertos": 3,
-      "total_palpites": 9,
-      "mercados": {
-        "WINNER": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
-        },
-        "OVER_UNDER": {
-          "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
-        },
-        "BTTS": {
-          "acertos": 0,
-          "total": 3,
-          "taxa": 0.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 3,
-          "brier": 0.6299,
-          "log_loss": 1.0378
-        },
-        "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.3231,
-          "log_loss": 0.844
-        },
-        "BTTS": {
-          "n": 3,
-          "brier": 0.2665,
-          "log_loss": 0.7285
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-05-14T17:00:00Z",
-          "casa": "Valencia",
-          "visitante": "Rayo Vallecano",
-          "competicao": "Primera Division",
-          "placar": "1-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.487,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.501,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.462,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-14T18:00:00Z",
-          "casa": "Girona",
-          "visitante": "Real Sociedad",
-          "competicao": "Primera Division",
-          "placar": "1-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.474,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.535,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.429,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-14T19:30:00Z",
-          "casa": "Real Madrid",
-          "visitante": "Real Oviedo",
-          "competicao": "Primera Division",
-          "placar": "2-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.583,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.561,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.634,
-              "resultado": "ERRO"
             }
           ]
         }
