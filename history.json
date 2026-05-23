@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-23",
-      "ultima_atualizacao": "2026-05-23T19:00:33-03:00",
-      "finalizados": 11,
-      "taxa_geral": 0.568,
-      "total_acertos": 25,
-      "total_palpites": 44,
+      "ultima_atualizacao": "2026-05-23T19:25:07-03:00",
+      "finalizados": 13,
+      "taxa_geral": 0.615,
+      "total_acertos": 32,
+      "total_palpites": 52,
       "mercados": {
         "WINNER": {
-          "acertos": 6,
-          "total": 11,
-          "taxa": 0.545
+          "acertos": 7,
+          "total": 13,
+          "taxa": 0.538
         },
         "OVER_UNDER": {
-          "acertos": 16,
-          "total": 22,
-          "taxa": 0.727
+          "acertos": 20,
+          "total": 26,
+          "taxa": 0.769
         },
         "BTTS": {
-          "acertos": 3,
-          "total": 11,
-          "taxa": 0.273
+          "acertos": 5,
+          "total": 13,
+          "taxa": 0.385
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 11,
-          "brier": 0.518,
-          "log_loss": 0.8853
+          "n": 13,
+          "brier": 0.5323,
+          "log_loss": 0.9081
         },
         "OVER_UNDER": {
-          "n": 11,
-          "brier": 0.2463,
-          "log_loss": 0.6951
+          "n": 13,
+          "brier": 0.2551,
+          "log_loss": 0.7117
         },
         "BTTS": {
-          "n": 11,
-          "brier": 0.2602,
-          "log_loss": 0.721
+          "n": 13,
+          "brier": 0.25,
+          "log_loss": 0.6989
         }
       },
       "jogos": [
@@ -446,6 +446,80 @@
               "confianca": "LOW",
               "probabilidade": 0.424,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-23T20:00:00Z",
+          "casa": "Vitória",
+          "visitante": "Internacional",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.486,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.53,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.749,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.475,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-23T20:00:00Z",
+          "casa": "São Paulo",
+          "visitante": "Botafogo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.409,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.602,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.861,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.67,
+              "resultado": "ACERTO"
             }
           ]
         }
