@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-23",
-      "ultima_atualizacao": "2026-05-23T21:04:37-03:00",
-      "finalizados": 13,
-      "taxa_geral": 0.615,
-      "total_acertos": 32,
-      "total_palpites": 52,
+      "ultima_atualizacao": "2026-05-23T22:17:16-03:00",
+      "finalizados": 15,
+      "taxa_geral": 0.617,
+      "total_acertos": 37,
+      "total_palpites": 60,
       "mercados": {
         "WINNER": {
-          "acertos": 7,
-          "total": 13,
-          "taxa": 0.538
+          "acertos": 9,
+          "total": 15,
+          "taxa": 0.6
         },
         "OVER_UNDER": {
-          "acertos": 20,
-          "total": 26,
-          "taxa": 0.769
+          "acertos": 22,
+          "total": 30,
+          "taxa": 0.733
         },
         "BTTS": {
-          "acertos": 5,
-          "total": 13,
-          "taxa": 0.385
+          "acertos": 6,
+          "total": 15,
+          "taxa": 0.4
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 13,
-          "brier": 0.5323,
-          "log_loss": 0.9081
+          "n": 15,
+          "brier": 0.5122,
+          "log_loss": 0.8795
         },
         "OVER_UNDER": {
-          "n": 13,
-          "brier": 0.2551,
-          "log_loss": 0.7117
+          "n": 15,
+          "brier": 0.2698,
+          "log_loss": 0.7421
         },
         "BTTS": {
-          "n": 13,
-          "brier": 0.25,
-          "log_loss": 0.6989
+          "n": 15,
+          "brier": 0.2594,
+          "log_loss": 0.7174
         }
       },
       "jogos": [
@@ -520,6 +520,80 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.67,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-23T22:00:00Z",
+          "casa": "Mirassol",
+          "visitante": "Fluminense",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.558,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.803,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.442,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-23T22:00:00Z",
+          "casa": "Grêmio",
+          "visitante": "Santos",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.447,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.699,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.595,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.613,
+              "resultado": "ERRO"
             }
           ]
         }
