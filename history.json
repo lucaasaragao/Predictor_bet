@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-05-24",
+      "ultima_atualizacao": "2026-05-24T00:27:55-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-05-23",
       "ultima_atualizacao": "2026-05-23T23:07:13-03:00",
       "finalizados": 16,
@@ -922,87 +949,6 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.636,
-              "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-05-18",
-      "ultima_atualizacao": "2026-05-18T23:01:54-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.5,
-      "total_acertos": 2,
-      "total_palpites": 4,
-      "mercados": {
-        "WINNER": {
-          "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
-        },
-        "OVER_UNDER": {
-          "acertos": 0,
-          "total": 2,
-          "taxa": 0.0
-        },
-        "BTTS": {
-          "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 1,
-          "brier": 0.1101,
-          "log_loss": 0.3052
-        },
-        "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.2977,
-          "log_loss": 0.7889
-        },
-        "BTTS": {
-          "n": 1,
-          "brier": 0.1767,
-          "log_loss": 0.5454
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-05-18T19:00:00Z",
-          "casa": "Arsenal",
-          "visitante": "Burnley",
-          "competicao": "Premier League",
-          "placar": "1-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.737,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.546,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.832,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.532,
               "resultado": "ACERTO"
             }
           ]
