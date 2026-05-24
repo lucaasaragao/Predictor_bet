@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-05-24",
-      "ultima_atualizacao": "2026-05-24T15:00:27-03:00",
-      "finalizados": 11,
-      "taxa_geral": 0.543,
-      "total_acertos": 25,
-      "total_palpites": 46,
+      "ultima_atualizacao": "2026-05-24T15:33:35-03:00",
+      "finalizados": 12,
+      "taxa_geral": 0.52,
+      "total_acertos": 26,
+      "total_palpites": 50,
       "mercados": {
         "WINNER": {
           "acertos": 6,
-          "total": 11,
-          "taxa": 0.545
+          "total": 12,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 14,
-          "total": 22,
-          "taxa": 0.636
+          "acertos": 15,
+          "total": 24,
+          "taxa": 0.625
         },
         "BTTS": {
           "acertos": 4,
-          "total": 11,
-          "taxa": 0.364
+          "total": 12,
+          "taxa": 0.333
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 11,
-          "brier": 0.6824,
-          "log_loss": 1.1022
+          "n": 12,
+          "brier": 0.6808,
+          "log_loss": 1.1
         },
         "OVER_UNDER": {
-          "n": 11,
-          "brier": 0.2703,
-          "log_loss": 0.7354
+          "n": 12,
+          "brier": 0.2828,
+          "log_loss": 0.7611
         },
         "BTTS": {
-          "n": 11,
-          "brier": 0.2737,
-          "log_loss": 0.7425
+          "n": 12,
+          "brier": 0.2883,
+          "log_loss": 0.7731
         }
       },
       "jogos": [
@@ -464,6 +464,43 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.586,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-24T16:00:00Z",
+          "casa": "Napoli",
+          "visitante": "Udinese",
+          "competicao": "Serie A",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.405,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.572,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.792,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.594,
               "resultado": "ERRO"
             }
           ]
