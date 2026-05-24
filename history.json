@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-05-24",
-      "ultima_atualizacao": "2026-05-24T17:31:25-03:00",
-      "finalizados": 12,
-      "taxa_geral": 0.52,
-      "total_acertos": 26,
-      "total_palpites": 50,
+      "ultima_atualizacao": "2026-05-24T17:56:22-03:00",
+      "finalizados": 15,
+      "taxa_geral": 0.548,
+      "total_acertos": 34,
+      "total_palpites": 62,
       "mercados": {
         "WINNER": {
-          "acertos": 6,
-          "total": 12,
-          "taxa": 0.5
+          "acertos": 8,
+          "total": 15,
+          "taxa": 0.533
         },
         "OVER_UNDER": {
-          "acertos": 15,
-          "total": 24,
-          "taxa": 0.625
+          "acertos": 19,
+          "total": 30,
+          "taxa": 0.633
         },
         "BTTS": {
-          "acertos": 4,
-          "total": 12,
-          "taxa": 0.333
+          "acertos": 6,
+          "total": 15,
+          "taxa": 0.4
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 12,
-          "brier": 0.6808,
-          "log_loss": 1.1
+          "n": 15,
+          "brier": 0.6541,
+          "log_loss": 1.0676
         },
         "OVER_UNDER": {
-          "n": 12,
-          "brier": 0.2828,
-          "log_loss": 0.7611
+          "n": 15,
+          "brier": 0.2657,
+          "log_loss": 0.7255
         },
         "BTTS": {
-          "n": 12,
-          "brier": 0.2883,
-          "log_loss": 0.7731
+          "n": 15,
+          "brier": 0.2736,
+          "log_loss": 0.7428
         }
       },
       "jogos": [
@@ -502,6 +502,117 @@
               "confianca": "LOW",
               "probabilidade": 0.594,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-24T18:45:00Z",
+          "casa": "Cremonese",
+          "visitante": "Como 1907",
+          "competicao": "Serie A",
+          "placar": "1-4",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.458,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.549,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.743,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.472,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-24T18:45:00Z",
+          "casa": "Lecce",
+          "visitante": "Genoa",
+          "competicao": "Serie A",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.388,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.685,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.549,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.657,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-24T18:45:00Z",
+          "casa": "Verona",
+          "visitante": "Roma",
+          "competicao": "Serie A",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.487,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.563,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.683,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.548,
+              "resultado": "ACERTO"
             }
           ]
         }
