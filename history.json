@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-05-26",
+      "ultima_atualizacao": "2026-05-26T00:22:35-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-05-25",
       "ultima_atualizacao": "2026-05-25T22:59:39-03:00",
       "finalizados": 1,
@@ -1652,87 +1679,6 @@
               "confianca": "LOW",
               "probabilidade": 0.343,
               "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-05-20",
-      "ultima_atualizacao": "2026-05-20T23:08:41-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.5,
-      "total_acertos": 2,
-      "total_palpites": 4,
-      "mercados": {
-        "WINNER": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
-        },
-        "OVER_UNDER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
-        },
-        "BTTS": {
-          "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 1,
-          "brier": 0.8103,
-          "log_loss": 1.2599
-        },
-        "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.2182,
-          "log_loss": 0.6294
-        },
-        "BTTS": {
-          "n": 1,
-          "brier": 0.257,
-          "log_loss": 0.7071
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-05-20T22:00:00Z",
-          "casa": "Club Nacional",
-          "visitante": "Universitario",
-          "competicao": "Copa Libertadores",
-          "placar": "0-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.501,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.533,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.737,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.493,
-              "resultado": "ACERTO"
             }
           ]
         }

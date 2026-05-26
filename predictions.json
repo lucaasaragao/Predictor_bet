@@ -1,185 +1,421 @@
 {
-  "generated_at": "2026-05-25T22:59:39-03:00",
-  "analysis_date": "2026-05-25",
-  "total_jogos": 1,
+  "generated_at": "2026-05-26T00:22:33-03:00",
+  "analysis_date": "2026-05-26",
+  "total_jogos": 2,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
   "odds_min_ev": 0.03,
   "jogos": [
     {
-      "competicao": "Campeonato Brasileiro Série A",
-      "data": "2026-05-25T23:00:00Z",
-      "status": "FINISHED",
+      "competicao": "Copa Libertadores",
+      "data": "2026-05-26T22:00:00Z",
+      "status": "TIMED",
       "placar_atual": {
-        "casa": 3,
-        "visitante": 1
+        "casa": null,
+        "visitante": null
       },
       "times": {
-        "casa": "Coritiba",
-        "visitante": "Bahia",
-        "escudo_casa": "https://crests.football-data.org/4241.png",
-        "escudo_visitante": "https://crests.football-data.org/1777.png"
+        "casa": "Lanús",
+        "visitante": "Mirassol",
+        "escudo_casa": "https://crests.football-data.org/2066.png",
+        "escudo_visitante": "https://crests.football-data.org/4364.png"
       },
       "probabilidades": {
-        "casa": 0.5630638005885805,
-        "empate": 0.24355521172954825,
-        "visitante": 0.19338098768187123
+        "casa": 0.48884825393669296,
+        "empate": 0.30504116788264934,
+        "visitante": 0.20611057818065773
       },
       "favorito": {
-        "nome": "Coritiba",
-        "prob": 0.5630638005885805,
-        "vantagem": 0.31950858885903227
+        "nome": "Lanús",
+        "prob": 0.48884825393669296,
+        "vantagem": 0.1838070860540436
       },
       "gols_esperados": {
-        "casa": 1.9624926315789477,
-        "visitante": 1.08899296969697,
-        "total": 3.0514856012759175
+        "casa": 1.4095959821428572,
+        "visitante": 0.834359876033058,
+        "total": 2.243955858175915
       },
       "mercados": {
-        "under_25": 0.4121637277469944,
-        "over_25": 0.5878362722530056,
-        "btts_yes": 0.5832805142573271,
-        "btts_no": 0.4167194857426729
+        "under_25": 0.611022219315791,
+        "over_25": 0.388977780684209,
+        "btts_yes": 0.4438421141228501,
+        "btts_no": 0.5561578858771499
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.5,
-          "ataque": 0.6,
-          "defesa": 0.6,
+          "forma_recente": 0.375,
+          "ataque": 0.4,
+          "defesa": 1.0,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.605
+          "score_total": 0.59125
         },
         "visitante": {
-          "forma_recente": 0.3909090909090909,
-          "ataque": 0.5,
-          "defesa": 0.09999999999999998,
+          "forma_recente": 0.7181818181818183,
+          "ataque": 0.4,
+          "defesa": 0.36,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.4218181818181818
+          "score_total": 0.5633636363636365
         }
       },
-      "leitura_rapida": "Coritiba favorito (56%, risco moderado). Jogo mais aberto (xG total ≈3.1). Over 2.5 com 59%.",
+      "leitura_rapida": "Lanús favorito (49%, risco moderado). Jogo fechado esperado (xG total ≈2.2). Under 2.5 com 61%.",
       "tendencia": {
         "casa": "estavel",
         "visitante": "estavel"
       },
       "tendencia_gols": {
         "casa": {
-          "prob_marca": 0.8,
-          "prob_sofre": 0.7,
-          "sequencia_marca": 3,
-          "sequencia_sofre": 0,
-          "jogos": 10
+          "prob_marca": 0.4,
+          "prob_sofre": 0.6,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 2,
+          "jogos": 5
         },
         "visitante": {
-          "prob_marca": 0.9,
-          "prob_sofre": 0.8,
-          "sequencia_marca": 4,
-          "sequencia_sofre": 7,
+          "prob_marca": 0.8,
+          "prob_sofre": 0.7,
+          "sequencia_marca": 7,
+          "sequencia_sofre": 0,
           "jogos": 10
+        }
+      },
+      "alertas": [
+        "Mirassol jogou recentemente — possível desgaste físico."
+      ],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "media",
+        "nota": "Lanús é forte em casa e tem mais tradição continental que o estreante Mirassol"
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente na consulta por liga",
+        "competition": "Copa Libertadores",
+        "sport_key": "soccer_conmebol_libertadores",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "21/05 00:30",
+            "mandante": "LDU de Quito",
+            "visitante": "Lanús",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "06/05 00:30",
+            "mandante": "Always Ready",
+            "visitante": "Lanús",
+            "placar": "4 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "28/04 22:00",
+            "mandante": "Lanús",
+            "visitante": "LDU de Quito",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "16/04 22:00",
+            "mandante": "Lanús",
+            "visitante": "Always Ready",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "08/04 22:00",
+            "mandante": "Mirassol",
+            "visitante": "Lanús",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "23/05 22:00",
+            "mandante": "Mirassol",
+            "visitante": "Fluminense",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "20/05 00:00",
+            "mandante": "Always Ready",
+            "visitante": "Mirassol",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "16/05 21:30",
+            "mandante": "Mineiro",
+            "visitante": "Mirassol",
+            "placar": "3 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "10/05 21:30",
+            "mandante": "Mirassol",
+            "visitante": "Chapecoense",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "07/05 22:00",
+            "mandante": "Mirassol",
+            "visitante": "LDU de Quito",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.48884825393669296,
+          "confianca": "MEDIUM",
+          "justificativa": "Lanús projeta ≈1.4 gol(s) vs ≈0.8 do adversário. Prob vitória: 48.9% (margem: 18.4 p.p.)",
+          "edge": 0.1838,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER_2.5",
+          "probabilidade": 0.611022219315791,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.2. UNDER 2.5: 61.1% de probabilidade",
+          "edge": 0.111,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.6288,
+          "confianca": "MEDIUM",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.2. | Forma: 40% casa marca, 80% visit marca",
+          "edge": 0.1288,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.6057,
+          "confianca": "LOW",
+          "justificativa": "xG: 1.4 (casa) x 0.8 (fora). Ambas marcam - Nao: 60.6% | Forma 0j/7j consecutivos com gol",
+          "edge": 0.1057,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Copa Libertadores",
+      "data": "2026-05-26T22:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "LDU de Quito",
+        "visitante": "Always Ready",
+        "escudo_casa": "https://crests.football-data.org/4528.png",
+        "escudo_visitante": "https://crests.football-data.org/7865.png"
+      },
+      "probabilidades": {
+        "casa": 0.6153359299988034,
+        "empate": 0.26237530717164054,
+        "visitante": 0.12228876282955611
+      },
+      "favorito": {
+        "nome": "LDU de Quito",
+        "prob": 0.6153359299988034,
+        "vantagem": 0.35296062282716284
+      },
+      "gols_esperados": {
+        "casa": 1.6852958466198982,
+        "visitante": 0.63221484375,
+        "total": 2.317510690369898
+      },
+      "mercados": {
+        "under_25": 0.5916176062358788,
+        "over_25": 0.4083823937641212,
+        "btts_yes": 0.39533435683347445,
+        "btts_no": 0.6046656431665256
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.575,
+          "ataque": 0.8,
+          "defesa": 1.0,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.7612500000000001
+        },
+        "visitante": {
+          "forma_recente": 0.225,
+          "ataque": 0.0,
+          "defesa": 0.4,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.29875
+        }
+      },
+      "leitura_rapida": "LDU de Quito favorito (62%, risco forte). Jogo fechado esperado (xG total ≈2.3). Under 2.5 com 59%. | Forma recente: LDU de Quito em baixa.",
+      "tendencia": {
+        "casa": "em baixa",
+        "visitante": "estavel"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 0.6,
+          "prob_sofre": 0.4,
+          "sequencia_marca": 1,
+          "sequencia_sofre": 0,
+          "jogos": 5
+        },
+        "visitante": {
+          "prob_marca": 0.4,
+          "prob_sofre": 0.8,
+          "sequencia_marca": 2,
+          "sequencia_sofre": 1,
+          "jogos": 5
         }
       },
       "alertas": [],
       "analise_ia": {
         "palpite_ia": "1",
-        "confianca_ia": "media",
-        "nota": "Coritiba forte em casa e com melhor xG, enquanto o Bahia oscila muito como visitante"
+        "confianca_ia": "alta",
+        "nota": "A altitude de Quito e a força da LDU em casa devem prevalecer contra o Always Ready"
       },
       "odds_debug": {
         "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
-        "competition": "Campeonato Brasileiro Série A",
-        "sport_key": "soccer_brazil_campeonato",
-        "odds_match_id": "2bc2e659511578cc29e06e84b4c502b3",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente na consulta por liga",
+        "competition": "Copa Libertadores",
+        "sport_key": "soccer_conmebol_libertadores",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
       },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
+      "odds_integradas": false,
+      "odds_valor_alto": false,
       "historico": {
         "casa": [
           {
-            "data": "17/05 14:00",
-            "mandante": "Santos",
-            "visitante": "Coritiba",
-            "placar": "0 x 3",
+            "data": "21/05 00:30",
+            "mandante": "LDU de Quito",
+            "visitante": "Lanús",
+            "placar": "2 x 0",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
           {
-            "data": "09/05 19:00",
-            "mandante": "Coritiba",
-            "visitante": "Internacional",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "02/05 21:30",
-            "mandante": "Vitória",
-            "visitante": "Coritiba",
-            "placar": "4 x 1",
+            "data": "07/05 22:00",
+            "mandante": "Mirassol",
+            "visitante": "LDU de Quito",
+            "placar": "2 x 0",
             "resultado": "D",
             "resultado_label": "Derrota"
           },
           {
-            "data": "26/04 19:00",
-            "mandante": "Grêmio",
-            "visitante": "Coritiba",
+            "data": "28/04 22:00",
+            "mandante": "Lanús",
+            "visitante": "LDU de Quito",
             "placar": "1 x 0",
             "resultado": "D",
             "resultado_label": "Derrota"
           },
           {
-            "data": "19/04 19:00",
-            "mandante": "Coritiba",
-            "visitante": "Mineiro",
+            "data": "15/04 02:00",
+            "mandante": "LDU de Quito",
+            "visitante": "Mirassol",
             "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "08/04 00:00",
+            "mandante": "Always Ready",
+            "visitante": "LDU de Quito",
+            "placar": "0 x 1",
             "resultado": "V",
             "resultado_label": "Vitoria"
           }
         ],
         "visitante": [
           {
-            "data": "17/05 19:00",
-            "mandante": "Bahia",
-            "visitante": "Grêmio",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "10/05 00:00",
-            "mandante": "Bahia",
-            "visitante": "Cruzeiro",
+            "data": "20/05 00:00",
+            "mandante": "Always Ready",
+            "visitante": "Mirassol",
             "placar": "1 x 2",
             "resultado": "D",
             "resultado_label": "Derrota"
           },
           {
-            "data": "03/05 19:00",
-            "mandante": "São Paulo",
-            "visitante": "Bahia",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
+            "data": "06/05 00:30",
+            "mandante": "Always Ready",
+            "visitante": "Lanús",
+            "placar": "4 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
           },
           {
-            "data": "25/04 21:30",
-            "mandante": "Bahia",
-            "visitante": "Santos",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "19/04 22:30",
-            "mandante": "Flamengo",
-            "visitante": "Bahia",
+            "data": "29/04 22:00",
+            "mandante": "Mirassol",
+            "visitante": "Always Ready",
             "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "16/04 22:00",
+            "mandante": "Lanús",
+            "visitante": "Always Ready",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "08/04 00:00",
+            "mandante": "Always Ready",
+            "visitante": "LDU de Quito",
+            "placar": "0 x 1",
             "resultado": "D",
             "resultado_label": "Derrota"
           }
@@ -189,72 +425,81 @@
         {
           "tipo": "WINNER",
           "opcao": "1",
-          "probabilidade": 0.5630638005885805,
-          "confianca": "MEDIUM",
-          "justificativa": "Coritiba projeta ≈2.0 gol(s) vs ≈1.1 do adversário. Prob vitória: 56.3% (margem: 32.0 p.p.)",
-          "edge": 0.3195,
-          "odd_decimal": 2.76,
-          "ev": 0.5597,
-          "ev_bruto": 0.5541,
-          "prob_mercado_justa": 0.361,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_2.5",
-          "probabilidade": 0.5878362722530056,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈3.1. OVER 2.5: 58.8% de probabilidade",
-          "edge": 0.0878,
+          "probabilidade": 0.6153359299988034,
+          "confianca": "HIGH",
+          "justificativa": "LDU de Quito projeta ≈1.7 gol(s) vs ≈0.6 do adversário. Prob vitória: 61.5% (margem: 35.3 p.p.)",
+          "edge": 0.353,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER_2.5",
+          "probabilidade": 0.5916176062358788,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.3. UNDER 2.5: 59.2% de probabilidade",
+          "edge": 0.0916,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "OVER_1.5",
-          "probabilidade": 0.8692,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈3.1. | Forma: 80% casa marca, 90% visit marca",
-          "edge": 0.3692,
+          "probabilidade": 0.6323,
+          "confianca": "MEDIUM",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.3. | Forma: 60% casa marca, 40% visit marca",
+          "edge": 0.1323,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
+          "resultado_verificador": null
         },
         {
           "tipo": "BTTS",
           "opcao": "NO",
-          "probabilidade": 0.362,
-          "confianca": "LOW",
-          "justificativa": "xG: 2.0 (casa) x 1.1 (fora). Ambas marcam - Nao: 36.2% | Forma 3j/4j consecutivos com gol",
-          "edge": -0.138,
+          "probabilidade": 0.6668,
+          "confianca": "MEDIUM",
+          "justificativa": "xG: 1.7 (casa) x 0.6 (fora). Ambas marcam - Nao: 66.7% | Forma 1j/2j consecutivos com gol",
+          "edge": 0.1668,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
+          "resultado_verificador": null
         }
       ]
     }
   ],
   "acertos_hoje": {
-    "acertos": 3,
-    "total": 4,
-    "taxa": 0.75
+    "acertos": 0,
+    "total": 0,
+    "taxa": null
   },
-  "daily_tips_ids": [],
-  "daily_tips_date": "2026-05-25",
+  "daily_tips_ids": [
+    {
+      "casa": "LDU de Quito",
+      "visitante": "Always Ready",
+      "data": "2026-05-26T22:00:00Z",
+      "tipo": "BTTS",
+      "opcao": "NO",
+      "probabilidade": 0.6668
+    }
+  ],
+  "daily_tips_date": "2026-05-26",
   "recovery_tip": {
     "ativo": false
   },
-  "recovery_tip_date": "2026-05-25",
-  "gemini_revisado_em": "2026-05-25"
+  "recovery_tip_date": "2026-05-26",
+  "gemini_revisado_em": "2026-05-26"
 }
