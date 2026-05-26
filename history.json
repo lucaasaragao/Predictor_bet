@@ -2,30 +2,84 @@
   "dias": [
     {
       "data": "2026-05-25",
-      "ultima_atualizacao": "2026-05-25T22:12:12-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-05-25T22:59:39-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.75,
+      "total_acertos": 3,
+      "total_palpites": 4,
+      "mercados": {
+        "WINNER": {
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 2,
+          "total": 2,
+          "taxa": 1.0
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.2876,
+          "log_loss": 0.5744
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.1699,
+          "log_loss": 0.5313
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.1737,
+          "log_loss": 0.5391
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-05-25T23:00:00Z",
+          "casa": "Coritiba",
+          "visitante": "Bahia",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.563,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.588,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.869,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.362,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-05-24",
