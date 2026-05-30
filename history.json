@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-30",
-      "ultima_atualizacao": "2026-05-30T19:19:19-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.75,
-      "total_acertos": 9,
-      "total_palpites": 12,
+      "ultima_atualizacao": "2026-05-30T19:42:13-03:00",
+      "finalizados": 4,
+      "taxa_geral": 0.625,
+      "total_acertos": 10,
+      "total_palpites": 16,
       "mercados": {
         "WINNER": {
           "acertos": 3,
-          "total": 3,
-          "taxa": 1.0
+          "total": 4,
+          "taxa": 0.75
         },
         "OVER_UNDER": {
-          "acertos": 3,
-          "total": 6,
+          "acertos": 4,
+          "total": 8,
           "taxa": 0.5
         },
         "BTTS": {
           "acertos": 3,
-          "total": 3,
-          "taxa": 1.0
+          "total": 4,
+          "taxa": 0.75
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 3,
-          "brier": 0.3099,
-          "log_loss": 0.6002
+          "n": 4,
+          "brier": 0.4816,
+          "log_loss": 0.8642
         },
         "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.1682,
-          "log_loss": 0.5246
+          "n": 4,
+          "brier": 0.2365,
+          "log_loss": 0.6664
         },
         "BTTS": {
-          "n": 3,
-          "brier": 0.2246,
-          "log_loss": 0.6385
+          "n": 4,
+          "brier": 0.2599,
+          "log_loss": 0.711
         }
       },
       "jogos": [
@@ -150,6 +150,43 @@
               "confianca": "LOW",
               "probabilidade": 0.361,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-30T20:30:00Z",
+          "casa": "Grêmio",
+          "visitante": "Corinthians",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.49,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.664,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.624,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.603,
+              "resultado": "ERRO"
             }
           ]
         }

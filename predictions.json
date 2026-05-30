@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T19:19:19-03:00",
+  "generated_at": "2026-05-30T19:42:13-03:00",
   "analysis_date": "2026-05-30",
   "total_jogos": 6,
   "odds_debug_visual": false,
@@ -730,7 +730,7 @@
       "data": "2026-05-30T20:30:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 1,
+        "casa": 2,
         "visitante": 1
       },
       "times": {
@@ -966,7 +966,7 @@
     {
       "competicao": "Campeonato Brasileiro Série A",
       "data": "2026-05-30T20:30:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
         "visitante": 3
@@ -1157,7 +1157,7 @@
           "ev_bruto": 0.3529,
           "prob_mercado_justa": 0.3594,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -1171,7 +1171,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -1185,7 +1185,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -1199,7 +1199,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -1443,9 +1443,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 9,
-    "total": 12,
-    "taxa": 0.75
+    "acertos": 10,
+    "total": 16,
+    "taxa": 0.625
   },
   "daily_tips_ids": [
     {
