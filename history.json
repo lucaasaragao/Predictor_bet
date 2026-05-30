@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-05-30",
-      "ultima_atualizacao": "2026-05-30T18:00:43-03:00",
-      "finalizados": 1,
+      "ultima_atualizacao": "2026-05-30T18:28:42-03:00",
+      "finalizados": 3,
       "taxa_geral": 0.75,
-      "total_acertos": 3,
-      "total_palpites": 4,
+      "total_acertos": 9,
+      "total_palpites": 12,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 1,
+          "acertos": 3,
+          "total": 3,
           "taxa": 1.0
         },
         "OVER_UNDER": {
-          "acertos": 1,
-          "total": 2,
+          "acertos": 3,
+          "total": 6,
           "taxa": 0.5
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 1,
+          "acertos": 3,
+          "total": 3,
           "taxa": 1.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 1,
-          "brier": 0.4703,
-          "log_loss": 0.8178
+          "n": 3,
+          "brier": 0.3099,
+          "log_loss": 0.6002
         },
         "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.1066,
-          "log_loss": 0.3952
+          "n": 3,
+          "brier": 0.1682,
+          "log_loss": 0.5246
         },
         "BTTS": {
-          "n": 1,
-          "brier": 0.0985,
-          "log_loss": 0.3767
+          "n": 3,
+          "brier": 0.2246,
+          "log_loss": 0.6385
         }
       },
       "jogos": [
@@ -75,6 +75,80 @@
               "opcao": "YES",
               "confianca": "HIGH",
               "probabilidade": 0.772,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-30T19:00:00Z",
+          "casa": "Paranaense",
+          "visitante": "Mirassol",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.612,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.502,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.76,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.518,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-05-30T19:00:00Z",
+          "casa": "Flamengo",
+          "visitante": "Coritiba",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.612,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.618,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.887,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.361,
               "resultado": "ACERTO"
             }
           ]
