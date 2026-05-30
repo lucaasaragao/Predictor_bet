@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T16:02:13-03:00",
+  "generated_at": "2026-05-30T16:38:51-03:00",
   "analysis_date": "2026-05-30",
   "total_jogos": 6,
   "odds_debug_visual": false,
@@ -9,10 +9,10 @@
     {
       "competicao": "UEFA Champions League",
       "data": "2026-05-30T16:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
-        "casa": 2,
-        "visitante": 1
+        "casa": 5,
+        "visitante": 4
       },
       "times": {
         "casa": "PSG",
@@ -198,7 +198,7 @@
           "ev_bruto": 0.1035,
           "prob_mercado_justa": 0.4011,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -212,7 +212,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -226,7 +226,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -240,17 +240,17 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
     {
       "competicao": "Campeonato Brasileiro Série A",
       "data": "2026-05-30T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Paranaense",
@@ -487,10 +487,10 @@
     {
       "competicao": "Campeonato Brasileiro Série A",
       "data": "2026-05-30T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 1,
+        "visitante": 0
       },
       "times": {
         "casa": "Flamengo",
@@ -1443,9 +1443,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 3,
+    "total": 4,
+    "taxa": 0.75
   },
   "daily_tips_ids": [
     {
