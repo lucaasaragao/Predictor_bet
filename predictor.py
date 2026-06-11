@@ -164,6 +164,10 @@ COMPETICOES_EXCLUIDAS_DICAS = {
     "Campeonato Brasileiro Série A",
     "Campeonato Brasileiro Série B",
 }
+COMPETICOES_EXIBICAO_TOTAL = {
+    "FIFA World Cup",
+    "World Cup",
+}
 SCORE_CONFIANCA = {"HIGH": 3, "MEDIUM": 2, "LOW": 1}
 
 
@@ -639,6 +643,10 @@ def _normalizar_nome_time(nome: str) -> str:
     return " ".join(limpo.split())
 
 
+def _deve_exibir_jogo_mesmo_sem_valor(competicao: str) -> bool:
+    return str(competicao or "") in COMPETICOES_EXIBICAO_TOTAL
+
+
 # Mapeia nomes abreviados (shortName da football-data.org) para a forma canônica
 # usada pelas odds APIs. Chave e valor são saídas de _normalizar_nome_time().
 _ALIASES_TIME: Dict[str, str] = {
@@ -952,6 +960,12 @@ def aplicar_odds_e_valor(predicoes: List[PredicaoJogo]) -> List[PredicaoJogo]:
     # Pré-gate para economizar cota: só busca odds para jogos com edge mínimo.
     candidatos = []
     for pred in predicoes:
+        if _deve_exibir_jogo_mesmo_sem_valor(pred.competicao):
+            candidatos.append(pred)
+            pred.odds_debug["status"] = "candidate_competition_override"
+            pred.odds_debug["reason"] = "competição configurada para exibição total (sem gate de edge)"
+            continue
+
         probs = sorted([pred.prob_casa, pred.prob_empate, pred.prob_visitante], reverse=True)
         edge_1x2 = probs[0] - probs[1]
         if edge_1x2 >= ODDS_MIN_EDGE_GATE:

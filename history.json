@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-06-11",
+      "ultima_atualizacao": "2026-06-11T10:43:06-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-05-31",
       "ultima_atualizacao": "2026-05-31T23:36:24-03:00",
       "finalizados": 5,
@@ -602,124 +629,6 @@
         }
       },
       "jogos": []
-    },
-    {
-      "data": "2026-05-26",
-      "ultima_atualizacao": "2026-05-26T23:07:32-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.625,
-      "total_acertos": 5,
-      "total_palpites": 8,
-      "mercados": {
-        "WINNER": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
-        },
-        "OVER_UNDER": {
-          "acertos": 2,
-          "total": 4,
-          "taxa": 0.5
-        },
-        "BTTS": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 2,
-          "brier": 0.3143,
-          "log_loss": 0.6006
-        },
-        "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.2507,
-          "log_loss": 0.6941
-        },
-        "BTTS": {
-          "n": 2,
-          "brier": 0.2813,
-          "log_loss": 0.7574
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-05-26T22:00:00Z",
-          "casa": "Lanús",
-          "visitante": "Mirassol",
-          "competicao": "Copa Libertadores",
-          "placar": "1-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.489,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.611,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.629,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.606,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-26T22:00:00Z",
-          "casa": "LDU de Quito",
-          "visitante": "Always Ready",
-          "competicao": "Copa Libertadores",
-          "placar": "3-2",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.615,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.592,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.632,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.667,
-              "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
     }
   ]
 }
