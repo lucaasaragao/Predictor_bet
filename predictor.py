@@ -62,6 +62,8 @@ COMPETICAO_PARA_ODDS_SPORT = {
     "Campeonato Brasileiro Série B": "soccer_brazil_serie_b",
     "UEFA Champions League": "soccer_uefa_champs_league",
     "Copa Libertadores": "soccer_conmebol_libertadores",
+    "FIFA World Cup": "soccer_fifa_world_cup",
+    "World Cup": "soccer_fifa_world_cup",
 }
 
 # Vantagem de mando de campo (multiplicador sobre λ)
@@ -108,6 +110,8 @@ MEDIA_GOLS_LIGA: dict[str, float] = {
     "Campeonato Brasileiro Série B": 2.18,
     "UEFA Champions League": 2.75,
     "Copa Libertadores": 2.45,
+    "FIFA World Cup": 2.64,
+    "World Cup": 2.64,
     "Primeira Liga": 2.42,
     "Championship": 2.55,
     "Eredivisie": 3.12,
@@ -142,6 +146,8 @@ COMPETICOES_PERMITIDAS = {
     "Campeonato Brasileiro Série B", 
     "UEFA Champions League",
     "Copa Libertadores",
+    "FIFA World Cup",
+    "World Cup",
     "Premier League",
     "Primera Division", # La Liga
     "Serie A",
@@ -240,13 +246,13 @@ class BetSuggestion:
 
 
 def buscar_jogos_permitidos() -> List[Dict]:
-    """Busca jogos das competições permitidas do dia atual"""
+    """Busca jogos das competições permitidas em janela local de hoje + amanhã."""
 
     url = f"{API_BASE}/matches/"
     agora_local = datetime.now(APP_TIMEZONE)
     hoje_local = agora_local.date()
     inicio_local = datetime.combine(hoje_local, datetime.min.time(), tzinfo=APP_TIMEZONE)
-    fim_local = inicio_local + timedelta(days=1)
+    fim_local = inicio_local + timedelta(days=2)
     inicio_utc = inicio_local.astimezone(timezone.utc)
     fim_utc = fim_local.astimezone(timezone.utc)
     params = {
@@ -255,7 +261,7 @@ def buscar_jogos_permitidos() -> List[Dict]:
     }
 
     print(
-        f"📅 Buscando jogos do dia local {hoje_local} "
+        f"📅 Buscando jogos a partir do dia local {hoje_local} "
         f"(janela UTC {params['dateFrom']} até {params['dateTo']})..."
     )
 
@@ -273,38 +279,19 @@ def buscar_jogos_permitidos() -> List[Dict]:
     todos_matches = dados.get("matches", [])
     print(f"🔎 API retornou {len(todos_matches)} jogo(s) no período.")
 
-    def data_local_jogo(match: Dict) -> Optional[datetime.date]:
-        data_utc = str(match.get("utcDate", "") or "")
-        if not data_utc:
-            return None
-        try:
-            dt = datetime.fromisoformat(data_utc.replace("Z", "+00:00"))
-        except ValueError:
-            return None
-        if dt.tzinfo is None:
-            dt = dt.replace(tzinfo=timezone.utc)
-        return dt.astimezone(APP_TIMEZONE).date()
-
     # Filtrar por competições permitidas
     jogos_permitidos = []
     competicoes_rejeitadas = set()
-    jogos_fora_do_dia_local = 0
     for match in todos_matches:
         competicao = match.get("competition", {}).get("name", "")
         if competicao not in COMPETICOES_PERMITIDAS:
             competicoes_rejeitadas.add(competicao)
             continue
 
-        if data_local_jogo(match) != hoje_local:
-            jogos_fora_do_dia_local += 1
-            continue
-
         jogos_permitidos.append(match)
 
     if competicoes_rejeitadas:
         print(f"⚠️  Competições ignoradas (não estão na lista permitida): {sorted(competicoes_rejeitadas)}")
-    if jogos_fora_do_dia_local:
-        print(f"🗓️  {jogos_fora_do_dia_local} jogo(s) ignorado(s) por não serem do dia local ({hoje_local}).")
 
     print(f"✅ {len(jogos_permitidos)} jogo(s) encontrado(s) nas competições permitidas.")
     return jogos_permitidos
