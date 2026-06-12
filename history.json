@@ -2,41 +2,41 @@
   "dias": [
     {
       "data": "2026-06-12",
-      "ultima_atualizacao": "2026-06-12T17:24:44-03:00",
-      "finalizados": 1,
-      "taxa_geral": 1.0,
-      "total_acertos": 4,
-      "total_palpites": 4,
+      "ultima_atualizacao": "2026-06-12T18:06:43-03:00",
+      "finalizados": 2,
+      "taxa_geral": 0.75,
+      "total_acertos": 6,
+      "total_palpites": 8,
       "mercados": {
         "WINNER": {
           "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
+          "total": 2,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
+          "acertos": 3,
+          "total": 4,
+          "taxa": 0.75
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 1,
+          "acertos": 2,
+          "total": 2,
           "taxa": 1.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 1,
-          "brier": 0.5635,
-          "log_loss": 0.9478
+          "n": 2,
+          "brier": 0.6662,
+          "log_loss": 1.1018
         },
         "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.2268,
-          "log_loss": 0.6467
+          "n": 2,
+          "brier": 0.2506,
+          "log_loss": 0.6943
         },
         "BTTS": {
-          "n": 1,
+          "n": 2,
           "brier": 0.1791,
           "log_loss": 0.5502
         }
@@ -62,6 +62,43 @@
               "confianca": "LOW",
               "probabilidade": 0.524,
               "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.78,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.577,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-06-12T19:00:00Z",
+          "casa": "Canada",
+          "visitante": "Bosnia-H.",
+          "competicao": "FIFA World Cup",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.388,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.524,
+              "resultado": "ERRO"
             },
             {
               "tipo": "OVER_UNDER",
