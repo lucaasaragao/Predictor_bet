@@ -754,7 +754,7 @@ function buildGoalsProbabilityLabel(match) {
 
 function buildCardSnapshot(match) {
   const primaryTip = getPrimaryTip(match);
-  const probability = Math.round((match?.favorito?.prob || 0) * 100);
+  const probability = Math.round((primaryTip?.probabilidade || match?.favorito?.prob || 0) * 100);
   const bestBet = primaryTip
     ? translateTipOption(primaryTip.tipo, primaryTip.opcao, match)
     : "Sem sugestão disponível";
@@ -765,7 +765,7 @@ function buildCardSnapshot(match) {
   return `
     <div class="card-snapshot-grid">
       <div class="snapshot-item">
-        <span class="snapshot-label">Probabilidade</span>
+        <span class="snapshot-label">Probabilidade da dica</span>
         <strong class="highlight">${probability}%</strong>
       </div>
       <div class="snapshot-item snapshot-item--wide">
@@ -902,6 +902,7 @@ function renderTips(container, tips, match) {
 
   // Análise Gemini IA
   const ia = match?.analise_ia;
+  const primaryTip = getPrimaryTip(match);
   if (ia?.palpite_ia) {
     const iaEl = document.createElement("div");
     iaEl.className = "tip-analise-ia";
@@ -912,6 +913,19 @@ function renderTips(container, tips, match) {
       <span class="ia-palpite">${opcaoLabel}</span>
       <span class="ia-conf ${confClass}">${ia.confianca_ia ?? ""}</span>
       ${ia.nota ? `<span class="ia-nota">${ia.nota}</span>` : ""}
+    `;
+    container.appendChild(iaEl);
+  } else if (primaryTip) {
+    const iaEl = document.createElement("div");
+    iaEl.className = "tip-analise-ia tip-analise-ia--fallback";
+    const opcaoLabel = translateTipOption(primaryTip.tipo, primaryTip.opcao, match);
+    const confClass = primaryTip.confianca === "HIGH" ? "ia-conf--alta" : primaryTip.confianca === "MEDIUM" ? "ia-conf--media" : "ia-conf--baixa";
+    const note = translateQuickRead(match?.leitura_rapida || buildSummaryNarrative(match));
+    iaEl.innerHTML = `
+      <span class="ia-badge">🤖 Modelo</span>
+      <span class="ia-palpite">${opcaoLabel}</span>
+      <span class="ia-conf ${confClass}">${confidenceLabel(primaryTip.confianca)}</span>
+      ${note ? `<span class="ia-nota">${note}</span>` : ""}
     `;
     container.appendChild(iaEl);
   }

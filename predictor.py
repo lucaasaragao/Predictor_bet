@@ -309,10 +309,35 @@ def buscar_historico_time(team_id: int, limit: int = 10) -> List[Dict]:
     try:
         response = requests.get(url, headers=HEADERS, params=params, timeout=30)
         if response.status_code != 200:
+            print(f"⚠️  Histórico time {team_id}: HTTP {response.status_code} no filtro FINISHED - {response.text[:180]}")
+        else:
+            matches = response.json().get("matches", [])
+            if matches:
+                matches.sort(key=lambda m: m.get("utcDate", ""), reverse=True)
+                return matches[:limit]
+            print(f"⚠️  Histórico time {team_id}: consulta FINISHED sem jogos. Tentando fallback sem filtro de status.")
+
+        # Fallback: algumas respostas da API vêm vazias no filtro FINISHED,
+        # mas retornam partidas quando filtramos localmente.
+        fallback_params = {"limit": max(limit * 3, 20)}
+        fallback_response = requests.get(url, headers=HEADERS, params=fallback_params, timeout=30)
+        if fallback_response.status_code != 200:
+            print(f"⚠️  Histórico time {team_id}: fallback sem status falhou com HTTP {fallback_response.status_code} - {fallback_response.text[:180]}")
             return []
-        matches = response.json().get("matches", [])
+
+        matches = fallback_response.json().get("matches", [])
+        if not matches:
+            print(f"⚠️  Histórico time {team_id}: fallback sem status também retornou vazio.")
+            return []
+
+        finished_statuses = {"FINISHED", "AWARDED"}
+        matches = [m for m in matches if str(m.get("status", "")).upper() in finished_statuses]
         matches.sort(key=lambda m: m.get("utcDate", ""), reverse=True)
-        return matches
+        if not matches:
+            print(f"⚠️  Histórico time {team_id}: fallback sem status não encontrou partidas finalizadas.")
+            return []
+
+        return matches[:limit]
     except Exception as e:
         print(f"⚠️  Erro ao buscar histórico: {e}")
         return []
@@ -645,6 +670,11 @@ def _normalizar_nome_time(nome: str) -> str:
 
 def _deve_exibir_jogo_mesmo_sem_valor(competicao: str) -> bool:
     return str(competicao or "") in COMPETICOES_EXIBICAO_TOTAL
+
+
+def _eh_jogo_de_copa(competicao: str) -> bool:
+    nome = str(competicao or "")
+    return "Copa" in nome or "Cup" in nome
 
 
 # Mapeia nomes abreviados (shortName da football-data.org) para a forma canônica
@@ -1773,6 +1803,44 @@ def _montar_leitura_rapida_front(
     )
 
 
+def _palpite_ia_fallback(pred: PredicaoJogo) -> Dict[str, str]:
+    """Monta uma análise mínima quando a revisão Gemini não está disponível.
+
+    A intenção é evitar cards vazios no frontend e manter uma opinião estável
+    baseada apenas no próprio modelo estatístico.
+    """
+    ranking = _montar_ranking_1x2(pred)
+    vencedor = ranking[0]["nome"]
+    prob_vencedor = float(ranking[0]["prob"])
+    segunda = float(ranking[1]["prob"])
+    margem = max(0.0, prob_vencedor - segunda)
+
+    if vencedor == pred.time_casa:
+        palpite = "1"
+    elif vencedor == pred.time_visitante:
+        palpite = "2"
+    else:
+        palpite = "X"
+
+    if margem >= 0.18:
+        confianca = "alta"
+    elif margem >= 0.08:
+        confianca = "media"
+    else:
+        confianca = "baixa"
+
+    if palpite == "X":
+        nota = f"Modelo aponta empate com {prob_vencedor*100:.1f}% e jogo equilibrado."
+    else:
+        nota = f"Modelo favorece {vencedor} com {prob_vencedor*100:.1f}% de chance."
+
+    return {
+        "palpite_ia": palpite,
+        "confianca_ia": confianca,
+        "nota": nota,
+    }
+
+
 def _coletar_alertas_front(pred: PredicaoJogo) -> List[str]:
     alertas = []
     fadiga_casa = detectar_fadiga(pred.historico_casa, pred.data_jogo)
@@ -1845,7 +1913,7 @@ def _serializar_jogo_front(pred: PredicaoJogo) -> Dict:
             ),
         },
         "alertas": _coletar_alertas_front(pred),
-        "analise_ia": None,
+        "analise_ia": _palpite_ia_fallback(pred),
         "odds_debug": pred.odds_debug,
         "odds_integradas": any(item.get("odd_decimal") is not None for item in palpites),
         "odds_valor_alto": any(item.get("valor_esperado_positivo") for item in palpites),
@@ -1927,7 +1995,11 @@ def _selecionar_daily_tips_ids(jogos: List[Dict], existing_data: Dict, hoje: str
     candidatos_palpites.sort(key=lambda p: p.get("probabilidade", 0.0), reverse=True)
     
     n_total = len(jogos)
-    n_dicas = 3 if n_total >= 10 else (2 if n_total > 5 else 1)
+    jogos_copa = [j for j in jogos if _eh_jogo_de_copa(j.get("competicao", ""))]
+    if jogos and len(jogos_copa) == len(jogos):
+        n_dicas = 2
+    else:
+        n_dicas = 3 if n_total >= 10 else (2 if n_total > 5 else 1)
     
     return candidatos_palpites[:n_dicas]
 
@@ -3062,6 +3134,38 @@ def revisar_predicoes_com_ia(jogos: List[Dict]) -> bool:
     return True
 
 
+def _aplicar_analise_ia_fallback(jogos: List[Dict]) -> None:
+    for jogo in jogos:
+        if jogo.get("analise_ia"):
+            continue
+        times = jogo.get("times", {})
+        prob_casa = float(jogo.get("probabilidades", {}).get("casa", 0) or 0)
+        prob_empate = float(jogo.get("probabilidades", {}).get("empate", 0) or 0)
+        prob_visitante = float(jogo.get("probabilidades", {}).get("visitante", 0) or 0)
+
+        if prob_casa >= prob_empate and prob_casa >= prob_visitante:
+            palpite = "1"
+            confianca = "alta" if prob_casa - max(prob_empate, prob_visitante) >= 0.18 else "media"
+            alvo = times.get("casa", "Casa")
+            prob = prob_casa
+        elif prob_visitante >= prob_casa and prob_visitante >= prob_empate:
+            palpite = "2"
+            confianca = "alta" if prob_visitante - max(prob_casa, prob_empate) >= 0.18 else "media"
+            alvo = times.get("visitante", "Visitante")
+            prob = prob_visitante
+        else:
+            palpite = "X"
+            confianca = "baixa"
+            alvo = "Empate"
+            prob = prob_empate
+
+        jogo["analise_ia"] = {
+            "palpite_ia": palpite,
+            "confianca_ia": confianca,
+            "nota": f"Fallback do modelo: favorece {alvo} com {prob*100:.1f}%.",
+        }
+
+
 def _executar_analise_completa() -> None:
     print("🌐 Buscando jogos das competições permitidas...")
     jogos = buscar_jogos_permitidos()
@@ -3094,6 +3198,8 @@ def _executar_analise_completa() -> None:
     ia_ok = revisar_predicoes_com_ia(dados_exportados.get("jogos", []))
     if ia_ok:
         dados_exportados["gemini_revisado_em"] = datetime.now(APP_TIMEZONE).date().isoformat()
+    else:
+        _aplicar_analise_ia_fallback(dados_exportados.get("jogos", []))
     with open("predictions.json", "w", encoding="utf-8") as _f_ia:
         json.dump(dados_exportados, _f_ia, ensure_ascii=False, indent=2)
     print("💾 predictions.json atualizado com revisão da IA.")
