@@ -1,6 +1,87 @@
 {
   "dias": [
     {
+      "data": "2026-06-14",
+      "ultima_atualizacao": "2026-06-14T00:54:29-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 4,
+      "mercados": {
+        "WINNER": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
+        },
+        "OVER_UNDER": {
+          "acertos": 0,
+          "total": 2,
+          "taxa": 0.0
+        },
+        "BTTS": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
+        }
+      },
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.6836,
+          "log_loss": 1.1161
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.2743,
+          "log_loss": 0.7418
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.3328,
+          "log_loss": 0.86
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-06-14T01:00:00Z",
+          "casa": "Haiti",
+          "visitante": "Scotland",
+          "competicao": "FIFA World Cup",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.388,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.524,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.78,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.577,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "data": "2026-06-13",
       "ultima_atualizacao": "2026-06-13T23:28:20-03:00",
       "finalizados": 3,
@@ -578,235 +659,6 @@
               "confianca": "LOW",
               "probabilidade": 0.458,
               "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-05-30",
-      "ultima_atualizacao": "2026-05-30T23:14:01-03:00",
-      "finalizados": 5,
-      "taxa_geral": 0.65,
-      "total_acertos": 13,
-      "total_palpites": 20,
-      "mercados": {
-        "WINNER": {
-          "acertos": 3,
-          "total": 5,
-          "taxa": 0.6
-        },
-        "OVER_UNDER": {
-          "acertos": 6,
-          "total": 10,
-          "taxa": 0.6
-        },
-        "BTTS": {
-          "acertos": 4,
-          "total": 5,
-          "taxa": 0.8
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 5,
-          "brier": 0.5144,
-          "log_loss": 0.9025
-        },
-        "OVER_UNDER": {
-          "n": 5,
-          "brier": 0.2188,
-          "log_loss": 0.6303
-        },
-        "BTTS": {
-          "n": 5,
-          "brier": 0.2329,
-          "log_loss": 0.6561
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-05-30T16:00:00Z",
-          "casa": "PSG",
-          "visitante": "Arsenal",
-          "competicao": "UEFA Champions League",
-          "placar": "5-4",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.441,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.543,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.948,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "HIGH",
-              "probabilidade": 0.772,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-30T19:00:00Z",
-          "casa": "Paranaense",
-          "visitante": "Mirassol",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "1-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.612,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.502,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.76,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.518,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-30T19:00:00Z",
-          "casa": "Flamengo",
-          "visitante": "Coritiba",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "3-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.612,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.618,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.887,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.361,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-30T20:30:00Z",
-          "casa": "Grêmio",
-          "visitante": "Corinthians",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "1-3",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.49,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.664,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.624,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.603,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-30T20:30:00Z",
-          "casa": "Bahia",
-          "visitante": "Botafogo",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "2-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "2",
-              "confianca": "LOW",
-              "probabilidade": 0.39,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.615,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.928,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "HIGH",
-              "probabilidade": 0.748,
-              "resultado": "ACERTO"
             }
           ]
         }
