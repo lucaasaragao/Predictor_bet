@@ -2,41 +2,41 @@
   "dias": [
     {
       "data": "2026-06-14",
-      "ultima_atualizacao": "2026-06-14T02:28:31-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 4,
+      "ultima_atualizacao": "2026-06-14T04:06:40-03:00",
+      "finalizados": 2,
+      "taxa_geral": 0.25,
+      "total_acertos": 2,
+      "total_palpites": 8,
       "mercados": {
         "WINNER": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 0,
-          "total": 2,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 4,
+          "taxa": 0.25
         },
         "BTTS": {
           "acertos": 0,
-          "total": 1,
+          "total": 2,
           "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 1,
-          "brier": 0.6836,
-          "log_loss": 1.1161
+          "n": 2,
+          "brier": 0.6235,
+          "log_loss": 1.032
         },
         "OVER_UNDER": {
-          "n": 1,
+          "n": 2,
           "brier": 0.2743,
           "log_loss": 0.7418
         },
         "BTTS": {
-          "n": 1,
+          "n": 2,
           "brier": 0.3328,
           "log_loss": 0.86
         }
@@ -69,6 +69,43 @@
               "confianca": "HIGH",
               "probabilidade": 0.78,
               "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.577,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-06-14T04:00:00Z",
+          "casa": "Australia",
+          "visitante": "Turkey",
+          "competicao": "FIFA World Cup",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.388,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.524,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.78,
+              "resultado": "ACERTO"
             },
             {
               "tipo": "BTTS",
