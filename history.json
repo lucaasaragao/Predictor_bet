@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-06-15",
+      "ultima_atualizacao": "2026-06-15T00:59:06-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-06-14",
       "ultima_atualizacao": "2026-06-14T23:31:42-03:00",
       "finalizados": 4,
@@ -540,235 +567,6 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.577,
-              "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-05-31",
-      "ultima_atualizacao": "2026-05-31T23:36:24-03:00",
-      "finalizados": 5,
-      "taxa_geral": 0.65,
-      "total_acertos": 13,
-      "total_palpites": 20,
-      "mercados": {
-        "WINNER": {
-          "acertos": 4,
-          "total": 5,
-          "taxa": 0.8
-        },
-        "OVER_UNDER": {
-          "acertos": 6,
-          "total": 10,
-          "taxa": 0.6
-        },
-        "BTTS": {
-          "acertos": 3,
-          "total": 5,
-          "taxa": 0.6
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 5,
-          "brier": 0.4866,
-          "log_loss": 0.8262
-        },
-        "OVER_UNDER": {
-          "n": 5,
-          "brier": 0.2096,
-          "log_loss": 0.6112
-        },
-        "BTTS": {
-          "n": 5,
-          "brier": 0.2328,
-          "log_loss": 0.658
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-05-31T14:00:00Z",
-          "casa": "Bragantino",
-          "visitante": "Internacional",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "3-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.558,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.602,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.845,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.385,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-31T19:00:00Z",
-          "casa": "Vasco da Gama",
-          "visitante": "Mineiro",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "0-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "2",
-              "confianca": "LOW",
-              "probabilidade": 0.369,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.566,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.674,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.535,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-31T19:00:00Z",
-          "casa": "Palmeiras",
-          "visitante": "Chapecoense",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "1-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.576,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.606,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.753,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.504,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-31T23:30:00Z",
-          "casa": "Clube do Remo",
-          "visitante": "São Paulo",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "1-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.542,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.548,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.796,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.441,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-05-31T23:30:00Z",
-          "casa": "Cruzeiro",
-          "visitante": "Fluminense",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "1-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.602,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.504,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.808,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.458,
               "resultado": "ERRO"
             }
           ]
