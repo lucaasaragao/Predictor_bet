@@ -2,41 +2,41 @@
   "dias": [
     {
       "data": "2026-06-16",
-      "ultima_atualizacao": "2026-06-16T17:16:00-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.75,
-      "total_acertos": 3,
-      "total_palpites": 4,
+      "ultima_atualizacao": "2026-06-16T18:22:23-03:00",
+      "finalizados": 2,
+      "taxa_geral": 0.875,
+      "total_acertos": 7,
+      "total_palpites": 8,
       "mercados": {
         "WINNER": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 2,
-          "total": 2,
+          "acertos": 4,
+          "total": 4,
           "taxa": 1.0
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 1,
+          "acertos": 2,
+          "total": 2,
           "taxa": 1.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 1,
-          "brier": 0.7689,
-          "log_loss": 1.2557
+          "n": 2,
+          "brier": 0.6662,
+          "log_loss": 1.1018
         },
         "OVER_UNDER": {
-          "n": 1,
+          "n": 2,
           "brier": 0.2268,
           "log_loss": 0.6467
         },
         "BTTS": {
-          "n": 1,
+          "n": 2,
           "brier": 0.1791,
           "log_loss": 0.5502
         }
@@ -55,6 +55,43 @@
               "confianca": "LOW",
               "probabilidade": 0.388,
               "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.524,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.78,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.577,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-06-16T19:00:00Z",
+          "casa": "France",
+          "visitante": "Senegal",
+          "competicao": "FIFA World Cup",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.388,
+              "resultado": "ACERTO"
             },
             {
               "tipo": "OVER_UNDER",
