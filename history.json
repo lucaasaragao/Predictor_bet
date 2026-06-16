@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-06-15",
-      "ultima_atualizacao": "2026-06-15T20:55:49-03:00",
-      "finalizados": 3,
+      "ultima_atualizacao": "2026-06-15T22:11:25-03:00",
+      "finalizados": 4,
       "taxa_geral": 0.5,
-      "total_acertos": 6,
-      "total_palpites": 12,
+      "total_acertos": 8,
+      "total_palpites": 16,
       "mercados": {
         "WINNER": {
           "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "total": 4,
+          "taxa": 0.25
         },
         "OVER_UNDER": {
-          "acertos": 3,
-          "total": 6,
+          "acertos": 4,
+          "total": 8,
           "taxa": 0.5
         },
         "BTTS": {
-          "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
+          "acertos": 3,
+          "total": 4,
+          "taxa": 0.75
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 3,
-          "brier": 0.7004,
-          "log_loss": 1.1531
+          "n": 4,
+          "brier": 0.7175,
+          "log_loss": 1.1788
         },
         "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.2585,
-          "log_loss": 0.7101
+          "n": 4,
+          "brier": 0.2625,
+          "log_loss": 0.718
         },
         "BTTS": {
-          "n": 3,
-          "brier": 0.2303,
-          "log_loss": 0.6535
+          "n": 4,
+          "brier": 0.2175,
+          "log_loss": 0.6277
         }
       },
       "jogos": [
@@ -120,6 +120,43 @@
           "data_jogo": "2026-06-15T19:00:00Z",
           "casa": "Belgium",
           "visitante": "Egypt",
+          "competicao": "FIFA World Cup",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.388,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.524,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.78,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.577,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-06-15T22:00:00Z",
+          "casa": "Saudi Arabia",
+          "visitante": "Uruguay",
           "competicao": "FIFA World Cup",
           "placar": "1-1",
           "palpites": [
