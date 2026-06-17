@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T21:05:25-03:00",
+  "generated_at": "2026-06-16T22:27:10-03:00",
   "analysis_date": "2026-06-16",
   "total_jogos": 8,
   "odds_debug_visual": false,
@@ -342,10 +342,10 @@
     {
       "competicao": "FIFA World Cup",
       "data": "2026-06-16T22:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
-        "visitante": 3
+        "visitante": 4
       },
       "times": {
         "casa": "Iraq",
@@ -449,7 +449,7 @@
           "ev_bruto": 6.1703,
           "prob_mercado_justa": 0.0539,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -463,7 +463,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -477,7 +477,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -491,17 +491,17 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
     {
       "competicao": "FIFA World Cup",
       "data": "2026-06-17T01:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 1,
+        "visitante": 0
       },
       "times": {
         "casa": "Argentina",
@@ -1277,9 +1277,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 7,
-    "total": 8,
-    "taxa": 0.875
+    "acertos": 10,
+    "total": 12,
+    "taxa": 0.833
   },
   "daily_tips_ids": [
     {
