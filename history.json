@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-06-18",
+      "ultima_atualizacao": "2026-06-18T00:35:19-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-06-17",
       "ultima_atualizacao": "2026-06-17T23:15:42-03:00",
       "finalizados": 5,
@@ -749,161 +776,6 @@
               "confianca": "LOW",
               "probabilidade": 0.524,
               "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.78,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.577,
-              "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-06-13",
-      "ultima_atualizacao": "2026-06-13T23:28:20-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.667,
-      "total_acertos": 8,
-      "total_palpites": 12,
-      "mercados": {
-        "WINNER": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
-        },
-        "OVER_UNDER": {
-          "acertos": 4,
-          "total": 6,
-          "taxa": 0.667
-        },
-        "BTTS": {
-          "acertos": 3,
-          "total": 3,
-          "taxa": 1.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 3,
-          "brier": 0.7004,
-          "log_loss": 1.1531
-        },
-        "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.2585,
-          "log_loss": 0.7101
-        },
-        "BTTS": {
-          "n": 3,
-          "brier": 0.1791,
-          "log_loss": 0.5502
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-06-13T01:00:00Z",
-          "casa": "USA",
-          "visitante": "Paraguay",
-          "competicao": "FIFA World Cup",
-          "placar": "4-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.388,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.524,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.78,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.577,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-06-13T19:00:00Z",
-          "casa": "Qatar",
-          "visitante": "Switzerland",
-          "competicao": "FIFA World Cup",
-          "placar": "1-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.388,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.524,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.78,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.577,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-06-13T22:00:00Z",
-          "casa": "Brazil",
-          "visitante": "Morocco",
-          "competicao": "FIFA World Cup",
-          "placar": "1-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.388,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.524,
-              "resultado": "ERRO"
             },
             {
               "tipo": "OVER_UNDER",
