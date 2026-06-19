@@ -1,689 +1,15 @@
 {
-  "generated_at": "2026-06-18T23:30:34-03:00",
-  "analysis_date": "2026-06-18",
-  "total_jogos": 7,
+  "generated_at": "2026-06-19T00:57:44-03:00",
+  "analysis_date": "2026-06-19",
+  "total_jogos": 8,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
   "odds_min_ev": 0.03,
   "jogos": [
     {
       "competicao": "FIFA World Cup",
-      "data": "2026-06-18T02:00:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 1,
-        "visitante": 3
-      },
-      "times": {
-        "casa": "Uzbekistan",
-        "visitante": "Colombia",
-        "escudo_casa": "https://crests.football-data.org/8070.png",
-        "escudo_visitante": "https://crests.football-data.org/818.svg"
-      },
-      "probabilidades": {
-        "casa": 0.3875859372539333,
-        "empate": 0.28486709222191847,
-        "visitante": 0.3275469705241483
-      },
-      "favorito": {
-        "nome": "Uzbekistan",
-        "prob": 0.3875859372539333,
-        "vantagem": 0.06003896672978504
-      },
-      "gols_esperados": {
-        "casa": 1.4520000000000002,
-        "visitante": 1.32,
-        "total": 2.7720000000000002
-      },
-      "mercados": {
-        "under_25": 0.4762536421075748,
-        "over_25": 0.5237463578924252,
-        "btts_yes": 0.5768470039485898,
-        "btts_no": 0.4231529960514102
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.555
-        },
-        "visitante": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.535
-        }
-      },
-      "leitura_rapida": "Uzbekistan favorito (39%, risco alto). Mercado de gols equilibrado (xG total ≈2.8).",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        },
-        "visitante": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        }
-      },
-      "alertas": [],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "baixa",
-        "nota": "Modelo favorece Uzbekistan com 38.8% de chance."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
-        "competition": "FIFA World Cup",
-        "sport_key": "soccer_fifa_world_cup",
-        "odds_match_id": "22083e7a8e5362c711bc05c1e1319a1f",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%",
-        "pre_match_locked": "true",
-        "pre_match_lock_reason": "snapshot_pre_jogo"
-      },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
-      "historico": {
-        "casa": [],
-        "visitante": []
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.3875859372539333,
-          "confianca": "LOW",
-          "justificativa": "Uzbekistan projeta ≈1.5 gol(s) vs ≈1.3 do adversário. Prob vitória: 38.8% (margem: 6.0 p.p.)",
-          "edge": 0.06,
-          "odd_decimal": 150.0,
-          "ev": 56.712,
-          "ev_bruto": 57.1379,
-          "prob_mercado_justa": 0.0067,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_2.5",
-          "probabilidade": 0.5237463578924252,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.8. OVER 2.5: 52.4% de probabilidade",
-          "edge": 0.0237,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.7796,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.8.",
-          "edge": 0.2796,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.5768,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.5 (casa) x 1.3 (fora). Ambas marcam - Sim: 57.7%",
-          "edge": 0.0768,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        }
-      ]
-    },
-    {
-      "competicao": "FIFA World Cup",
-      "data": "2026-06-18T16:00:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 1,
-        "visitante": 1
-      },
-      "times": {
-        "casa": "Czechia",
-        "visitante": "South Africa",
-        "escudo_casa": "https://crests.football-data.org/798.svg",
-        "escudo_visitante": "https://crests.football-data.org/9396.svg"
-      },
-      "probabilidades": {
-        "casa": 0.45924736554354895,
-        "empate": 0.31003298669183804,
-        "visitante": 0.2307196477646131
-      },
-      "favorito": {
-        "nome": "Czechia",
-        "prob": 0.45924736554354895,
-        "vantagem": 0.1492143788517109
-      },
-      "gols_esperados": {
-        "casa": 1.3613600000000001,
-        "visitante": 0.8976000000000001,
-        "total": 2.25896
-      },
-      "mercados": {
-        "under_25": 0.6070063591576531,
-        "over_25": 0.3929936408423469,
-        "btts_yes": 0.4571810201211477,
-        "btts_no": 0.5428189798788523
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.0,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.38
-        },
-        "visitante": {
-          "forma_recente": 0.0,
-          "ataque": 0.0,
-          "defesa": 0.19999999999999996,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.18
-        }
-      },
-      "leitura_rapida": "Czechia favorito (46%, risco moderado). Jogo fechado esperado (xG total ≈2.3). Under 2.5 com 61%.",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 1.0,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 1,
-          "sequencia_sofre": 1,
-          "jogos": 1
-        },
-        "visitante": {
-          "prob_marca": 0.0,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 1,
-          "jogos": 1
-        }
-      },
-      "alertas": [],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "media",
-        "nota": "Modelo favorece Czechia com 45.9% de chance."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "FIFA World Cup",
-        "sport_key": "soccer_fifa_world_cup",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "12/06 02:00",
-            "mandante": "Korea Republic",
-            "visitante": "Czechia",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "11/06 19:00",
-            "mandante": "Mexico",
-            "visitante": "South Africa",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.45924736554354895,
-          "confianca": "MEDIUM",
-          "justificativa": "Czechia projeta ≈1.4 gol(s) vs ≈0.9 do adversário. Prob vitória: 45.9% (margem: 14.9 p.p.)",
-          "edge": 0.1492,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER_2.5",
-          "probabilidade": 0.6070063591576531,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.3. UNDER 2.5: 60.7% de probabilidade",
-          "edge": 0.107,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.6761,
-          "confianca": "MEDIUM",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.3.",
-          "edge": 0.1761,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.5428,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.4 (casa) x 0.9 (fora). Ambas marcam - Nao: 54.3%",
-          "edge": 0.0428,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        }
-      ]
-    },
-    {
-      "competicao": "FIFA World Cup",
-      "data": "2026-06-18T19:00:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 4,
-        "visitante": 1
-      },
-      "times": {
-        "casa": "Switzerland",
-        "visitante": "Bosnia-H.",
-        "escudo_casa": "https://crests.football-data.org/788.svg",
-        "escudo_visitante": "https://crests.football-data.org/bosnia.svg"
-      },
-      "probabilidades": {
-        "casa": 0.38249255345083993,
-        "empate": 0.29342145263226704,
-        "visitante": 0.3240859939168931
-      },
-      "favorito": {
-        "nome": "Switzerland",
-        "prob": 0.38249255345083993,
-        "vantagem": 0.058406559533946856
-      },
-      "gols_esperados": {
-        "casa": 1.3816000000000002,
-        "visitante": 1.256,
-        "total": 2.6376
-      },
-      "mercados": {
-        "under_25": 0.5091071817215909,
-        "over_25": 0.4908928182784092,
-        "btts_yes": 0.5516764572785422,
-        "btts_no": 0.4483235427214578
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.555
-        },
-        "visitante": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.535
-        }
-      },
-      "leitura_rapida": "Switzerland favorito (38%, risco alto). Mercado de gols equilibrado (xG total ≈2.6).",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 1.0,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 1,
-          "sequencia_sofre": 1,
-          "jogos": 1
-        },
-        "visitante": {
-          "prob_marca": 1.0,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 1,
-          "sequencia_sofre": 1,
-          "jogos": 1
-        }
-      },
-      "alertas": [],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "baixa",
-        "nota": "Modelo favorece Switzerland com 38.2% de chance."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "FIFA World Cup",
-        "sport_key": "soccer_fifa_world_cup",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "13/06 19:00",
-            "mandante": "Qatar",
-            "visitante": "Switzerland",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "12/06 19:00",
-            "mandante": "Canada",
-            "visitante": "Bosnia-H.",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.38249255345083993,
-          "confianca": "LOW",
-          "justificativa": "Switzerland projeta ≈1.4 gol(s) vs ≈1.3 do adversário. Prob vitória: 38.2% (margem: 5.8 p.p.)",
-          "edge": 0.0584,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER_2.5",
-          "probabilidade": 0.5091071817215909,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.6. UNDER 2.5: 50.9% de probabilidade",
-          "edge": 0.0091,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.7559,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.6.",
-          "edge": 0.2559,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.5517,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.4 (casa) x 1.3 (fora). Ambas marcam - Sim: 55.2%",
-          "edge": 0.0517,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        }
-      ]
-    },
-    {
-      "competicao": "FIFA World Cup",
-      "data": "2026-06-18T22:00:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 6,
-        "visitante": 0
-      },
-      "times": {
-        "casa": "Canada",
-        "visitante": "Qatar",
-        "escudo_casa": "https://crests.football-data.org/canada.svg",
-        "escudo_visitante": "https://crests.football-data.org/8030.svg"
-      },
-      "probabilidades": {
-        "casa": 0.38249255345083993,
-        "empate": 0.29342145263226704,
-        "visitante": 0.3240859939168931
-      },
-      "favorito": {
-        "nome": "Canada",
-        "prob": 0.38249255345083993,
-        "vantagem": 0.058406559533946856
-      },
-      "gols_esperados": {
-        "casa": 1.3816000000000002,
-        "visitante": 1.256,
-        "total": 2.6376
-      },
-      "mercados": {
-        "under_25": 0.5091071817215909,
-        "over_25": 0.4908928182784092,
-        "btts_yes": 0.5516764572785422,
-        "btts_no": 0.4483235427214578
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.555
-        },
-        "visitante": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.535
-        }
-      },
-      "leitura_rapida": "Canada favorito (38%, risco alto). Mercado de gols equilibrado (xG total ≈2.6).",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 1.0,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 1,
-          "sequencia_sofre": 1,
-          "jogos": 1
-        },
-        "visitante": {
-          "prob_marca": 1.0,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 1,
-          "sequencia_sofre": 1,
-          "jogos": 1
-        }
-      },
-      "alertas": [],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "baixa",
-        "nota": "Modelo favorece Canada com 38.2% de chance."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
-        "competition": "FIFA World Cup",
-        "sport_key": "soccer_fifa_world_cup",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "12/06 19:00",
-            "mandante": "Canada",
-            "visitante": "Bosnia-H.",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "13/06 19:00",
-            "mandante": "Qatar",
-            "visitante": "Switzerland",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.38249255345083993,
-          "confianca": "LOW",
-          "justificativa": "Canada projeta ≈1.4 gol(s) vs ≈1.3 do adversário. Prob vitória: 38.2% (margem: 5.8 p.p.)",
-          "edge": 0.0584,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER_2.5",
-          "probabilidade": 0.5091071817215909,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.6. UNDER 2.5: 50.9% de probabilidade",
-          "edge": 0.0091,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.7559,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.6.",
-          "edge": 0.2559,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.5517,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.4 (casa) x 1.3 (fora). Ambas marcam - Sim: 55.2%",
-          "edge": 0.0517,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        }
-      ]
-    },
-    {
-      "competicao": "FIFA World Cup",
       "data": "2026-06-19T01:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
         "visitante": 0
@@ -740,21 +66,24 @@
       },
       "tendencia_gols": {
         "casa": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
+          "prob_marca": 1.0,
+          "prob_sofre": 0.0,
+          "sequencia_marca": 2,
           "sequencia_sofre": 0,
-          "jogos": 0
+          "jogos": 2
         },
         "visitante": {
-          "prob_marca": 1.0,
+          "prob_marca": 0.5,
           "prob_sofre": 1.0,
-          "sequencia_marca": 1,
-          "sequencia_sofre": 1,
-          "jogos": 1
+          "sequencia_marca": 0,
+          "sequencia_sofre": 2,
+          "jogos": 2
         }
       },
-      "alertas": [],
+      "alertas": [
+        "Mexico jogou recentemente — possível desgaste físico.",
+        "Korea Republic jogou recentemente — possível desgaste físico."
+      ],
       "analise_ia": {
         "palpite_ia": "2",
         "confianca_ia": "baixa",
@@ -763,17 +92,44 @@
       "odds_debug": {
         "enabled": "false",
         "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "reason": "não encontrou evento equivalente na consulta por liga",
         "competition": "FIFA World Cup",
         "sport_key": "soccer_fifa_world_cup",
         "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%",
+        "pre_match_locked": "true",
+        "pre_match_lock_reason": "snapshot_pre_jogo"
       },
       "odds_integradas": false,
       "odds_valor_alto": false,
       "historico": {
-        "casa": [],
+        "casa": [
+          {
+            "data": "19/06 01:00",
+            "mandante": "Mexico",
+            "visitante": "Korea Republic",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "11/06 19:00",
+            "mandante": "Mexico",
+            "visitante": "South Africa",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ],
         "visitante": [
+          {
+            "data": "19/06 01:00",
+            "mandante": "Mexico",
+            "visitante": "Korea Republic",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
           {
             "data": "12/06 02:00",
             "mandante": "Korea Republic",
@@ -797,7 +153,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -811,7 +167,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -825,7 +181,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -839,7 +195,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -925,14 +281,16 @@
       },
       "odds_debug": {
         "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
         "competition": "FIFA World Cup",
         "sport_key": "soccer_fifa_world_cup",
+        "odds_match_id": "065b3573e875f8d23803357f73e5b99e",
+        "bookmakers_outcomes": "3",
         "ev_filter": "fail",
         "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
       },
-      "odds_integradas": false,
+      "odds_integradas": true,
       "odds_valor_alto": false,
       "historico": {
         "casa": [
@@ -964,10 +322,10 @@
           "confianca": "MEDIUM",
           "justificativa": "USA projeta ≈2.3 gol(s) vs ≈1.4 do adversário. Prob vitória: 56.6% (margem: 34.6 p.p.)",
           "edge": 0.3459,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
+          "odd_decimal": 1.65,
+          "ev": -0.0706,
+          "ev_bruto": -0.0667,
+          "prob_mercado_justa": 0.6086,
           "valor_esperado_positivo": false,
           "resultado_verificador": null
         },
@@ -1097,15 +455,17 @@
       },
       "odds_debug": {
         "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
         "competition": "FIFA World Cup",
         "sport_key": "soccer_fifa_world_cup",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+        "odds_match_id": "4cd769aa7bae0ad9762bd69b80ef2903",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%"
       },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
+      "odds_integradas": true,
+      "odds_valor_alto": true,
       "historico": {
         "casa": [
           {
@@ -1136,11 +496,11 @@
           "confianca": "MEDIUM",
           "justificativa": "Scotland projeta ≈1.6 gol(s) vs ≈1.3 do adversário. Prob vitória: 43.6% (margem: 14.9 p.p.)",
           "edge": 0.1491,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
+          "odd_decimal": 6.0,
+          "ev": 1.5795,
+          "ev_bruto": 1.6166,
+          "prob_mercado_justa": 0.1691,
+          "valor_esperado_positivo": true,
           "resultado_verificador": null
         },
         {
@@ -1186,14 +546,906 @@
           "resultado_verificador": null
         }
       ]
+    },
+    {
+      "competicao": "FIFA World Cup",
+      "data": "2026-06-20T00:30:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Brazil",
+        "visitante": "Haiti",
+        "escudo_casa": "https://crests.football-data.org/764.svg",
+        "escudo_visitante": "https://crests.football-data.org/haiti.svg"
+      },
+      "probabilidades": {
+        "casa": 0.4239762821442308,
+        "empate": 0.3023261772348809,
+        "visitante": 0.27369754062088825
+      },
+      "favorito": {
+        "nome": "Brazil",
+        "prob": 0.4239762821442308,
+        "vantagem": 0.12165010490934985
+      },
+      "gols_esperados": {
+        "casa": 1.3816000000000002,
+        "visitante": 1.0675999999999999,
+        "total": 2.4492000000000003
+      },
+      "mercados": {
+        "under_25": 0.5569720331090189,
+        "over_25": 0.44302796689098106,
+        "btts_yes": 0.5078951999713867,
+        "btts_no": 0.49210480002861334
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.5,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.555
+        },
+        "visitante": {
+          "forma_recente": 0.0,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.36
+        }
+      },
+      "leitura_rapida": "Brazil favorito (42%, risco alto). Mercado de gols equilibrado (xG total ≈2.4).",
+      "tendencia": {
+        "casa": "indefinida",
+        "visitante": "indefinida"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 1.0,
+          "prob_sofre": 1.0,
+          "sequencia_marca": 1,
+          "sequencia_sofre": 1,
+          "jogos": 1
+        },
+        "visitante": {
+          "prob_marca": 0.0,
+          "prob_sofre": 1.0,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 1,
+          "jogos": 1
+        }
+      },
+      "alertas": [],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "media",
+        "nota": "Modelo favorece Brazil com 42.4% de chance."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
+        "competition": "FIFA World Cup",
+        "sport_key": "soccer_fifa_world_cup",
+        "odds_match_id": "ef0f74a991d3e35798ae5af77667bce1",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%"
+      },
+      "odds_integradas": true,
+      "odds_valor_alto": true,
+      "historico": {
+        "casa": [
+          {
+            "data": "13/06 22:00",
+            "mandante": "Brazil",
+            "visitante": "Morocco",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "14/06 01:00",
+            "mandante": "Haiti",
+            "visitante": "Scotland",
+            "placar": "0 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.4239762821442308,
+          "confianca": "MEDIUM",
+          "justificativa": "Brazil projeta ≈1.4 gol(s) vs ≈1.1 do adversário. Prob vitória: 42.4% (margem: 12.2 p.p.)",
+          "edge": 0.1217,
+          "odd_decimal": 1.13,
+          "ev": -0.5281,
+          "ev_bruto": -0.5209,
+          "prob_mercado_justa": 0.8985,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER_2.5",
+          "probabilidade": 0.5569720331090189,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.4. UNDER 2.5: 55.7% de probabilidade",
+          "edge": 0.057,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.7186,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.4.",
+          "edge": 0.2186,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.4921,
+          "confianca": "LOW",
+          "justificativa": "xG: 1.4 (casa) x 1.1 (fora). Ambas marcam - Nao: 49.2%",
+          "edge": -0.0079,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "EMPATE",
+          "opcao": "X",
+          "probabilidade": 0.3023261772348809,
+          "confianca": "LOW",
+          "justificativa": "Ambas defesas solidas (60% / 60% de aproveitamento defensivo). Empate com 30.2% de probabilidade",
+          "edge": 0.0,
+          "odd_decimal": 14.0,
+          "ev": 3.1689,
+          "ev_bruto": 3.2326,
+          "prob_mercado_justa": 0.0725,
+          "valor_esperado_positivo": true,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "FIFA World Cup",
+      "data": "2026-06-20T03:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Turkey",
+        "visitante": "Paraguay",
+        "escudo_casa": "https://crests.football-data.org/803.svg",
+        "escudo_visitante": "https://crests.football-data.org/761.svg"
+      },
+      "probabilidades": {
+        "casa": 0.515319911014424,
+        "empate": 0.2663594760409932,
+        "visitante": 0.21832061294458274
+      },
+      "favorito": {
+        "nome": "Turkey",
+        "prob": 0.515319911014424,
+        "vantagem": 0.2489604349734308
+      },
+      "gols_esperados": {
+        "casa": 1.7353600000000002,
+        "visitante": 1.0675999999999999,
+        "total": 2.80296
+      },
+      "mercados": {
+        "under_25": 0.46896392587283653,
+        "over_25": 0.5310360741271635,
+        "btts_yes": 0.555014321406621,
+        "btts_no": 0.444985678593379
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.0,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.38
+        },
+        "visitante": {
+          "forma_recente": 0.0,
+          "ataque": 0.4,
+          "defesa": 0.0,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.24
+        }
+      },
+      "leitura_rapida": "Turkey favorito (52%, risco moderado). Mercado de gols equilibrado (xG total ≈2.8).",
+      "tendencia": {
+        "casa": "indefinida",
+        "visitante": "indefinida"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 0.0,
+          "prob_sofre": 1.0,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 1,
+          "jogos": 1
+        },
+        "visitante": {
+          "prob_marca": 1.0,
+          "prob_sofre": 1.0,
+          "sequencia_marca": 1,
+          "sequencia_sofre": 1,
+          "jogos": 1
+        }
+      },
+      "alertas": [],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "alta",
+        "nota": "Modelo favorece Turkey com 51.5% de chance."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
+        "competition": "FIFA World Cup",
+        "sport_key": "soccer_fifa_world_cup",
+        "odds_match_id": "f955d4b3395ce6e3b5ac1031ca52ca4e",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%"
+      },
+      "odds_integradas": true,
+      "odds_valor_alto": true,
+      "historico": {
+        "casa": [
+          {
+            "data": "14/06 04:00",
+            "mandante": "Australia",
+            "visitante": "Turkey",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "13/06 01:00",
+            "mandante": "USA",
+            "visitante": "Paraguay",
+            "placar": "4 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.515319911014424,
+          "confianca": "MEDIUM",
+          "justificativa": "Turkey projeta ≈1.7 gol(s) vs ≈1.1 do adversário. Prob vitória: 51.5% (margem: 24.9 p.p.)",
+          "edge": 0.249,
+          "odd_decimal": 2.12,
+          "ev": 0.0939,
+          "ev_bruto": 0.0925,
+          "prob_mercado_justa": 0.4711,
+          "valor_esperado_positivo": true,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_2.5",
+          "probabilidade": 0.5310360741271635,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.8. OVER 2.5: 53.1% de probabilidade",
+          "edge": 0.031,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.7839,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.8.",
+          "edge": 0.2839,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.445,
+          "confianca": "LOW",
+          "justificativa": "xG: 1.7 (casa) x 1.1 (fora). Ambas marcam - Nao: 44.5%",
+          "edge": -0.055,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "FIFA World Cup",
+      "data": "2026-06-20T17:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Netherlands",
+        "visitante": "Sweden",
+        "escudo_casa": "https://crests.football-data.org/8601.svg",
+        "escudo_visitante": "https://crests.football-data.org/792.svg"
+      },
+      "probabilidades": {
+        "casa": 0.35588153989830323,
+        "empate": 0.25753799820761714,
+        "visitante": 0.3865804618940796
+      },
+      "favorito": {
+        "nome": "Sweden",
+        "prob": 0.3865804618940796,
+        "vantagem": 0.03069892199577634
+      },
+      "gols_esperados": {
+        "casa": 1.6016000000000001,
+        "visitante": 1.6743999999999999,
+        "total": 3.276
+      },
+      "mercados": {
+        "under_25": 0.3644926439394862,
+        "over_25": 0.6355073560605138,
+        "btts_yes": 0.6618679701934641,
+        "btts_no": 0.3381320298065359
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.5,
+          "ataque": 0.8,
+          "defesa": 0.19999999999999996,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.5750000000000001
+        },
+        "visitante": {
+          "forma_recente": 1.0,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.71
+        }
+      },
+      "leitura_rapida": "Sweden favorito (39%, risco alto). Jogo mais aberto (xG total ≈3.3). Over 2.5 com 64%.",
+      "tendencia": {
+        "casa": "indefinida",
+        "visitante": "indefinida"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 1.0,
+          "prob_sofre": 1.0,
+          "sequencia_marca": 1,
+          "sequencia_sofre": 1,
+          "jogos": 1
+        },
+        "visitante": {
+          "prob_marca": 1.0,
+          "prob_sofre": 1.0,
+          "sequencia_marca": 1,
+          "sequencia_sofre": 1,
+          "jogos": 1
+        }
+      },
+      "alertas": [],
+      "analise_ia": {
+        "palpite_ia": "2",
+        "confianca_ia": "baixa",
+        "nota": "Modelo favorece Sweden com 38.7% de chance."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
+        "competition": "FIFA World Cup",
+        "sport_key": "soccer_fifa_world_cup",
+        "odds_match_id": "4f0c518545b0096c68326daf25bffc1e",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%"
+      },
+      "odds_integradas": true,
+      "odds_valor_alto": true,
+      "historico": {
+        "casa": [
+          {
+            "data": "14/06 20:00",
+            "mandante": "Netherlands",
+            "visitante": "Japan",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "15/06 02:00",
+            "mandante": "Sweden",
+            "visitante": "Tunisia",
+            "placar": "5 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "2",
+          "probabilidade": 0.3865804618940796,
+          "confianca": "LOW",
+          "justificativa": "Sweden projeta ≈1.7 gol(s) vs ≈1.6 do adversário. Prob vitória: 38.7% (margem: 3.1 p.p.)",
+          "edge": 0.0307,
+          "odd_decimal": 5.0,
+          "ev": 0.9318,
+          "ev_bruto": 0.9329,
+          "prob_mercado_justa": 0.2001,
+          "valor_esperado_positivo": true,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER_3.5",
+          "probabilidade": 0.5860050763279159,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈3.3. UNDER 3.5: 58.6% de probabilidade",
+          "edge": 0.086,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.8515,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈3.3.",
+          "edge": 0.3515,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.6619,
+          "confianca": "MEDIUM",
+          "justificativa": "xG: 1.6 (casa) x 1.7 (fora). Ambas marcam - Sim: 66.2%",
+          "edge": 0.1619,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "FIFA World Cup",
+      "data": "2026-06-20T20:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Germany",
+        "visitante": "Ivory Coast",
+        "escudo_casa": "https://crests.football-data.org/759.svg",
+        "escudo_visitante": "https://crests.football-data.org/787.svg"
+      },
+      "probabilidades": {
+        "casa": 0.6953252954921197,
+        "empate": 0.16114184669775763,
+        "visitante": 0.14353285781012257
+      },
+      "favorito": {
+        "nome": "Germany",
+        "prob": 0.6953252954921197,
+        "vantagem": 0.5341834487943621
+      },
+      "gols_esperados": {
+        "casa": 3.1068400000000005,
+        "visitante": 1.4444,
+        "total": 4.55124
+      },
+      "mercados": {
+        "under_25": 0.1703684080135648,
+        "over_25": 0.8296315919864352,
+        "btts_yes": 0.7356436372777164,
+        "btts_no": 0.2643563627222836
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 1.0,
+          "ataque": 1.0,
+          "defesa": 0.6,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.88
+        },
+        "visitante": {
+          "forma_recente": 1.0,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.71
+        }
+      },
+      "leitura_rapida": "Germany favorito (70%, risco forte). Jogo mais aberto (xG total ≈4.6). Over 2.5 com 83%.",
+      "tendencia": {
+        "casa": "indefinida",
+        "visitante": "indefinida"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 1.0,
+          "prob_sofre": 1.0,
+          "sequencia_marca": 1,
+          "sequencia_sofre": 1,
+          "jogos": 1
+        },
+        "visitante": {
+          "prob_marca": 1.0,
+          "prob_sofre": 0.0,
+          "sequencia_marca": 1,
+          "sequencia_sofre": 0,
+          "jogos": 1
+        }
+      },
+      "alertas": [],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "alta",
+        "nota": "Modelo favorece Germany com 69.5% de chance."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
+        "competition": "FIFA World Cup",
+        "sport_key": "soccer_fifa_world_cup",
+        "odds_match_id": "f1ab0f69832972a329243522ceaa7804",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%"
+      },
+      "odds_integradas": true,
+      "odds_valor_alto": true,
+      "historico": {
+        "casa": [
+          {
+            "data": "14/06 17:00",
+            "mandante": "Germany",
+            "visitante": "Curaçao",
+            "placar": "7 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "14/06 23:00",
+            "mandante": "Ivory Coast",
+            "visitante": "Ecuador",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.6953252954921197,
+          "confianca": "HIGH",
+          "justificativa": "Germany projeta ≈3.1 gol(s) vs ≈1.4 do adversário. Prob vitória: 69.5% (margem: 53.4 p.p.)",
+          "edge": 0.5342,
+          "odd_decimal": 1.58,
+          "ev": 0.087,
+          "ev_bruto": 0.0986,
+          "prob_mercado_justa": 0.6397,
+          "valor_esperado_positivo": true,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_3.5",
+          "probabilidade": 0.66136115559814,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈4.6. OVER 3.5: 66.1% de probabilidade",
+          "edge": 0.1614,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.9468,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈4.6.",
+          "edge": 0.4468,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.7356,
+          "confianca": "HIGH",
+          "justificativa": "xG: 3.1 (casa) x 1.4 (fora). Ambas marcam - Sim: 73.6%",
+          "edge": 0.2356,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "FIFA World Cup",
+      "data": "2026-06-21T00:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Ecuador",
+        "visitante": "Curaçao",
+        "escudo_casa": "https://crests.football-data.org/791.svg",
+        "escudo_visitante": "https://crests.football-data.org/curacao.svg"
+      },
+      "probabilidades": {
+        "casa": 0.6371879904204129,
+        "empate": 0.21055976001183122,
+        "visitante": 0.15225224956775585
+      },
+      "favorito": {
+        "nome": "Ecuador",
+        "prob": 0.6371879904204129,
+        "vantagem": 0.42662823040858167
+      },
+      "gols_esperados": {
+        "casa": 2.2963600000000004,
+        "visitante": 1.0675999999999999,
+        "total": 3.3639600000000005
+      },
+      "mercados": {
+        "under_25": 0.3476405889632662,
+        "over_25": 0.6523594110367338,
+        "btts_yes": 0.6010211709416485,
+        "btts_no": 0.39897882905835147
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.0,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.38
+        },
+        "visitante": {
+          "forma_recente": 0.0,
+          "ataque": 0.4,
+          "defesa": 0.0,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.24
+        }
+      },
+      "leitura_rapida": "Ecuador favorito (64%, risco forte). Jogo mais aberto (xG total ≈3.4). Over 2.5 com 65%.",
+      "tendencia": {
+        "casa": "indefinida",
+        "visitante": "indefinida"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 0.0,
+          "prob_sofre": 1.0,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 1,
+          "jogos": 1
+        },
+        "visitante": {
+          "prob_marca": 1.0,
+          "prob_sofre": 1.0,
+          "sequencia_marca": 1,
+          "sequencia_sofre": 1,
+          "jogos": 1
+        }
+      },
+      "alertas": [],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "alta",
+        "nota": "Modelo favorece Ecuador com 63.7% de chance."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
+        "competition": "FIFA World Cup",
+        "sport_key": "soccer_fifa_world_cup",
+        "odds_match_id": "681895f294b670b4c7b14495dfb583bc",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": true,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "14/06 23:00",
+            "mandante": "Ivory Coast",
+            "visitante": "Ecuador",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "14/06 17:00",
+            "mandante": "Germany",
+            "visitante": "Curaçao",
+            "placar": "7 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.6371879904204129,
+          "confianca": "HIGH",
+          "justificativa": "Ecuador projeta ≈2.3 gol(s) vs ≈1.1 do adversário. Prob vitória: 63.7% (margem: 42.7 p.p.)",
+          "edge": 0.4266,
+          "odd_decimal": 1.14,
+          "ev": -0.2795,
+          "ev_bruto": -0.2736,
+          "prob_mercado_justa": 0.8843,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER_3.5",
+          "probabilidade": 0.5677173141379882,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈3.4. UNDER 3.5: 56.8% de probabilidade",
+          "edge": 0.0677,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.8597,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈3.4.",
+          "edge": 0.3597,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.399,
+          "confianca": "LOW",
+          "justificativa": "xG: 2.3 (casa) x 1.1 (fora). Ambas marcam - Nao: 39.9%",
+          "edge": -0.101,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
     }
   ],
   "acertos_hoje": {
-    "acertos": 10,
-    "total": 16,
-    "taxa": 0.625
+    "acertos": 0,
+    "total": 4,
+    "taxa": 0.0
   },
   "daily_tips_ids": [
+    {
+      "casa": "Germany",
+      "visitante": "Ivory Coast",
+      "data": "2026-06-20T20:00:00Z",
+      "tipo": "OVER_UNDER",
+      "opcao": "OVER_1.5",
+      "probabilidade": 0.9468
+    },
     {
       "casa": "USA",
       "visitante": "Australia",
@@ -1201,19 +1453,11 @@
       "tipo": "OVER_UNDER",
       "opcao": "OVER_1.5",
       "probabilidade": 0.9016
-    },
-    {
-      "casa": "Mexico",
-      "visitante": "Korea Republic",
-      "data": "2026-06-19T01:00:00Z",
-      "tipo": "OVER_UNDER",
-      "opcao": "OVER_1.5",
-      "probabilidade": 0.811
     }
   ],
-  "daily_tips_date": "2026-06-18",
+  "daily_tips_date": "2026-06-19",
   "recovery_tip": {
     "ativo": false
   },
-  "recovery_tip_date": "2026-06-18"
+  "recovery_tip_date": "2026-06-19"
 }
