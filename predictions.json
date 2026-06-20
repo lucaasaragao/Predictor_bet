@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T21:01:17-03:00",
+  "generated_at": "2026-06-19T22:18:14-03:00",
   "analysis_date": "2026-06-19",
   "total_jogos": 8,
   "odds_debug_visual": false,
@@ -376,7 +376,7 @@
     {
       "competicao": "FIFA World Cup",
       "data": "2026-06-19T22:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 0,
         "visitante": 1
@@ -501,7 +501,7 @@
           "ev_bruto": 1.6166,
           "prob_mercado_justa": 0.1691,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -515,7 +515,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -529,7 +529,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -543,17 +543,17 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
     {
       "competicao": "FIFA World Cup",
       "data": "2026-06-20T00:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 1,
+        "visitante": 0
       },
       "times": {
         "casa": "Brazil",
@@ -1434,8 +1434,8 @@
   ],
   "acertos_hoje": {
     "acertos": 2,
-    "total": 8,
-    "taxa": 0.25
+    "total": 12,
+    "taxa": 0.167
   },
   "daily_tips_ids": [
     {
