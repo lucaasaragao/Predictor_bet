@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-06-21",
-      "ultima_atualizacao": "2026-06-21T20:47:38-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.538,
-      "total_acertos": 7,
-      "total_palpites": 13,
+      "ultima_atualizacao": "2026-06-21T21:19:07-03:00",
+      "finalizados": 4,
+      "taxa_geral": 0.5,
+      "total_acertos": 9,
+      "total_palpites": 18,
       "mercados": {
         "WINNER": {
           "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
+          "total": 4,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 4,
-          "total": 6,
-          "taxa": 0.667
+          "acertos": 5,
+          "total": 8,
+          "taxa": 0.625
         },
         "BTTS": {
           "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "total": 4,
+          "taxa": 0.25
         },
         "EMPATE": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 3,
-          "brier": 0.6448,
-          "log_loss": 1.0676
+          "n": 4,
+          "brier": 0.6552,
+          "log_loss": 1.0823
         },
         "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.2799,
-          "log_loss": 0.7546
+          "n": 4,
+          "brier": 0.3054,
+          "log_loss": 0.8066
         },
         "BTTS": {
-          "n": 3,
-          "brier": 0.288,
-          "log_loss": 0.7698
+          "n": 4,
+          "brier": 0.2875,
+          "log_loss": 0.7686
         }
       },
       "jogos": [
@@ -162,6 +162,50 @@
               "confianca": "LOW",
               "probabilidade": 0.552,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-06-21T22:00:00Z",
+          "casa": "Uruguay",
+          "visitante": "Cape Verde",
+          "competicao": "FIFA World Cup",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.364,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.618,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.667,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.535,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.324,
+              "resultado": "ACERTO"
             }
           ]
         }
