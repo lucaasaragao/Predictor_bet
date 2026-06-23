@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T18:46:17-03:00",
+  "generated_at": "2026-06-23T19:17:33-03:00",
   "analysis_date": "2026-06-23",
   "total_jogos": 9,
   "odds_debug_visual": false,
@@ -371,7 +371,7 @@
     {
       "competicao": "FIFA World Cup",
       "data": "2026-06-23T20:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 0,
         "visitante": 0
@@ -494,7 +494,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -508,7 +508,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -522,7 +522,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -536,7 +536,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -1657,8 +1657,8 @@
   ],
   "acertos_hoje": {
     "acertos": 4,
-    "total": 9,
-    "taxa": 0.444
+    "total": 13,
+    "taxa": 0.308
   },
   "daily_tips_ids": [
     {
@@ -1680,7 +1680,25 @@
   ],
   "daily_tips_date": "2026-06-23",
   "recovery_tip": {
-    "ativo": false
+    "ativo": true,
+    "disparado_em": "2026-06-23T19:17:32-03:00",
+    "jogo": {
+      "casa": "Bosnia-H.",
+      "visitante": "Qatar",
+      "data": "2026-06-24T19:00:00Z",
+      "competicao": "FIFA World Cup",
+      "times": {
+        "casa": "Bosnia-H.",
+        "visitante": "Qatar"
+      }
+    },
+    "palpite": {
+      "tipo": "OVER_UNDER",
+      "opcao": "OVER_1.5",
+      "probabilidade": 0.847,
+      "confianca": "HIGH",
+      "resultado_verificador": null
+    }
   },
   "recovery_tip_date": "2026-06-23"
 }

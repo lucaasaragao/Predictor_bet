@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-06-23",
-      "ultima_atualizacao": "2026-06-23T18:46:17-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.444,
+      "ultima_atualizacao": "2026-06-23T19:17:33-03:00",
+      "finalizados": 3,
+      "taxa_geral": 0.308,
       "total_acertos": 4,
-      "total_palpites": 9,
+      "total_palpites": 13,
       "mercados": {
         "WINNER": {
           "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "total": 3,
+          "taxa": 0.333
         },
         "OVER_UNDER": {
           "acertos": 2,
-          "total": 4,
-          "taxa": 0.5
+          "total": 6,
+          "taxa": 0.333
         },
         "BTTS": {
           "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "total": 3,
+          "taxa": 0.333
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.7382,
-          "log_loss": 1.2269
+          "n": 3,
+          "brier": 0.8106,
+          "log_loss": 1.3295
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.3107,
-          "log_loss": 0.8151
+          "n": 3,
+          "brier": 0.4019,
+          "log_loss": 1.0252
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.2631,
-          "log_loss": 0.7193
+          "n": 3,
+          "brier": 0.3598,
+          "log_loss": 0.9335
         }
       },
       "jogos": [
@@ -124,6 +124,43 @@
               "opcao": "X",
               "confianca": "LOW",
               "probabilidade": 0.302,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-06-23T20:00:00Z",
+          "casa": "England",
+          "visitante": "Ghana",
+          "competicao": "FIFA World Cup",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.519,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.569,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.919,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.744,
               "resultado": "ERRO"
             }
           ]
