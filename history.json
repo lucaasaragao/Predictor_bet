@@ -2,30 +2,84 @@
   "dias": [
     {
       "data": "2026-06-23",
-      "ultima_atualizacao": "2026-06-23T01:47:44-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-06-23T03:17:20-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.25,
+      "total_acertos": 1,
+      "total_palpites": 4,
+      "mercados": {
+        "WINNER": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.9782,
+          "log_loss": 1.5958
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.3112,
+          "log_loss": 0.8161
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.2682,
+          "log_loss": 0.7295
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-06-23T03:00:00Z",
+          "casa": "Jordan",
+          "visitante": "Algeria",
+          "competicao": "FIFA World Cup",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.51,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.558,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.717,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.518,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-06-22",
