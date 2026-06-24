@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-06-24",
-      "ultima_atualizacao": "2026-06-24T17:48:37-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.25,
-      "total_acertos": 1,
-      "total_palpites": 4,
+      "ultima_atualizacao": "2026-06-24T18:22:01-03:00",
+      "finalizados": 3,
+      "taxa_geral": 0.583,
+      "total_acertos": 7,
+      "total_palpites": 12,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 1,
+          "acertos": 3,
+          "total": 3,
           "taxa": 1.0
         },
         "OVER_UNDER": {
-          "acertos": 0,
-          "total": 2,
-          "taxa": 0.0
+          "acertos": 3,
+          "total": 6,
+          "taxa": 0.5
         },
         "BTTS": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 3,
+          "taxa": 0.333
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 1,
-          "brier": 0.477,
-          "log_loss": 0.8299
+          "n": 3,
+          "brier": 0.3177,
+          "log_loss": 0.6129
         },
         "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.2927,
-          "log_loss": 0.7788
+          "n": 3,
+          "brier": 0.1751,
+          "log_loss": 0.5371
         },
         "BTTS": {
-          "n": 1,
-          "brier": 0.3413,
-          "log_loss": 0.8776
+          "n": 3,
+          "brier": 0.2116,
+          "log_loss": 0.6131
         }
       },
       "jogos": [
@@ -76,6 +76,80 @@
               "confianca": "LOW",
               "probabilidade": 0.584,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-06-24T19:00:00Z",
+          "casa": "Bosnia-H.",
+          "visitante": "Qatar",
+          "competicao": "FIFA World Cup",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.657,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.591,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.847,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.43,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-06-24T19:00:00Z",
+          "casa": "Switzerland",
+          "visitante": "Canada",
+          "competicao": "FIFA World Cup",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.555,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.525,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.881,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.671,
+              "resultado": "ACERTO"
             }
           ]
         }
