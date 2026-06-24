@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-06-24",
+      "ultima_atualizacao": "2026-06-24T00:22:43-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-06-23",
       "ultima_atualizacao": "2026-06-23T22:59:44-03:00",
       "finalizados": 4,
@@ -843,161 +870,6 @@
               "confianca": "LOW",
               "probabilidade": 0.399,
               "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-06-19",
-      "ultima_atualizacao": "2026-06-19T23:08:45-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.167,
-      "total_acertos": 2,
-      "total_palpites": 12,
-      "mercados": {
-        "WINNER": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
-        },
-        "OVER_UNDER": {
-          "acertos": 1,
-          "total": 6,
-          "taxa": 0.167
-        },
-        "BTTS": {
-          "acertos": 0,
-          "total": 3,
-          "taxa": 0.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 3,
-          "brier": 0.5667,
-          "log_loss": 0.9573
-        },
-        "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.383,
-          "log_loss": 0.9761
-        },
-        "BTTS": {
-          "n": 3,
-          "brier": 0.4026,
-          "log_loss": 1.0109
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-06-19T01:00:00Z",
-          "casa": "Mexico",
-          "visitante": "Korea Republic",
-          "competicao": "FIFA World Cup",
-          "placar": "1-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "2",
-              "confianca": "LOW",
-              "probabilidade": 0.378,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.57,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.811,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.613,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-06-19T19:00:00Z",
-          "casa": "USA",
-          "visitante": "Australia",
-          "competicao": "FIFA World Cup",
-          "placar": "2-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.566,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.523,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.902,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "HIGH",
-              "probabilidade": 0.701,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-06-19T22:00:00Z",
-          "casa": "Scotland",
-          "visitante": "Morocco",
-          "competicao": "FIFA World Cup",
-          "placar": "0-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.436,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.541,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.791,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.584,
-              "resultado": "ERRO"
             }
           ]
         }
