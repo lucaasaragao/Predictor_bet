@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-06-26",
-      "ultima_atualizacao": "2026-06-26T17:59:39-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.375,
-      "total_acertos": 3,
-      "total_palpites": 8,
+      "ultima_atualizacao": "2026-06-26T18:36:32-03:00",
+      "finalizados": 4,
+      "taxa_geral": 0.5,
+      "total_acertos": 8,
+      "total_palpites": 16,
       "mercados": {
         "WINNER": {
-          "acertos": 0,
-          "total": 2,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 4,
+          "taxa": 0.25
         },
         "OVER_UNDER": {
-          "acertos": 2,
-          "total": 4,
+          "acertos": 4,
+          "total": 8,
           "taxa": 0.5
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "acertos": 3,
+          "total": 4,
+          "taxa": 0.75
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.8444,
-          "log_loss": 1.3483
+          "n": 4,
+          "brier": 0.7082,
+          "log_loss": 1.1505
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.2811,
-          "log_loss": 0.7556
+          "n": 4,
+          "brier": 0.257,
+          "log_loss": 0.7051
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.2704,
-          "log_loss": 0.7341
+          "n": 4,
+          "brier": 0.2096,
+          "log_loss": 0.6089
         }
       },
       "jogos": [
@@ -112,6 +112,80 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.465,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-06-26T19:00:00Z",
+          "casa": "Norway",
+          "visitante": "France",
+          "competicao": "FIFA World Cup",
+          "placar": "1-4",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.458,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.536,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.876,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.689,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-06-26T19:00:00Z",
+          "casa": "Senegal",
+          "visitante": "Iraq",
+          "competicao": "FIFA World Cup",
+          "placar": "5-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.497,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.603,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.679,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.552,
               "resultado": "ACERTO"
             }
           ]

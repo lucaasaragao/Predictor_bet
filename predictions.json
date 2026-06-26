@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T17:59:39-03:00",
+  "generated_at": "2026-06-26T18:36:32-03:00",
   "analysis_date": "2026-06-26",
   "total_jogos": 12,
   "odds_debug_visual": false,
@@ -427,10 +427,10 @@
     {
       "competicao": "FIFA World Cup",
       "data": "2026-06-26T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
-        "visitante": 3
+        "visitante": 4
       },
       "times": {
         "casa": "Norway",
@@ -571,7 +571,7 @@
           "ev_bruto": 1.52,
           "prob_mercado_justa": 0.1826,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -585,7 +585,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -599,7 +599,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -613,14 +613,14 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
     {
       "competicao": "FIFA World Cup",
       "data": "2026-06-26T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 5,
         "visitante": 0
@@ -764,7 +764,7 @@
           "ev_bruto": -0.3786,
           "prob_mercado_justa": 0.8033,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -778,7 +778,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -792,7 +792,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -806,7 +806,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -2386,9 +2386,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 3,
-    "total": 8,
-    "taxa": 0.375
+    "acertos": 8,
+    "total": 16,
+    "taxa": 0.5
   },
   "daily_tips_ids": [
     {
@@ -2410,7 +2410,25 @@
   ],
   "daily_tips_date": "2026-06-26",
   "recovery_tip": {
-    "ativo": false
+    "ativo": true,
+    "disparado_em": "2026-06-26T18:36:32-03:00",
+    "jogo": {
+      "casa": "Cape Verde",
+      "visitante": "Saudi Arabia",
+      "data": "2026-06-27T00:00:00Z",
+      "competicao": "FIFA World Cup",
+      "times": {
+        "casa": "Cape Verde",
+        "visitante": "Saudi Arabia"
+      }
+    },
+    "palpite": {
+      "tipo": "OVER_UNDER",
+      "opcao": "OVER_1.5",
+      "probabilidade": 0.8154,
+      "confianca": "HIGH",
+      "resultado_verificador": null
+    }
   },
   "recovery_tip_date": "2026-06-26"
 }
