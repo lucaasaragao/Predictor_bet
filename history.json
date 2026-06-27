@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-06-27",
-      "ultima_atualizacao": "2026-06-27T01:42:02-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.125,
-      "total_acertos": 1,
-      "total_palpites": 8,
+      "ultima_atualizacao": "2026-06-27T03:03:08-03:00",
+      "finalizados": 4,
+      "taxa_geral": 0.471,
+      "total_acertos": 8,
+      "total_palpites": 17,
       "mercados": {
         "WINNER": {
-          "acertos": 0,
-          "total": 2,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 4,
+          "taxa": 0.25
         },
         "OVER_UNDER": {
-          "acertos": 0,
-          "total": 4,
-          "taxa": 0.0
+          "acertos": 4,
+          "total": 8,
+          "taxa": 0.5
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 2,
+          "acertos": 2,
+          "total": 4,
           "taxa": 0.5
+        },
+        "EMPATE": {
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.8003,
-          "log_loss": 1.2371
+          "n": 4,
+          "brier": 0.6908,
+          "log_loss": 1.107
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.3565,
-          "log_loss": 0.9093
+          "n": 4,
+          "brier": 0.2678,
+          "log_loss": 0.7298
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.3621,
-          "log_loss": 0.9228
+          "n": 4,
+          "brier": 0.2885,
+          "log_loss": 0.7723
         }
       },
       "jogos": [
@@ -113,6 +118,87 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.646,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-06-27T03:00:00Z",
+          "casa": "Egypt",
+          "visitante": "Iran",
+          "competicao": "FIFA World Cup",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.391,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.594,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.688,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.517,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.315,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-06-27T03:00:00Z",
+          "casa": "New Zealand",
+          "visitante": "Belgium",
+          "competicao": "FIFA World Cup",
+          "placar": "1-5",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.449,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.56,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.804,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.597,
+              "resultado": "ACERTO"
             }
           ]
         }
