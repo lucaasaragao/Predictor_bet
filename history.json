@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-06-27",
-      "ultima_atualizacao": "2026-06-27T19:56:13-03:00",
-      "finalizados": 4,
-      "taxa_geral": 0.471,
-      "total_acertos": 8,
-      "total_palpites": 17,
+      "ultima_atualizacao": "2026-06-27T20:27:31-03:00",
+      "finalizados": 6,
+      "taxa_geral": 0.519,
+      "total_acertos": 14,
+      "total_palpites": 27,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 4,
-          "taxa": 0.25
-        },
-        "OVER_UNDER": {
-          "acertos": 4,
-          "total": 8,
+          "acertos": 3,
+          "total": 6,
           "taxa": 0.5
         },
+        "OVER_UNDER": {
+          "acertos": 7,
+          "total": 12,
+          "taxa": 0.583
+        },
         "BTTS": {
-          "acertos": 2,
-          "total": 4,
+          "acertos": 3,
+          "total": 6,
           "taxa": 0.5
         },
         "EMPATE": {
           "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
+          "total": 3,
+          "taxa": 0.333
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 4,
-          "brier": 0.6908,
-          "log_loss": 1.107
+          "n": 6,
+          "brier": 0.6519,
+          "log_loss": 1.0595
         },
         "OVER_UNDER": {
-          "n": 4,
-          "brier": 0.2678,
-          "log_loss": 0.7298
+          "n": 6,
+          "brier": 0.2692,
+          "log_loss": 0.7329
         },
         "BTTS": {
-          "n": 4,
-          "brier": 0.2885,
-          "log_loss": 0.7723
+          "n": 6,
+          "brier": 0.276,
+          "log_loss": 0.7467
         }
       },
       "jogos": [
@@ -199,6 +199,94 @@
               "confianca": "LOW",
               "probabilidade": 0.597,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-06-27T21:00:00Z",
+          "casa": "Croatia",
+          "visitante": "Ghana",
+          "competicao": "FIFA World Cup",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.344,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.639,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.648,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.551,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.331,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-06-27T21:00:00Z",
+          "casa": "Panama",
+          "visitante": "England",
+          "competicao": "FIFA World Cup",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.423,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.631,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.655,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.554,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.323,
+              "resultado": "ERRO"
             }
           ]
         }
