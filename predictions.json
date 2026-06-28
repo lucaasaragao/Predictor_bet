@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T00:44:11-03:00",
+  "generated_at": "2026-06-28T02:14:17-03:00",
   "analysis_date": "2026-06-28",
   "total_jogos": 4,
   "odds_debug_visual": false,
@@ -9,10 +9,10 @@
     {
       "competicao": "FIFA World Cup",
       "data": "2026-06-28T02:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
-        "visitante": 2
+        "visitante": 3
       },
       "times": {
         "casa": "Jordan",
@@ -154,7 +154,7 @@
           "ev_bruto": -0.4708,
           "prob_mercado_justa": 0.9814,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -168,7 +168,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -182,7 +182,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -196,7 +196,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -797,9 +797,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 3,
+    "total": 4,
+    "taxa": 0.75
   },
   "daily_tips_ids": [
     {
