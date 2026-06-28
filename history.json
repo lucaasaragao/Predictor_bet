@@ -2,25 +2,25 @@
   "dias": [
     {
       "data": "2026-06-27",
-      "ultima_atualizacao": "2026-06-27T22:25:38-03:00",
-      "finalizados": 6,
-      "taxa_geral": 0.519,
-      "total_acertos": 14,
-      "total_palpites": 27,
+      "ultima_atualizacao": "2026-06-27T23:22:24-03:00",
+      "finalizados": 8,
+      "taxa_geral": 0.543,
+      "total_acertos": 19,
+      "total_palpites": 35,
       "mercados": {
         "WINNER": {
-          "acertos": 3,
-          "total": 6,
+          "acertos": 4,
+          "total": 8,
           "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 7,
-          "total": 12,
-          "taxa": 0.583
+          "acertos": 10,
+          "total": 16,
+          "taxa": 0.625
         },
         "BTTS": {
-          "acertos": 3,
-          "total": 6,
+          "acertos": 4,
+          "total": 8,
           "taxa": 0.5
         },
         "EMPATE": {
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 6,
-          "brier": 0.6519,
-          "log_loss": 1.0595
+          "n": 8,
+          "brier": 0.6129,
+          "log_loss": 1.008
         },
         "OVER_UNDER": {
-          "n": 6,
-          "brier": 0.2692,
-          "log_loss": 0.7329
+          "n": 8,
+          "brier": 0.2574,
+          "log_loss": 0.7089
         },
         "BTTS": {
-          "n": 6,
-          "brier": 0.276,
-          "log_loss": 0.7467
+          "n": 8,
+          "brier": 0.2724,
+          "log_loss": 0.7391
         }
       },
       "jogos": [
@@ -287,6 +287,80 @@
               "confianca": "LOW",
               "probabilidade": 0.323,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-06-27T23:30:00Z",
+          "casa": "Congo DR",
+          "visitante": "Uzbekistan",
+          "competicao": "FIFA World Cup",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.619,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.523,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.777,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.502,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-06-27T23:30:00Z",
+          "casa": "Colombia",
+          "visitante": "Portugal",
+          "competicao": "FIFA World Cup",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.452,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.534,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.736,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.48,
+              "resultado": "ACERTO"
             }
           ]
         }
