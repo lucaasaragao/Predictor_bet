@@ -2,30 +2,84 @@
   "dias": [
     {
       "data": "2026-06-30",
-      "ultima_atualizacao": "2026-06-30T00:21:57-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-06-30T01:49:05-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.75,
+      "total_acertos": 3,
+      "total_palpites": 4,
+      "mercados": {
+        "WINNER": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 2,
+          "total": 2,
+          "taxa": 1.0
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.8394,
+          "log_loss": 1.3576
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.1446,
+          "log_loss": 0.4785
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.1271,
+          "log_loss": 0.4409
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-06-30T01:00:00Z",
+          "casa": "Netherlands",
+          "visitante": "Morocco",
+          "competicao": "FIFA World Cup",
+          "placar": "4-4",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.449,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.62,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.842,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.643,
+              "resultado": "ACERTO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-06-29",
