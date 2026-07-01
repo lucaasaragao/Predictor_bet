@@ -122,6 +122,34 @@ function formatGeneratedAt(value, compact = false) {
   }).format(parsedDate);
 }
 
+function formatKickoffToday(value) {
+  const parsedDate = parseGeneratedAt(value);
+  if (!parsedDate) return "";
+
+  const timeLabel = new Intl.DateTimeFormat("pt-BR", {
+    timeZone: TIMEZONE_FORTALEZA,
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(parsedDate);
+
+  return `Hoje às ${timeLabel}`;
+}
+
+function dateKeyInTimezone(value, timezone = TIMEZONE_FORTALEZA) {
+  if (!value) return "";
+  const parsedDate = value instanceof Date ? value : new Date(String(value));
+  if (Number.isNaN(parsedDate.getTime())) {
+    return "";
+  }
+
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: timezone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(parsedDate);
+}
+
 function syncHeaderMeta() {
   const generatedAtEl = document.getElementById("generatedAt");
   if (!generatedAtEl) return;
@@ -311,7 +339,17 @@ function normalizeFootballMatch(match) {
 }
 
 function normalizeFootballData(data) {
-  const jogos = Array.isArray(data?.jogos) ? data.jogos.map(normalizeFootballMatch) : [];
+  const jogosNormalizados = Array.isArray(data?.jogos) ? data.jogos.map(normalizeFootballMatch) : [];
+  const analysisDate = String(data?.analysis_date || "").trim();
+  const todayKey = dateKeyInTimezone(new Date());
+  const targetDate = analysisDate || todayKey;
+
+  // Frontend deve exibir apenas jogos do dia alvo (analysis_date).
+  const jogos = jogosNormalizados.filter((jogo) => {
+    const jogoDateKey = dateKeyInTimezone(jogo?.data);
+    return jogoDateKey === targetDate;
+  });
+
   const jogosByKey = new Map(
     jogos.map((jogo) => [`${jogo?.times?.casa || ""}|${jogo?.times?.visitante || ""}|${jogo?.data || ""}`, jogo])
   );
@@ -336,6 +374,7 @@ function normalizeFootballData(data) {
 
   return {
     ...data,
+    total_jogos: jogos.length,
     jogos,
     daily_tips_ids: Array.isArray(data?.daily_tips_ids) ? data.daily_tips_ids : [],
     recovery_tip: recoveryTip,
@@ -1197,19 +1236,12 @@ function renderCards() {
     const cardEl = node.querySelector(".card");
     const cardBadgesEl = node.querySelector(".card-badges");
 
-    let matchDateLabel = "";
-    if (match.data) {
-        const dateObj = new Date(match.data);
-        const day = dateObj.getDate().toString().padStart(2, '0');
-        const month = (dateObj.getMonth() + 1).toString().padStart(2, '0');
-        const hours = dateObj.getHours().toString().padStart(2, '0');
-        const minutes = dateObj.getMinutes().toString().padStart(2, '0');
-        matchDateLabel = `${day}/${month} às ${hours}:${minutes}`;
-    }
+    const matchDateLabel = formatKickoffToday(match.data);
     node.querySelector(".competition").textContent = match.competicao;
     const matchDateEl = node.querySelector(".match-date");
     if (matchDateLabel) {
       matchDateEl.textContent = matchDateLabel;
+      matchDateEl.title = "Somente jogos do dia atual";
       matchDateEl.hidden = false;
     }
     

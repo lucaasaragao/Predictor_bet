@@ -1829,10 +1829,25 @@ def _palpite_ia_fallback(pred: PredicaoJogo) -> Dict[str, str]:
     else:
         confianca = "baixa"
 
-    if palpite == "X":
-        nota = f"Modelo aponta empate com {prob_vencedor*100:.1f}% e jogo equilibrado."
+    total_xg = pred.gols_esperados_casa + pred.gols_esperados_visitante
+    mercados = calcular_probabilidades_mercado(pred.gols_esperados_casa, pred.gols_esperados_visitante)
+    if mercados["under_25"] >= 0.55:
+        cenario_gols = f"tendência de menos gols (Under 2.5 {mercados['under_25']*100:.0f}%)"
+    elif mercados["over_25"] >= 0.55:
+        cenario_gols = f"tendência de jogo aberto (Over 2.5 {mercados['over_25']*100:.0f}%)"
     else:
-        nota = f"Modelo favorece {vencedor} com {prob_vencedor*100:.1f}% de chance."
+        cenario_gols = "mercado de gols equilibrado"
+
+    if palpite == "X":
+        nota = (
+            f"Empate em destaque ({prob_vencedor*100:.1f}%), xG total {total_xg:.1f} e {cenario_gols}."
+        )
+    else:
+        xg_fav = pred.gols_esperados_casa if palpite == "1" else pred.gols_esperados_visitante
+        nota = (
+            f"{vencedor} favorito ({prob_vencedor*100:.1f}%), margem {margem*100:.1f} p.p., "
+            f"xG {xg_fav:.1f} e {cenario_gols}."
+        )
 
     return {
         "palpite_ia": palpite,
@@ -2960,7 +2975,8 @@ REGRAS:
   "visitante": nome exato do time visitante
   "palpite_ia": sua previsão — "1" (casa), "X" (empate) ou "2" (visitante)
   "confianca_ia": "alta", "media" ou "baixa"
-  "nota": string curta em português, máximo 90 caracteres, SEM quebras de linha — explique o motivo do seu palpite
+  "nota": string curta em português, máximo 180 caracteres, SEM quebras de linha,
+      citando pelo menos 2 fatores objetivos (ex.: forma, xG, equilíbrio, importância)
 FORMATO (uma linha por objeto):
 [{{"casa":"A","visitante":"B","palpite_ia":"1","confianca_ia":"alta","nota":"Time A em ótima fase, visitante sem motivação"}},{{"casa":"C","visitante":"D","palpite_ia":"X","confianca_ia":"baixa","nota":"Jogo equilibrado, ambos precisam do ponto"}}]
 JOGOS:
@@ -3159,10 +3175,24 @@ def _aplicar_analise_ia_fallback(jogos: List[Dict]) -> None:
             alvo = "Empate"
             prob = prob_empate
 
+        mercados = jogo.get("mercados", {}) or {}
+        xg = jogo.get("gols_esperados", {}) or {}
+        total_xg = float(xg.get("total") or (float(xg.get("casa") or 0) + float(xg.get("visitante") or 0)))
+
+        if float(mercados.get("under_25", 0) or 0) >= 0.55:
+            cenario = f"Under 2.5 em {float(mercados.get('under_25', 0) or 0)*100:.0f}%"
+        elif float(mercados.get("over_25", 0) or 0) >= 0.55:
+            cenario = f"Over 2.5 em {float(mercados.get('over_25', 0) or 0)*100:.0f}%"
+        else:
+            cenario = "mercado de gols equilibrado"
+
         jogo["analise_ia"] = {
             "palpite_ia": palpite,
             "confianca_ia": confianca,
-            "nota": f"Fallback do modelo: favorece {alvo} com {prob*100:.1f}%.",
+            "nota": (
+                f"Fallback estatístico: {alvo} com {prob*100:.1f}%, "
+                f"xG total {total_xg:.1f} e {cenario}."
+            ),
         }
 
 
