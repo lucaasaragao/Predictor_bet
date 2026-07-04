@@ -1,6 +1,99 @@
 {
   "dias": [
     {
+      "data": "2026-07-04",
+      "ultima_atualizacao": "2026-07-04T01:05:35-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.6,
+      "total_acertos": 3,
+      "total_palpites": 5,
+      "mercados": {
+        "WINNER": {
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
+        },
+        "OVER_UNDER": {
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
+        },
+        "BTTS": {
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
+        }
+      },
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.4613,
+          "log_loss": 0.8023
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.1205,
+          "log_loss": 0.4263
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.1764,
+          "log_loss": 0.5447
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-07-04T01:30:00Z",
+          "casa": "Colombia",
+          "visitante": "Ghana",
+          "competicao": "FIFA World Cup",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.448,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.653,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.634,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.58,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.325,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "data": "2026-07-03",
       "ultima_atualizacao": "2026-07-03T23:43:05-03:00",
       "finalizados": 3,
@@ -578,124 +671,6 @@
               "confianca": "LOW",
               "probabilidade": 0.413,
               "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-06-29",
-      "ultima_atualizacao": "2026-06-29T23:00:24-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.625,
-      "total_acertos": 5,
-      "total_palpites": 8,
-      "mercados": {
-        "WINNER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
-        },
-        "OVER_UNDER": {
-          "acertos": 3,
-          "total": 4,
-          "taxa": 0.75
-        },
-        "BTTS": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 2,
-          "brier": 0.8951,
-          "log_loss": 1.4664
-        },
-        "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.1327,
-          "log_loss": 0.4497
-        },
-        "BTTS": {
-          "n": 2,
-          "brier": 0.1443,
-          "log_loss": 0.4778
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-06-29T17:00:00Z",
-          "casa": "Brazil",
-          "visitante": "Japan",
-          "competicao": "FIFA World Cup",
-          "placar": "2-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.397,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.581,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.818,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.62,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-06-29T20:30:00Z",
-          "casa": "Germany",
-          "visitante": "Paraguay",
-          "competicao": "FIFA World Cup",
-          "placar": "5-6",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.676,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.512,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.886,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.38,
-              "resultado": "ERRO"
             }
           ]
         }
