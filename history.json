@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-07-04",
-      "ultima_atualizacao": "2026-07-04T19:54:57-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.556,
-      "total_acertos": 5,
-      "total_palpites": 9,
+      "ultima_atualizacao": "2026-07-04T20:21:30-03:00",
+      "finalizados": 3,
+      "taxa_geral": 0.538,
+      "total_acertos": 7,
+      "total_palpites": 13,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "acertos": 2,
+          "total": 3,
+          "taxa": 0.667
         },
         "OVER_UNDER": {
           "acertos": 3,
-          "total": 4,
-          "taxa": 0.75
+          "total": 6,
+          "taxa": 0.5
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "acertos": 2,
+          "total": 3,
+          "taxa": 0.667
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.7009,
-          "log_loss": 1.1387
+          "n": 3,
+          "brier": 0.6145,
+          "log_loss": 1.0198
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.1119,
-          "log_loss": 0.407
+          "n": 3,
+          "brier": 0.1639,
+          "log_loss": 0.5144
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.3107,
-          "log_loss": 0.8223
+          "n": 3,
+          "brier": 0.3121,
+          "log_loss": 0.8228
         }
       },
       "jogos": [
@@ -125,6 +125,43 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.667,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-07-04T21:00:00Z",
+          "casa": "Paraguay",
+          "visitante": "France",
+          "competicao": "FIFA World Cup",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.457,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.518,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.775,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.439,
+              "resultado": "ACERTO"
             }
           ]
         }
