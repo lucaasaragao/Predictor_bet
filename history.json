@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-07-06",
+      "ultima_atualizacao": "2026-07-06T01:36:10-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-07-05",
       "ultima_atualizacao": "2026-07-05T23:58:09-03:00",
       "finalizados": 1,
@@ -515,161 +542,6 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.632,
-              "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-07-01",
-      "ultima_atualizacao": "2026-07-01T23:16:01-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.75,
-      "total_acertos": 9,
-      "total_palpites": 12,
-      "mercados": {
-        "WINNER": {
-          "acertos": 3,
-          "total": 3,
-          "taxa": 1.0
-        },
-        "OVER_UNDER": {
-          "acertos": 5,
-          "total": 6,
-          "taxa": 0.833
-        },
-        "BTTS": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 3,
-          "brier": 0.3251,
-          "log_loss": 0.6215
-        },
-        "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.3273,
-          "log_loss": 0.8544
-        },
-        "BTTS": {
-          "n": 3,
-          "brier": 0.2694,
-          "log_loss": 0.7331
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-07-01T16:00:00Z",
-          "casa": "England",
-          "visitante": "Congo DR",
-          "competicao": "FIFA World Cup",
-          "placar": "2-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.496,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.53,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.739,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.489,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-07-01T20:00:00Z",
-          "casa": "Belgium",
-          "visitante": "Senegal",
-          "competicao": "FIFA World Cup",
-          "placar": "3-2",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.469,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.505,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.766,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.452,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-07-02T00:00:00Z",
-          "casa": "USA",
-          "visitante": "Bosnia-H.",
-          "competicao": "FIFA World Cup",
-          "placar": "2-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.666,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.542,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.872,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.396,
               "resultado": "ACERTO"
             }
           ]
