@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-07-07",
+      "ultima_atualizacao": "2026-07-07T01:12:36-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-07-06",
       "ultima_atualizacao": "2026-07-06T23:43:47-03:00",
       "finalizados": 2,
@@ -516,124 +543,6 @@
               "confianca": "LOW",
               "probabilidade": 0.47,
               "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-07-02",
-      "ultima_atualizacao": "2026-07-02T23:21:17-03:00",
-      "finalizados": 2,
-      "taxa_geral": 1.0,
-      "total_acertos": 8,
-      "total_palpites": 8,
-      "mercados": {
-        "WINNER": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
-        },
-        "OVER_UNDER": {
-          "acertos": 4,
-          "total": 4,
-          "taxa": 1.0
-        },
-        "BTTS": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 2,
-          "brier": 0.2361,
-          "log_loss": 0.5017
-        },
-        "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.1378,
-          "log_loss": 0.4638
-        },
-        "BTTS": {
-          "n": 2,
-          "brier": 0.2227,
-          "log_loss": 0.6362
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-07-02T19:00:00Z",
-          "casa": "Spain",
-          "visitante": "Austria",
-          "competicao": "FIFA World Cup",
-          "placar": "3-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.65,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.612,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.835,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.443,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-07-02T23:00:00Z",
-          "casa": "Portugal",
-          "visitante": "Croatia",
-          "competicao": "FIFA World Cup",
-          "placar": "2-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.564,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.574,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.857,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.632,
-              "resultado": "ACERTO"
             }
           ]
         }
