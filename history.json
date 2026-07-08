@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-07-08",
+      "ultima_atualizacao": "2026-07-08T00:39:23-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-07-07",
       "ultima_atualizacao": "2026-07-07T23:23:20-03:00",
       "finalizados": 2,
@@ -479,161 +506,6 @@
               "confianca": "LOW",
               "probabilidade": 0.439,
               "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-07-03",
-      "ultima_atualizacao": "2026-07-03T23:43:05-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.833,
-      "total_acertos": 10,
-      "total_palpites": 12,
-      "mercados": {
-        "WINNER": {
-          "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
-        },
-        "OVER_UNDER": {
-          "acertos": 6,
-          "total": 6,
-          "taxa": 1.0
-        },
-        "BTTS": {
-          "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 3,
-          "brier": 0.3991,
-          "log_loss": 0.7273
-        },
-        "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.3057,
-          "log_loss": 0.813
-        },
-        "BTTS": {
-          "n": 3,
-          "brier": 0.2706,
-          "log_loss": 0.7369
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-07-03T03:00:00Z",
-          "casa": "Switzerland",
-          "visitante": "Algeria",
-          "competicao": "FIFA World Cup",
-          "placar": "2-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.632,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.525,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.88,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.363,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-07-03T18:00:00Z",
-          "casa": "Australia",
-          "visitante": "Egypt",
-          "competicao": "FIFA World Cup",
-          "placar": "3-5",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.413,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.518,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.775,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.57,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-07-03T22:00:00Z",
-          "casa": "Argentina",
-          "visitante": "Cape Verde",
-          "competicao": "FIFA World Cup",
-          "placar": "3-2",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.591,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.542,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.79,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.47,
-              "resultado": "ERRO"
             }
           ]
         }
