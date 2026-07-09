@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-07-09",
+      "ultima_atualizacao": "2026-07-09T01:12:39-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-07-08",
       "ultima_atualizacao": "2026-07-08T23:46:36-03:00",
       "finalizados": 0,
@@ -338,173 +365,6 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.67,
-              "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-07-04",
-      "ultima_atualizacao": "2026-07-04T23:55:15-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.538,
-      "total_acertos": 7,
-      "total_palpites": 13,
-      "mercados": {
-        "WINNER": {
-          "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
-        },
-        "OVER_UNDER": {
-          "acertos": 3,
-          "total": 6,
-          "taxa": 0.5
-        },
-        "BTTS": {
-          "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
-        },
-        "EMPATE": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 3,
-          "brier": 0.6145,
-          "log_loss": 1.0198
-        },
-        "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.1639,
-          "log_loss": 0.5144
-        },
-        "BTTS": {
-          "n": 3,
-          "brier": 0.3121,
-          "log_loss": 0.8228
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-07-04T01:30:00Z",
-          "casa": "Colombia",
-          "visitante": "Ghana",
-          "competicao": "FIFA World Cup",
-          "placar": "1-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.448,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.653,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.634,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.58,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "EMPATE",
-              "opcao": "X",
-              "confianca": "LOW",
-              "probabilidade": 0.325,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-07-04T17:00:00Z",
-          "casa": "Canada",
-          "visitante": "Morocco",
-          "competicao": "FIFA World Cup",
-          "placar": "0-3",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.541,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.538,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.875,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.667,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-07-04T21:00:00Z",
-          "casa": "Paraguay",
-          "visitante": "France",
-          "competicao": "FIFA World Cup",
-          "placar": "0-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "2",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.457,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.518,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.775,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.439,
               "resultado": "ACERTO"
             }
           ]
