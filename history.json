@@ -1,6 +1,87 @@
 {
   "dias": [
     {
+      "data": "2026-07-12",
+      "ultima_atualizacao": "2026-07-12T01:00:22-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.5,
+      "total_acertos": 2,
+      "total_palpites": 4,
+      "mercados": {
+        "WINNER": {
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
+        },
+        "OVER_UNDER": {
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
+        },
+        "BTTS": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
+        }
+      },
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.2731,
+          "log_loss": 0.5556
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.1286,
+          "log_loss": 0.444
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.1415,
+          "log_loss": 0.472
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-07-12T01:00:00Z",
+          "casa": "Argentina",
+          "visitante": "Switzerland",
+          "competicao": "FIFA World Cup",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.574,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.58,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.986,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.226,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "data": "2026-07-11",
       "ultima_atualizacao": "2026-07-11T23:39:57-03:00",
       "finalizados": 1,
@@ -269,124 +350,6 @@
         }
       },
       "jogos": []
-    },
-    {
-      "data": "2026-07-07",
-      "ultima_atualizacao": "2026-07-07T23:23:20-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.875,
-      "total_acertos": 7,
-      "total_palpites": 8,
-      "mercados": {
-        "WINNER": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
-        },
-        "OVER_UNDER": {
-          "acertos": 3,
-          "total": 4,
-          "taxa": 0.75
-        },
-        "BTTS": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 2,
-          "brier": 0.3749,
-          "log_loss": 0.6924
-        },
-        "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.0955,
-          "log_loss": 0.3673
-        },
-        "BTTS": {
-          "n": 2,
-          "brier": 0.0963,
-          "log_loss": 0.3703
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-07-07T16:00:00Z",
-          "casa": "Argentina",
-          "visitante": "Egypt",
-          "competicao": "FIFA World Cup",
-          "placar": "3-2",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.522,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.533,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.906,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "HIGH",
-              "probabilidade": 0.72,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-07-07T20:00:00Z",
-          "casa": "Switzerland",
-          "visitante": "Colombia",
-          "competicao": "FIFA World Cup",
-          "placar": "4-3",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.48,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.569,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.86,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.662,
-              "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
     }
   ]
 }
