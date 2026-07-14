@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-07-14",
+      "ultima_atualizacao": "2026-07-14T00:28:31-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-07-13",
       "ultima_atualizacao": "2026-07-13T23:16:07-03:00",
       "finalizados": 0,
@@ -265,87 +292,6 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.646,
               "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-07-09",
-      "ultima_atualizacao": "2026-07-09T23:43:35-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.75,
-      "total_acertos": 3,
-      "total_palpites": 4,
-      "mercados": {
-        "WINNER": {
-          "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
-        },
-        "OVER_UNDER": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
-        },
-        "BTTS": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 1,
-          "brier": 0.3832,
-          "log_loss": 0.7037
-        },
-        "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.4429,
-          "log_loss": 1.0952
-        },
-        "BTTS": {
-          "n": 1,
-          "brier": 0.4487,
-          "log_loss": 1.1083
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-07-09T20:00:00Z",
-          "casa": "France",
-          "visitante": "Morocco",
-          "competicao": "FIFA World Cup",
-          "placar": "2-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.495,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.553,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.984,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "HIGH",
-              "probabilidade": 0.802,
-              "resultado": "ERRO"
             }
           ]
         }
