@@ -2,30 +2,84 @@
   "dias": [
     {
       "data": "2026-07-14",
-      "ultima_atualizacao": "2026-07-14T17:43:30-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-07-14T18:10:50-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.75,
+      "total_acertos": 3,
+      "total_palpites": 4,
+      "mercados": {
+        "WINNER": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 2,
+          "total": 2,
+          "taxa": 1.0
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 1.0382,
+          "log_loss": 1.6983
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.2204,
+          "log_loss": 0.6338
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.241,
+          "log_loss": 0.6752
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-07-14T19:00:00Z",
+          "casa": "France",
+          "visitante": "Spain",
+          "competicao": "FIFA World Cup",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.544,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.531,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.858,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ACERTO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-07-13",
