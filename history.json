@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-07-16",
+      "ultima_atualizacao": "2026-07-16T00:32:22-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-07-15",
       "ultima_atualizacao": "2026-07-15T23:18:12-03:00",
       "finalizados": 1,
@@ -265,87 +292,6 @@
               "confianca": "LOW",
               "probabilidade": 0.226,
               "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-07-11",
-      "ultima_atualizacao": "2026-07-11T23:39:57-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.75,
-      "total_acertos": 3,
-      "total_palpites": 4,
-      "mercados": {
-        "WINNER": {
-          "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
-        },
-        "OVER_UNDER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
-        },
-        "BTTS": {
-          "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 1,
-          "brier": 0.3366,
-          "log_loss": 0.6404
-        },
-        "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.0523,
-          "log_loss": 0.2598
-        },
-        "BTTS": {
-          "n": 1,
-          "brier": 0.0637,
-          "log_loss": 0.2909
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-07-11T21:00:00Z",
-          "casa": "Norway",
-          "visitante": "England",
-          "competicao": "FIFA World Cup",
-          "placar": "1-2",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "2",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.527,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.579,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.94,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "HIGH",
-              "probabilidade": 0.768,
-              "resultado": "ACERTO"
             }
           ]
         }
