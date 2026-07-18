@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-07-17",
-      "ultima_atualizacao": "2026-07-17T21:47:32-03:00",
-      "finalizados": 1,
-      "taxa_geral": 1.0,
-      "total_acertos": 4,
-      "total_palpites": 4,
+      "ultima_atualizacao": "2026-07-17T22:22:11-03:00",
+      "finalizados": 3,
+      "taxa_geral": 0.615,
+      "total_acertos": 8,
+      "total_palpites": 13,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
+          "acertos": 2,
+          "total": 3,
+          "taxa": 0.667
         },
         "OVER_UNDER": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
+          "acertos": 4,
+          "total": 6,
+          "taxa": 0.667
         },
         "BTTS": {
-          "acertos": 1,
+          "acertos": 2,
+          "total": 3,
+          "taxa": 0.667
+        },
+        "EMPATE": {
+          "acertos": 0,
           "total": 1,
-          "taxa": 1.0
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 1,
-          "brier": 0.2673,
-          "log_loss": 0.5419
+          "n": 3,
+          "brier": 0.4659,
+          "log_loss": 0.8188
         },
         "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.2403,
-          "log_loss": 0.6737
+          "n": 3,
+          "brier": 0.3592,
+          "log_loss": 0.9214
         },
         "BTTS": {
-          "n": 1,
-          "brier": 0.2404,
-          "log_loss": 0.6739
+          "n": 3,
+          "brier": 0.2739,
+          "log_loss": 0.7447
         }
       },
       "jogos": [
@@ -76,6 +81,87 @@
               "confianca": "LOW",
               "probabilidade": 0.454,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-07-17T23:00:00Z",
+          "casa": "Fluminense",
+          "visitante": "Bragantino",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.445,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.6,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.806,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.601,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-07-17T23:00:00Z",
+          "casa": "Mirassol",
+          "visitante": "Grêmio",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.562,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.691,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.6,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.659,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.305,
+              "resultado": "ERRO"
             }
           ]
         }
