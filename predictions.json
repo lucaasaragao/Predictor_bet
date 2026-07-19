@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T18:58:07-03:00",
+  "generated_at": "2026-07-19T19:22:15-03:00",
   "analysis_date": "2026-07-19",
   "total_jogos": 1,
   "odds_debug_visual": false,
@@ -9,9 +9,9 @@
     {
       "competicao": "FIFA World Cup",
       "data": "2026-07-19T19:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "placar_atual": {
-        "casa": 0,
+        "casa": 1,
         "visitante": 0
       },
       "times": {
@@ -200,7 +200,7 @@
           "ev_bruto": 0.3223,
           "prob_mercado_justa": 0.4178,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -214,7 +214,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -228,7 +228,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -242,15 +242,15 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     }
   ],
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 2,
+    "total": 4,
+    "taxa": 0.5
   },
   "daily_tips_ids": [
     {
