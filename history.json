@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-07-21",
+      "ultima_atualizacao": "2026-07-21T00:45:42-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-07-20",
       "ultima_atualizacao": "2026-07-20T23:29:33-03:00",
       "finalizados": 0,
@@ -351,124 +378,6 @@
               "confianca": "LOW",
               "probabilidade": 0.305,
               "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-07-16",
-      "ultima_atualizacao": "2026-07-16T23:19:13-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.625,
-      "total_acertos": 5,
-      "total_palpites": 8,
-      "mercados": {
-        "WINNER": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
-        },
-        "OVER_UNDER": {
-          "acertos": 1,
-          "total": 4,
-          "taxa": 0.25
-        },
-        "BTTS": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 2,
-          "brier": 0.2314,
-          "log_loss": 0.4911
-        },
-        "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.1564,
-          "log_loss": 0.4865
-        },
-        "BTTS": {
-          "n": 2,
-          "brier": 0.1331,
-          "log_loss": 0.4452
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-07-16T22:30:00Z",
-          "casa": "Vitória",
-          "visitante": "Vasco da Gama",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "1-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.674,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.511,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.782,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.536,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-07-16T22:30:00Z",
-          "casa": "Botafogo",
-          "visitante": "Santos",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "2-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.555,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.581,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.978,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "HIGH",
-              "probabilidade": 0.805,
-              "resultado": "ACERTO"
             }
           ]
         }
