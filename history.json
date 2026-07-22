@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-07-22",
+      "ultima_atualizacao": "2026-07-22T00:33:51-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-07-21",
       "ultima_atualizacao": "2026-07-21T23:16:57-03:00",
       "finalizados": 1,
@@ -265,173 +292,6 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.656,
               "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-07-17",
-      "ultima_atualizacao": "2026-07-17T23:12:37-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.615,
-      "total_acertos": 8,
-      "total_palpites": 13,
-      "mercados": {
-        "WINNER": {
-          "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
-        },
-        "OVER_UNDER": {
-          "acertos": 4,
-          "total": 6,
-          "taxa": 0.667
-        },
-        "BTTS": {
-          "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
-        },
-        "EMPATE": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 3,
-          "brier": 0.4659,
-          "log_loss": 0.8188
-        },
-        "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.3592,
-          "log_loss": 0.9214
-        },
-        "BTTS": {
-          "n": 3,
-          "brier": 0.2739,
-          "log_loss": 0.7447
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-07-17T22:30:00Z",
-          "casa": "Bahia",
-          "visitante": "Chapecoense",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "2-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.582,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.51,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.802,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.454,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-07-17T23:00:00Z",
-          "casa": "Fluminense",
-          "visitante": "Bragantino",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "1-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.445,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.6,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.806,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.601,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-07-17T23:00:00Z",
-          "casa": "Mirassol",
-          "visitante": "Grêmio",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "2-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.562,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.691,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "LOW",
-              "probabilidade": 0.6,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.659,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "EMPATE",
-              "opcao": "X",
-              "confianca": "LOW",
-              "probabilidade": 0.305,
-              "resultado": "ERRO"
             }
           ]
         }
