@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T22:39:05-03:00",
+  "generated_at": "2026-07-22T23:37:45-03:00",
   "analysis_date": "2026-07-22",
   "total_jogos": 6,
   "odds_debug_visual": false,
@@ -247,10 +247,10 @@
     {
       "competicao": "Campeonato Brasileiro Série A",
       "data": "2026-07-23T00:30:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "placar_atual": {
-        "casa": 0,
-        "visitante": 1
+        "casa": 1,
+        "visitante": 2
       },
       "times": {
         "casa": "Internacional",
@@ -434,7 +434,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -448,7 +448,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -462,7 +462,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -476,7 +476,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "EMPATE",
@@ -490,17 +490,17 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
     {
       "competicao": "Campeonato Brasileiro Série A",
       "data": "2026-07-23T00:30:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
-        "visitante": 0
+        "visitante": 2
       },
       "times": {
         "casa": "São Paulo",
@@ -686,7 +686,7 @@
           "ev_bruto": 0.1992,
           "prob_mercado_justa": 0.4746,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -700,7 +700,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -714,7 +714,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -728,17 +728,17 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
     {
       "competicao": "Campeonato Brasileiro Série A",
       "data": "2026-07-23T00:30:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 0,
-        "visitante": 2
+        "visitante": 4
       },
       "times": {
         "casa": "Chapecoense",
@@ -924,7 +924,7 @@
           "ev_bruto": -0.0091,
           "prob_mercado_justa": 0.6649,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -938,7 +938,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -952,7 +952,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -966,7 +966,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -1448,9 +1448,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 2,
-    "total": 4,
-    "taxa": 0.5
+    "acertos": 9,
+    "total": 17,
+    "taxa": 0.529
   },
   "daily_tips_ids": [],
   "daily_tips_date": "2026-07-22",

@@ -2,23 +2,28 @@
   "dias": [
     {
       "data": "2026-07-22",
-      "ultima_atualizacao": "2026-07-22T22:39:05-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.5,
-      "total_acertos": 2,
-      "total_palpites": 4,
+      "ultima_atualizacao": "2026-07-22T23:37:45-03:00",
+      "finalizados": 4,
+      "taxa_geral": 0.529,
+      "total_acertos": 9,
+      "total_palpites": 17,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
-        },
-        "OVER_UNDER": {
-          "acertos": 1,
-          "total": 2,
+          "acertos": 2,
+          "total": 4,
           "taxa": 0.5
         },
+        "OVER_UNDER": {
+          "acertos": 6,
+          "total": 8,
+          "taxa": 0.75
+        },
         "BTTS": {
+          "acertos": 1,
+          "total": 4,
+          "taxa": 0.25
+        },
+        "EMPATE": {
           "acertos": 0,
           "total": 1,
           "taxa": 0.0
@@ -26,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 1,
-          "brier": 0.474,
-          "log_loss": 0.8256
+          "n": 4,
+          "brier": 0.6226,
+          "log_loss": 1.0635
         },
         "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.2709,
-          "log_loss": 0.735
+          "n": 4,
+          "brier": 0.2747,
+          "log_loss": 0.7446
         },
         "BTTS": {
-          "n": 1,
-          "brier": 0.2164,
-          "log_loss": 0.6258
+          "n": 4,
+          "brier": 0.2634,
+          "log_loss": 0.7201
         }
       },
       "jogos": [
@@ -76,6 +81,124 @@
               "confianca": "LOW",
               "probabilidade": 0.391,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-07-23T00:30:00Z",
+          "casa": "Internacional",
+          "visitante": "Cruzeiro",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.374,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.642,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.742,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.445,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.331,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-07-23T00:30:00Z",
+          "casa": "São Paulo",
+          "visitante": "Paranaense",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.577,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.501,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.754,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.506,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-07-23T00:30:00Z",
+          "casa": "Chapecoense",
+          "visitante": "Flamengo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "0-4",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "HIGH",
+              "probabilidade": 0.661,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.591,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.857,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.43,
+              "resultado": "ACERTO"
             }
           ]
         }
