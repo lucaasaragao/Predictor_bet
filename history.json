@@ -2,30 +2,121 @@
   "dias": [
     {
       "data": "2026-07-26",
-      "ultima_atualizacao": "2026-07-26T17:58:29-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-07-26T18:23:26-03:00",
+      "finalizados": 2,
+      "taxa_geral": 0.5,
+      "total_acertos": 4,
+      "total_palpites": 8,
+      "mercados": {
+        "WINNER": {
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 2,
+          "total": 4,
+          "taxa": 0.5
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 2,
+          "brier": 0.6413,
+          "log_loss": 1.0692
+        },
+        "OVER_UNDER": {
+          "n": 2,
+          "brier": 0.2483,
+          "log_loss": 0.6898
+        },
+        "BTTS": {
+          "n": 2,
+          "brier": 0.252,
+          "log_loss": 0.6971
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-07-26T19:00:00Z",
+          "casa": "Bahia",
+          "visitante": "Corinthians",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.474,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.532,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.87,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.335,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-07-26T19:00:00Z",
+          "casa": "Cruzeiro",
+          "visitante": "Botafogo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.477,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.527,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.868,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.338,
+              "resultado": "ACERTO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-07-25",
