@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-07-25",
-      "ultima_atualizacao": "2026-07-25T21:56:26-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.625,
-      "total_acertos": 5,
-      "total_palpites": 8,
+      "ultima_atualizacao": "2026-07-25T22:38:56-03:00",
+      "finalizados": 3,
+      "taxa_geral": 0.583,
+      "total_acertos": 7,
+      "total_palpites": 12,
       "mercados": {
         "WINNER": {
           "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "total": 3,
+          "taxa": 0.333
         },
         "OVER_UNDER": {
-          "acertos": 3,
-          "total": 4,
-          "taxa": 0.75
+          "acertos": 5,
+          "total": 6,
+          "taxa": 0.833
         },
         "BTTS": {
           "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "total": 3,
+          "taxa": 0.333
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.6167,
-          "log_loss": 0.9579
+          "n": 3,
+          "brier": 0.6397,
+          "log_loss": 1.0144
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.2353,
-          "log_loss": 0.6628
+          "n": 3,
+          "brier": 0.2062,
+          "log_loss": 0.6037
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.251,
-          "log_loss": 0.695
+          "n": 3,
+          "brier": 0.2615,
+          "log_loss": 0.716
         }
       },
       "jogos": [
@@ -113,6 +113,43 @@
               "confianca": "LOW",
               "probabilidade": 0.532,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-07-25T23:30:00Z",
+          "casa": "Vasco da Gama",
+          "visitante": "Mirassol",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.342,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.615,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.673,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.527,
+              "resultado": "ERRO"
             }
           ]
         }
