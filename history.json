@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-07-26",
-      "ultima_atualizacao": "2026-07-26T21:16:49-03:00",
-      "finalizados": 5,
-      "taxa_geral": 0.45,
-      "total_acertos": 9,
-      "total_palpites": 20,
+      "ultima_atualizacao": "2026-07-26T22:00:38-03:00",
+      "finalizados": 7,
+      "taxa_geral": 0.483,
+      "total_acertos": 14,
+      "total_palpites": 29,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 5,
-          "taxa": 0.2
+          "acertos": 2,
+          "total": 7,
+          "taxa": 0.286
         },
         "OVER_UNDER": {
-          "acertos": 6,
-          "total": 10,
-          "taxa": 0.6
+          "acertos": 9,
+          "total": 14,
+          "taxa": 0.643
         },
         "BTTS": {
-          "acertos": 2,
-          "total": 5,
-          "taxa": 0.4
+          "acertos": 3,
+          "total": 7,
+          "taxa": 0.429
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 5,
-          "brier": 0.8419,
-          "log_loss": 1.2922
+          "n": 7,
+          "brier": 0.7937,
+          "log_loss": 1.2454
         },
         "OVER_UNDER": {
-          "n": 5,
-          "brier": 0.2774,
-          "log_loss": 0.7504
+          "n": 7,
+          "brier": 0.2752,
+          "log_loss": 0.7457
         },
         "BTTS": {
-          "n": 5,
-          "brier": 0.2882,
-          "log_loss": 0.7703
+          "n": 7,
+          "brier": 0.2792,
+          "log_loss": 0.752
         }
       },
       "jogos": [
@@ -224,6 +229,87 @@
               "confianca": "LOW",
               "probabilidade": 0.606,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-07-26T22:30:00Z",
+          "casa": "Palmeiras",
+          "visitante": "Mineiro",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.456,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.628,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.693,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.52,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.316,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-07-26T22:30:00Z",
+          "casa": "Clube do Remo",
+          "visitante": "Vitória",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.459,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.619,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.68,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.536,
+              "resultado": "ACERTO"
             }
           ]
         }
