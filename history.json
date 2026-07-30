@@ -1,6 +1,99 @@
 {
   "dias": [
     {
+      "data": "2026-07-30",
+      "ultima_atualizacao": "2026-07-30T00:31:21-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.4,
+      "total_acertos": 2,
+      "total_palpites": 5,
+      "mercados": {
+        "WINNER": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
+        },
+        "OVER_UNDER": {
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
+        },
+        "BTTS": {
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
+        }
+      },
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.6734,
+          "log_loss": 1.1087
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.4092,
+          "log_loss": 1.0207
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.2011,
+          "log_loss": 0.595
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-07-30T00:30:00Z",
+          "casa": "Vitória",
+          "visitante": "Palmeiras",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "0-4",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.339,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.64,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.679,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.515,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.331,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "data": "2026-07-29",
       "ultima_atualizacao": "2026-07-29T23:20:08-03:00",
       "finalizados": 2,
@@ -494,161 +587,6 @@
               "confianca": "LOW",
               "probabilidade": 0.536,
               "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-07-25",
-      "ultima_atualizacao": "2026-07-25T23:37:39-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.583,
-      "total_acertos": 7,
-      "total_palpites": 12,
-      "mercados": {
-        "WINNER": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
-        },
-        "OVER_UNDER": {
-          "acertos": 5,
-          "total": 6,
-          "taxa": 0.833
-        },
-        "BTTS": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 3,
-          "brier": 0.6397,
-          "log_loss": 1.0144
-        },
-        "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.2062,
-          "log_loss": 0.6037
-        },
-        "BTTS": {
-          "n": 3,
-          "brier": 0.2615,
-          "log_loss": 0.716
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-07-25T21:30:00Z",
-          "casa": "Santos",
-          "visitante": "Chapecoense",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "2-2",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.624,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.56,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.756,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.532,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-07-25T21:30:00Z",
-          "casa": "Paranaense",
-          "visitante": "Internacional",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "2-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.582,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.603,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.731,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.532,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-07-25T23:30:00Z",
-          "casa": "Vasco da Gama",
-          "visitante": "Mirassol",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "1-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.342,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.615,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.673,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.527,
-              "resultado": "ERRO"
             }
           ]
         }
