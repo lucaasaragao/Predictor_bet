@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-08-08",
-      "ultima_atualizacao": "2026-08-08T17:49:10-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.5,
-      "total_acertos": 6,
-      "total_palpites": 12,
+      "ultima_atualizacao": "2026-08-08T18:15:19-03:00",
+      "finalizados": 5,
+      "taxa_geral": 0.55,
+      "total_acertos": 11,
+      "total_palpites": 20,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "acertos": 3,
+          "total": 5,
+          "taxa": 0.6
         },
         "OVER_UNDER": {
-          "acertos": 3,
-          "total": 6,
-          "taxa": 0.5
+          "acertos": 6,
+          "total": 10,
+          "taxa": 0.6
         },
         "BTTS": {
           "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
+          "total": 5,
+          "taxa": 0.4
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 3,
-          "brier": 0.6865,
-          "log_loss": 1.1331
+          "n": 5,
+          "brier": 0.5946,
+          "log_loss": 0.9999
         },
         "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.1612,
-          "log_loss": 0.5117
+          "n": 5,
+          "brier": 0.2304,
+          "log_loss": 0.6534
         },
         "BTTS": {
-          "n": 3,
-          "brier": 0.1713,
-          "log_loss": 0.5298
+          "n": 5,
+          "brier": 0.2357,
+          "log_loss": 0.6639
         }
       },
       "jogos": [
@@ -150,6 +150,80 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.661,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-08T19:00:00Z",
+          "casa": "AZ",
+          "visitante": "Den Haag",
+          "competicao": "Eredivisie",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.404,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.586,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.852,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.661,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-08T19:00:00Z",
+          "casa": "Grêmio",
+          "visitante": "São Paulo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.499,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.514,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.736,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.494,
+              "resultado": "ERRO"
             }
           ]
         }
