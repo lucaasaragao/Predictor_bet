@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T14:59:28-03:00",
+  "generated_at": "2026-08-08T15:50:17-03:00",
   "analysis_date": "2026-08-08",
   "total_jogos": 25,
   "odds_debug_visual": false,
@@ -317,10 +317,10 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-08-08T16:45:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 4,
+        "visitante": 1
       },
       "times": {
         "casa": "Go Ahead",
@@ -422,7 +422,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -436,7 +436,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -450,7 +450,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -464,17 +464,17 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
     {
       "competicao": "Primeira Liga",
       "data": "2026-08-08T17:00:00Z",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "placar_atual": {
         "casa": 0,
-        "visitante": 0
+        "visitante": 1
       },
       "times": {
         "casa": "Vitória SC",
@@ -625,7 +625,7 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-08-08T18:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "placar_atual": {
         "casa": null,
         "visitante": null
@@ -4373,9 +4373,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 3,
+    "total": 4,
+    "taxa": 0.75
   },
   "daily_tips_ids": [
     {
