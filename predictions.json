@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T15:50:17-03:00",
+  "generated_at": "2026-08-08T16:18:45-03:00",
   "analysis_date": "2026-08-08",
   "total_jogos": 25,
   "odds_debug_visual": false,
@@ -471,7 +471,7 @@
     {
       "competicao": "Primeira Liga",
       "data": "2026-08-08T17:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 0,
         "visitante": 1
@@ -576,7 +576,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -590,7 +590,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -604,7 +604,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -618,17 +618,17 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
     {
       "competicao": "Eredivisie",
       "data": "2026-08-08T18:00:00Z",
-      "status": "LIVE",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 1
       },
       "times": {
         "casa": "PSV",
@@ -779,10 +779,10 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-08-08T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "AZ",
@@ -933,7 +933,7 @@
     {
       "competicao": "Campeonato Brasileiro Série A",
       "data": "2026-08-08T19:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "placar_atual": {
         "casa": null,
         "visitante": null
@@ -4373,9 +4373,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 3,
-    "total": 4,
-    "taxa": 0.75
+    "acertos": 4,
+    "total": 8,
+    "taxa": 0.5
   },
   "daily_tips_ids": [
     {
