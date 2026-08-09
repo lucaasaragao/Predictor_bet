@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-09",
-      "ultima_atualizacao": "2026-08-09T15:55:52-03:00",
-      "finalizados": 6,
-      "taxa_geral": 0.52,
-      "total_acertos": 13,
-      "total_palpites": 25,
+      "ultima_atualizacao": "2026-08-09T16:32:58-03:00",
+      "finalizados": 7,
+      "taxa_geral": 0.552,
+      "total_acertos": 16,
+      "total_palpites": 29,
       "mercados": {
         "WINNER": {
-          "acertos": 3,
-          "total": 6,
-          "taxa": 0.5
+          "acertos": 4,
+          "total": 7,
+          "taxa": 0.571
         },
         "OVER_UNDER": {
-          "acertos": 9,
-          "total": 12,
-          "taxa": 0.75
+          "acertos": 11,
+          "total": 14,
+          "taxa": 0.786
         },
         "BTTS": {
           "acertos": 1,
-          "total": 6,
-          "taxa": 0.167
+          "total": 7,
+          "taxa": 0.143
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 6,
-          "brier": 0.6271,
-          "log_loss": 1.0308
+          "n": 7,
+          "brier": 0.6203,
+          "log_loss": 1.0223
         },
         "OVER_UNDER": {
-          "n": 6,
-          "brier": 0.3129,
-          "log_loss": 0.8224
+          "n": 7,
+          "brier": 0.2993,
+          "log_loss": 0.7947
         },
         "BTTS": {
-          "n": 6,
-          "brier": 0.3187,
-          "log_loss": 0.8363
+          "n": 7,
+          "brier": 0.3137,
+          "log_loss": 0.8256
         }
       },
       "jogos": [
@@ -272,6 +272,43 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.661,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-09T17:00:00Z",
+          "casa": "Porto",
+          "visitante": "Alverca",
+          "competicao": "Primeira Liga",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.379,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.738,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
               "resultado": "ERRO"
             }
           ]
