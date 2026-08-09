@@ -1,6 +1,87 @@
 {
   "dias": [
     {
+      "data": "2026-08-09",
+      "ultima_atualizacao": "2026-08-09T01:07:41-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.5,
+      "total_acertos": 2,
+      "total_palpites": 4,
+      "mercados": {
+        "WINNER": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
+        },
+        "OVER_UNDER": {
+          "acertos": 2,
+          "total": 2,
+          "taxa": 1.0
+        },
+        "BTTS": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
+        }
+      },
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.7667,
+          "log_loss": 1.2207
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.2067,
+          "log_loss": 0.6064
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.2397,
+          "log_loss": 0.6725
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-08-09T00:00:00Z",
+          "casa": "Botafogo",
+          "visitante": "Fluminense",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.455,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.545,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.801,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.406,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "data": "2026-08-08",
       "ultima_atualizacao": "2026-08-08T23:38:33-03:00",
       "finalizados": 7,
@@ -729,33 +810,6 @@
           ]
         }
       ]
-    },
-    {
-      "data": "2026-07-28",
-      "ultima_atualizacao": "2026-07-28T23:18:57-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
-        },
-        "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
-        },
-        "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
-        }
-      },
-      "jogos": []
     }
   ]
 }
