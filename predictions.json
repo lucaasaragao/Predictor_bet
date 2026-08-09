@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T09:18:44-03:00",
+  "generated_at": "2026-08-09T10:25:27-03:00",
   "analysis_date": "2026-08-09",
   "total_jogos": 16,
   "odds_debug_visual": false,
@@ -247,7 +247,7 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-08-09T10:15:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 0,
         "visitante": 1
@@ -352,7 +352,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -366,7 +366,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -380,7 +380,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -394,14 +394,14 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
     {
       "competicao": "Eredivisie",
       "data": "2026-08-09T12:30:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "placar_atual": {
         "casa": null,
         "visitante": null
@@ -555,10 +555,10 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-08-09T12:30:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 1,
+        "visitante": 0
       },
       "times": {
         "casa": "Groningen",
@@ -2834,9 +2834,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 2,
-    "total": 4,
-    "taxa": 0.5
+    "acertos": 3,
+    "total": 8,
+    "taxa": 0.375
   },
   "daily_tips_ids": [
     {
@@ -2866,7 +2866,25 @@
   ],
   "daily_tips_date": "2026-08-09",
   "recovery_tip": {
-    "ativo": false
+    "ativo": true,
+    "disparado_em": "2026-08-09T10:25:26-03:00",
+    "jogo": {
+      "casa": "Heerenveen",
+      "visitante": "Twente",
+      "data": "2026-08-09T14:45:00Z",
+      "competicao": "Eredivisie",
+      "times": {
+        "casa": "Heerenveen",
+        "visitante": "Twente"
+      }
+    },
+    "palpite": {
+      "tipo": "OVER_UNDER",
+      "opcao": "OVER_1.5",
+      "probabilidade": 0.8515,
+      "confianca": "HIGH",
+      "resultado_verificador": null
+    }
   },
   "recovery_tip_date": "2026-08-09"
 }
