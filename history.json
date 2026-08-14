@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-08-14",
-      "ultima_atualizacao": "2026-08-14T17:55:56-03:00",
-      "finalizados": 2,
+      "ultima_atualizacao": "2026-08-14T18:24:53-03:00",
+      "finalizados": 4,
       "taxa_geral": 0.556,
-      "total_acertos": 5,
-      "total_palpites": 9,
+      "total_acertos": 10,
+      "total_palpites": 18,
       "mercados": {
         "WINNER": {
-          "acertos": 0,
-          "total": 2,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 4,
+          "taxa": 0.25
         },
         "OVER_UNDER": {
-          "acertos": 2,
-          "total": 4,
-          "taxa": 0.5
+          "acertos": 5,
+          "total": 8,
+          "taxa": 0.625
         },
         "BTTS": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
+          "acertos": 3,
+          "total": 4,
+          "taxa": 0.75
         },
         "EMPATE": {
           "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
+          "total": 2,
+          "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.7751,
-          "log_loss": 1.2359
+          "n": 4,
+          "brier": 0.7033,
+          "log_loss": 1.1441
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.1089,
-          "log_loss": 0.3993
+          "n": 4,
+          "brier": 0.201,
+          "log_loss": 0.5897
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.1365,
-          "log_loss": 0.461
+          "n": 4,
+          "brier": 0.182,
+          "log_loss": 0.5544
         }
       },
       "jogos": [
@@ -125,6 +125,87 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.645,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-14T19:00:00Z",
+          "casa": "Wolverhampton",
+          "visitante": "Blackburn",
+          "competicao": "Championship",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.384,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.501,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.763,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.559,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-14T19:15:00Z",
+          "casa": "Sporting CP",
+          "visitante": "Vitória SC",
+          "competicao": "Primeira Liga",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.419,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.58,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.699,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.51,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.309,
+              "resultado": "ERRO"
             }
           ]
         }
