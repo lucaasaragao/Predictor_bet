@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T16:54:25-03:00",
+  "generated_at": "2026-08-14T17:26:15-03:00",
   "analysis_date": "2026-08-14",
   "total_jogos": 24,
   "odds_debug_visual": false,
@@ -262,10 +262,10 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-08-14T18:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "placar_atual": {
-        "casa": 0,
-        "visitante": 1
+        "casa": 1,
+        "visitante": 3
       },
       "times": {
         "casa": "Telstar",
@@ -387,7 +387,7 @@
           "ev_bruto": 0.1882,
           "prob_mercado_justa": 0.4268,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -401,7 +401,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -415,7 +415,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -429,14 +429,14 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
     {
       "competicao": "Championship",
       "data": "2026-08-14T19:00:00Z",
-      "status": "PAUSED",
+      "status": "LIVE",
       "placar_atual": {
         "casa": 1,
         "visitante": 1
@@ -590,10 +590,10 @@
     {
       "competicao": "Primeira Liga",
       "data": "2026-08-14T19:15:00Z",
-      "status": "LIVE",
+      "status": "PAUSED",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 3,
+        "visitante": 0
       },
       "times": {
         "casa": "Sporting CP",
@@ -4285,9 +4285,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 3,
-    "total": 5,
-    "taxa": 0.6
+    "acertos": 5,
+    "total": 9,
+    "taxa": 0.556
   },
   "daily_tips_ids": [
     {
