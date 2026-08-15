@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T15:59:03-03:00",
+  "generated_at": "2026-08-15T16:26:47-03:00",
   "analysis_date": "2026-08-15",
   "total_jogos": 29,
   "odds_debug_visual": false,
@@ -1764,7 +1764,7 @@
     {
       "competicao": "Primeira Liga",
       "data": "2026-08-15T17:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 0,
         "visitante": 1
@@ -1889,7 +1889,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -1903,7 +1903,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -1917,7 +1917,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -1931,7 +1931,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "EMPATE",
@@ -1945,7 +1945,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -1954,7 +1954,7 @@
       "data": "2026-08-15T17:30:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 0,
+        "casa": 1,
         "visitante": 0
       },
       "times": {
@@ -2106,10 +2106,10 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-08-15T18:00:00Z",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 0,
-        "visitante": 1
+        "casa": 1,
+        "visitante": 2
       },
       "times": {
         "casa": "Excelsior",
@@ -2280,10 +2280,10 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-08-15T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 2,
+        "visitante": 0
       },
       "times": {
         "casa": "Sittard",
@@ -4757,9 +4757,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 31,
-    "total": 45,
-    "taxa": 0.689
+    "acertos": 33,
+    "total": 50,
+    "taxa": 0.66
   },
   "daily_tips_ids": [
     {
