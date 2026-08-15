@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-15",
-      "ultima_atualizacao": "2026-08-15T18:36:34-03:00",
-      "finalizados": 16,
-      "taxa_geral": 0.697,
-      "total_acertos": 46,
-      "total_palpites": 66,
+      "ultima_atualizacao": "2026-08-15T18:54:30-03:00",
+      "finalizados": 17,
+      "taxa_geral": 0.714,
+      "total_acertos": 50,
+      "total_palpites": 70,
       "mercados": {
         "WINNER": {
-          "acertos": 8,
-          "total": 16,
-          "taxa": 0.5
+          "acertos": 9,
+          "total": 17,
+          "taxa": 0.529
         },
         "OVER_UNDER": {
-          "acertos": 25,
-          "total": 32,
-          "taxa": 0.781
+          "acertos": 27,
+          "total": 34,
+          "taxa": 0.794
         },
         "BTTS": {
-          "acertos": 12,
-          "total": 16,
-          "taxa": 0.75
+          "acertos": 13,
+          "total": 17,
+          "taxa": 0.765
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 16,
-          "brier": 0.6303,
-          "log_loss": 1.0434
+          "n": 17,
+          "brier": 0.6266,
+          "log_loss": 1.0381
         },
         "OVER_UNDER": {
-          "n": 16,
-          "brier": 0.221,
-          "log_loss": 0.6337
+          "n": 17,
+          "brier": 0.2222,
+          "log_loss": 0.6362
         },
         "BTTS": {
-          "n": 16,
-          "brier": 0.2114,
-          "log_loss": 0.6138
+          "n": 17,
+          "brier": 0.2101,
+          "log_loss": 0.6113
         }
       },
       "jogos": [
@@ -649,6 +649,43 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.475,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-15T19:30:00Z",
+          "casa": "Sevilla FC",
+          "visitante": "Rayo Vallecano",
+          "competicao": "Primera Division",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
               "resultado": "ACERTO"
             }
           ]
