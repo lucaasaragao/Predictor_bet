@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-08-15",
+      "ultima_atualizacao": "2026-08-15T00:34:54-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-08-14",
       "ultima_atualizacao": "2026-08-14T23:50:35-03:00",
       "finalizados": 4,
@@ -423,87 +450,6 @@
         }
       },
       "jogos": []
-    },
-    {
-      "data": "2026-08-10",
-      "ultima_atualizacao": "2026-08-10T23:50:24-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.5,
-      "total_acertos": 2,
-      "total_palpites": 4,
-      "mercados": {
-        "WINNER": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
-        },
-        "OVER_UNDER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
-        },
-        "BTTS": {
-          "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 1,
-          "brier": 0.7368,
-          "log_loss": 1.2043
-        },
-        "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.2845,
-          "log_loss": 0.7623
-        },
-        "BTTS": {
-          "n": 1,
-          "brier": 0.2182,
-          "log_loss": 0.6295
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-08-10T19:15:00Z",
-          "casa": "Santa Clara",
-          "visitante": "CD Nacional",
-          "competicao": "Primeira Liga",
-          "placar": "2-2",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.379,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.533,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.738,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.533,
-              "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
     }
   ]
 }
