@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T16:45:48-03:00",
+  "generated_at": "2026-08-15T16:59:20-03:00",
   "analysis_date": "2026-08-15",
   "total_jogos": 29,
   "odds_debug_visual": false,
@@ -2106,7 +2106,7 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-08-15T18:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
         "visitante": 2
@@ -2231,7 +2231,7 @@
           "ev_bruto": 1.7793,
           "prob_mercado_justa": 0.1663,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -2245,7 +2245,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -2259,7 +2259,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -2273,14 +2273,14 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
     {
       "competicao": "Eredivisie",
       "data": "2026-08-15T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "placar_atual": {
         "casa": 2,
         "visitante": 1
@@ -4757,9 +4757,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 36,
-    "total": 54,
-    "taxa": 0.667
+    "acertos": 39,
+    "total": 58,
+    "taxa": 0.672
   },
   "daily_tips_ids": [
     {
