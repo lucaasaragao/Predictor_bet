@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-08-16",
-      "ultima_atualizacao": "2026-08-16T20:15:03-03:00",
-      "finalizados": 14,
-      "taxa_geral": 0.732,
-      "total_acertos": 41,
-      "total_palpites": 56,
+      "ultima_atualizacao": "2026-08-16T20:36:23-03:00",
+      "finalizados": 16,
+      "taxa_geral": 0.708,
+      "total_acertos": 46,
+      "total_palpites": 65,
       "mercados": {
         "WINNER": {
-          "acertos": 7,
-          "total": 14,
-          "taxa": 0.5
+          "acertos": 9,
+          "total": 16,
+          "taxa": 0.562
         },
         "OVER_UNDER": {
-          "acertos": 24,
-          "total": 28,
-          "taxa": 0.857
+          "acertos": 26,
+          "total": 32,
+          "taxa": 0.812
         },
         "BTTS": {
-          "acertos": 10,
-          "total": 14,
-          "taxa": 0.714
+          "acertos": 11,
+          "total": 16,
+          "taxa": 0.688
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 14,
-          "brier": 0.6594,
-          "log_loss": 1.093
+          "n": 16,
+          "brier": 0.6483,
+          "log_loss": 1.0763
         },
         "OVER_UNDER": {
-          "n": 14,
-          "brier": 0.2128,
-          "log_loss": 0.6149
+          "n": 16,
+          "brier": 0.2231,
+          "log_loss": 0.6362
         },
         "BTTS": {
-          "n": 14,
-          "brier": 0.2054,
-          "log_loss": 0.5997
+          "n": 16,
+          "brier": 0.2148,
+          "log_loss": 0.619
         }
       },
       "jogos": [
@@ -556,6 +561,87 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.533,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-16T21:30:00Z",
+          "casa": "Mirassol",
+          "visitante": "Flamengo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-5",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.615,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.758,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.432,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.323,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-16T21:30:00Z",
+          "casa": "Vitória",
+          "visitante": "Botafogo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.395,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.54,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.706,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.504,
               "resultado": "ACERTO"
             }
           ]
