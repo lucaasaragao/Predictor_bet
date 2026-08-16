@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-08-16",
-      "ultima_atualizacao": "2026-08-16T18:10:45-03:00",
-      "finalizados": 12,
-      "taxa_geral": 0.75,
-      "total_acertos": 36,
-      "total_palpites": 48,
+      "ultima_atualizacao": "2026-08-16T18:33:44-03:00",
+      "finalizados": 14,
+      "taxa_geral": 0.732,
+      "total_acertos": 41,
+      "total_palpites": 56,
       "mercados": {
         "WINNER": {
-          "acertos": 6,
-          "total": 12,
+          "acertos": 7,
+          "total": 14,
           "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 22,
-          "total": 24,
-          "taxa": 0.917
+          "acertos": 24,
+          "total": 28,
+          "taxa": 0.857
         },
         "BTTS": {
-          "acertos": 8,
-          "total": 12,
-          "taxa": 0.667
+          "acertos": 10,
+          "total": 14,
+          "taxa": 0.714
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 12,
-          "brier": 0.671,
-          "log_loss": 1.1105
+          "n": 14,
+          "brier": 0.6594,
+          "log_loss": 1.093
         },
         "OVER_UNDER": {
-          "n": 12,
-          "brier": 0.1993,
-          "log_loss": 0.5873
+          "n": 14,
+          "brier": 0.2128,
+          "log_loss": 0.6149
         },
         "BTTS": {
-          "n": 12,
-          "brier": 0.1996,
-          "log_loss": 0.5874
+          "n": 14,
+          "brier": 0.2054,
+          "log_loss": 0.5997
         }
       },
       "jogos": [
@@ -482,6 +482,80 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.517,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-16T19:00:00Z",
+          "casa": "Mineiro",
+          "visitante": "Grêmio",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.431,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.55,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.716,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.497,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-16T19:30:00Z",
+          "casa": "Famalicão",
+          "visitante": "Marítimo",
+          "competicao": "Primeira Liga",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.379,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.738,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
               "resultado": "ACERTO"
             }
           ]
