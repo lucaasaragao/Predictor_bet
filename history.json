@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-08-16",
-      "ultima_atualizacao": "2026-08-16T16:01:32-03:00",
-      "finalizados": 10,
-      "taxa_geral": 0.775,
-      "total_acertos": 31,
-      "total_palpites": 40,
+      "ultima_atualizacao": "2026-08-16T16:28:10-03:00",
+      "finalizados": 11,
+      "taxa_geral": 0.773,
+      "total_acertos": 34,
+      "total_palpites": 44,
       "mercados": {
         "WINNER": {
-          "acertos": 5,
-          "total": 10,
-          "taxa": 0.5
+          "acertos": 6,
+          "total": 11,
+          "taxa": 0.545
         },
         "OVER_UNDER": {
-          "acertos": 19,
-          "total": 20,
-          "taxa": 0.95
+          "acertos": 21,
+          "total": 22,
+          "taxa": 0.955
         },
         "BTTS": {
           "acertos": 7,
-          "total": 10,
-          "taxa": 0.7
+          "total": 11,
+          "taxa": 0.636
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 10,
-          "brier": 0.6814,
-          "log_loss": 1.1273
+          "n": 11,
+          "brier": 0.6711,
+          "log_loss": 1.1115
         },
         "OVER_UNDER": {
-          "n": 10,
-          "brier": 0.1873,
-          "log_loss": 0.5625
+          "n": 11,
+          "brier": 0.1922,
+          "log_loss": 0.5728
         },
         "BTTS": {
-          "n": 10,
-          "brier": 0.1785,
-          "log_loss": 0.5441
+          "n": 11,
+          "brier": 0.1913,
+          "log_loss": 0.5704
         }
       },
       "jogos": [
@@ -401,6 +401,43 @@
               "opcao": "OVER_1.5",
               "confianca": "HIGH",
               "probabilidade": 0.774,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-16T17:00:00Z",
+          "casa": "Espanyol",
+          "visitante": "Levante",
+          "competicao": "Primera Division",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
               "resultado": "ACERTO"
             },
             {
