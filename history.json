@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-08-18",
+      "ultima_atualizacao": "2026-08-18T00:06:47-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-08-17",
       "ultima_atualizacao": "2026-08-17T23:04:37-03:00",
       "finalizados": 4,
@@ -1808,99 +1835,6 @@
               "confianca": "LOW",
               "probabilidade": 0.309,
               "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-08-13",
-      "ultima_atualizacao": "2026-08-13T21:41:14-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.6,
-      "total_acertos": 3,
-      "total_palpites": 5,
-      "mercados": {
-        "WINNER": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
-        },
-        "OVER_UNDER": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
-        },
-        "BTTS": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
-        },
-        "EMPATE": {
-          "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 1,
-          "brier": 0.7215,
-          "log_loss": 1.1756
-        },
-        "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.1853,
-          "log_loss": 0.5629
-        },
-        "BTTS": {
-          "n": 1,
-          "brier": 0.2476,
-          "log_loss": 0.6883
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-08-13T00:30:00Z",
-          "casa": "Cruzeiro",
-          "visitante": "Flamengo",
-          "competicao": "Copa Libertadores",
-          "placar": "1-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.393,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.57,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.816,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.375,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "EMPATE",
-              "opcao": "X",
-              "confianca": "LOW",
-              "probabilidade": 0.309,
-              "resultado": "ACERTO"
             }
           ]
         }
