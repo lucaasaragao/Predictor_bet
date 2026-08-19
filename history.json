@@ -2,30 +2,84 @@
   "dias": [
     {
       "data": "2026-08-19",
-      "ultima_atualizacao": "2026-08-19T03:03:35-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-08-19T04:01:05-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.75,
+      "total_acertos": 3,
+      "total_palpites": 4,
+      "mercados": {
+        "WINNER": {
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.5467,
+          "log_loss": 0.9208
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.4687,
+          "log_loss": 1.1541
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.1628,
+          "log_loss": 0.5167
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-08-19T00:30:00Z",
+          "casa": "Univ Católica",
+          "visitante": "Estudiantes LP",
+          "competicao": "Copa Libertadores",
+          "placar": "0-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.398,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.685,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.692,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.495,
+              "resultado": "ACERTO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-08-18",
