@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-21",
-      "ultima_atualizacao": "2026-08-21T17:53:29-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.4,
-      "total_acertos": 2,
-      "total_palpites": 5,
+      "ultima_atualizacao": "2026-08-21T18:04:28-03:00",
+      "finalizados": 3,
+      "taxa_geral": 0.462,
+      "total_acertos": 6,
+      "total_palpites": 13,
       "mercados": {
         "WINNER": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
+          "acertos": 2,
+          "total": 3,
+          "taxa": 0.667
         },
         "OVER_UNDER": {
-          "acertos": 1,
-          "total": 2,
+          "acertos": 3,
+          "total": 6,
           "taxa": 0.5
         },
         "BTTS": {
           "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
+          "total": 3,
+          "taxa": 0.333
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 1,
-          "brier": 0.6844,
-          "log_loss": 1.1177
+          "n": 3,
+          "brier": 0.6034,
+          "log_loss": 1.0039
         },
         "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.0465,
-          "log_loss": 0.2429
+          "n": 3,
+          "brier": 0.1711,
+          "log_loss": 0.5209
         },
         "BTTS": {
-          "n": 1,
-          "brier": 0.1014,
-          "log_loss": 0.3834
+          "n": 3,
+          "brier": 0.2571,
+          "log_loss": 0.7042
         }
       },
       "jogos": [
@@ -87,6 +87,80 @@
               "opcao": "X",
               "confianca": "MEDIUM",
               "probabilidade": 0.387,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-21T19:00:00Z",
+          "casa": "Arsenal",
+          "visitante": "Coventry City",
+          "competicao": "Premier League",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.391,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.544,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.793,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-21T19:00:00Z",
+          "casa": "Real Betis",
+          "visitante": "Real Sociedad",
+          "competicao": "Primera Division",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
               "resultado": "ERRO"
             }
           ]
