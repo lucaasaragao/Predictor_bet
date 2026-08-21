@@ -2,30 +2,96 @@
   "dias": [
     {
       "data": "2026-08-21",
-      "ultima_atualizacao": "2026-08-21T03:02:40-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-08-21T03:18:06-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.4,
+      "total_acertos": 2,
+      "total_palpites": 5,
+      "mercados": {
+        "WINNER": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.6844,
+          "log_loss": 1.1177
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.0465,
+          "log_loss": 0.2429
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.1014,
+          "log_loss": 0.3834
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-08-21T00:30:00Z",
+          "casa": "Corinthians",
+          "visitante": "Rosario",
+          "competicao": "Copa Libertadores",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.387,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.509,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.502,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.669,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.387,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-08-20",
