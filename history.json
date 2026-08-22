@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-08-22",
+      "ultima_atualizacao": "2026-08-22T00:20:31-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-08-21",
       "ultima_atualizacao": "2026-08-21T23:42:28-03:00",
       "finalizados": 3,
@@ -429,224 +456,6 @@
         }
       },
       "jogos": []
-    },
-    {
-      "data": "2026-08-17",
-      "ultima_atualizacao": "2026-08-17T23:04:37-03:00",
-      "finalizados": 4,
-      "taxa_geral": 0.632,
-      "total_acertos": 12,
-      "total_palpites": 19,
-      "mercados": {
-        "WINNER": {
-          "acertos": 1,
-          "total": 4,
-          "taxa": 0.25
-        },
-        "OVER_UNDER": {
-          "acertos": 7,
-          "total": 8,
-          "taxa": 0.875
-        },
-        "BTTS": {
-          "acertos": 2,
-          "total": 4,
-          "taxa": 0.5
-        },
-        "EMPATE": {
-          "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 4,
-          "brier": 0.7173,
-          "log_loss": 1.1607
-        },
-        "OVER_UNDER": {
-          "n": 4,
-          "brier": 0.2461,
-          "log_loss": 0.6839
-        },
-        "BTTS": {
-          "n": 4,
-          "brier": 0.2516,
-          "log_loss": 0.6957
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-08-17T19:00:00Z",
-          "casa": "Cardiff",
-          "visitante": "Wrexham",
-          "competicao": "Championship",
-          "placar": "1-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.359,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.647,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.64,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.559,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "EMPATE",
-              "opcao": "X",
-              "confianca": "LOW",
-              "probabilidade": 0.333,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-08-17T19:00:00Z",
-          "casa": "Deportivo",
-          "visitante": "Elche",
-          "competicao": "Primera Division",
-          "placar": "1-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.36,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.643,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.644,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.555,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "EMPATE",
-              "opcao": "X",
-              "confianca": "LOW",
-              "probabilidade": 0.332,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-08-17T19:15:00Z",
-          "casa": "Casa Pia",
-          "visitante": "SL Benfica",
-          "competicao": "Primeira Liga",
-          "placar": "0-7",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "2",
-              "confianca": "LOW",
-              "probabilidade": 0.362,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.585,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.696,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.507,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "EMPATE",
-              "opcao": "X",
-              "confianca": "LOW",
-              "probabilidade": 0.315,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-08-17T23:00:00Z",
-          "casa": "Internacional",
-          "visitante": "Clube do Remo",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "1-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.545,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.598,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.823,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.597,
-              "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
     }
   ]
 }
