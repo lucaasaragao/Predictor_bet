@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-22",
-      "ultima_atualizacao": "2026-08-22T13:30:19-03:00",
-      "finalizados": 15,
-      "taxa_geral": 0.476,
-      "total_acertos": 30,
-      "total_palpites": 63,
+      "ultima_atualizacao": "2026-08-22T13:43:30-03:00",
+      "finalizados": 17,
+      "taxa_geral": 0.479,
+      "total_acertos": 34,
+      "total_palpites": 71,
       "mercados": {
         "WINNER": {
-          "acertos": 6,
-          "total": 15,
-          "taxa": 0.4
+          "acertos": 7,
+          "total": 17,
+          "taxa": 0.412
         },
         "OVER_UNDER": {
-          "acertos": 17,
-          "total": 30,
-          "taxa": 0.567
+          "acertos": 20,
+          "total": 34,
+          "taxa": 0.588
         },
         "BTTS": {
           "acertos": 6,
-          "total": 15,
-          "taxa": 0.4
+          "total": 17,
+          "taxa": 0.353
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 15,
-          "brier": 0.6533,
-          "log_loss": 1.0791
+          "n": 17,
+          "brier": 0.6561,
+          "log_loss": 1.0796
         },
         "OVER_UNDER": {
-          "n": 15,
-          "brier": 0.2781,
-          "log_loss": 0.7497
+          "n": 17,
+          "brier": 0.2969,
+          "log_loss": 0.7945
         },
         "BTTS": {
-          "n": 15,
-          "brier": 0.2608,
-          "log_loss": 0.7153
+          "n": 17,
+          "brier": 0.2789,
+          "log_loss": 0.7575
         }
       },
       "jogos": [
@@ -619,6 +619,80 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.592,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-22T14:30:00Z",
+          "casa": "Marítimo",
+          "visitante": "Acad. Viseu",
+          "competicao": "Primeira Liga",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.514,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.501,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.762,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.469,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-22T14:30:00Z",
+          "casa": "Sittard",
+          "visitante": "AZ",
+          "competicao": "Eredivisie",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.419,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.607,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.932,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.78,
               "resultado": "ERRO"
             }
           ]
