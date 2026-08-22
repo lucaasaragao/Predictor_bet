@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-22",
-      "ultima_atualizacao": "2026-08-22T17:58:43-03:00",
-      "finalizados": 31,
+      "ultima_atualizacao": "2026-08-22T18:09:12-03:00",
+      "finalizados": 33,
       "taxa_geral": 0.496,
-      "total_acertos": 63,
-      "total_palpites": 127,
+      "total_acertos": 67,
+      "total_palpites": 135,
       "mercados": {
         "WINNER": {
-          "acertos": 11,
-          "total": 31,
-          "taxa": 0.355
+          "acertos": 12,
+          "total": 33,
+          "taxa": 0.364
         },
         "OVER_UNDER": {
-          "acertos": 39,
-          "total": 62,
-          "taxa": 0.629
+          "acertos": 42,
+          "total": 66,
+          "taxa": 0.636
         },
         "BTTS": {
           "acertos": 12,
-          "total": 31,
-          "taxa": 0.387
+          "total": 33,
+          "taxa": 0.364
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 31,
-          "brier": 0.671,
-          "log_loss": 1.1038
+          "n": 33,
+          "brier": 0.6657,
+          "log_loss": 1.0966
         },
         "OVER_UNDER": {
-          "n": 31,
-          "brier": 0.2672,
-          "log_loss": 0.7314
+          "n": 33,
+          "brier": 0.268,
+          "log_loss": 0.7327
         },
         "BTTS": {
-          "n": 31,
-          "brier": 0.2676,
-          "log_loss": 0.7317
+          "n": 33,
+          "brier": 0.2688,
+          "log_loss": 0.7339
         }
       },
       "jogos": [
@@ -1211,6 +1211,80 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.549,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-22T19:00:00Z",
+          "casa": "Fluminense",
+          "visitante": "Clube do Remo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.525,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.511,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.803,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.427,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-22T19:00:00Z",
+          "casa": "Heerenveen",
+          "visitante": "Zwolle",
+          "competicao": "Eredivisie",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.467,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.566,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.808,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.598,
               "resultado": "ERRO"
             }
           ]
