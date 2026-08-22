@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-22",
-      "ultima_atualizacao": "2026-08-22T15:29:20-03:00",
-      "finalizados": 20,
-      "taxa_geral": 0.53,
-      "total_acertos": 44,
-      "total_palpites": 83,
+      "ultima_atualizacao": "2026-08-22T15:46:33-03:00",
+      "finalizados": 23,
+      "taxa_geral": 0.547,
+      "total_acertos": 52,
+      "total_palpites": 95,
       "mercados": {
         "WINNER": {
-          "acertos": 10,
-          "total": 20,
-          "taxa": 0.5
+          "acertos": 11,
+          "total": 23,
+          "taxa": 0.478
         },
         "OVER_UNDER": {
-          "acertos": 25,
-          "total": 40,
-          "taxa": 0.625
+          "acertos": 29,
+          "total": 46,
+          "taxa": 0.63
         },
         "BTTS": {
-          "acertos": 8,
-          "total": 20,
-          "taxa": 0.4
+          "acertos": 11,
+          "total": 23,
+          "taxa": 0.478
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 20,
-          "brier": 0.6436,
-          "log_loss": 1.0616
+          "n": 23,
+          "brier": 0.6532,
+          "log_loss": 1.0772
         },
         "OVER_UNDER": {
-          "n": 20,
-          "brier": 0.2855,
-          "log_loss": 0.7706
+          "n": 23,
+          "brier": 0.2758,
+          "log_loss": 0.7501
         },
         "BTTS": {
-          "n": 20,
-          "brier": 0.2725,
-          "log_loss": 0.7437
+          "n": 23,
+          "brier": 0.2596,
+          "log_loss": 0.7168
         }
       },
       "jogos": [
@@ -805,6 +805,117 @@
               "confianca": "LOW",
               "probabilidade": 0.592,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-22T16:30:00Z",
+          "casa": "Inter",
+          "visitante": "Monza",
+          "competicao": "Serie A",
+          "placar": "4-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.382,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.512,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.754,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.549,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-22T16:30:00Z",
+          "casa": "Udinese",
+          "visitante": "Como 1907",
+          "competicao": "Serie A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.382,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.512,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.754,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.549,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-22T16:45:00Z",
+          "casa": "Sparta",
+          "visitante": "Utrecht",
+          "competicao": "Eredivisie",
+          "placar": "3-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.404,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.586,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.852,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.661,
+              "resultado": "ACERTO"
             }
           ]
         }
