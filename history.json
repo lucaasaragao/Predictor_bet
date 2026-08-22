@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-22",
-      "ultima_atualizacao": "2026-08-22T14:05:36-03:00",
-      "finalizados": 17,
-      "taxa_geral": 0.479,
-      "total_acertos": 34,
-      "total_palpites": 71,
+      "ultima_atualizacao": "2026-08-22T14:17:31-03:00",
+      "finalizados": 18,
+      "taxa_geral": 0.507,
+      "total_acertos": 38,
+      "total_palpites": 75,
       "mercados": {
         "WINNER": {
-          "acertos": 7,
-          "total": 17,
-          "taxa": 0.412
+          "acertos": 8,
+          "total": 18,
+          "taxa": 0.444
         },
         "OVER_UNDER": {
-          "acertos": 20,
-          "total": 34,
-          "taxa": 0.588
+          "acertos": 22,
+          "total": 36,
+          "taxa": 0.611
         },
         "BTTS": {
-          "acertos": 6,
-          "total": 17,
-          "taxa": 0.353
+          "acertos": 7,
+          "total": 18,
+          "taxa": 0.389
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 17,
-          "brier": 0.6561,
-          "log_loss": 1.0796
+          "n": 18,
+          "brier": 0.6523,
+          "log_loss": 1.074
         },
         "OVER_UNDER": {
-          "n": 17,
-          "brier": 0.2969,
-          "log_loss": 0.7945
+          "n": 18,
+          "brier": 0.2914,
+          "log_loss": 0.7831
         },
         "BTTS": {
-          "n": 17,
-          "brier": 0.2789,
-          "log_loss": 0.7575
+          "n": 18,
+          "brier": 0.2722,
+          "log_loss": 0.7437
         }
       },
       "jogos": [
@@ -694,6 +694,43 @@
               "confianca": "HIGH",
               "probabilidade": 0.78,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-22T15:00:00Z",
+          "casa": "Athletic",
+          "visitante": "Sevilla FC",
+          "competicao": "Primera Division",
+          "placar": "1-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.376,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.554,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.801,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.601,
+              "resultado": "ACERTO"
             }
           ]
         }
