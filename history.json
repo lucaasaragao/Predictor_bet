@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-22",
-      "ultima_atualizacao": "2026-08-22T13:03:17-03:00",
-      "finalizados": 14,
-      "taxa_geral": 0.475,
-      "total_acertos": 28,
-      "total_palpites": 59,
+      "ultima_atualizacao": "2026-08-22T13:14:50-03:00",
+      "finalizados": 15,
+      "taxa_geral": 0.476,
+      "total_acertos": 30,
+      "total_palpites": 63,
       "mercados": {
         "WINNER": {
-          "acertos": 5,
-          "total": 14,
-          "taxa": 0.357
+          "acertos": 6,
+          "total": 15,
+          "taxa": 0.4
         },
         "OVER_UNDER": {
-          "acertos": 16,
-          "total": 28,
-          "taxa": 0.571
+          "acertos": 17,
+          "total": 30,
+          "taxa": 0.567
         },
         "BTTS": {
           "acertos": 6,
-          "total": 14,
-          "taxa": 0.429
+          "total": 15,
+          "taxa": 0.4
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 14,
-          "brier": 0.6601,
-          "log_loss": 1.089
+          "n": 15,
+          "brier": 0.6533,
+          "log_loss": 1.0791
         },
         "OVER_UNDER": {
-          "n": 14,
-          "brier": 0.2769,
-          "log_loss": 0.7472
+          "n": 15,
+          "brier": 0.2781,
+          "log_loss": 0.7497
         },
         "BTTS": {
-          "n": 14,
-          "brier": 0.2544,
-          "log_loss": 0.7024
+          "n": 15,
+          "brier": 0.2608,
+          "log_loss": 0.7153
         }
       },
       "jogos": [
@@ -583,6 +583,43 @@
               "confianca": "LOW",
               "probabilidade": 0.312,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-22T14:00:00Z",
+          "casa": "Everton",
+          "visitante": "Crystal Palace",
+          "competicao": "Premier League",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.391,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.544,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.793,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ERRO"
             }
           ]
         }
