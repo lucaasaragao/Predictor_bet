@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T13:25:10-03:00",
+  "generated_at": "2026-08-23T13:40:37-03:00",
   "analysis_date": "2026-08-23",
   "total_jogos": 33,
   "odds_debug_visual": false,
@@ -1023,7 +1023,7 @@
     {
       "competicao": "Primeira Liga",
       "data": "2026-08-23T14:30:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
         "visitante": 0
@@ -1164,7 +1164,7 @@
           "ev_bruto": 1.4982,
           "prob_mercado_justa": 0.1774,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -1178,7 +1178,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -1192,7 +1192,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -1206,7 +1206,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -1405,8 +1405,8 @@
       "data": "2026-08-23T15:00:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 0,
-        "visitante": 0
+        "casa": 1,
+        "visitante": 1
       },
       "times": {
         "casa": "Atleti",
@@ -1577,7 +1577,7 @@
     {
       "competicao": "Ligue 1",
       "data": "2026-08-23T15:15:00Z",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "placar_atual": {
         "casa": 0,
         "visitante": 1
@@ -1731,7 +1731,7 @@
     {
       "competicao": "Premier League",
       "data": "2026-08-23T15:30:00Z",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "placar_atual": {
         "casa": 1,
         "visitante": 0
@@ -1885,10 +1885,10 @@
     {
       "competicao": "Serie A",
       "data": "2026-08-23T16:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Venezia FC",
@@ -2039,10 +2039,10 @@
     {
       "competicao": "Serie A",
       "data": "2026-08-23T16:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Frosinone",
@@ -5874,9 +5874,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 18,
-    "total": 24,
-    "taxa": 0.75
+    "acertos": 20,
+    "total": 28,
+    "taxa": 0.714
   },
   "daily_tips_ids": [
     {
