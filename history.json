@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-22",
-      "ultima_atualizacao": "2026-08-22T22:19:06-03:00",
-      "finalizados": 36,
-      "taxa_geral": 0.497,
-      "total_acertos": 73,
-      "total_palpites": 147,
+      "ultima_atualizacao": "2026-08-22T22:59:47-03:00",
+      "finalizados": 37,
+      "taxa_geral": 0.503,
+      "total_acertos": 76,
+      "total_palpites": 151,
       "mercados": {
         "WINNER": {
           "acertos": 13,
-          "total": 36,
-          "taxa": 0.361
+          "total": 37,
+          "taxa": 0.351
         },
         "OVER_UNDER": {
-          "acertos": 46,
-          "total": 72,
-          "taxa": 0.639
+          "acertos": 48,
+          "total": 74,
+          "taxa": 0.649
         },
         "BTTS": {
-          "acertos": 13,
-          "total": 36,
-          "taxa": 0.361
+          "acertos": 14,
+          "total": 37,
+          "taxa": 0.378
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 36,
-          "brier": 0.6566,
-          "log_loss": 1.0844
+          "n": 37,
+          "brier": 0.6582,
+          "log_loss": 1.0865
         },
         "OVER_UNDER": {
-          "n": 36,
-          "brier": 0.2637,
-          "log_loss": 0.7238
+          "n": 37,
+          "brier": 0.2631,
+          "log_loss": 0.7225
         },
         "BTTS": {
-          "n": 36,
-          "brier": 0.2655,
-          "log_loss": 0.7269
+          "n": 37,
+          "brier": 0.2635,
+          "log_loss": 0.7227
         }
       },
       "jogos": [
@@ -1397,6 +1397,43 @@
               "confianca": "LOW",
               "probabilidade": 0.56,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-22T23:30:00Z",
+          "casa": "Cruzeiro",
+          "visitante": "Flamengo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.4,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.509,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.855,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.663,
+              "resultado": "ACERTO"
             }
           ]
         }
