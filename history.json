@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-08-23",
-      "ultima_atualizacao": "2026-08-23T18:20:46-03:00",
-      "finalizados": 21,
-      "taxa_geral": 0.57,
-      "total_acertos": 49,
-      "total_palpites": 86,
+      "ultima_atualizacao": "2026-08-23T18:33:42-03:00",
+      "finalizados": 22,
+      "taxa_geral": 0.582,
+      "total_acertos": 53,
+      "total_palpites": 91,
       "mercados": {
         "WINNER": {
-          "acertos": 10,
-          "total": 21,
-          "taxa": 0.476
+          "acertos": 11,
+          "total": 22,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 29,
-          "total": 42,
-          "taxa": 0.69
+          "acertos": 31,
+          "total": 44,
+          "taxa": 0.705
         },
         "BTTS": {
-          "acertos": 10,
-          "total": 21,
-          "taxa": 0.476
+          "acertos": 11,
+          "total": 22,
+          "taxa": 0.5
         },
         "EMPATE": {
           "acertos": 0,
-          "total": 2,
+          "total": 3,
           "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 21,
-          "brier": 0.6143,
-          "log_loss": 1.0211
+          "n": 22,
+          "brier": 0.6091,
+          "log_loss": 1.0138
         },
         "OVER_UNDER": {
-          "n": 21,
-          "brier": 0.2089,
-          "log_loss": 0.6074
+          "n": 22,
+          "brier": 0.2084,
+          "log_loss": 0.6066
         },
         "BTTS": {
-          "n": 21,
-          "brier": 0.228,
-          "log_loss": 0.6472
+          "n": 22,
+          "brier": 0.2295,
+          "log_loss": 0.6502
         }
       },
       "jogos": [
@@ -835,6 +835,50 @@
               "confianca": "LOW",
               "probabilidade": 0.59,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-23T19:30:00Z",
+          "casa": "Porto",
+          "visitante": "Arouca",
+          "competicao": "Primeira Liga",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.423,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.554,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.721,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.49,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.302,
+              "resultado": "ERRO"
             }
           ]
         }
