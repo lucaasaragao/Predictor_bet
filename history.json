@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-08-23",
-      "ultima_atualizacao": "2026-08-23T14:04:28-03:00",
-      "finalizados": 7,
-      "taxa_geral": 0.679,
-      "total_acertos": 19,
-      "total_palpites": 28,
+      "ultima_atualizacao": "2026-08-23T14:16:12-03:00",
+      "finalizados": 10,
+      "taxa_geral": 0.625,
+      "total_acertos": 25,
+      "total_palpites": 40,
       "mercados": {
         "WINNER": {
-          "acertos": 4,
-          "total": 7,
-          "taxa": 0.571
+          "acertos": 5,
+          "total": 10,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 11,
-          "total": 14,
-          "taxa": 0.786
+          "acertos": 16,
+          "total": 20,
+          "taxa": 0.8
         },
         "BTTS": {
           "acertos": 4,
-          "total": 7,
-          "taxa": 0.571
+          "total": 10,
+          "taxa": 0.4
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 7,
-          "brier": 0.5856,
-          "log_loss": 0.9785
+          "n": 10,
+          "brier": 0.5898,
+          "log_loss": 0.9834
         },
         "OVER_UNDER": {
-          "n": 7,
-          "brier": 0.1729,
-          "log_loss": 0.5296
+          "n": 10,
+          "brier": 0.1815,
+          "log_loss": 0.5494
         },
         "BTTS": {
-          "n": 7,
-          "brier": 0.2091,
-          "log_loss": 0.6054
+          "n": 10,
+          "brier": 0.2149,
+          "log_loss": 0.6186
         }
       },
       "jogos": [
@@ -298,6 +298,117 @@
               "confianca": "LOW",
               "probabilidade": 0.497,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-23T14:45:00Z",
+          "casa": "Cambuur",
+          "visitante": "Feyenoord",
+          "competicao": "Eredivisie",
+          "placar": "2-5",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "HIGH",
+              "probabilidade": 0.616,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.569,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.809,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.46,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-23T15:00:00Z",
+          "casa": "Atleti",
+          "visitante": "Villarreal",
+          "competicao": "Primera Division",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.529,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.58,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.817,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.409,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-23T15:15:00Z",
+          "casa": "Le Havre",
+          "visitante": "Monaco",
+          "competicao": "Ligue 1",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.383,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.507,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.757,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.553,
+              "resultado": "ERRO"
             }
           ]
         }
