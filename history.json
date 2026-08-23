@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-08-23",
-      "ultima_atualizacao": "2026-08-23T17:56:59-03:00",
-      "finalizados": 18,
-      "taxa_geral": 0.569,
-      "total_acertos": 41,
-      "total_palpites": 72,
+      "ultima_atualizacao": "2026-08-23T18:07:55-03:00",
+      "finalizados": 21,
+      "taxa_geral": 0.57,
+      "total_acertos": 49,
+      "total_palpites": 86,
       "mercados": {
         "WINNER": {
-          "acertos": 8,
-          "total": 18,
-          "taxa": 0.444
+          "acertos": 10,
+          "total": 21,
+          "taxa": 0.476
         },
         "OVER_UNDER": {
-          "acertos": 25,
-          "total": 36,
-          "taxa": 0.694
+          "acertos": 29,
+          "total": 42,
+          "taxa": 0.69
         },
         "BTTS": {
-          "acertos": 8,
-          "total": 18,
-          "taxa": 0.444
+          "acertos": 10,
+          "total": 21,
+          "taxa": 0.476
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 2,
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 18,
-          "brier": 0.6233,
-          "log_loss": 1.0337
+          "n": 21,
+          "brier": 0.6143,
+          "log_loss": 1.0211
         },
         "OVER_UNDER": {
-          "n": 18,
-          "brier": 0.2087,
-          "log_loss": 0.6068
+          "n": 21,
+          "brier": 0.2089,
+          "log_loss": 0.6074
         },
         "BTTS": {
-          "n": 18,
-          "brier": 0.2292,
-          "log_loss": 0.6493
+          "n": 21,
+          "brier": 0.228,
+          "log_loss": 0.6472
         }
       },
       "jogos": [
@@ -704,6 +709,131 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.549,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-23T19:00:00Z",
+          "casa": "Palmeiras",
+          "visitante": "Vasco da Gama",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "4-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.571,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.707,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.497,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-23T19:00:00Z",
+          "casa": "Vitória",
+          "visitante": "Bahia",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.571,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.707,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.497,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-23T19:00:00Z",
+          "casa": "Bragantino",
+          "visitante": "Grêmio",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.496,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.653,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.639,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.59,
               "resultado": "ACERTO"
             }
           ]
