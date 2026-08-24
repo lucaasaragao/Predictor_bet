@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T16:19:42-03:00",
+  "generated_at": "2026-08-24T16:36:12-03:00",
   "analysis_date": "2026-08-24",
   "total_jogos": 8,
   "odds_debug_visual": false,
@@ -163,7 +163,7 @@
     {
       "competicao": "Primera Division",
       "data": "2026-08-24T17:30:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 0,
         "visitante": 0
@@ -279,7 +279,7 @@
           "ev_bruto": 0.0892,
           "prob_mercado_justa": 0.5292,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -293,7 +293,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -307,7 +307,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -321,7 +321,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -330,7 +330,7 @@
       "data": "2026-08-24T18:45:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 0,
+        "casa": 1,
         "visitante": 0
       },
       "times": {
@@ -484,7 +484,7 @@
       "data": "2026-08-24T19:00:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 0,
+        "casa": 1,
         "visitante": 1
       },
       "times": {
@@ -636,10 +636,10 @@
     {
       "competicao": "Primeira Liga",
       "data": "2026-08-24T19:15:00Z",
-      "status": "2026-08-24 18:15:00Z",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Gil Vicente",
@@ -823,10 +823,10 @@
     {
       "competicao": "Primera Division",
       "data": "2026-08-24T19:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Málaga",
@@ -1447,9 +1447,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 1,
-    "total": 4,
-    "taxa": 0.25
+    "acertos": 3,
+    "total": 8,
+    "taxa": 0.375
   },
   "daily_tips_ids": [
     {
