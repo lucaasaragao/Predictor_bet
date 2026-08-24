@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-08-24",
+      "ultima_atualizacao": "2026-08-24T00:02:44-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-08-23",
       "ultima_atualizacao": "2026-08-23T23:34:28-03:00",
       "finalizados": 26,
@@ -2750,124 +2777,6 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.463,
-              "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-08-19",
-      "ultima_atualizacao": "2026-08-19T23:44:40-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.625,
-      "total_acertos": 5,
-      "total_palpites": 8,
-      "mercados": {
-        "WINNER": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
-        },
-        "OVER_UNDER": {
-          "acertos": 2,
-          "total": 4,
-          "taxa": 0.5
-        },
-        "BTTS": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 2,
-          "brier": 0.5571,
-          "log_loss": 0.9374
-        },
-        "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.3636,
-          "log_loss": 0.9322
-        },
-        "BTTS": {
-          "n": 2,
-          "brier": 0.2411,
-          "log_loss": 0.6748
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-08-19T00:30:00Z",
-          "casa": "Univ Católica",
-          "visitante": "Estudiantes LP",
-          "competicao": "Copa Libertadores",
-          "placar": "0-3",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "2",
-              "confianca": "LOW",
-              "probabilidade": 0.398,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.685,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.692,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.495,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-08-19T19:00:00Z",
-          "casa": "Atleti",
-          "visitante": "Málaga",
-          "competicao": "Primera Division",
-          "placar": "2-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.385,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.508,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.769,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.565,
               "resultado": "ERRO"
             }
           ]
