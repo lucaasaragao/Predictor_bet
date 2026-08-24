@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-08-24",
-      "ultima_atualizacao": "2026-08-24T17:46:38-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.417,
-      "total_acertos": 5,
-      "total_palpites": 12,
+      "ultima_atualizacao": "2026-08-24T18:01:40-03:00",
+      "finalizados": 4,
+      "taxa_geral": 0.5,
+      "total_acertos": 8,
+      "total_palpites": 16,
       "mercados": {
         "WINNER": {
           "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "total": 4,
+          "taxa": 0.25
         },
         "OVER_UNDER": {
-          "acertos": 3,
-          "total": 6,
-          "taxa": 0.5
+          "acertos": 5,
+          "total": 8,
+          "taxa": 0.625
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "acertos": 2,
+          "total": 4,
+          "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 3,
-          "brier": 0.7248,
-          "log_loss": 1.149
+          "n": 4,
+          "brier": 0.7137,
+          "log_loss": 1.1392
         },
         "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.2499,
-          "log_loss": 0.6929
+          "n": 4,
+          "brier": 0.2395,
+          "log_loss": 0.672
         },
         "BTTS": {
-          "n": 3,
-          "brier": 0.2848,
-          "log_loss": 0.7631
+          "n": 4,
+          "brier": 0.2552,
+          "log_loss": 0.7034
         }
       },
       "jogos": [
@@ -150,6 +150,43 @@
               "confianca": "LOW",
               "probabilidade": 0.549,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-24T19:00:00Z",
+          "casa": "Fulham",
+          "visitante": "Chelsea",
+          "competicao": "Premier League",
+          "placar": "2-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.391,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.544,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.793,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ACERTO"
             }
           ]
         }

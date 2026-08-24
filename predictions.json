@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T17:46:38-03:00",
+  "generated_at": "2026-08-24T18:01:40-03:00",
   "analysis_date": "2026-08-24",
   "total_jogos": 8,
   "odds_debug_visual": false,
@@ -482,7 +482,7 @@
     {
       "competicao": "Premier League",
       "data": "2026-08-24T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 2,
         "visitante": 3
@@ -587,7 +587,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -601,7 +601,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -615,7 +615,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -629,7 +629,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -1447,9 +1447,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 5,
-    "total": 12,
-    "taxa": 0.417
+    "acertos": 8,
+    "total": 16,
+    "taxa": 0.5
   },
   "daily_tips_ids": [
     {
@@ -1471,7 +1471,25 @@
   ],
   "daily_tips_date": "2026-08-24",
   "recovery_tip": {
-    "ativo": false
+    "ativo": true,
+    "disparado_em": "2026-08-24T18:01:40-03:00",
+    "jogo": {
+      "casa": "Málaga",
+      "visitante": "Deportivo",
+      "data": "2026-08-24T19:30:00Z",
+      "competicao": "Primera Division",
+      "times": {
+        "casa": "Málaga",
+        "visitante": "Deportivo"
+      }
+    },
+    "palpite": {
+      "tipo": "OVER_UNDER",
+      "opcao": "OVER_1.5",
+      "probabilidade": 0.7286,
+      "confianca": "HIGH",
+      "resultado_verificador": null
+    }
   },
   "recovery_tip_date": "2026-08-24"
 }
