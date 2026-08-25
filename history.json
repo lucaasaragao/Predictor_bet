@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-08-24",
-      "ultima_atualizacao": "2026-08-24T21:45:11-03:00",
-      "finalizados": 6,
-      "taxa_geral": 0.615,
-      "total_acertos": 16,
-      "total_palpites": 26,
+      "ultima_atualizacao": "2026-08-24T22:16:24-03:00",
+      "finalizados": 7,
+      "taxa_geral": 0.581,
+      "total_acertos": 18,
+      "total_palpites": 31,
       "mercados": {
         "WINNER": {
-          "acertos": 2,
-          "total": 6,
-          "taxa": 0.333
+          "acertos": 3,
+          "total": 7,
+          "taxa": 0.429
         },
         "OVER_UNDER": {
-          "acertos": 9,
-          "total": 12,
-          "taxa": 0.75
+          "acertos": 10,
+          "total": 14,
+          "taxa": 0.714
         },
         "BTTS": {
           "acertos": 4,
-          "total": 6,
-          "taxa": 0.667
+          "total": 7,
+          "taxa": 0.571
         },
         "EMPATE": {
           "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "total": 3,
+          "taxa": 0.333
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 6,
-          "brier": 0.672,
-          "log_loss": 1.089
+          "n": 7,
+          "brier": 0.6624,
+          "log_loss": 1.0773
         },
         "OVER_UNDER": {
-          "n": 6,
-          "brier": 0.2149,
-          "log_loss": 0.6216
+          "n": 7,
+          "brier": 0.2359,
+          "log_loss": 0.6644
         },
         "BTTS": {
-          "n": 6,
-          "brier": 0.2376,
-          "log_loss": 0.668
+          "n": 7,
+          "brier": 0.2425,
+          "log_loss": 0.6778
         }
       },
       "jogos": [
@@ -280,6 +280,50 @@
               "confianca": "LOW",
               "probabilidade": 0.303,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-24T23:00:00Z",
+          "casa": "Botafogo",
+          "visitante": "Paranaense",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.365,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.602,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.71,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.489,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.319,
+              "resultado": "ERRO"
             }
           ]
         }
