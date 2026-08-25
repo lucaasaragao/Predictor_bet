@@ -1,1261 +1,11 @@
 {
-  "generated_at": "2026-08-24T23:47:56-03:00",
-  "analysis_date": "2026-08-24",
-  "total_jogos": 8,
+  "generated_at": "2026-08-25T00:13:35-03:00",
+  "analysis_date": "2026-08-25",
+  "total_jogos": 3,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
   "odds_min_ev": 0.03,
   "jogos": [
-    {
-      "competicao": "Serie A",
-      "data": "2026-08-24T16:30:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 0,
-        "visitante": 1
-      },
-      "times": {
-        "casa": "Bologna",
-        "visitante": "Lazio",
-        "escudo_casa": "https://crests.football-data.org/103.png",
-        "escudo_visitante": "https://crests.football-data.org/110.png"
-      },
-      "probabilidades": {
-        "casa": 0.38199976557000803,
-        "empate": 0.294251314888983,
-        "visitante": 0.32374891954100904
-      },
-      "favorito": {
-        "nome": "Bologna",
-        "prob": 0.38199976557000803,
-        "vantagem": 0.05825084602899899
-      },
-      "gols_esperados": {
-        "casa": 1.375,
-        "visitante": 1.25,
-        "total": 2.625
-      },
-      "mercados": {
-        "under_25": 0.5122451459575859,
-        "over_25": 0.4877548540424141,
-        "btts_yes": 0.5492559297309694,
-        "btts_no": 0.45074407026903063
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.555
-        },
-        "visitante": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.535
-        }
-      },
-      "leitura_rapida": "Bologna favorito (38%, risco alto). Mercado de gols equilibrado (xG total ≈2.6).",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        },
-        "visitante": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        }
-      },
-      "alertas": [],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "baixa",
-        "nota": "Bologna favorito (38.2%), margem 5.8 p.p., xG 1.4 e mercado de gols equilibrado."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (5.8 p.p. < 10.0 p.p.)",
-        "competition": "Serie A",
-        "sport_key": "soccer_italy_serie_a",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [],
-        "visitante": []
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.38199976557000803,
-          "confianca": "LOW",
-          "justificativa": "Bologna projeta ≈1.4 gol(s) vs ≈1.2 do adversário. Prob vitória: 38.2% (margem: 5.8 p.p.)",
-          "edge": 0.0583,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER_2.5",
-          "probabilidade": 0.5122451459575859,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.6. UNDER 2.5: 51.2% de probabilidade",
-          "edge": 0.0122,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.7536,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.6.",
-          "edge": 0.2536,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.5493,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.4 (casa) x 1.2 (fora). Ambas marcam - Sim: 54.9%",
-          "edge": 0.0493,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        }
-      ]
-    },
-    {
-      "competicao": "Primera Division",
-      "data": "2026-08-24T17:30:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 0,
-        "visitante": 0
-      },
-      "times": {
-        "casa": "Osasuna",
-        "visitante": "Levante",
-        "escudo_casa": "https://crests.football-data.org/79.png",
-        "escudo_visitante": "https://crests.football-data.org/88.png"
-      },
-      "probabilidades": {
-        "casa": 0.5763001505353824,
-        "empate": 0.25742005878723573,
-        "visitante": 0.16627979067738186
-      },
-      "favorito": {
-        "nome": "Osasuna",
-        "prob": 0.5763001505353824,
-        "vantagem": 0.3188800917481467
-      },
-      "gols_esperados": {
-        "casa": 1.7952000000000004,
-        "visitante": 0.8772,
-        "total": 2.6724000000000006
-      },
-      "mercados": {
-        "under_25": 0.5006878698431056,
-        "over_25": 0.4993121301568944,
-        "btts_yes": 0.5011421162476322,
-        "btts_no": 0.49885788375236784
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.555
-        },
-        "visitante": {
-          "forma_recente": 0.0,
-          "ataque": 0.0,
-          "defesa": 0.0,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.14
-        }
-      },
-      "leitura_rapida": "Osasuna favorito (58%, risco moderado). Mercado de gols equilibrado (xG total ≈2.7).",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        },
-        "visitante": {
-          "prob_marca": 0.0,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 1,
-          "jogos": 1
-        }
-      },
-      "alertas": [],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "alta",
-        "nota": "Osasuna favorito (57.6%), margem 31.9 p.p., xG 1.8 e mercado de gols equilibrado."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
-        "competition": "Primera Division",
-        "sport_key": "soccer_spain_la_liga",
-        "odds_match_id": "b86f1854fe9f0915d4f9ee47f23a14bf",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
-      },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
-      "historico": {
-        "casa": [],
-        "visitante": [
-          {
-            "data": "16/08 17:00",
-            "mandante": "Espanyol",
-            "visitante": "Levante",
-            "placar": "3 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.5763001505353824,
-          "confianca": "MEDIUM",
-          "justificativa": "Osasuna projeta ≈1.8 gol(s) vs ≈0.9 do adversário. Prob vitória: 57.6% (margem: 31.9 p.p.)",
-          "edge": 0.3189,
-          "odd_decimal": 1.89,
-          "ev": 0.089,
-          "ev_bruto": 0.0892,
-          "prob_mercado_justa": 0.5292,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER_2.5",
-          "probabilidade": 0.5006878698431056,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.7. UNDER 2.5: 50.1% de probabilidade",
-          "edge": 0.0007,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.7603,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.7.",
-          "edge": 0.2603,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.4989,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.8 (casa) x 0.9 (fora). Ambas marcam - Nao: 49.9%",
-          "edge": -0.0011,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        }
-      ]
-    },
-    {
-      "competicao": "Serie A",
-      "data": "2026-08-24T18:45:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 4,
-        "visitante": 0
-      },
-      "times": {
-        "casa": "Roma",
-        "visitante": "Fiorentina",
-        "escudo_casa": "https://crests.football-data.org/100.png",
-        "escudo_visitante": "https://crests.football-data.org/99.png"
-      },
-      "probabilidades": {
-        "casa": 0.38199976557000803,
-        "empate": 0.294251314888983,
-        "visitante": 0.32374891954100904
-      },
-      "favorito": {
-        "nome": "Roma",
-        "prob": 0.38199976557000803,
-        "vantagem": 0.05825084602899899
-      },
-      "gols_esperados": {
-        "casa": 1.375,
-        "visitante": 1.25,
-        "total": 2.625
-      },
-      "mercados": {
-        "under_25": 0.5122451459575859,
-        "over_25": 0.4877548540424141,
-        "btts_yes": 0.5492559297309694,
-        "btts_no": 0.45074407026903063
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.555
-        },
-        "visitante": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.535
-        }
-      },
-      "leitura_rapida": "Roma favorito (38%, risco alto). Mercado de gols equilibrado (xG total ≈2.6).",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        },
-        "visitante": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        }
-      },
-      "alertas": [],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "baixa",
-        "nota": "Roma favorito (38.2%), margem 5.8 p.p., xG 1.4 e mercado de gols equilibrado."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (5.8 p.p. < 10.0 p.p.)",
-        "competition": "Serie A",
-        "sport_key": "soccer_italy_serie_a",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [],
-        "visitante": []
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.38199976557000803,
-          "confianca": "LOW",
-          "justificativa": "Roma projeta ≈1.4 gol(s) vs ≈1.2 do adversário. Prob vitória: 38.2% (margem: 5.8 p.p.)",
-          "edge": 0.0583,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER_2.5",
-          "probabilidade": 0.5122451459575859,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.6. UNDER 2.5: 51.2% de probabilidade",
-          "edge": 0.0122,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.7536,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.6.",
-          "edge": 0.2536,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.5493,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.4 (casa) x 1.2 (fora). Ambas marcam - Sim: 54.9%",
-          "edge": 0.0493,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        }
-      ]
-    },
-    {
-      "competicao": "Premier League",
-      "data": "2026-08-24T19:00:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 2,
-        "visitante": 3
-      },
-      "times": {
-        "casa": "Fulham",
-        "visitante": "Chelsea",
-        "escudo_casa": "https://crests.football-data.org/63.png",
-        "escudo_visitante": "https://crests.football-data.org/61.png"
-      },
-      "probabilidades": {
-        "casa": 0.39062653172778855,
-        "empate": 0.2797806272699936,
-        "visitante": 0.3295928410022179
-      },
-      "favorito": {
-        "nome": "Fulham",
-        "prob": 0.39062653172778855,
-        "vantagem": 0.06103369072557063
-      },
-      "gols_esperados": {
-        "casa": 1.4960000000000002,
-        "visitante": 1.36,
-        "total": 2.8560000000000003
-      },
-      "mercados": {
-        "under_25": 0.45632855405137374,
-        "over_25": 0.5436714459486263,
-        "btts_yes": 0.5919796290669038,
-        "btts_no": 0.4080203709330962
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.555
-        },
-        "visitante": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.535
-        }
-      },
-      "leitura_rapida": "Fulham favorito (39%, risco alto). Mercado de gols equilibrado (xG total ≈2.9).",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        },
-        "visitante": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        }
-      },
-      "alertas": [],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "baixa",
-        "nota": "Fulham favorito (39.1%), margem 6.1 p.p., xG 1.5 e mercado de gols equilibrado."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (6.1 p.p. < 10.0 p.p.)",
-        "competition": "Premier League",
-        "sport_key": "soccer_epl",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [],
-        "visitante": []
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.39062653172778855,
-          "confianca": "LOW",
-          "justificativa": "Fulham projeta ≈1.5 gol(s) vs ≈1.4 do adversário. Prob vitória: 39.1% (margem: 6.1 p.p.)",
-          "edge": 0.061,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_2.5",
-          "probabilidade": 0.5436714459486263,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.9. OVER 2.5: 54.4% de probabilidade",
-          "edge": 0.0437,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.7934,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.9.",
-          "edge": 0.2934,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.592,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.5 (casa) x 1.4 (fora). Ambas marcam - Sim: 59.2%",
-          "edge": 0.092,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        }
-      ]
-    },
-    {
-      "competicao": "Primeira Liga",
-      "data": "2026-08-24T19:15:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 2,
-        "visitante": 0
-      },
-      "times": {
-        "casa": "Gil Vicente",
-        "visitante": "Casa Pia",
-        "escudo_casa": "https://crests.football-data.org/5533.png",
-        "escudo_visitante": "https://crests.football-data.org/6618.png"
-      },
-      "probabilidades": {
-        "casa": 0.456354332587001,
-        "empate": 0.32164101426213354,
-        "visitante": 0.22200465315086548
-      },
-      "favorito": {
-        "nome": "Gil Vicente",
-        "prob": 0.456354332587001,
-        "vantagem": 0.13471331832486744
-      },
-      "gols_esperados": {
-        "casa": 1.2848,
-        "visitante": 0.8228,
-        "total": 2.1075999999999997
-      },
-      "mercados": {
-        "under_25": 0.6476196308428228,
-        "over_25": 0.35238036915717724,
-        "btts_yes": 0.4223156772480122,
-        "btts_no": 0.5776843227519878
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.555
-        },
-        "visitante": {
-          "forma_recente": 0.0,
-          "ataque": 0.0,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.26
-        }
-      },
-      "leitura_rapida": "Gil Vicente favorito (46%, risco moderado). Jogo fechado esperado (xG total ≈2.1). Under 2.5 com 65%.",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        },
-        "visitante": {
-          "prob_marca": 0.0,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 2,
-          "jogos": 2
-        }
-      },
-      "alertas": [],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "media",
-        "nota": "Gil Vicente favorito (45.6%), margem 13.5 p.p., xG 1.3 e tendência de menos gols (Under 2.5 65%)."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
-        "competition": "Primeira Liga",
-        "sport_key": "soccer_portugal_primeira_liga",
-        "odds_match_id": "124c81aa503ef859a5a685b1539ef990",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
-      },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
-      "historico": {
-        "casa": [],
-        "visitante": [
-          {
-            "data": "17/08 19:15",
-            "mandante": "Casa Pia",
-            "visitante": "SL Benfica",
-            "placar": "0 x 7",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "08/08 14:30",
-            "mandante": "Marítimo",
-            "visitante": "Casa Pia",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.456354332587001,
-          "confianca": "MEDIUM",
-          "justificativa": "Gil Vicente projeta ≈1.3 gol(s) vs ≈0.8 do adversário. Prob vitória: 45.6% (margem: 13.5 p.p.)",
-          "edge": 0.1347,
-          "odd_decimal": 1.76,
-          "ev": -0.1897,
-          "ev_bruto": -0.1968,
-          "prob_mercado_justa": 0.5632,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER_2.5",
-          "probabilidade": 0.6476196308428228,
-          "confianca": "MEDIUM",
-          "justificativa": "Gols esperados no jogo: ≈2.1. UNDER 2.5: 64.8% de probabilidade",
-          "edge": 0.1476,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.639,
-          "confianca": "MEDIUM",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.1.",
-          "edge": 0.139,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.5777,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.3 (casa) x 0.8 (fora). Ambas marcam - Nao: 57.8%",
-          "edge": 0.0777,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "EMPATE",
-          "opcao": "X",
-          "probabilidade": 0.32164101426213354,
-          "confianca": "LOW",
-          "justificativa": "Ambas defesas solidas (60% / 60% de aproveitamento defensivo). Empate com 32.2% de probabilidade",
-          "edge": 0.0,
-          "odd_decimal": 3.65,
-          "ev": 0.1843,
-          "ev_bruto": 0.174,
-          "prob_mercado_justa": 0.2716,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": "ERRO"
-        }
-      ]
-    },
-    {
-      "competicao": "Primera Division",
-      "data": "2026-08-24T19:30:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 1,
-        "visitante": 1
-      },
-      "times": {
-        "casa": "Málaga",
-        "visitante": "Deportivo",
-        "escudo_casa": "https://crests.football-data.org/84.png",
-        "escudo_visitante": "https://crests.football-data.org/560.png"
-      },
-      "probabilidades": {
-        "casa": 0.3283367280575244,
-        "empate": 0.30336525129958813,
-        "visitante": 0.36829802064288747
-      },
-      "favorito": {
-        "nome": "Deportivo",
-        "prob": 0.36829802064288747,
-        "vantagem": 0.03996129258536307
-      },
-      "gols_esperados": {
-        "casa": 1.2061500000000003,
-        "visitante": 1.29,
-        "total": 2.49615
-      },
-      "mercados": {
-        "under_25": 0.5448551669036588,
-        "over_25": 0.4551448330963413,
-        "btts_yes": 0.524432375750266,
-        "btts_no": 0.475567624249734
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.0,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.38
-        },
-        "visitante": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.535
-        }
-      },
-      "leitura_rapida": "Deportivo favorito (37%, risco alto). Mercado de gols equilibrado (xG total ≈2.5).",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.0,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 1,
-          "jogos": 1
-        },
-        "visitante": {
-          "prob_marca": 1.0,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 1,
-          "sequencia_sofre": 1,
-          "jogos": 1
-        }
-      },
-      "alertas": [],
-      "analise_ia": {
-        "palpite_ia": "2",
-        "confianca_ia": "baixa",
-        "nota": "Deportivo favorito (36.8%), margem 4.0 p.p., xG 1.3 e mercado de gols equilibrado."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (4.0 p.p. < 10.0 p.p.)",
-        "competition": "Primera Division",
-        "sport_key": "soccer_spain_la_liga",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "19/08 19:00",
-            "mandante": "Atleti",
-            "visitante": "Málaga",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "17/08 19:00",
-            "mandante": "Deportivo",
-            "visitante": "Elche",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "2",
-          "probabilidade": 0.36829802064288747,
-          "confianca": "LOW",
-          "justificativa": "Deportivo projeta ≈1.3 gol(s) vs ≈1.2 do adversário. Prob vitória: 36.8% (margem: 4.0 p.p.)",
-          "edge": 0.04,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER_2.5",
-          "probabilidade": 0.5448551669036588,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.5. UNDER 2.5: 54.5% de probabilidade",
-          "edge": 0.0449,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.7286,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.5.",
-          "edge": 0.2286,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.5244,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.2 (casa) x 1.3 (fora). Ambas marcam - Sim: 52.4%",
-          "edge": 0.0244,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "EMPATE",
-          "opcao": "X",
-          "probabilidade": 0.30336525129958813,
-          "confianca": "LOW",
-          "justificativa": "Ambas defesas solidas (60% / 60% de aproveitamento defensivo). Empate com 30.3% de probabilidade",
-          "edge": 0.0,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        }
-      ]
-    },
-    {
-      "competicao": "Campeonato Brasileiro Série A",
-      "data": "2026-08-24T23:00:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 2,
-        "visitante": 3
-      },
-      "times": {
-        "casa": "Botafogo",
-        "visitante": "Paranaense",
-        "escudo_casa": "https://crests.football-data.org/1770.png",
-        "escudo_visitante": "https://crests.football-data.org/1768.png"
-      },
-      "probabilidades": {
-        "casa": 0.315462731292183,
-        "empate": 0.31935559544104497,
-        "visitante": 0.36518167326677203
-      },
-      "favorito": {
-        "nome": "Paranaense",
-        "prob": 0.36518167326677203,
-        "vantagem": 0.04582607782572706
-      },
-      "gols_esperados": {
-        "casa": 1.0889714136581121,
-        "visitante": 1.1892811578156508,
-        "total": 2.2782525714737627
-      },
-      "mercados": {
-        "under_25": 0.6018461153892344,
-        "over_25": 0.3981538846107656,
-        "btts_yes": 0.47870098885805024,
-        "btts_no": 0.5212990111419498
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5090909090909091,
-          "ataque": 0.5599999999999999,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.5981818181818183
-        },
-        "visitante": {
-          "forma_recente": 0.7636363636363637,
-          "ataque": 0.48,
-          "defesa": 0.76,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.6792727272727274
-        }
-      },
-      "leitura_rapida": "Paranaense favorito (37%, risco alto). Jogo fechado esperado (xG total ≈2.3). Under 2.5 com 60%. | Forma recente: Paranaense em baixa.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "em baixa"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.8,
-          "prob_sofre": 0.8,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 2,
-          "jogos": 10
-        },
-        "visitante": {
-          "prob_marca": 0.7,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 2,
-          "sequencia_sofre": 1,
-          "jogos": 10
-        }
-      },
-      "alertas": [],
-      "analise_ia": {
-        "palpite_ia": "2",
-        "confianca_ia": "baixa",
-        "nota": "Paranaense favorito (36.5%), margem 4.6 p.p., xG 1.2 e tendência de menos gols (Under 2.5 60%)."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (4.6 p.p. < 10.0 p.p.)",
-        "competition": "Campeonato Brasileiro Série A",
-        "sport_key": "soccer_brazil_campeonato",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "16/08 21:30",
-            "mandante": "Vitória",
-            "visitante": "Botafogo",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "09/08 00:00",
-            "mandante": "Botafogo",
-            "visitante": "Fluminense",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "26/07 19:00",
-            "mandante": "Cruzeiro",
-            "visitante": "Botafogo",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "23/07 22:30",
-            "mandante": "Botafogo",
-            "visitante": "Vitória",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "16/07 22:30",
-            "mandante": "Botafogo",
-            "visitante": "Santos",
-            "placar": "2 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "15/08 21:30",
-            "mandante": "Paranaense",
-            "visitante": "Bragantino",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "09/08 21:30",
-            "mandante": "Santos",
-            "visitante": "Paranaense",
-            "placar": "0 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "30/07 22:30",
-            "mandante": "Corinthians",
-            "visitante": "Paranaense",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "25/07 21:30",
-            "mandante": "Paranaense",
-            "visitante": "Internacional",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "23/07 00:30",
-            "mandante": "São Paulo",
-            "visitante": "Paranaense",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "2",
-          "probabilidade": 0.36518167326677203,
-          "confianca": "LOW",
-          "justificativa": "Paranaense projeta ≈1.2 gol(s) vs ≈1.1 do adversário. Prob vitória: 36.5% (margem: 4.6 p.p.)",
-          "edge": 0.0458,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER_2.5",
-          "probabilidade": 0.6018461153892344,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.3. UNDER 2.5: 60.2% de probabilidade",
-          "edge": 0.1018,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.7098,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.3. | Forma: 80% casa marca, 70% visit marca",
-          "edge": 0.2098,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.4888,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.1 (casa) x 1.2 (fora). Ambas marcam - Nao: 48.9% | Forma 0j/2j consecutivos com gol",
-          "edge": -0.0112,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "EMPATE",
-          "opcao": "X",
-          "probabilidade": 0.31935559544104497,
-          "confianca": "LOW",
-          "justificativa": "Ambas defesas solidas (60% / 76% de aproveitamento defensivo). Empate com 31.9% de probabilidade",
-          "edge": 0.0,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        }
-      ]
-    },
     {
       "competicao": "Primera Division",
       "data": "2026-08-25T19:00:00Z",
@@ -1444,52 +194,438 @@
           "resultado_verificador": null
         }
       ]
+    },
+    {
+      "competicao": "Copa Libertadores",
+      "data": "2026-08-26T00:30:00Z",
+      "status": "SCHEDULED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Independiente",
+        "visitante": "Tolima",
+        "escudo_casa": "https://crests.football-data.org/6989.png",
+        "escudo_visitante": "https://crests.football-data.org/4437.png"
+      },
+      "probabilidades": {
+        "casa": 0.6907540611290957,
+        "empate": 0.20776099838606646,
+        "visitante": 0.1014849404848379
+      },
+      "favorito": {
+        "nome": "Independiente",
+        "prob": 0.6907540611290957,
+        "vantagem": 0.4829930627430292
+      },
+      "gols_esperados": {
+        "casa": 2.1577714285714293,
+        "visitante": 0.7287256235827666,
+        "total": 2.886497052154196
+      },
+      "mercados": {
+        "under_25": 0.4498845994708417,
+        "over_25": 0.5501154005291583,
+        "btts_yes": 0.46898017105698203,
+        "btts_no": 0.5310198289430179
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.7666666666666666,
+          "ataque": 1.0,
+          "defesa": 0.7333333333333334,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.8250000000000001
+        },
+        "visitante": {
+          "forma_recente": 0.5363636363636364,
+          "ataque": 0.16,
+          "defesa": 0.44000000000000006,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.45572727272727276
+        }
+      },
+      "leitura_rapida": "Independiente favorito (69%, risco forte). Jogo mais aberto (xG total ≈2.9). Over 2.5 com 55%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 0.667,
+          "prob_sofre": 0.667,
+          "sequencia_marca": 2,
+          "sequencia_sofre": 0,
+          "jogos": 6
+        },
+        "visitante": {
+          "prob_marca": 0.6,
+          "prob_sofre": 0.4,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 0,
+          "jogos": 10
+        }
+      },
+      "alertas": [],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "alta",
+        "nota": "Independiente favorito (69.1%), margem 48.3 p.p., xG 2.2 e tendência de jogo aberto (Over 2.5 55%)."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente na consulta por liga",
+        "competition": "Copa Libertadores",
+        "sport_key": "soccer_conmebol_libertadores",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "27/05 22:00",
+            "mandante": "Independiente",
+            "visitante": "Rosario",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "20/05 02:00",
+            "mandante": "Independiente",
+            "visitante": "Libertad",
+            "placar": "4 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "06/05 00:00",
+            "mandante": "Universidad Central",
+            "visitante": "Independiente",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "28/04 22:00",
+            "mandante": "Libertad",
+            "visitante": "Independiente",
+            "placar": "2 x 3",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "16/04 02:00",
+            "mandante": "Independiente",
+            "visitante": "Universidad Central",
+            "placar": "3 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "27/05 00:30",
+            "mandante": "Universitario",
+            "visitante": "Tolima",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "19/05 22:00",
+            "mandante": "Coquimbo Unido",
+            "visitante": "Tolima",
+            "placar": "3 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "07/05 02:00",
+            "mandante": "Tolima",
+            "visitante": "Club Nacional",
+            "placar": "3 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "29/04 02:00",
+            "mandante": "Tolima",
+            "visitante": "Coquimbo Unido",
+            "placar": "3 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "14/04 22:00",
+            "mandante": "Club Nacional",
+            "visitante": "Tolima",
+            "placar": "3 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.6907540611290957,
+          "confianca": "HIGH",
+          "justificativa": "Independiente projeta ≈2.2 gol(s) vs ≈0.7 do adversário. Prob vitória: 69.1% (margem: 48.3 p.p.)",
+          "edge": 0.483,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_2.5",
+          "probabilidade": 0.5501154005291583,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.9. OVER 2.5: 55.0% de probabilidade",
+          "edge": 0.0501,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.7702,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.9. | Forma: 67% casa marca, 60% visit marca",
+          "edge": 0.2702,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.5585,
+          "confianca": "LOW",
+          "justificativa": "xG: 2.2 (casa) x 0.7 (fora). Ambas marcam - Nao: 55.9% | Forma 2j/0j consecutivos com gol",
+          "edge": 0.0585,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Primera Division",
+      "data": "2026-08-26T19:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Real Madrid",
+        "visitante": "Real Sociedad",
+        "escudo_casa": "https://crests.football-data.org/86.png",
+        "escudo_visitante": "https://crests.football-data.org/92.png"
+      },
+      "probabilidades": {
+        "casa": 0.4887486591388113,
+        "empate": 0.2995602722666053,
+        "visitante": 0.2116910685945834
+      },
+      "favorito": {
+        "nome": "Real Madrid",
+        "prob": 0.4887486591388113,
+        "vantagem": 0.18918838687220602
+      },
+      "gols_esperados": {
+        "casa": 1.4493864,
+        "visitante": 0.8772,
+        "total": 2.3265864
+      },
+      "mercados": {
+        "under_25": 0.5890827308825788,
+        "over_25": 0.41091726911742127,
+        "btts_yes": 0.46308699436361894,
+        "btts_no": 0.5369130056363811
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 1.0,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.73
+        },
+        "visitante": {
+          "forma_recente": 0.0,
+          "ataque": 0.0,
+          "defesa": 0.6,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.26
+        }
+      },
+      "leitura_rapida": "Real Madrid favorito (49%, risco moderado). Jogo fechado esperado (xG total ≈2.3). Under 2.5 com 59%.",
+      "tendencia": {
+        "casa": "indefinida",
+        "visitante": "indefinida"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 1.0,
+          "prob_sofre": 1.0,
+          "sequencia_marca": 1,
+          "sequencia_sofre": 1,
+          "jogos": 1
+        },
+        "visitante": {
+          "prob_marca": 0.0,
+          "prob_sofre": 1.0,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 1,
+          "jogos": 1
+        }
+      },
+      "alertas": [
+        "Real Madrid jogou recentemente — possível desgaste físico."
+      ],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "alta",
+        "nota": "Real Madrid favorito (48.9%), margem 18.9 p.p., xG 1.4 e tendência de menos gols (Under 2.5 59%)."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
+        "competition": "Primera Division",
+        "sport_key": "soccer_spain_la_liga",
+        "odds_match_id": "a979daf40170f19586fa4e8682ba698d",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%"
+      },
+      "odds_integradas": true,
+      "odds_valor_alto": true,
+      "historico": {
+        "casa": [
+          {
+            "data": "22/08 19:30",
+            "mandante": "Espanyol",
+            "visitante": "Real Madrid",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "21/08 19:00",
+            "mandante": "Real Betis",
+            "visitante": "Real Sociedad",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.4887486591388113,
+          "confianca": "MEDIUM",
+          "justificativa": "Real Madrid projeta ≈1.4 gol(s) vs ≈0.9 do adversário. Prob vitória: 48.9% (margem: 18.9 p.p.)",
+          "edge": 0.1892,
+          "odd_decimal": 1.37,
+          "ev": 0.0855,
+          "ev_bruto": -0.3304,
+          "prob_mercado_justa": 0.4503,
+          "valor_esperado_positivo": true,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER_2.5",
+          "probabilidade": 0.5890827308825788,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.3. UNDER 2.5: 58.9% de probabilidade",
+          "edge": 0.0891,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.6913,
+          "confianca": "MEDIUM",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.3.",
+          "edge": 0.1913,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.5369,
+          "confianca": "LOW",
+          "justificativa": "xG: 1.4 (casa) x 0.9 (fora). Ambas marcam - Nao: 53.7%",
+          "edge": 0.0369,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
     }
   ],
   "acertos_hoje": {
-    "acertos": 18,
-    "total": 31,
-    "taxa": 0.581
+    "acertos": 0,
+    "total": 0,
+    "taxa": null
   },
   "daily_tips_ids": [
     {
-      "casa": "Fulham",
-      "visitante": "Chelsea",
-      "data": "2026-08-24T19:00:00Z",
+      "casa": "Independiente",
+      "visitante": "Tolima",
+      "data": "2026-08-26T00:30:00Z",
       "tipo": "OVER_UNDER",
       "opcao": "OVER_1.5",
-      "probabilidade": 0.7934
-    },
-    {
-      "casa": "Osasuna",
-      "visitante": "Levante",
-      "data": "2026-08-24T17:30:00Z",
-      "tipo": "OVER_UNDER",
-      "opcao": "OVER_1.5",
-      "probabilidade": 0.7603
+      "probabilidade": 0.7702
     }
   ],
-  "daily_tips_date": "2026-08-24",
+  "daily_tips_date": "2026-08-25",
   "recovery_tip": {
-    "ativo": true,
-    "disparado_em": "2026-08-24T18:01:40-03:00",
-    "jogo": {
-      "casa": "Málaga",
-      "visitante": "Deportivo",
-      "data": "2026-08-24T19:30:00Z",
-      "competicao": "Primera Division",
-      "times": {
-        "casa": "Málaga",
-        "visitante": "Deportivo"
-      }
-    },
-    "palpite": {
-      "tipo": "OVER_UNDER",
-      "opcao": "OVER_1.5",
-      "probabilidade": 0.7286,
-      "confianca": "HIGH",
-      "resultado_verificador": "ACERTO"
-    }
+    "ativo": false
   },
-  "recovery_tip_date": "2026-08-24"
+  "recovery_tip_date": "2026-08-25"
 }
