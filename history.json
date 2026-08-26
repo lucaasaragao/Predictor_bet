@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-08-26",
+      "ultima_atualizacao": "2026-08-26T00:02:49-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-08-25",
       "ultima_atualizacao": "2026-08-25T23:35:06-03:00",
       "finalizados": 1,
@@ -2888,173 +2915,6 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.663,
               "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-08-21",
-      "ultima_atualizacao": "2026-08-21T23:42:28-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.462,
-      "total_acertos": 6,
-      "total_palpites": 13,
-      "mercados": {
-        "WINNER": {
-          "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
-        },
-        "OVER_UNDER": {
-          "acertos": 3,
-          "total": 6,
-          "taxa": 0.5
-        },
-        "BTTS": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
-        },
-        "EMPATE": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 3,
-          "brier": 0.6034,
-          "log_loss": 1.0039
-        },
-        "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.1711,
-          "log_loss": 0.5209
-        },
-        "BTTS": {
-          "n": 3,
-          "brier": 0.2571,
-          "log_loss": 0.7042
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-08-21T00:30:00Z",
-          "casa": "Corinthians",
-          "visitante": "Rosario",
-          "competicao": "Copa Libertadores",
-          "placar": "1-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "X",
-              "confianca": "LOW",
-              "probabilidade": 0.387,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_1.5",
-              "confianca": "LOW",
-              "probabilidade": 0.509,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "LOW",
-              "probabilidade": 0.502,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.669,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "EMPATE",
-              "opcao": "X",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.387,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-08-21T19:00:00Z",
-          "casa": "Arsenal",
-          "visitante": "Coventry City",
-          "competicao": "Premier League",
-          "placar": "3-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.391,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.544,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.793,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.592,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-08-21T19:00:00Z",
-          "casa": "Real Betis",
-          "visitante": "Real Sociedad",
-          "competicao": "Primera Division",
-          "placar": "1-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.385,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.508,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.769,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.565,
-              "resultado": "ERRO"
             }
           ]
         }
