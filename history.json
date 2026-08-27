@@ -2,30 +2,121 @@
   "dias": [
     {
       "data": "2026-08-27",
-      "ultima_atualizacao": "2026-08-27T17:20:25-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-08-27T20:38:43-03:00",
+      "finalizados": 2,
+      "taxa_geral": 0.625,
+      "total_acertos": 5,
+      "total_palpites": 8,
+      "mercados": {
+        "WINNER": {
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 3,
+          "total": 4,
+          "taxa": 0.75
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 2,
+          "brier": 0.5923,
+          "log_loss": 0.9934
+        },
+        "OVER_UNDER": {
+          "n": 2,
+          "brier": 0.2496,
+          "log_loss": 0.6924
+        },
+        "BTTS": {
+          "n": 2,
+          "brier": 0.2467,
+          "log_loss": 0.6865
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-08-27T18:30:00Z",
+          "casa": "Celta",
+          "visitante": "Osasuna",
+          "competicao": "Primera Division",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.404,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.514,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.752,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.454,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-27T19:00:00Z",
+          "casa": "Barça",
+          "visitante": "Athletic",
+          "competicao": "Primera Division",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.454,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.515,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.751,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.464,
+              "resultado": "ACERTO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-08-26",
