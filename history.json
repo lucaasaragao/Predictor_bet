@@ -2,23 +2,28 @@
   "dias": [
     {
       "data": "2026-08-28",
-      "ultima_atualizacao": "2026-08-28T16:42:14-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.5,
-      "total_acertos": 2,
-      "total_palpites": 4,
+      "ultima_atualizacao": "2026-08-28T18:55:08-03:00",
+      "finalizados": 8,
+      "taxa_geral": 0.697,
+      "total_acertos": 23,
+      "total_palpites": 33,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
+          "acertos": 6,
+          "total": 8,
+          "taxa": 0.75
         },
         "OVER_UNDER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "acertos": 12,
+          "total": 16,
+          "taxa": 0.75
         },
         "BTTS": {
+          "acertos": 5,
+          "total": 8,
+          "taxa": 0.625
+        },
+        "EMPATE": {
           "acertos": 0,
           "total": 1,
           "taxa": 0.0
@@ -26,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 1,
-          "brier": 0.5855,
-          "log_loss": 0.9801
+          "n": 8,
+          "brier": 0.5498,
+          "log_loss": 0.9362
         },
         "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.3071,
-          "log_loss": 0.8078
+          "n": 8,
+          "brier": 0.2649,
+          "log_loss": 0.7254
         },
         "BTTS": {
-          "n": 1,
-          "brier": 0.2337,
-          "log_loss": 0.6605
+          "n": 8,
+          "brier": 0.2512,
+          "log_loss": 0.6948
         }
       },
       "jogos": [
@@ -76,6 +81,272 @@
               "confianca": "LOW",
               "probabilidade": 0.483,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-28T18:30:00Z",
+          "casa": "Bayern",
+          "visitante": "Stuttgart",
+          "competicao": "Bundesliga",
+          "placar": "5-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.402,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.602,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.843,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.65,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-28T18:45:00Z",
+          "casa": "Lille",
+          "visitante": "PSG",
+          "competicao": "Ligue 1",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.45,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.618,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.841,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.641,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-28T18:45:00Z",
+          "casa": "Milan",
+          "visitante": "Venezia FC",
+          "competicao": "Serie A",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.382,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.512,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.754,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.549,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-28T19:00:00Z",
+          "casa": "Crystal Palace",
+          "visitante": "Man City",
+          "competicao": "Premier League",
+          "placar": "1-4",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.426,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.539,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.79,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.584,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-28T19:00:00Z",
+          "casa": "Wrexham",
+          "visitante": "Birmingham",
+          "competicao": "Championship",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.356,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.663,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.625,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.572,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.339,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-28T19:15:00Z",
+          "casa": "Rio Ave",
+          "visitante": "Sporting CP",
+          "competicao": "Primeira Liga",
+          "placar": "0-4",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.488,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.546,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.795,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.424,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-28T19:30:00Z",
+          "casa": "Alavés",
+          "visitante": "Villarreal",
+          "competicao": "Primera Division",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.592,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.568,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.86,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.375,
+              "resultado": "ACERTO"
             }
           ]
         }
