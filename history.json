@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-08-29",
-      "ultima_atualizacao": "2026-08-29T15:26:42-03:00",
-      "finalizados": 25,
-      "taxa_geral": 0.539,
-      "total_acertos": 55,
-      "total_palpites": 102,
+      "ultima_atualizacao": "2026-08-29T15:37:59-03:00",
+      "finalizados": 29,
+      "taxa_geral": 0.537,
+      "total_acertos": 65,
+      "total_palpites": 121,
       "mercados": {
         "WINNER": {
-          "acertos": 11,
-          "total": 25,
-          "taxa": 0.44
+          "acertos": 15,
+          "total": 29,
+          "taxa": 0.517
         },
         "OVER_UNDER": {
-          "acertos": 30,
-          "total": 50,
-          "taxa": 0.6
+          "acertos": 35,
+          "total": 58,
+          "taxa": 0.603
         },
         "BTTS": {
-          "acertos": 13,
-          "total": 25,
-          "taxa": 0.52
+          "acertos": 14,
+          "total": 29,
+          "taxa": 0.483
         },
         "EMPATE": {
           "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "total": 5,
+          "taxa": 0.2
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 25,
-          "brier": 0.6515,
-          "log_loss": 1.0804
+          "n": 29,
+          "brier": 0.6416,
+          "log_loss": 1.0654
         },
         "OVER_UNDER": {
-          "n": 25,
-          "brier": 0.2449,
-          "log_loss": 0.6828
+          "n": 29,
+          "brier": 0.2603,
+          "log_loss": 0.714
         },
         "BTTS": {
-          "n": 25,
-          "brier": 0.2209,
-          "log_loss": 0.6333
+          "n": 29,
+          "brier": 0.2313,
+          "log_loss": 0.6548
         }
       },
       "jogos": [
@@ -982,6 +982,175 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.551,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-29T16:30:00Z",
+          "casa": "Sassuolo",
+          "visitante": "Torino",
+          "competicao": "Serie A",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.365,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.614,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.67,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.532,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.323,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-29T16:30:00Z",
+          "casa": "Dortmund",
+          "visitante": "HSV",
+          "competicao": "Bundesliga",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.402,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.602,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.843,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.65,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-29T16:30:00Z",
+          "casa": "Monza",
+          "visitante": "Udinese",
+          "competicao": "Serie A",
+          "placar": "2-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.365,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.713,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.491,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.309,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-29T16:30:00Z",
+          "casa": "Fiorentina",
+          "visitante": "Frosinone",
+          "competicao": "Serie A",
+          "placar": "0-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.383,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.586,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.695,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.51,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.314,
               "resultado": "ERRO"
             }
           ]
