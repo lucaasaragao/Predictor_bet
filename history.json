@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-08-29",
-      "ultima_atualizacao": "2026-08-29T14:00:49-03:00",
-      "finalizados": 22,
-      "taxa_geral": 0.562,
-      "total_acertos": 50,
-      "total_palpites": 89,
+      "ultima_atualizacao": "2026-08-29T14:16:04-03:00",
+      "finalizados": 23,
+      "taxa_geral": 0.543,
+      "total_acertos": 51,
+      "total_palpites": 94,
       "mercados": {
         "WINNER": {
           "acertos": 10,
-          "total": 22,
-          "taxa": 0.455
+          "total": 23,
+          "taxa": 0.435
         },
         "OVER_UNDER": {
-          "acertos": 26,
-          "total": 44,
-          "taxa": 0.591
+          "acertos": 27,
+          "total": 46,
+          "taxa": 0.587
         },
         "BTTS": {
           "acertos": 13,
-          "total": 22,
-          "taxa": 0.591
+          "total": 23,
+          "taxa": 0.565
         },
         "EMPATE": {
           "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
+          "total": 2,
+          "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 22,
-          "brier": 0.6414,
-          "log_loss": 1.0658
+          "n": 23,
+          "brier": 0.6494,
+          "log_loss": 1.0779
         },
         "OVER_UNDER": {
-          "n": 22,
-          "brier": 0.2393,
-          "log_loss": 0.6714
+          "n": 23,
+          "brier": 0.2444,
+          "log_loss": 0.6817
         },
         "BTTS": {
-          "n": 22,
-          "brier": 0.2152,
-          "log_loss": 0.6218
+          "n": 23,
+          "brier": 0.2179,
+          "log_loss": 0.6272
         }
       },
       "jogos": [
@@ -864,6 +864,50 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.388,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-29T15:00:00Z",
+          "casa": "Levante",
+          "visitante": "Real Betis",
+          "competicao": "Primera Division",
+          "placar": "5-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.427,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.597,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.686,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.525,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.312,
               "resultado": "ERRO"
             }
           ]
