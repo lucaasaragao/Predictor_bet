@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-08-29",
-      "ultima_atualizacao": "2026-08-29T10:30:47-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.333,
-      "total_acertos": 4,
-      "total_palpites": 12,
+      "ultima_atualizacao": "2026-08-29T10:38:41-03:00",
+      "finalizados": 4,
+      "taxa_geral": 0.375,
+      "total_acertos": 6,
+      "total_palpites": 16,
       "mercados": {
         "WINNER": {
           "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
+          "total": 4,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 2,
-          "total": 6,
-          "taxa": 0.333
+          "acertos": 4,
+          "total": 8,
+          "taxa": 0.5
         },
         "BTTS": {
           "acertos": 0,
-          "total": 3,
+          "total": 4,
           "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 3,
-          "brier": 0.5134,
-          "log_loss": 0.8934
+          "n": 4,
+          "brier": 0.5781,
+          "log_loss": 0.981
         },
         "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.2761,
-          "log_loss": 0.7449
+          "n": 4,
+          "brier": 0.2682,
+          "log_loss": 0.7292
         },
         "BTTS": {
-          "n": 3,
-          "brier": 0.3103,
-          "log_loss": 0.8169
+          "n": 4,
+          "brier": 0.2839,
+          "log_loss": 0.7632
         }
       },
       "jogos": [
@@ -149,6 +149,43 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.625,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-29T11:30:00Z",
+          "casa": "Liverpool",
+          "visitante": "Nottingham",
+          "competicao": "Premier League",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.434,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.506,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.758,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.452,
               "resultado": "ERRO"
             }
           ]
