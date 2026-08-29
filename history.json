@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-29",
-      "ultima_atualizacao": "2026-08-29T17:37:28-03:00",
-      "finalizados": 32,
-      "taxa_geral": 0.537,
-      "total_acertos": 72,
-      "total_palpites": 134,
+      "ultima_atualizacao": "2026-08-29T17:44:57-03:00",
+      "finalizados": 33,
+      "taxa_geral": 0.536,
+      "total_acertos": 74,
+      "total_palpites": 138,
       "mercados": {
         "WINNER": {
           "acertos": 17,
-          "total": 32,
-          "taxa": 0.531
+          "total": 33,
+          "taxa": 0.515
         },
         "OVER_UNDER": {
-          "acertos": 38,
-          "total": 64,
-          "taxa": 0.594
+          "acertos": 39,
+          "total": 66,
+          "taxa": 0.591
         },
         "BTTS": {
-          "acertos": 16,
-          "total": 32,
-          "taxa": 0.5
+          "acertos": 17,
+          "total": 33,
+          "taxa": 0.515
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 32,
-          "brier": 0.6265,
-          "log_loss": 1.0446
+          "n": 33,
+          "brier": 0.6284,
+          "log_loss": 1.0471
         },
         "OVER_UNDER": {
-          "n": 32,
-          "brier": 0.2604,
-          "log_loss": 0.7137
+          "n": 33,
+          "brier": 0.2603,
+          "log_loss": 0.7135
         },
         "BTTS": {
-          "n": 32,
-          "brier": 0.2273,
-          "log_loss": 0.6463
+          "n": 33,
+          "brier": 0.2265,
+          "log_loss": 0.6447
         }
       },
       "jogos": [
@@ -1269,6 +1269,43 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.551,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-29T18:45:00Z",
+          "casa": "Lorient",
+          "visitante": "Troyes",
+          "competicao": "Ligue 1",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.383,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.507,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.757,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.553,
               "resultado": "ACERTO"
             }
           ]
