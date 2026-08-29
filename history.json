@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-29",
-      "ultima_atualizacao": "2026-08-29T14:16:04-03:00",
-      "finalizados": 23,
-      "taxa_geral": 0.543,
-      "total_acertos": 51,
-      "total_palpites": 94,
+      "ultima_atualizacao": "2026-08-29T14:24:09-03:00",
+      "finalizados": 24,
+      "taxa_geral": 0.531,
+      "total_acertos": 52,
+      "total_palpites": 98,
       "mercados": {
         "WINNER": {
           "acertos": 10,
-          "total": 23,
-          "taxa": 0.435
+          "total": 24,
+          "taxa": 0.417
         },
         "OVER_UNDER": {
-          "acertos": 27,
-          "total": 46,
-          "taxa": 0.587
+          "acertos": 28,
+          "total": 48,
+          "taxa": 0.583
         },
         "BTTS": {
           "acertos": 13,
-          "total": 23,
-          "taxa": 0.565
+          "total": 24,
+          "taxa": 0.542
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 23,
-          "brier": 0.6494,
-          "log_loss": 1.0779
+          "n": 24,
+          "brier": 0.6541,
+          "log_loss": 1.0844
         },
         "OVER_UNDER": {
-          "n": 23,
-          "brier": 0.2444,
-          "log_loss": 0.6817
+          "n": 24,
+          "brier": 0.2451,
+          "log_loss": 0.6832
         },
         "BTTS": {
-          "n": 23,
-          "brier": 0.2179,
-          "log_loss": 0.6272
+          "n": 24,
+          "brier": 0.2174,
+          "log_loss": 0.6263
         }
       },
       "jogos": [
@@ -908,6 +908,43 @@
               "opcao": "X",
               "confianca": "LOW",
               "probabilidade": 0.312,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-29T15:15:00Z",
+          "casa": "Strasbourg",
+          "visitante": "RC Lens",
+          "competicao": "Ligue 1",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.417,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.512,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.754,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.454,
               "resultado": "ERRO"
             }
           ]
