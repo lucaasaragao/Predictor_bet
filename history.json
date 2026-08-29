@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-08-29",
+      "ultima_atualizacao": "2026-08-29T00:36:46-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-08-28",
       "ultima_atualizacao": "2026-08-28T23:57:15-03:00",
       "finalizados": 9,
@@ -712,335 +739,6 @@
               "opcao": "X",
               "confianca": "LOW",
               "probabilidade": 0.329,
-              "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-08-24",
-      "ultima_atualizacao": "2026-08-24T23:47:56-03:00",
-      "finalizados": 7,
-      "taxa_geral": 0.581,
-      "total_acertos": 18,
-      "total_palpites": 31,
-      "mercados": {
-        "WINNER": {
-          "acertos": 3,
-          "total": 7,
-          "taxa": 0.429
-        },
-        "OVER_UNDER": {
-          "acertos": 10,
-          "total": 14,
-          "taxa": 0.714
-        },
-        "BTTS": {
-          "acertos": 4,
-          "total": 7,
-          "taxa": 0.571
-        },
-        "EMPATE": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 7,
-          "brier": 0.6624,
-          "log_loss": 1.0773
-        },
-        "OVER_UNDER": {
-          "n": 7,
-          "brier": 0.2359,
-          "log_loss": 0.6644
-        },
-        "BTTS": {
-          "n": 7,
-          "brier": 0.2425,
-          "log_loss": 0.6778
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-08-24T16:30:00Z",
-          "casa": "Bologna",
-          "visitante": "Lazio",
-          "competicao": "Serie A",
-          "placar": "0-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.382,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.512,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.754,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.549,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-08-24T17:30:00Z",
-          "casa": "Osasuna",
-          "visitante": "Levante",
-          "competicao": "Primera Division",
-          "placar": "0-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.576,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.501,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.76,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.499,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-08-24T18:45:00Z",
-          "casa": "Roma",
-          "visitante": "Fiorentina",
-          "competicao": "Serie A",
-          "placar": "4-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.382,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.512,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.754,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.549,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-08-24T19:00:00Z",
-          "casa": "Fulham",
-          "visitante": "Chelsea",
-          "competicao": "Premier League",
-          "placar": "2-3",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.391,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.544,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.793,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.592,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-08-24T19:15:00Z",
-          "casa": "Gil Vicente",
-          "visitante": "Casa Pia",
-          "competicao": "Primeira Liga",
-          "placar": "2-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.456,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.648,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.639,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.578,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "EMPATE",
-              "opcao": "X",
-              "confianca": "LOW",
-              "probabilidade": 0.322,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-08-24T19:30:00Z",
-          "casa": "Málaga",
-          "visitante": "Deportivo",
-          "competicao": "Primera Division",
-          "placar": "1-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "2",
-              "confianca": "LOW",
-              "probabilidade": 0.368,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.545,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.729,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.524,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "EMPATE",
-              "opcao": "X",
-              "confianca": "LOW",
-              "probabilidade": 0.303,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-08-24T23:00:00Z",
-          "casa": "Botafogo",
-          "visitante": "Paranaense",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "2-3",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "2",
-              "confianca": "LOW",
-              "probabilidade": 0.365,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.602,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.71,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.489,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "EMPATE",
-              "opcao": "X",
-              "confianca": "LOW",
-              "probabilidade": 0.319,
               "resultado": "ERRO"
             }
           ]
