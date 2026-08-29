@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-29",
-      "ultima_atualizacao": "2026-08-29T13:29:17-03:00",
-      "finalizados": 20,
-      "taxa_geral": 0.556,
-      "total_acertos": 45,
-      "total_palpites": 81,
+      "ultima_atualizacao": "2026-08-29T13:38:17-03:00",
+      "finalizados": 22,
+      "taxa_geral": 0.562,
+      "total_acertos": 50,
+      "total_palpites": 89,
       "mercados": {
         "WINNER": {
-          "acertos": 9,
-          "total": 20,
-          "taxa": 0.45
+          "acertos": 10,
+          "total": 22,
+          "taxa": 0.455
         },
         "OVER_UNDER": {
-          "acertos": 22,
-          "total": 40,
-          "taxa": 0.55
+          "acertos": 26,
+          "total": 44,
+          "taxa": 0.591
         },
         "BTTS": {
           "acertos": 13,
-          "total": 20,
-          "taxa": 0.65
+          "total": 22,
+          "taxa": 0.591
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 20,
-          "brier": 0.6512,
-          "log_loss": 1.0799
+          "n": 22,
+          "brier": 0.6414,
+          "log_loss": 1.0658
         },
         "OVER_UNDER": {
-          "n": 20,
-          "brier": 0.2447,
-          "log_loss": 0.6822
+          "n": 22,
+          "brier": 0.2393,
+          "log_loss": 0.6714
         },
         "BTTS": {
-          "n": 20,
-          "brier": 0.2179,
-          "log_loss": 0.6271
+          "n": 22,
+          "brier": 0.2152,
+          "log_loss": 0.6218
         }
       },
       "jogos": [
@@ -791,6 +791,80 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.673,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-29T14:30:00Z",
+          "casa": "Alverca",
+          "visitante": "Santa Clara",
+          "competicao": "Primeira Liga",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.441,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.738,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.476,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-29T14:30:00Z",
+          "casa": "Arouca",
+          "visitante": "Marítimo",
+          "competicao": "Primeira Liga",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.535,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.609,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.835,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.388,
+              "resultado": "ERRO"
             }
           ]
         }
