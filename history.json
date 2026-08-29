@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-29",
-      "ultima_atualizacao": "2026-08-29T13:21:57-03:00",
-      "finalizados": 19,
-      "taxa_geral": 0.545,
-      "total_acertos": 42,
-      "total_palpites": 77,
+      "ultima_atualizacao": "2026-08-29T13:29:17-03:00",
+      "finalizados": 20,
+      "taxa_geral": 0.556,
+      "total_acertos": 45,
+      "total_palpites": 81,
       "mercados": {
         "WINNER": {
           "acertos": 9,
-          "total": 19,
-          "taxa": 0.474
+          "total": 20,
+          "taxa": 0.45
         },
         "OVER_UNDER": {
-          "acertos": 20,
-          "total": 38,
-          "taxa": 0.526
+          "acertos": 22,
+          "total": 40,
+          "taxa": 0.55
         },
         "BTTS": {
-          "acertos": 12,
-          "total": 19,
-          "taxa": 0.632
+          "acertos": 13,
+          "total": 20,
+          "taxa": 0.65
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 19,
-          "brier": 0.6427,
-          "log_loss": 1.0691
+          "n": 20,
+          "brier": 0.6512,
+          "log_loss": 1.0799
         },
         "OVER_UNDER": {
-          "n": 19,
-          "brier": 0.2517,
-          "log_loss": 0.6967
+          "n": 20,
+          "brier": 0.2447,
+          "log_loss": 0.6822
         },
         "BTTS": {
-          "n": 19,
-          "brier": 0.2237,
-          "log_loss": 0.6393
+          "n": 20,
+          "brier": 0.2179,
+          "log_loss": 0.6271
         }
       },
       "jogos": [
@@ -753,6 +753,43 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.443,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-29T14:30:00Z",
+          "casa": "Excelsior",
+          "visitante": "Sparta",
+          "competicao": "Eredivisie",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.48,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.552,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.869,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.673,
               "resultado": "ACERTO"
             }
           ]
