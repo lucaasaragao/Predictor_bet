@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-08-29",
-      "ultima_atualizacao": "2026-08-29T16:01:07-03:00",
-      "finalizados": 30,
-      "taxa_geral": 0.544,
-      "total_acertos": 68,
-      "total_palpites": 125,
+      "ultima_atualizacao": "2026-08-29T16:14:34-03:00",
+      "finalizados": 32,
+      "taxa_geral": 0.537,
+      "total_acertos": 72,
+      "total_palpites": 134,
       "mercados": {
         "WINNER": {
-          "acertos": 16,
-          "total": 30,
-          "taxa": 0.533
+          "acertos": 17,
+          "total": 32,
+          "taxa": 0.531
         },
         "OVER_UNDER": {
-          "acertos": 36,
-          "total": 60,
-          "taxa": 0.6
+          "acertos": 38,
+          "total": 64,
+          "taxa": 0.594
         },
         "BTTS": {
-          "acertos": 15,
-          "total": 30,
+          "acertos": 16,
+          "total": 32,
           "taxa": 0.5
         },
         "EMPATE": {
           "acertos": 1,
-          "total": 5,
-          "taxa": 0.2
+          "total": 6,
+          "taxa": 0.167
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 30,
-          "brier": 0.631,
-          "log_loss": 1.0507
+          "n": 32,
+          "brier": 0.6265,
+          "log_loss": 1.0446
         },
         "OVER_UNDER": {
-          "n": 30,
-          "brier": 0.2545,
-          "log_loss": 0.7018
+          "n": 32,
+          "brier": 0.2604,
+          "log_loss": 0.7137
         },
         "BTTS": {
-          "n": 30,
-          "brier": 0.2268,
-          "log_loss": 0.6453
+          "n": 32,
+          "brier": 0.2273,
+          "log_loss": 0.6463
         }
       },
       "jogos": [
@@ -1188,6 +1188,87 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.692,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-29T17:00:00Z",
+          "casa": "Real Sociedad",
+          "visitante": "Espanyol",
+          "competicao": "Primera Division",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.403,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.69,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.517,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.314,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-29T17:00:00Z",
+          "casa": "Acad. Viseu",
+          "visitante": "Porto",
+          "competicao": "Primeira Liga",
+          "placar": "0-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.525,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.589,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.691,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.551,
               "resultado": "ACERTO"
             }
           ]
