@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-30",
-      "ultima_atualizacao": "2026-08-30T14:22:45-03:00",
-      "finalizados": 12,
-      "taxa_geral": 0.62,
-      "total_acertos": 31,
-      "total_palpites": 50,
+      "ultima_atualizacao": "2026-08-30T14:30:16-03:00",
+      "finalizados": 14,
+      "taxa_geral": 0.655,
+      "total_acertos": 38,
+      "total_palpites": 58,
       "mercados": {
         "WINNER": {
-          "acertos": 7,
-          "total": 12,
-          "taxa": 0.583
+          "acertos": 9,
+          "total": 14,
+          "taxa": 0.643
         },
         "OVER_UNDER": {
-          "acertos": 16,
-          "total": 24,
-          "taxa": 0.667
+          "acertos": 20,
+          "total": 28,
+          "taxa": 0.714
         },
         "BTTS": {
-          "acertos": 7,
-          "total": 12,
-          "taxa": 0.583
+          "acertos": 8,
+          "total": 14,
+          "taxa": 0.571
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 12,
-          "brier": 0.6056,
-          "log_loss": 1.0147
+          "n": 14,
+          "brier": 0.597,
+          "log_loss": 1.0013
         },
         "OVER_UNDER": {
-          "n": 12,
-          "brier": 0.1941,
-          "log_loss": 0.5773
+          "n": 14,
+          "brier": 0.1901,
+          "log_loss": 0.5695
         },
         "BTTS": {
-          "n": 12,
-          "brier": 0.2072,
-          "log_loss": 0.6046
+          "n": 14,
+          "brier": 0.2186,
+          "log_loss": 0.6285
         }
       },
       "jogos": [
@@ -502,6 +502,80 @@
               "confianca": "LOW",
               "probabilidade": 0.445,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-30T15:15:00Z",
+          "casa": "Stade Rennais",
+          "visitante": "Le Mans",
+          "competicao": "Ligue 1",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.394,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.567,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.809,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.61,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-30T15:30:00Z",
+          "casa": "Augsburg",
+          "visitante": "Schalke",
+          "competicao": "Bundesliga",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.402,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.602,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.843,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.65,
+              "resultado": "ERRO"
             }
           ]
         }
