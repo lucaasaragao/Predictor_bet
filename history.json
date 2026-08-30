@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-30",
-      "ultima_atualizacao": "2026-08-30T11:57:19-03:00",
-      "finalizados": 4,
-      "taxa_geral": 0.588,
-      "total_acertos": 10,
-      "total_palpites": 17,
+      "ultima_atualizacao": "2026-08-30T12:15:38-03:00",
+      "finalizados": 7,
+      "taxa_geral": 0.655,
+      "total_acertos": 19,
+      "total_palpites": 29,
       "mercados": {
         "WINNER": {
-          "acertos": 2,
-          "total": 4,
-          "taxa": 0.5
+          "acertos": 4,
+          "total": 7,
+          "taxa": 0.571
         },
         "OVER_UNDER": {
-          "acertos": 5,
-          "total": 8,
-          "taxa": 0.625
+          "acertos": 10,
+          "total": 14,
+          "taxa": 0.714
         },
         "BTTS": {
-          "acertos": 3,
-          "total": 4,
-          "taxa": 0.75
+          "acertos": 5,
+          "total": 7,
+          "taxa": 0.714
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 4,
-          "brier": 0.6722,
-          "log_loss": 1.1006
+          "n": 7,
+          "brier": 0.6643,
+          "log_loss": 1.0947
         },
         "OVER_UNDER": {
-          "n": 4,
-          "brier": 0.128,
-          "log_loss": 0.4397
+          "n": 7,
+          "brier": 0.1976,
+          "log_loss": 0.5842
         },
         "BTTS": {
-          "n": 4,
-          "brier": 0.1537,
-          "log_loss": 0.4941
+          "n": 7,
+          "brier": 0.1716,
+          "log_loss": 0.5312
         }
       },
       "jogos": [
@@ -198,6 +198,117 @@
               "opcao": "X",
               "confianca": "LOW",
               "probabilidade": 0.308,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-30T13:00:00Z",
+          "casa": "Chelsea",
+          "visitante": "Brighton Hove",
+          "competicao": "Premier League",
+          "placar": "4-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.391,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.544,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.793,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-30T13:00:00Z",
+          "casa": "Leeds United",
+          "visitante": "Brentford",
+          "competicao": "Premier League",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.405,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.584,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.853,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.662,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-30T13:00:00Z",
+          "casa": "Paris FC",
+          "visitante": "Nice",
+          "competicao": "Ligue 1",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.383,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.507,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.757,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.553,
               "resultado": "ERRO"
             }
           ]
