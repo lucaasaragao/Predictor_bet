@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-30",
-      "ultima_atualizacao": "2026-08-30T17:44:59-03:00",
-      "finalizados": 19,
-      "taxa_geral": 0.654,
-      "total_acertos": 51,
-      "total_palpites": 78,
+      "ultima_atualizacao": "2026-08-30T17:52:27-03:00",
+      "finalizados": 22,
+      "taxa_geral": 0.622,
+      "total_acertos": 56,
+      "total_palpites": 90,
       "mercados": {
         "WINNER": {
-          "acertos": 12,
-          "total": 19,
-          "taxa": 0.632
+          "acertos": 14,
+          "total": 22,
+          "taxa": 0.636
         },
         "OVER_UNDER": {
-          "acertos": 27,
-          "total": 38,
-          "taxa": 0.711
+          "acertos": 29,
+          "total": 44,
+          "taxa": 0.659
         },
         "BTTS": {
-          "acertos": 11,
-          "total": 19,
-          "taxa": 0.579
+          "acertos": 12,
+          "total": 22,
+          "taxa": 0.545
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 19,
-          "brier": 0.5981,
-          "log_loss": 1.0014
+          "n": 22,
+          "brier": 0.5907,
+          "log_loss": 0.9903
         },
         "OVER_UNDER": {
-          "n": 19,
-          "brier": 0.2018,
-          "log_loss": 0.5937
+          "n": 22,
+          "brier": 0.2163,
+          "log_loss": 0.6232
         },
         "BTTS": {
-          "n": 19,
-          "brier": 0.2162,
-          "log_loss": 0.6238
+          "n": 22,
+          "brier": 0.2349,
+          "log_loss": 0.662
         }
       },
       "jogos": [
@@ -760,6 +760,117 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.661,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-30T18:45:00Z",
+          "casa": "Cagliari",
+          "visitante": "Inter",
+          "competicao": "Serie A",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.396,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.581,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.818,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.62,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-30T18:45:00Z",
+          "casa": "Monaco",
+          "visitante": "Marseille",
+          "competicao": "Ligue 1",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.397,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.586,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.821,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.624,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-30T18:45:00Z",
+          "casa": "Lazio",
+          "visitante": "Genoa",
+          "competicao": "Serie A",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.478,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.756,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.465,
               "resultado": "ACERTO"
             }
           ]
