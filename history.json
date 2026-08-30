@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-08-30",
+      "ultima_atualizacao": "2026-08-30T00:31:42-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-08-29",
       "ultima_atualizacao": "2026-08-29T23:58:13-03:00",
       "finalizados": 42,
@@ -2278,99 +2305,6 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.537,
-              "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-08-25",
-      "ultima_atualizacao": "2026-08-25T23:35:06-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.6,
-      "total_acertos": 3,
-      "total_palpites": 5,
-      "mercados": {
-        "WINNER": {
-          "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
-        },
-        "OVER_UNDER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
-        },
-        "BTTS": {
-          "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
-        },
-        "EMPATE": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 1,
-          "brier": 0.6388,
-          "log_loss": 1.0571
-        },
-        "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.1342,
-          "log_loss": 0.4563
-        },
-        "BTTS": {
-          "n": 1,
-          "brier": 0.2055,
-          "log_loss": 0.6038
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-08-25T19:00:00Z",
-          "casa": "Valencia",
-          "visitante": "Real Betis",
-          "competicao": "Primera Division",
-          "placar": "0-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "2",
-              "confianca": "LOW",
-              "probabilidade": 0.347,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.634,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.653,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.547,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "EMPATE",
-              "opcao": "X",
-              "confianca": "LOW",
-              "probabilidade": 0.329,
               "resultado": "ERRO"
             }
           ]
