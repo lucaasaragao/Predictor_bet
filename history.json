@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-30",
-      "ultima_atualizacao": "2026-08-30T14:30:16-03:00",
-      "finalizados": 14,
-      "taxa_geral": 0.655,
-      "total_acertos": 38,
-      "total_palpites": 58,
+      "ultima_atualizacao": "2026-08-30T14:38:48-03:00",
+      "finalizados": 15,
+      "taxa_geral": 0.677,
+      "total_acertos": 42,
+      "total_palpites": 62,
       "mercados": {
         "WINNER": {
-          "acertos": 9,
-          "total": 14,
-          "taxa": 0.643
+          "acertos": 10,
+          "total": 15,
+          "taxa": 0.667
         },
         "OVER_UNDER": {
-          "acertos": 20,
-          "total": 28,
-          "taxa": 0.714
+          "acertos": 22,
+          "total": 30,
+          "taxa": 0.733
         },
         "BTTS": {
-          "acertos": 8,
-          "total": 14,
-          "taxa": 0.571
+          "acertos": 9,
+          "total": 15,
+          "taxa": 0.6
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 14,
-          "brier": 0.597,
-          "log_loss": 1.0013
+          "n": 15,
+          "brier": 0.5944,
+          "log_loss": 0.9972
         },
         "OVER_UNDER": {
-          "n": 14,
-          "brier": 0.1901,
-          "log_loss": 0.5695
+          "n": 15,
+          "brier": 0.1913,
+          "log_loss": 0.5722
         },
         "BTTS": {
-          "n": 14,
-          "brier": 0.2186,
-          "log_loss": 0.6285
+          "n": 15,
+          "brier": 0.2151,
+          "log_loss": 0.6216
         }
       },
       "jogos": [
@@ -576,6 +576,43 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.65,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-30T15:30:00Z",
+          "casa": "Man United",
+          "visitante": "Ipswich Town",
+          "competicao": "Premier League",
+          "placar": "5-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.391,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.544,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.793,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ACERTO"
             }
           ]
         }
