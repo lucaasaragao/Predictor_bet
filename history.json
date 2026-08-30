@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-08-30",
-      "ultima_atualizacao": "2026-08-30T12:56:28-03:00",
-      "finalizados": 8,
-      "taxa_geral": 0.667,
-      "total_acertos": 22,
-      "total_palpites": 33,
+      "ultima_atualizacao": "2026-08-30T13:15:37-03:00",
+      "finalizados": 9,
+      "taxa_geral": 0.632,
+      "total_acertos": 24,
+      "total_palpites": 38,
       "mercados": {
         "WINNER": {
           "acertos": 5,
-          "total": 8,
-          "taxa": 0.625
+          "total": 9,
+          "taxa": 0.556
         },
         "OVER_UNDER": {
-          "acertos": 11,
-          "total": 16,
-          "taxa": 0.688
+          "acertos": 12,
+          "total": 18,
+          "taxa": 0.667
         },
         "BTTS": {
           "acertos": 6,
-          "total": 8,
-          "taxa": 0.75
+          "total": 9,
+          "taxa": 0.667
         },
         "EMPATE": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 8,
-          "brier": 0.6486,
-          "log_loss": 1.0717
+          "n": 9,
+          "brier": 0.656,
+          "log_loss": 1.0826
         },
         "OVER_UNDER": {
-          "n": 8,
-          "brier": 0.1909,
-          "log_loss": 0.5708
+          "n": 9,
+          "brier": 0.206,
+          "log_loss": 0.6015
         },
         "BTTS": {
-          "n": 8,
-          "brier": 0.1655,
-          "log_loss": 0.5187
+          "n": 9,
+          "brier": 0.1746,
+          "log_loss": 0.5374
         }
       },
       "jogos": [
@@ -346,6 +346,50 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.65,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-30T14:00:00Z",
+          "casa": "Paranaense",
+          "visitante": "Fluminense",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "3-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.571,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.707,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.497,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
               "resultado": "ACERTO"
             }
           ]
