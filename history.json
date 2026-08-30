@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-30",
-      "ultima_atualizacao": "2026-08-30T16:11:24-03:00",
-      "finalizados": 15,
-      "taxa_geral": 0.677,
-      "total_acertos": 42,
-      "total_palpites": 62,
+      "ultima_atualizacao": "2026-08-30T16:19:35-03:00",
+      "finalizados": 17,
+      "taxa_geral": 0.643,
+      "total_acertos": 45,
+      "total_palpites": 70,
       "mercados": {
         "WINNER": {
-          "acertos": 10,
-          "total": 15,
-          "taxa": 0.667
+          "acertos": 11,
+          "total": 17,
+          "taxa": 0.647
         },
         "OVER_UNDER": {
-          "acertos": 22,
-          "total": 30,
-          "taxa": 0.733
+          "acertos": 24,
+          "total": 34,
+          "taxa": 0.706
         },
         "BTTS": {
           "acertos": 9,
-          "total": 15,
-          "taxa": 0.6
+          "total": 17,
+          "taxa": 0.529
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 15,
-          "brier": 0.5944,
-          "log_loss": 0.9972
+          "n": 17,
+          "brier": 0.5959,
+          "log_loss": 0.9994
         },
         "OVER_UNDER": {
-          "n": 15,
-          "brier": 0.1913,
-          "log_loss": 0.5722
+          "n": 17,
+          "brier": 0.2035,
+          "log_loss": 0.5971
         },
         "BTTS": {
-          "n": 15,
-          "brier": 0.2151,
-          "log_loss": 0.6216
+          "n": 17,
+          "brier": 0.2237,
+          "log_loss": 0.6393
         }
       },
       "jogos": [
@@ -613,6 +613,80 @@
               "confianca": "LOW",
               "probabilidade": 0.592,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-30T16:30:00Z",
+          "casa": "Napoli",
+          "visitante": "Como 1907",
+          "competicao": "Serie A",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.43,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.511,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.77,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.439,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-30T17:00:00Z",
+          "casa": "Casa Pia",
+          "visitante": "Moreirense",
+          "competicao": "Primeira Liga",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.46,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.825,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.619,
+              "resultado": "ERRO"
             }
           ]
         }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T16:11:24-03:00",
+  "generated_at": "2026-08-30T16:19:35-03:00",
   "analysis_date": "2026-08-30",
   "total_jogos": 37,
   "odds_debug_visual": false,
@@ -2630,7 +2630,7 @@
     {
       "competicao": "Serie A",
       "data": "2026-08-30T16:30:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
         "visitante": 2
@@ -2753,7 +2753,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -2767,7 +2767,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -2781,7 +2781,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -2795,14 +2795,14 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
     {
       "competicao": "Primeira Liga",
       "data": "2026-08-30T17:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 0,
         "visitante": 1
@@ -2951,7 +2951,7 @@
           "ev_bruto": 0.587,
           "prob_mercado_justa": 0.288,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -2965,7 +2965,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -2979,7 +2979,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "BTTS",
@@ -2993,7 +2993,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -3002,7 +3002,7 @@
       "data": "2026-08-30T17:30:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 2,
+        "casa": 3,
         "visitante": 1
       },
       "times": {
@@ -3154,10 +3154,10 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-08-30T18:00:00Z",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "placar_atual": {
         "casa": 0,
-        "visitante": 0
+        "visitante": 2
       },
       "times": {
         "casa": "Cambuur",
@@ -3308,10 +3308,10 @@
     {
       "competicao": "Serie A",
       "data": "2026-08-30T18:45:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 1
       },
       "times": {
         "casa": "Cagliari",
@@ -3480,10 +3480,10 @@
     {
       "competicao": "Ligue 1",
       "data": "2026-08-30T18:45:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 1,
+        "visitante": 0
       },
       "times": {
         "casa": "Monaco",
@@ -3652,10 +3652,10 @@
     {
       "competicao": "Serie A",
       "data": "2026-08-30T18:45:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Lazio",
@@ -3824,10 +3824,10 @@
     {
       "competicao": "Campeonato Brasileiro Série A",
       "data": "2026-08-30T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Flamengo",
@@ -4019,10 +4019,10 @@
     {
       "competicao": "Campeonato Brasileiro Série A",
       "data": "2026-08-30T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Corinthians",
@@ -6667,9 +6667,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 42,
-    "total": 62,
-    "taxa": 0.677
+    "acertos": 45,
+    "total": 70,
+    "taxa": 0.643
   },
   "daily_tips_ids": [
     {
