@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-08-30",
-      "ultima_atualizacao": "2026-08-30T18:24:34-03:00",
-      "finalizados": 22,
-      "taxa_geral": 0.622,
-      "total_acertos": 56,
-      "total_palpites": 90,
+      "ultima_atualizacao": "2026-08-30T18:33:12-03:00",
+      "finalizados": 24,
+      "taxa_geral": 0.612,
+      "total_acertos": 60,
+      "total_palpites": 98,
       "mercados": {
         "WINNER": {
           "acertos": 14,
-          "total": 22,
-          "taxa": 0.636
+          "total": 24,
+          "taxa": 0.583
         },
         "OVER_UNDER": {
-          "acertos": 29,
-          "total": 44,
-          "taxa": 0.659
+          "acertos": 31,
+          "total": 48,
+          "taxa": 0.646
         },
         "BTTS": {
-          "acertos": 12,
-          "total": 22,
-          "taxa": 0.545
+          "acertos": 14,
+          "total": 24,
+          "taxa": 0.583
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 22,
-          "brier": 0.5907,
-          "log_loss": 0.9903
+          "n": 24,
+          "brier": 0.6105,
+          "log_loss": 1.0192
         },
         "OVER_UNDER": {
-          "n": 22,
-          "brier": 0.2163,
-          "log_loss": 0.6232
+          "n": 24,
+          "brier": 0.2151,
+          "log_loss": 0.6208
         },
         "BTTS": {
-          "n": 22,
-          "brier": 0.2349,
-          "log_loss": 0.662
+          "n": 24,
+          "brier": 0.2366,
+          "log_loss": 0.6655
         }
       },
       "jogos": [
@@ -871,6 +871,80 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.465,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-30T19:30:00Z",
+          "casa": "Celta",
+          "visitante": "Athletic",
+          "competicao": "Primera Division",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.437,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.624,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.661,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.552,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-30T19:30:00Z",
+          "casa": "Famalicão",
+          "visitante": "Gil Vicente",
+          "competicao": "Primeira Liga",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.456,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.512,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.771,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.443,
               "resultado": "ACERTO"
             }
           ]
