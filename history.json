@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-08-31",
-      "ultima_atualizacao": "2026-08-31T18:08:15-03:00",
-      "finalizados": 4,
-      "taxa_geral": 0.375,
-      "total_acertos": 6,
-      "total_palpites": 16,
+      "ultima_atualizacao": "2026-08-31T18:20:27-03:00",
+      "finalizados": 6,
+      "taxa_geral": 0.417,
+      "total_acertos": 10,
+      "total_palpites": 24,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 4,
-          "taxa": 0.25
-        },
-        "OVER_UNDER": {
-          "acertos": 4,
-          "total": 8,
+          "acertos": 3,
+          "total": 6,
           "taxa": 0.5
         },
+        "OVER_UNDER": {
+          "acertos": 5,
+          "total": 12,
+          "taxa": 0.417
+        },
         "BTTS": {
-          "acertos": 1,
-          "total": 4,
-          "taxa": 0.25
+          "acertos": 2,
+          "total": 6,
+          "taxa": 0.333
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 4,
-          "brier": 0.6145,
-          "log_loss": 1.0086
+          "n": 6,
+          "brier": 0.58,
+          "log_loss": 0.9648
         },
         "OVER_UNDER": {
-          "n": 4,
-          "brier": 0.2269,
-          "log_loss": 0.6461
+          "n": 6,
+          "brier": 0.2558,
+          "log_loss": 0.7045
         },
         "BTTS": {
-          "n": 4,
-          "brier": 0.3344,
-          "log_loss": 0.8641
+          "n": 6,
+          "brier": 0.3224,
+          "log_loss": 0.8401
         }
       },
       "jogos": [
@@ -186,6 +186,80 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.592,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-31T19:15:00Z",
+          "casa": "SL Benfica",
+          "visitante": "Estoril Praia",
+          "competicao": "Primeira Liga",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.379,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.738,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-31T19:15:00Z",
+          "casa": "Braga",
+          "visitante": "Vitória SC",
+          "competicao": "Primeira Liga",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.457,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.585,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.821,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.615,
               "resultado": "ERRO"
             }
           ]
