@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-08-31",
-      "ultima_atualizacao": "2026-08-31T17:54:50-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.5,
+      "ultima_atualizacao": "2026-08-31T18:08:15-03:00",
+      "finalizados": 4,
+      "taxa_geral": 0.375,
       "total_acertos": 6,
-      "total_palpites": 12,
+      "total_palpites": 16,
       "mercados": {
         "WINNER": {
           "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "total": 4,
+          "taxa": 0.25
         },
         "OVER_UNDER": {
           "acertos": 4,
-          "total": 6,
-          "taxa": 0.667
+          "total": 8,
+          "taxa": 0.5
         },
         "BTTS": {
           "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "total": 4,
+          "taxa": 0.25
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 3,
-          "brier": 0.5925,
-          "log_loss": 0.9748
+          "n": 4,
+          "brier": 0.6145,
+          "log_loss": 1.0086
         },
         "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.204,
-          "log_loss": 0.6
+          "n": 4,
+          "brier": 0.2269,
+          "log_loss": 0.6461
         },
         "BTTS": {
-          "n": 3,
-          "brier": 0.329,
-          "log_loss": 0.8533
+          "n": 4,
+          "brier": 0.3344,
+          "log_loss": 0.8641
         }
       },
       "jogos": [
@@ -150,6 +150,43 @@
               "confianca": "LOW",
               "probabilidade": 0.455,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-31T19:00:00Z",
+          "casa": "Aston Villa",
+          "visitante": "Arsenal",
+          "competicao": "Premier League",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.391,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.544,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.793,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ERRO"
             }
           ]
         }
