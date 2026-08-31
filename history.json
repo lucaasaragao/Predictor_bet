@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-08-30",
-      "ultima_atualizacao": "2026-08-30T20:57:14-03:00",
-      "finalizados": 26,
-      "taxa_geral": 0.613,
-      "total_acertos": 65,
-      "total_palpites": 106,
+      "ultima_atualizacao": "2026-08-30T21:58:09-03:00",
+      "finalizados": 27,
+      "taxa_geral": 0.604,
+      "total_acertos": 67,
+      "total_palpites": 111,
       "mercados": {
         "WINNER": {
-          "acertos": 14,
-          "total": 26,
-          "taxa": 0.538
+          "acertos": 15,
+          "total": 27,
+          "taxa": 0.556
         },
         "OVER_UNDER": {
-          "acertos": 34,
-          "total": 52,
-          "taxa": 0.654
+          "acertos": 35,
+          "total": 54,
+          "taxa": 0.648
         },
         "BTTS": {
           "acertos": 16,
-          "total": 26,
-          "taxa": 0.615
+          "total": 27,
+          "taxa": 0.593
         },
         "EMPATE": {
           "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "total": 3,
+          "taxa": 0.333
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 26,
-          "brier": 0.6267,
-          "log_loss": 1.0406
+          "n": 27,
+          "brier": 0.6254,
+          "log_loss": 1.0386
         },
         "OVER_UNDER": {
-          "n": 26,
-          "brier": 0.2271,
-          "log_loss": 0.6461
+          "n": 27,
+          "brier": 0.2308,
+          "log_loss": 0.6535
         },
         "BTTS": {
-          "n": 26,
-          "brier": 0.2302,
-          "log_loss": 0.6524
+          "n": 27,
+          "brier": 0.2308,
+          "log_loss": 0.6537
         }
       },
       "jogos": [
@@ -1020,6 +1020,50 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.652,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-08-30T22:30:00Z",
+          "casa": "Bahia",
+          "visitante": "Internacional",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.571,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.707,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.497,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
+              "resultado": "ERRO"
             }
           ]
         }
