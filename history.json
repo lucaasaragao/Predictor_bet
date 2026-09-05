@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-09-05",
-      "ultima_atualizacao": "2026-09-05T14:18:07-03:00",
-      "finalizados": 26,
-      "taxa_geral": 0.581,
-      "total_acertos": 61,
-      "total_palpites": 105,
+      "ultima_atualizacao": "2026-09-05T16:07:11-03:00",
+      "finalizados": 31,
+      "taxa_geral": 0.579,
+      "total_acertos": 73,
+      "total_palpites": 126,
       "mercados": {
         "WINNER": {
-          "acertos": 10,
-          "total": 26,
-          "taxa": 0.385
+          "acertos": 13,
+          "total": 31,
+          "taxa": 0.419
         },
         "OVER_UNDER": {
-          "acertos": 35,
-          "total": 52,
-          "taxa": 0.673
+          "acertos": 41,
+          "total": 62,
+          "taxa": 0.661
         },
         "BTTS": {
-          "acertos": 16,
-          "total": 26,
-          "taxa": 0.615
+          "acertos": 19,
+          "total": 31,
+          "taxa": 0.613
         },
         "EMPATE": {
           "acertos": 0,
-          "total": 1,
+          "total": 2,
           "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 26,
-          "brier": 0.7017,
-          "log_loss": 1.1495
+          "n": 31,
+          "brier": 0.6843,
+          "log_loss": 1.1245
         },
         "OVER_UNDER": {
-          "n": 26,
-          "brier": 0.2367,
-          "log_loss": 0.6662
+          "n": 31,
+          "brier": 0.2436,
+          "log_loss": 0.6803
         },
         "BTTS": {
-          "n": 26,
-          "brier": 0.2355,
-          "log_loss": 0.6642
+          "n": 31,
+          "brier": 0.2493,
+          "log_loss": 0.6923
         }
       },
       "jogos": [
@@ -1012,6 +1012,198 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.452,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-05T16:00:00Z",
+          "casa": "Inter",
+          "visitante": "Napoli",
+          "competicao": "Serie A",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.476,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.61,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.836,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.631,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-05T16:30:00Z",
+          "casa": "Rayo Vallecano",
+          "visitante": "Santander",
+          "competicao": "Primera Division",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.356,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.657,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.631,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.567,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.336,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-05T16:30:00Z",
+          "casa": "Hull City",
+          "visitante": "Aston Villa",
+          "competicao": "Premier League",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.545,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.57,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.81,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.424,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-05T16:30:00Z",
+          "casa": "Schalke",
+          "visitante": "Bayern",
+          "competicao": "Bundesliga",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.402,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.602,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.843,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.65,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-05T17:00:00Z",
+          "casa": "Marítimo",
+          "visitante": "SL Benfica",
+          "competicao": "Primeira Liga",
+          "placar": "0-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "HIGH",
+              "probabilidade": 0.624,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.542,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.873,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
               "resultado": "ACERTO"
             }
           ]
