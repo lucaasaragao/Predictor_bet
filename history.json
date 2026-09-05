@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-09-05",
-      "ultima_atualizacao": "2026-09-05T18:11:39-03:00",
-      "finalizados": 40,
-      "taxa_geral": 0.568,
-      "total_acertos": 92,
-      "total_palpites": 162,
+      "ultima_atualizacao": "2026-09-05T19:55:08-03:00",
+      "finalizados": 41,
+      "taxa_geral": 0.578,
+      "total_acertos": 96,
+      "total_palpites": 166,
       "mercados": {
         "WINNER": {
-          "acertos": 16,
-          "total": 40,
-          "taxa": 0.4
+          "acertos": 17,
+          "total": 41,
+          "taxa": 0.415
         },
         "OVER_UNDER": {
-          "acertos": 53,
-          "total": 80,
-          "taxa": 0.662
+          "acertos": 55,
+          "total": 82,
+          "taxa": 0.671
         },
         "BTTS": {
-          "acertos": 23,
-          "total": 40,
-          "taxa": 0.575
+          "acertos": 24,
+          "total": 41,
+          "taxa": 0.585
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 40,
-          "brier": 0.6702,
-          "log_loss": 1.1038
+          "n": 41,
+          "brier": 0.6601,
+          "log_loss": 1.0898
         },
         "OVER_UNDER": {
-          "n": 40,
-          "brier": 0.2322,
-          "log_loss": 0.6566
+          "n": 41,
+          "brier": 0.2367,
+          "log_loss": 0.6659
         },
         "BTTS": {
-          "n": 40,
-          "brier": 0.2446,
-          "log_loss": 0.6826
+          "n": 41,
+          "brier": 0.248,
+          "log_loss": 0.6896
         }
       },
       "jogos": [
@@ -1538,6 +1538,43 @@
               "confianca": "LOW",
               "probabilidade": 0.459,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-05T19:30:00Z",
+          "casa": "Sporting CP",
+          "visitante": "CD Nacional",
+          "competicao": "Primeira Liga",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.588,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.575,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.857,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.379,
+              "resultado": "ACERTO"
             }
           ]
         }
