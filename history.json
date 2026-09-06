@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-09-06",
-      "ultima_atualizacao": "2026-09-06T15:13:26-03:00",
-      "finalizados": 18,
-      "taxa_geral": 0.554,
-      "total_acertos": 41,
-      "total_palpites": 74,
+      "ultima_atualizacao": "2026-09-06T17:27:05-03:00",
+      "finalizados": 21,
+      "taxa_geral": 0.523,
+      "total_acertos": 45,
+      "total_palpites": 86,
       "mercados": {
         "WINNER": {
-          "acertos": 7,
-          "total": 18,
-          "taxa": 0.389
+          "acertos": 8,
+          "total": 21,
+          "taxa": 0.381
         },
         "OVER_UNDER": {
-          "acertos": 22,
-          "total": 36,
-          "taxa": 0.611
+          "acertos": 24,
+          "total": 42,
+          "taxa": 0.571
         },
         "BTTS": {
-          "acertos": 12,
-          "total": 18,
-          "taxa": 0.667
+          "acertos": 13,
+          "total": 21,
+          "taxa": 0.619
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 18,
-          "brier": 0.6601,
-          "log_loss": 1.0963
+          "n": 21,
+          "brier": 0.6482,
+          "log_loss": 1.0772
         },
         "OVER_UNDER": {
-          "n": 18,
-          "brier": 0.195,
-          "log_loss": 0.5786
+          "n": 21,
+          "brier": 0.1939,
+          "log_loss": 0.5758
         },
         "BTTS": {
-          "n": 18,
-          "brier": 0.1952,
-          "log_loss": 0.5787
+          "n": 21,
+          "brier": 0.1986,
+          "log_loss": 0.5858
         }
       },
       "jogos": [
@@ -724,6 +724,117 @@
               "confianca": "LOW",
               "probabilidade": 0.537,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-06T16:30:00Z",
+          "casa": "Alavés",
+          "visitante": "Osasuna",
+          "competicao": "Primera Division",
+          "placar": "5-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.549,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.517,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.773,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.471,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-06T16:30:00Z",
+          "casa": "Málaga",
+          "visitante": "Levante",
+          "competicao": "Primera Division",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-06T17:00:00Z",
+          "casa": "Vitória SC",
+          "visitante": "Casa Pia",
+          "competicao": "Primeira Liga",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.45,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.546,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.546,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.659,
+              "resultado": "ACERTO"
             }
           ]
         }
