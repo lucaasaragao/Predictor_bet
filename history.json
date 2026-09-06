@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-09-06",
-      "ultima_atualizacao": "2026-09-06T17:27:05-03:00",
-      "finalizados": 21,
-      "taxa_geral": 0.523,
-      "total_acertos": 45,
-      "total_palpites": 86,
+      "ultima_atualizacao": "2026-09-06T19:14:00-03:00",
+      "finalizados": 28,
+      "taxa_geral": 0.483,
+      "total_acertos": 56,
+      "total_palpites": 116,
       "mercados": {
         "WINNER": {
-          "acertos": 8,
-          "total": 21,
-          "taxa": 0.381
+          "acertos": 10,
+          "total": 28,
+          "taxa": 0.357
         },
         "OVER_UNDER": {
-          "acertos": 24,
-          "total": 42,
-          "taxa": 0.571
+          "acertos": 30,
+          "total": 56,
+          "taxa": 0.536
         },
         "BTTS": {
-          "acertos": 13,
-          "total": 21,
-          "taxa": 0.619
+          "acertos": 16,
+          "total": 28,
+          "taxa": 0.571
         },
         "EMPATE": {
           "acertos": 0,
-          "total": 2,
+          "total": 4,
           "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 21,
-          "brier": 0.6482,
-          "log_loss": 1.0772
+          "n": 28,
+          "brier": 0.6789,
+          "log_loss": 1.1251
         },
         "OVER_UNDER": {
-          "n": 21,
-          "brier": 0.1939,
-          "log_loss": 0.5758
+          "n": 28,
+          "brier": 0.2277,
+          "log_loss": 0.6452
         },
         "BTTS": {
-          "n": 21,
-          "brier": 0.1986,
-          "log_loss": 0.5858
+          "n": 28,
+          "brier": 0.2117,
+          "log_loss": 0.6133
         }
       },
       "jogos": [
@@ -834,6 +834,279 @@
               "opcao": "NO",
               "confianca": "MEDIUM",
               "probabilidade": 0.659,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-06T18:45:00Z",
+          "casa": "Juventus",
+          "visitante": "Milan",
+          "competicao": "Serie A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.457,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.574,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.813,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.606,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-06T18:45:00Z",
+          "casa": "Marseille",
+          "visitante": "Paris FC",
+          "competicao": "Ligue 1",
+          "placar": "2-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.525,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.557,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.717,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.523,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-06T19:00:00Z",
+          "casa": "Internacional",
+          "visitante": "Santos",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.399,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.577,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.703,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.504,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-06T19:00:00Z",
+          "casa": "Cruzeiro",
+          "visitante": "Paranaense",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.571,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.707,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.497,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-06T19:00:00Z",
+          "casa": "Espanyol",
+          "visitante": "Sevilla FC",
+          "competicao": "Primera Division",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.399,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.587,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.822,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.625,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-06T19:00:00Z",
+          "casa": "Clube do Remo",
+          "visitante": "Flamengo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.497,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.6,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.936,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.741,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-06T19:30:00Z",
+          "casa": "Gil Vicente",
+          "visitante": "Acad. Viseu",
+          "competicao": "Primeira Liga",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.553,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.523,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.777,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.467,
               "resultado": "ACERTO"
             }
           ]
