@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-09-07",
-      "ultima_atualizacao": "2026-09-07T16:07:27-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.4,
-      "total_acertos": 2,
-      "total_palpites": 5,
+      "ultima_atualizacao": "2026-09-07T18:59:25-03:00",
+      "finalizados": 5,
+      "taxa_geral": 0.478,
+      "total_acertos": 11,
+      "total_palpites": 23,
       "mercados": {
         "WINNER": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 5,
+          "taxa": 0.2
         },
         "OVER_UNDER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "acertos": 7,
+          "total": 10,
+          "taxa": 0.7
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
+          "acertos": 2,
+          "total": 5,
+          "taxa": 0.4
         },
         "EMPATE": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 3,
+          "taxa": 0.333
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 1,
-          "brier": 0.9033,
-          "log_loss": 1.4767
+          "n": 5,
+          "brier": 0.6958,
+          "log_loss": 1.1433
         },
         "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.1436,
-          "log_loss": 0.4764
+          "n": 5,
+          "brier": 0.1919,
+          "log_loss": 0.5682
         },
         "BTTS": {
-          "n": 1,
-          "brier": 0.1985,
-          "log_loss": 0.5897
+          "n": 5,
+          "brier": 0.2744,
+          "log_loss": 0.7462
         }
       },
       "jogos": [
@@ -88,6 +88,168 @@
               "confianca": "LOW",
               "probabilidade": 0.314,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-07T17:00:00Z",
+          "casa": "Getafe",
+          "visitante": "Celta",
+          "competicao": "Primera Division",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.397,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.502,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.501,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.683,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.376,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-07T18:45:00Z",
+          "casa": "Udinese",
+          "visitante": "Lazio",
+          "competicao": "Serie A",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.392,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.553,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.722,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.484,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.304,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-07T19:15:00Z",
+          "casa": "Estoril Praia",
+          "visitante": "Arouca",
+          "competicao": "Primeira Liga",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.379,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.738,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-07T19:30:00Z",
+          "casa": "Elche",
+          "visitante": "Real Sociedad",
+          "competicao": "Primera Division",
+          "placar": "2-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ACERTO"
             }
           ]
         }
