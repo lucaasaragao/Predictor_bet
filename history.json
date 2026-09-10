@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-09-10",
-      "ultima_atualizacao": "2026-09-10T16:50:11-03:00",
-      "finalizados": 2,
+      "ultima_atualizacao": "2026-09-10T18:59:00-03:00",
+      "finalizados": 7,
       "taxa_geral": 0.75,
-      "total_acertos": 6,
-      "total_palpites": 8,
+      "total_acertos": 21,
+      "total_palpites": 28,
       "mercados": {
         "WINNER": {
-          "acertos": 0,
-          "total": 2,
-          "taxa": 0.0
+          "acertos": 4,
+          "total": 7,
+          "taxa": 0.571
         },
         "OVER_UNDER": {
-          "acertos": 4,
-          "total": 4,
-          "taxa": 1.0
+          "acertos": 12,
+          "total": 14,
+          "taxa": 0.857
         },
         "BTTS": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
+          "acertos": 5,
+          "total": 7,
+          "taxa": 0.714
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.9379,
-          "log_loss": 1.461
+          "n": 7,
+          "brier": 0.6521,
+          "log_loss": 1.0726
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.4407,
-          "log_loss": 1.0927
+          "n": 7,
+          "brier": 0.2585,
+          "log_loss": 0.7122
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.1219,
-          "log_loss": 0.4286
+          "n": 7,
+          "brier": 0.2312,
+          "log_loss": 0.6571
         }
       },
       "jogos": [
@@ -112,6 +112,191 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.682,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-10T19:00:00Z",
+          "casa": "Bayern",
+          "visitante": "Bodø/Glimt",
+          "competicao": "UEFA Champions League",
+          "placar": "5-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.392,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.551,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.798,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.598,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-10T19:00:00Z",
+          "casa": "Como 1907",
+          "visitante": "RB Leipzig",
+          "competicao": "UEFA Champions League",
+          "placar": "4-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.497,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.611,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.837,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.626,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-10T19:00:00Z",
+          "casa": "Man United",
+          "visitante": "Sabah FK",
+          "competicao": "UEFA Champions League",
+          "placar": "4-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.516,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.503,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.891,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.698,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-10T19:00:00Z",
+          "casa": "Slavia Praha",
+          "visitante": "RC Lens",
+          "competicao": "UEFA Champions League",
+          "placar": "2-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.459,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.547,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.795,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.584,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-10T19:15:00Z",
+          "casa": "Amadora",
+          "visitante": "Braga",
+          "competicao": "Primeira Liga",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.379,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.738,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
               "resultado": "ACERTO"
             }
           ]
