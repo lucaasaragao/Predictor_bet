@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-09-09",
-      "ultima_atualizacao": "2026-09-09T19:27:43-03:00",
-      "finalizados": 11,
-      "taxa_geral": 0.682,
-      "total_acertos": 30,
-      "total_palpites": 44,
+      "ultima_atualizacao": "2026-09-09T21:27:40-03:00",
+      "finalizados": 12,
+      "taxa_geral": 0.673,
+      "total_acertos": 33,
+      "total_palpites": 49,
       "mercados": {
         "WINNER": {
-          "acertos": 9,
-          "total": 11,
-          "taxa": 0.818
+          "acertos": 10,
+          "total": 12,
+          "taxa": 0.833
         },
         "OVER_UNDER": {
-          "acertos": 13,
-          "total": 22,
-          "taxa": 0.591
+          "acertos": 14,
+          "total": 24,
+          "taxa": 0.583
         },
         "BTTS": {
-          "acertos": 8,
-          "total": 11,
-          "taxa": 0.727
+          "acertos": 9,
+          "total": 12,
+          "taxa": 0.75
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 11,
-          "brier": 0.4648,
-          "log_loss": 0.8156
+          "n": 12,
+          "brier": 0.4658,
+          "log_loss": 0.8165
         },
         "OVER_UNDER": {
-          "n": 11,
-          "brier": 0.1885,
-          "log_loss": 0.5647
+          "n": 12,
+          "brier": 0.185,
+          "log_loss": 0.5579
         },
         "BTTS": {
-          "n": 11,
-          "brier": 0.2242,
-          "log_loss": 0.6383
+          "n": 12,
+          "brier": 0.2227,
+          "log_loss": 0.6356
         }
       },
       "jogos": [
@@ -446,6 +451,50 @@
               "confianca": "LOW",
               "probabilidade": 0.381,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-09T22:00:00Z",
+          "casa": "Palmeiras",
+          "visitante": "LDU de Quito",
+          "competicao": "Copa Libertadores",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.438,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.617,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.719,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.487,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.316,
+              "resultado": "ERRO"
             }
           ]
         }
