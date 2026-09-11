@@ -2,30 +2,269 @@
   "dias": [
     {
       "data": "2026-09-11",
-      "ultima_atualizacao": "2026-09-11T16:39:40-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-09-11T18:55:46-03:00",
+      "finalizados": 6,
+      "taxa_geral": 0.417,
+      "total_acertos": 10,
+      "total_palpites": 24,
+      "mercados": {
+        "WINNER": {
+          "acertos": 3,
+          "total": 6,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 5,
+          "total": 12,
+          "taxa": 0.417
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 2,
+          "total": 6,
+          "taxa": 0.333
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 6,
+          "brier": 0.748,
+          "log_loss": 1.2013
+        },
+        "OVER_UNDER": {
+          "n": 6,
+          "brier": 0.3195,
+          "log_loss": 0.864
+        },
+        "BTTS": {
+          "n": 6,
+          "brier": 0.2357,
+          "log_loss": 0.6621
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-09-11T18:00:00Z",
+          "casa": "AZ",
+          "visitante": "Willem II",
+          "competicao": "Eredivisie",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.782,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.661,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.946,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.328,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-11T18:30:00Z",
+          "casa": "Union Berlin",
+          "visitante": "Schalke",
+          "competicao": "Bundesliga",
+          "placar": "1-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.555,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.526,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.88,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.67,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-11T18:45:00Z",
+          "casa": "Stade Rennais",
+          "visitante": "Marseille",
+          "competicao": "Ligue 1",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.383,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.507,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.757,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.553,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-11T18:45:00Z",
+          "casa": "Venezia FC",
+          "visitante": "Fiorentina",
+          "competicao": "Serie A",
+          "placar": "2-4",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.382,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.512,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.754,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.549,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-11T19:00:00Z",
+          "casa": "Sevilla FC",
+          "visitante": "Valencia",
+          "competicao": "Primera Division",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.52,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.61,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.836,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.618,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-11T19:00:00Z",
+          "casa": "West Ham",
+          "visitante": "Wrexham",
+          "competicao": "Championship",
+          "placar": "6-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.403,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.503,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.858,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.666,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-09-10",
