@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-09-12",
-      "ultima_atualizacao": "2026-09-12T18:34:53-03:00",
-      "finalizados": 43,
-      "taxa_geral": 0.598,
-      "total_acertos": 107,
-      "total_palpites": 179,
+      "ultima_atualizacao": "2026-09-12T20:17:33-03:00",
+      "finalizados": 45,
+      "taxa_geral": 0.599,
+      "total_acertos": 112,
+      "total_palpites": 187,
       "mercados": {
         "WINNER": {
-          "acertos": 16,
-          "total": 43,
-          "taxa": 0.372
+          "acertos": 17,
+          "total": 45,
+          "taxa": 0.378
         },
         "OVER_UNDER": {
-          "acertos": 62,
-          "total": 86,
-          "taxa": 0.721
+          "acertos": 65,
+          "total": 90,
+          "taxa": 0.722
         },
         "BTTS": {
-          "acertos": 27,
-          "total": 43,
-          "taxa": 0.628
+          "acertos": 28,
+          "total": 45,
+          "taxa": 0.622
         },
         "EMPATE": {
           "acertos": 2,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 43,
-          "brier": 0.6818,
-          "log_loss": 1.12
+          "n": 45,
+          "brier": 0.6849,
+          "log_loss": 1.1247
         },
         "OVER_UNDER": {
-          "n": 43,
-          "brier": 0.2197,
-          "log_loss": 0.6303
+          "n": 45,
+          "brier": 0.2209,
+          "log_loss": 0.6328
         },
         "BTTS": {
-          "n": 43,
-          "brier": 0.2133,
-          "log_loss": 0.616
+          "n": 45,
+          "brier": 0.2128,
+          "log_loss": 0.6152
         }
       },
       "jogos": [
@@ -1683,6 +1683,80 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.402,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-12T19:30:00Z",
+          "casa": "Acad. Viseu",
+          "visitante": "Vitória SC",
+          "competicao": "Primeira Liga",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.379,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.738,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-12T20:00:00Z",
+          "casa": "Chapecoense",
+          "visitante": "Internacional",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.507,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.544,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.741,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.491,
               "resultado": "ERRO"
             }
           ]
