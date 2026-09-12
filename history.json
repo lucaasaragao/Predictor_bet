@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-09-12",
-      "ultima_atualizacao": "2026-09-12T14:20:32-03:00",
-      "finalizados": 26,
-      "taxa_geral": 0.664,
-      "total_acertos": 71,
-      "total_palpites": 107,
+      "ultima_atualizacao": "2026-09-12T16:28:33-03:00",
+      "finalizados": 32,
+      "taxa_geral": 0.644,
+      "total_acertos": 85,
+      "total_palpites": 132,
       "mercados": {
         "WINNER": {
-          "acertos": 11,
-          "total": 26,
-          "taxa": 0.423
+          "acertos": 12,
+          "total": 32,
+          "taxa": 0.375
         },
         "OVER_UNDER": {
-          "acertos": 41,
-          "total": 52,
-          "taxa": 0.788
+          "acertos": 49,
+          "total": 64,
+          "taxa": 0.766
         },
         "BTTS": {
-          "acertos": 18,
-          "total": 26,
-          "taxa": 0.692
+          "acertos": 22,
+          "total": 32,
+          "taxa": 0.688
         },
         "EMPATE": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "acertos": 2,
+          "total": 4,
+          "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 26,
-          "brier": 0.6763,
-          "log_loss": 1.1062
+          "n": 32,
+          "brier": 0.683,
+          "log_loss": 1.1175
         },
         "OVER_UNDER": {
-          "n": 26,
-          "brier": 0.2053,
-          "log_loss": 0.5984
+          "n": 32,
+          "brier": 0.2306,
+          "log_loss": 0.6548
         },
         "BTTS": {
-          "n": 26,
-          "brier": 0.2108,
-          "log_loss": 0.6112
+          "n": 32,
+          "brier": 0.2066,
+          "log_loss": 0.6019
         }
       },
       "jogos": [
@@ -1027,6 +1027,235 @@
               "confianca": "LOW",
               "probabilidade": 0.592,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-12T16:00:00Z",
+          "casa": "Lazio",
+          "visitante": "Milan",
+          "competicao": "Serie A",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.395,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.546,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.727,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.479,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.302,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-12T16:30:00Z",
+          "casa": "1. FC Köln",
+          "visitante": "Bremen",
+          "competicao": "Bundesliga",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.454,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.515,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.886,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.703,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-12T16:30:00Z",
+          "casa": "Athletic",
+          "visitante": "Elche",
+          "competicao": "Primera Division",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-12T16:30:00Z",
+          "casa": "Tottenham",
+          "visitante": "Everton",
+          "competicao": "Premier League",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.458,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.544,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.728,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.489,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-12T16:45:00Z",
+          "casa": "Go Ahead",
+          "visitante": "Groningen",
+          "competicao": "Eredivisie",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.584,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.608,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 1.0,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.85,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-12T17:00:00Z",
+          "casa": "Casa Pia",
+          "visitante": "Porto",
+          "competicao": "Primeira Liga",
+          "placar": "1-4",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "HIGH",
+              "probabilidade": 0.754,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.597,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.666,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "HIGH",
+              "probabilidade": 0.729,
+              "resultado": "ERRO"
             }
           ]
         }
