@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-09-11",
-      "ultima_atualizacao": "2026-09-11T20:54:17-03:00",
-      "finalizados": 6,
-      "taxa_geral": 0.417,
-      "total_acertos": 10,
-      "total_palpites": 24,
+      "ultima_atualizacao": "2026-09-11T23:55:58-03:00",
+      "finalizados": 8,
+      "taxa_geral": 0.406,
+      "total_acertos": 13,
+      "total_palpites": 32,
       "mercados": {
         "WINNER": {
           "acertos": 3,
-          "total": 6,
-          "taxa": 0.5
+          "total": 8,
+          "taxa": 0.375
         },
         "OVER_UNDER": {
-          "acertos": 5,
-          "total": 12,
-          "taxa": 0.417
+          "acertos": 7,
+          "total": 16,
+          "taxa": 0.438
         },
         "BTTS": {
-          "acertos": 2,
-          "total": 6,
-          "taxa": 0.333
+          "acertos": 3,
+          "total": 8,
+          "taxa": 0.375
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 6,
-          "brier": 0.748,
-          "log_loss": 1.2013
+          "n": 8,
+          "brier": 0.7477,
+          "log_loss": 1.2059
         },
         "OVER_UNDER": {
-          "n": 6,
-          "brier": 0.3195,
-          "log_loss": 0.864
+          "n": 8,
+          "brier": 0.289,
+          "log_loss": 0.7943
         },
         "BTTS": {
-          "n": 6,
-          "brier": 0.2357,
-          "log_loss": 0.6621
+          "n": 8,
+          "brier": 0.2319,
+          "log_loss": 0.6541
         }
       },
       "jogos": [
@@ -261,6 +261,80 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.666,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-11T00:30:00Z",
+          "casa": "Independiente",
+          "visitante": "Flamengo",
+          "competicao": "Copa Libertadores",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.369,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.512,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.791,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.591,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-12T00:00:00Z",
+          "casa": "Coritiba",
+          "visitante": "Paranaense",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "3-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.437,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.586,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.842,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.647,
+              "resultado": "ACERTO"
             }
           ]
         }
