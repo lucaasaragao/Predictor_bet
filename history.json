@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-09-13",
-      "ultima_atualizacao": "2026-09-13T08:45:53-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.75,
-      "total_acertos": 3,
-      "total_palpites": 4,
+      "ultima_atualizacao": "2026-09-13T12:05:20-03:00",
+      "finalizados": 7,
+      "taxa_geral": 0.536,
+      "total_acertos": 15,
+      "total_palpites": 28,
       "mercados": {
         "WINNER": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
+          "acertos": 2,
+          "total": 7,
+          "taxa": 0.286
         },
         "OVER_UNDER": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
+          "acertos": 10,
+          "total": 14,
+          "taxa": 0.714
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
+          "acertos": 3,
+          "total": 7,
+          "taxa": 0.429
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 1,
-          "brier": 0.668,
-          "log_loss": 1.0938
+          "n": 7,
+          "brier": 0.7007,
+          "log_loss": 1.1443
         },
         "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.225,
-          "log_loss": 0.6431
+          "n": 7,
+          "brier": 0.2934,
+          "log_loss": 0.7847
         },
         "BTTS": {
-          "n": 1,
-          "brier": 0.1774,
-          "log_loss": 0.5468
+          "n": 7,
+          "brier": 0.3162,
+          "log_loss": 0.8333
         }
       },
       "jogos": [
@@ -76,6 +76,228 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.671,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-13T10:15:00Z",
+          "casa": "Excelsior",
+          "visitante": "Utrecht",
+          "competicao": "Eredivisie",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.484,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.572,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.978,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.795,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-13T11:00:00Z",
+          "casa": "Sheffield Utd",
+          "visitante": "Wolverhampton",
+          "competicao": "Championship",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.397,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.521,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.87,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.69,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-13T12:00:00Z",
+          "casa": "Celta",
+          "visitante": "Málaga",
+          "competicao": "Primera Division",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-13T12:30:00Z",
+          "casa": "Heerenveen",
+          "visitante": "Telstar",
+          "competicao": "Eredivisie",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.404,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.586,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.852,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.661,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-13T13:00:00Z",
+          "casa": "Lille",
+          "visitante": "Troyes",
+          "competicao": "Ligue 1",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.432,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.62,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.842,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.646,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-13T13:00:00Z",
+          "casa": "Coventry City",
+          "visitante": "Brighton Hove",
+          "competicao": "Premier League",
+          "placar": "0-5",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.403,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.577,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.816,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.617,
+              "resultado": "ERRO"
             }
           ]
         }
