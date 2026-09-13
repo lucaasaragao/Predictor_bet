@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-09-13",
-      "ultima_atualizacao": "2026-09-13T15:08:12-03:00",
-      "finalizados": 15,
-      "taxa_geral": 0.567,
-      "total_acertos": 34,
-      "total_palpites": 60,
+      "ultima_atualizacao": "2026-09-13T17:46:35-03:00",
+      "finalizados": 20,
+      "taxa_geral": 0.556,
+      "total_acertos": 45,
+      "total_palpites": 81,
       "mercados": {
         "WINNER": {
-          "acertos": 5,
-          "total": 15,
-          "taxa": 0.333
+          "acertos": 7,
+          "total": 20,
+          "taxa": 0.35
         },
         "OVER_UNDER": {
-          "acertos": 22,
-          "total": 30,
-          "taxa": 0.733
+          "acertos": 28,
+          "total": 40,
+          "taxa": 0.7
         },
         "BTTS": {
-          "acertos": 7,
-          "total": 15,
-          "taxa": 0.467
+          "acertos": 10,
+          "total": 20,
+          "taxa": 0.5
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 15,
-          "brier": 0.6664,
-          "log_loss": 1.0941
+          "n": 20,
+          "brier": 0.6587,
+          "log_loss": 1.0859
         },
         "OVER_UNDER": {
-          "n": 15,
-          "brier": 0.2499,
-          "log_loss": 0.6934
+          "n": 20,
+          "brier": 0.2482,
+          "log_loss": 0.6892
         },
         "BTTS": {
-          "n": 15,
-          "brier": 0.2936,
-          "log_loss": 0.7861
+          "n": 20,
+          "brier": 0.2689,
+          "log_loss": 0.7345
         }
       },
       "jogos": [
@@ -593,6 +598,198 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.549,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-13T16:30:00Z",
+          "casa": "Getafe",
+          "visitante": "Deportivo",
+          "competicao": "Primera Division",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.355,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.504,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.766,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.563,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-13T17:00:00Z",
+          "casa": "SL Benfica",
+          "visitante": "Gil Vicente",
+          "competicao": "Primeira Liga",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.405,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.584,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.697,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.511,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-13T17:00:00Z",
+          "casa": "Arouca",
+          "visitante": "Santa Clara",
+          "competicao": "Primeira Liga",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.488,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.511,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.788,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.432,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-13T18:00:00Z",
+          "casa": "PSV",
+          "visitante": "Sparta",
+          "competicao": "Eredivisie",
+          "placar": "4-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.521,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.505,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.89,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.696,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-13T18:45:00Z",
+          "casa": "Sassuolo",
+          "visitante": "Juventus",
+          "competicao": "Serie A",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.354,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.544,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.729,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.526,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.303,
               "resultado": "ERRO"
             }
           ]
