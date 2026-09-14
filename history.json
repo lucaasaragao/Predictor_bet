@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-09-14",
-      "ultima_atualizacao": "2026-09-14T17:33:57-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.667,
-      "total_acertos": 8,
-      "total_palpites": 12,
+      "ultima_atualizacao": "2026-09-14T20:24:55-03:00",
+      "finalizados": 8,
+      "taxa_geral": 0.625,
+      "total_acertos": 20,
+      "total_palpites": 32,
       "mercados": {
         "WINNER": {
-          "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
+          "acertos": 4,
+          "total": 8,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 5,
-          "total": 6,
-          "taxa": 0.833
+          "acertos": 12,
+          "total": 16,
+          "taxa": 0.75
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "acertos": 4,
+          "total": 8,
+          "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 3,
-          "brier": 0.4884,
-          "log_loss": 0.8277
+          "n": 8,
+          "brier": 0.5913,
+          "log_loss": 0.9846
         },
         "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.2014,
-          "log_loss": 0.594
+          "n": 8,
+          "brier": 0.2127,
+          "log_loss": 0.6172
         },
         "BTTS": {
-          "n": 3,
-          "brier": 0.2367,
-          "log_loss": 0.6662
+          "n": 8,
+          "brier": 0.2068,
+          "log_loss": 0.6061
         }
       },
       "jogos": [
@@ -150,6 +150,191 @@
               "confianca": "LOW",
               "probabilidade": 0.57,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-14T18:45:00Z",
+          "casa": "Inter",
+          "visitante": "Udinese",
+          "competicao": "Serie A",
+          "placar": "5-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.382,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.512,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.754,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.549,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-14T19:00:00Z",
+          "casa": "Villarreal",
+          "visitante": "Real Betis",
+          "competicao": "Primera Division",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-14T19:00:00Z",
+          "casa": "Leeds United",
+          "visitante": "Newcastle",
+          "competicao": "Premier League",
+          "placar": "4-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.424,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.503,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.76,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.448,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-14T19:15:00Z",
+          "casa": "Moreirense",
+          "visitante": "Marítimo",
+          "competicao": "Primeira Liga",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.487,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.551,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.763,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.46,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-14T19:45:00Z",
+          "casa": "Braga",
+          "visitante": "Estoril Praia",
+          "competicao": "Primeira Liga",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.517,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.627,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.657,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.582,
+              "resultado": "ACERTO"
             }
           ]
         }
