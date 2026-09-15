@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-09-15",
-      "ultima_atualizacao": "2026-09-15T17:10:36-03:00",
-      "finalizados": 3,
+      "ultima_atualizacao": "2026-09-15T19:53:52-03:00",
+      "finalizados": 6,
       "taxa_geral": 0.5,
-      "total_acertos": 6,
-      "total_palpites": 12,
+      "total_acertos": 12,
+      "total_palpites": 24,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
-        },
-        "OVER_UNDER": {
           "acertos": 2,
           "total": 6,
           "taxa": 0.333
         },
+        "OVER_UNDER": {
+          "acertos": 6,
+          "total": 12,
+          "taxa": 0.5
+        },
         "BTTS": {
-          "acertos": 3,
-          "total": 3,
-          "taxa": 1.0
+          "acertos": 4,
+          "total": 6,
+          "taxa": 0.667
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 3,
-          "brier": 0.8072,
-          "log_loss": 1.388
+          "n": 6,
+          "brier": 0.6946,
+          "log_loss": 1.1861
         },
         "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.249,
-          "log_loss": 0.6895
+          "n": 6,
+          "brier": 0.2389,
+          "log_loss": 0.67
         },
         "BTTS": {
-          "n": 3,
-          "brier": 0.1895,
-          "log_loss": 0.5695
+          "n": 6,
+          "brier": 0.2098,
+          "log_loss": 0.6114
         }
       },
       "jogos": [
@@ -150,6 +150,117 @@
               "confianca": "HIGH",
               "probabilidade": 0.713,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-15T18:45:00Z",
+          "casa": "Bristol City",
+          "visitante": "Lincoln City",
+          "competicao": "Championship",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.384,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.501,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.763,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.559,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-15T18:45:00Z",
+          "casa": "Middlesbrough",
+          "visitante": "Millwall",
+          "competicao": "Championship",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.384,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.501,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.763,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.559,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-15T19:30:00Z",
+          "casa": "Elche",
+          "visitante": "Real Madrid",
+          "competicao": "Primera Division",
+          "placar": "2-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.552,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.568,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.842,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.391,
+              "resultado": "ERRO"
             }
           ]
         }
