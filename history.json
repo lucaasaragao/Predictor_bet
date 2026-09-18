@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-09-17",
-      "ultima_atualizacao": "2026-09-17T20:04:04-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.5,
-      "total_acertos": 4,
-      "total_palpites": 8,
+      "ultima_atualizacao": "2026-09-17T22:14:28-03:00",
+      "finalizados": 3,
+      "taxa_geral": 0.462,
+      "total_acertos": 6,
+      "total_palpites": 13,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "acertos": 2,
+          "total": 3,
+          "taxa": 0.667
         },
         "OVER_UNDER": {
           "acertos": 2,
-          "total": 4,
-          "taxa": 0.5
+          "total": 6,
+          "taxa": 0.333
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "acertos": 2,
+          "total": 3,
+          "taxa": 0.667
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.5734,
-          "log_loss": 0.9763
+          "n": 3,
+          "brier": 0.5367,
+          "log_loss": 0.9152
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.247,
-          "log_loss": 0.6857
+          "n": 3,
+          "brier": 0.1848,
+          "log_loss": 0.5512
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.2169,
-          "log_loss": 0.6251
+          "n": 3,
+          "brier": 0.1793,
+          "log_loss": 0.5465
         }
       },
       "jogos": [
@@ -112,6 +117,50 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.588,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-17T00:30:00Z",
+          "casa": "Corinthians",
+          "visitante": "Estudiantes LP",
+          "competicao": "Copa Libertadores",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.452,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.526,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.634,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.554,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.357,
               "resultado": "ERRO"
             }
           ]
