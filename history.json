@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-09-19",
-      "ultima_atualizacao": "2026-09-19T20:32:25-03:00",
-      "finalizados": 42,
-      "taxa_geral": 0.631,
-      "total_acertos": 106,
-      "total_palpites": 168,
+      "ultima_atualizacao": "2026-09-19T20:40:36-03:00",
+      "finalizados": 43,
+      "taxa_geral": 0.64,
+      "total_acertos": 110,
+      "total_palpites": 172,
       "mercados": {
         "WINNER": {
-          "acertos": 16,
-          "total": 42,
-          "taxa": 0.381
+          "acertos": 17,
+          "total": 43,
+          "taxa": 0.395
         },
         "OVER_UNDER": {
-          "acertos": 64,
-          "total": 84,
-          "taxa": 0.762
+          "acertos": 66,
+          "total": 86,
+          "taxa": 0.767
         },
         "BTTS": {
-          "acertos": 26,
-          "total": 42,
-          "taxa": 0.619
+          "acertos": 27,
+          "total": 43,
+          "taxa": 0.628
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 42,
-          "brier": 0.6546,
-          "log_loss": 1.0756
+          "n": 43,
+          "brier": 0.6498,
+          "log_loss": 1.069
         },
         "OVER_UNDER": {
-          "n": 42,
-          "brier": 0.241,
-          "log_loss": 0.6748
+          "n": 43,
+          "brier": 0.2397,
+          "log_loss": 0.6723
         },
         "BTTS": {
-          "n": 42,
-          "brier": 0.2374,
-          "log_loss": 0.6672
+          "n": 43,
+          "brier": 0.2356,
+          "log_loss": 0.6635
         }
       },
       "jogos": [
@@ -1592,6 +1592,43 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.487,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-19T21:30:00Z",
+          "casa": "Clube do Remo",
+          "visitante": "Santos",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.453,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.568,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.851,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.649,
               "resultado": "ACERTO"
             }
           ]
