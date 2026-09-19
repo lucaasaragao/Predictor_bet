@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-09-19",
-      "ultima_atualizacao": "2026-09-19T17:58:53-03:00",
-      "finalizados": 37,
-      "taxa_geral": 0.628,
-      "total_acertos": 93,
-      "total_palpites": 148,
+      "ultima_atualizacao": "2026-09-19T18:15:52-03:00",
+      "finalizados": 40,
+      "taxa_geral": 0.625,
+      "total_acertos": 100,
+      "total_palpites": 160,
       "mercados": {
         "WINNER": {
-          "acertos": 14,
-          "total": 37,
-          "taxa": 0.378
+          "acertos": 15,
+          "total": 40,
+          "taxa": 0.375
         },
         "OVER_UNDER": {
-          "acertos": 55,
-          "total": 74,
-          "taxa": 0.743
+          "acertos": 60,
+          "total": 80,
+          "taxa": 0.75
         },
         "BTTS": {
-          "acertos": 24,
-          "total": 37,
-          "taxa": 0.649
+          "acertos": 25,
+          "total": 40,
+          "taxa": 0.625
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 37,
-          "brier": 0.6469,
-          "log_loss": 1.0701
+          "n": 40,
+          "brier": 0.6522,
+          "log_loss": 1.0745
         },
         "OVER_UNDER": {
-          "n": 37,
-          "brier": 0.2335,
-          "log_loss": 0.6593
+          "n": 40,
+          "brier": 0.2425,
+          "log_loss": 0.6778
         },
         "BTTS": {
-          "n": 37,
-          "brier": 0.2345,
-          "log_loss": 0.6611
+          "n": 40,
+          "brier": 0.237,
+          "log_loss": 0.6663
         }
       },
       "jogos": [
@@ -1408,6 +1408,117 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.638,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-19T19:00:00Z",
+          "casa": "Mineiro",
+          "visitante": "Chapecoense",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.696,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.585,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.83,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.476,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-19T19:00:00Z",
+          "casa": "Willem II",
+          "visitante": "Sittard",
+          "competicao": "Eredivisie",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.539,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.579,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.855,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.638,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-19T19:00:00Z",
+          "casa": "Sevilla FC",
+          "visitante": "Barça",
+          "competicao": "Primera Division",
+          "placar": "1-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ACERTO"
             }
           ]
         }
