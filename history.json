@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-09-19",
-      "ultima_atualizacao": "2026-09-19T15:27:45-03:00",
-      "finalizados": 27,
-      "taxa_geral": 0.593,
-      "total_acertos": 64,
-      "total_palpites": 108,
+      "ultima_atualizacao": "2026-09-19T15:39:40-03:00",
+      "finalizados": 29,
+      "taxa_geral": 0.603,
+      "total_acertos": 70,
+      "total_palpites": 116,
       "mercados": {
         "WINNER": {
-          "acertos": 8,
-          "total": 27,
-          "taxa": 0.296
+          "acertos": 9,
+          "total": 29,
+          "taxa": 0.31
         },
         "OVER_UNDER": {
-          "acertos": 40,
-          "total": 54,
+          "acertos": 43,
+          "total": 58,
           "taxa": 0.741
         },
         "BTTS": {
-          "acertos": 16,
-          "total": 27,
-          "taxa": 0.593
+          "acertos": 18,
+          "total": 29,
+          "taxa": 0.621
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 27,
-          "brier": 0.6645,
-          "log_loss": 1.0908
+          "n": 29,
+          "brier": 0.6648,
+          "log_loss": 1.0947
         },
         "OVER_UNDER": {
-          "n": 27,
-          "brier": 0.2537,
-          "log_loss": 0.7017
+          "n": 29,
+          "brier": 0.2458,
+          "log_loss": 0.6853
         },
         "BTTS": {
-          "n": 27,
-          "brier": 0.2255,
-          "log_loss": 0.643
+          "n": 29,
+          "brier": 0.2276,
+          "log_loss": 0.6473
         }
       },
       "jogos": [
@@ -1038,6 +1038,80 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.681,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-19T16:30:00Z",
+          "casa": "Nottingham",
+          "visitante": "Coventry City",
+          "competicao": "Premier League",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.477,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.677,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.61,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.611,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-19T16:30:00Z",
+          "casa": "Celta",
+          "visitante": "Santander",
+          "competicao": "Primera Division",
+          "placar": "5-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.51,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.585,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.755,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.473,
+              "resultado": "ACERTO"
             }
           ]
         }
