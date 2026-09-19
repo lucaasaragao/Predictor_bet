@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-09-19",
-      "ultima_atualizacao": "2026-09-19T17:36:30-03:00",
-      "finalizados": 32,
-      "taxa_geral": 0.602,
-      "total_acertos": 77,
-      "total_palpites": 128,
+      "ultima_atualizacao": "2026-09-19T17:43:54-03:00",
+      "finalizados": 34,
+      "taxa_geral": 0.61,
+      "total_acertos": 83,
+      "total_palpites": 136,
       "mercados": {
         "WINNER": {
-          "acertos": 10,
-          "total": 32,
-          "taxa": 0.312
+          "acertos": 12,
+          "total": 34,
+          "taxa": 0.353
         },
         "OVER_UNDER": {
-          "acertos": 47,
-          "total": 64,
-          "taxa": 0.734
+          "acertos": 49,
+          "total": 68,
+          "taxa": 0.721
         },
         "BTTS": {
-          "acertos": 20,
-          "total": 32,
-          "taxa": 0.625
+          "acertos": 22,
+          "total": 34,
+          "taxa": 0.647
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 32,
-          "brier": 0.6657,
-          "log_loss": 1.0968
+          "n": 34,
+          "brier": 0.6506,
+          "log_loss": 1.0757
         },
         "OVER_UNDER": {
-          "n": 32,
-          "brier": 0.2352,
-          "log_loss": 0.6628
+          "n": 34,
+          "brier": 0.238,
+          "log_loss": 0.6684
         },
         "BTTS": {
-          "n": 32,
-          "brier": 0.23,
-          "log_loss": 0.6517
+          "n": 34,
+          "brier": 0.2308,
+          "log_loss": 0.6535
         }
       },
       "jogos": [
@@ -1222,6 +1222,80 @@
               "opcao": "YES",
               "confianca": "HIGH",
               "probabilidade": 0.847,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-19T18:45:00Z",
+          "casa": "Toulouse",
+          "visitante": "Le Havre",
+          "competicao": "Ligue 1",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.383,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.507,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.757,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.553,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-19T18:45:00Z",
+          "casa": "Venezia FC",
+          "visitante": "Lazio",
+          "competicao": "Serie A",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "HIGH",
+              "probabilidade": 0.597,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.554,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.799,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.462,
               "resultado": "ACERTO"
             }
           ]
