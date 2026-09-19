@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T16:56:14-03:00",
+  "generated_at": "2026-09-19T17:14:20-03:00",
   "analysis_date": "2026-09-19",
   "total_jogos": 81,
   "odds_debug_visual": false,
@@ -6407,7 +6407,7 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-09-19T18:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 2,
         "visitante": 2
@@ -6596,7 +6596,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -6610,7 +6610,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -6624,7 +6624,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -6638,7 +6638,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -6647,7 +6647,7 @@
       "data": "2026-09-19T18:45:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 1,
+        "casa": 2,
         "visitante": 0
       },
       "times": {
@@ -6867,7 +6867,7 @@
       "data": "2026-09-19T18:45:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 1,
+        "casa": 2,
         "visitante": 0
       },
       "times": {
@@ -7054,7 +7054,7 @@
       "data": "2026-09-19T18:45:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 1,
+        "casa": 2,
         "visitante": 0
       },
       "times": {
@@ -7208,7 +7208,7 @@
       "data": "2026-09-19T18:45:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 2,
+        "casa": 3,
         "visitante": 0
       },
       "times": {
@@ -7429,7 +7429,7 @@
       "status": "IN_PLAY",
       "placar_atual": {
         "casa": 0,
-        "visitante": 0
+        "visitante": 2
       },
       "times": {
         "casa": "Venezia FC",
@@ -8471,10 +8471,10 @@
     {
       "competicao": "Campeonato Brasileiro Série A",
       "data": "2026-09-19T20:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Mirassol",
@@ -16860,9 +16860,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 74,
-    "total": 124,
-    "taxa": 0.597
+    "acertos": 77,
+    "total": 128,
+    "taxa": 0.602
   },
   "daily_tips_ids": [
     {
@@ -16892,7 +16892,25 @@
   ],
   "daily_tips_date": "2026-09-19",
   "recovery_tip": {
-    "ativo": false
+    "ativo": true,
+    "disparado_em": "2026-09-19T17:14:19-03:00",
+    "jogo": {
+      "casa": "Wolverhampton",
+      "visitante": "West Brom",
+      "data": "2026-09-20T11:00:00Z",
+      "competicao": "Championship",
+      "times": {
+        "casa": "Wolverhampton",
+        "visitante": "West Brom"
+      }
+    },
+    "palpite": {
+      "tipo": "OVER_UNDER",
+      "opcao": "OVER_1.5",
+      "probabilidade": 0.9842,
+      "confianca": "HIGH",
+      "resultado_verificador": null
+    }
   },
   "recovery_tip_date": "2026-09-19"
 }
