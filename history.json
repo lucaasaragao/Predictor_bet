@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-09-20",
-      "ultima_atualizacao": "2026-09-20T16:23:48-03:00",
-      "finalizados": 27,
-      "taxa_geral": 0.459,
-      "total_acertos": 51,
-      "total_palpites": 111,
+      "ultima_atualizacao": "2026-09-20T16:31:48-03:00",
+      "finalizados": 28,
+      "taxa_geral": 0.452,
+      "total_acertos": 52,
+      "total_palpites": 115,
       "mercados": {
         "WINNER": {
           "acertos": 10,
-          "total": 27,
-          "taxa": 0.37
+          "total": 28,
+          "taxa": 0.357
         },
         "OVER_UNDER": {
-          "acertos": 32,
-          "total": 54,
-          "taxa": 0.593
+          "acertos": 33,
+          "total": 56,
+          "taxa": 0.589
         },
         "BTTS": {
           "acertos": 9,
-          "total": 27,
-          "taxa": 0.333
+          "total": 28,
+          "taxa": 0.321
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 27,
-          "brier": 0.7048,
-          "log_loss": 1.1594
+          "n": 28,
+          "brier": 0.7059,
+          "log_loss": 1.1607
         },
         "OVER_UNDER": {
-          "n": 27,
-          "brier": 0.3176,
-          "log_loss": 0.8357
+          "n": 28,
+          "brier": 0.3157,
+          "log_loss": 0.8316
         },
         "BTTS": {
-          "n": 27,
-          "brier": 0.3087,
-          "log_loss": 0.8159
+          "n": 28,
+          "brier": 0.305,
+          "log_loss": 0.8084
         }
       },
       "jogos": [
@@ -1063,6 +1063,43 @@
               "opcao": "YES",
               "confianca": "HIGH",
               "probabilidade": 0.783,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T17:30:00Z",
+          "casa": "SC Paderborn",
+          "visitante": "Hoffenheim",
+          "competicao": "Bundesliga",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.405,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.513,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.753,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.454,
               "resultado": "ERRO"
             }
           ]
