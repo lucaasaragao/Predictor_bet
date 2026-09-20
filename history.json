@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-09-20",
-      "ultima_atualizacao": "2026-09-20T13:21:37-03:00",
-      "finalizados": 15,
-      "taxa_geral": 0.426,
-      "total_acertos": 26,
-      "total_palpites": 61,
+      "ultima_atualizacao": "2026-09-20T13:31:10-03:00",
+      "finalizados": 17,
+      "taxa_geral": 0.449,
+      "total_acertos": 31,
+      "total_palpites": 69,
       "mercados": {
         "WINNER": {
-          "acertos": 7,
-          "total": 15,
-          "taxa": 0.467
+          "acertos": 8,
+          "total": 17,
+          "taxa": 0.471
         },
         "OVER_UNDER": {
-          "acertos": 15,
-          "total": 30,
-          "taxa": 0.5
+          "acertos": 18,
+          "total": 34,
+          "taxa": 0.529
         },
         "BTTS": {
-          "acertos": 4,
-          "total": 15,
-          "taxa": 0.267
+          "acertos": 5,
+          "total": 17,
+          "taxa": 0.294
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 15,
-          "brier": 0.6812,
-          "log_loss": 1.1237
+          "n": 17,
+          "brier": 0.6668,
+          "log_loss": 1.1027
         },
         "OVER_UNDER": {
-          "n": 15,
-          "brier": 0.288,
-          "log_loss": 0.7695
+          "n": 17,
+          "brier": 0.2841,
+          "log_loss": 0.7617
         },
         "BTTS": {
-          "n": 15,
-          "brier": 0.3145,
-          "log_loss": 0.829
+          "n": 17,
+          "brier": 0.3092,
+          "log_loss": 0.8177
         }
       },
       "jogos": [
@@ -605,6 +605,80 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.64,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T14:15:00Z",
+          "casa": "Atleti",
+          "visitante": "Real Madrid",
+          "competicao": "Primera Division",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.515,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.601,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.873,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.661,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T14:30:00Z",
+          "casa": "Amadora",
+          "visitante": "Acad. Viseu",
+          "competicao": "Primeira Liga",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.442,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.825,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.623,
               "resultado": "ERRO"
             }
           ]
