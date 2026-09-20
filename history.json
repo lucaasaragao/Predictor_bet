@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-09-20",
-      "ultima_atualizacao": "2026-09-20T18:29:05-03:00",
-      "finalizados": 33,
-      "taxa_geral": 0.481,
-      "total_acertos": 65,
-      "total_palpites": 135,
+      "ultima_atualizacao": "2026-09-20T18:38:50-03:00",
+      "finalizados": 34,
+      "taxa_geral": 0.489,
+      "total_acertos": 68,
+      "total_palpites": 139,
       "mercados": {
         "WINNER": {
-          "acertos": 14,
-          "total": 33,
-          "taxa": 0.424
+          "acertos": 15,
+          "total": 34,
+          "taxa": 0.441
         },
         "OVER_UNDER": {
-          "acertos": 40,
-          "total": 66,
-          "taxa": 0.606
+          "acertos": 41,
+          "total": 68,
+          "taxa": 0.603
         },
         "BTTS": {
-          "acertos": 11,
-          "total": 33,
-          "taxa": 0.333
+          "acertos": 12,
+          "total": 34,
+          "taxa": 0.353
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 33,
-          "brier": 0.6819,
-          "log_loss": 1.1251
+          "n": 34,
+          "brier": 0.6789,
+          "log_loss": 1.1206
         },
         "OVER_UNDER": {
-          "n": 33,
-          "brier": 0.3055,
-          "log_loss": 0.8098
+          "n": 34,
+          "brier": 0.3049,
+          "log_loss": 0.8084
         },
         "BTTS": {
-          "n": 33,
-          "brier": 0.2922,
-          "log_loss": 0.7815
+          "n": 34,
+          "brier": 0.29,
+          "log_loss": 0.777
         }
       },
       "jogos": [
@@ -1286,6 +1286,43 @@
               "confianca": "LOW",
               "probabilidade": 0.526,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T19:30:00Z",
+          "casa": "Porto",
+          "visitante": "SL Benfica",
+          "competicao": "Primeira Liga",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.379,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.738,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ACERTO"
             }
           ]
         }
