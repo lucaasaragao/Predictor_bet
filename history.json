@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-09-20",
-      "ultima_atualizacao": "2026-09-20T12:02:56-03:00",
-      "finalizados": 10,
-      "taxa_geral": 0.375,
-      "total_acertos": 15,
-      "total_palpites": 40,
+      "ultima_atualizacao": "2026-09-20T12:18:19-03:00",
+      "finalizados": 13,
+      "taxa_geral": 0.415,
+      "total_acertos": 22,
+      "total_palpites": 53,
       "mercados": {
         "WINNER": {
-          "acertos": 5,
-          "total": 10,
-          "taxa": 0.5
+          "acertos": 6,
+          "total": 13,
+          "taxa": 0.462
         },
         "OVER_UNDER": {
-          "acertos": 7,
-          "total": 20,
-          "taxa": 0.35
+          "acertos": 12,
+          "total": 26,
+          "taxa": 0.462
         },
         "BTTS": {
-          "acertos": 3,
-          "total": 10,
-          "taxa": 0.3
+          "acertos": 4,
+          "total": 13,
+          "taxa": 0.308
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 10,
-          "brier": 0.6715,
-          "log_loss": 1.1106
+          "n": 13,
+          "brier": 0.6791,
+          "log_loss": 1.119
         },
         "OVER_UNDER": {
-          "n": 10,
-          "brier": 0.2475,
-          "log_loss": 0.6846
+          "n": 13,
+          "brier": 0.2674,
+          "log_loss": 0.7263
         },
         "BTTS": {
-          "n": 10,
+          "n": 13,
           "brier": 0.2934,
-          "log_loss": 0.7853
+          "log_loss": 0.785
         }
       },
       "jogos": [
@@ -408,6 +413,124 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.634,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T13:00:00Z",
+          "casa": "Man City",
+          "visitante": "Sunderland",
+          "competicao": "Premier League",
+          "placar": "5-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.391,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.544,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.793,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T13:00:00Z",
+          "casa": "Frosinone",
+          "visitante": "Como 1907",
+          "competicao": "Serie A",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.48,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.578,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.856,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.656,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T13:00:00Z",
+          "casa": "Parma",
+          "visitante": "Genoa",
+          "competicao": "Serie A",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.376,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.615,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.669,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.323,
               "resultado": "ERRO"
             }
           ]
