@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-09-20",
-      "ultima_atualizacao": "2026-09-20T13:31:10-03:00",
-      "finalizados": 17,
-      "taxa_geral": 0.449,
-      "total_acertos": 31,
-      "total_palpites": 69,
+      "ultima_atualizacao": "2026-09-20T13:40:23-03:00",
+      "finalizados": 18,
+      "taxa_geral": 0.452,
+      "total_acertos": 33,
+      "total_palpites": 73,
       "mercados": {
         "WINNER": {
           "acertos": 8,
-          "total": 17,
-          "taxa": 0.471
+          "total": 18,
+          "taxa": 0.444
         },
         "OVER_UNDER": {
-          "acertos": 18,
-          "total": 34,
-          "taxa": 0.529
+          "acertos": 20,
+          "total": 36,
+          "taxa": 0.556
         },
         "BTTS": {
           "acertos": 5,
-          "total": 17,
-          "taxa": 0.294
+          "total": 18,
+          "taxa": 0.278
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 17,
-          "brier": 0.6668,
-          "log_loss": 1.1027
+          "n": 18,
+          "brier": 0.6667,
+          "log_loss": 1.1008
         },
         "OVER_UNDER": {
-          "n": 17,
-          "brier": 0.2841,
-          "log_loss": 0.7617
+          "n": 18,
+          "brier": 0.2732,
+          "log_loss": 0.739
         },
         "BTTS": {
-          "n": 17,
-          "brier": 0.3092,
-          "log_loss": 0.8177
+          "n": 18,
+          "brier": 0.3134,
+          "log_loss": 0.826
         }
       },
       "jogos": [
@@ -679,6 +679,43 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.623,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T14:30:00Z",
+          "casa": "Vitória SC",
+          "visitante": "Moreirense",
+          "competicao": "Primeira Liga",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.427,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.703,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.568,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.638,
               "resultado": "ERRO"
             }
           ]
