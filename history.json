@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-09-20",
-      "ultima_atualizacao": "2026-09-20T14:20:16-03:00",
-      "finalizados": 20,
-      "taxa_geral": 0.451,
-      "total_acertos": 37,
-      "total_palpites": 82,
+      "ultima_atualizacao": "2026-09-20T14:28:21-03:00",
+      "finalizados": 22,
+      "taxa_geral": 0.456,
+      "total_acertos": 41,
+      "total_palpites": 90,
       "mercados": {
         "WINNER": {
           "acertos": 8,
-          "total": 20,
-          "taxa": 0.4
+          "total": 22,
+          "taxa": 0.364
         },
         "OVER_UNDER": {
-          "acertos": 23,
-          "total": 40,
-          "taxa": 0.575
+          "acertos": 26,
+          "total": 44,
+          "taxa": 0.591
         },
         "BTTS": {
-          "acertos": 6,
-          "total": 20,
-          "taxa": 0.3
+          "acertos": 7,
+          "total": 22,
+          "taxa": 0.318
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 20,
-          "brier": 0.6856,
-          "log_loss": 1.131
+          "n": 22,
+          "brier": 0.6988,
+          "log_loss": 1.1521
         },
         "OVER_UNDER": {
-          "n": 20,
-          "brier": 0.2891,
-          "log_loss": 0.7721
+          "n": 22,
+          "brier": 0.3004,
+          "log_loss": 0.7954
         },
         "BTTS": {
-          "n": 20,
-          "brier": 0.3057,
-          "log_loss": 0.8095
+          "n": 22,
+          "brier": 0.303,
+          "log_loss": 0.8039
         }
       },
       "jogos": [
@@ -797,6 +797,80 @@
               "opcao": "X",
               "confianca": "LOW",
               "probabilidade": 0.335,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T15:30:00Z",
+          "casa": "Fulham",
+          "visitante": "Man United",
+          "competicao": "Premier League",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.376,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.575,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.857,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.669,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T15:30:00Z",
+          "casa": "Schalke",
+          "visitante": "Elversberg",
+          "competicao": "Bundesliga",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.384,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.581,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.854,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.665,
               "resultado": "ERRO"
             }
           ]
