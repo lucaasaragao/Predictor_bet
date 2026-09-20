@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T09:03:36-03:00",
+  "generated_at": "2026-09-20T09:29:04-03:00",
   "analysis_date": "2026-09-20",
   "total_jogos": 36,
   "odds_debug_visual": false,
@@ -9,7 +9,7 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-09-20T10:15:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 5,
         "visitante": 0
@@ -198,7 +198,7 @@
           "ev_bruto": -0.4088,
           "prob_mercado_justa": 0.7621,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -212,7 +212,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -226,7 +226,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -240,7 +240,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -479,7 +479,7 @@
       "data": "2026-09-20T11:00:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 0,
+        "casa": 1,
         "visitante": 0
       },
       "times": {
@@ -631,10 +631,10 @@
     {
       "competicao": "Primera Division",
       "data": "2026-09-20T12:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Getafe",
@@ -7533,9 +7533,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 3,
+    "total": 4,
+    "taxa": 0.75
   },
   "daily_tips_ids": [
     {
