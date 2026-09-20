@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-09-20",
-      "ultima_atualizacao": "2026-09-20T14:09:50-03:00",
-      "finalizados": 19,
-      "taxa_geral": 0.468,
-      "total_acertos": 36,
-      "total_palpites": 77,
+      "ultima_atualizacao": "2026-09-20T14:20:16-03:00",
+      "finalizados": 20,
+      "taxa_geral": 0.451,
+      "total_acertos": 37,
+      "total_palpites": 82,
       "mercados": {
         "WINNER": {
           "acertos": 8,
-          "total": 19,
-          "taxa": 0.421
+          "total": 20,
+          "taxa": 0.4
         },
         "OVER_UNDER": {
-          "acertos": 22,
-          "total": 38,
-          "taxa": 0.579
+          "acertos": 23,
+          "total": 40,
+          "taxa": 0.575
         },
         "BTTS": {
           "acertos": 6,
-          "total": 19,
-          "taxa": 0.316
+          "total": 20,
+          "taxa": 0.3
         },
         "EMPATE": {
           "acertos": 0,
-          "total": 1,
+          "total": 2,
           "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 19,
-          "brier": 0.6753,
-          "log_loss": 1.1144
+          "n": 20,
+          "brier": 0.6856,
+          "log_loss": 1.131
         },
         "OVER_UNDER": {
-          "n": 19,
-          "brier": 0.2801,
-          "log_loss": 0.7532
+          "n": 20,
+          "brier": 0.2891,
+          "log_loss": 0.7721
         },
         "BTTS": {
-          "n": 19,
-          "brier": 0.303,
-          "log_loss": 0.8043
+          "n": 20,
+          "brier": 0.3057,
+          "log_loss": 0.8095
         }
       },
       "jogos": [
@@ -754,6 +754,50 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.661,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T15:15:00Z",
+          "casa": "Nice",
+          "visitante": "Lille",
+          "competicao": "Ligue 1",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.429,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.678,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.61,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.597,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.335,
+              "resultado": "ERRO"
             }
           ]
         }
