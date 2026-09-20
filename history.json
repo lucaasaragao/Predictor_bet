@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-09-20",
-      "ultima_atualizacao": "2026-09-20T15:24:49-03:00",
-      "finalizados": 23,
-      "taxa_geral": 0.479,
-      "total_acertos": 45,
-      "total_palpites": 94,
+      "ultima_atualizacao": "2026-09-20T15:36:56-03:00",
+      "finalizados": 25,
+      "taxa_geral": 0.48,
+      "total_acertos": 49,
+      "total_palpites": 102,
       "mercados": {
         "WINNER": {
-          "acertos": 9,
-          "total": 23,
-          "taxa": 0.391
+          "acertos": 10,
+          "total": 25,
+          "taxa": 0.4
         },
         "OVER_UNDER": {
-          "acertos": 28,
-          "total": 46,
-          "taxa": 0.609
+          "acertos": 30,
+          "total": 50,
+          "taxa": 0.6
         },
         "BTTS": {
-          "acertos": 8,
-          "total": 23,
-          "taxa": 0.348
+          "acertos": 9,
+          "total": 25,
+          "taxa": 0.36
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 23,
-          "brier": 0.6881,
-          "log_loss": 1.1367
+          "n": 25,
+          "brier": 0.6886,
+          "log_loss": 1.1371
         },
         "OVER_UNDER": {
-          "n": 23,
-          "brier": 0.2968,
-          "log_loss": 0.7881
+          "n": 25,
+          "brier": 0.2998,
+          "log_loss": 0.7944
         },
         "BTTS": {
-          "n": 23,
-          "brier": 0.3016,
-          "log_loss": 0.8009
+          "n": 25,
+          "brier": 0.2973,
+          "log_loss": 0.7919
         }
       },
       "jogos": [
@@ -909,6 +909,80 @@
               "confianca": "LOW",
               "probabilidade": 0.479,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T16:30:00Z",
+          "casa": "Deportivo",
+          "visitante": "Real Betis",
+          "competicao": "Primera Division",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T16:30:00Z",
+          "casa": "Villarreal",
+          "visitante": "Levante",
+          "competicao": "Primera Division",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.353,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.641,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.61,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.595,
+              "resultado": "ERRO"
             }
           ]
         }
