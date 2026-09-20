@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T09:29:04-03:00",
+  "generated_at": "2026-09-20T09:45:07-03:00",
   "analysis_date": "2026-09-20",
   "total_jogos": 36,
   "odds_debug_visual": false,
@@ -247,7 +247,7 @@
     {
       "competicao": "Serie A",
       "data": "2026-09-20T10:30:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
         "visitante": 1
@@ -428,7 +428,7 @@
           "ev_bruto": 0.1644,
           "prob_mercado_justa": 0.4293,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -442,7 +442,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -456,7 +456,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -470,7 +470,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -785,10 +785,10 @@
     {
       "competicao": "Championship",
       "data": "2026-09-20T12:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 1,
+        "visitante": 1
       },
       "times": {
         "casa": "Norwich",
@@ -1021,10 +1021,10 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-09-20T12:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "Twente",
@@ -1257,10 +1257,10 @@
     {
       "competicao": "Eredivisie",
       "data": "2026-09-20T12:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "placar_atual": {
-        "casa": null,
-        "visitante": null
+        "casa": 0,
+        "visitante": 0
       },
       "times": {
         "casa": "AZ",
@@ -7533,9 +7533,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 3,
-    "total": 4,
-    "taxa": 0.75
+    "acertos": 4,
+    "total": 8,
+    "taxa": 0.5
   },
   "daily_tips_ids": [
     {
