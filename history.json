@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-09-20",
-      "ultima_atualizacao": "2026-09-20T11:28:19-03:00",
-      "finalizados": 4,
-      "taxa_geral": 0.375,
-      "total_acertos": 6,
-      "total_palpites": 16,
+      "ultima_atualizacao": "2026-09-20T11:38:25-03:00",
+      "finalizados": 7,
+      "taxa_geral": 0.393,
+      "total_acertos": 11,
+      "total_palpites": 28,
       "mercados": {
         "WINNER": {
-          "acertos": 3,
-          "total": 4,
-          "taxa": 0.75
+          "acertos": 4,
+          "total": 7,
+          "taxa": 0.571
         },
         "OVER_UNDER": {
-          "acertos": 3,
-          "total": 8,
-          "taxa": 0.375
+          "acertos": 5,
+          "total": 14,
+          "taxa": 0.357
         },
         "BTTS": {
-          "acertos": 0,
-          "total": 4,
-          "taxa": 0.0
+          "acertos": 2,
+          "total": 7,
+          "taxa": 0.286
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 4,
-          "brier": 0.6078,
-          "log_loss": 1.0066
+          "n": 7,
+          "brier": 0.6434,
+          "log_loss": 1.0714
         },
         "OVER_UNDER": {
-          "n": 4,
-          "brier": 0.2197,
-          "log_loss": 0.6255
+          "n": 7,
+          "brier": 0.2026,
+          "log_loss": 0.591
         },
         "BTTS": {
-          "n": 4,
-          "brier": 0.3397,
-          "log_loss": 0.8874
+          "n": 7,
+          "brier": 0.2758,
+          "log_loss": 0.7503
         }
       },
       "jogos": [
@@ -187,6 +187,117 @@
               "confianca": "LOW",
               "probabilidade": 0.565,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T12:30:00Z",
+          "casa": "Norwich",
+          "visitante": "Bolton",
+          "competicao": "Championship",
+          "placar": "3-4",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.638,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.582,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.789,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.483,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T12:30:00Z",
+          "casa": "Twente",
+          "visitante": "PSV",
+          "competicao": "Eredivisie",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.39,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.504,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.932,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.762,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T12:30:00Z",
+          "casa": "AZ",
+          "visitante": "Telstar",
+          "competicao": "Eredivisie",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.562,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.569,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.785,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.46,
+              "resultado": "ACERTO"
             }
           ]
         }
