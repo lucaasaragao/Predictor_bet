@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-09-20",
-      "ultima_atualizacao": "2026-09-20T11:53:39-03:00",
-      "finalizados": 7,
-      "taxa_geral": 0.393,
-      "total_acertos": 11,
-      "total_palpites": 28,
+      "ultima_atualizacao": "2026-09-20T12:02:56-03:00",
+      "finalizados": 10,
+      "taxa_geral": 0.375,
+      "total_acertos": 15,
+      "total_palpites": 40,
       "mercados": {
         "WINNER": {
-          "acertos": 4,
-          "total": 7,
-          "taxa": 0.571
+          "acertos": 5,
+          "total": 10,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 5,
-          "total": 14,
-          "taxa": 0.357
+          "acertos": 7,
+          "total": 20,
+          "taxa": 0.35
         },
         "BTTS": {
-          "acertos": 2,
-          "total": 7,
-          "taxa": 0.286
+          "acertos": 3,
+          "total": 10,
+          "taxa": 0.3
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 7,
-          "brier": 0.6434,
-          "log_loss": 1.0714
+          "n": 10,
+          "brier": 0.6715,
+          "log_loss": 1.1106
         },
         "OVER_UNDER": {
-          "n": 7,
-          "brier": 0.2026,
-          "log_loss": 0.591
+          "n": 10,
+          "brier": 0.2475,
+          "log_loss": 0.6846
         },
         "BTTS": {
-          "n": 7,
-          "brier": 0.2758,
-          "log_loss": 0.7503
+          "n": 10,
+          "brier": 0.2934,
+          "log_loss": 0.7853
         }
       },
       "jogos": [
@@ -298,6 +298,117 @@
               "confianca": "LOW",
               "probabilidade": 0.46,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T13:00:00Z",
+          "casa": "Auxerre",
+          "visitante": "Brest",
+          "competicao": "Ligue 1",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.371,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.53,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.74,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.536,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T13:00:00Z",
+          "casa": "Bournemouth",
+          "visitante": "Liverpool",
+          "competicao": "Premier League",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.425,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.587,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.822,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.622,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-09-20T13:00:00Z",
+          "casa": "Leeds United",
+          "visitante": "Crystal Palace",
+          "competicao": "Premier League",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.581,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.563,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.863,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.634,
+              "resultado": "ERRO"
             }
           ]
         }
