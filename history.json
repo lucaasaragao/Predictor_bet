@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-10-07",
-      "ultima_atualizacao": "2026-10-07T21:59:41-03:00",
-      "finalizados": 3,
+      "ultima_atualizacao": "2026-10-07T22:40:45-03:00",
+      "finalizados": 5,
       "taxa_geral": 0.5,
-      "total_acertos": 6,
-      "total_palpites": 12,
+      "total_acertos": 11,
+      "total_palpites": 22,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "acertos": 2,
+          "total": 5,
+          "taxa": 0.4
         },
         "OVER_UNDER": {
-          "acertos": 4,
-          "total": 6,
-          "taxa": 0.667
+          "acertos": 6,
+          "total": 10,
+          "taxa": 0.6
         },
         "BTTS": {
+          "acertos": 2,
+          "total": 5,
+          "taxa": 0.4
+        },
+        "EMPATE": {
           "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "total": 2,
+          "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 3,
-          "brier": 0.7223,
-          "log_loss": 1.1659
+          "n": 5,
+          "brier": 0.6945,
+          "log_loss": 1.131
         },
         "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.3109,
-          "log_loss": 0.8181
+          "n": 5,
+          "brier": 0.3171,
+          "log_loss": 0.8297
         },
         "BTTS": {
-          "n": 3,
-          "brier": 0.2376,
-          "log_loss": 0.668
+          "n": 5,
+          "brier": 0.2426,
+          "log_loss": 0.6781
         }
       },
       "jogos": [
@@ -150,6 +155,94 @@
               "confianca": "LOW",
               "probabilidade": 0.495,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-07T23:00:00Z",
+          "casa": "Vitória",
+          "visitante": "Chapecoense",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "4-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.571,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.707,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.497,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-07T23:30:00Z",
+          "casa": "Botafogo",
+          "visitante": "Vasco da Gama",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.571,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.707,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.497,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
+              "resultado": "ACERTO"
             }
           ]
         }
