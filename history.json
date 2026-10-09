@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-10-08",
-      "ultima_atualizacao": "2026-10-08T23:12:28-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.5,
-      "total_acertos": 4,
-      "total_palpites": 8,
+      "ultima_atualizacao": "2026-10-08T23:46:15-03:00",
+      "finalizados": 4,
+      "taxa_geral": 0.529,
+      "total_acertos": 9,
+      "total_palpites": 17,
       "mercados": {
         "WINNER": {
-          "acertos": 0,
-          "total": 2,
-          "taxa": 0.0
+          "acertos": 2,
+          "total": 4,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
+          "acertos": 4,
+          "total": 8,
+          "taxa": 0.5
+        },
+        "BTTS": {
           "acertos": 3,
           "total": 4,
           "taxa": 0.75
         },
-        "BTTS": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.8756,
-          "log_loss": 1.3748
+          "n": 4,
+          "brier": 0.6692,
+          "log_loss": 1.094
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.1637,
-          "log_loss": 0.518
+          "n": 4,
+          "brier": 0.2475,
+          "log_loss": 0.6875
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.1527,
-          "log_loss": 0.4954
+          "n": 4,
+          "brier": 0.2268,
+          "log_loss": 0.6458
         }
       },
       "jogos": [
@@ -113,6 +118,87 @@
               "confianca": "LOW",
               "probabilidade": 0.357,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-09T00:30:00Z",
+          "casa": "Fluminense",
+          "visitante": "Coritiba",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "4-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.571,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.707,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.497,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-09T00:30:00Z",
+          "casa": "Palmeiras",
+          "visitante": "Bahia",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.528,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.58,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.834,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.39,
+              "resultado": "ACERTO"
             }
           ]
         }
