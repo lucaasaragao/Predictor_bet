@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-10",
-      "ultima_atualizacao": "2026-10-10T20:00:22-03:00",
-      "finalizados": 39,
-      "taxa_geral": 0.579,
-      "total_acertos": 92,
-      "total_palpites": 159,
+      "ultima_atualizacao": "2026-10-10T20:19:13-03:00",
+      "finalizados": 40,
+      "taxa_geral": 0.571,
+      "total_acertos": 93,
+      "total_palpites": 163,
       "mercados": {
         "WINNER": {
           "acertos": 18,
-          "total": 39,
-          "taxa": 0.462
+          "total": 40,
+          "taxa": 0.45
         },
         "OVER_UNDER": {
           "acertos": 53,
-          "total": 78,
-          "taxa": 0.679
+          "total": 80,
+          "taxa": 0.662
         },
         "BTTS": {
-          "acertos": 21,
-          "total": 39,
-          "taxa": 0.538
+          "acertos": 22,
+          "total": 40,
+          "taxa": 0.55
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 39,
-          "brier": 0.6497,
-          "log_loss": 1.0755
+          "n": 40,
+          "brier": 0.6573,
+          "log_loss": 1.0838
         },
         "OVER_UNDER": {
-          "n": 39,
-          "brier": 0.2633,
-          "log_loss": 0.7275
+          "n": 40,
+          "brier": 0.2636,
+          "log_loss": 0.7278
         },
         "BTTS": {
-          "n": 39,
+          "n": 40,
           "brier": 0.2574,
-          "log_loss": 0.7131
+          "log_loss": 0.713
         }
       },
       "jogos": [
@@ -1508,6 +1508,43 @@
               "confianca": "LOW",
               "probabilidade": 0.602,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-10T21:00:00Z",
+          "casa": "Vasco da Gama",
+          "visitante": "Clube do Remo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.601,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.523,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.788,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.479,
+              "resultado": "ACERTO"
             }
           ]
         }
