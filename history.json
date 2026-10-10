@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-10-10",
-      "ultima_atualizacao": "2026-10-10T17:36:49-03:00",
-      "finalizados": 31,
-      "taxa_geral": 0.603,
-      "total_acertos": 76,
-      "total_palpites": 126,
+      "ultima_atualizacao": "2026-10-10T17:47:49-03:00",
+      "finalizados": 33,
+      "taxa_geral": 0.578,
+      "total_acertos": 78,
+      "total_palpites": 135,
       "mercados": {
         "WINNER": {
           "acertos": 14,
-          "total": 31,
-          "taxa": 0.452
+          "total": 33,
+          "taxa": 0.424
         },
         "OVER_UNDER": {
-          "acertos": 46,
-          "total": 62,
-          "taxa": 0.742
+          "acertos": 47,
+          "total": 66,
+          "taxa": 0.712
         },
         "BTTS": {
-          "acertos": 16,
-          "total": 31,
-          "taxa": 0.516
+          "acertos": 17,
+          "total": 33,
+          "taxa": 0.515
         },
         "EMPATE": {
           "acertos": 0,
-          "total": 2,
+          "total": 3,
           "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 31,
-          "brier": 0.6516,
-          "log_loss": 1.0777
+          "n": 33,
+          "brier": 0.6554,
+          "log_loss": 1.0828
         },
         "OVER_UNDER": {
-          "n": 31,
-          "brier": 0.2532,
-          "log_loss": 0.7059
+          "n": 33,
+          "brier": 0.2586,
+          "log_loss": 0.7164
         },
         "BTTS": {
-          "n": 31,
-          "brier": 0.269,
-          "log_loss": 0.7394
+          "n": 33,
+          "brier": 0.2711,
+          "log_loss": 0.7432
         }
       },
       "jogos": [
@@ -1205,6 +1205,87 @@
               "confianca": "HIGH",
               "probabilidade": 0.711,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-10T18:45:00Z",
+          "casa": "Lorient",
+          "visitante": "Paris FC",
+          "competicao": "Ligue 1",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.437,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.574,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.768,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.558,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-10T18:45:00Z",
+          "casa": "Napoli",
+          "visitante": "Frosinone",
+          "competicao": "Serie A",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.349,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.596,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.686,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.516,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.318,
+              "resultado": "ERRO"
             }
           ]
         }
