@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-10",
-      "ultima_atualizacao": "2026-10-10T15:05:36-03:00",
-      "finalizados": 25,
-      "taxa_geral": 0.627,
-      "total_acertos": 64,
-      "total_palpites": 102,
+      "ultima_atualizacao": "2026-10-10T15:28:10-03:00",
+      "finalizados": 26,
+      "taxa_geral": 0.623,
+      "total_acertos": 66,
+      "total_palpites": 106,
       "mercados": {
         "WINNER": {
-          "acertos": 11,
-          "total": 25,
-          "taxa": 0.44
+          "acertos": 12,
+          "total": 26,
+          "taxa": 0.462
         },
         "OVER_UNDER": {
-          "acertos": 38,
-          "total": 50,
-          "taxa": 0.76
+          "acertos": 39,
+          "total": 52,
+          "taxa": 0.75
         },
         "BTTS": {
           "acertos": 15,
-          "total": 25,
-          "taxa": 0.6
+          "total": 26,
+          "taxa": 0.577
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 25,
-          "brier": 0.675,
-          "log_loss": 1.1157
+          "n": 26,
+          "brier": 0.6698,
+          "log_loss": 1.1078
         },
         "OVER_UNDER": {
-          "n": 25,
-          "brier": 0.2424,
-          "log_loss": 0.6817
+          "n": 26,
+          "brier": 0.2386,
+          "log_loss": 0.6738
         },
         "BTTS": {
-          "n": 25,
-          "brier": 0.2512,
-          "log_loss": 0.7003
+          "n": 26,
+          "brier": 0.2578,
+          "log_loss": 0.7137
         }
       },
       "jogos": [
@@ -982,6 +982,43 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.644,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-10T16:30:00Z",
+          "casa": "RB Leipzig",
+          "visitante": "Frankfurt",
+          "competicao": "Bundesliga",
+          "placar": "6-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.402,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.602,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.843,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.65,
               "resultado": "ERRO"
             }
           ]
