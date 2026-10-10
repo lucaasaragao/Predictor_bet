@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-10",
-      "ultima_atualizacao": "2026-10-10T17:56:10-03:00",
-      "finalizados": 36,
-      "taxa_geral": 0.592,
-      "total_acertos": 87,
-      "total_palpites": 147,
+      "ultima_atualizacao": "2026-10-10T18:13:46-03:00",
+      "finalizados": 38,
+      "taxa_geral": 0.581,
+      "total_acertos": 90,
+      "total_palpites": 155,
       "mercados": {
         "WINNER": {
-          "acertos": 16,
-          "total": 36,
-          "taxa": 0.444
+          "acertos": 17,
+          "total": 38,
+          "taxa": 0.447
         },
         "OVER_UNDER": {
-          "acertos": 51,
-          "total": 72,
-          "taxa": 0.708
+          "acertos": 52,
+          "total": 76,
+          "taxa": 0.684
         },
         "BTTS": {
-          "acertos": 20,
-          "total": 36,
-          "taxa": 0.556
+          "acertos": 21,
+          "total": 38,
+          "taxa": 0.553
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 36,
-          "brier": 0.6493,
-          "log_loss": 1.0735
+          "n": 38,
+          "brier": 0.6546,
+          "log_loss": 1.0826
         },
         "OVER_UNDER": {
-          "n": 36,
-          "brier": 0.2499,
-          "log_loss": 0.6977
+          "n": 38,
+          "brier": 0.2604,
+          "log_loss": 0.7219
         },
         "BTTS": {
-          "n": 36,
-          "brier": 0.2606,
-          "log_loss": 0.7209
+          "n": 38,
+          "brier": 0.2565,
+          "log_loss": 0.7113
         }
       },
       "jogos": [
@@ -1396,6 +1396,80 @@
               "opcao": "YES",
               "confianca": "HIGH",
               "probabilidade": 0.818,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-10T19:00:00Z",
+          "casa": "Real Madrid",
+          "visitante": "Villarreal",
+          "competicao": "Primera Division",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-10T19:00:00Z",
+          "casa": "Ajax",
+          "visitante": "NEC",
+          "competicao": "Eredivisie",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.456,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.618,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.961,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.812,
               "resultado": "ACERTO"
             }
           ]
