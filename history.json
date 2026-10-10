@@ -2,25 +2,25 @@
   "dias": [
     {
       "data": "2026-10-10",
-      "ultima_atualizacao": "2026-10-10T12:32:55-03:00",
-      "finalizados": 8,
-      "taxa_geral": 0.606,
-      "total_acertos": 20,
-      "total_palpites": 33,
+      "ultima_atualizacao": "2026-10-10T12:44:32-03:00",
+      "finalizados": 10,
+      "taxa_geral": 0.585,
+      "total_acertos": 24,
+      "total_palpites": 41,
       "mercados": {
         "WINNER": {
           "acertos": 4,
-          "total": 8,
-          "taxa": 0.5
+          "total": 10,
+          "taxa": 0.4
         },
         "OVER_UNDER": {
-          "acertos": 12,
-          "total": 16,
+          "acertos": 15,
+          "total": 20,
           "taxa": 0.75
         },
         "BTTS": {
-          "acertos": 4,
-          "total": 8,
+          "acertos": 5,
+          "total": 10,
           "taxa": 0.5
         },
         "EMPATE": {
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 8,
-          "brier": 0.6395,
-          "log_loss": 1.0619
+          "n": 10,
+          "brier": 0.7019,
+          "log_loss": 1.1552
         },
         "OVER_UNDER": {
-          "n": 8,
-          "brier": 0.2462,
-          "log_loss": 0.6862
+          "n": 10,
+          "brier": 0.2252,
+          "log_loss": 0.643
         },
         "BTTS": {
-          "n": 8,
-          "brier": 0.2425,
-          "log_loss": 0.6783
+          "n": 10,
+          "brier": 0.222,
+          "log_loss": 0.6363
         }
       },
       "jogos": [
@@ -347,6 +347,80 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.635,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-10T13:30:00Z",
+          "casa": "Hoffenheim",
+          "visitante": "HSV",
+          "competicao": "Bundesliga",
+          "placar": "2-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.603,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.564,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.862,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.377,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-10T13:30:00Z",
+          "casa": "Augsburg",
+          "visitante": "Bayern",
+          "competicao": "Bundesliga",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.415,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.596,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.827,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.629,
+              "resultado": "ACERTO"
             }
           ]
         }
