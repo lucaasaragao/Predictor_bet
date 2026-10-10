@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-10",
-      "ultima_atualizacao": "2026-10-10T15:28:10-03:00",
-      "finalizados": 26,
-      "taxa_geral": 0.623,
-      "total_acertos": 66,
-      "total_palpites": 106,
+      "ultima_atualizacao": "2026-10-10T15:46:54-03:00",
+      "finalizados": 28,
+      "taxa_geral": 0.605,
+      "total_acertos": 69,
+      "total_palpites": 114,
       "mercados": {
         "WINNER": {
-          "acertos": 12,
-          "total": 26,
-          "taxa": 0.462
+          "acertos": 13,
+          "total": 28,
+          "taxa": 0.464
         },
         "OVER_UNDER": {
-          "acertos": 39,
-          "total": 52,
-          "taxa": 0.75
+          "acertos": 41,
+          "total": 56,
+          "taxa": 0.732
         },
         "BTTS": {
           "acertos": 15,
-          "total": 26,
-          "taxa": 0.577
+          "total": 28,
+          "taxa": 0.536
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 26,
-          "brier": 0.6698,
-          "log_loss": 1.1078
+          "n": 28,
+          "brier": 0.6631,
+          "log_loss": 1.0931
         },
         "OVER_UNDER": {
-          "n": 26,
-          "brier": 0.2386,
-          "log_loss": 0.6738
+          "n": 28,
+          "brier": 0.2343,
+          "log_loss": 0.6626
         },
         "BTTS": {
-          "n": 26,
-          "brier": 0.2578,
-          "log_loss": 0.7137
+          "n": 28,
+          "brier": 0.2652,
+          "log_loss": 0.7293
         }
       },
       "jogos": [
@@ -1019,6 +1019,80 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.65,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-10T16:30:00Z",
+          "casa": "Barça",
+          "visitante": "Getafe",
+          "competicao": "Primera Division",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.763,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.676,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.951,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.701,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-10T16:30:00Z",
+          "casa": "Man United",
+          "visitante": "Tottenham",
+          "competicao": "Premier League",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.66,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.576,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.678,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.636,
               "resultado": "ERRO"
             }
           ]
