@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-10",
-      "ultima_atualizacao": "2026-10-10T15:57:37-03:00",
-      "finalizados": 29,
-      "taxa_geral": 0.593,
-      "total_acertos": 70,
-      "total_palpites": 118,
+      "ultima_atualizacao": "2026-10-10T16:15:19-03:00",
+      "finalizados": 30,
+      "taxa_geral": 0.598,
+      "total_acertos": 73,
+      "total_palpites": 122,
       "mercados": {
         "WINNER": {
-          "acertos": 13,
-          "total": 29,
-          "taxa": 0.448
+          "acertos": 14,
+          "total": 30,
+          "taxa": 0.467
         },
         "OVER_UNDER": {
-          "acertos": 42,
-          "total": 58,
-          "taxa": 0.724
+          "acertos": 44,
+          "total": 60,
+          "taxa": 0.733
         },
         "BTTS": {
           "acertos": 15,
-          "total": 29,
-          "taxa": 0.517
+          "total": 30,
+          "taxa": 0.5
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 29,
-          "brier": 0.6606,
-          "log_loss": 1.0886
+          "n": 30,
+          "brier": 0.6443,
+          "log_loss": 1.066
         },
         "OVER_UNDER": {
-          "n": 29,
-          "brier": 0.2484,
-          "log_loss": 0.6956
+          "n": 30,
+          "brier": 0.2452,
+          "log_loss": 0.6889
         },
         "BTTS": {
-          "n": 29,
-          "brier": 0.2775,
-          "log_loss": 0.7577
+          "n": 30,
+          "brier": 0.2752,
+          "log_loss": 0.7527
         }
       },
       "jogos": [
@@ -1130,6 +1130,43 @@
               "opcao": "YES",
               "confianca": "HIGH",
               "probabilidade": 0.873,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-10T17:00:00Z",
+          "casa": "Marítimo",
+          "visitante": "Porto",
+          "competicao": "Primeira Liga",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "HIGH",
+              "probabilidade": 0.664,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.609,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.905,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.373,
               "resultado": "ERRO"
             }
           ]
