@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-10-10",
-      "ultima_atualizacao": "2026-10-10T22:43:57-03:00",
-      "finalizados": 40,
-      "taxa_geral": 0.571,
-      "total_acertos": 93,
-      "total_palpites": 163,
+      "ultima_atualizacao": "2026-10-10T23:07:58-03:00",
+      "finalizados": 41,
+      "taxa_geral": 0.565,
+      "total_acertos": 95,
+      "total_palpites": 168,
       "mercados": {
         "WINNER": {
-          "acertos": 18,
-          "total": 40,
-          "taxa": 0.45
+          "acertos": 19,
+          "total": 41,
+          "taxa": 0.463
         },
         "OVER_UNDER": {
-          "acertos": 53,
-          "total": 80,
-          "taxa": 0.662
+          "acertos": 54,
+          "total": 82,
+          "taxa": 0.659
         },
         "BTTS": {
           "acertos": 22,
-          "total": 40,
-          "taxa": 0.55
+          "total": 41,
+          "taxa": 0.537
         },
         "EMPATE": {
           "acertos": 0,
-          "total": 3,
+          "total": 4,
           "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 40,
-          "brier": 0.6573,
-          "log_loss": 1.0838
+          "n": 41,
+          "brier": 0.6555,
+          "log_loss": 1.0812
         },
         "OVER_UNDER": {
-          "n": 40,
-          "brier": 0.2636,
-          "log_loss": 0.7278
+          "n": 41,
+          "brier": 0.2672,
+          "log_loss": 0.735
         },
         "BTTS": {
-          "n": 40,
-          "brier": 0.2574,
-          "log_loss": 0.713
+          "n": 41,
+          "brier": 0.2586,
+          "log_loss": 0.7153
         }
       },
       "jogos": [
@@ -1545,6 +1545,50 @@
               "confianca": "LOW",
               "probabilidade": 0.479,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-11T00:00:00Z",
+          "casa": "São Paulo",
+          "visitante": "Vitória",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.376,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.641,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.646,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.555,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.33,
+              "resultado": "ERRO"
             }
           ]
         }
