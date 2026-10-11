@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-10-11",
-      "ultima_atualizacao": "2026-10-11T17:56:10-03:00",
-      "finalizados": 23,
-      "taxa_geral": 0.591,
-      "total_acertos": 55,
-      "total_palpites": 93,
+      "ultima_atualizacao": "2026-10-11T18:13:41-03:00",
+      "finalizados": 25,
+      "taxa_geral": 0.578,
+      "total_acertos": 59,
+      "total_palpites": 102,
       "mercados": {
         "WINNER": {
-          "acertos": 13,
-          "total": 23,
-          "taxa": 0.565
+          "acertos": 14,
+          "total": 25,
+          "taxa": 0.56
         },
         "OVER_UNDER": {
-          "acertos": 30,
-          "total": 46,
-          "taxa": 0.652
+          "acertos": 33,
+          "total": 50,
+          "taxa": 0.66
         },
         "BTTS": {
           "acertos": 11,
-          "total": 23,
-          "taxa": 0.478
+          "total": 25,
+          "taxa": 0.44
         },
         "EMPATE": {
           "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
+          "total": 2,
+          "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 23,
-          "brier": 0.5115,
-          "log_loss": 0.883
+          "n": 25,
+          "brier": 0.528,
+          "log_loss": 0.9047
         },
         "OVER_UNDER": {
-          "n": 23,
-          "brier": 0.2259,
-          "log_loss": 0.6395
+          "n": 25,
+          "brier": 0.2296,
+          "log_loss": 0.6473
         },
         "BTTS": {
-          "n": 23,
-          "brier": 0.2298,
-          "log_loss": 0.6495
+          "n": 25,
+          "brier": 0.229,
+          "log_loss": 0.6482
         }
       },
       "jogos": [
@@ -901,6 +901,87 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.589,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-11T19:00:00Z",
+          "casa": "Mineiro",
+          "visitante": "Santos",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.571,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.707,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.497,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-11T19:00:00Z",
+          "casa": "Santander",
+          "visitante": "Valencia",
+          "competicao": "Primera Division",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.508,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.534,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.697,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.541,
               "resultado": "ERRO"
             }
           ]
