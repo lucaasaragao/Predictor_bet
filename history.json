@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-10-11",
-      "ultima_atualizacao": "2026-10-11T10:53:45-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.417,
+      "ultima_atualizacao": "2026-10-11T11:04:21-03:00",
+      "finalizados": 4,
+      "taxa_geral": 0.312,
       "total_acertos": 5,
-      "total_palpites": 12,
+      "total_palpites": 16,
       "mercados": {
         "WINNER": {
           "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
+          "total": 4,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
           "acertos": 2,
-          "total": 6,
-          "taxa": 0.333
+          "total": 8,
+          "taxa": 0.25
         },
         "BTTS": {
           "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "total": 4,
+          "taxa": 0.25
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 3,
-          "brier": 0.6132,
-          "log_loss": 1.0271
+          "n": 4,
+          "brier": 0.65,
+          "log_loss": 1.0808
         },
         "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.2226,
-          "log_loss": 0.6239
+          "n": 4,
+          "brier": 0.2316,
+          "log_loss": 0.6455
         },
         "BTTS": {
-          "n": 3,
-          "brier": 0.2584,
-          "log_loss": 0.6997
+          "n": 4,
+          "brier": 0.2737,
+          "log_loss": 0.733
         }
       },
       "jogos": [
@@ -149,6 +149,43 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.559,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-11T12:00:00Z",
+          "casa": "Elche",
+          "visitante": "Celta",
+          "competicao": "Primera Division",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
               "resultado": "ERRO"
             }
           ]
