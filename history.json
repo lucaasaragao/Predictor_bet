@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-11",
-      "ultima_atualizacao": "2026-10-11T19:20:19-03:00",
-      "finalizados": 26,
-      "taxa_geral": 0.566,
-      "total_acertos": 60,
-      "total_palpites": 106,
+      "ultima_atualizacao": "2026-10-11T19:33:29-03:00",
+      "finalizados": 27,
+      "taxa_geral": 0.564,
+      "total_acertos": 62,
+      "total_palpites": 110,
       "mercados": {
         "WINNER": {
-          "acertos": 15,
-          "total": 26,
-          "taxa": 0.577
+          "acertos": 16,
+          "total": 27,
+          "taxa": 0.593
         },
         "OVER_UNDER": {
-          "acertos": 33,
-          "total": 52,
-          "taxa": 0.635
+          "acertos": 34,
+          "total": 54,
+          "taxa": 0.63
         },
         "BTTS": {
           "acertos": 11,
-          "total": 26,
-          "taxa": 0.423
+          "total": 27,
+          "taxa": 0.407
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 26,
-          "brier": 0.5211,
-          "log_loss": 0.8952
+          "n": 27,
+          "brier": 0.5087,
+          "log_loss": 0.8777
         },
         "OVER_UNDER": {
-          "n": 26,
-          "brier": 0.2422,
-          "log_loss": 0.6753
+          "n": 27,
+          "brier": 0.2449,
+          "log_loss": 0.6807
         },
         "BTTS": {
-          "n": 26,
-          "brier": 0.2407,
-          "log_loss": 0.6736
+          "n": 27,
+          "brier": 0.2453,
+          "log_loss": 0.683
         }
       },
       "jogos": [
@@ -1019,6 +1019,43 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.683,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-11T20:30:00Z",
+          "casa": "Palmeiras",
+          "visitante": "Corinthians",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "4-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.655,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.56,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.798,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.507,
               "resultado": "ERRO"
             }
           ]
