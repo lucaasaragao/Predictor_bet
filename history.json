@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-11",
-      "ultima_atualizacao": "2026-10-11T17:34:41-03:00",
-      "finalizados": 21,
-      "taxa_geral": 0.6,
-      "total_acertos": 51,
-      "total_palpites": 85,
+      "ultima_atualizacao": "2026-10-11T17:46:53-03:00",
+      "finalizados": 23,
+      "taxa_geral": 0.591,
+      "total_acertos": 55,
+      "total_palpites": 93,
       "mercados": {
         "WINNER": {
-          "acertos": 12,
-          "total": 21,
-          "taxa": 0.571
+          "acertos": 13,
+          "total": 23,
+          "taxa": 0.565
         },
         "OVER_UNDER": {
-          "acertos": 27,
-          "total": 42,
-          "taxa": 0.643
+          "acertos": 30,
+          "total": 46,
+          "taxa": 0.652
         },
         "BTTS": {
           "acertos": 11,
-          "total": 21,
-          "taxa": 0.524
+          "total": 23,
+          "taxa": 0.478
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 21,
-          "brier": 0.5052,
-          "log_loss": 0.874
+          "n": 23,
+          "brier": 0.5115,
+          "log_loss": 0.883
         },
         "OVER_UNDER": {
-          "n": 21,
-          "brier": 0.2225,
-          "log_loss": 0.6322
+          "n": 23,
+          "brier": 0.2259,
+          "log_loss": 0.6395
         },
         "BTTS": {
-          "n": 21,
-          "brier": 0.2245,
-          "log_loss": 0.6386
+          "n": 23,
+          "brier": 0.2298,
+          "log_loss": 0.6495
         }
       },
       "jogos": [
@@ -828,6 +828,80 @@
               "confianca": "LOW",
               "probabilidade": 0.404,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-11T18:45:00Z",
+          "casa": "Cagliari",
+          "visitante": "Juventus",
+          "competicao": "Serie A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.391,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.538,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.829,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.363,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-11T18:45:00Z",
+          "casa": "Troyes",
+          "visitante": "Marseille",
+          "competicao": "Ligue 1",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.471,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.556,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.802,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.589,
+              "resultado": "ERRO"
             }
           ]
         }
