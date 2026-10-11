@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-11",
-      "ultima_atualizacao": "2026-10-11T13:35:27-03:00",
-      "finalizados": 13,
-      "taxa_geral": 0.472,
-      "total_acertos": 25,
-      "total_palpites": 53,
+      "ultima_atualizacao": "2026-10-11T13:47:37-03:00",
+      "finalizados": 15,
+      "taxa_geral": 0.508,
+      "total_acertos": 31,
+      "total_palpites": 61,
       "mercados": {
         "WINNER": {
-          "acertos": 6,
-          "total": 13,
-          "taxa": 0.462
+          "acertos": 7,
+          "total": 15,
+          "taxa": 0.467
         },
         "OVER_UNDER": {
-          "acertos": 13,
-          "total": 26,
-          "taxa": 0.5
+          "acertos": 16,
+          "total": 30,
+          "taxa": 0.533
         },
         "BTTS": {
-          "acertos": 5,
-          "total": 13,
-          "taxa": 0.385
+          "acertos": 7,
+          "total": 15,
+          "taxa": 0.467
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 13,
-          "brier": 0.5793,
-          "log_loss": 0.9783
+          "n": 15,
+          "brier": 0.5836,
+          "log_loss": 0.9821
         },
         "OVER_UNDER": {
-          "n": 13,
-          "brier": 0.2432,
-          "log_loss": 0.6763
+          "n": 15,
+          "brier": 0.2352,
+          "log_loss": 0.6594
         },
         "BTTS": {
-          "n": 13,
-          "brier": 0.2351,
-          "log_loss": 0.6605
+          "n": 15,
+          "brier": 0.2235,
+          "log_loss": 0.6363
         }
       },
       "jogos": [
@@ -531,6 +531,80 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.528,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-11T14:30:00Z",
+          "casa": "Rio Ave",
+          "visitante": "CD Nacional",
+          "competicao": "Primeira Liga",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.379,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.738,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-11T14:45:00Z",
+          "casa": "Excelsior",
+          "visitante": "Groningen",
+          "competicao": "Eredivisie",
+          "placar": "1-5",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.409,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.505,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.993,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.832,
               "resultado": "ACERTO"
             }
           ]
