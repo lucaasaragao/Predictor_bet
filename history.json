@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-11",
-      "ultima_atualizacao": "2026-10-11T13:56:53-03:00",
-      "finalizados": 15,
-      "taxa_geral": 0.508,
-      "total_acertos": 31,
-      "total_palpites": 61,
+      "ultima_atualizacao": "2026-10-11T14:16:10-03:00",
+      "finalizados": 16,
+      "taxa_geral": 0.538,
+      "total_acertos": 35,
+      "total_palpites": 65,
       "mercados": {
         "WINNER": {
-          "acertos": 7,
-          "total": 15,
-          "taxa": 0.467
+          "acertos": 8,
+          "total": 16,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 16,
-          "total": 30,
-          "taxa": 0.533
+          "acertos": 18,
+          "total": 32,
+          "taxa": 0.562
         },
         "BTTS": {
-          "acertos": 7,
-          "total": 15,
-          "taxa": 0.467
+          "acertos": 8,
+          "total": 16,
+          "taxa": 0.5
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 15,
-          "brier": 0.5836,
-          "log_loss": 0.9821
+          "n": 16,
+          "brier": 0.5585,
+          "log_loss": 0.9475
         },
         "OVER_UNDER": {
-          "n": 15,
-          "brier": 0.2352,
-          "log_loss": 0.6594
+          "n": 16,
+          "brier": 0.224,
+          "log_loss": 0.635
         },
         "BTTS": {
-          "n": 15,
-          "brier": 0.2235,
-          "log_loss": 0.6363
+          "n": 16,
+          "brier": 0.2153,
+          "log_loss": 0.6193
         }
       },
       "jogos": [
@@ -605,6 +605,43 @@
               "opcao": "YES",
               "confianca": "HIGH",
               "probabilidade": 0.832,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-11T15:15:00Z",
+          "casa": "Stade Rennais",
+          "visitante": "Auxerre",
+          "competicao": "Ligue 1",
+          "placar": "4-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.651,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.569,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.955,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.737,
               "resultado": "ACERTO"
             }
           ]
