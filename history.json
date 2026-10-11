@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-11",
-      "ultima_atualizacao": "2026-10-11T15:54:45-03:00",
-      "finalizados": 20,
-      "taxa_geral": 0.58,
-      "total_acertos": 47,
-      "total_palpites": 81,
+      "ultima_atualizacao": "2026-10-11T16:07:08-03:00",
+      "finalizados": 21,
+      "taxa_geral": 0.6,
+      "total_acertos": 51,
+      "total_palpites": 85,
       "mercados": {
         "WINNER": {
-          "acertos": 11,
-          "total": 20,
-          "taxa": 0.55
+          "acertos": 12,
+          "total": 21,
+          "taxa": 0.571
         },
         "OVER_UNDER": {
-          "acertos": 25,
-          "total": 40,
-          "taxa": 0.625
+          "acertos": 27,
+          "total": 42,
+          "taxa": 0.643
         },
         "BTTS": {
-          "acertos": 10,
-          "total": 20,
-          "taxa": 0.5
+          "acertos": 11,
+          "total": 21,
+          "taxa": 0.524
         },
         "EMPATE": {
           "acertos": 1,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 20,
-          "brier": 0.5199,
-          "log_loss": 0.8942
+          "n": 21,
+          "brier": 0.5052,
+          "log_loss": 0.874
         },
         "OVER_UNDER": {
-          "n": 20,
-          "brier": 0.2119,
-          "log_loss": 0.6101
+          "n": 21,
+          "brier": 0.2225,
+          "log_loss": 0.6322
         },
         "BTTS": {
-          "n": 20,
-          "brier": 0.2169,
-          "log_loss": 0.623
+          "n": 21,
+          "brier": 0.2245,
+          "log_loss": 0.6386
         }
       },
       "jogos": [
@@ -791,6 +791,43 @@
               "confianca": "LOW",
               "probabilidade": 0.463,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-11T17:00:00Z",
+          "casa": "SL Benfica",
+          "visitante": "Vitória SC",
+          "competicao": "Primeira Liga",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.625,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.561,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.849,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.404,
+              "resultado": "ACERTO"
             }
           ]
         }
