@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-10-11",
-      "ultima_atualizacao": "2026-10-11T11:23:10-03:00",
-      "finalizados": 4,
-      "taxa_geral": 0.312,
-      "total_acertos": 5,
-      "total_palpites": 16,
+      "ultima_atualizacao": "2026-10-11T11:35:37-03:00",
+      "finalizados": 6,
+      "taxa_geral": 0.417,
+      "total_acertos": 10,
+      "total_palpites": 24,
       "mercados": {
         "WINNER": {
-          "acertos": 2,
-          "total": 4,
+          "acertos": 3,
+          "total": 6,
           "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 2,
-          "total": 8,
-          "taxa": 0.25
+          "acertos": 5,
+          "total": 12,
+          "taxa": 0.417
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 4,
-          "taxa": 0.25
+          "acertos": 2,
+          "total": 6,
+          "taxa": 0.333
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 4,
-          "brier": 0.65,
-          "log_loss": 1.0808
+          "n": 6,
+          "brier": 0.6154,
+          "log_loss": 1.0357
         },
         "OVER_UNDER": {
-          "n": 4,
-          "brier": 0.2316,
-          "log_loss": 0.6455
+          "n": 6,
+          "brier": 0.2551,
+          "log_loss": 0.6984
         },
         "BTTS": {
-          "n": 4,
-          "brier": 0.2737,
-          "log_loss": 0.733
+          "n": 6,
+          "brier": 0.2746,
+          "log_loss": 0.7382
         }
       },
       "jogos": [
@@ -187,6 +187,80 @@
               "confianca": "LOW",
               "probabilidade": 0.565,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-11T12:30:00Z",
+          "casa": "Zwolle",
+          "visitante": "Cambuur",
+          "competicao": "Eredivisie",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.568,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.553,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.813,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.584,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-11T12:30:00Z",
+          "casa": "Telstar",
+          "visitante": "Den Haag",
+          "competicao": "Eredivisie",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.407,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.599,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.715,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.502,
+              "resultado": "ACERTO"
             }
           ]
         }
