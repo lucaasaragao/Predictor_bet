@@ -2,46 +2,46 @@
   "dias": [
     {
       "data": "2026-10-11",
-      "ultima_atualizacao": "2026-10-11T19:33:29-03:00",
-      "finalizados": 27,
-      "taxa_geral": 0.564,
-      "total_acertos": 62,
-      "total_palpites": 110,
+      "ultima_atualizacao": "2026-10-11T19:45:30-03:00",
+      "finalizados": 29,
+      "taxa_geral": 0.571,
+      "total_acertos": 68,
+      "total_palpites": 119,
       "mercados": {
         "WINNER": {
-          "acertos": 16,
-          "total": 27,
-          "taxa": 0.593
+          "acertos": 17,
+          "total": 29,
+          "taxa": 0.586
         },
         "OVER_UNDER": {
-          "acertos": 34,
-          "total": 54,
-          "taxa": 0.63
+          "acertos": 37,
+          "total": 58,
+          "taxa": 0.638
         },
         "BTTS": {
-          "acertos": 11,
-          "total": 27,
-          "taxa": 0.407
+          "acertos": 12,
+          "total": 29,
+          "taxa": 0.414
         },
         "EMPATE": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "acertos": 2,
+          "total": 3,
+          "taxa": 0.667
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 27,
-          "brier": 0.5087,
-          "log_loss": 0.8777
+          "n": 29,
+          "brier": 0.51,
+          "log_loss": 0.8796
         },
         "OVER_UNDER": {
-          "n": 27,
-          "brier": 0.2449,
-          "log_loss": 0.6807
+          "n": 29,
+          "brier": 0.2417,
+          "log_loss": 0.6744
         },
         "BTTS": {
-          "n": 27,
+          "n": 29,
           "brier": 0.2453,
           "log_loss": 0.683
         }
@@ -1057,6 +1057,87 @@
               "confianca": "LOW",
               "probabilidade": 0.507,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-11T20:30:00Z",
+          "casa": "Flamengo",
+          "visitante": "Fluminense",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.527,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.538,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.732,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-11T20:30:00Z",
+          "casa": "Grêmio",
+          "visitante": "Internacional",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.571,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.707,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.497,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
+              "resultado": "ACERTO"
             }
           ]
         }
