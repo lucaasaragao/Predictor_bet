@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-11",
-      "ultima_atualizacao": "2026-10-11T21:27:26-03:00",
-      "finalizados": 29,
-      "taxa_geral": 0.571,
-      "total_acertos": 68,
-      "total_palpites": 119,
+      "ultima_atualizacao": "2026-10-11T22:25:42-03:00",
+      "finalizados": 30,
+      "taxa_geral": 0.561,
+      "total_acertos": 69,
+      "total_palpites": 123,
       "mercados": {
         "WINNER": {
-          "acertos": 17,
-          "total": 29,
-          "taxa": 0.586
+          "acertos": 18,
+          "total": 30,
+          "taxa": 0.6
         },
         "OVER_UNDER": {
           "acertos": 37,
-          "total": 58,
-          "taxa": 0.638
+          "total": 60,
+          "taxa": 0.617
         },
         "BTTS": {
           "acertos": 12,
-          "total": 29,
-          "taxa": 0.414
+          "total": 30,
+          "taxa": 0.4
         },
         "EMPATE": {
           "acertos": 2,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 29,
-          "brier": 0.51,
-          "log_loss": 0.8796
+          "n": 30,
+          "brier": 0.5073,
+          "log_loss": 0.8758
         },
         "OVER_UNDER": {
-          "n": 29,
-          "brier": 0.2417,
-          "log_loss": 0.6744
+          "n": 30,
+          "brier": 0.2436,
+          "log_loss": 0.6783
         },
         "BTTS": {
-          "n": 29,
-          "brier": 0.2453,
-          "log_loss": 0.683
+          "n": 30,
+          "brier": 0.2485,
+          "log_loss": 0.6894
         }
       },
       "jogos": [
@@ -1138,6 +1138,43 @@
               "confianca": "LOW",
               "probabilidade": 0.31,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-11T22:30:00Z",
+          "casa": "Bahia",
+          "visitante": "Mirassol",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.465,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.547,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.812,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.602,
+              "resultado": "ERRO"
             }
           ]
         }
