@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-13",
-      "ultima_atualizacao": "2026-10-13T17:46:31-03:00",
-      "finalizados": 6,
-      "taxa_geral": 0.36,
-      "total_acertos": 9,
-      "total_palpites": 25,
+      "ultima_atualizacao": "2026-10-13T17:54:44-03:00",
+      "finalizados": 8,
+      "taxa_geral": 0.455,
+      "total_acertos": 15,
+      "total_palpites": 33,
       "mercados": {
         "WINNER": {
-          "acertos": 2,
-          "total": 6,
-          "taxa": 0.333
+          "acertos": 3,
+          "total": 8,
+          "taxa": 0.375
         },
         "OVER_UNDER": {
-          "acertos": 6,
-          "total": 12,
-          "taxa": 0.5
+          "acertos": 10,
+          "total": 16,
+          "taxa": 0.625
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 6,
-          "taxa": 0.167
+          "acertos": 2,
+          "total": 8,
+          "taxa": 0.25
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 6,
-          "brier": 0.7502,
-          "log_loss": 1.2247
+          "n": 8,
+          "brier": 0.7355,
+          "log_loss": 1.1994
         },
         "OVER_UNDER": {
-          "n": 6,
-          "brier": 0.2757,
-          "log_loss": 0.7454
+          "n": 8,
+          "brier": 0.2661,
+          "log_loss": 0.726
         },
         "BTTS": {
-          "n": 6,
-          "brier": 0.2998,
-          "log_loss": 0.7961
+          "n": 8,
+          "brier": 0.273,
+          "log_loss": 0.7415
         }
       },
       "jogos": [
@@ -272,6 +272,80 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.604,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-13T18:45:00Z",
+          "casa": "Cardiff",
+          "visitante": "Watford",
+          "competicao": "Championship",
+          "placar": "5-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.384,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.501,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.763,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.559,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-13T18:45:00Z",
+          "casa": "Burnley",
+          "visitante": "Charlton",
+          "competicao": "Championship",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.474,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.525,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.817,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.395,
               "resultado": "ERRO"
             }
           ]
