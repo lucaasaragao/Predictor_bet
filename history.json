@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-13",
-      "ultima_atualizacao": "2026-10-13T17:35:10-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.778,
-      "total_acertos": 7,
-      "total_palpites": 9,
+      "ultima_atualizacao": "2026-10-13T17:46:31-03:00",
+      "finalizados": 6,
+      "taxa_geral": 0.36,
+      "total_acertos": 9,
+      "total_palpites": 25,
       "mercados": {
         "WINNER": {
           "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
+          "total": 6,
+          "taxa": 0.333
         },
         "OVER_UNDER": {
-          "acertos": 4,
-          "total": 4,
-          "taxa": 1.0
+          "acertos": 6,
+          "total": 12,
+          "taxa": 0.5
         },
         "BTTS": {
           "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "total": 6,
+          "taxa": 0.167
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.5325,
-          "log_loss": 0.9052
+          "n": 6,
+          "brier": 0.7502,
+          "log_loss": 1.2247
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.3156,
-          "log_loss": 0.8311
+          "n": 6,
+          "brier": 0.2757,
+          "log_loss": 0.7454
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.3608,
-          "log_loss": 0.9247
+          "n": 6,
+          "brier": 0.2998,
+          "log_loss": 0.7961
         }
       },
       "jogos": [
@@ -124,6 +124,154 @@
               "opcao": "X",
               "confianca": "LOW",
               "probabilidade": 0.306,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-13T18:45:00Z",
+          "casa": "Bristol City",
+          "visitante": "Blackburn",
+          "competicao": "Championship",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.384,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.501,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.763,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.559,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-13T18:45:00Z",
+          "casa": "Wrexham",
+          "visitante": "West Brom",
+          "competicao": "Championship",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.401,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.583,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.738,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.463,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-13T18:45:00Z",
+          "casa": "Wolverhampton",
+          "visitante": "Bolton",
+          "competicao": "Championship",
+          "placar": "1-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.636,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.537,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.86,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.391,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-13T18:45:00Z",
+          "casa": "Millwall",
+          "visitante": "Swansea",
+          "competicao": "Championship",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.468,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.575,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.814,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.604,
               "resultado": "ERRO"
             }
           ]
