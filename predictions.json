@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T15:26:26-03:00",
+  "generated_at": "2026-10-14T15:46:08-03:00",
   "analysis_date": "2026-10-14",
   "total_jogos": 14,
   "odds_debug_visual": false,
@@ -11,7 +11,7 @@
       "data": "2026-10-14T16:45:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 2,
+        "casa": 3,
         "visitante": 1
       },
       "times": {
@@ -250,7 +250,7 @@
     {
       "competicao": "UEFA Champions League",
       "data": "2026-10-14T16:45:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 3,
         "visitante": 6
@@ -409,7 +409,7 @@
           "ev_bruto": -0.4129,
           "prob_mercado_justa": 0.7437,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -423,7 +423,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -437,7 +437,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -451,7 +451,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -2857,9 +2857,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 2,
+    "total": 4,
+    "taxa": 0.5
   },
   "daily_tips_ids": [
     {

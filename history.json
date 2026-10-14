@@ -2,30 +2,84 @@
   "dias": [
     {
       "data": "2026-10-14",
-      "ultima_atualizacao": "2026-10-14T15:26:26-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-10-14T15:46:08-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.5,
+      "total_acertos": 2,
+      "total_palpites": 4,
+      "mercados": {
+        "WINNER": {
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.4795,
+          "log_loss": 0.8326
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.3002,
+          "log_loss": 0.7939
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.237,
+          "log_loss": 0.6672
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-10-14T16:45:00Z",
+          "casa": "LASK",
+          "visitante": "Liverpool",
+          "competicao": "UEFA Champions League",
+          "placar": "3-6",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.435,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.548,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.726,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.487,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-10-13",
