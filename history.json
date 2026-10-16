@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-10-16",
-      "ultima_atualizacao": "2026-10-16T17:44:22-03:00",
-      "finalizados": 2,
+      "ultima_atualizacao": "2026-10-16T17:53:09-03:00",
+      "finalizados": 4,
       "taxa_geral": 0.5,
-      "total_acertos": 4,
-      "total_palpites": 8,
+      "total_acertos": 8,
+      "total_palpites": 16,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
-        },
-        "OVER_UNDER": {
           "acertos": 2,
           "total": 4,
           "taxa": 0.5
         },
+        "OVER_UNDER": {
+          "acertos": 4,
+          "total": 8,
+          "taxa": 0.5
+        },
         "BTTS": {
-          "acertos": 1,
-          "total": 2,
+          "acertos": 2,
+          "total": 4,
           "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.7144,
-          "log_loss": 1.1717
+          "n": 4,
+          "brier": 0.6728,
+          "log_loss": 1.1079
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.3526,
-          "log_loss": 0.9195
+          "n": 4,
+          "brier": 0.3062,
+          "log_loss": 0.8161
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.4308,
-          "log_loss": 1.0779
+          "n": 4,
+          "brier": 0.3427,
+          "log_loss": 0.8902
         }
       },
       "jogos": [
@@ -113,6 +113,80 @@
               "confianca": "HIGH",
               "probabilidade": 0.754,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-16T18:45:00Z",
+          "casa": "Le Mans",
+          "visitante": "Toulouse",
+          "competicao": "Ligue 1",
+          "placar": "0-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.383,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.507,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.757,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.553,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-16T18:45:00Z",
+          "casa": "Frosinone",
+          "visitante": "Sassuolo",
+          "competicao": "Serie A",
+          "placar": "4-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.382,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.512,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.754,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.549,
+              "resultado": "ACERTO"
             }
           ]
         }
