@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-10-17",
-      "ultima_atualizacao": "2026-10-17T12:53:44-03:00",
-      "finalizados": 11,
-      "taxa_geral": 0.364,
-      "total_acertos": 16,
-      "total_palpites": 44,
+      "ultima_atualizacao": "2026-10-17T13:03:50-03:00",
+      "finalizados": 19,
+      "taxa_geral": 0.39,
+      "total_acertos": 30,
+      "total_palpites": 77,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 11,
-          "taxa": 0.091
+          "acertos": 6,
+          "total": 19,
+          "taxa": 0.316
         },
         "OVER_UNDER": {
-          "acertos": 11,
-          "total": 22,
-          "taxa": 0.5
+          "acertos": 17,
+          "total": 38,
+          "taxa": 0.447
         },
         "BTTS": {
-          "acertos": 4,
-          "total": 11,
-          "taxa": 0.364
+          "acertos": 7,
+          "total": 19,
+          "taxa": 0.368
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 11,
-          "brier": 0.8095,
-          "log_loss": 1.2851
+          "n": 19,
+          "brier": 0.732,
+          "log_loss": 1.1771
         },
         "OVER_UNDER": {
-          "n": 11,
-          "brier": 0.2659,
-          "log_loss": 0.7234
+          "n": 19,
+          "brier": 0.2811,
+          "log_loss": 0.7594
         },
         "BTTS": {
-          "n": 11,
-          "brier": 0.2891,
-          "log_loss": 0.7721
+          "n": 19,
+          "brier": 0.297,
+          "log_loss": 0.7886
         }
       },
       "jogos": [
@@ -446,6 +451,309 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.693,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T14:00:00Z",
+          "casa": "Southampton",
+          "visitante": "Bolton",
+          "competicao": "Championship",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.72,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.577,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.935,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.325,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T14:00:00Z",
+          "casa": "West Brom",
+          "visitante": "Blackburn",
+          "competicao": "Championship",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.399,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.585,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.696,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.511,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.312,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T14:00:00Z",
+          "casa": "Norwich",
+          "visitante": "Portsmouth",
+          "competicao": "Championship",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.371,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.551,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.705,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.502,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T14:00:00Z",
+          "casa": "Wrexham",
+          "visitante": "Preston NE",
+          "competicao": "Championship",
+          "placar": "4-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.529,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.525,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.735,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.506,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T14:00:00Z",
+          "casa": "Derby County",
+          "visitante": "Stoke",
+          "competicao": "Championship",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.494,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.56,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.716,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.513,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T14:00:00Z",
+          "casa": "Fulham",
+          "visitante": "Hull City",
+          "competicao": "Premier League",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.391,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.544,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.793,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T14:00:00Z",
+          "casa": "Swansea",
+          "visitante": "West Ham",
+          "competicao": "Championship",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.429,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.536,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.864,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.669,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T14:00:00Z",
+          "casa": "Birmingham",
+          "visitante": "QPR",
+          "competicao": "Championship",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.425,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.523,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.799,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.595,
+              "resultado": "ERRO"
             }
           ]
         }
