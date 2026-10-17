@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-10-17",
-      "ultima_atualizacao": "2026-10-17T12:17:52-03:00",
-      "finalizados": 6,
-      "taxa_geral": 0.417,
-      "total_acertos": 10,
-      "total_palpites": 24,
+      "ultima_atualizacao": "2026-10-17T12:28:39-03:00",
+      "finalizados": 8,
+      "taxa_geral": 0.375,
+      "total_acertos": 12,
+      "total_palpites": 32,
       "mercados": {
         "WINNER": {
           "acertos": 1,
-          "total": 6,
-          "taxa": 0.167
+          "total": 8,
+          "taxa": 0.125
         },
         "OVER_UNDER": {
-          "acertos": 6,
-          "total": 12,
+          "acertos": 8,
+          "total": 16,
           "taxa": 0.5
         },
         "BTTS": {
           "acertos": 3,
-          "total": 6,
-          "taxa": 0.5
+          "total": 8,
+          "taxa": 0.375
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 6,
-          "brier": 0.8424,
-          "log_loss": 1.339
+          "n": 8,
+          "brier": 0.8512,
+          "log_loss": 1.3415
         },
         "OVER_UNDER": {
-          "n": 6,
-          "brier": 0.2648,
-          "log_loss": 0.7227
+          "n": 8,
+          "brier": 0.2712,
+          "log_loss": 0.7368
         },
         "BTTS": {
-          "n": 6,
-          "brier": 0.2848,
-          "log_loss": 0.7638
+          "n": 8,
+          "brier": 0.2915,
+          "log_loss": 0.7792
         }
       },
       "jogos": [
@@ -261,6 +261,80 @@
               "confianca": "LOW",
               "probabilidade": 0.495,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T13:30:00Z",
+          "casa": "Bremen",
+          "visitante": "SC Paderborn",
+          "competicao": "Bundesliga",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.608,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.598,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.706,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.564,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T13:30:00Z",
+          "casa": "HSV",
+          "visitante": "Stuttgart",
+          "competicao": "Bundesliga",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.453,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.556,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.867,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.676,
+              "resultado": "ERRO"
             }
           ]
         }
