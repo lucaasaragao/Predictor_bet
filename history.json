@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-17",
-      "ultima_atualizacao": "2026-10-17T14:57:08-03:00",
-      "finalizados": 25,
-      "taxa_geral": 0.446,
-      "total_acertos": 45,
-      "total_palpites": 101,
+      "ultima_atualizacao": "2026-10-17T15:19:10-03:00",
+      "finalizados": 26,
+      "taxa_geral": 0.448,
+      "total_acertos": 47,
+      "total_palpites": 105,
       "mercados": {
         "WINNER": {
           "acertos": 7,
-          "total": 25,
-          "taxa": 0.28
+          "total": 26,
+          "taxa": 0.269
         },
         "OVER_UNDER": {
-          "acertos": 26,
-          "total": 50,
-          "taxa": 0.52
+          "acertos": 27,
+          "total": 52,
+          "taxa": 0.519
         },
         "BTTS": {
-          "acertos": 12,
-          "total": 25,
-          "taxa": 0.48
+          "acertos": 13,
+          "total": 26,
+          "taxa": 0.5
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 25,
-          "brier": 0.7346,
-          "log_loss": 1.1841
+          "n": 26,
+          "brier": 0.7311,
+          "log_loss": 1.1794
         },
         "OVER_UNDER": {
-          "n": 25,
-          "brier": 0.2653,
-          "log_loss": 0.7264
+          "n": 26,
+          "brier": 0.2662,
+          "log_loss": 0.728
         },
         "BTTS": {
-          "n": 25,
-          "brier": 0.2764,
-          "log_loss": 0.747
+          "n": 26,
+          "brier": 0.2742,
+          "log_loss": 0.7426
         }
       },
       "jogos": [
@@ -975,6 +975,43 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.553,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T16:00:00Z",
+          "casa": "Bologna",
+          "visitante": "Inter",
+          "competicao": "Serie A",
+          "placar": "1-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.353,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.536,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.724,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.519,
               "resultado": "ACERTO"
             }
           ]
