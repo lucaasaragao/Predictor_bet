@@ -2,30 +2,158 @@
   "dias": [
     {
       "data": "2026-10-17",
-      "ultima_atualizacao": "2026-10-17T10:27:20-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-10-17T10:37:40-03:00",
+      "finalizados": 3,
+      "taxa_geral": 0.5,
+      "total_acertos": 6,
+      "total_palpites": 12,
+      "mercados": {
+        "WINNER": {
+          "acertos": 1,
+          "total": 3,
+          "taxa": 0.333
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 4,
+          "total": 6,
+          "taxa": 0.667
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 1,
+          "total": 3,
+          "taxa": 0.333
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 3,
+          "brier": 0.7964,
+          "log_loss": 1.2493
+        },
+        "OVER_UNDER": {
+          "n": 3,
+          "brier": 0.2226,
+          "log_loss": 0.6359
+        },
+        "BTTS": {
+          "n": 3,
+          "brier": 0.2391,
+          "log_loss": 0.6715
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-10-17T11:30:00Z",
+          "casa": "Middlesbrough",
+          "visitante": "Cardiff",
+          "competicao": "Championship",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.662,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.567,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.935,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.328,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T11:30:00Z",
+          "casa": "Watford",
+          "visitante": "Charlton",
+          "competicao": "Championship",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.401,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.546,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.735,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.524,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T11:30:00Z",
+          "casa": "Millwall",
+          "visitante": "Lincoln City",
+          "competicao": "Championship",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.384,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.501,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.763,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.559,
+              "resultado": "ACERTO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-10-16",
