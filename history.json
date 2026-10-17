@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-17",
-      "ultima_atualizacao": "2026-10-17T17:57:31-03:00",
-      "finalizados": 33,
-      "taxa_geral": 0.481,
-      "total_acertos": 64,
-      "total_palpites": 133,
+      "ultima_atualizacao": "2026-10-17T18:14:35-03:00",
+      "finalizados": 35,
+      "taxa_geral": 0.489,
+      "total_acertos": 69,
+      "total_palpites": 141,
       "mercados": {
         "WINNER": {
-          "acertos": 11,
-          "total": 33,
-          "taxa": 0.333
+          "acertos": 12,
+          "total": 35,
+          "taxa": 0.343
         },
         "OVER_UNDER": {
-          "acertos": 36,
-          "total": 66,
-          "taxa": 0.545
+          "acertos": 38,
+          "total": 70,
+          "taxa": 0.543
         },
         "BTTS": {
-          "acertos": 17,
-          "total": 33,
-          "taxa": 0.515
+          "acertos": 19,
+          "total": 35,
+          "taxa": 0.543
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 33,
-          "brier": 0.6731,
-          "log_loss": 1.098
+          "n": 35,
+          "brier": 0.6739,
+          "log_loss": 1.0982
         },
         "OVER_UNDER": {
-          "n": 33,
-          "brier": 0.2526,
-          "log_loss": 0.6967
+          "n": 35,
+          "brier": 0.2491,
+          "log_loss": 0.6896
         },
         "BTTS": {
-          "n": 33,
-          "brier": 0.2588,
-          "log_loss": 0.7108
+          "n": 35,
+          "brier": 0.2553,
+          "log_loss": 0.7035
         }
       },
       "jogos": [
@@ -1271,6 +1271,80 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.409,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T19:00:00Z",
+          "casa": "Valencia",
+          "visitante": "Athletic",
+          "competicao": "Primera Division",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.516,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.5,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.762,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.471,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T19:00:00Z",
+          "casa": "Sparta",
+          "visitante": "Willem II",
+          "competicao": "Eredivisie",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.404,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.586,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.852,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.661,
               "resultado": "ACERTO"
             }
           ]
