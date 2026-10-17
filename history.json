@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-17",
-      "ultima_atualizacao": "2026-10-17T13:03:50-03:00",
-      "finalizados": 19,
-      "taxa_geral": 0.39,
-      "total_acertos": 30,
-      "total_palpites": 77,
+      "ultima_atualizacao": "2026-10-17T13:21:20-03:00",
+      "finalizados": 23,
+      "taxa_geral": 0.43,
+      "total_acertos": 40,
+      "total_palpites": 93,
       "mercados": {
         "WINNER": {
-          "acertos": 6,
-          "total": 19,
-          "taxa": 0.316
+          "acertos": 7,
+          "total": 23,
+          "taxa": 0.304
         },
         "OVER_UNDER": {
-          "acertos": 17,
-          "total": 38,
-          "taxa": 0.447
+          "acertos": 23,
+          "total": 46,
+          "taxa": 0.5
         },
         "BTTS": {
-          "acertos": 7,
-          "total": 19,
-          "taxa": 0.368
+          "acertos": 10,
+          "total": 23,
+          "taxa": 0.435
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 19,
-          "brier": 0.732,
-          "log_loss": 1.1771
+          "n": 23,
+          "brier": 0.7347,
+          "log_loss": 1.1844
         },
         "OVER_UNDER": {
-          "n": 19,
-          "brier": 0.2811,
-          "log_loss": 0.7594
+          "n": 23,
+          "brier": 0.2723,
+          "log_loss": 0.7412
         },
         "BTTS": {
-          "n": 19,
-          "brier": 0.297,
-          "log_loss": 0.7886
+          "n": 23,
+          "brier": 0.2872,
+          "log_loss": 0.7693
         }
       },
       "jogos": [
@@ -753,6 +753,154 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.595,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T14:00:00Z",
+          "casa": "Bristol City",
+          "visitante": "Sheffield Utd",
+          "competicao": "Championship",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.356,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.651,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.655,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.541,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T14:00:00Z",
+          "casa": "Man City",
+          "visitante": "Ipswich Town",
+          "competicao": "Premier League",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.391,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.544,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.793,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T14:00:00Z",
+          "casa": "Brentford",
+          "visitante": "Liverpool",
+          "competicao": "Premier League",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.495,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.616,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.881,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.678,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T14:15:00Z",
+          "casa": "Villarreal",
+          "visitante": "Elche",
+          "competicao": "Primera Division",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.416,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.552,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.84,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.65,
               "resultado": "ERRO"
             }
           ]
