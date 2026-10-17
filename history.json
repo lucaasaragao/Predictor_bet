@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-17",
-      "ultima_atualizacao": "2026-10-17T15:19:10-03:00",
-      "finalizados": 26,
-      "taxa_geral": 0.448,
-      "total_acertos": 47,
-      "total_palpites": 105,
+      "ultima_atualizacao": "2026-10-17T15:32:39-03:00",
+      "finalizados": 28,
+      "taxa_geral": 0.442,
+      "total_acertos": 50,
+      "total_palpites": 113,
       "mercados": {
         "WINNER": {
-          "acertos": 7,
-          "total": 26,
-          "taxa": 0.269
+          "acertos": 8,
+          "total": 28,
+          "taxa": 0.286
         },
         "OVER_UNDER": {
-          "acertos": 27,
-          "total": 52,
-          "taxa": 0.519
+          "acertos": 29,
+          "total": 56,
+          "taxa": 0.518
         },
         "BTTS": {
           "acertos": 13,
-          "total": 26,
-          "taxa": 0.5
+          "total": 28,
+          "taxa": 0.464
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 26,
-          "brier": 0.7311,
-          "log_loss": 1.1794
+          "n": 28,
+          "brier": 0.7033,
+          "log_loss": 1.1379
         },
         "OVER_UNDER": {
-          "n": 26,
-          "brier": 0.2662,
-          "log_loss": 0.728
+          "n": 28,
+          "brier": 0.2601,
+          "log_loss": 0.7125
         },
         "BTTS": {
-          "n": 26,
-          "brier": 0.2742,
-          "log_loss": 0.7426
+          "n": 28,
+          "brier": 0.2749,
+          "log_loss": 0.7442
         }
       },
       "jogos": [
@@ -1013,6 +1013,80 @@
               "confianca": "LOW",
               "probabilidade": 0.519,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T16:30:00Z",
+          "casa": "Bayern",
+          "visitante": "RB Leipzig",
+          "competicao": "Bundesliga",
+          "placar": "6-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.897,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.733,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 1.0,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.358,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T16:30:00Z",
+          "casa": "Newcastle",
+          "visitante": "Aston Villa",
+          "competicao": "Premier League",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.394,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.589,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.823,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.626,
+              "resultado": "ERRO"
             }
           ]
         }
