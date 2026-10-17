@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-10-17",
-      "ultima_atualizacao": "2026-10-17T12:28:39-03:00",
-      "finalizados": 8,
-      "taxa_geral": 0.375,
-      "total_acertos": 12,
-      "total_palpites": 32,
+      "ultima_atualizacao": "2026-10-17T12:38:28-03:00",
+      "finalizados": 10,
+      "taxa_geral": 0.325,
+      "total_acertos": 13,
+      "total_palpites": 40,
       "mercados": {
         "WINNER": {
           "acertos": 1,
-          "total": 8,
-          "taxa": 0.125
+          "total": 10,
+          "taxa": 0.1
         },
         "OVER_UNDER": {
-          "acertos": 8,
-          "total": 16,
-          "taxa": 0.5
+          "acertos": 9,
+          "total": 20,
+          "taxa": 0.45
         },
         "BTTS": {
           "acertos": 3,
-          "total": 8,
-          "taxa": 0.375
+          "total": 10,
+          "taxa": 0.3
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 8,
-          "brier": 0.8512,
-          "log_loss": 1.3415
+          "n": 10,
+          "brier": 0.8264,
+          "log_loss": 1.3104
         },
         "OVER_UNDER": {
-          "n": 8,
-          "brier": 0.2712,
-          "log_loss": 0.7368
+          "n": 10,
+          "brier": 0.2867,
+          "log_loss": 0.7682
         },
         "BTTS": {
-          "n": 8,
-          "brier": 0.2915,
-          "log_loss": 0.7792
+          "n": 10,
+          "brier": 0.312,
+          "log_loss": 0.8211
         }
       },
       "jogos": [
@@ -334,6 +334,80 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.676,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T13:30:00Z",
+          "casa": "Union Berlin",
+          "visitante": "Dortmund",
+          "competicao": "Bundesliga",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.366,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.559,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.772,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.569,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-17T13:30:00Z",
+          "casa": "Schalke",
+          "visitante": "Mainz",
+          "competicao": "Bundesliga",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.402,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.602,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.843,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.65,
               "resultado": "ERRO"
             }
           ]
