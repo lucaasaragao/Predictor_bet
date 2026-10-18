@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-10-18",
-      "ultima_atualizacao": "2026-10-18T20:31:50-03:00",
-      "finalizados": 26,
-      "taxa_geral": 0.566,
-      "total_acertos": 60,
-      "total_palpites": 106,
+      "ultima_atualizacao": "2026-10-18T20:40:08-03:00",
+      "finalizados": 27,
+      "taxa_geral": 0.559,
+      "total_acertos": 62,
+      "total_palpites": 111,
       "mercados": {
         "WINNER": {
           "acertos": 11,
-          "total": 26,
-          "taxa": 0.423
+          "total": 27,
+          "taxa": 0.407
         },
         "OVER_UNDER": {
-          "acertos": 34,
-          "total": 52,
-          "taxa": 0.654
+          "acertos": 35,
+          "total": 54,
+          "taxa": 0.648
         },
         "BTTS": {
-          "acertos": 15,
-          "total": 26,
-          "taxa": 0.577
+          "acertos": 16,
+          "total": 27,
+          "taxa": 0.593
         },
         "EMPATE": {
           "acertos": 0,
-          "total": 2,
+          "total": 3,
           "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 26,
-          "brier": 0.6459,
-          "log_loss": 1.0705
+          "n": 27,
+          "brier": 0.6504,
+          "log_loss": 1.0773
         },
         "OVER_UNDER": {
-          "n": 26,
-          "brier": 0.2052,
-          "log_loss": 0.5965
+          "n": 27,
+          "brier": 0.2133,
+          "log_loss": 0.6134
         },
         "BTTS": {
-          "n": 26,
-          "brier": 0.1959,
-          "log_loss": 0.5804
+          "n": 27,
+          "brier": 0.1957,
+          "log_loss": 0.5801
         }
       },
       "jogos": [
@@ -1020,6 +1020,50 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.667,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-18T21:30:00Z",
+          "casa": "Bahia",
+          "visitante": "Flamengo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "0-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.381,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.651,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.704,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.487,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.333,
+              "resultado": "ERRO"
             }
           ]
         }
