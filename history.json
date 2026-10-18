@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-18",
-      "ultima_atualizacao": "2026-10-18T17:18:11-03:00",
-      "finalizados": 19,
-      "taxa_geral": 0.597,
-      "total_acertos": 46,
-      "total_palpites": 77,
+      "ultima_atualizacao": "2026-10-18T17:29:52-03:00",
+      "finalizados": 21,
+      "taxa_geral": 0.576,
+      "total_acertos": 49,
+      "total_palpites": 85,
       "mercados": {
         "WINNER": {
           "acertos": 10,
-          "total": 19,
-          "taxa": 0.526
+          "total": 21,
+          "taxa": 0.476
         },
         "OVER_UNDER": {
-          "acertos": 25,
-          "total": 38,
-          "taxa": 0.658
+          "acertos": 27,
+          "total": 42,
+          "taxa": 0.643
         },
         "BTTS": {
-          "acertos": 11,
-          "total": 19,
-          "taxa": 0.579
+          "acertos": 12,
+          "total": 21,
+          "taxa": 0.571
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 19,
-          "brier": 0.5719,
-          "log_loss": 0.9654
+          "n": 21,
+          "brier": 0.6224,
+          "log_loss": 1.0418
         },
         "OVER_UNDER": {
-          "n": 19,
-          "brier": 0.2145,
-          "log_loss": 0.6161
+          "n": 21,
+          "brier": 0.2008,
+          "log_loss": 0.5866
         },
         "BTTS": {
-          "n": 19,
-          "brier": 0.2021,
-          "log_loss": 0.5929
+          "n": 21,
+          "brier": 0.1925,
+          "log_loss": 0.5728
         }
       },
       "jogos": [
@@ -753,6 +753,80 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.565,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-18T18:00:00Z",
+          "casa": "Twente",
+          "visitante": "Utrecht",
+          "competicao": "Eredivisie",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.706,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.576,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.955,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.293,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-18T18:00:00Z",
+          "casa": "NEC",
+          "visitante": "Sittard",
+          "competicao": "Eredivisie",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.503,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.912,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.725,
               "resultado": "ACERTO"
             }
           ]
