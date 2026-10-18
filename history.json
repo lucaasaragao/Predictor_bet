@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-10-18",
-      "ultima_atualizacao": "2026-10-18T11:53:44-03:00",
-      "finalizados": 4,
-      "taxa_geral": 0.562,
-      "total_acertos": 9,
-      "total_palpites": 16,
+      "ultima_atualizacao": "2026-10-18T12:03:50-03:00",
+      "finalizados": 7,
+      "taxa_geral": 0.536,
+      "total_acertos": 15,
+      "total_palpites": 28,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 4,
-          "taxa": 0.25
+          "acertos": 2,
+          "total": 7,
+          "taxa": 0.286
         },
         "OVER_UNDER": {
-          "acertos": 5,
-          "total": 8,
-          "taxa": 0.625
+          "acertos": 9,
+          "total": 14,
+          "taxa": 0.643
         },
         "BTTS": {
-          "acertos": 3,
-          "total": 4,
-          "taxa": 0.75
+          "acertos": 4,
+          "total": 7,
+          "taxa": 0.571
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 4,
-          "brier": 0.7982,
-          "log_loss": 1.2933
+          "n": 7,
+          "brier": 0.705,
+          "log_loss": 1.158
         },
         "OVER_UNDER": {
-          "n": 4,
-          "brier": 0.2219,
-          "log_loss": 0.6322
+          "n": 7,
+          "brier": 0.2448,
+          "log_loss": 0.6807
         },
         "BTTS": {
-          "n": 4,
-          "brier": 0.1809,
-          "log_loss": 0.5494
+          "n": 7,
+          "brier": 0.2148,
+          "log_loss": 0.6195
         }
       },
       "jogos": [
@@ -187,6 +187,117 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.661,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-18T13:00:00Z",
+          "casa": "Brighton Hove",
+          "visitante": "Crystal Palace",
+          "competicao": "Premier League",
+          "placar": "5-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.639,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.588,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.864,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.408,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-18T13:00:00Z",
+          "casa": "Angers SCO",
+          "visitante": "Marseille",
+          "competicao": "Ligue 1",
+          "placar": "2-5",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.374,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.622,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.658,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.545,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-18T13:00:00Z",
+          "casa": "Leeds United",
+          "visitante": "Man United",
+          "competicao": "Premier League",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.474,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.519,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.776,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.442,
+              "resultado": "ERRO"
             }
           ]
         }
