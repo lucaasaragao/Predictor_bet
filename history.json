@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-10-18",
-      "ultima_atualizacao": "2026-10-18T17:55:48-03:00",
-      "finalizados": 23,
-      "taxa_geral": 0.57,
-      "total_acertos": 53,
-      "total_palpites": 93,
+      "ultima_atualizacao": "2026-10-18T18:10:23-03:00",
+      "finalizados": 26,
+      "taxa_geral": 0.566,
+      "total_acertos": 60,
+      "total_palpites": 106,
       "mercados": {
         "WINNER": {
-          "acertos": 10,
-          "total": 23,
-          "taxa": 0.435
+          "acertos": 11,
+          "total": 26,
+          "taxa": 0.423
         },
         "OVER_UNDER": {
-          "acertos": 30,
-          "total": 46,
-          "taxa": 0.652
+          "acertos": 34,
+          "total": 52,
+          "taxa": 0.654
         },
         "BTTS": {
-          "acertos": 13,
-          "total": 23,
-          "taxa": 0.565
+          "acertos": 15,
+          "total": 26,
+          "taxa": 0.577
         },
         "EMPATE": {
           "acertos": 0,
-          "total": 1,
+          "total": 2,
           "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 23,
-          "brier": 0.6591,
-          "log_loss": 1.0889
+          "n": 26,
+          "brier": 0.6459,
+          "log_loss": 1.0705
         },
         "OVER_UNDER": {
-          "n": 23,
-          "brier": 0.2031,
-          "log_loss": 0.5917
+          "n": 26,
+          "brier": 0.2052,
+          "log_loss": 0.5965
         },
         "BTTS": {
-          "n": 23,
-          "brier": 0.1972,
-          "log_loss": 0.5827
+          "n": 26,
+          "brier": 0.1959,
+          "log_loss": 0.5804
         }
       },
       "jogos": [
@@ -901,6 +901,124 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.498,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-18T19:00:00Z",
+          "casa": "Grêmio",
+          "visitante": "Cruzeiro",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-4",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.571,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.707,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.497,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-18T19:00:00Z",
+          "casa": "Real Madrid",
+          "visitante": "Sevilla FC",
+          "competicao": "Primera Division",
+          "placar": "4-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.597,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.541,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.963,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.745,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-18T19:00:00Z",
+          "casa": "Fluminense",
+          "visitante": "Santos",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.389,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.517,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.858,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.667,
               "resultado": "ACERTO"
             }
           ]
