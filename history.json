@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-10-18",
-      "ultima_atualizacao": "2026-10-18T14:29:13-03:00",
-      "finalizados": 16,
-      "taxa_geral": 0.578,
-      "total_acertos": 37,
-      "total_palpites": 64,
+      "ultima_atualizacao": "2026-10-18T14:38:46-03:00",
+      "finalizados": 17,
+      "taxa_geral": 0.58,
+      "total_acertos": 40,
+      "total_palpites": 69,
       "mercados": {
         "WINNER": {
-          "acertos": 8,
-          "total": 16,
-          "taxa": 0.5
+          "acertos": 9,
+          "total": 17,
+          "taxa": 0.529
         },
         "OVER_UNDER": {
-          "acertos": 20,
-          "total": 32,
-          "taxa": 0.625
+          "acertos": 21,
+          "total": 34,
+          "taxa": 0.618
         },
         "BTTS": {
-          "acertos": 9,
-          "total": 16,
-          "taxa": 0.562
+          "acertos": 10,
+          "total": 17,
+          "taxa": 0.588
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 16,
-          "brier": 0.5837,
-          "log_loss": 0.9827
+          "n": 17,
+          "brier": 0.5823,
+          "log_loss": 0.98
         },
         "OVER_UNDER": {
-          "n": 16,
-          "brier": 0.2208,
-          "log_loss": 0.629
+          "n": 17,
+          "brier": 0.2122,
+          "log_loss": 0.6107
         },
         "BTTS": {
-          "n": 16,
-          "brier": 0.2058,
-          "log_loss": 0.5997
+          "n": 17,
+          "brier": 0.2015,
+          "log_loss": 0.5911
         }
       },
       "jogos": [
@@ -631,6 +636,50 @@
               "confianca": "HIGH",
               "probabilidade": 0.702,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-18T15:30:00Z",
+          "casa": "Nottingham",
+          "visitante": "Arsenal",
+          "competicao": "Premier League",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.392,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.728,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.583,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.606,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.358,
+              "resultado": "ERRO"
             }
           ]
         }
