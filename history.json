@@ -2,30 +2,121 @@
   "dias": [
     {
       "data": "2026-10-18",
-      "ultima_atualizacao": "2026-10-18T09:12:58-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-10-18T09:34:56-03:00",
+      "finalizados": 2,
+      "taxa_geral": 0.625,
+      "total_acertos": 5,
+      "total_palpites": 8,
+      "mercados": {
+        "WINNER": {
+          "acertos": 0,
+          "total": 2,
+          "taxa": 0.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 3,
+          "total": 4,
+          "taxa": 0.75
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 2,
+          "total": 2,
+          "taxa": 1.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 2,
+          "brier": 0.8974,
+          "log_loss": 1.4302
+        },
+        "OVER_UNDER": {
+          "n": 2,
+          "brier": 0.2481,
+          "log_loss": 0.6826
+        },
+        "BTTS": {
+          "n": 2,
+          "brier": 0.1446,
+          "log_loss": 0.4753
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-10-18T10:15:00Z",
+          "casa": "Zwolle",
+          "visitante": "Go Ahead",
+          "competicao": "Eredivisie",
+          "placar": "4-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "HIGH",
+              "probabilidade": 0.618,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.84,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.612,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-18T10:30:00Z",
+          "casa": "Udinese",
+          "visitante": "Lecce",
+          "competicao": "Serie A",
+          "placar": "0-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.349,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.653,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.627,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.571,
+              "resultado": "ACERTO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-10-17",
