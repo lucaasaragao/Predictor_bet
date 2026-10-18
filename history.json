@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-18",
-      "ultima_atualizacao": "2026-10-18T15:24:35-03:00",
-      "finalizados": 18,
-      "taxa_geral": 0.589,
-      "total_acertos": 43,
-      "total_palpites": 73,
+      "ultima_atualizacao": "2026-10-18T15:38:18-03:00",
+      "finalizados": 19,
+      "taxa_geral": 0.597,
+      "total_acertos": 46,
+      "total_palpites": 77,
       "mercados": {
         "WINNER": {
           "acertos": 10,
-          "total": 18,
-          "taxa": 0.556
+          "total": 19,
+          "taxa": 0.526
         },
         "OVER_UNDER": {
-          "acertos": 23,
-          "total": 36,
-          "taxa": 0.639
+          "acertos": 25,
+          "total": 38,
+          "taxa": 0.658
         },
         "BTTS": {
-          "acertos": 10,
-          "total": 18,
-          "taxa": 0.556
+          "acertos": 11,
+          "total": 19,
+          "taxa": 0.579
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 18,
-          "brier": 0.5655,
-          "log_loss": 0.9568
+          "n": 19,
+          "brier": 0.5719,
+          "log_loss": 0.9654
         },
         "OVER_UNDER": {
-          "n": 18,
-          "brier": 0.213,
-          "log_loss": 0.6128
+          "n": 19,
+          "brier": 0.2145,
+          "log_loss": 0.6161
         },
         "BTTS": {
-          "n": 18,
-          "brier": 0.2028,
-          "log_loss": 0.5941
+          "n": 19,
+          "brier": 0.2021,
+          "log_loss": 0.5929
         }
       },
       "jogos": [
@@ -717,6 +717,43 @@
               "confianca": "LOW",
               "probabilidade": 0.475,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-18T16:30:00Z",
+          "casa": "Málaga",
+          "visitante": "Real Sociedad",
+          "competicao": "Primera Division",
+          "placar": "2-5",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ACERTO"
             }
           ]
         }
