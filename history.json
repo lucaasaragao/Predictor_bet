@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-10-21",
-      "ultima_atualizacao": "2026-10-21T16:57:59-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.5,
-      "total_acertos": 4,
-      "total_palpites": 8,
+      "ultima_atualizacao": "2026-10-21T17:18:37-03:00",
+      "finalizados": 3,
+      "taxa_geral": 0.667,
+      "total_acertos": 8,
+      "total_palpites": 12,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+          "acertos": 2,
+          "total": 3,
+          "taxa": 0.667
         },
         "OVER_UNDER": {
-          "acertos": 3,
-          "total": 4,
-          "taxa": 0.75
+          "acertos": 5,
+          "total": 6,
+          "taxa": 0.833
         },
         "BTTS": {
-          "acertos": 0,
-          "total": 2,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 3,
+          "taxa": 0.333
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.6383,
-          "log_loss": 1.0831
+          "n": 3,
+          "brier": 0.6054,
+          "log_loss": 1.0263
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.2292,
-          "log_loss": 0.6514
+          "n": 3,
+          "brier": 0.2067,
+          "log_loss": 0.6056
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.2283,
-          "log_loss": 0.6495
+          "n": 3,
+          "brier": 0.1972,
+          "log_loss": 0.5856
         }
       },
       "jogos": [
@@ -113,6 +113,43 @@
               "confianca": "LOW",
               "probabilidade": 0.44,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-21T18:00:00Z",
+          "casa": "Levante",
+          "visitante": "Athletic",
+          "competicao": "Primera Division",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.401,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.598,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.732,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.522,
+              "resultado": "ACERTO"
             }
           ]
         }
