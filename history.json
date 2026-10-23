@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-10-23",
-      "ultima_atualizacao": "2026-10-23T17:59:13-03:00",
-      "finalizados": 4,
-      "taxa_geral": 0.625,
-      "total_acertos": 10,
-      "total_palpites": 16,
+      "ultima_atualizacao": "2026-10-23T18:18:02-03:00",
+      "finalizados": 6,
+      "taxa_geral": 0.5,
+      "total_acertos": 12,
+      "total_palpites": 24,
       "mercados": {
         "WINNER": {
           "acertos": 2,
-          "total": 4,
-          "taxa": 0.5
+          "total": 6,
+          "taxa": 0.333
         },
         "OVER_UNDER": {
-          "acertos": 6,
-          "total": 8,
-          "taxa": 0.75
+          "acertos": 8,
+          "total": 12,
+          "taxa": 0.667
         },
         "BTTS": {
           "acertos": 2,
-          "total": 4,
-          "taxa": 0.5
+          "total": 6,
+          "taxa": 0.333
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 4,
-          "brier": 0.727,
-          "log_loss": 1.2338
+          "n": 6,
+          "brier": 0.7985,
+          "log_loss": 1.2939
         },
         "OVER_UNDER": {
-          "n": 4,
-          "brier": 0.2282,
-          "log_loss": 0.6491
+          "n": 6,
+          "brier": 0.2533,
+          "log_loss": 0.6996
         },
         "BTTS": {
-          "n": 4,
-          "brier": 0.2117,
-          "log_loss": 0.6163
+          "n": 6,
+          "brier": 0.2149,
+          "log_loss": 0.6223
         }
       },
       "jogos": [
@@ -187,6 +187,80 @@
               "confianca": "LOW",
               "probabilidade": 0.549,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-23T19:00:00Z",
+          "casa": "Ipswich Town",
+          "visitante": "Nottingham",
+          "competicao": "Premier League",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.437,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.581,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.71,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-23T19:00:00Z",
+          "casa": "Alavés",
+          "visitante": "Málaga",
+          "competicao": "Primera Division",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.67,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.519,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.764,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.553,
+              "resultado": "ERRO"
             }
           ]
         }
