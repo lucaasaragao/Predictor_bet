@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-10-23",
-      "ultima_atualizacao": "2026-10-23T18:40:46-03:00",
-      "finalizados": 6,
-      "taxa_geral": 0.5,
-      "total_acertos": 12,
-      "total_palpites": 24,
+      "ultima_atualizacao": "2026-10-23T18:48:53-03:00",
+      "finalizados": 7,
+      "taxa_geral": 0.483,
+      "total_acertos": 14,
+      "total_palpites": 29,
       "mercados": {
         "WINNER": {
           "acertos": 2,
-          "total": 6,
-          "taxa": 0.333
+          "total": 7,
+          "taxa": 0.286
         },
         "OVER_UNDER": {
-          "acertos": 8,
-          "total": 12,
-          "taxa": 0.667
+          "acertos": 9,
+          "total": 14,
+          "taxa": 0.643
         },
         "BTTS": {
-          "acertos": 2,
-          "total": 6,
-          "taxa": 0.333
+          "acertos": 3,
+          "total": 7,
+          "taxa": 0.429
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 6,
-          "brier": 0.7985,
-          "log_loss": 1.2939
+          "n": 7,
+          "brier": 0.7819,
+          "log_loss": 1.2691
         },
         "OVER_UNDER": {
-          "n": 6,
-          "brier": 0.2533,
-          "log_loss": 0.6996
+          "n": 7,
+          "brier": 0.2896,
+          "log_loss": 0.7776
         },
         "BTTS": {
-          "n": 6,
-          "brier": 0.2149,
-          "log_loss": 0.6223
+          "n": 7,
+          "brier": 0.2055,
+          "log_loss": 0.6031
         }
       },
       "jogos": [
@@ -260,6 +265,50 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.553,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-23T19:45:00Z",
+          "casa": "Vitória SC",
+          "visitante": "Marítimo",
+          "competicao": "Primeira Liga",
+          "placar": "5-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.357,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.712,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.575,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.614,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.357,
               "resultado": "ERRO"
             }
           ]
