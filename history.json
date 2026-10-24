@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-24",
-      "ultima_atualizacao": "2026-10-24T12:49:23-03:00",
-      "finalizados": 8,
-      "taxa_geral": 0.667,
-      "total_acertos": 22,
-      "total_palpites": 33,
+      "ultima_atualizacao": "2026-10-24T12:57:08-03:00",
+      "finalizados": 9,
+      "taxa_geral": 0.649,
+      "total_acertos": 24,
+      "total_palpites": 37,
       "mercados": {
         "WINNER": {
-          "acertos": 3,
-          "total": 8,
-          "taxa": 0.375
+          "acertos": 4,
+          "total": 9,
+          "taxa": 0.444
         },
         "OVER_UNDER": {
-          "acertos": 13,
-          "total": 16,
-          "taxa": 0.812
+          "acertos": 14,
+          "total": 18,
+          "taxa": 0.778
         },
         "BTTS": {
           "acertos": 6,
-          "total": 8,
-          "taxa": 0.75
+          "total": 9,
+          "taxa": 0.667
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 8,
-          "brier": 0.6867,
-          "log_loss": 1.1154
+          "n": 9,
+          "brier": 0.6482,
+          "log_loss": 1.0633
         },
         "OVER_UNDER": {
-          "n": 8,
-          "brier": 0.268,
-          "log_loss": 0.7412
+          "n": 9,
+          "brier": 0.2796,
+          "log_loss": 0.7636
         },
         "BTTS": {
-          "n": 8,
-          "brier": 0.2017,
-          "log_loss": 0.5948
+          "n": 9,
+          "brier": 0.2216,
+          "log_loss": 0.6354
         }
       },
       "jogos": [
@@ -347,6 +347,43 @@
               "confianca": "LOW",
               "probabilidade": 0.552,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-24T14:00:00Z",
+          "casa": "Blackburn",
+          "visitante": "Wrexham",
+          "competicao": "Championship",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.524,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.61,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.872,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.658,
+              "resultado": "ERRO"
             }
           ]
         }
