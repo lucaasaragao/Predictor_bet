@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-24",
-      "ultima_atualizacao": "2026-10-24T18:41:52-03:00",
-      "finalizados": 27,
-      "taxa_geral": 0.6,
-      "total_acertos": 66,
-      "total_palpites": 110,
+      "ultima_atualizacao": "2026-10-24T18:49:58-03:00",
+      "finalizados": 30,
+      "taxa_geral": 0.631,
+      "total_acertos": 77,
+      "total_palpites": 122,
       "mercados": {
         "WINNER": {
-          "acertos": 14,
-          "total": 27,
-          "taxa": 0.519
+          "acertos": 16,
+          "total": 30,
+          "taxa": 0.533
         },
         "OVER_UNDER": {
-          "acertos": 36,
-          "total": 54,
-          "taxa": 0.667
+          "acertos": 42,
+          "total": 60,
+          "taxa": 0.7
         },
         "BTTS": {
-          "acertos": 16,
-          "total": 27,
-          "taxa": 0.593
+          "acertos": 19,
+          "total": 30,
+          "taxa": 0.633
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 27,
-          "brier": 0.6151,
-          "log_loss": 1.0194
+          "n": 30,
+          "brier": 0.6286,
+          "log_loss": 1.0419
         },
         "OVER_UNDER": {
-          "n": 27,
-          "brier": 0.2994,
-          "log_loss": 0.8085
+          "n": 30,
+          "brier": 0.2987,
+          "log_loss": 0.806
         },
         "BTTS": {
-          "n": 27,
-          "brier": 0.2531,
-          "log_loss": 0.6997
+          "n": 30,
+          "brier": 0.2514,
+          "log_loss": 0.6963
         }
       },
       "jogos": [
@@ -1056,6 +1056,117 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.486,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-24T14:00:00Z",
+          "casa": "Lincoln City",
+          "visitante": "Burnley",
+          "competicao": "Championship",
+          "placar": "4-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.384,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.501,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.763,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.559,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-24T14:15:00Z",
+          "casa": "Santander",
+          "visitante": "Espanyol",
+          "competicao": "Primera Division",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.442,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.59,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.814,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.61,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-24T16:30:00Z",
+          "casa": "Chelsea",
+          "visitante": "Tottenham",
+          "competicao": "Premier League",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.661,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.539,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.789,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.487,
               "resultado": "ACERTO"
             }
           ]
