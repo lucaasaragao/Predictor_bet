@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-23",
-      "ultima_atualizacao": "2026-10-23T21:47:06-03:00",
-      "finalizados": 9,
-      "taxa_geral": 0.526,
-      "total_acertos": 20,
-      "total_palpites": 38,
+      "ultima_atualizacao": "2026-10-23T22:11:39-03:00",
+      "finalizados": 10,
+      "taxa_geral": 0.548,
+      "total_acertos": 23,
+      "total_palpites": 42,
       "mercados": {
         "WINNER": {
-          "acertos": 4,
-          "total": 9,
-          "taxa": 0.444
+          "acertos": 5,
+          "total": 10,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 12,
-          "total": 18,
-          "taxa": 0.667
+          "acertos": 13,
+          "total": 20,
+          "taxa": 0.65
         },
         "BTTS": {
-          "acertos": 4,
-          "total": 9,
-          "taxa": 0.444
+          "acertos": 5,
+          "total": 10,
+          "taxa": 0.5
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 9,
-          "brier": 0.7281,
-          "log_loss": 1.1908
+          "n": 10,
+          "brier": 0.703,
+          "log_loss": 1.1543
         },
         "OVER_UNDER": {
-          "n": 9,
-          "brier": 0.2807,
-          "log_loss": 0.7586
+          "n": 10,
+          "brier": 0.2673,
+          "log_loss": 0.7309
         },
         "BTTS": {
-          "n": 9,
-          "brier": 0.2034,
-          "log_loss": 0.5988
+          "n": 10,
+          "brier": 0.2037,
+          "log_loss": 0.5994
         }
       },
       "jogos": [
@@ -390,6 +390,43 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.605,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-23T23:00:00Z",
+          "casa": "Cruzeiro",
+          "visitante": "Clube do Remo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.438,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.618,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.667,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.546,
               "resultado": "ACERTO"
             }
           ]
