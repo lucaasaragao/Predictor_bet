@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-10-24",
-      "ultima_atualizacao": "2026-10-24T12:30:57-03:00",
-      "finalizados": 5,
-      "taxa_geral": 0.6,
-      "total_acertos": 12,
-      "total_palpites": 20,
+      "ultima_atualizacao": "2026-10-24T12:41:25-03:00",
+      "finalizados": 8,
+      "taxa_geral": 0.667,
+      "total_acertos": 22,
+      "total_palpites": 33,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 5,
-          "taxa": 0.2
+          "acertos": 3,
+          "total": 8,
+          "taxa": 0.375
         },
         "OVER_UNDER": {
-          "acertos": 8,
-          "total": 10,
-          "taxa": 0.8
+          "acertos": 13,
+          "total": 16,
+          "taxa": 0.812
         },
         "BTTS": {
-          "acertos": 3,
-          "total": 5,
-          "taxa": 0.6
+          "acertos": 6,
+          "total": 8,
+          "taxa": 0.75
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 5,
-          "brier": 0.7989,
-          "log_loss": 1.2592
+          "n": 8,
+          "brier": 0.6867,
+          "log_loss": 1.1154
         },
         "OVER_UNDER": {
-          "n": 5,
-          "brier": 0.3132,
-          "log_loss": 0.8435
+          "n": 8,
+          "brier": 0.268,
+          "log_loss": 0.7412
         },
         "BTTS": {
-          "n": 5,
-          "brier": 0.189,
-          "log_loss": 0.569
+          "n": 8,
+          "brier": 0.2017,
+          "log_loss": 0.5948
         }
       },
       "jogos": [
@@ -224,6 +229,124 @@
               "confianca": "LOW",
               "probabilidade": 0.422,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-24T11:30:00Z",
+          "casa": "Portsmouth",
+          "visitante": "Millwall",
+          "competicao": "Championship",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.545,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.545,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.837,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.62,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-24T13:00:00Z",
+          "casa": "Cagliari",
+          "visitante": "Bologna",
+          "competicao": "Serie A",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.376,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.708,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.587,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.605,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.352,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-24T13:30:00Z",
+          "casa": "SC Paderborn",
+          "visitante": "HSV",
+          "competicao": "Bundesliga",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.488,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.602,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.678,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.552,
+              "resultado": "ACERTO"
             }
           ]
         }
