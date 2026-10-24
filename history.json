@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-24",
-      "ultima_atualizacao": "2026-10-24T17:48:12-03:00",
-      "finalizados": 19,
-      "taxa_geral": 0.61,
-      "total_acertos": 47,
-      "total_palpites": 77,
+      "ultima_atualizacao": "2026-10-24T17:55:36-03:00",
+      "finalizados": 22,
+      "taxa_geral": 0.584,
+      "total_acertos": 52,
+      "total_palpites": 89,
       "mercados": {
         "WINNER": {
-          "acertos": 9,
-          "total": 19,
-          "taxa": 0.474
+          "acertos": 11,
+          "total": 22,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 26,
-          "total": 38,
-          "taxa": 0.684
+          "acertos": 29,
+          "total": 44,
+          "taxa": 0.659
         },
         "BTTS": {
           "acertos": 12,
-          "total": 19,
-          "taxa": 0.632
+          "total": 22,
+          "taxa": 0.545
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 19,
-          "brier": 0.6392,
-          "log_loss": 1.057
+          "n": 22,
+          "brier": 0.5962,
+          "log_loss": 0.9971
         },
         "OVER_UNDER": {
-          "n": 19,
-          "brier": 0.3038,
-          "log_loss": 0.8164
+          "n": 22,
+          "brier": 0.3109,
+          "log_loss": 0.8352
         },
         "BTTS": {
-          "n": 19,
-          "brier": 0.251,
-          "log_loss": 0.6939
+          "n": 22,
+          "brier": 0.2613,
+          "log_loss": 0.7171
         }
       },
       "jogos": [
@@ -754,6 +754,117 @@
               "confianca": "LOW",
               "probabilidade": 0.441,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-24T16:30:00Z",
+          "casa": "Dortmund",
+          "visitante": "Frankfurt",
+          "competicao": "Bundesliga",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.661,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.63,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.908,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.699,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-24T18:45:00Z",
+          "casa": "Lazio",
+          "visitante": "Parma",
+          "competicao": "Serie A",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.715,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.603,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.81,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.52,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-24T18:45:00Z",
+          "casa": "RC Lens",
+          "visitante": "Paris FC",
+          "competicao": "Ligue 1",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.52,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.697,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.514,
+              "resultado": "ERRO"
             }
           ]
         }
