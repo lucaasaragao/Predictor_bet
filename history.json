@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-10-24",
-      "ultima_atualizacao": "2026-10-24T18:32:08-03:00",
-      "finalizados": 23,
-      "taxa_geral": 0.591,
-      "total_acertos": 55,
-      "total_palpites": 93,
+      "ultima_atualizacao": "2026-10-24T18:41:52-03:00",
+      "finalizados": 27,
+      "taxa_geral": 0.6,
+      "total_acertos": 66,
+      "total_palpites": 110,
       "mercados": {
         "WINNER": {
-          "acertos": 12,
-          "total": 23,
-          "taxa": 0.522
+          "acertos": 14,
+          "total": 27,
+          "taxa": 0.519
         },
         "OVER_UNDER": {
-          "acertos": 30,
-          "total": 46,
-          "taxa": 0.652
+          "acertos": 36,
+          "total": 54,
+          "taxa": 0.667
         },
         "BTTS": {
-          "acertos": 13,
-          "total": 23,
-          "taxa": 0.565
+          "acertos": 16,
+          "total": 27,
+          "taxa": 0.593
         },
         "EMPATE": {
           "acertos": 0,
-          "total": 1,
+          "total": 2,
           "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 23,
-          "brier": 0.5925,
-          "log_loss": 0.9917
+          "n": 27,
+          "brier": 0.6151,
+          "log_loss": 1.0194
         },
         "OVER_UNDER": {
-          "n": 23,
-          "brier": 0.302,
-          "log_loss": 0.8161
+          "n": 27,
+          "brier": 0.2994,
+          "log_loss": 0.8085
         },
         "BTTS": {
-          "n": 23,
-          "brier": 0.2542,
-          "log_loss": 0.7022
+          "n": 27,
+          "brier": 0.2531,
+          "log_loss": 0.6997
         }
       },
       "jogos": [
@@ -901,6 +901,161 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.688,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-24T19:30:00Z",
+          "casa": "Mirassol",
+          "visitante": "São Paulo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.63,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.552,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.768,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.523,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-24T19:30:00Z",
+          "casa": "Vitória",
+          "visitante": "Paranaense",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.402,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.578,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.874,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.688,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-24T19:30:00Z",
+          "casa": "Gil Vicente",
+          "visitante": "Porto",
+          "competicao": "Primeira Liga",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.386,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.539,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.758,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.443,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.301,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-24T19:30:00Z",
+          "casa": "Internacional",
+          "visitante": "Botafogo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.365,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.558,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.718,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.486,
               "resultado": "ACERTO"
             }
           ]
