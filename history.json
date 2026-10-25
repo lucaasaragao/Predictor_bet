@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-10-25",
-      "ultima_atualizacao": "2026-10-25T19:38:14-03:00",
-      "finalizados": 31,
-      "taxa_geral": 0.492,
-      "total_acertos": 61,
-      "total_palpites": 124,
+      "ultima_atualizacao": "2026-10-25T19:45:41-03:00",
+      "finalizados": 32,
+      "taxa_geral": 0.5,
+      "total_acertos": 64,
+      "total_palpites": 128,
       "mercados": {
         "WINNER": {
           "acertos": 7,
-          "total": 31,
-          "taxa": 0.226
+          "total": 32,
+          "taxa": 0.219
         },
         "OVER_UNDER": {
-          "acertos": 38,
-          "total": 62,
-          "taxa": 0.613
+          "acertos": 40,
+          "total": 64,
+          "taxa": 0.625
         },
         "BTTS": {
-          "acertos": 16,
-          "total": 31,
-          "taxa": 0.516
+          "acertos": 17,
+          "total": 32,
+          "taxa": 0.531
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 31,
-          "brier": 0.7318,
-          "log_loss": 1.1972
+          "n": 32,
+          "brier": 0.7295,
+          "log_loss": 1.193
         },
         "OVER_UNDER": {
-          "n": 31,
-          "brier": 0.2609,
-          "log_loss": 0.7178
+          "n": 32,
+          "brier": 0.2557,
+          "log_loss": 0.7068
         },
         "BTTS": {
-          "n": 31,
-          "brier": 0.2712,
-          "log_loss": 0.7376
+          "n": 32,
+          "brier": 0.2655,
+          "log_loss": 0.7255
         }
       },
       "jogos": [
@@ -1185,6 +1185,43 @@
               "opcao": "YES",
               "confianca": "HIGH",
               "probabilidade": 0.832,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-25T20:30:00Z",
+          "casa": "Sporting CP",
+          "visitante": "Acad. Viseu",
+          "competicao": "Primeira Liga",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.412,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.52,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.9,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.723,
               "resultado": "ACERTO"
             }
           ]
