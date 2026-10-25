@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T19:00:42-03:00",
+  "generated_at": "2026-10-25T19:16:36-03:00",
   "analysis_date": "2026-10-25",
   "total_jogos": 37,
   "odds_debug_visual": false,
@@ -6349,7 +6349,7 @@
     {
       "competicao": "Primera Division",
       "data": "2026-10-25T20:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 1,
         "visitante": 2
@@ -6538,7 +6538,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -6552,7 +6552,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -6566,7 +6566,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -6580,7 +6580,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -6589,7 +6589,7 @@
       "data": "2026-10-25T20:30:00Z",
       "status": "IN_PLAY",
       "placar_atual": {
-        "casa": 0,
+        "casa": 1,
         "visitante": 1
       },
       "times": {
@@ -7885,8 +7885,8 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 59,
-    "total": 120,
+    "acertos": 61,
+    "total": 124,
     "taxa": 0.492
   },
   "daily_tips_ids": [
@@ -7917,7 +7917,25 @@
   ],
   "daily_tips_date": "2026-10-25",
   "recovery_tip": {
-    "ativo": false
+    "ativo": true,
+    "disparado_em": "2026-10-25T19:16:36-03:00",
+    "jogo": {
+      "casa": "Santa Clara",
+      "visitante": "SL Benfica",
+      "data": "2026-10-26T18:45:00Z",
+      "competicao": "Primeira Liga",
+      "times": {
+        "casa": "Santa Clara",
+        "visitante": "SL Benfica"
+      }
+    },
+    "palpite": {
+      "tipo": "OVER_UNDER",
+      "opcao": "OVER_1.5",
+      "probabilidade": 0.9311,
+      "confianca": "HIGH",
+      "resultado_verificador": null
+    }
   },
   "recovery_tip_date": "2026-10-25"
 }
