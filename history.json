@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-10-25",
-      "ultima_atualizacao": "2026-10-25T14:59:21-03:00",
-      "finalizados": 17,
-      "taxa_geral": 0.485,
-      "total_acertos": 33,
-      "total_palpites": 68,
+      "ultima_atualizacao": "2026-10-25T15:21:45-03:00",
+      "finalizados": 21,
+      "taxa_geral": 0.488,
+      "total_acertos": 41,
+      "total_palpites": 84,
       "mercados": {
         "WINNER": {
-          "acertos": 3,
-          "total": 17,
-          "taxa": 0.176
+          "acertos": 4,
+          "total": 21,
+          "taxa": 0.19
         },
         "OVER_UNDER": {
-          "acertos": 20,
-          "total": 34,
-          "taxa": 0.588
+          "acertos": 24,
+          "total": 42,
+          "taxa": 0.571
         },
         "BTTS": {
-          "acertos": 10,
-          "total": 17,
-          "taxa": 0.588
+          "acertos": 13,
+          "total": 21,
+          "taxa": 0.619
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 17,
-          "brier": 0.7238,
-          "log_loss": 1.1838
+          "n": 21,
+          "brier": 0.722,
+          "log_loss": 1.1795
         },
         "OVER_UNDER": {
-          "n": 17,
-          "brier": 0.2995,
-          "log_loss": 0.8061
+          "n": 21,
+          "brier": 0.2875,
+          "log_loss": 0.7795
         },
         "BTTS": {
-          "n": 17,
-          "brier": 0.2809,
-          "log_loss": 0.7603
+          "n": 21,
+          "brier": 0.277,
+          "log_loss": 0.7515
         }
       },
       "jogos": [
@@ -667,6 +667,154 @@
               "opcao": "YES",
               "confianca": "HIGH",
               "probabilidade": 0.742,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-25T16:15:00Z",
+          "casa": "Angers SCO",
+          "visitante": "Lorient",
+          "competicao": "Ligue 1",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.433,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.53,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.438,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-25T16:15:00Z",
+          "casa": "Auxerre",
+          "visitante": "Le Mans",
+          "competicao": "Ligue 1",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.386,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.507,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.767,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.564,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-25T16:15:00Z",
+          "casa": "Stade Rennais",
+          "visitante": "Strasbourg",
+          "competicao": "Ligue 1",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.383,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.507,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.757,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.553,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-25T16:15:00Z",
+          "casa": "Toulouse",
+          "visitante": "Troyes",
+          "competicao": "Ligue 1",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.45,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.54,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.658,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.568,
               "resultado": "ACERTO"
             }
           ]
