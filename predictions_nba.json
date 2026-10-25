@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T20:27:53-03:00",
+  "generated_at": "2026-10-25T20:37:49-03:00",
   "analysis_date": "2026-10-25",
   "total_jogos": 7,
   "temporada": 2026,
@@ -8,30 +8,30 @@
       "game_id": 21717955,
       "competicao": "NBA",
       "data": "2026-10-25T00:00:00.000Z",
-      "status": "IN_PLAY",
-      "status_display": "4th Qtr",
+      "status": "FINISHED",
+      "status_display": "Final",
       "periodo": 4,
-      "tempo": "Q4 3:15",
+      "tempo": "Final",
       "times": {
         "casa": "Utah Jazz",
         "visitante": "Los Angeles Lakers",
         "abrev_casa": "UTA",
         "abrev_visit": "LAL"
       },
-      "placar_casa": 117,
-      "placar_visitante": 118,
+      "placar_casa": 123,
+      "placar_visitante": 132,
       "quarters": {
         "casa": [
           47,
           24,
           29,
-          17
+          23
         ],
         "visitante": [
           29,
           45,
           29,
-          15
+          29
         ]
       },
       "probabilidades": {
@@ -67,7 +67,7 @@
           "confianca": "MEDIUM",
           "justificativa": "Los Angeles Lakers favorito com 61.3% de chance (spread esperado: -3.0 pts).",
           "edge": 0.226,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -77,7 +77,7 @@
           "confianca": "LOW",
           "justificativa": "Total esperado de 234.2 pts. Linha: 234.5. Tendência de UNDER.",
           "edge": 0.0029,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "SPREAD",
@@ -86,7 +86,7 @@
           "confianca": "LOW",
           "justificativa": "Los Angeles Lakers favorito por ~3.0 pontos.",
           "edge": 0.15,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -95,28 +95,28 @@
       "competicao": "NBA",
       "data": "2026-10-25T00:00:00.000Z",
       "status": "IN_PLAY",
-      "status_display": "2nd Qtr",
-      "periodo": 2,
-      "tempo": "Half",
+      "status_display": "3rd Qtr",
+      "periodo": 3,
+      "tempo": "Q3 8:14",
       "times": {
         "casa": "Brooklyn Nets",
         "visitante": "Indiana Pacers",
         "abrev_casa": "BKN",
         "abrev_visit": "IND"
       },
-      "placar_casa": 56,
-      "placar_visitante": 65,
+      "placar_casa": 65,
+      "placar_visitante": 76,
       "quarters": {
         "casa": [
           26,
           30,
-          0,
+          9,
           0
         ],
         "visitante": [
           24,
           41,
-          0,
+          11,
           0
         ]
       },
@@ -183,24 +183,24 @@
       "status": "IN_PLAY",
       "status_display": "1st Qtr",
       "periodo": 1,
-      "tempo": "Q1 5:05",
+      "tempo": "Q1 :56.6",
       "times": {
         "casa": "New York Knicks",
         "visitante": "Orlando Magic",
         "abrev_casa": "NYK",
         "abrev_visit": "ORL"
       },
-      "placar_casa": 14,
-      "placar_visitante": 8,
+      "placar_casa": 26,
+      "placar_visitante": 18,
       "quarters": {
         "casa": [
-          14,
+          26,
           0,
           0,
           0
         ],
         "visitante": [
-          8,
+          18,
           0,
           0,
           0
@@ -269,24 +269,24 @@
       "status": "IN_PLAY",
       "status_display": "1st Qtr",
       "periodo": 1,
-      "tempo": "Q1 4:56",
+      "tempo": "Q1 2:56",
       "times": {
         "casa": "Minnesota Timberwolves",
         "visitante": "Toronto Raptors",
         "abrev_casa": "MIN",
         "abrev_visit": "TOR"
       },
-      "placar_casa": 20,
-      "placar_visitante": 13,
+      "placar_casa": 25,
+      "placar_visitante": 18,
       "quarters": {
         "casa": [
-          20,
+          25,
           0,
           0,
           0
         ],
         "visitante": [
-          13,
+          18,
           0,
           0,
           0
@@ -353,27 +353,27 @@
       "competicao": "NBA",
       "data": "2026-10-25T00:00:00.000Z",
       "status": "IN_PLAY",
-      "status_display": "1st Qtr",
-      "periodo": 1,
-      "tempo": "Q1 3:54",
+      "status_display": "2nd Qtr",
+      "periodo": 2,
+      "tempo": "Q2 11:28",
       "times": {
         "casa": "Oklahoma City Thunder",
         "visitante": "LA Clippers",
         "abrev_casa": "OKC",
         "abrev_visit": "LAC"
       },
-      "placar_casa": 21,
-      "placar_visitante": 12,
+      "placar_casa": 23,
+      "placar_visitante": 23,
       "quarters": {
         "casa": [
-          21,
+          23,
           0,
           0,
           0
         ],
         "visitante": [
-          12,
-          0,
+          20,
+          3,
           0,
           0
         ]
@@ -629,8 +629,8 @@
     "ativo": false
   },
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 1,
+    "total": 3,
+    "taxa": 0.3333
   }
 }
