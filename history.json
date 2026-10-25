@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-10-25",
-      "ultima_atualizacao": "2026-10-25T12:21:56-03:00",
-      "finalizados": 4,
-      "taxa_geral": 0.562,
-      "total_acertos": 9,
-      "total_palpites": 16,
+      "ultima_atualizacao": "2026-10-25T12:32:11-03:00",
+      "finalizados": 6,
+      "taxa_geral": 0.542,
+      "total_acertos": 13,
+      "total_palpites": 24,
       "mercados": {
         "WINNER": {
           "acertos": 2,
-          "total": 4,
-          "taxa": 0.5
+          "total": 6,
+          "taxa": 0.333
         },
         "OVER_UNDER": {
-          "acertos": 5,
-          "total": 8,
-          "taxa": 0.625
+          "acertos": 7,
+          "total": 12,
+          "taxa": 0.583
         },
         "BTTS": {
-          "acertos": 2,
-          "total": 4,
-          "taxa": 0.5
+          "acertos": 4,
+          "total": 6,
+          "taxa": 0.667
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 4,
-          "brier": 0.5752,
-          "log_loss": 0.9685
+          "n": 6,
+          "brier": 0.684,
+          "log_loss": 1.1369
         },
         "OVER_UNDER": {
-          "n": 4,
-          "brier": 0.301,
-          "log_loss": 0.7887
+          "n": 6,
+          "brier": 0.3349,
+          "log_loss": 0.8872
         },
         "BTTS": {
-          "n": 4,
-          "brier": 0.2506,
-          "log_loss": 0.6942
+          "n": 6,
+          "brier": 0.1934,
+          "log_loss": 0.5705
         }
       },
       "jogos": [
@@ -187,6 +187,80 @@
               "confianca": "LOW",
               "probabilidade": 0.565,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-25T13:30:00Z",
+          "casa": "NEC",
+          "visitante": "Groningen",
+          "competicao": "Eredivisie",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.404,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.586,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.852,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.661,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-25T13:30:00Z",
+          "casa": "PSV",
+          "visitante": "Feyenoord",
+          "competicao": "Eredivisie",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.506,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.648,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.95,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.8,
+              "resultado": "ACERTO"
             }
           ]
         }
