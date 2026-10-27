@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-10-26",
-      "ultima_atualizacao": "2026-10-26T21:51:04-03:00",
-      "finalizados": 4,
-      "taxa_geral": 0.647,
-      "total_acertos": 11,
-      "total_palpites": 17,
+      "ultima_atualizacao": "2026-10-26T22:17:09-03:00",
+      "finalizados": 5,
+      "taxa_geral": 0.591,
+      "total_acertos": 13,
+      "total_palpites": 22,
       "mercados": {
         "WINNER": {
-          "acertos": 3,
-          "total": 4,
-          "taxa": 0.75
+          "acertos": 4,
+          "total": 5,
+          "taxa": 0.8
         },
         "OVER_UNDER": {
-          "acertos": 6,
-          "total": 8,
-          "taxa": 0.75
+          "acertos": 7,
+          "total": 10,
+          "taxa": 0.7
         },
         "BTTS": {
           "acertos": 2,
-          "total": 4,
-          "taxa": 0.5
+          "total": 5,
+          "taxa": 0.4
         },
         "EMPATE": {
           "acertos": 0,
-          "total": 1,
+          "total": 2,
           "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 4,
-          "brier": 0.4261,
-          "log_loss": 0.7656
+          "n": 5,
+          "brier": 0.459,
+          "log_loss": 0.81
         },
         "OVER_UNDER": {
-          "n": 4,
-          "brier": 0.3412,
-          "log_loss": 0.8993
+          "n": 5,
+          "brier": 0.3382,
+          "log_loss": 0.8888
         },
         "BTTS": {
-          "n": 4,
-          "brier": 0.3352,
-          "log_loss": 0.8772
+          "n": 5,
+          "brier": 0.3176,
+          "log_loss": 0.8392
         }
       },
       "jogos": [
@@ -192,6 +192,50 @@
               "confianca": "LOW",
               "probabilidade": 0.497,
               "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-26T23:00:00Z",
+          "casa": "Flamengo",
+          "visitante": "Mineiro",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.571,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.707,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.497,
+              "resultado": "ERRO"
             },
             {
               "tipo": "EMPATE",
