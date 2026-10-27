@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T23:31:18-03:00",
+  "generated_at": "2026-10-26T23:51:16-03:00",
   "analysis_date": "2026-10-26",
   "total_jogos": 9,
   "temporada": 2026,
@@ -352,10 +352,10 @@
       "game_id": 21717966,
       "competicao": "NBA",
       "data": "2026-10-26T00:00:00.000Z",
-      "status": "IN_PLAY",
-      "status_display": "4th Qtr",
+      "status": "FINISHED",
+      "status_display": "Final",
       "periodo": 4,
-      "tempo": "Q4 :18.4",
+      "tempo": "Final",
       "times": {
         "casa": "Milwaukee Bucks",
         "visitante": "Indiana Pacers",
@@ -411,7 +411,7 @@
           "confianca": "MEDIUM",
           "justificativa": "Indiana Pacers favorito com 59.3% de chance (spread esperado: -2.4 pts).",
           "edge": 0.1858,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -421,7 +421,7 @@
           "confianca": "LOW",
           "justificativa": "Total esperado de 242.4 pts. Linha: 242.5. Tendência de UNDER.",
           "edge": 0.001,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "SPREAD",
@@ -430,7 +430,7 @@
           "confianca": "LOW",
           "justificativa": "Indiana Pacers favorito por ~2.4 pontos.",
           "edge": 0.12,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -527,27 +527,27 @@
       "status": "IN_PLAY",
       "status_display": "4th Qtr",
       "periodo": 4,
-      "tempo": "Q4 8:28",
+      "tempo": "Q4 2:56",
       "times": {
         "casa": "Houston Rockets",
         "visitante": "Atlanta Hawks",
         "abrev_casa": "HOU",
         "abrev_visit": "ATL"
       },
-      "placar_casa": 100,
-      "placar_visitante": 93,
+      "placar_casa": 117,
+      "placar_visitante": 103,
       "quarters": {
         "casa": [
           32,
           31,
           28,
-          9
+          26
         ],
         "visitante": [
           35,
           31,
           19,
-          8
+          18
         ]
       },
       "probabilidades": {
@@ -613,26 +613,26 @@
       "status": "IN_PLAY",
       "status_display": "3rd Qtr",
       "periodo": 3,
-      "tempo": "Q3 10:49",
+      "tempo": "Q3 3:45",
       "times": {
         "casa": "Utah Jazz",
         "visitante": "Memphis Grizzlies",
         "abrev_casa": "UTA",
         "abrev_visit": "MEM"
       },
-      "placar_casa": 56,
-      "placar_visitante": 58,
+      "placar_casa": 68,
+      "placar_visitante": 76,
       "quarters": {
         "casa": [
           21,
           31,
-          4,
+          16,
           0
         ],
         "visitante": [
           30,
           28,
-          0,
+          18,
           0
         ]
       },
@@ -697,27 +697,27 @@
       "competicao": "NBA",
       "data": "2026-10-26T00:00:00.000Z",
       "status": "IN_PLAY",
-      "status_display": "1st Qtr",
-      "periodo": 1,
-      "tempo": "Q1 2:50",
+      "status_display": "2nd Qtr",
+      "periodo": 2,
+      "tempo": "Q2 6:57",
       "times": {
         "casa": "Denver Nuggets",
         "visitante": "Golden State Warriors",
         "abrev_casa": "DEN",
         "abrev_visit": "GSW"
       },
-      "placar_casa": 26,
-      "placar_visitante": 20,
+      "placar_casa": 42,
+      "placar_visitante": 41,
       "quarters": {
         "casa": [
-          26,
-          0,
+          32,
+          10,
           0,
           0
         ],
         "visitante": [
-          20,
-          0,
+          28,
+          13,
           0,
           0
         ]
@@ -801,8 +801,8 @@
     "ativo": false
   },
   "acertos_hoje": {
-    "acertos": 10,
-    "total": 15,
+    "acertos": 12,
+    "total": 18,
     "taxa": 0.6667
   }
 }
