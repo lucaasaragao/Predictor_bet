@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-10-28",
-      "ultima_atualizacao": "2026-10-28T21:08:41-03:00",
-      "finalizados": 5,
-      "taxa_geral": 0.5,
-      "total_acertos": 10,
-      "total_palpites": 20,
+      "ultima_atualizacao": "2026-10-28T21:43:02-03:00",
+      "finalizados": 8,
+      "taxa_geral": 0.531,
+      "total_acertos": 17,
+      "total_palpites": 32,
       "mercados": {
         "WINNER": {
-          "acertos": 2,
-          "total": 5,
-          "taxa": 0.4
-        },
-        "OVER_UNDER": {
-          "acertos": 5,
-          "total": 10,
+          "acertos": 4,
+          "total": 8,
           "taxa": 0.5
         },
+        "OVER_UNDER": {
+          "acertos": 9,
+          "total": 16,
+          "taxa": 0.562
+        },
         "BTTS": {
-          "acertos": 3,
-          "total": 5,
-          "taxa": 0.6
+          "acertos": 4,
+          "total": 8,
+          "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 5,
-          "brier": 0.6571,
-          "log_loss": 1.0985
+          "n": 8,
+          "brier": 0.5949,
+          "log_loss": 1.0123
         },
         "OVER_UNDER": {
-          "n": 5,
-          "brier": 0.2741,
-          "log_loss": 0.7416
+          "n": 8,
+          "brier": 0.2882,
+          "log_loss": 0.7725
         },
         "BTTS": {
-          "n": 5,
-          "brier": 0.2785,
-          "log_loss": 0.7504
+          "n": 8,
+          "brier": 0.3029,
+          "log_loss": 0.8029
         }
       },
       "jogos": [
@@ -223,6 +223,117 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.549,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-28T22:30:00Z",
+          "casa": "Bragantino",
+          "visitante": "Chapecoense",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.583,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.561,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.835,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.413,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-28T22:30:00Z",
+          "casa": "Santos",
+          "visitante": "Palmeiras",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.409,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.532,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.95,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.778,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-28T22:30:00Z",
+          "casa": "Fluminense",
+          "visitante": "Internacional",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.516,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.524,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.786,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.443,
               "resultado": "ERRO"
             }
           ]
