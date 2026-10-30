@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-10-30",
-      "ultima_atualizacao": "2026-10-30T18:56:13-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.667,
-      "total_acertos": 8,
-      "total_palpites": 12,
+      "ultima_atualizacao": "2026-10-30T19:08:53-03:00",
+      "finalizados": 5,
+      "taxa_geral": 0.45,
+      "total_acertos": 9,
+      "total_palpites": 20,
       "mercados": {
         "WINNER": {
-          "acertos": 3,
-          "total": 3,
-          "taxa": 1.0
+          "acertos": 4,
+          "total": 5,
+          "taxa": 0.8
         },
         "OVER_UNDER": {
           "acertos": 4,
-          "total": 6,
-          "taxa": 0.667
+          "total": 10,
+          "taxa": 0.4
         },
         "BTTS": {
           "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
+          "total": 5,
+          "taxa": 0.2
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 3,
-          "brier": 0.3538,
-          "log_loss": 0.6613
+          "n": 5,
+          "brier": 0.4437,
+          "log_loss": 0.7843
         },
         "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.1568,
-          "log_loss": 0.5035
+          "n": 5,
+          "brier": 0.2491,
+          "log_loss": 0.6979
         },
         "BTTS": {
-          "n": 3,
-          "brier": 0.2607,
-          "log_loss": 0.7168
+          "n": 5,
+          "brier": 0.3243,
+          "log_loss": 0.852
         }
       },
       "jogos": [
@@ -149,6 +149,80 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.65,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-30T20:00:00Z",
+          "casa": "Villarreal",
+          "visitante": "Espanyol",
+          "competicao": "Primera Division",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-30T20:05:00Z",
+          "casa": "Lille",
+          "visitante": "RC Lens",
+          "competicao": "Ligue 1",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.442,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.511,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.865,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.685,
               "resultado": "ERRO"
             }
           ]
