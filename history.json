@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-31",
-      "ultima_atualizacao": "2026-10-31T14:32:29-03:00",
-      "finalizados": 25,
-      "taxa_geral": 0.676,
-      "total_acertos": 69,
-      "total_palpites": 102,
+      "ultima_atualizacao": "2026-10-31T14:39:57-03:00",
+      "finalizados": 27,
+      "taxa_geral": 0.673,
+      "total_acertos": 74,
+      "total_palpites": 110,
       "mercados": {
         "WINNER": {
           "acertos": 16,
-          "total": 25,
-          "taxa": 0.64
+          "total": 27,
+          "taxa": 0.593
         },
         "OVER_UNDER": {
-          "acertos": 39,
-          "total": 50,
-          "taxa": 0.78
+          "acertos": 42,
+          "total": 54,
+          "taxa": 0.778
         },
         "BTTS": {
-          "acertos": 14,
-          "total": 25,
-          "taxa": 0.56
+          "acertos": 16,
+          "total": 27,
+          "taxa": 0.593
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 25,
-          "brier": 0.5361,
-          "log_loss": 0.9146
+          "n": 27,
+          "brier": 0.5573,
+          "log_loss": 0.9445
         },
         "OVER_UNDER": {
-          "n": 25,
-          "brier": 0.2367,
-          "log_loss": 0.6784
+          "n": 27,
+          "brier": 0.2457,
+          "log_loss": 0.6992
         },
         "BTTS": {
-          "n": 25,
-          "brier": 0.2733,
-          "log_loss": 0.7517
+          "n": 27,
+          "brier": 0.2587,
+          "log_loss": 0.7199
         }
       },
       "jogos": [
@@ -983,6 +983,80 @@
               "confianca": "LOW",
               "probabilidade": 0.565,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-31T15:30:00Z",
+          "casa": "Moreirense",
+          "visitante": "Amadora",
+          "competicao": "Primeira Liga",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.406,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.532,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.79,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.596,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-31T15:30:00Z",
+          "casa": "Feyenoord",
+          "visitante": "Sittard",
+          "competicao": "Eredivisie",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.551,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.598,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.948,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.776,
+              "resultado": "ACERTO"
             }
           ]
         }
