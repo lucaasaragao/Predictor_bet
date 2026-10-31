@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-31",
-      "ultima_atualizacao": "2026-10-31T16:25:29-03:00",
-      "finalizados": 28,
-      "taxa_geral": 0.667,
-      "total_acertos": 76,
-      "total_palpites": 114,
+      "ultima_atualizacao": "2026-10-31T16:34:00-03:00",
+      "finalizados": 29,
+      "taxa_geral": 0.661,
+      "total_acertos": 78,
+      "total_palpites": 118,
       "mercados": {
         "WINNER": {
-          "acertos": 17,
-          "total": 28,
-          "taxa": 0.607
+          "acertos": 18,
+          "total": 29,
+          "taxa": 0.621
         },
         "OVER_UNDER": {
-          "acertos": 43,
-          "total": 56,
-          "taxa": 0.768
+          "acertos": 44,
+          "total": 58,
+          "taxa": 0.759
         },
         "BTTS": {
           "acertos": 16,
-          "total": 28,
-          "taxa": 0.571
+          "total": 29,
+          "taxa": 0.552
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 28,
-          "brier": 0.5471,
-          "log_loss": 0.9301
+          "n": 29,
+          "brier": 0.5487,
+          "log_loss": 0.9321
         },
         "OVER_UNDER": {
-          "n": 28,
-          "brier": 0.2499,
-          "log_loss": 0.7071
+          "n": 29,
+          "brier": 0.2517,
+          "log_loss": 0.7103
         },
         "BTTS": {
-          "n": 28,
-          "brier": 0.262,
-          "log_loss": 0.7263
+          "n": 29,
+          "brier": 0.2653,
+          "log_loss": 0.7327
         }
       },
       "jogos": [
@@ -1093,6 +1093,43 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.556,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-31T17:30:00Z",
+          "casa": "Tottenham",
+          "visitante": "Crystal Palace",
+          "competicao": "Premier League",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.55,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.798,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.598,
               "resultado": "ERRO"
             }
           ]
