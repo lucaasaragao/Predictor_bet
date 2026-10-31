@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T18:24:05-03:00",
+  "generated_at": "2026-10-31T18:31:30-03:00",
   "analysis_date": "2026-10-31",
   "total_jogos": 7,
   "temporada": 2026,
@@ -8,30 +8,30 @@
       "game_id": 21718001,
       "competicao": "NBA",
       "data": "2026-10-31T00:00:00.000Z",
-      "status": "IN_PLAY",
-      "status_display": "4th Qtr",
+      "status": "FINISHED",
+      "status_display": "Final",
       "periodo": 4,
-      "tempo": "Q4 1:55",
+      "tempo": "Final",
       "times": {
         "casa": "Utah Jazz",
         "visitante": "Portland Trail Blazers",
         "abrev_casa": "UTA",
         "abrev_visit": "POR"
       },
-      "placar_casa": 84,
-      "placar_visitante": 110,
+      "placar_casa": 90,
+      "placar_visitante": 112,
       "quarters": {
         "casa": [
           18,
           24,
           22,
-          20
+          26
         ],
         "visitante": [
           27,
           32,
           29,
-          22
+          24
         ]
       },
       "probabilidades": {
@@ -67,7 +67,7 @@
           "confianca": "HIGH",
           "justificativa": "Portland Trail Blazers favorito com 72.4% de chance (spread esperado: -6.2 pts).",
           "edge": 0.4474,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -77,7 +77,7 @@
           "confianca": "LOW",
           "justificativa": "Total esperado de 238.8 pts. Linha: 239.5. Tendência de UNDER.",
           "edge": 0.0068,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "SPREAD",
@@ -86,7 +86,7 @@
           "confianca": "MEDIUM",
           "justificativa": "Portland Trail Blazers favorito por ~6.2 pontos.",
           "edge": 0.31,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -629,8 +629,8 @@
     "ativo": false
   },
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 2,
+    "total": 3,
+    "taxa": 0.6667
   }
 }
