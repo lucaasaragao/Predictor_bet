@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T23:36:19-03:00",
+  "generated_at": "2026-10-30T23:43:50-03:00",
   "analysis_date": "2026-10-30",
   "total_jogos": 10,
   "temporada": 2026,
@@ -438,24 +438,24 @@
       "game_id": 21717996,
       "competicao": "NBA",
       "data": "2026-10-30T00:00:00.000Z",
-      "status": "IN_PLAY",
-      "status_display": "4th Qtr",
+      "status": "FINISHED",
+      "status_display": "Final",
       "periodo": 4,
-      "tempo": "Q4 :01.8",
+      "tempo": "Final",
       "times": {
         "casa": "Miami Heat",
         "visitante": "Indiana Pacers",
         "abrev_casa": "MIA",
         "abrev_visit": "IND"
       },
-      "placar_casa": 144,
+      "placar_casa": 145,
       "placar_visitante": 125,
       "quarters": {
         "casa": [
           36,
           32,
           35,
-          41
+          42
         ],
         "visitante": [
           42,
@@ -497,7 +497,7 @@
           "confianca": "LOW",
           "justificativa": "Indiana Pacers favorito com 57.1% de chance (spread esperado: -1.8 pts).",
           "edge": 0.1414,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -507,7 +507,7 @@
           "confianca": "LOW",
           "justificativa": "Total esperado de 236.2 pts. Linha: 236.5. Tendência de UNDER.",
           "edge": 0.0029,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "SPREAD",
@@ -516,7 +516,7 @@
           "confianca": "LOW",
           "justificativa": "Indiana Pacers favorito por ~1.8 pontos.",
           "edge": 0.09,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -527,27 +527,27 @@
       "status": "IN_PLAY",
       "status_display": "4th Qtr",
       "periodo": 4,
-      "tempo": "Q4 :11.3",
+      "tempo": "Q4 :03.6",
       "times": {
         "casa": "Dallas Mavericks",
         "visitante": "Houston Rockets",
         "abrev_casa": "DAL",
         "abrev_visit": "HOU"
       },
-      "placar_casa": 111,
-      "placar_visitante": 108,
+      "placar_casa": 114,
+      "placar_visitante": 111,
       "quarters": {
         "casa": [
           27,
           17,
           32,
-          35
+          38
         ],
         "visitante": [
           20,
           31,
           33,
-          24
+          27
         ]
       },
       "probabilidades": {
@@ -699,24 +699,24 @@
       "status": "IN_PLAY",
       "status_display": "1st Qtr",
       "periodo": 1,
-      "tempo": "Q1 2:41",
+      "tempo": "Q1 :19.4",
       "times": {
         "casa": "Golden State Warriors",
         "visitante": "Los Angeles Lakers",
         "abrev_casa": "GSW",
         "abrev_visit": "LAL"
       },
-      "placar_casa": 14,
-      "placar_visitante": 31,
+      "placar_casa": 15,
+      "placar_visitante": 38,
       "quarters": {
         "casa": [
-          14,
+          15,
           0,
           0,
           0
         ],
         "visitante": [
-          31,
+          38,
           0,
           0,
           0
@@ -785,25 +785,25 @@
       "status": "IN_PLAY",
       "status_display": "2nd Qtr",
       "periodo": 2,
-      "tempo": "Q2 11:57",
+      "tempo": "Q2 8:45",
       "times": {
         "casa": "Phoenix Suns",
         "visitante": "Denver Nuggets",
         "abrev_casa": "PHX",
         "abrev_visit": "DEN"
       },
-      "placar_casa": 37,
-      "placar_visitante": 32,
+      "placar_casa": 42,
+      "placar_visitante": 38,
       "quarters": {
         "casa": [
           37,
-          0,
+          5,
           0,
           0
         ],
         "visitante": [
           32,
-          0,
+          6,
           0,
           0
         ]
@@ -887,8 +887,8 @@
     "ativo": false
   },
   "acertos_hoje": {
-    "acertos": 15,
-    "total": 18,
-    "taxa": 0.8333
+    "acertos": 16,
+    "total": 21,
+    "taxa": 0.7619
   }
 }
