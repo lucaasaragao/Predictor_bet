@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T23:43:50-03:00",
+  "generated_at": "2026-10-30T23:51:39-03:00",
   "analysis_date": "2026-10-30",
   "total_jogos": 10,
   "temporada": 2026,
@@ -524,24 +524,24 @@
       "game_id": 21717997,
       "competicao": "NBA",
       "data": "2026-10-30T00:00:00.000Z",
-      "status": "IN_PLAY",
-      "status_display": "4th Qtr",
+      "status": "FINISHED",
+      "status_display": "Final",
       "periodo": 4,
-      "tempo": "Q4 :03.6",
+      "tempo": "Final",
       "times": {
         "casa": "Dallas Mavericks",
         "visitante": "Houston Rockets",
         "abrev_casa": "DAL",
         "abrev_visit": "HOU"
       },
-      "placar_casa": 114,
+      "placar_casa": 116,
       "placar_visitante": 111,
       "quarters": {
         "casa": [
           27,
           17,
           32,
-          38
+          40
         ],
         "visitante": [
           20,
@@ -583,7 +583,7 @@
           "confianca": "HIGH",
           "justificativa": "Houston Rockets favorito com 66.3% de chance (spread esperado: -4.4 pts).",
           "edge": 0.3268,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -593,7 +593,7 @@
           "confianca": "LOW",
           "justificativa": "Total esperado de 232.6 pts. Linha: 232.5. Tendência de OVER.",
           "edge": 0.001,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "SPREAD",
@@ -602,7 +602,7 @@
           "confianca": "MEDIUM",
           "justificativa": "Houston Rockets favorito por ~4.4 pontos.",
           "edge": 0.22,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -697,27 +697,27 @@
       "competicao": "NBA",
       "data": "2026-10-30T00:00:00.000Z",
       "status": "IN_PLAY",
-      "status_display": "1st Qtr",
-      "periodo": 1,
-      "tempo": "Q1 :19.4",
+      "status_display": "2nd Qtr",
+      "periodo": 2,
+      "tempo": "Q2 10:21",
       "times": {
         "casa": "Golden State Warriors",
         "visitante": "Los Angeles Lakers",
         "abrev_casa": "GSW",
         "abrev_visit": "LAL"
       },
-      "placar_casa": 15,
-      "placar_visitante": 38,
+      "placar_casa": 22,
+      "placar_visitante": 40,
       "quarters": {
         "casa": [
           15,
-          0,
+          7,
           0,
           0
         ],
         "visitante": [
           38,
-          0,
+          2,
           0,
           0
         ]
@@ -785,25 +785,25 @@
       "status": "IN_PLAY",
       "status_display": "2nd Qtr",
       "periodo": 2,
-      "tempo": "Q2 8:45",
+      "tempo": "Q2 6:00",
       "times": {
         "casa": "Phoenix Suns",
         "visitante": "Denver Nuggets",
         "abrev_casa": "PHX",
         "abrev_visit": "DEN"
       },
-      "placar_casa": 42,
-      "placar_visitante": 38,
+      "placar_casa": 51,
+      "placar_visitante": 51,
       "quarters": {
         "casa": [
           37,
-          5,
+          14,
           0,
           0
         ],
         "visitante": [
           32,
-          6,
+          19,
           0,
           0
         ]
@@ -887,8 +887,8 @@
     "ativo": false
   },
   "acertos_hoje": {
-    "acertos": 16,
-    "total": 21,
-    "taxa": 0.7619
+    "acertos": 17,
+    "total": 24,
+    "taxa": 0.7083
   }
 }
