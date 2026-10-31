@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-31",
-      "ultima_atualizacao": "2026-10-31T16:34:00-03:00",
-      "finalizados": 29,
-      "taxa_geral": 0.661,
-      "total_acertos": 78,
-      "total_palpites": 118,
+      "ultima_atualizacao": "2026-10-31T16:41:27-03:00",
+      "finalizados": 31,
+      "taxa_geral": 0.667,
+      "total_acertos": 84,
+      "total_palpites": 126,
       "mercados": {
         "WINNER": {
-          "acertos": 18,
-          "total": 29,
-          "taxa": 0.621
+          "acertos": 19,
+          "total": 31,
+          "taxa": 0.613
         },
         "OVER_UNDER": {
-          "acertos": 44,
-          "total": 58,
-          "taxa": 0.759
+          "acertos": 48,
+          "total": 62,
+          "taxa": 0.774
         },
         "BTTS": {
-          "acertos": 16,
-          "total": 29,
-          "taxa": 0.552
+          "acertos": 17,
+          "total": 31,
+          "taxa": 0.548
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 29,
-          "brier": 0.5487,
-          "log_loss": 0.9321
+          "n": 31,
+          "brier": 0.5714,
+          "log_loss": 0.9612
         },
         "OVER_UNDER": {
-          "n": 29,
-          "brier": 0.2517,
-          "log_loss": 0.7103
+          "n": 31,
+          "brier": 0.245,
+          "log_loss": 0.6948
         },
         "BTTS": {
-          "n": 29,
-          "brier": 0.2653,
-          "log_loss": 0.7327
+          "n": 31,
+          "brier": 0.2581,
+          "log_loss": 0.7174
         }
       },
       "jogos": [
@@ -1130,6 +1130,80 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.598,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-31T17:30:00Z",
+          "casa": "Real Betis",
+          "visitante": "Málaga",
+          "competicao": "Primera Division",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-31T17:30:00Z",
+          "casa": "Bayern",
+          "visitante": "Dortmund",
+          "competicao": "Bundesliga",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.72,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.574,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.942,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.319,
               "resultado": "ERRO"
             }
           ]
