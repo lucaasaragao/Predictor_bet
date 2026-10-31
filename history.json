@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-31",
-      "ultima_atualizacao": "2026-10-31T16:41:27-03:00",
-      "finalizados": 31,
-      "taxa_geral": 0.667,
-      "total_acertos": 84,
-      "total_palpites": 126,
+      "ultima_atualizacao": "2026-10-31T16:49:09-03:00",
+      "finalizados": 33,
+      "taxa_geral": 0.664,
+      "total_acertos": 89,
+      "total_palpites": 134,
       "mercados": {
         "WINNER": {
-          "acertos": 19,
-          "total": 31,
-          "taxa": 0.613
+          "acertos": 21,
+          "total": 33,
+          "taxa": 0.636
         },
         "OVER_UNDER": {
-          "acertos": 48,
-          "total": 62,
-          "taxa": 0.774
+          "acertos": 50,
+          "total": 66,
+          "taxa": 0.758
         },
         "BTTS": {
-          "acertos": 17,
-          "total": 31,
-          "taxa": 0.548
+          "acertos": 18,
+          "total": 33,
+          "taxa": 0.545
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 31,
-          "brier": 0.5714,
-          "log_loss": 0.9612
+          "n": 33,
+          "brier": 0.5552,
+          "log_loss": 0.9382
         },
         "OVER_UNDER": {
-          "n": 31,
-          "brier": 0.245,
-          "log_loss": 0.6948
+          "n": 33,
+          "brier": 0.2431,
+          "log_loss": 0.6897
         },
         "BTTS": {
-          "n": 31,
-          "brier": 0.2581,
-          "log_loss": 0.7174
+          "n": 33,
+          "brier": 0.265,
+          "log_loss": 0.7311
         }
       },
       "jogos": [
@@ -1204,6 +1204,80 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.319,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-31T17:45:00Z",
+          "casa": "PSV",
+          "visitante": "Willem II",
+          "competicao": "Eredivisie",
+          "placar": "7-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.75,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.523,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.945,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.358,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-31T17:45:00Z",
+          "casa": "Heerenveen",
+          "visitante": "NEC",
+          "competicao": "Eredivisie",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.417,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.596,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.828,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.63,
               "resultado": "ERRO"
             }
           ]
