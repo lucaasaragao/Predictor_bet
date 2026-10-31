@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-10-31",
-      "ultima_atualizacao": "2026-10-31T19:03:06-03:00",
-      "finalizados": 37,
-      "taxa_geral": 0.66,
-      "total_acertos": 99,
-      "total_palpites": 150,
+      "ultima_atualizacao": "2026-10-31T19:11:48-03:00",
+      "finalizados": 39,
+      "taxa_geral": 0.665,
+      "total_acertos": 105,
+      "total_palpites": 158,
       "mercados": {
         "WINNER": {
-          "acertos": 24,
-          "total": 37,
-          "taxa": 0.649
+          "acertos": 25,
+          "total": 39,
+          "taxa": 0.641
         },
         "OVER_UNDER": {
-          "acertos": 55,
-          "total": 74,
-          "taxa": 0.743
+          "acertos": 58,
+          "total": 78,
+          "taxa": 0.744
         },
         "BTTS": {
-          "acertos": 20,
-          "total": 37,
-          "taxa": 0.541
+          "acertos": 22,
+          "total": 39,
+          "taxa": 0.564
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 37,
-          "brier": 0.5586,
-          "log_loss": 0.9425
+          "n": 39,
+          "brier": 0.5645,
+          "log_loss": 0.9513
         },
         "OVER_UNDER": {
-          "n": 37,
-          "brier": 0.248,
-          "log_loss": 0.7006
+          "n": 39,
+          "brier": 0.2491,
+          "log_loss": 0.7021
         },
         "BTTS": {
-          "n": 37,
-          "brier": 0.2705,
-          "log_loss": 0.743
+          "n": 39,
+          "brier": 0.2657,
+          "log_loss": 0.733
         }
       },
       "jogos": [
@@ -1427,6 +1427,80 @@
               "confianca": "HIGH",
               "probabilidade": 0.781,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-31T20:00:00Z",
+          "casa": "Barça",
+          "visitante": "Alavés",
+          "competicao": "Primera Division",
+          "placar": "6-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-10-31T20:00:00Z",
+          "casa": "Aston Villa",
+          "visitante": "Fulham",
+          "competicao": "Premier League",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.391,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.544,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.793,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ACERTO"
             }
           ]
         }
