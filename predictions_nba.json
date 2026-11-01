@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T19:53:54-03:00",
+  "generated_at": "2026-11-01T20:02:53-03:00",
   "analysis_date": "2026-11-01",
   "total_jogos": 4,
   "temporada": 2026,
@@ -8,30 +8,30 @@
       "game_id": 21718008,
       "competicao": "NBA",
       "data": "2026-11-01T00:00:00.000Z",
-      "status": "IN_PLAY",
-      "status_display": "4th Qtr",
+      "status": "FINISHED",
+      "status_display": "Final",
       "periodo": 4,
-      "tempo": "Q4 2:53",
+      "tempo": "Final",
       "times": {
         "casa": "Orlando Magic",
         "visitante": "Boston Celtics",
         "abrev_casa": "ORL",
         "abrev_visit": "BOS"
       },
-      "placar_casa": 94,
-      "placar_visitante": 101,
+      "placar_casa": 97,
+      "placar_visitante": 108,
       "quarters": {
         "casa": [
           23,
           27,
           24,
-          20
+          23
         ],
         "visitante": [
           24,
           31,
           22,
-          24
+          31
         ]
       },
       "probabilidades": {
@@ -67,7 +67,7 @@
           "confianca": "HIGH",
           "justificativa": "Boston Celtics favorito com 77.6% de chance (spread esperado: -8.0 pts).",
           "edge": 0.5516,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -77,7 +77,7 @@
           "confianca": "LOW",
           "justificativa": "Total esperado de 234.4 pts. Linha: 234.5. Tendência de UNDER.",
           "edge": 0.001,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "SPREAD",
@@ -86,7 +86,7 @@
           "confianca": "HIGH",
           "justificativa": "Boston Celtics favorito por ~8.0 pontos.",
           "edge": 0.4,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -97,25 +97,25 @@
       "status": "IN_PLAY",
       "status_display": "2nd Qtr",
       "periodo": 2,
-      "tempo": "Q2 9:16",
+      "tempo": "Q2 6:39",
       "times": {
         "casa": "Indiana Pacers",
         "visitante": "Brooklyn Nets",
         "abrev_casa": "IND",
         "abrev_visit": "BKN"
       },
-      "placar_casa": 21,
-      "placar_visitante": 26,
+      "placar_casa": 25,
+      "placar_visitante": 30,
       "quarters": {
         "casa": [
           19,
-          2,
+          6,
           0,
           0
         ],
         "visitante": [
           20,
-          6,
+          10,
           0,
           0
         ]
@@ -371,8 +371,8 @@
     "ativo": false
   },
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 2,
+    "total": 3,
+    "taxa": 0.6667
   }
 }
