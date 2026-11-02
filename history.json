@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-02",
-      "ultima_atualizacao": "2026-11-02T19:12:23-03:00",
-      "finalizados": 5,
-      "taxa_geral": 0.55,
-      "total_acertos": 11,
-      "total_palpites": 20,
+      "ultima_atualizacao": "2026-11-02T19:19:56-03:00",
+      "finalizados": 7,
+      "taxa_geral": 0.5,
+      "total_acertos": 14,
+      "total_palpites": 28,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 5,
-          "taxa": 0.2
+          "acertos": 2,
+          "total": 7,
+          "taxa": 0.286
         },
         "OVER_UNDER": {
-          "acertos": 7,
-          "total": 10,
-          "taxa": 0.7
+          "acertos": 8,
+          "total": 14,
+          "taxa": 0.571
         },
         "BTTS": {
-          "acertos": 3,
-          "total": 5,
-          "taxa": 0.6
+          "acertos": 4,
+          "total": 7,
+          "taxa": 0.571
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 5,
-          "brier": 0.8076,
-          "log_loss": 1.3078
+          "n": 7,
+          "brier": 0.7293,
+          "log_loss": 1.1865
         },
         "OVER_UNDER": {
-          "n": 5,
-          "brier": 0.2042,
-          "log_loss": 0.5956
+          "n": 7,
+          "brier": 0.2402,
+          "log_loss": 0.675
         },
         "BTTS": {
-          "n": 5,
-          "brier": 0.252,
-          "log_loss": 0.6933
+          "n": 7,
+          "brier": 0.2745,
+          "log_loss": 0.7432
         }
       },
       "jogos": [
@@ -223,6 +223,80 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.592,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-02T20:15:00Z",
+          "casa": "Gil Vicente",
+          "visitante": "Vitória SC",
+          "competicao": "Primeira Liga",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.511,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.626,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.641,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.599,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-02T20:15:00Z",
+          "casa": "SL Benfica",
+          "visitante": "Alverca",
+          "competicao": "Primeira Liga",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.563,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.514,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.927,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.728,
               "resultado": "ERRO"
             }
           ]
