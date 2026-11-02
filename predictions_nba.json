@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T21:34:51-03:00",
+  "generated_at": "2026-11-01T21:49:49-03:00",
   "analysis_date": "2026-11-01",
   "total_jogos": 4,
   "temporada": 2026,
@@ -94,30 +94,30 @@
       "game_id": 21718009,
       "competicao": "NBA",
       "data": "2026-11-01T00:00:00.000Z",
-      "status": "IN_PLAY",
-      "status_display": "4th Qtr",
+      "status": "FINISHED",
+      "status_display": "Final",
       "periodo": 4,
-      "tempo": "Q4 3:41",
+      "tempo": "Final",
       "times": {
         "casa": "Indiana Pacers",
         "visitante": "Brooklyn Nets",
         "abrev_casa": "IND",
         "abrev_visit": "BKN"
       },
-      "placar_casa": 87,
-      "placar_visitante": 94,
+      "placar_casa": 90,
+      "placar_visitante": 98,
       "quarters": {
         "casa": [
           19,
           21,
           22,
-          25
+          28
         ],
         "visitante": [
           20,
           23,
           28,
-          23
+          27
         ]
       },
       "probabilidades": {
@@ -153,7 +153,7 @@
           "confianca": "HIGH",
           "justificativa": "Indiana Pacers favorito com 77.2% de chance (spread esperado: +7.9 pts).",
           "edge": 0.5442,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -163,7 +163,7 @@
           "confianca": "LOW",
           "justificativa": "Total esperado de 240.1 pts. Linha: 240.5. Tendência de UNDER.",
           "edge": 0.0039,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "SPREAD",
@@ -172,7 +172,7 @@
           "confianca": "MEDIUM",
           "justificativa": "Indiana Pacers favorito por ~7.9 pontos.",
           "edge": 0.395,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -371,8 +371,8 @@
     "ativo": false
   },
   "acertos_hoje": {
-    "acertos": 2,
-    "total": 3,
-    "taxa": 0.6667
+    "acertos": 3,
+    "total": 6,
+    "taxa": 0.5
   }
 }
