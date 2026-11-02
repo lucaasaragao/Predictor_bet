@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-02",
-      "ultima_atualizacao": "2026-11-02T18:57:56-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.583,
-      "total_acertos": 7,
-      "total_palpites": 12,
+      "ultima_atualizacao": "2026-11-02T19:12:23-03:00",
+      "finalizados": 5,
+      "taxa_geral": 0.55,
+      "total_acertos": 11,
+      "total_palpites": 20,
       "mercados": {
         "WINNER": {
-          "acertos": 0,
-          "total": 3,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 5,
+          "taxa": 0.2
         },
         "OVER_UNDER": {
-          "acertos": 5,
-          "total": 6,
-          "taxa": 0.833
+          "acertos": 7,
+          "total": 10,
+          "taxa": 0.7
         },
         "BTTS": {
-          "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
+          "acertos": 3,
+          "total": 5,
+          "taxa": 0.6
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 3,
-          "brier": 0.9301,
-          "log_loss": 1.4917
+          "n": 5,
+          "brier": 0.8076,
+          "log_loss": 1.3078
         },
         "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.1612,
-          "log_loss": 0.5057
+          "n": 5,
+          "brier": 0.2042,
+          "log_loss": 0.5956
         },
         "BTTS": {
-          "n": 3,
-          "brier": 0.2402,
-          "log_loss": 0.6665
+          "n": 5,
+          "brier": 0.252,
+          "log_loss": 0.6933
         }
       },
       "jogos": [
@@ -149,6 +149,80 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.602,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-02T20:00:00Z",
+          "casa": "Deportivo",
+          "visitante": "Osasuna",
+          "competicao": "Primera Division",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-02T20:00:00Z",
+          "casa": "Newcastle",
+          "visitante": "Everton",
+          "competicao": "Premier League",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.391,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.544,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.793,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
               "resultado": "ERRO"
             }
           ]
