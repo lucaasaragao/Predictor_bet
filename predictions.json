@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T16:25:05-03:00",
+  "generated_at": "2026-11-02T16:33:09-03:00",
   "analysis_date": "2026-11-02",
   "total_jogos": 27,
   "odds_debug_visual": false,
@@ -9,10 +9,10 @@
     {
       "competicao": "Serie A",
       "data": "2026-11-02T17:30:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "placar_atual": {
         "casa": 2,
-        "visitante": 3
+        "visitante": 4
       },
       "times": {
         "casa": "Sassuolo",
@@ -200,7 +200,7 @@
           "ev_bruto": 0.4837,
           "prob_mercado_justa": 0.3356,
           "valor_esperado_positivo": true,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -214,7 +214,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -228,7 +228,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "BTTS",
@@ -242,7 +242,7 @@
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -5798,9 +5798,9 @@
     }
   ],
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 3,
+    "total": 4,
+    "taxa": 0.75
   },
   "daily_tips_ids": [
     {
