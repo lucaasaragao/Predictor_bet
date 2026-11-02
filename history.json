@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-02",
-      "ultima_atualizacao": "2026-11-02T18:35:36-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.75,
-      "total_acertos": 3,
-      "total_palpites": 4,
+      "ultima_atualizacao": "2026-11-02T18:42:57-03:00",
+      "finalizados": 3,
+      "taxa_geral": 0.583,
+      "total_acertos": 7,
+      "total_palpites": 12,
       "mercados": {
         "WINNER": {
           "acertos": 0,
-          "total": 1,
+          "total": 3,
           "taxa": 0.0
         },
         "OVER_UNDER": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
+          "acertos": 5,
+          "total": 6,
+          "taxa": 0.833
         },
         "BTTS": {
-          "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
+          "acertos": 2,
+          "total": 3,
+          "taxa": 0.667
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 1,
-          "brier": 0.8288,
-          "log_loss": 1.2945
+          "n": 3,
+          "brier": 0.9301,
+          "log_loss": 1.4917
         },
         "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.0702,
-          "log_loss": 0.3077
+          "n": 3,
+          "brier": 0.1612,
+          "log_loss": 0.5057
         },
         "BTTS": {
-          "n": 1,
-          "brier": 0.0762,
-          "log_loss": 0.3229
+          "n": 3,
+          "brier": 0.2402,
+          "log_loss": 0.6665
         }
       },
       "jogos": [
@@ -76,6 +76,80 @@
               "confianca": "HIGH",
               "probabilidade": 0.711,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-02T19:45:00Z",
+          "casa": "Atalanta",
+          "visitante": "Parma",
+          "competicao": "Serie A",
+          "placar": "0-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.637,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.617,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.777,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.5,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-02T19:45:00Z",
+          "casa": "Lorient",
+          "visitante": "Brest",
+          "competicao": "Ligue 1",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.433,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.517,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.806,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.602,
+              "resultado": "ERRO"
             }
           ]
         }
