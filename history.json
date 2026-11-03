@@ -2,30 +2,84 @@
   "dias": [
     {
       "data": "2026-11-03",
-      "ultima_atualizacao": "2026-11-03T16:36:05-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-11-03T16:43:51-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.25,
+      "total_acertos": 1,
+      "total_palpites": 4,
+      "mercados": {
+        "WINNER": {
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 2,
+          "taxa": 0.0
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.4443,
+          "log_loss": 0.7858
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.3149,
+          "log_loss": 0.8237
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.3556,
+          "log_loss": 0.9071
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-11-03T17:45:00Z",
+          "casa": "Shaktar",
+          "visitante": "Sporting CP",
+          "competicao": "UEFA Champions League",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.456,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.561,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.805,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.596,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-11-02",
