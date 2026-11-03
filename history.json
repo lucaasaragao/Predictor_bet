@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-11-03",
-      "ultima_atualizacao": "2026-11-03T18:50:17-03:00",
-      "finalizados": 9,
-      "taxa_geral": 0.556,
-      "total_acertos": 20,
-      "total_palpites": 36,
+      "ultima_atualizacao": "2026-11-03T18:57:38-03:00",
+      "finalizados": 11,
+      "taxa_geral": 0.6,
+      "total_acertos": 27,
+      "total_palpites": 45,
       "mercados": {
         "WINNER": {
-          "acertos": 5,
-          "total": 9,
-          "taxa": 0.556
+          "acertos": 6,
+          "total": 11,
+          "taxa": 0.545
         },
         "OVER_UNDER": {
-          "acertos": 10,
-          "total": 18,
-          "taxa": 0.556
+          "acertos": 13,
+          "total": 22,
+          "taxa": 0.591
         },
         "BTTS": {
-          "acertos": 5,
-          "total": 9,
-          "taxa": 0.556
+          "acertos": 7,
+          "total": 11,
+          "taxa": 0.636
+        },
+        "EMPATE": {
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 9,
-          "brier": 0.6061,
-          "log_loss": 1.0159
+          "n": 11,
+          "brier": 0.5819,
+          "log_loss": 0.9821
         },
         "OVER_UNDER": {
-          "n": 9,
-          "brier": 0.2732,
-          "log_loss": 0.741
+          "n": 11,
+          "brier": 0.2535,
+          "log_loss": 0.7009
         },
         "BTTS": {
-          "n": 9,
-          "brier": 0.2491,
-          "log_loss": 0.6919
+          "n": 11,
+          "brier": 0.2597,
+          "log_loss": 0.7131
         }
       },
       "jogos": [
@@ -371,6 +376,87 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.558,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-03T20:00:00Z",
+          "casa": "Bodø/Glimt",
+          "visitante": "Lille",
+          "competicao": "UEFA Champions League",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.41,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.555,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.721,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.488,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.303,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-03T20:00:00Z",
+          "casa": "Birmingham",
+          "visitante": "Millwall",
+          "competicao": "Championship",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.627,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.585,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.895,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.356,
               "resultado": "ACERTO"
             }
           ]
