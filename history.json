@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-11-03",
+      "ultima_atualizacao": "2026-11-03T00:22:52-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-11-02",
       "ultima_atualizacao": "2026-11-02T23:59:49-03:00",
       "finalizados": 8,
@@ -3150,247 +3177,6 @@
               "confianca": "LOW",
               "probabilidade": 0.554,
               "resultado": "ACERTO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-10-29",
-      "ultima_atualizacao": "2026-10-29T23:56:06-03:00",
-      "finalizados": 5,
-      "taxa_geral": 0.524,
-      "total_acertos": 11,
-      "total_palpites": 21,
-      "mercados": {
-        "WINNER": {
-          "acertos": 1,
-          "total": 5,
-          "taxa": 0.2
-        },
-        "OVER_UNDER": {
-          "acertos": 7,
-          "total": 10,
-          "taxa": 0.7
-        },
-        "BTTS": {
-          "acertos": 3,
-          "total": 5,
-          "taxa": 0.6
-        },
-        "EMPATE": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 5,
-          "brier": 0.6473,
-          "log_loss": 1.0664
-        },
-        "OVER_UNDER": {
-          "n": 5,
-          "brier": 0.2825,
-          "log_loss": 0.7663
-        },
-        "BTTS": {
-          "n": 5,
-          "brier": 0.2684,
-          "log_loss": 0.738
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-10-29T17:30:00Z",
-          "casa": "Frosinone",
-          "visitante": "Lecce",
-          "competicao": "Serie A",
-          "placar": "5-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.476,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.512,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.709,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.519,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-10-29T19:45:00Z",
-          "casa": "Fiorentina",
-          "visitante": "Atalanta",
-          "competicao": "Serie A",
-          "placar": "2-2",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.382,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.512,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.754,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.549,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-10-29T22:30:00Z",
-          "casa": "Mineiro",
-          "visitante": "Cruzeiro",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "0-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.372,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.571,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.707,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.497,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "EMPATE",
-              "opcao": "X",
-              "confianca": "LOW",
-              "probabilidade": 0.31,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-10-29T23:00:00Z",
-          "casa": "Vasco da Gama",
-          "visitante": "Flamengo",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "1-4",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.369,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.539,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.773,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.57,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-10-30T00:30:00Z",
-          "casa": "Grêmio",
-          "visitante": "Paranaense",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "2-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "2",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.455,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.51,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.866,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.683,
-              "resultado": "ERRO"
             }
           ]
         }
