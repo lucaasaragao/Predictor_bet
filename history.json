@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-11-03",
-      "ultima_atualizacao": "2026-11-03T18:57:38-03:00",
-      "finalizados": 11,
-      "taxa_geral": 0.6,
-      "total_acertos": 27,
-      "total_palpites": 45,
+      "ultima_atualizacao": "2026-11-03T19:10:09-03:00",
+      "finalizados": 18,
+      "taxa_geral": 0.649,
+      "total_acertos": 48,
+      "total_palpites": 74,
       "mercados": {
         "WINNER": {
-          "acertos": 6,
-          "total": 11,
-          "taxa": 0.545
+          "acertos": 10,
+          "total": 18,
+          "taxa": 0.556
         },
         "OVER_UNDER": {
-          "acertos": 13,
-          "total": 22,
-          "taxa": 0.591
+          "acertos": 26,
+          "total": 36,
+          "taxa": 0.722
         },
         "BTTS": {
-          "acertos": 7,
-          "total": 11,
-          "taxa": 0.636
+          "acertos": 10,
+          "total": 18,
+          "taxa": 0.556
         },
         "EMPATE": {
-          "acertos": 1,
-          "total": 1,
+          "acertos": 2,
+          "total": 2,
           "taxa": 1.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 11,
-          "brier": 0.5819,
-          "log_loss": 0.9821
+          "n": 18,
+          "brier": 0.6012,
+          "log_loss": 1.0116
         },
         "OVER_UNDER": {
-          "n": 11,
-          "brier": 0.2535,
-          "log_loss": 0.7009
+          "n": 18,
+          "brier": 0.2246,
+          "log_loss": 0.6383
         },
         "BTTS": {
-          "n": 11,
-          "brier": 0.2597,
-          "log_loss": 0.7131
+          "n": 18,
+          "brier": 0.2972,
+          "log_loss": 0.7942
         }
       },
       "jogos": [
@@ -458,6 +458,272 @@
               "confianca": "LOW",
               "probabilidade": 0.356,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-03T20:00:00Z",
+          "casa": "Man United",
+          "visitante": "Roma",
+          "competicao": "UEFA Champions League",
+          "placar": "3-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.392,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.551,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.798,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.598,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-03T20:00:00Z",
+          "casa": "Feyenoord",
+          "visitante": "Inter",
+          "competicao": "UEFA Champions League",
+          "placar": "0-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.577,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.545,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.96,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.749,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-03T20:00:00Z",
+          "casa": "LASK",
+          "visitante": "Sl. Bratislava",
+          "competicao": "UEFA Champions League",
+          "placar": "4-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.639,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.675,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.951,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.772,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-03T20:00:00Z",
+          "casa": "Atleti",
+          "visitante": "Bayern",
+          "competicao": "UEFA Champions League",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.566,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.6,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.937,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.285,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-03T20:00:00Z",
+          "casa": "Barça",
+          "visitante": "Aston Villa",
+          "competicao": "UEFA Champions League",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.392,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.551,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.798,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.598,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-03T20:00:00Z",
+          "casa": "West Brom",
+          "visitante": "Southampton",
+          "competicao": "Championship",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.368,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.539,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.8,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.606,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.302,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-03T20:00:00Z",
+          "casa": "Villarreal",
+          "visitante": "PSG",
+          "competicao": "UEFA Champions League",
+          "placar": "0-6",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.533,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.62,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.869,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.653,
+              "resultado": "ERRO"
             }
           ]
         }
