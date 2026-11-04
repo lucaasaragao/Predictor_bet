@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-04",
-      "ultima_atualizacao": "2026-11-04T18:42:19-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.75,
-      "total_acertos": 6,
-      "total_palpites": 8,
+      "ultima_atualizacao": "2026-11-04T18:49:41-03:00",
+      "finalizados": 4,
+      "taxa_geral": 0.688,
+      "total_acertos": 11,
+      "total_palpites": 16,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 2,
+          "acertos": 2,
+          "total": 4,
           "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 3,
-          "total": 4,
+          "acertos": 6,
+          "total": 8,
           "taxa": 0.75
         },
         "BTTS": {
-          "acertos": 2,
-          "total": 2,
-          "taxa": 1.0
+          "acertos": 3,
+          "total": 4,
+          "taxa": 0.75
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.711,
-          "log_loss": 1.155
+          "n": 4,
+          "brier": 0.687,
+          "log_loss": 1.1255
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.1521,
-          "log_loss": 0.4941
+          "n": 4,
+          "brier": 0.2011,
+          "log_loss": 0.5936
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.1352,
-          "log_loss": 0.4583
+          "n": 4,
+          "brier": 0.1944,
+          "log_loss": 0.5793
         }
       },
       "jogos": [
@@ -113,6 +113,80 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.627,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-04T19:45:00Z",
+          "casa": "Cardiff",
+          "visitante": "West Ham",
+          "competicao": "Championship",
+          "placar": "3-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.384,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.501,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.763,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.559,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-04T19:45:00Z",
+          "casa": "Wrexham",
+          "visitante": "Middlesbrough",
+          "competicao": "Championship",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.384,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.501,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.763,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.559,
+              "resultado": "ERRO"
             }
           ]
         }
