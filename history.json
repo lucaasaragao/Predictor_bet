@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-04",
-      "ultima_atualizacao": "2026-11-04T16:43:57-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.5,
-      "total_acertos": 2,
-      "total_palpites": 4,
+      "ultima_atualizacao": "2026-11-04T16:51:26-03:00",
+      "finalizados": 2,
+      "taxa_geral": 0.75,
+      "total_acertos": 6,
+      "total_palpites": 8,
       "mercados": {
         "WINNER": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
-        },
-        "OVER_UNDER": {
           "acertos": 1,
           "total": 2,
           "taxa": 0.5
         },
+        "OVER_UNDER": {
+          "acertos": 3,
+          "total": 4,
+          "taxa": 0.75
+        },
         "BTTS": {
-          "acertos": 1,
-          "total": 1,
+          "acertos": 2,
+          "total": 2,
           "taxa": 1.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 1,
-          "brier": 0.8893,
-          "log_loss": 1.4064
+          "n": 2,
+          "brier": 0.711,
+          "log_loss": 1.155
         },
         "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.1368,
-          "log_loss": 0.4619
+          "n": 2,
+          "brier": 0.1521,
+          "log_loss": 0.4941
         },
         "BTTS": {
-          "n": 1,
-          "brier": 0.1311,
-          "log_loss": 0.4496
+          "n": 2,
+          "brier": 0.1352,
+          "log_loss": 0.4583
         }
       },
       "jogos": [
@@ -75,6 +75,43 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.638,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-04T17:45:00Z",
+          "casa": "PAE AEK",
+          "visitante": "Real Madrid",
+          "competicao": "UEFA Champions League",
+          "placar": "2-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.405,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.591,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.824,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.627,
               "resultado": "ACERTO"
             }
           ]
