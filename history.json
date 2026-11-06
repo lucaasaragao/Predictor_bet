@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-06",
-      "ultima_atualizacao": "2026-11-06T18:58:07-03:00",
-      "finalizados": 5,
-      "taxa_geral": 0.7,
-      "total_acertos": 14,
-      "total_palpites": 20,
+      "ultima_atualizacao": "2026-11-06T19:11:15-03:00",
+      "finalizados": 7,
+      "taxa_geral": 0.607,
+      "total_acertos": 17,
+      "total_palpites": 28,
       "mercados": {
         "WINNER": {
-          "acertos": 3,
-          "total": 5,
-          "taxa": 0.6
+          "acertos": 4,
+          "total": 7,
+          "taxa": 0.571
         },
         "OVER_UNDER": {
-          "acertos": 7,
-          "total": 10,
-          "taxa": 0.7
+          "acertos": 8,
+          "total": 14,
+          "taxa": 0.571
         },
         "BTTS": {
-          "acertos": 4,
-          "total": 5,
-          "taxa": 0.8
+          "acertos": 5,
+          "total": 7,
+          "taxa": 0.714
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 5,
-          "brier": 0.6692,
-          "log_loss": 1.1144
+          "n": 7,
+          "brier": 0.658,
+          "log_loss": 1.0883
         },
         "OVER_UNDER": {
-          "n": 5,
-          "brier": 0.2618,
-          "log_loss": 0.7171
+          "n": 7,
+          "brier": 0.2761,
+          "log_loss": 0.7458
         },
         "BTTS": {
-          "n": 5,
-          "brier": 0.1819,
-          "log_loss": 0.5535
+          "n": 7,
+          "brier": 0.2139,
+          "log_loss": 0.6185
         }
       },
       "jogos": [
@@ -224,6 +224,80 @@
               "confianca": "LOW",
               "probabilidade": 0.553,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-06T20:00:00Z",
+          "casa": "Everton",
+          "visitante": "Coventry City",
+          "competicao": "Premier League",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.501,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.572,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.644,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.597,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-06T20:00:00Z",
+          "casa": "Sevilla FC",
+          "visitante": "Alavés",
+          "competicao": "Primera Division",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.539,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.545,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.878,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.346,
+              "resultado": "ACERTO"
             }
           ]
         }
