@@ -2,30 +2,84 @@
   "dias": [
     {
       "data": "2026-11-05",
-      "ultima_atualizacao": "2026-11-05T21:01:33-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-11-05T21:34:16-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.5,
+      "total_acertos": 2,
+      "total_palpites": 4,
+      "mercados": {
+        "WINNER": {
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.1245,
+          "log_loss": 0.3332
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.1448,
+          "log_loss": 0.4788
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.2382,
+          "log_loss": 0.6696
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-11-05T22:30:00Z",
+          "casa": "Palmeiras",
+          "visitante": "Clube do Remo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "6-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.717,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.604,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.856,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.469,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-11-04",
