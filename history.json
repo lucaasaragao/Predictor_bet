@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-06",
-      "ultima_atualizacao": "2026-11-06T18:50:37-03:00",
-      "finalizados": 4,
-      "taxa_geral": 0.812,
-      "total_acertos": 13,
-      "total_palpites": 16,
+      "ultima_atualizacao": "2026-11-06T18:58:07-03:00",
+      "finalizados": 5,
+      "taxa_geral": 0.7,
+      "total_acertos": 14,
+      "total_palpites": 20,
       "mercados": {
         "WINNER": {
           "acertos": 3,
-          "total": 4,
-          "taxa": 0.75
+          "total": 5,
+          "taxa": 0.6
         },
         "OVER_UNDER": {
-          "acertos": 6,
-          "total": 8,
-          "taxa": 0.75
+          "acertos": 7,
+          "total": 10,
+          "taxa": 0.7
         },
         "BTTS": {
           "acertos": 4,
-          "total": 4,
-          "taxa": 1.0
+          "total": 5,
+          "taxa": 0.8
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 4,
-          "brier": 0.5798,
-          "log_loss": 0.9694
+          "n": 5,
+          "brier": 0.6692,
+          "log_loss": 1.1144
         },
         "OVER_UNDER": {
-          "n": 4,
-          "brier": 0.2398,
-          "log_loss": 0.6727
+          "n": 5,
+          "brier": 0.2618,
+          "log_loss": 0.7171
         },
         "BTTS": {
-          "n": 4,
-          "brier": 0.1508,
-          "log_loss": 0.4903
+          "n": 5,
+          "brier": 0.1819,
+          "log_loss": 0.5535
         }
       },
       "jogos": [
@@ -187,6 +187,43 @@
               "confianca": "LOW",
               "probabilidade": 0.546,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-06T20:00:00Z",
+          "casa": "Derby County",
+          "visitante": "Bolton",
+          "competicao": "Championship",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.525,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.591,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.689,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.553,
+              "resultado": "ERRO"
             }
           ]
         }
