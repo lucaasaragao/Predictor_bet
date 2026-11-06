@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-06",
-      "ultima_atualizacao": "2026-11-06T18:42:47-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.75,
-      "total_acertos": 6,
-      "total_palpites": 8,
+      "ultima_atualizacao": "2026-11-06T18:50:37-03:00",
+      "finalizados": 4,
+      "taxa_geral": 0.812,
+      "total_acertos": 13,
+      "total_palpites": 16,
       "mercados": {
         "WINNER": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
-        },
-        "OVER_UNDER": {
           "acertos": 3,
           "total": 4,
           "taxa": 0.75
         },
+        "OVER_UNDER": {
+          "acertos": 6,
+          "total": 8,
+          "taxa": 0.75
+        },
         "BTTS": {
-          "acertos": 2,
-          "total": 2,
+          "acertos": 4,
+          "total": 4,
           "taxa": 1.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.6429,
-          "log_loss": 1.0543
+          "n": 4,
+          "brier": 0.5798,
+          "log_loss": 0.9694
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.2648,
-          "log_loss": 0.7235
+          "n": 4,
+          "brier": 0.2398,
+          "log_loss": 0.6727
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.1283,
-          "log_loss": 0.4432
+          "n": 4,
+          "brier": 0.1508,
+          "log_loss": 0.4903
         }
       },
       "jogos": [
@@ -112,6 +112,80 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.517,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-06T19:45:00Z",
+          "casa": "Venezia FC",
+          "visitante": "Udinese",
+          "competicao": "Serie A",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.382,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.512,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.754,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.549,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-06T19:45:00Z",
+          "casa": "Toulouse",
+          "visitante": "Strasbourg",
+          "competicao": "Ligue 1",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.446,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.591,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.758,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.546,
               "resultado": "ACERTO"
             }
           ]
