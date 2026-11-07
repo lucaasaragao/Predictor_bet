@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-11-07",
-      "ultima_atualizacao": "2026-11-07T16:33:24-03:00",
-      "finalizados": 24,
-      "taxa_geral": 0.598,
-      "total_acertos": 58,
-      "total_palpites": 97,
+      "ultima_atualizacao": "2026-11-07T16:41:02-03:00",
+      "finalizados": 27,
+      "taxa_geral": 0.573,
+      "total_acertos": 63,
+      "total_palpites": 110,
       "mercados": {
         "WINNER": {
-          "acertos": 13,
-          "total": 24,
-          "taxa": 0.542
+          "acertos": 14,
+          "total": 27,
+          "taxa": 0.519
         },
         "OVER_UNDER": {
-          "acertos": 32,
-          "total": 48,
+          "acertos": 36,
+          "total": 54,
           "taxa": 0.667
         },
         "BTTS": {
           "acertos": 12,
-          "total": 24,
-          "taxa": 0.5
+          "total": 27,
+          "taxa": 0.444
         },
         "EMPATE": {
           "acertos": 1,
-          "total": 1,
-          "taxa": 1.0
+          "total": 2,
+          "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 24,
-          "brier": 0.5727,
-          "log_loss": 0.9703
+          "n": 27,
+          "brier": 0.5846,
+          "log_loss": 0.9873
         },
         "OVER_UNDER": {
-          "n": 24,
-          "brier": 0.2353,
-          "log_loss": 0.6601
+          "n": 27,
+          "brier": 0.2452,
+          "log_loss": 0.6811
         },
         "BTTS": {
-          "n": 24,
-          "brier": 0.2232,
-          "log_loss": 0.637
+          "n": 27,
+          "brier": 0.24,
+          "log_loss": 0.6714
         }
       },
       "jogos": [
@@ -938,6 +938,124 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.586,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-07T17:30:00Z",
+          "casa": "Nottingham",
+          "visitante": "Man City",
+          "competicao": "Premier League",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.404,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.692,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.596,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.604,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.344,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-07T17:30:00Z",
+          "casa": "Stuttgart",
+          "visitante": "Bremen",
+          "competicao": "Bundesliga",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.402,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.602,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.843,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.65,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-07T17:30:00Z",
+          "casa": "Osasuna",
+          "visitante": "Athletic",
+          "competicao": "Primera Division",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.374,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.669,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.643,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.551,
               "resultado": "ERRO"
             }
           ]
