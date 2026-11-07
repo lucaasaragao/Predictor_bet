@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-11-07",
-      "ultima_atualizacao": "2026-11-07T18:42:28-03:00",
-      "finalizados": 30,
-      "taxa_geral": 0.577,
-      "total_acertos": 71,
-      "total_palpites": 123,
+      "ultima_atualizacao": "2026-11-07T18:50:12-03:00",
+      "finalizados": 31,
+      "taxa_geral": 0.575,
+      "total_acertos": 73,
+      "total_palpites": 127,
       "mercados": {
         "WINNER": {
-          "acertos": 15,
-          "total": 30,
-          "taxa": 0.5
+          "acertos": 16,
+          "total": 31,
+          "taxa": 0.516
         },
         "OVER_UNDER": {
-          "acertos": 41,
-          "total": 60,
-          "taxa": 0.683
+          "acertos": 42,
+          "total": 62,
+          "taxa": 0.677
         },
         "BTTS": {
           "acertos": 13,
-          "total": 30,
-          "taxa": 0.433
+          "total": 31,
+          "taxa": 0.419
         },
         "EMPATE": {
           "acertos": 2,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 30,
-          "brier": 0.592,
-          "log_loss": 0.9958
+          "n": 31,
+          "brier": 0.5914,
+          "log_loss": 0.9947
         },
         "OVER_UNDER": {
-          "n": 30,
-          "brier": 0.2328,
-          "log_loss": 0.6543
+          "n": 31,
+          "brier": 0.2338,
+          "log_loss": 0.6564
         },
         "BTTS": {
-          "n": 30,
-          "brier": 0.2395,
-          "log_loss": 0.6694
+          "n": 31,
+          "brier": 0.2415,
+          "log_loss": 0.6735
         }
       },
       "jogos": [
@@ -1174,6 +1174,43 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.547,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-07T19:45:00Z",
+          "casa": "Roma",
+          "visitante": "Sassuolo",
+          "competicao": "Serie A",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.382,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.512,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.754,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.549,
               "resultado": "ERRO"
             }
           ]
