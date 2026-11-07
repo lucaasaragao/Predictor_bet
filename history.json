@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-11-07",
+      "ultima_atualizacao": "2026-11-07T02:02:07-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-11-06",
       "ultima_atualizacao": "2026-11-06T23:56:39-03:00",
       "finalizados": 9,
@@ -1960,346 +1987,6 @@
               "confianca": "LOW",
               "probabilidade": 0.31,
               "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-11-02",
-      "ultima_atualizacao": "2026-11-02T23:59:49-03:00",
-      "finalizados": 8,
-      "taxa_geral": 0.562,
-      "total_acertos": 18,
-      "total_palpites": 32,
-      "mercados": {
-        "WINNER": {
-          "acertos": 3,
-          "total": 8,
-          "taxa": 0.375
-        },
-        "OVER_UNDER": {
-          "acertos": 10,
-          "total": 16,
-          "taxa": 0.625
-        },
-        "BTTS": {
-          "acertos": 5,
-          "total": 8,
-          "taxa": 0.625
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 8,
-          "brier": 0.7064,
-          "log_loss": 1.1526
-        },
-        "OVER_UNDER": {
-          "n": 8,
-          "brier": 0.2216,
-          "log_loss": 0.6357
-        },
-        "BTTS": {
-          "n": 8,
-          "brier": 0.2509,
-          "log_loss": 0.6935
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-11-02T17:30:00Z",
-          "casa": "Sassuolo",
-          "visitante": "Fiorentina",
-          "competicao": "Serie A",
-          "placar": "2-4",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.501,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.531,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.894,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "HIGH",
-              "probabilidade": 0.711,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-11-02T19:45:00Z",
-          "casa": "Atalanta",
-          "visitante": "Parma",
-          "competicao": "Serie A",
-          "placar": "0-3",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "HIGH",
-              "probabilidade": 0.637,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.617,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.777,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.5,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-11-02T19:45:00Z",
-          "casa": "Lorient",
-          "visitante": "Brest",
-          "competicao": "Ligue 1",
-          "placar": "0-2",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.433,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.517,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.806,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.602,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-11-02T20:00:00Z",
-          "casa": "Deportivo",
-          "visitante": "Osasuna",
-          "competicao": "Primera Division",
-          "placar": "2-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.385,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.508,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.769,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.565,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-11-02T20:00:00Z",
-          "casa": "Newcastle",
-          "visitante": "Everton",
-          "competicao": "Premier League",
-          "placar": "0-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.391,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.544,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.793,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "LOW",
-              "probabilidade": 0.592,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-11-02T20:15:00Z",
-          "casa": "Gil Vicente",
-          "visitante": "Vitória SC",
-          "competicao": "Primeira Liga",
-          "placar": "0-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.511,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.626,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.641,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.599,
-              "resultado": "ACERTO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-11-02T20:15:00Z",
-          "casa": "SL Benfica",
-          "visitante": "Alverca",
-          "competicao": "Primeira Liga",
-          "placar": "1-0",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.563,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.514,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.927,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "HIGH",
-              "probabilidade": 0.728,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-11-02T23:00:00Z",
-          "casa": "Bragantino",
-          "visitante": "Santos",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "2-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.4,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_3.5",
-              "confianca": "LOW",
-              "probabilidade": 0.516,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.89,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "YES",
-              "confianca": "HIGH",
-              "probabilidade": 0.713,
-              "resultado": "ACERTO"
             }
           ]
         }
