@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-11-08",
-      "ultima_atualizacao": "2026-11-08T18:41:20-03:00",
-      "finalizados": 29,
-      "taxa_geral": 0.641,
-      "total_acertos": 75,
-      "total_palpites": 117,
+      "ultima_atualizacao": "2026-11-08T18:48:50-03:00",
+      "finalizados": 30,
+      "taxa_geral": 0.645,
+      "total_acertos": 78,
+      "total_palpites": 121,
       "mercados": {
         "WINNER": {
-          "acertos": 12,
-          "total": 29,
-          "taxa": 0.414
+          "acertos": 13,
+          "total": 30,
+          "taxa": 0.433
         },
         "OVER_UNDER": {
-          "acertos": 42,
-          "total": 58,
-          "taxa": 0.724
+          "acertos": 43,
+          "total": 60,
+          "taxa": 0.717
         },
         "BTTS": {
-          "acertos": 21,
-          "total": 29,
-          "taxa": 0.724
+          "acertos": 22,
+          "total": 30,
+          "taxa": 0.733
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 29,
-          "brier": 0.663,
-          "log_loss": 1.091
+          "n": 30,
+          "brier": 0.6474,
+          "log_loss": 1.0696
         },
         "OVER_UNDER": {
-          "n": 29,
-          "brier": 0.2485,
-          "log_loss": 0.6996
+          "n": 30,
+          "brier": 0.2429,
+          "log_loss": 0.6874
         },
         "BTTS": {
-          "n": 29,
-          "brier": 0.2281,
-          "log_loss": 0.6524
+          "n": 30,
+          "brier": 0.2244,
+          "log_loss": 0.6446
         }
       },
       "jogos": [
@@ -1123,6 +1123,43 @@
               "opcao": "YES",
               "confianca": "HIGH",
               "probabilidade": 0.732,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-08T19:45:00Z",
+          "casa": "RC Lens",
+          "visitante": "Marseille",
+          "competicao": "Ligue 1",
+          "placar": "1-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "HIGH",
+              "probabilidade": 0.639,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.509,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.855,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.613,
               "resultado": "ACERTO"
             }
           ]
