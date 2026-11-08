@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-08",
-      "ultima_atualizacao": "2026-11-08T15:16:37-03:00",
-      "finalizados": 18,
-      "taxa_geral": 0.625,
-      "total_acertos": 45,
-      "total_palpites": 72,
+      "ultima_atualizacao": "2026-11-08T15:24:01-03:00",
+      "finalizados": 21,
+      "taxa_geral": 0.631,
+      "total_acertos": 53,
+      "total_palpites": 84,
       "mercados": {
         "WINNER": {
-          "acertos": 7,
-          "total": 18,
-          "taxa": 0.389
+          "acertos": 8,
+          "total": 21,
+          "taxa": 0.381
         },
         "OVER_UNDER": {
-          "acertos": 25,
-          "total": 36,
-          "taxa": 0.694
+          "acertos": 29,
+          "total": 42,
+          "taxa": 0.69
         },
         "BTTS": {
-          "acertos": 13,
-          "total": 18,
-          "taxa": 0.722
+          "acertos": 16,
+          "total": 21,
+          "taxa": 0.762
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 18,
-          "brier": 0.6889,
-          "log_loss": 1.1286
+          "n": 21,
+          "brier": 0.677,
+          "log_loss": 1.112
         },
         "OVER_UNDER": {
-          "n": 18,
-          "brier": 0.2362,
-          "log_loss": 0.6629
+          "n": 21,
+          "brier": 0.2323,
+          "log_loss": 0.6548
         },
         "BTTS": {
-          "n": 18,
-          "brier": 0.2064,
-          "log_loss": 0.5987
+          "n": 21,
+          "brier": 0.2072,
+          "log_loss": 0.6012
         }
       },
       "jogos": [
@@ -705,6 +705,117 @@
               "confianca": "LOW",
               "probabilidade": 0.553,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-08T16:15:00Z",
+          "casa": "Angers SCO",
+          "visitante": "Nice",
+          "competicao": "Ligue 1",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.365,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.502,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.697,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.515,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-08T16:15:00Z",
+          "casa": "Le Mans",
+          "visitante": "Monaco",
+          "competicao": "Ligue 1",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.364,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.523,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.819,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.623,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-08T16:15:00Z",
+          "casa": "Le Havre",
+          "visitante": "Lorient",
+          "competicao": "Ligue 1",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.488,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.682,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.627,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.595,
+              "resultado": "ACERTO"
             }
           ]
         }
