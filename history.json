@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-08",
-      "ultima_atualizacao": "2026-11-08T15:47:11-03:00",
-      "finalizados": 22,
-      "taxa_geral": 0.636,
-      "total_acertos": 56,
-      "total_palpites": 88,
+      "ultima_atualizacao": "2026-11-08T15:54:42-03:00",
+      "finalizados": 23,
+      "taxa_geral": 0.641,
+      "total_acertos": 59,
+      "total_palpites": 92,
       "mercados": {
         "WINNER": {
           "acertos": 9,
-          "total": 22,
-          "taxa": 0.409
+          "total": 23,
+          "taxa": 0.391
         },
         "OVER_UNDER": {
-          "acertos": 31,
-          "total": 44,
-          "taxa": 0.705
+          "acertos": 33,
+          "total": 46,
+          "taxa": 0.717
         },
         "BTTS": {
-          "acertos": 16,
-          "total": 22,
-          "taxa": 0.727
+          "acertos": 17,
+          "total": 23,
+          "taxa": 0.739
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 22,
-          "brier": 0.6707,
-          "log_loss": 1.1029
+          "n": 23,
+          "brier": 0.675,
+          "log_loss": 1.1097
         },
         "OVER_UNDER": {
-          "n": 22,
-          "brier": 0.2392,
-          "log_loss": 0.6691
+          "n": 23,
+          "brier": 0.2384,
+          "log_loss": 0.6676
         },
         "BTTS": {
-          "n": 22,
-          "brier": 0.217,
-          "log_loss": 0.6215
+          "n": 23,
+          "brier": 0.2151,
+          "log_loss": 0.618
         }
       },
       "jogos": [
@@ -853,6 +853,43 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.65,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-08T16:30:00Z",
+          "casa": "Man United",
+          "visitante": "Aston Villa",
+          "competicao": "Premier League",
+          "placar": "4-4",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.368,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.53,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.784,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.583,
+              "resultado": "ACERTO"
             }
           ]
         }
