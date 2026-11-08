@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-08",
-      "ultima_atualizacao": "2026-11-08T14:48:07-03:00",
-      "finalizados": 15,
-      "taxa_geral": 0.583,
-      "total_acertos": 35,
-      "total_palpites": 60,
+      "ultima_atualizacao": "2026-11-08T14:55:25-03:00",
+      "finalizados": 17,
+      "taxa_geral": 0.618,
+      "total_acertos": 42,
+      "total_palpites": 68,
       "mercados": {
         "WINNER": {
-          "acertos": 5,
-          "total": 15,
-          "taxa": 0.333
+          "acertos": 6,
+          "total": 17,
+          "taxa": 0.353
         },
         "OVER_UNDER": {
-          "acertos": 19,
-          "total": 30,
-          "taxa": 0.633
+          "acertos": 23,
+          "total": 34,
+          "taxa": 0.676
         },
         "BTTS": {
-          "acertos": 11,
-          "total": 15,
-          "taxa": 0.733
+          "acertos": 13,
+          "total": 17,
+          "taxa": 0.765
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 15,
-          "brier": 0.7039,
-          "log_loss": 1.1533
+          "n": 17,
+          "brier": 0.6958,
+          "log_loss": 1.1385
         },
         "OVER_UNDER": {
-          "n": 15,
-          "brier": 0.2592,
-          "log_loss": 0.7127
+          "n": 17,
+          "brier": 0.2358,
+          "log_loss": 0.6619
         },
         "BTTS": {
-          "n": 15,
-          "brier": 0.2188,
-          "log_loss": 0.6261
+          "n": 17,
+          "brier": 0.2005,
+          "log_loss": 0.5865
         }
       },
       "jogos": [
@@ -594,6 +594,80 @@
               "confianca": "LOW",
               "probabilidade": 0.487,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-08T15:45:00Z",
+          "casa": "AZ",
+          "visitante": "Groningen",
+          "competicao": "Eredivisie",
+          "placar": "4-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.413,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.526,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.891,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.72,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-08T15:45:00Z",
+          "casa": "Cambuur",
+          "visitante": "PSV",
+          "competicao": "Eredivisie",
+          "placar": "2-5",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.472,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.591,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.926,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.765,
+              "resultado": "ACERTO"
             }
           ]
         }
