@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-08",
-      "ultima_atualizacao": "2026-11-08T16:26:46-03:00",
-      "finalizados": 24,
-      "taxa_geral": 0.625,
-      "total_acertos": 60,
-      "total_palpites": 96,
+      "ultima_atualizacao": "2026-11-08T16:37:06-03:00",
+      "finalizados": 26,
+      "taxa_geral": 0.635,
+      "total_acertos": 66,
+      "total_palpites": 104,
       "mercados": {
         "WINNER": {
-          "acertos": 9,
-          "total": 24,
-          "taxa": 0.375
+          "acertos": 10,
+          "total": 26,
+          "taxa": 0.385
         },
         "OVER_UNDER": {
-          "acertos": 34,
-          "total": 48,
-          "taxa": 0.708
+          "acertos": 37,
+          "total": 52,
+          "taxa": 0.712
         },
         "BTTS": {
-          "acertos": 17,
-          "total": 24,
-          "taxa": 0.708
+          "acertos": 19,
+          "total": 26,
+          "taxa": 0.731
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 24,
-          "brier": 0.6726,
-          "log_loss": 1.1045
+          "n": 26,
+          "brier": 0.6655,
+          "log_loss": 1.0924
         },
         "OVER_UNDER": {
-          "n": 24,
-          "brier": 0.2604,
-          "log_loss": 0.7265
+          "n": 26,
+          "brier": 0.2547,
+          "log_loss": 0.7141
         },
         "BTTS": {
-          "n": 24,
-          "brier": 0.2361,
-          "log_loss": 0.6706
+          "n": 26,
+          "brier": 0.2351,
+          "log_loss": 0.6682
         }
       },
       "jogos": [
@@ -927,6 +927,80 @@
               "confianca": "HIGH",
               "probabilidade": 0.829,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-08T17:30:00Z",
+          "casa": "Celta",
+          "visitante": "Levante",
+          "competicao": "Primera Division",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.513,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.653,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.59,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-08T17:30:00Z",
+          "casa": "Villarreal",
+          "visitante": "Getafe",
+          "competicao": "Primera Division",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.51,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.545,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.681,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.56,
+              "resultado": "ACERTO"
             }
           ]
         }
