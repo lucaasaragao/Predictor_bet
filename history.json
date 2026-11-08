@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-11-08",
-      "ultima_atualizacao": "2026-11-08T19:39:17-03:00",
-      "finalizados": 33,
-      "taxa_geral": 0.639,
-      "total_acertos": 85,
-      "total_palpites": 133,
+      "ultima_atualizacao": "2026-11-08T19:46:54-03:00",
+      "finalizados": 34,
+      "taxa_geral": 0.628,
+      "total_acertos": 86,
+      "total_palpites": 137,
       "mercados": {
         "WINNER": {
           "acertos": 14,
-          "total": 33,
-          "taxa": 0.424
+          "total": 34,
+          "taxa": 0.412
         },
         "OVER_UNDER": {
-          "acertos": 49,
-          "total": 66,
-          "taxa": 0.742
+          "acertos": 50,
+          "total": 68,
+          "taxa": 0.735
         },
         "BTTS": {
           "acertos": 22,
-          "total": 33,
-          "taxa": 0.667
+          "total": 34,
+          "taxa": 0.647
         },
         "EMPATE": {
           "acertos": 0,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 33,
-          "brier": 0.6474,
-          "log_loss": 1.071
+          "n": 34,
+          "brier": 0.6488,
+          "log_loss": 1.0729
         },
         "OVER_UNDER": {
-          "n": 33,
-          "brier": 0.2356,
-          "log_loss": 0.671
+          "n": 34,
+          "brier": 0.2351,
+          "log_loss": 0.6697
         },
         "BTTS": {
-          "n": 33,
-          "brier": 0.2203,
-          "log_loss": 0.6359
+          "n": 34,
+          "brier": 0.2222,
+          "log_loss": 0.6396
         }
       },
       "jogos": [
@@ -1271,6 +1271,43 @@
               "opcao": "NO",
               "confianca": "LOW",
               "probabilidade": 0.347,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-08T20:30:00Z",
+          "casa": "Rio Ave",
+          "visitante": "Braga",
+          "competicao": "Primeira Liga",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.379,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.738,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.533,
               "resultado": "ERRO"
             }
           ]
