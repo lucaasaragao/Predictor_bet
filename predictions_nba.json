@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T23:33:12-03:00",
+  "generated_at": "2026-11-16T23:40:55-03:00",
   "analysis_date": "2026-11-16",
   "total_jogos": 8,
   "temporada": 2026,
@@ -94,10 +94,10 @@
       "game_id": 21718119,
       "competicao": "NBA",
       "data": "2026-11-16T00:00:00.000Z",
-      "status": "IN_PLAY",
-      "status_display": "4th Qtr",
+      "status": "FINISHED",
+      "status_display": "Final",
       "periodo": 4,
-      "tempo": "Q4 :44.8",
+      "tempo": "Final",
       "times": {
         "casa": "Cleveland Cavaliers",
         "visitante": "Chicago Bulls",
@@ -153,7 +153,7 @@
           "confianca": "HIGH",
           "justificativa": "Cleveland Cavaliers favorito com 92.9% de chance (spread esperado: +16.6 pts).",
           "edge": 0.8574,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -163,7 +163,7 @@
           "confianca": "LOW",
           "justificativa": "Total esperado de 250.6 pts. Linha: 250.5. Tendência de OVER.",
           "edge": 0.001,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "SPREAD",
@@ -172,7 +172,7 @@
           "confianca": "HIGH",
           "justificativa": "Cleveland Cavaliers favorito por ~16.6 pontos.",
           "edge": 0.83,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -267,28 +267,28 @@
       "competicao": "NBA",
       "data": "2026-11-16T00:00:00.000Z",
       "status": "IN_PLAY",
-      "status_display": "3rd Qtr",
-      "periodo": 3,
-      "tempo": "Q3 :31.5",
+      "status_display": "4th Qtr",
+      "periodo": 4,
+      "tempo": "Q4 10:05",
       "times": {
         "casa": "Brooklyn Nets",
         "visitante": "Philadelphia 76ers",
         "abrev_casa": "BKN",
         "abrev_visit": "PHI"
       },
-      "placar_casa": 95,
-      "placar_visitante": 101,
+      "placar_casa": 98,
+      "placar_visitante": 105,
       "quarters": {
         "casa": [
           26,
           33,
           36,
-          0
+          3
         ],
         "visitante": [
           33,
           45,
-          23,
+          27,
           0
         ]
       },
@@ -355,27 +355,27 @@
       "status": "IN_PLAY",
       "status_display": "4th Qtr",
       "periodo": 4,
-      "tempo": "Q4 8:51",
+      "tempo": "Q4 5:36",
       "times": {
         "casa": "Miami Heat",
         "visitante": "Houston Rockets",
         "abrev_casa": "MIA",
         "abrev_visit": "HOU"
       },
-      "placar_casa": 111,
-      "placar_visitante": 88,
+      "placar_casa": 117,
+      "placar_visitante": 94,
       "quarters": {
         "casa": [
           29,
           33,
           39,
-          10
+          16
         ],
         "visitante": [
           15,
           31,
           35,
-          7
+          13
         ]
       },
       "probabilidades": {
@@ -441,26 +441,26 @@
       "status": "IN_PLAY",
       "status_display": "3rd Qtr",
       "periodo": 3,
-      "tempo": "Q3 8:45",
+      "tempo": "Q3 5:50",
       "times": {
         "casa": "Minnesota Timberwolves",
         "visitante": "Portland Trail Blazers",
         "abrev_casa": "MIN",
         "abrev_visit": "POR"
       },
-      "placar_casa": 64,
-      "placar_visitante": 55,
+      "placar_casa": 68,
+      "placar_visitante": 58,
       "quarters": {
         "casa": [
           26,
           33,
-          5,
+          9,
           0
         ],
         "visitante": [
           26,
           25,
-          4,
+          7,
           0
         ]
       },
@@ -527,26 +527,26 @@
       "status": "IN_PLAY",
       "status_display": "3rd Qtr",
       "periodo": 3,
-      "tempo": "Q3 9:59",
+      "tempo": "Q3 6:46",
       "times": {
         "casa": "New Orleans Pelicans",
         "visitante": "Golden State Warriors",
         "abrev_casa": "NOP",
         "abrev_visit": "GSW"
       },
-      "placar_casa": 68,
-      "placar_visitante": 40,
+      "placar_casa": 75,
+      "placar_visitante": 52,
       "quarters": {
         "casa": [
           35,
           26,
-          7,
+          14,
           0
         ],
         "visitante": [
           11,
           25,
-          4,
+          16,
           0
         ]
       },
@@ -611,27 +611,27 @@
       "competicao": "NBA",
       "data": "2026-11-16T00:00:00.000Z",
       "status": "IN_PLAY",
-      "status_display": "1st Qtr",
-      "periodo": 1,
-      "tempo": "Q1 1:08",
+      "status_display": "2nd Qtr",
+      "periodo": 2,
+      "tempo": "Q2 10:16",
       "times": {
         "casa": "Denver Nuggets",
         "visitante": "Phoenix Suns",
         "abrev_casa": "DEN",
         "abrev_visit": "PHX"
       },
-      "placar_casa": 24,
-      "placar_visitante": 20,
+      "placar_casa": 27,
+      "placar_visitante": 25,
       "quarters": {
         "casa": [
           24,
-          0,
+          3,
           0,
           0
         ],
         "visitante": [
           20,
-          0,
+          5,
           0,
           0
         ]
@@ -735,9 +735,9 @@
     }
   },
   "acertos_hoje": {
-    "acertos": 3,
-    "total": 6,
-    "taxa": 0.5
+    "acertos": 5,
+    "total": 9,
+    "taxa": 0.5556
   },
   "recovery_tip_date": "2026-11-16"
 }
