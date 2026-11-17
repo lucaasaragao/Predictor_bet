@@ -1,169 +1,125 @@
 {
-  "generated_at": "2026-11-14T23:58:19-03:00",
-  "analysis_date": "2026-11-14",
-  "total_jogos": 2,
+  "generated_at": "2026-11-17T00:11:33-03:00",
+  "analysis_date": "2026-11-17",
+  "total_jogos": 4,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
   "odds_min_ev": 0.03,
   "jogos": [
     {
       "competicao": "Campeonato Brasileiro Série A",
-      "data": "2026-11-14T21:30:00Z",
-      "status": "FINISHED",
+      "data": "2026-11-18T22:30:00Z",
+      "status": "TIMED",
       "placar_atual": {
-        "casa": 0,
-        "visitante": 0
+        "casa": null,
+        "visitante": null
       },
       "times": {
-        "casa": "Mirassol",
-        "visitante": "Mineiro",
-        "escudo_casa": "https://crests.football-data.org/4364.png",
-        "escudo_visitante": "https://crests.football-data.org/1766.png"
+        "casa": "Coritiba",
+        "visitante": "Santos",
+        "escudo_casa": "https://crests.football-data.org/4241.png",
+        "escudo_visitante": "https://crests.football-data.org/6685.png"
       },
       "probabilidades": {
-        "casa": 0.6175984848787848,
-        "empate": 0.2329479994342906,
-        "visitante": 0.14945351568692458
+        "casa": 0.3343053606070716,
+        "empate": 0.26413374212772384,
+        "visitante": 0.4015608972652046
       },
       "favorito": {
-        "nome": "Mirassol",
-        "prob": 0.6175984848787848,
-        "vantagem": 0.3846504854444942
+        "nome": "Santos",
+        "prob": 0.4015608972652046,
+        "vantagem": 0.067255536658133
       },
       "gols_esperados": {
-        "casa": 2.0196250666666664,
-        "visitante": 0.9126968803827752,
-        "total": 2.9323219470494415
+        "casa": 1.4888926315789472,
+        "visitante": 1.6452616886569036,
+        "total": 3.134154320235851
       },
       "mercados": {
-        "under_25": 0.4390366586885217,
-        "over_25": 0.5609633413114783,
-        "btts_yes": 0.5318140995641768,
-        "btts_no": 0.4681859004358232
+        "under_25": 0.3940018269366632,
+        "over_25": 0.6059981730633368,
+        "btts_yes": 0.6387467811193153,
+        "btts_no": 0.36125321888068473
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.5636363636363636,
-          "ataque": 0.7,
-          "defesa": 0.7,
+          "forma_recente": 0.2636363636363636,
+          "ataque": 0.5599999999999999,
+          "defesa": 0.44000000000000006,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.6722727272727272
+          "score_total": 0.48027272727272724
         },
         "visitante": {
-          "forma_recente": 0.41818181818181815,
-          "ataque": 0.4,
-          "defesa": 0.19999999999999996,
+          "forma_recente": 0.5090909090909091,
+          "ataque": 0.7333333333333333,
+          "defesa": 0.4,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.42636363636363633
+          "score_total": 0.5815151515151515
         }
       },
-      "leitura_rapida": "Mirassol favorito (62%, risco forte). Jogo mais aberto (xG total ≈2.9). Over 2.5 com 56%. | Forma recente: Mineiro em baixa.",
+      "leitura_rapida": "Santos favorito (40%, risco alto). Jogo mais aberto (xG total ≈3.1). Over 2.5 com 61%.",
       "tendencia": {
         "casa": "estavel",
-        "visitante": "em baixa"
+        "visitante": "estavel"
       },
       "tendencia_gols": {
         "casa": {
-          "prob_marca": 0.7,
-          "prob_sofre": 0.8,
-          "sequencia_marca": 1,
-          "sequencia_sofre": 3,
+          "prob_marca": 0.5,
+          "prob_sofre": 0.9,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 1,
           "jogos": 10
         },
         "visitante": {
-          "prob_marca": 0.7,
-          "prob_sofre": 0.8,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 3,
+          "prob_marca": 0.9,
+          "prob_sofre": 0.9,
+          "sequencia_marca": 1,
+          "sequencia_sofre": 1,
           "jogos": 10
         }
       },
       "alertas": [],
       "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "alta",
-        "nota": "Mirassol favorito (61.8%), margem 38.5 p.p., xG 2.0 e tendência de jogo aberto (Over 2.5 56%)."
+        "palpite_ia": "2",
+        "confianca_ia": "baixa",
+        "nota": "Santos favorito (40.2%), margem 6.7 p.p., xG 1.6 e tendência de jogo aberto (Over 2.5 61%)."
       },
       "odds_debug": {
         "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
+        "status": "skip_edge_gate",
+        "reason": "edge abaixo do gate (6.7 p.p. < 10.0 p.p.)",
         "competition": "Campeonato Brasileiro Série A",
         "sport_key": "soccer_brazil_campeonato",
-        "odds_match_id": "60e79364c168ad0ad22c0cffc02be8a9",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
       },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
+      "odds_integradas": false,
+      "odds_valor_alto": false,
       "historico": {
         "casa": [
           {
-            "data": "03/11 22:30",
-            "mandante": "Chapecoense",
-            "visitante": "Mirassol",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "30/10 23:00",
-            "mandante": "Corinthians",
-            "visitante": "Mirassol",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "24/10 19:30",
-            "mandante": "Mirassol",
-            "visitante": "São Paulo",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "16/10 23:00",
-            "mandante": "Mirassol",
-            "visitante": "Internacional",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "11/10 22:30",
-            "mandante": "Bahia",
-            "visitante": "Mirassol",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "05/11 00:30",
-            "mandante": "Botafogo",
-            "visitante": "Mineiro",
+            "data": "04/11 00:30",
+            "mandante": "Internacional",
+            "visitante": "Coritiba",
             "placar": "1 x 0",
             "resultado": "D",
             "resultado_label": "Derrota"
           },
           {
-            "data": "29/10 22:30",
-            "mandante": "Mineiro",
-            "visitante": "Cruzeiro",
+            "data": "31/10 19:00",
+            "mandante": "Coritiba",
+            "visitante": "Vitória",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "26/10 22:30",
+            "mandante": "Coritiba",
+            "visitante": "Grêmio",
             "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "26/10 23:00",
-            "mandante": "Flamengo",
-            "visitante": "Mineiro",
-            "placar": "3 x 2",
             "resultado": "D",
             "resultado_label": "Derrota"
           },
@@ -172,6 +128,48 @@
             "mandante": "Mineiro",
             "visitante": "Coritiba",
             "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "12/10 19:00",
+            "mandante": "Coritiba",
+            "visitante": "Botafogo",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "02/11 23:00",
+            "mandante": "Bragantino",
+            "visitante": "Santos",
+            "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "28/10 22:30",
+            "mandante": "Santos",
+            "visitante": "Palmeiras",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "25/10 01:00",
+            "mandante": "Santos",
+            "visitante": "Bahia",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "18/10 19:00",
+            "mandante": "Fluminense",
+            "visitante": "Santos",
+            "placar": "1 x 2",
             "resultado": "V",
             "resultado_label": "Vitoria"
           },
@@ -180,149 +178,151 @@
             "mandante": "Mineiro",
             "visitante": "Santos",
             "placar": "2 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
+            "resultado": "D",
+            "resultado_label": "Derrota"
           }
         ]
       },
       "palpites": [
         {
           "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.6175984848787848,
-          "confianca": "HIGH",
-          "justificativa": "Mirassol projeta ≈2.0 gol(s) vs ≈0.9 do adversário. Prob vitória: 61.8% (margem: 38.5 p.p.)",
-          "edge": 0.3847,
-          "odd_decimal": 2.06,
-          "ev": 0.2877,
-          "ev_bruto": 0.2723,
-          "prob_mercado_justa": 0.4796,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": "ERRO"
+          "opcao": "2",
+          "probabilidade": 0.4015608972652046,
+          "confianca": "LOW",
+          "justificativa": "Santos projeta ≈1.6 gol(s) vs ≈1.5 do adversário. Prob vitória: 40.2% (margem: 6.7 p.p.)",
+          "edge": 0.0673,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "OVER_2.5",
-          "probabilidade": 0.5609633413114783,
+          "probabilidade": 0.6059981730633368,
           "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.9. OVER 2.5: 56.1% de probabilidade",
-          "edge": 0.061,
+          "justificativa": "Gols esperados no jogo: ≈3.1. OVER 2.5: 60.6% de probabilidade",
+          "edge": 0.106,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
+          "resultado_verificador": null
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "OVER_1.5",
-          "probabilidade": 0.7884,
+          "probabilidade": 0.7677,
           "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.9. | Forma: 70% casa marca, 70% visit marca",
-          "edge": 0.2884,
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈3.1. | Forma: 50% casa marca, 90% visit marca",
+          "edge": 0.2677,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
+          "resultado_verificador": null
         },
         {
           "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.4849,
+          "opcao": "YES",
+          "probabilidade": 0.5632,
           "confianca": "LOW",
-          "justificativa": "xG: 2.0 (casa) x 0.9 (fora). Ambas marcam - Nao: 48.5% | Forma 1j/0j consecutivos com gol",
-          "edge": -0.0151,
+          "justificativa": "xG: 1.5 (casa) x 1.6 (fora). Ambas marcam - Sim: 56.3% | Forma 0j/1j consecutivos com gol",
+          "edge": 0.0632,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
+          "resultado_verificador": null
         }
       ]
     },
     {
       "competicao": "Campeonato Brasileiro Série A",
-      "data": "2026-11-14T23:30:00Z",
-      "status": "FINISHED",
+      "data": "2026-11-18T23:00:00Z",
+      "status": "TIMED",
       "placar_atual": {
-        "casa": 0,
-        "visitante": 2
+        "casa": null,
+        "visitante": null
       },
       "times": {
-        "casa": "Chapecoense",
-        "visitante": "Vasco da Gama",
-        "escudo_casa": "https://crests.football-data.org/1772_large.png",
-        "escudo_visitante": "https://crests.football-data.org/1780.png"
+        "casa": "Clube do Remo",
+        "visitante": "Chapecoense",
+        "escudo_casa": "https://crests.football-data.org/4287.png",
+        "escudo_visitante": "https://crests.football-data.org/1772_large.png"
       },
       "probabilidades": {
-        "casa": 0.22156687716952017,
-        "empate": 0.2588419988329256,
-        "visitante": 0.5195911239975544
+        "casa": 0.5345743594609937,
+        "empate": 0.2789979678815124,
+        "visitante": 0.186427672657494
       },
       "favorito": {
-        "nome": "Vasco da Gama",
-        "prob": 0.5195911239975544,
-        "vantagem": 0.2607491251646288
+        "nome": "Clube do Remo",
+        "prob": 0.5345743594609937,
+        "vantagem": 0.25557639157948137
       },
       "gols_esperados": {
-        "casa": 1.1257328484848486,
-        "visitante": 1.8101925358851676,
-        "total": 2.935925384370016
+        "casa": 1.6154134821903243,
+        "visitante": 0.8687072153110047,
+        "total": 2.484120697501329
       },
       "mercados": {
-        "under_25": 0.43796301821120065,
-        "over_25": 0.5620369817887994,
-        "btts_yes": 0.579044015596771,
-        "btts_no": 0.420955984403229
+        "under_25": 0.5480469253558358,
+        "over_25": 0.4519530746441642,
+        "btts_yes": 0.48028248896518405,
+        "btts_no": 0.519717511034816
       },
       "scores": {
         "casa": {
-          "forma_recente": 0.21818181818181817,
-          "ataque": 0.5,
-          "defesa": 0.09999999999999998,
+          "forma_recente": 0.32727272727272727,
+          "ataque": 0.4666666666666667,
+          "defesa": 0.4,
           "fator_mando": 1.1,
           "h2h_factor": 0.5,
-          "score_total": 0.38136363636363635
+          "score_total": 0.47121212121212125
         },
         "visitante": {
-          "forma_recente": 0.6181818181818182,
-          "ataque": 0.5599999999999999,
-          "defesa": 0.6,
+          "forma_recente": 0.17272727272727273,
+          "ataque": 0.24,
+          "defesa": 0.19999999999999996,
           "fator_mando": 0.9,
           "h2h_factor": 0.5,
-          "score_total": 0.6163636363636363
+          "score_total": 0.3004545454545455
         }
       },
-      "leitura_rapida": "Vasco da Gama favorito (52%, risco moderado). Jogo mais aberto (xG total ≈2.9). Over 2.5 com 56%. | Forma recente: Vasco da Gama em alta.",
+      "leitura_rapida": "Clube do Remo favorito (53%, risco moderado). Mercado de gols equilibrado (xG total ≈2.5). | Forma recente: Chapecoense em baixa.",
       "tendencia": {
         "casa": "estavel",
-        "visitante": "em alta"
+        "visitante": "em baixa"
       },
       "tendencia_gols": {
         "casa": {
           "prob_marca": 0.7,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 1,
-          "sequencia_sofre": 10,
+          "prob_sofre": 0.9,
+          "sequencia_marca": 2,
+          "sequencia_sofre": 4,
           "jogos": 10
         },
         "visitante": {
-          "prob_marca": 0.7,
-          "prob_sofre": 0.8,
-          "sequencia_marca": 3,
-          "sequencia_sofre": 4,
+          "prob_marca": 0.6,
+          "prob_sofre": 1.0,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 10,
           "jogos": 10
         }
       },
-      "alertas": [],
+      "alertas": [
+        "Chapecoense jogou recentemente — possível desgaste físico."
+      ],
       "analise_ia": {
-        "palpite_ia": "2",
+        "palpite_ia": "1",
         "confianca_ia": "alta",
-        "nota": "Vasco da Gama favorito (52.0%), margem 26.1 p.p., xG 1.8 e tendência de jogo aberto (Over 2.5 56%)."
+        "nota": "Clube do Remo favorito (53.5%), margem 25.6 p.p., xG 1.6 e mercado de gols equilibrado."
       },
       "odds_debug": {
         "enabled": "false",
@@ -330,7 +330,7 @@
         "reason": "odds h2h encontradas com sucesso",
         "competition": "Campeonato Brasileiro Série A",
         "sport_key": "soccer_brazil_campeonato",
-        "odds_match_id": "8fafa425728aa8e7d2c23956ba4c2553",
+        "odds_match_id": "a96fe59de916f1d378f3dcce6733dd20",
         "bookmakers_outcomes": "3",
         "ev_filter": "fail",
         "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
@@ -339,6 +339,56 @@
       "odds_valor_alto": false,
       "historico": {
         "casa": [
+          {
+            "data": "05/11 22:30",
+            "mandante": "Palmeiras",
+            "visitante": "Clube do Remo",
+            "placar": "6 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "29/10 00:30",
+            "mandante": "Clube do Remo",
+            "visitante": "Botafogo",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "23/10 23:00",
+            "mandante": "Cruzeiro",
+            "visitante": "Clube do Remo",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "18/10 22:30",
+            "mandante": "Clube do Remo",
+            "visitante": "Bragantino",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "10/10 21:00",
+            "mandante": "Vasco da Gama",
+            "visitante": "Clube do Remo",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "14/11 23:30",
+            "mandante": "Chapecoense",
+            "visitante": "Vasco da Gama",
+            "placar": "0 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
           {
             "data": "03/11 22:30",
             "mandante": "Chapecoense",
@@ -370,128 +420,484 @@
             "placar": "1 x 0",
             "resultado": "D",
             "resultado_label": "Derrota"
-          },
-          {
-            "data": "12/10 22:30",
-            "mandante": "Chapecoense",
-            "visitante": "Paranaense",
-            "placar": "1 x 4",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "04/11 22:30",
-            "mandante": "Paranaense",
-            "visitante": "Vasco da Gama",
-            "placar": "1 x 3",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "29/10 23:00",
-            "mandante": "Vasco da Gama",
-            "visitante": "Flamengo",
-            "placar": "1 x 4",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "24/10 21:30",
-            "mandante": "Vasco da Gama",
-            "visitante": "Corinthians",
-            "placar": "3 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "18/10 00:00",
-            "mandante": "São Paulo",
-            "visitante": "Vasco da Gama",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "10/10 21:00",
-            "mandante": "Vasco da Gama",
-            "visitante": "Clube do Remo",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
           }
         ]
       },
       "palpites": [
         {
           "tipo": "WINNER",
-          "opcao": "2",
-          "probabilidade": 0.5195911239975544,
+          "opcao": "1",
+          "probabilidade": 0.5345743594609937,
           "confianca": "MEDIUM",
-          "justificativa": "Vasco da Gama projeta ≈1.8 gol(s) vs ≈1.1 do adversário. Prob vitória: 52.0% (margem: 26.1 p.p.)",
-          "edge": 0.2607,
-          "odd_decimal": 1.5,
-          "ev": -0.2201,
-          "ev_bruto": -0.2206,
-          "prob_mercado_justa": 0.6663,
+          "justificativa": "Clube do Remo projeta ≈1.6 gol(s) vs ≈0.9 do adversário. Prob vitória: 53.5% (margem: 25.6 p.p.)",
+          "edge": 0.2556,
+          "odd_decimal": 1.64,
+          "ev": -0.1035,
+          "ev_bruto": -0.1233,
+          "prob_mercado_justa": 0.5963,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
+          "resultado_verificador": null
         },
         {
           "tipo": "OVER_UNDER",
-          "opcao": "OVER_2.5",
-          "probabilidade": 0.5620369817887994,
+          "opcao": "UNDER_2.5",
+          "probabilidade": 0.5480469253558358,
           "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.9. OVER 2.5: 56.2% de probabilidade",
-          "edge": 0.062,
+          "justificativa": "Gols esperados no jogo: ≈2.5. UNDER 2.5: 54.8% de probabilidade",
+          "edge": 0.048,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
+          "resultado_verificador": null
         },
         {
           "tipo": "OVER_UNDER",
           "opcao": "OVER_1.5",
-          "probabilidade": 0.7739,
+          "probabilidade": 0.7035,
           "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.9. | Forma: 70% casa marca, 70% visit marca",
-          "edge": 0.2739,
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.5. | Forma: 70% casa marca, 60% visit marca",
+          "edge": 0.2035,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
+          "resultado_verificador": null
         },
         {
           "tipo": "BTTS",
           "opcao": "NO",
-          "probabilidade": 0.4566,
+          "probabilidade": 0.5438,
           "confianca": "LOW",
-          "justificativa": "xG: 1.1 (casa) x 1.8 (fora). Ambas marcam - Nao: 45.7% | Forma 1j/3j consecutivos com gol",
-          "edge": -0.0434,
+          "justificativa": "xG: 1.6 (casa) x 0.9 (fora). Ambas marcam - Nao: 54.4% | Forma 2j/0j consecutivos com gol",
+          "edge": 0.0438,
           "odd_decimal": null,
           "ev": null,
           "ev_bruto": null,
           "prob_mercado_justa": null,
           "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Campeonato Brasileiro Série A",
+      "data": "2026-11-18T23:30:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Cruzeiro",
+        "visitante": "Palmeiras",
+        "escudo_casa": "https://crests.football-data.org/1771.png",
+        "escudo_visitante": "https://crests.football-data.org/1769.png"
+      },
+      "probabilidades": {
+        "casa": 0.5093362604149807,
+        "empate": 0.23265821015814997,
+        "visitante": 0.25800552942686933
+      },
+      "favorito": {
+        "nome": "Cruzeiro",
+        "prob": 0.5093362604149807,
+        "vantagem": 0.2513307309881114
+      },
+      "gols_esperados": {
+        "casa": 2.1065936842105266,
+        "visitante": 1.4763823575467592,
+        "total": 3.582976041757286
+      },
+      "mercados": {
+        "under_25": 0.3062831531810042,
+        "over_25": 0.6937168468189958,
+        "btts_yes": 0.6887614310715938,
+        "btts_no": 0.3112385689284062
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.8181818181818183,
+          "ataque": 0.9,
+          "defesa": 0.7,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.8113636363636364
+        },
+        "visitante": {
+          "forma_recente": 0.890909090909091,
+          "ataque": 0.8,
+          "defesa": 0.44000000000000006,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.7398181818181818
+        }
+      },
+      "leitura_rapida": "Cruzeiro favorito (51%, risco moderado). Jogo mais aberto (xG total ≈3.6). Over 2.5 com 69%. | Forma recente: Cruzeiro em alta.",
+      "tendencia": {
+        "casa": "em alta",
+        "visitante": "estavel"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 1.0,
+          "prob_sofre": 0.7,
+          "sequencia_marca": 10,
+          "sequencia_sofre": 1,
+          "jogos": 10
+        },
+        "visitante": {
+          "prob_marca": 0.8,
+          "prob_sofre": 0.5,
+          "sequencia_marca": 1,
+          "sequencia_sofre": 1,
+          "jogos": 10
+        }
+      },
+      "alertas": [],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "alta",
+        "nota": "Cruzeiro favorito (50.9%), margem 25.1 p.p., xG 2.1 e tendência de jogo aberto (Over 2.5 69%)."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
+        "competition": "Campeonato Brasileiro Série A",
+        "sport_key": "soccer_brazil_campeonato",
+        "odds_match_id": "8c090da10644d01073571175eb7a7426",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "pass",
+        "ev_reason": "há palpite com EV >= 3.0%"
+      },
+      "odds_integradas": true,
+      "odds_valor_alto": true,
+      "historico": {
+        "casa": [
+          {
+            "data": "06/11 00:30",
+            "mandante": "Cruzeiro",
+            "visitante": "Bahia",
+            "placar": "3 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "29/10 22:30",
+            "mandante": "Mineiro",
+            "visitante": "Cruzeiro",
+            "placar": "0 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "23/10 23:00",
+            "mandante": "Cruzeiro",
+            "visitante": "Clube do Remo",
+            "placar": "1 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "18/10 19:00",
+            "mandante": "Grêmio",
+            "visitante": "Cruzeiro",
+            "placar": "2 x 4",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "13/10 00:00",
+            "mandante": "Bragantino",
+            "visitante": "Cruzeiro",
+            "placar": "4 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "05/11 22:30",
+            "mandante": "Palmeiras",
+            "visitante": "Clube do Remo",
+            "placar": "6 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "28/10 22:30",
+            "mandante": "Santos",
+            "visitante": "Palmeiras",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "24/10 21:30",
+            "mandante": "Palmeiras",
+            "visitante": "Bragantino",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "22/10 00:30",
+            "mandante": "Palmeiras",
+            "visitante": "Fluminense",
+            "placar": "5 x 4",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "17/10 22:30",
+            "mandante": "Paranaense",
+            "visitante": "Palmeiras",
+            "placar": "0 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.5093362604149807,
+          "confianca": "MEDIUM",
+          "justificativa": "Cruzeiro projeta ≈2.1 gol(s) vs ≈1.5 do adversário. Prob vitória: 50.9% (margem: 25.1 p.p.)",
+          "edge": 0.2513,
+          "odd_decimal": 2.88,
+          "ev": 0.4978,
+          "ev_bruto": 0.4669,
+          "prob_mercado_justa": 0.3401,
+          "valor_esperado_positivo": true,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER_3.5",
+          "probabilidade": 0.5197047948291773,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈3.6. UNDER 3.5: 52.0% de probabilidade",
+          "edge": 0.0197,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.9226,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈3.6. | Forma: 100% casa marca, 80% visit marca",
+          "edge": 0.4226,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.7333,
+          "confianca": "HIGH",
+          "justificativa": "xG: 2.1 (casa) x 1.5 (fora). Ambas marcam - Sim: 73.3% | Forma 10j/1j consecutivos com gol",
+          "edge": 0.2333,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Campeonato Brasileiro Série A",
+      "data": "2026-11-18T23:30:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Flamengo",
+        "visitante": "Paranaense",
+        "escudo_casa": "https://crests.football-data.org/1783.png",
+        "escudo_visitante": "https://crests.football-data.org/1768.png"
+      },
+      "probabilidades": {
+        "casa": 0.37244888305532,
+        "empate": 0.31041132961418283,
+        "visitante": 0.31713978733049725
+      },
+      "favorito": {
+        "nome": "Flamengo",
+        "prob": 0.37244888305532,
+        "vantagem": 0.05530909572482273
+      },
+      "gols_esperados": {
+        "casa": 1.254,
+        "visitante": 1.14,
+        "total": 2.394
+      },
+      "mercados": {
+        "under_25": 0.5713205623778062,
+        "over_25": 0.4286794376221938,
+        "btts_yes": 0.5030301903175317,
+        "btts_no": 0.4969698096824683
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.5,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.555
+        },
+        "visitante": {
+          "forma_recente": 0.5,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.535
+        }
+      },
+      "leitura_rapida": "Flamengo favorito (37%, risco alto). Mercado de gols equilibrado (xG total ≈2.4).",
+      "tendencia": {
+        "casa": "indefinida",
+        "visitante": "indefinida"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 0.5,
+          "prob_sofre": 0.5,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 0,
+          "jogos": 0
+        },
+        "visitante": {
+          "prob_marca": 0.5,
+          "prob_sofre": 0.5,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 0,
+          "jogos": 0
+        }
+      },
+      "alertas": [],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "baixa",
+        "nota": "Flamengo favorito (37.2%), margem 5.5 p.p., xG 1.3 e tendência de menos gols (Under 2.5 57%)."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "skip_edge_gate",
+        "reason": "edge abaixo do gate (5.5 p.p. < 10.0 p.p.)",
+        "competition": "Campeonato Brasileiro Série A",
+        "sport_key": "soccer_brazil_campeonato",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [],
+        "visitante": []
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.37244888305532,
+          "confianca": "LOW",
+          "justificativa": "Flamengo projeta ≈1.3 gol(s) vs ≈1.1 do adversário. Prob vitória: 37.2% (margem: 5.5 p.p.)",
+          "edge": 0.0553,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER_2.5",
+          "probabilidade": 0.5713205623778062,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.4. UNDER 2.5: 57.1% de probabilidade",
+          "edge": 0.0713,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.7072,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.4.",
+          "edge": 0.2072,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.497,
+          "confianca": "LOW",
+          "justificativa": "xG: 1.3 (casa) x 1.1 (fora). Ambas marcam - Nao: 49.7%",
+          "edge": -0.003,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "EMPATE",
+          "opcao": "X",
+          "probabilidade": 0.31041132961418283,
+          "confianca": "LOW",
+          "justificativa": "Ambas defesas solidas (60% / 60% de aproveitamento defensivo). Empate com 31.0% de probabilidade",
+          "edge": 0.0,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
         }
       ]
     }
   ],
   "acertos_hoje": {
-    "acertos": 4,
-    "total": 8,
-    "taxa": 0.5
+    "acertos": 0,
+    "total": 0,
+    "taxa": null
   },
   "daily_tips_ids": [],
-  "daily_tips_date": "2026-11-14",
+  "daily_tips_date": "2026-11-17",
   "recovery_tip": {
     "ativo": false
   },
-  "recovery_tip_date": "2026-11-14"
+  "recovery_tip_date": "2026-11-17"
 }
