@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-11-18",
-      "ultima_atualizacao": "2026-11-18T22:47:53-03:00",
-      "finalizados": 2,
-      "taxa_geral": 0.625,
-      "total_acertos": 5,
-      "total_palpites": 8,
+      "ultima_atualizacao": "2026-11-18T22:55:27-03:00",
+      "finalizados": 4,
+      "taxa_geral": 0.647,
+      "total_acertos": 11,
+      "total_palpites": 17,
       "mercados": {
         "WINNER": {
-          "acertos": 2,
-          "total": 2,
+          "acertos": 4,
+          "total": 4,
           "taxa": 1.0
         },
         "OVER_UNDER": {
+          "acertos": 5,
+          "total": 8,
+          "taxa": 0.625
+        },
+        "BTTS": {
           "acertos": 2,
           "total": 4,
           "taxa": 0.5
         },
-        "BTTS": {
-          "acertos": 1,
-          "total": 2,
-          "taxa": 0.5
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 2,
-          "brier": 0.4345,
-          "log_loss": 0.7693
+          "n": 4,
+          "brier": 0.4553,
+          "log_loss": 0.8002
         },
         "OVER_UNDER": {
-          "n": 2,
-          "brier": 0.2857,
-          "log_loss": 0.7664
+          "n": 4,
+          "brier": 0.2479,
+          "log_loss": 0.6864
         },
         "BTTS": {
-          "n": 2,
-          "brier": 0.3193,
-          "log_loss": 0.8363
+          "n": 4,
+          "brier": 0.2456,
+          "log_loss": 0.6831
         }
       },
       "jogos": [
@@ -113,6 +118,87 @@
               "confianca": "LOW",
               "probabilidade": 0.544,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-18T23:30:00Z",
+          "casa": "Cruzeiro",
+          "visitante": "Palmeiras",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.509,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.52,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.923,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.733,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-18T23:30:00Z",
+          "casa": "Flamengo",
+          "visitante": "Paranaense",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.571,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.707,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.497,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
+              "resultado": "ERRO"
             }
           ]
         }
