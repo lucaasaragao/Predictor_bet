@@ -2,30 +2,84 @@
   "dias": [
     {
       "data": "2026-11-20",
-      "ultima_atualizacao": "2026-11-20T18:26:05-03:00",
-      "finalizados": 0,
-      "taxa_geral": 0.0,
-      "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "ultima_atualizacao": "2026-11-20T18:33:58-03:00",
+      "finalizados": 1,
+      "taxa_geral": 0.25,
+      "total_acertos": 1,
+      "total_palpites": 4,
+      "mercados": {
+        "WINNER": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 1,
+          "total": 2,
+          "taxa": 0.5
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 1.449,
+          "log_loss": 2.153
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.6949,
+          "log_loss": 1.7936
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.1269,
+          "log_loss": 0.4405
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-11-20T19:30:00Z",
+          "casa": "Bayern",
+          "visitante": "1. FC Köln",
+          "competicao": "Bundesliga",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.814,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.666,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.995,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.303,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-11-19",
