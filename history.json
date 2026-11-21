@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-21",
-      "ultima_atualizacao": "2026-11-21T13:28:09-03:00",
-      "finalizados": 7,
-      "taxa_geral": 0.821,
-      "total_acertos": 23,
-      "total_palpites": 28,
+      "ultima_atualizacao": "2026-11-21T13:36:26-03:00",
+      "finalizados": 12,
+      "taxa_geral": 0.667,
+      "total_acertos": 32,
+      "total_palpites": 48,
       "mercados": {
         "WINNER": {
-          "acertos": 5,
-          "total": 7,
-          "taxa": 0.714
+          "acertos": 7,
+          "total": 12,
+          "taxa": 0.583
         },
         "OVER_UNDER": {
-          "acertos": 11,
-          "total": 14,
-          "taxa": 0.786
+          "acertos": 16,
+          "total": 24,
+          "taxa": 0.667
         },
         "BTTS": {
-          "acertos": 7,
-          "total": 7,
-          "taxa": 1.0
+          "acertos": 9,
+          "total": 12,
+          "taxa": 0.75
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 7,
-          "brier": 0.4934,
-          "log_loss": 0.8569
+          "n": 12,
+          "brier": 0.5443,
+          "log_loss": 0.9235
         },
         "OVER_UNDER": {
-          "n": 7,
-          "brier": 0.3174,
-          "log_loss": 0.8329
+          "n": 12,
+          "brier": 0.325,
+          "log_loss": 0.8527
         },
         "BTTS": {
-          "n": 7,
-          "brier": 0.2676,
-          "log_loss": 0.7292
+          "n": 12,
+          "brier": 0.3137,
+          "log_loss": 0.8284
         }
       },
       "jogos": [
@@ -298,6 +298,191 @@
               "confianca": "LOW",
               "probabilidade": 0.499,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-21T14:30:00Z",
+          "casa": "Union Berlin",
+          "visitante": "RB Leipzig",
+          "competicao": "Bundesliga",
+          "placar": "1-5",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.525,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.578,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.805,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.586,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-21T14:30:00Z",
+          "casa": "Frankfurt",
+          "visitante": "Hoffenheim",
+          "competicao": "Bundesliga",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.411,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.557,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.866,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.68,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-21T14:30:00Z",
+          "casa": "M'gladbach",
+          "visitante": "Dortmund",
+          "competicao": "Bundesliga",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.402,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.602,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.843,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.65,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-21T14:30:00Z",
+          "casa": "Leverkusen",
+          "visitante": "SC Paderborn",
+          "competicao": "Bundesliga",
+          "placar": "4-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.588,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.588,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.759,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.499,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-21T14:30:00Z",
+          "casa": "Elversberg",
+          "visitante": "Freiburg",
+          "competicao": "Bundesliga",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.449,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.548,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.885,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.713,
+              "resultado": "ERRO"
             }
           ]
         }
