@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-11-21",
-      "ultima_atualizacao": "2026-11-21T18:57:18-03:00",
-      "finalizados": 39,
-      "taxa_geral": 0.642,
-      "total_acertos": 102,
-      "total_palpites": 159,
+      "ultima_atualizacao": "2026-11-21T19:10:21-03:00",
+      "finalizados": 42,
+      "taxa_geral": 0.661,
+      "total_acertos": 113,
+      "total_palpites": 171,
       "mercados": {
         "WINNER": {
-          "acertos": 19,
-          "total": 39,
-          "taxa": 0.487
+          "acertos": 22,
+          "total": 42,
+          "taxa": 0.524
         },
         "OVER_UNDER": {
-          "acertos": 53,
-          "total": 78,
-          "taxa": 0.679
+          "acertos": 59,
+          "total": 84,
+          "taxa": 0.702
         },
         "BTTS": {
-          "acertos": 27,
-          "total": 39,
-          "taxa": 0.692
+          "acertos": 29,
+          "total": 42,
+          "taxa": 0.69
         },
         "EMPATE": {
           "acertos": 3,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 39,
-          "brier": 0.6179,
-          "log_loss": 1.0279
+          "n": 42,
+          "brier": 0.5994,
+          "log_loss": 1.0016
         },
         "OVER_UNDER": {
-          "n": 39,
-          "brier": 0.2801,
-          "log_loss": 0.7596
+          "n": 42,
+          "brier": 0.2676,
+          "log_loss": 0.7321
         },
         "BTTS": {
-          "n": 39,
-          "brier": 0.2484,
-          "log_loss": 0.69
+          "n": 42,
+          "brier": 0.2401,
+          "log_loss": 0.6717
         }
       },
       "jogos": [
@@ -1507,6 +1507,117 @@
               "opcao": "YES",
               "confianca": "HIGH",
               "probabilidade": 0.732,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-21T20:00:00Z",
+          "casa": "Groningen",
+          "visitante": "Heerenveen",
+          "competicao": "Eredivisie",
+          "placar": "1-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.52,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.654,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.912,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.756,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-21T20:00:00Z",
+          "casa": "Real Madrid",
+          "visitante": "Celta",
+          "competicao": "Primera Division",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.682,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.544,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.765,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.558,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-21T20:00:00Z",
+          "casa": "Telstar",
+          "visitante": "Zwolle",
+          "competicao": "Eredivisie",
+          "placar": "1-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.39,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.518,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.792,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.605,
               "resultado": "ACERTO"
             }
           ]
