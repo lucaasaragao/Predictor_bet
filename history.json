@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-11-21",
-      "ultima_atualizacao": "2026-11-21T17:11:31-03:00",
-      "finalizados": 32,
-      "taxa_geral": 0.662,
-      "total_acertos": 86,
-      "total_palpites": 130,
+      "ultima_atualizacao": "2026-11-21T17:19:48-03:00",
+      "finalizados": 33,
+      "taxa_geral": 0.672,
+      "total_acertos": 90,
+      "total_palpites": 134,
       "mercados": {
         "WINNER": {
-          "acertos": 17,
-          "total": 32,
-          "taxa": 0.531
+          "acertos": 18,
+          "total": 33,
+          "taxa": 0.545
         },
         "OVER_UNDER": {
-          "acertos": 44,
-          "total": 64,
-          "taxa": 0.688
+          "acertos": 46,
+          "total": 66,
+          "taxa": 0.697
         },
         "BTTS": {
-          "acertos": 23,
-          "total": 32,
-          "taxa": 0.719
+          "acertos": 24,
+          "total": 33,
+          "taxa": 0.727
         },
         "EMPATE": {
           "acertos": 2,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 32,
-          "brier": 0.5894,
-          "log_loss": 0.9876
+          "n": 33,
+          "brier": 0.5787,
+          "log_loss": 0.973
         },
         "OVER_UNDER": {
-          "n": 32,
-          "brier": 0.2711,
-          "log_loss": 0.7385
+          "n": 33,
+          "brier": 0.264,
+          "log_loss": 0.7226
         },
         "BTTS": {
-          "n": 32,
-          "brier": 0.2568,
-          "log_loss": 0.7083
+          "n": 33,
+          "brier": 0.2508,
+          "log_loss": 0.6953
         }
       },
       "jogos": [
@@ -1241,6 +1241,43 @@
               "opcao": "YES",
               "confianca": "MEDIUM",
               "probabilidade": 0.661,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-21T17:45:00Z",
+          "casa": "Utrecht",
+          "visitante": "Cambuur",
+          "competicao": "Eredivisie",
+          "placar": "2-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "HIGH",
+              "probabilidade": 0.603,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.63,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.988,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.814,
               "resultado": "ACERTO"
             }
           ]
