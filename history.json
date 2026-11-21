@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-11-21",
-      "ultima_atualizacao": "2026-11-21T16:22:11-03:00",
-      "finalizados": 28,
-      "taxa_geral": 0.67,
-      "total_acertos": 75,
-      "total_palpites": 112,
+      "ultima_atualizacao": "2026-11-21T16:29:42-03:00",
+      "finalizados": 29,
+      "taxa_geral": 0.667,
+      "total_acertos": 78,
+      "total_palpites": 117,
       "mercados": {
         "WINNER": {
           "acertos": 17,
-          "total": 28,
-          "taxa": 0.607
+          "total": 29,
+          "taxa": 0.586
         },
         "OVER_UNDER": {
-          "acertos": 38,
-          "total": 56,
-          "taxa": 0.679
+          "acertos": 39,
+          "total": 58,
+          "taxa": 0.672
         },
         "BTTS": {
-          "acertos": 20,
-          "total": 28,
-          "taxa": 0.714
+          "acertos": 21,
+          "total": 29,
+          "taxa": 0.724
+        },
+        "EMPATE": {
+          "acertos": 1,
+          "total": 1,
+          "taxa": 1.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 28,
-          "brier": 0.5649,
-          "log_loss": 0.9541
+          "n": 29,
+          "brier": 0.5701,
+          "log_loss": 0.9601
         },
         "OVER_UNDER": {
-          "n": 28,
-          "brier": 0.2885,
-          "log_loss": 0.7745
+          "n": 29,
+          "brier": 0.2827,
+          "log_loss": 0.7625
         },
         "BTTS": {
-          "n": 28,
-          "brier": 0.2671,
-          "log_loss": 0.7295
+          "n": 29,
+          "brier": 0.2639,
+          "log_loss": 0.723
         }
       },
       "jogos": [
@@ -1075,6 +1080,50 @@
               "confianca": "LOW",
               "probabilidade": 0.497,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-21T17:30:00Z",
+          "casa": "Schalke",
+          "visitante": "Stuttgart",
+          "competicao": "Bundesliga",
+          "placar": "0-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.456,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.653,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "LOW",
+              "probabilidade": 0.57,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.656,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.323,
+              "resultado": "ACERTO"
             }
           ]
         }
