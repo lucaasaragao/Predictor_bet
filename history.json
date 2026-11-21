@@ -2,48 +2,48 @@
   "dias": [
     {
       "data": "2026-11-21",
-      "ultima_atualizacao": "2026-11-21T18:26:16-03:00",
-      "finalizados": 33,
-      "taxa_geral": 0.672,
-      "total_acertos": 90,
-      "total_palpites": 134,
+      "ultima_atualizacao": "2026-11-21T18:34:39-03:00",
+      "finalizados": 34,
+      "taxa_geral": 0.669,
+      "total_acertos": 93,
+      "total_palpites": 139,
       "mercados": {
         "WINNER": {
           "acertos": 18,
-          "total": 33,
-          "taxa": 0.545
+          "total": 34,
+          "taxa": 0.529
         },
         "OVER_UNDER": {
-          "acertos": 46,
-          "total": 66,
-          "taxa": 0.697
+          "acertos": 48,
+          "total": 68,
+          "taxa": 0.706
         },
         "BTTS": {
           "acertos": 24,
-          "total": 33,
-          "taxa": 0.727
+          "total": 34,
+          "taxa": 0.706
         },
         "EMPATE": {
-          "acertos": 2,
-          "total": 2,
+          "acertos": 3,
+          "total": 3,
           "taxa": 1.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 33,
-          "brier": 0.5787,
-          "log_loss": 0.973
+          "n": 34,
+          "brier": 0.5827,
+          "log_loss": 0.9788
         },
         "OVER_UNDER": {
-          "n": 33,
-          "brier": 0.264,
-          "log_loss": 0.7226
+          "n": 34,
+          "brier": 0.2616,
+          "log_loss": 0.7178
         },
         "BTTS": {
-          "n": 33,
-          "brier": 0.2508,
-          "log_loss": 0.6953
+          "n": 34,
+          "brier": 0.2507,
+          "log_loss": 0.6951
         }
       },
       "jogos": [
@@ -1278,6 +1278,50 @@
               "opcao": "YES",
               "confianca": "HIGH",
               "probabilidade": 0.814,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-21T19:30:00Z",
+          "casa": "Palmeiras",
+          "visitante": "Flamengo",
+          "competicao": "Campeonato Brasileiro Série A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.372,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.571,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.707,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.497,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.31,
               "resultado": "ACERTO"
             }
           ]
