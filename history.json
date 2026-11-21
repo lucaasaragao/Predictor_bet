@@ -2,26 +2,26 @@
   "dias": [
     {
       "data": "2026-11-21",
-      "ultima_atualizacao": "2026-11-21T18:42:11-03:00",
-      "finalizados": 34,
-      "taxa_geral": 0.669,
-      "total_acertos": 93,
-      "total_palpites": 139,
+      "ultima_atualizacao": "2026-11-21T18:49:45-03:00",
+      "finalizados": 38,
+      "taxa_geral": 0.645,
+      "total_acertos": 100,
+      "total_palpites": 155,
       "mercados": {
         "WINNER": {
-          "acertos": 18,
-          "total": 34,
-          "taxa": 0.529
+          "acertos": 19,
+          "total": 38,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 48,
-          "total": 68,
-          "taxa": 0.706
+          "acertos": 52,
+          "total": 76,
+          "taxa": 0.684
         },
         "BTTS": {
-          "acertos": 24,
-          "total": 34,
-          "taxa": 0.706
+          "acertos": 26,
+          "total": 38,
+          "taxa": 0.684
         },
         "EMPATE": {
           "acertos": 3,
@@ -31,19 +31,19 @@
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 34,
-          "brier": 0.5827,
-          "log_loss": 0.9788
+          "n": 38,
+          "brier": 0.6024,
+          "log_loss": 1.0077
         },
         "OVER_UNDER": {
-          "n": 34,
-          "brier": 0.2616,
-          "log_loss": 0.7178
+          "n": 38,
+          "brier": 0.2714,
+          "log_loss": 0.7395
         },
         "BTTS": {
-          "n": 34,
-          "brier": 0.2507,
-          "log_loss": 0.6951
+          "n": 38,
+          "brier": 0.2522,
+          "log_loss": 0.698
         }
       },
       "jogos": [
@@ -1323,6 +1323,154 @@
               "confianca": "LOW",
               "probabilidade": 0.31,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-21T19:45:00Z",
+          "casa": "Lille",
+          "visitante": "Olympique Lyon",
+          "competicao": "Ligue 1",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.494,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.587,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.727,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.498,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-21T19:45:00Z",
+          "casa": "RC Lens",
+          "visitante": "Toulouse",
+          "competicao": "Ligue 1",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "HIGH",
+              "probabilidade": 0.601,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.551,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.812,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-21T19:45:00Z",
+          "casa": "Napoli",
+          "visitante": "Torino",
+          "competicao": "Serie A",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.487,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.553,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.868,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.672,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-21T19:45:00Z",
+          "casa": "Strasbourg",
+          "visitante": "Brest",
+          "competicao": "Ligue 1",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.383,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.507,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.757,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.553,
+              "resultado": "ERRO"
             }
           ]
         }
