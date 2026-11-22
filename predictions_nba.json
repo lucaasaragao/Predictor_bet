@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T19:49:40-03:00",
+  "generated_at": "2026-11-22T19:57:14-03:00",
   "analysis_date": "2026-11-22",
   "total_jogos": 7,
   "temporada": 2026,
@@ -8,30 +8,30 @@
       "game_id": 21718162,
       "competicao": "NBA",
       "data": "2026-11-22T00:00:00.000Z",
-      "status": "IN_PLAY",
-      "status_display": "4th Qtr",
+      "status": "FINISHED",
+      "status_display": "Final",
       "periodo": 4,
-      "tempo": "Q4 1:28",
+      "tempo": "Final",
       "times": {
         "casa": "Atlanta Hawks",
         "visitante": "Detroit Pistons",
         "abrev_casa": "ATL",
         "abrev_visit": "DET"
       },
-      "placar_casa": 101,
-      "placar_visitante": 92,
+      "placar_casa": 107,
+      "placar_visitante": 97,
       "quarters": {
         "casa": [
           29,
           22,
           23,
-          27
+          33
         ],
         "visitante": [
           26,
           26,
           33,
-          7
+          12
         ]
       },
       "probabilidades": {
@@ -67,7 +67,7 @@
           "confianca": "LOW",
           "justificativa": "Detroit Pistons favorito com 53.3% de chance (spread esperado: -0.9 pts).",
           "edge": 0.067,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -77,7 +77,7 @@
           "confianca": "LOW",
           "justificativa": "Total esperado de 232.7 pts. Linha: 232.5. Tendência de OVER.",
           "edge": 0.0019,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         },
         {
           "tipo": "SPREAD",
@@ -86,7 +86,7 @@
           "confianca": "LOW",
           "justificativa": "Detroit Pistons favorito por ~0.9 pontos.",
           "edge": 0.045,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         }
       ]
     },
@@ -629,8 +629,8 @@
     "ativo": false
   },
   "acertos_hoje": {
-    "acertos": 0,
-    "total": 0,
-    "taxa": null
+    "acertos": 1,
+    "total": 3,
+    "taxa": 0.3333
   }
 }
