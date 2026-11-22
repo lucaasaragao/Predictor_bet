@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-22",
-      "ultima_atualizacao": "2026-11-22T12:56:26-03:00",
-      "finalizados": 6,
-      "taxa_geral": 0.75,
-      "total_acertos": 18,
-      "total_palpites": 24,
+      "ultima_atualizacao": "2026-11-22T13:09:42-03:00",
+      "finalizados": 10,
+      "taxa_geral": 0.725,
+      "total_acertos": 29,
+      "total_palpites": 40,
       "mercados": {
         "WINNER": {
-          "acertos": 5,
-          "total": 6,
-          "taxa": 0.833
+          "acertos": 8,
+          "total": 10,
+          "taxa": 0.8
         },
         "OVER_UNDER": {
-          "acertos": 9,
-          "total": 12,
+          "acertos": 15,
+          "total": 20,
           "taxa": 0.75
         },
         "BTTS": {
-          "acertos": 4,
-          "total": 6,
-          "taxa": 0.667
+          "acertos": 6,
+          "total": 10,
+          "taxa": 0.6
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 6,
-          "brier": 0.3878,
-          "log_loss": 0.7051
+          "n": 10,
+          "brier": 0.4389,
+          "log_loss": 0.7769
         },
         "OVER_UNDER": {
-          "n": 6,
-          "brier": 0.1639,
-          "log_loss": 0.5078
+          "n": 10,
+          "brier": 0.2327,
+          "log_loss": 0.6544
         },
         "BTTS": {
-          "n": 6,
-          "brier": 0.2065,
-          "log_loss": 0.6039
+          "n": 10,
+          "brier": 0.2501,
+          "log_loss": 0.6937
         }
       },
       "jogos": [
@@ -261,6 +261,154 @@
               "confianca": "HIGH",
               "probabilidade": 0.709,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-22T14:00:00Z",
+          "casa": "Paris FC",
+          "visitante": "Angers SCO",
+          "competicao": "Ligue 1",
+          "placar": "4-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.707,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.534,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.795,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.512,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-22T14:00:00Z",
+          "casa": "Sassuolo",
+          "visitante": "Genoa",
+          "competicao": "Serie A",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.459,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.534,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.877,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.69,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-22T14:00:00Z",
+          "casa": "Hull City",
+          "visitante": "Brighton Hove",
+          "competicao": "Premier League",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.391,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.544,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.793,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.592,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-22T14:00:00Z",
+          "casa": "Bologna",
+          "visitante": "Udinese",
+          "competicao": "Serie A",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.529,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.518,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.813,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.603,
+              "resultado": "ACERTO"
             }
           ]
         }
