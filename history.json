@@ -2,43 +2,48 @@
   "dias": [
     {
       "data": "2026-11-22",
-      "ultima_atualizacao": "2026-11-22T16:28:11-03:00",
-      "finalizados": 17,
-      "taxa_geral": 0.721,
-      "total_acertos": 49,
-      "total_palpites": 68,
+      "ultima_atualizacao": "2026-11-22T16:36:05-03:00",
+      "finalizados": 18,
+      "taxa_geral": 0.712,
+      "total_acertos": 52,
+      "total_palpites": 73,
       "mercados": {
         "WINNER": {
-          "acertos": 11,
-          "total": 17,
-          "taxa": 0.647
+          "acertos": 12,
+          "total": 18,
+          "taxa": 0.667
         },
         "OVER_UNDER": {
-          "acertos": 26,
-          "total": 34,
-          "taxa": 0.765
+          "acertos": 27,
+          "total": 36,
+          "taxa": 0.75
         },
         "BTTS": {
-          "acertos": 12,
-          "total": 17,
-          "taxa": 0.706
+          "acertos": 13,
+          "total": 18,
+          "taxa": 0.722
+        },
+        "EMPATE": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 17,
-          "brier": 0.4676,
-          "log_loss": 0.8135
+          "n": 18,
+          "brier": 0.4747,
+          "log_loss": 0.8235
         },
         "OVER_UNDER": {
-          "n": 17,
-          "brier": 0.2088,
-          "log_loss": 0.6017
+          "n": 18,
+          "brier": 0.2058,
+          "log_loss": 0.596
         },
         "BTTS": {
-          "n": 17,
-          "brier": 0.2417,
-          "log_loss": 0.6741
+          "n": 18,
+          "brier": 0.2407,
+          "log_loss": 0.6723
         }
       },
       "jogos": [
@@ -668,6 +673,50 @@
               "confianca": "HIGH",
               "probabilidade": 0.764,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-22T17:30:00Z",
+          "casa": "Osasuna",
+          "visitante": "Málaga",
+          "competicao": "Primera Division",
+          "placar": "1-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.37,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.607,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.677,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.526,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "EMPATE",
+              "opcao": "X",
+              "confianca": "LOW",
+              "probabilidade": 0.321,
+              "resultado": "ERRO"
             }
           ]
         }
