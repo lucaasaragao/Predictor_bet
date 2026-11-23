@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-23",
-      "ultima_atualizacao": "2026-11-23T18:58:05-03:00",
-      "finalizados": 1,
-      "taxa_geral": 0.25,
-      "total_acertos": 1,
-      "total_palpites": 4,
+      "ultima_atualizacao": "2026-11-23T19:10:48-03:00",
+      "finalizados": 3,
+      "taxa_geral": 0.5,
+      "total_acertos": 6,
+      "total_palpites": 12,
       "mercados": {
         "WINNER": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
+          "acertos": 1,
+          "total": 3,
+          "taxa": 0.333
         },
         "OVER_UNDER": {
-          "acertos": 1,
-          "total": 2,
+          "acertos": 3,
+          "total": 6,
           "taxa": 0.5
         },
         "BTTS": {
-          "acertos": 0,
-          "total": 1,
-          "taxa": 0.0
+          "acertos": 2,
+          "total": 3,
+          "taxa": 0.667
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 1,
-          "brier": 0.6536,
-          "log_loss": 1.0517
+          "n": 3,
+          "brier": 0.6252,
+          "log_loss": 1.0476
         },
         "OVER_UNDER": {
-          "n": 1,
-          "brier": 0.0635,
-          "log_loss": 0.2904
+          "n": 3,
+          "brier": 0.3056,
+          "log_loss": 0.8126
         },
         "BTTS": {
-          "n": 1,
-          "brier": 0.5557,
-          "log_loss": 1.3682
+          "n": 3,
+          "brier": 0.2825,
+          "log_loss": 0.7709
         }
       },
       "jogos": [
@@ -76,6 +76,80 @@
               "confianca": "HIGH",
               "probabilidade": 0.771,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-23T20:00:00Z",
+          "casa": "Levante",
+          "visitante": "Elche",
+          "competicao": "Primera Division",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "LOW",
+              "probabilidade": 0.435,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.53,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.795,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.608,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-23T20:00:00Z",
+          "casa": "Brentford",
+          "visitante": "Everton",
+          "competicao": "Premier League",
+          "placar": "4-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.533,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.56,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.77,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.466,
+              "resultado": "ACERTO"
             }
           ]
         }
