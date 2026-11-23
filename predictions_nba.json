@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T23:40:11-03:00",
+  "generated_at": "2026-11-22T23:47:42-03:00",
   "analysis_date": "2026-11-22",
   "total_jogos": 7,
   "temporada": 2026,
@@ -266,10 +266,10 @@
       "game_id": 21718166,
       "competicao": "NBA",
       "data": "2026-11-22T00:00:00.000Z",
-      "status": "IN_PLAY",
-      "status_display": "OT1",
+      "status": "FINISHED",
+      "status_display": "Final",
       "periodo": 5,
-      "tempo": "OT :11.0",
+      "tempo": "Final",
       "times": {
         "casa": "Chicago Bulls",
         "visitante": "Denver Nuggets",
@@ -277,7 +277,7 @@
         "abrev_visit": "DEN"
       },
       "placar_casa": 145,
-      "placar_visitante": 150,
+      "placar_visitante": 151,
       "quarters": {
         "casa": [
           31,
@@ -325,7 +325,7 @@
           "confianca": "HIGH",
           "justificativa": "Denver Nuggets favorito com 73.1% de chance (spread esperado: -6.5 pts).",
           "edge": 0.4618,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "OVER_UNDER",
@@ -335,7 +335,7 @@
           "confianca": "LOW",
           "justificativa": "Total esperado de 241.5 pts. Linha: 241.5. Tendência de OVER.",
           "edge": 0.0,
-          "resultado_verificador": null
+          "resultado_verificador": "ACERTO"
         },
         {
           "tipo": "SPREAD",
@@ -344,7 +344,7 @@
           "confianca": "MEDIUM",
           "justificativa": "Denver Nuggets favorito por ~6.5 pontos.",
           "edge": 0.325,
-          "resultado_verificador": null
+          "resultado_verificador": "ERRO"
         }
       ]
     },
@@ -441,26 +441,26 @@
       "status": "IN_PLAY",
       "status_display": "3rd Qtr",
       "periodo": 3,
-      "tempo": "Q3 6:14",
+      "tempo": "Q3 5:00",
       "times": {
         "casa": "New York Knicks",
         "visitante": "Indiana Pacers",
         "abrev_casa": "NYK",
         "abrev_visit": "IND"
       },
-      "placar_casa": 67,
-      "placar_visitante": 63,
+      "placar_casa": 74,
+      "placar_visitante": 67,
       "quarters": {
         "casa": [
           26,
           29,
-          12,
+          19,
           0
         ],
         "visitante": [
           26,
           25,
-          12,
+          16,
           0
         ]
       },
@@ -629,8 +629,8 @@
     "ativo": false
   },
   "acertos_hoje": {
-    "acertos": 6,
-    "total": 12,
-    "taxa": 0.5
+    "acertos": 8,
+    "total": 15,
+    "taxa": 0.5333
   }
 }
