@@ -1,6 +1,33 @@
 {
   "dias": [
     {
+      "data": "2026-11-24",
+      "ultima_atualizacao": "2026-11-24T00:08:31-03:00",
+      "finalizados": 0,
+      "taxa_geral": 0.0,
+      "total_acertos": 0,
+      "total_palpites": 0,
+      "mercados": {},
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "OVER_UNDER": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        },
+        "BTTS": {
+          "n": 0,
+          "brier": null,
+          "log_loss": null
+        }
+      },
+      "jogos": []
+    },
+    {
       "data": "2026-11-23",
       "ultima_atualizacao": "2026-11-23T23:53:05-03:00",
       "finalizados": 6,
@@ -3104,180 +3131,6 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.565,
-              "resultado": "ERRO"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "data": "2026-11-19",
-      "ultima_atualizacao": "2026-11-19T23:59:48-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.429,
-      "total_acertos": 6,
-      "total_palpites": 14,
-      "mercados": {
-        "WINNER": {
-          "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
-        },
-        "OVER_UNDER": {
-          "acertos": 3,
-          "total": 6,
-          "taxa": 0.5
-        },
-        "BTTS": {
-          "acertos": 1,
-          "total": 3,
-          "taxa": 0.333
-        },
-        "EMPATE": {
-          "acertos": 0,
-          "total": 2,
-          "taxa": 0.0
-        }
-      },
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 3,
-          "brier": 0.5819,
-          "log_loss": 0.9776
-        },
-        "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.2741,
-          "log_loss": 0.7415
-        },
-        "BTTS": {
-          "n": 3,
-          "brier": 0.2498,
-          "log_loss": 0.6927
-        }
-      },
-      "jogos": [
-        {
-          "data_jogo": "2026-11-19T22:30:00Z",
-          "casa": "Vitória",
-          "visitante": "Bragantino",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "2-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "MEDIUM",
-              "probabilidade": 0.451,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.559,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.766,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.444,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-11-19T22:30:00Z",
-          "casa": "Vasco da Gama",
-          "visitante": "Internacional",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "2-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.372,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.571,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.707,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.497,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "EMPATE",
-              "opcao": "X",
-              "confianca": "LOW",
-              "probabilidade": 0.31,
-              "resultado": "ERRO"
-            }
-          ]
-        },
-        {
-          "data_jogo": "2026-11-20T00:30:00Z",
-          "casa": "São Paulo",
-          "visitante": "Fluminense",
-          "competicao": "Campeonato Brasileiro Série A",
-          "placar": "0-1",
-          "palpites": [
-            {
-              "tipo": "WINNER",
-              "opcao": "1",
-              "confianca": "LOW",
-              "probabilidade": 0.372,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "UNDER_2.5",
-              "confianca": "LOW",
-              "probabilidade": 0.571,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "OVER_UNDER",
-              "opcao": "OVER_1.5",
-              "confianca": "HIGH",
-              "probabilidade": 0.707,
-              "resultado": "ERRO"
-            },
-            {
-              "tipo": "BTTS",
-              "opcao": "NO",
-              "confianca": "LOW",
-              "probabilidade": 0.497,
-              "resultado": "ACERTO"
-            },
-            {
-              "tipo": "EMPATE",
-              "opcao": "X",
-              "confianca": "LOW",
-              "probabilidade": 0.31,
               "resultado": "ERRO"
             }
           ]
