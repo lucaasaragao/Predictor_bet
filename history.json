@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-24",
-      "ultima_atualizacao": "2026-11-24T18:52:18-03:00",
-      "finalizados": 9,
-      "taxa_geral": 0.528,
-      "total_acertos": 19,
-      "total_palpites": 36,
+      "ultima_atualizacao": "2026-11-24T18:59:55-03:00",
+      "finalizados": 15,
+      "taxa_geral": 0.65,
+      "total_acertos": 39,
+      "total_palpites": 60,
       "mercados": {
         "WINNER": {
-          "acertos": 4,
-          "total": 9,
-          "taxa": 0.444
+          "acertos": 8,
+          "total": 15,
+          "taxa": 0.533
         },
         "OVER_UNDER": {
-          "acertos": 12,
-          "total": 18,
-          "taxa": 0.667
+          "acertos": 23,
+          "total": 30,
+          "taxa": 0.767
         },
         "BTTS": {
-          "acertos": 3,
-          "total": 9,
-          "taxa": 0.333
+          "acertos": 8,
+          "total": 15,
+          "taxa": 0.533
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 9,
-          "brier": 0.6706,
-          "log_loss": 1.0923
+          "n": 15,
+          "brier": 0.5746,
+          "log_loss": 0.9658
         },
         "OVER_UNDER": {
-          "n": 9,
-          "brier": 0.2772,
-          "log_loss": 0.7523
+          "n": 15,
+          "brier": 0.2256,
+          "log_loss": 0.6426
         },
         "BTTS": {
-          "n": 9,
-          "brier": 0.2801,
-          "log_loss": 0.7575
+          "n": 15,
+          "brier": 0.231,
+          "log_loss": 0.6549
         }
       },
       "jogos": [
@@ -371,6 +371,228 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.559,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-24T20:00:00Z",
+          "casa": "Wolverhampton",
+          "visitante": "Derby County",
+          "competicao": "Championship",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.676,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.554,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.877,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.424,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-24T20:00:00Z",
+          "casa": "RB Leipzig",
+          "visitante": "RC Lens",
+          "competicao": "UEFA Champions League",
+          "placar": "3-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.756,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.52,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.915,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.399,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-24T20:00:00Z",
+          "casa": "Man City",
+          "visitante": "Napoli",
+          "competicao": "UEFA Champions League",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.452,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.511,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.897,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.72,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-24T20:00:00Z",
+          "casa": "Arsenal",
+          "visitante": "Dortmund",
+          "competicao": "UEFA Champions League",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.392,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.551,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.798,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.598,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-24T20:00:00Z",
+          "casa": "Sl. Bratislava",
+          "visitante": "Real Betis",
+          "competicao": "UEFA Champions League",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.497,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.604,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.678,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.553,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-24T20:00:00Z",
+          "casa": "Real Madrid",
+          "visitante": "PSV",
+          "competicao": "UEFA Champions League",
+          "placar": "5-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.574,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.518,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.972,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.776,
               "resultado": "ACERTO"
             }
           ]
