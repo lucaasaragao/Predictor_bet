@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-25",
-      "ultima_atualizacao": "2026-11-25T18:59:01-03:00",
-      "finalizados": 8,
-      "taxa_geral": 0.562,
-      "total_acertos": 18,
-      "total_palpites": 32,
+      "ultima_atualizacao": "2026-11-25T19:12:17-03:00",
+      "finalizados": 13,
+      "taxa_geral": 0.5,
+      "total_acertos": 26,
+      "total_palpites": 52,
       "mercados": {
         "WINNER": {
-          "acertos": 5,
-          "total": 8,
-          "taxa": 0.625
+          "acertos": 6,
+          "total": 13,
+          "taxa": 0.462
         },
         "OVER_UNDER": {
-          "acertos": 9,
-          "total": 16,
-          "taxa": 0.562
+          "acertos": 14,
+          "total": 26,
+          "taxa": 0.538
         },
         "BTTS": {
-          "acertos": 4,
-          "total": 8,
-          "taxa": 0.5
+          "acertos": 6,
+          "total": 13,
+          "taxa": 0.462
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 8,
-          "brier": 0.4666,
-          "log_loss": 0.8145
+          "n": 13,
+          "brier": 0.6328,
+          "log_loss": 1.041
         },
         "OVER_UNDER": {
-          "n": 8,
-          "brier": 0.2431,
-          "log_loss": 0.6772
+          "n": 13,
+          "brier": 0.2283,
+          "log_loss": 0.6456
         },
         "BTTS": {
-          "n": 8,
-          "brier": 0.2726,
-          "log_loss": 0.7387
+          "n": 13,
+          "brier": 0.2933,
+          "log_loss": 0.7875
         }
       },
       "jogos": [
@@ -335,6 +335,191 @@
               "confianca": "MEDIUM",
               "probabilidade": 0.677,
               "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-25T20:00:00Z",
+          "casa": "Club Brugge",
+          "visitante": "Liverpool",
+          "competicao": "UEFA Champions League",
+          "placar": "0-3",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.408,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.597,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.928,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "HIGH",
+              "probabilidade": 0.774,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-25T20:00:00Z",
+          "casa": "Sporting CP",
+          "visitante": "Man United",
+          "competicao": "UEFA Champions League",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.713,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.57,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.877,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.433,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-25T20:00:00Z",
+          "casa": "PSG",
+          "visitante": "Roma",
+          "competicao": "UEFA Champions League",
+          "placar": "2-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.594,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.588,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.85,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.392,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-25T20:00:00Z",
+          "casa": "Inter",
+          "visitante": "Stuttgart",
+          "competicao": "UEFA Champions League",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.442,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.511,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.785,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.424,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-25T20:00:00Z",
+          "casa": "Shaktar",
+          "visitante": "Fenerbahçe",
+          "competicao": "UEFA Champions League",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.675,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_3.5",
+              "confianca": "LOW",
+              "probabilidade": 0.54,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.873,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.401,
+              "resultado": "ACERTO"
             }
           ]
         }
