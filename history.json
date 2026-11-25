@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-25",
-      "ultima_atualizacao": "2026-11-25T18:51:40-03:00",
-      "finalizados": 5,
-      "taxa_geral": 0.45,
-      "total_acertos": 9,
-      "total_palpites": 20,
+      "ultima_atualizacao": "2026-11-25T18:59:01-03:00",
+      "finalizados": 8,
+      "taxa_geral": 0.562,
+      "total_acertos": 18,
+      "total_palpites": 32,
       "mercados": {
         "WINNER": {
-          "acertos": 2,
-          "total": 5,
-          "taxa": 0.4
+          "acertos": 5,
+          "total": 8,
+          "taxa": 0.625
         },
         "OVER_UNDER": {
-          "acertos": 5,
-          "total": 10,
-          "taxa": 0.5
+          "acertos": 9,
+          "total": 16,
+          "taxa": 0.562
         },
         "BTTS": {
-          "acertos": 2,
-          "total": 5,
-          "taxa": 0.4
+          "acertos": 4,
+          "total": 8,
+          "taxa": 0.5
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 5,
-          "brier": 0.5345,
-          "log_loss": 0.9098
+          "n": 8,
+          "brier": 0.4666,
+          "log_loss": 0.8145
         },
         "OVER_UNDER": {
-          "n": 5,
-          "brier": 0.2229,
-          "log_loss": 0.6352
+          "n": 8,
+          "brier": 0.2431,
+          "log_loss": 0.6772
         },
         "BTTS": {
-          "n": 5,
-          "brier": 0.2577,
-          "log_loss": 0.7075
+          "n": 8,
+          "brier": 0.2726,
+          "log_loss": 0.7387
         }
       },
       "jogos": [
@@ -223,6 +223,117 @@
               "opcao": "YES",
               "confianca": "LOW",
               "probabilidade": 0.559,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-25T20:00:00Z",
+          "casa": "Atleti",
+          "visitante": "Viking",
+          "competicao": "UEFA Champions League",
+          "placar": "2-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.523,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.55,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.797,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.432,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-25T20:00:00Z",
+          "casa": "Lille",
+          "visitante": "Bayern",
+          "competicao": "UEFA Champions League",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.392,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.551,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.798,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.598,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-25T20:00:00Z",
+          "casa": "Stoke",
+          "visitante": "Millwall",
+          "competicao": "Championship",
+          "placar": "2-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "HIGH",
+              "probabilidade": 0.683,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.571,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.669,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.677,
               "resultado": "ERRO"
             }
           ]
