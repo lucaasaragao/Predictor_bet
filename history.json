@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-25",
-      "ultima_atualizacao": "2026-11-25T18:44:12-03:00",
-      "finalizados": 3,
-      "taxa_geral": 0.667,
-      "total_acertos": 8,
-      "total_palpites": 12,
+      "ultima_atualizacao": "2026-11-25T18:51:40-03:00",
+      "finalizados": 5,
+      "taxa_geral": 0.45,
+      "total_acertos": 9,
+      "total_palpites": 20,
       "mercados": {
         "WINNER": {
           "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
+          "total": 5,
+          "taxa": 0.4
         },
         "OVER_UNDER": {
-          "acertos": 4,
-          "total": 6,
-          "taxa": 0.667
+          "acertos": 5,
+          "total": 10,
+          "taxa": 0.5
         },
         "BTTS": {
           "acertos": 2,
-          "total": 3,
-          "taxa": 0.667
+          "total": 5,
+          "taxa": 0.4
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 3,
-          "brier": 0.4325,
-          "log_loss": 0.7674
+          "n": 5,
+          "brier": 0.5345,
+          "log_loss": 0.9098
         },
         "OVER_UNDER": {
-          "n": 3,
-          "brier": 0.2044,
-          "log_loss": 0.5955
+          "n": 5,
+          "brier": 0.2229,
+          "log_loss": 0.6352
         },
         "BTTS": {
-          "n": 3,
-          "brier": 0.221,
-          "log_loss": 0.633
+          "n": 5,
+          "brier": 0.2577,
+          "log_loss": 0.7075
         }
       },
       "jogos": [
@@ -150,6 +150,80 @@
               "confianca": "HIGH",
               "probabilidade": 0.789,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-25T19:45:00Z",
+          "casa": "Watford",
+          "visitante": "Blackburn",
+          "competicao": "Championship",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.384,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.501,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.763,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.559,
+              "resultado": "ERRO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-25T19:45:00Z",
+          "casa": "Burnley",
+          "visitante": "Birmingham",
+          "competicao": "Championship",
+          "placar": "0-2",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.384,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.501,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.763,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.559,
+              "resultado": "ERRO"
             }
           ]
         }
