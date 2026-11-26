@@ -1,2986 +1,11 @@
 {
-  "generated_at": "2026-11-25T23:57:28-03:00",
-  "analysis_date": "2026-11-25",
-  "total_jogos": 15,
+  "generated_at": "2026-11-26T00:17:26-03:00",
+  "analysis_date": "2026-11-26",
+  "total_jogos": 11,
   "odds_debug_visual": false,
   "odds_only_value_games": true,
   "odds_min_ev": 0.03,
   "jogos": [
-    {
-      "competicao": "UEFA Champions League",
-      "data": "2026-11-25T17:45:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 0,
-        "visitante": 1
-      },
-      "times": {
-        "casa": "Slavia Praha",
-        "visitante": "Villarreal",
-        "escudo_casa": "https://crests.football-data.org/930.png",
-        "escudo_visitante": "https://crests.football-data.org/94.png"
-      },
-      "probabilidades": {
-        "casa": 0.3900209941584678,
-        "empate": 0.2527324975008935,
-        "visitante": 0.3572465083406387
-      },
-      "favorito": {
-        "nome": "Slavia Praha",
-        "prob": 0.3900209941584678,
-        "vantagem": 0.0327744858178291
-      },
-      "gols_esperados": {
-        "casa": 1.7265854779411767,
-        "visitante": 1.6477779390495868,
-        "total": 3.3743634169907635
-      },
-      "mercados": {
-        "under_25": 0.3449682018708735,
-        "over_25": 0.6550317981291265,
-        "btts_yes": 0.6764335137707151,
-        "btts_no": 0.32356648622928486
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.1323529411764706,
-          "ataque": 0.6,
-          "defesa": 0.0,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.3563235294117647
-        },
-        "visitante": {
-          "forma_recente": 0.38181818181818183,
-          "ataque": 0.7,
-          "defesa": 0.09999999999999998,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.46863636363636363
-        }
-      },
-      "leitura_rapida": "Slavia Praha favorito (39%, risco alto). Jogo mais aberto (xG total ≈3.4). Over 2.5 com 66%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.75,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 2,
-          "sequencia_sofre": 4,
-          "jogos": 4
-        },
-        "visitante": {
-          "prob_marca": 0.6,
-          "prob_sofre": 0.8,
-          "sequencia_marca": 2,
-          "sequencia_sofre": 1,
-          "jogos": 10
-        }
-      },
-      "alertas": [
-        "Villarreal jogou recentemente — possível desgaste físico."
-      ],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "baixa",
-        "nota": "Slavia Praha favorito (39.0%), margem 3.3 p.p., xG 1.7 e tendência de jogo aberto (Over 2.5 66%)."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (3.3 p.p. < 10.0 p.p.)",
-        "competition": "UEFA Champions League",
-        "sport_key": "soccer_uefa_champs_league",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "04/11 20:00",
-            "mandante": "Slavia Praha",
-            "visitante": "Arsenal",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "20/10 16:45",
-            "mandante": "Fenerbahçe",
-            "visitante": "Slavia Praha",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "13/10 16:45",
-            "mandante": "Sabah FK",
-            "visitante": "Slavia Praha",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "10/09 19:00",
-            "mandante": "Slavia Praha",
-            "visitante": "RC Lens",
-            "placar": "2 x 3",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "22/11 13:00",
-            "mandante": "Barça",
-            "visitante": "Villarreal",
-            "placar": "3 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "08/11 17:30",
-            "mandante": "Villarreal",
-            "visitante": "Getafe",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "03/11 20:00",
-            "mandante": "Villarreal",
-            "visitante": "PSG",
-            "placar": "0 x 6",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "30/10 20:00",
-            "mandante": "Villarreal",
-            "visitante": "Espanyol",
-            "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "24/10 16:30",
-            "mandante": "Valencia",
-            "visitante": "Villarreal",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.3900209941584678,
-          "confianca": "LOW",
-          "justificativa": "Slavia Praha projeta ≈1.7 gol(s) vs ≈1.6 do adversário. Prob vitória: 39.0% (margem: 3.3 p.p.)",
-          "edge": 0.0328,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER_3.5",
-          "probabilidade": 0.5643903919828553,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈3.4. UNDER 3.5: 56.4% de probabilidade",
-          "edge": 0.0644,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.8628,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈3.4.",
-          "edge": 0.3628,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.6764,
-          "confianca": "MEDIUM",
-          "justificativa": "xG: 1.7 (casa) x 1.6 (fora). Ambas marcam - Sim: 67.6%",
-          "edge": 0.1764,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        }
-      ]
-    },
-    {
-      "competicao": "UEFA Champions League",
-      "data": "2026-11-25T17:45:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 1,
-        "visitante": 4
-      },
-      "times": {
-        "casa": "Sabah FK",
-        "visitante": "Barça",
-        "escudo_casa": "https://crests.football-data.org/10233.png",
-        "escudo_visitante": "https://crests.football-data.org/81.png"
-      },
-      "probabilidades": {
-        "casa": 0.2931615504934632,
-        "empate": 0.23267656360082142,
-        "visitante": 0.4741618859057154
-      },
-      "favorito": {
-        "nome": "Barça",
-        "prob": 0.4741618859057154,
-        "vantagem": 0.1810003354122522
-      },
-      "gols_esperados": {
-        "casa": 1.624105949197861,
-        "visitante": 2.0823785640495864,
-        "total": 3.7064845132474478
-      },
-      "mercados": {
-        "under_25": 0.2848208454945631,
-        "over_25": 0.7151791545054369,
-        "btts_yes": 0.7134696329253075,
-        "btts_no": 0.2865303670746925
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.23529411764705885,
-          "ataque": 0.6,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.5123529411764707
-        },
-        "visitante": {
-          "forma_recente": 0.8,
-          "ataque": 1.0,
-          "defesa": 0.28,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.7260000000000001
-        }
-      },
-      "leitura_rapida": "Barça favorito (47%, risco moderado). Jogo mais aberto (xG total ≈3.7). Over 2.5 com 72%. | Forma recente: Barça em alta.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "em alta"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.75,
-          "prob_sofre": 0.75,
-          "sequencia_marca": 3,
-          "sequencia_sofre": 2,
-          "jogos": 4
-        },
-        "visitante": {
-          "prob_marca": 1.0,
-          "prob_sofre": 0.8,
-          "sequencia_marca": 10,
-          "sequencia_sofre": 2,
-          "jogos": 10
-        }
-      },
-      "alertas": [
-        "Barça jogou recentemente — possível desgaste físico."
-      ],
-      "analise_ia": {
-        "palpite_ia": "2",
-        "confianca_ia": "alta",
-        "nota": "Barça favorito (47.4%), margem 18.1 p.p., xG 2.1 e tendência de jogo aberto (Over 2.5 72%)."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
-        "competition": "UEFA Champions League",
-        "sport_key": "soccer_uefa_champs_league",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "04/11 20:00",
-            "mandante": "Viking",
-            "visitante": "Sabah FK",
-            "placar": "4 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "20/10 16:45",
-            "mandante": "Sabah FK",
-            "visitante": "Dortmund",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "13/10 16:45",
-            "mandante": "Sabah FK",
-            "visitante": "Slavia Praha",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "10/09 19:00",
-            "mandante": "Man United",
-            "visitante": "Sabah FK",
-            "placar": "4 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "22/11 13:00",
-            "mandante": "Barça",
-            "visitante": "Villarreal",
-            "placar": "3 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "08/11 20:00",
-            "mandante": "Atleti",
-            "visitante": "Barça",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "03/11 20:00",
-            "mandante": "Barça",
-            "visitante": "Aston Villa",
-            "placar": "3 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "31/10 20:00",
-            "mandante": "Barça",
-            "visitante": "Alavés",
-            "placar": "6 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "25/10 20:00",
-            "mandante": "Barça",
-            "visitante": "Real Madrid",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "2",
-          "probabilidade": 0.4741618859057154,
-          "confianca": "MEDIUM",
-          "justificativa": "Barça projeta ≈2.1 gol(s) vs ≈1.6 do adversário. Prob vitória: 47.4% (margem: 18.1 p.p.)",
-          "edge": 0.181,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_3.5",
-          "probabilidade": 0.5063614115291525,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈3.7. OVER 3.5: 50.6% de probabilidade",
-          "edge": 0.0064,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.895,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈3.7.",
-          "edge": 0.395,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.7135,
-          "confianca": "HIGH",
-          "justificativa": "xG: 1.6 (casa) x 2.1 (fora). Ambas marcam - Sim: 71.3%",
-          "edge": 0.2135,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        }
-      ]
-    },
-    {
-      "competicao": "Championship",
-      "data": "2026-11-25T19:45:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 1,
-        "visitante": 3
-      },
-      "times": {
-        "casa": "Bolton",
-        "visitante": "West Brom",
-        "escudo_casa": "https://crests.football-data.org/60.png",
-        "escudo_visitante": "https://crests.football-data.org/74.png"
-      },
-      "probabilidades": {
-        "casa": 0.19057342189176585,
-        "empate": 0.2188464669253075,
-        "visitante": 0.5905801111829266
-      },
-      "favorito": {
-        "nome": "West Brom",
-        "prob": 0.5905801111829266,
-        "vantagem": 0.3717336442576191
-      },
-      "gols_esperados": {
-        "casa": 1.2448545442810461,
-        "visitante": 2.2596574705882353,
-        "total": 3.5045120148692814
-      },
-      "mercados": {
-        "under_25": 0.32077506047430615,
-        "over_25": 0.6792249395256938,
-        "btts_yes": 0.648525897983828,
-        "btts_no": 0.351474102016172
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.325,
-          "ataque": 0.5333333333333333,
-          "defesa": 0.0,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.4070833333333333
-        },
-        "visitante": {
-          "forma_recente": 0.7333333333333333,
-          "ataque": 0.8,
-          "defesa": 0.5,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.6966666666666667
-        }
-      },
-      "leitura_rapida": "West Brom favorito (59%, risco moderado). Jogo mais aberto (xG total ≈3.5). Over 2.5 com 68%. | Forma recente: Bolton em alta.",
-      "tendencia": {
-        "casa": "em alta",
-        "visitante": "estavel"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 1.0,
-          "prob_sofre": 0.8,
-          "sequencia_marca": 5,
-          "sequencia_sofre": 2,
-          "jogos": 5
-        },
-        "visitante": {
-          "prob_marca": 1.0,
-          "prob_sofre": 0.833,
-          "sequencia_marca": 6,
-          "sequencia_sofre": 1,
-          "jogos": 6
-        }
-      },
-      "alertas": [
-        "Bolton jogou recentemente — possível desgaste físico.",
-        "West Brom jogou recentemente — possível desgaste físico."
-      ],
-      "analise_ia": {
-        "palpite_ia": "2",
-        "confianca_ia": "alta",
-        "nota": "West Brom favorito (59.1%), margem 37.2 p.p., xG 2.3 e tendência de jogo aberto (Over 2.5 68%)."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
-        "competition": "Championship",
-        "sport_key": "soccer_efl_champ",
-        "odds_match_id": "9dfe9df3ad88c453e3572872bf500488",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
-      },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
-      "historico": {
-        "casa": [
-          {
-            "data": "21/11 15:00",
-            "mandante": "Bolton",
-            "visitante": "Portsmouth",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "06/11 20:00",
-            "mandante": "Derby County",
-            "visitante": "Bolton",
-            "placar": "3 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "03/11 19:45",
-            "mandante": "Charlton",
-            "visitante": "Bolton",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "31/10 15:00",
-            "mandante": "Bolton",
-            "visitante": "Bristol City",
-            "placar": "2 x 3",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "23/10 19:00",
-            "mandante": "Bolton",
-            "visitante": "Middlesbrough",
-            "placar": "1 x 5",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "21/11 15:00",
-            "mandante": "Swansea",
-            "visitante": "West Brom",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "07/11 15:00",
-            "mandante": "West Brom",
-            "visitante": "Millwall",
-            "placar": "3 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "03/11 20:00",
-            "mandante": "West Brom",
-            "visitante": "Southampton",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "31/10 15:00",
-            "mandante": "West Ham",
-            "visitante": "West Brom",
-            "placar": "1 x 3",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "24/10 14:00",
-            "mandante": "Preston NE",
-            "visitante": "West Brom",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "2",
-          "probabilidade": 0.5905801111829266,
-          "confianca": "HIGH",
-          "justificativa": "West Brom projeta ≈2.3 gol(s) vs ≈1.2 do adversário. Prob vitória: 59.1% (margem: 37.2 p.p.)",
-          "edge": 0.3717,
-          "odd_decimal": 2.1,
-          "ev": 0.2348,
-          "ev_bruto": 0.2402,
-          "prob_mercado_justa": 0.4783,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER_3.5",
-          "probabilidade": 0.5369341581203294,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈3.5. UNDER 3.5: 53.7% de probabilidade",
-          "edge": 0.0369,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.9983,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈3.5. | Forma: 100% casa marca, 100% visit marca",
-          "edge": 0.4983,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.7891,
-          "confianca": "HIGH",
-          "justificativa": "xG: 1.2 (casa) x 2.3 (fora). Ambas marcam - Sim: 78.9% | Forma 5j/6j consecutivos com gol",
-          "edge": 0.2891,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        }
-      ]
-    },
-    {
-      "competicao": "Championship",
-      "data": "2026-11-25T19:45:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 0,
-        "visitante": 1
-      },
-      "times": {
-        "casa": "Watford",
-        "visitante": "Blackburn",
-        "escudo_casa": "https://crests.football-data.org/346.png",
-        "escudo_visitante": "https://crests.football-data.org/59.png"
-      },
-      "probabilidades": {
-        "casa": 0.3840353331873635,
-        "empate": 0.290825912129716,
-        "visitante": 0.3251387546829206
-      },
-      "favorito": {
-        "nome": "Watford",
-        "prob": 0.3840353331873635,
-        "vantagem": 0.05889657850444291
-      },
-      "gols_esperados": {
-        "casa": 1.4025,
-        "visitante": 1.275,
-        "total": 2.6775
-      },
-      "mercados": {
-        "under_25": 0.4992340762588603,
-        "over_25": 0.5007659237411397,
-        "btts_yes": 0.559272608361731,
-        "btts_no": 0.440727391638269
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.555
-        },
-        "visitante": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.535
-        }
-      },
-      "leitura_rapida": "Watford favorito (38%, risco alto). Mercado de gols equilibrado (xG total ≈2.7).",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        },
-        "visitante": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        }
-      },
-      "alertas": [],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "baixa",
-        "nota": "Watford favorito (38.4%), margem 5.9 p.p., xG 1.4 e mercado de gols equilibrado."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (5.9 p.p. < 10.0 p.p.)",
-        "competition": "Championship",
-        "sport_key": "soccer_efl_champ",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [],
-        "visitante": []
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.3840353331873635,
-          "confianca": "LOW",
-          "justificativa": "Watford projeta ≈1.4 gol(s) vs ≈1.3 do adversário. Prob vitória: 38.4% (margem: 5.9 p.p.)",
-          "edge": 0.0589,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_2.5",
-          "probabilidade": 0.5007659237411397,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.7. OVER 2.5: 50.1% de probabilidade",
-          "edge": 0.0008,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.7632,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.7.",
-          "edge": 0.2632,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.5593,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.4 (casa) x 1.3 (fora). Ambas marcam - Sim: 55.9%",
-          "edge": 0.0593,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        }
-      ]
-    },
-    {
-      "competicao": "Championship",
-      "data": "2026-11-25T19:45:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 0,
-        "visitante": 2
-      },
-      "times": {
-        "casa": "Burnley",
-        "visitante": "Birmingham",
-        "escudo_casa": "https://crests.football-data.org/328.png",
-        "escudo_visitante": "https://crests.football-data.org/332.png"
-      },
-      "probabilidades": {
-        "casa": 0.3840353331873635,
-        "empate": 0.290825912129716,
-        "visitante": 0.3251387546829206
-      },
-      "favorito": {
-        "nome": "Burnley",
-        "prob": 0.3840353331873635,
-        "vantagem": 0.05889657850444291
-      },
-      "gols_esperados": {
-        "casa": 1.4025,
-        "visitante": 1.275,
-        "total": 2.6775
-      },
-      "mercados": {
-        "under_25": 0.4992340762588603,
-        "over_25": 0.5007659237411397,
-        "btts_yes": 0.559272608361731,
-        "btts_no": 0.440727391638269
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.555
-        },
-        "visitante": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.535
-        }
-      },
-      "leitura_rapida": "Burnley favorito (38%, risco alto). Mercado de gols equilibrado (xG total ≈2.7).",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        },
-        "visitante": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        }
-      },
-      "alertas": [],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "baixa",
-        "nota": "Burnley favorito (38.4%), margem 5.9 p.p., xG 1.4 e mercado de gols equilibrado."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (5.9 p.p. < 10.0 p.p.)",
-        "competition": "Championship",
-        "sport_key": "soccer_efl_champ",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [],
-        "visitante": []
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.3840353331873635,
-          "confianca": "LOW",
-          "justificativa": "Burnley projeta ≈1.4 gol(s) vs ≈1.3 do adversário. Prob vitória: 38.4% (margem: 5.9 p.p.)",
-          "edge": 0.0589,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_2.5",
-          "probabilidade": 0.5007659237411397,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.7. OVER 2.5: 50.1% de probabilidade",
-          "edge": 0.0008,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.7632,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.7.",
-          "edge": 0.2632,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.5593,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.4 (casa) x 1.3 (fora). Ambas marcam - Sim: 55.9%",
-          "edge": 0.0593,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        }
-      ]
-    },
-    {
-      "competicao": "UEFA Champions League",
-      "data": "2026-11-25T20:00:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 0,
-        "visitante": 3
-      },
-      "times": {
-        "casa": "Club Brugge",
-        "visitante": "Liverpool",
-        "escudo_casa": "https://crests.football-data.org/851.png",
-        "escudo_visitante": "https://crests.football-data.org/64.png"
-      },
-      "probabilidades": {
-        "casa": 0.40779374174399763,
-        "empate": 0.22045603682678766,
-        "visitante": 0.37175022142921466
-      },
-      "favorito": {
-        "nome": "Club Brugge",
-        "prob": 0.40779374174399763,
-        "vantagem": 0.03604352031478297
-      },
-      "gols_esperados": {
-        "casa": 2.1300969251336896,
-        "visitante": 2.0340758593163026,
-        "total": 4.164172784449992
-      },
-      "mercados": {
-        "under_25": 0.21563342346650916,
-        "over_25": 0.7843665765334908,
-        "btts_yes": 0.7743864625518745,
-        "btts_no": 0.2256135374481255
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.7941176470588236,
-          "ataque": 1.0,
-          "defesa": 0.4,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.7679411764705882
-        },
-        "visitante": {
-          "forma_recente": 0.6909090909090909,
-          "ataque": 1.0,
-          "defesa": 0.36,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.7038181818181818
-        }
-      },
-      "leitura_rapida": "Club Brugge favorito (41%, risco alto). Jogo mais aberto (xG total ≈4.2). Over 2.5 com 78%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 1.0,
-          "prob_sofre": 0.75,
-          "sequencia_marca": 4,
-          "sequencia_sofre": 1,
-          "jogos": 4
-        },
-        "visitante": {
-          "prob_marca": 0.8,
-          "prob_sofre": 0.7,
-          "sequencia_marca": 3,
-          "sequencia_sofre": 0,
-          "jogos": 10
-        }
-      },
-      "alertas": [
-        "Liverpool jogou recentemente — possível desgaste físico."
-      ],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "baixa",
-        "nota": "Club Brugge favorito (40.8%), margem 3.6 p.p., xG 2.1 e tendência de jogo aberto (Over 2.5 78%)."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (3.6 p.p. < 10.0 p.p.)",
-        "competition": "UEFA Champions League",
-        "sport_key": "soccer_uefa_champs_league",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "04/11 20:00",
-            "mandante": "PSV",
-            "visitante": "Club Brugge",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "21/10 19:00",
-            "mandante": "Club Brugge",
-            "visitante": "RC Lens",
-            "placar": "3 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "13/10 19:00",
-            "mandante": "Inter",
-            "visitante": "Club Brugge",
-            "placar": "3 x 4",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "08/09 16:45",
-            "mandante": "Club Brugge",
-            "visitante": "Aston Villa",
-            "placar": "2 x 3",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "22/11 16:30",
-            "mandante": "Liverpool",
-            "visitante": "Man United",
-            "placar": "4 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "08/11 14:00",
-            "mandante": "Crystal Palace",
-            "visitante": "Liverpool",
-            "placar": "1 x 3",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "04/11 17:45",
-            "mandante": "Fenerbahçe",
-            "visitante": "Liverpool",
-            "placar": "3 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "01/11 16:30",
-            "mandante": "Liverpool",
-            "visitante": "Arsenal",
-            "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "25/10 14:00",
-            "mandante": "Liverpool",
-            "visitante": "Brighton Hove",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.40779374174399763,
-          "confianca": "LOW",
-          "justificativa": "Club Brugge projeta ≈2.1 gol(s) vs ≈2.0 do adversário. Prob vitória: 40.8% (margem: 3.6 p.p.)",
-          "edge": 0.036,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_3.5",
-          "probabilidade": 0.5967839561319919,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈4.2. OVER 3.5: 59.7% de probabilidade",
-          "edge": 0.0968,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.9283,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈4.2.",
-          "edge": 0.4283,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.7744,
-          "confianca": "HIGH",
-          "justificativa": "xG: 2.1 (casa) x 2.0 (fora). Ambas marcam - Sim: 77.4%",
-          "edge": 0.2744,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        }
-      ]
-    },
-    {
-      "competicao": "UEFA Champions League",
-      "data": "2026-11-25T20:00:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 2,
-        "visitante": 2
-      },
-      "times": {
-        "casa": "Sporting CP",
-        "visitante": "Man United",
-        "escudo_casa": "https://crests.football-data.org/498.png",
-        "escudo_visitante": "https://crests.football-data.org/66.png"
-      },
-      "probabilidades": {
-        "casa": 0.7126903105907834,
-        "empate": 0.18391052101264319,
-        "visitante": 0.10339916839657351
-      },
-      "favorito": {
-        "nome": "Sporting CP",
-        "prob": 0.7126903105907834,
-        "vantagem": 0.5287797895781402
-      },
-      "gols_esperados": {
-        "casa": 2.4783925619834717,
-        "visitante": 0.8779669891059353,
-        "total": 3.356359551089407
-      },
-      "mercados": {
-        "under_25": 0.34964623138998474,
-        "over_25": 0.6503537686100153,
-        "btts_yes": 0.5450583098766918,
-        "btts_no": 0.4549416901233082
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.7181818181818183,
-          "ataque": 0.72,
-          "defesa": 0.36,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.6633636363636364
-        },
-        "visitante": {
-          "forma_recente": 0.29090909090909095,
-          "ataque": 0.2,
-          "defesa": 0.06666666666666665,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.3051515151515152
-        }
-      },
-      "leitura_rapida": "Sporting CP favorito (71%, risco forte). Jogo mais aberto (xG total ≈3.4). Over 2.5 com 65%. | Forma recente: Sporting CP em alta, Man United em alta.",
-      "tendencia": {
-        "casa": "em alta",
-        "visitante": "em alta"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 1.0,
-          "prob_sofre": 0.6,
-          "sequencia_marca": 10,
-          "sequencia_sofre": 0,
-          "jogos": 10
-        },
-        "visitante": {
-          "prob_marca": 0.6,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 10,
-          "jogos": 10
-        }
-      },
-      "alertas": [
-        "Man United jogou recentemente — possível desgaste físico."
-      ],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "alta",
-        "nota": "Sporting CP favorito (71.3%), margem 52.9 p.p., xG 2.5 e tendência de jogo aberto (Over 2.5 65%)."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
-        "competition": "UEFA Champions League",
-        "sport_key": "soccer_uefa_champs_league",
-        "odds_match_id": "01a61442fe04f8751b62eb251f234079",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
-      },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
-      "historico": {
-        "casa": [
-          {
-            "data": "07/11 20:30",
-            "mandante": "Sporting CP",
-            "visitante": "Moreirense",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "03/11 17:45",
-            "mandante": "Shaktar",
-            "visitante": "Sporting CP",
-            "placar": "0 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "30/10 20:15",
-            "mandante": "Casa Pia",
-            "visitante": "Sporting CP",
-            "placar": "0 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "25/10 20:30",
-            "mandante": "Sporting CP",
-            "visitante": "Acad. Viseu",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "21/10 19:00",
-            "mandante": "Sporting CP",
-            "visitante": "LASK",
-            "placar": "2 x 3",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "22/11 16:30",
-            "mandante": "Liverpool",
-            "visitante": "Man United",
-            "placar": "4 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "08/11 16:30",
-            "mandante": "Man United",
-            "visitante": "Aston Villa",
-            "placar": "4 x 4",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "03/11 20:00",
-            "mandante": "Man United",
-            "visitante": "Roma",
-            "placar": "3 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "31/10 12:30",
-            "mandante": "Chelsea",
-            "visitante": "Man United",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "25/10 14:00",
-            "mandante": "Man United",
-            "visitante": "Bournemouth",
-            "placar": "0 x 3",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.7126903105907834,
-          "confianca": "HIGH",
-          "justificativa": "Sporting CP projeta ≈2.5 gol(s) vs ≈0.9 do adversário. Prob vitória: 71.3% (margem: 52.9 p.p.)",
-          "edge": 0.5288,
-          "odd_decimal": 2.6,
-          "ev": 0.8483,
-          "ev_bruto": 0.853,
-          "prob_mercado_justa": 0.3856,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER_3.5",
-          "probabilidade": 0.5702250882438007,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈3.4. UNDER 3.5: 57.0% de probabilidade",
-          "edge": 0.0702,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.8766,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈3.4. | Forma: 100% casa marca, 60% visit marca",
-          "edge": 0.3766,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.433,
-          "confianca": "LOW",
-          "justificativa": "xG: 2.5 (casa) x 0.9 (fora). Ambas marcam - Nao: 43.3% | Forma 10j/0j consecutivos com gol",
-          "edge": -0.067,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        }
-      ]
-    },
-    {
-      "competicao": "UEFA Champions League",
-      "data": "2026-11-25T20:00:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 2,
-        "visitante": 0
-      },
-      "times": {
-        "casa": "Atleti",
-        "visitante": "Viking",
-        "escudo_casa": "https://crests.football-data.org/78.png",
-        "escudo_visitante": "https://crests.football-data.org/5720.png"
-      },
-      "probabilidades": {
-        "casa": 0.5229240450408399,
-        "empate": 0.2606473629950439,
-        "visitante": 0.21642859196411626
-      },
-      "favorito": {
-        "nome": "Atleti",
-        "prob": 0.5229240450408399,
-        "vantagem": 0.262276682045796
-      },
-      "gols_esperados": {
-        "casa": 1.791716095041322,
-        "visitante": 1.0927063077297035,
-        "total": 2.8844224027710252
-      },
-      "mercados": {
-        "under_25": 0.4498299518038755,
-        "over_25": 0.5501700481961245,
-        "btts_yes": 0.5680717706111053,
-        "btts_no": 0.43192822938889475
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.6454545454545454,
-          "ataque": 0.48,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.6259090909090909
-        },
-        "visitante": {
-          "forma_recente": 0.4117647058823529,
-          "ataque": 0.4,
-          "defesa": 0.0,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.3841176470588235
-        }
-      },
-      "leitura_rapida": "Atleti favorito (52%, risco moderado). Jogo mais aberto (xG total ≈2.9). Over 2.5 com 55%. | Forma recente: Atleti em baixa.",
-      "tendencia": {
-        "casa": "em baixa",
-        "visitante": "estavel"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.9,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 2,
-          "sequencia_sofre": 0,
-          "jogos": 10
-        },
-        "visitante": {
-          "prob_marca": 1.0,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 4,
-          "sequencia_sofre": 4,
-          "jogos": 4
-        }
-      },
-      "alertas": [
-        "Atleti jogou recentemente — possível desgaste físico."
-      ],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "alta",
-        "nota": "Atleti favorito (52.3%), margem 26.2 p.p., xG 1.8 e tendência de jogo aberto (Over 2.5 55%)."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
-        "competition": "UEFA Champions League",
-        "sport_key": "soccer_uefa_champs_league",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "22/11 20:00",
-            "mandante": "Getafe",
-            "visitante": "Atleti",
-            "placar": "0 x 3",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "08/11 20:00",
-            "mandante": "Atleti",
-            "visitante": "Barça",
-            "placar": "1 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "03/11 20:00",
-            "mandante": "Atleti",
-            "visitante": "Bayern",
-            "placar": "0 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "31/10 13:00",
-            "mandante": "Levante",
-            "visitante": "Atleti",
-            "placar": "0 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "24/10 19:00",
-            "mandante": "Atleti",
-            "visitante": "Deportivo",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "04/11 20:00",
-            "mandante": "Viking",
-            "visitante": "Sabah FK",
-            "placar": "4 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "21/10 19:00",
-            "mandante": "Aston Villa",
-            "visitante": "Viking",
-            "placar": "3 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "13/10 19:00",
-            "mandante": "Viking",
-            "visitante": "Bayern",
-            "placar": "3 x 3",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "09/09 16:45",
-            "mandante": "Stuttgart",
-            "visitante": "Viking",
-            "placar": "3 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.5229240450408399,
-          "confianca": "MEDIUM",
-          "justificativa": "Atleti projeta ≈1.8 gol(s) vs ≈1.1 do adversário. Prob vitória: 52.3% (margem: 26.2 p.p.)",
-          "edge": 0.2623,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_2.5",
-          "probabilidade": 0.5501700481961245,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.9. OVER 2.5: 55.0% de probabilidade",
-          "edge": 0.0502,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.797,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.9.",
-          "edge": 0.297,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.4319,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.8 (casa) x 1.1 (fora). Ambas marcam - Nao: 43.2%",
-          "edge": -0.0681,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        }
-      ]
-    },
-    {
-      "competicao": "UEFA Champions League",
-      "data": "2026-11-25T20:00:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 2,
-        "visitante": 2
-      },
-      "times": {
-        "casa": "PSG",
-        "visitante": "Roma",
-        "escudo_casa": "https://crests.football-data.org/524.png",
-        "escudo_visitante": "https://crests.football-data.org/100.png"
-      },
-      "probabilidades": {
-        "casa": 0.594357834263576,
-        "empate": 0.22639815517139536,
-        "visitante": 0.17924401056502856
-      },
-      "favorito": {
-        "nome": "PSG",
-        "prob": 0.594357834263576,
-        "vantagem": 0.36795967909218064
-      },
-      "gols_esperados": {
-        "casa": 2.14702125,
-        "visitante": 1.125,
-        "total": 3.27202125
-      },
-      "mercados": {
-        "under_25": 0.36570789333240805,
-        "over_25": 0.634292106667592,
-        "btts_yes": 0.6082347740924938,
-        "btts_no": 0.3917652259075062
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 1.0,
-          "ataque": 1.0,
-          "defesa": 0.7,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.9
-        },
-        "visitante": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.535
-        }
-      },
-      "leitura_rapida": "PSG favorito (59%, risco moderado). Jogo mais aberto (xG total ≈3.3). Over 2.5 com 63%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "indefinida"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 1.0,
-          "prob_sofre": 0.7,
-          "sequencia_marca": 10,
-          "sequencia_sofre": 1,
-          "jogos": 10
-        },
-        "visitante": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        }
-      },
-      "alertas": [
-        "PSG jogou recentemente — possível desgaste físico."
-      ],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "alta",
-        "nota": "PSG favorito (59.4%), margem 36.8 p.p., xG 2.1 e tendência de jogo aberto (Over 2.5 63%)."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
-        "competition": "UEFA Champions League",
-        "sport_key": "soccer_uefa_champs_league",
-        "odds_match_id": "14007bc0605bce3bd164b132254ba24c",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": true,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "21/11 16:15",
-            "mandante": "Nice",
-            "visitante": "PSG",
-            "placar": "2 x 3",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "07/11 20:05",
-            "mandante": "PSG",
-            "visitante": "Troyes",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "03/11 20:00",
-            "mandante": "Villarreal",
-            "visitante": "PSG",
-            "placar": "0 x 6",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "30/10 18:00",
-            "mandante": "Le Havre",
-            "visitante": "PSG",
-            "placar": "1 x 5",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "26/10 19:30",
-            "mandante": "PSG",
-            "visitante": "Olympique Lyon",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": []
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.594357834263576,
-          "confianca": "HIGH",
-          "justificativa": "PSG projeta ≈2.1 gol(s) vs ≈1.1 do adversário. Prob vitória: 59.4% (margem: 36.8 p.p.)",
-          "edge": 0.368,
-          "odd_decimal": 1.49,
-          "ev": -0.1335,
-          "ev_bruto": -0.1144,
-          "prob_mercado_justa": 0.686,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER_3.5",
-          "probabilidade": 0.5875413042355451,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈3.3. UNDER 3.5: 58.8% de probabilidade",
-          "edge": 0.0875,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.8496,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈3.3.",
-          "edge": 0.3496,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.3918,
-          "confianca": "LOW",
-          "justificativa": "xG: 2.1 (casa) x 1.1 (fora). Ambas marcam - Nao: 39.2%",
-          "edge": -0.1082,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        }
-      ]
-    },
-    {
-      "competicao": "UEFA Champions League",
-      "data": "2026-11-25T20:00:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 2,
-        "visitante": 1
-      },
-      "times": {
-        "casa": "Lille",
-        "visitante": "Bayern",
-        "escudo_casa": "https://crests.football-data.org/521.png",
-        "escudo_visitante": "https://crests.football-data.org/5.png"
-      },
-      "probabilidades": {
-        "casa": 0.39174010746266663,
-        "empate": 0.27792162310833635,
-        "visitante": 0.33033826942899697
-      },
-      "favorito": {
-        "nome": "Lille",
-        "prob": 0.39174010746266663,
-        "vantagem": 0.061401838033669665
-      },
-      "gols_esperados": {
-        "casa": 1.5125000000000002,
-        "visitante": 1.375,
-        "total": 2.8875
-      },
-      "mercados": {
-        "under_25": 0.4489837551269964,
-        "over_25": 0.5510162448730036,
-        "btts_yes": 0.5975365182759885,
-        "btts_no": 0.4024634817240115
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.555
-        },
-        "visitante": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.535
-        }
-      },
-      "leitura_rapida": "Lille favorito (39%, risco alto). Jogo mais aberto (xG total ≈2.9). Over 2.5 com 55%.",
-      "tendencia": {
-        "casa": "indefinida",
-        "visitante": "indefinida"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        },
-        "visitante": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        }
-      },
-      "alertas": [],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "baixa",
-        "nota": "Lille favorito (39.2%), margem 6.1 p.p., xG 1.5 e tendência de jogo aberto (Over 2.5 55%)."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "skip_edge_gate",
-        "reason": "edge abaixo do gate (6.1 p.p. < 10.0 p.p.)",
-        "competition": "UEFA Champions League",
-        "sport_key": "soccer_uefa_champs_league",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [],
-        "visitante": []
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.39174010746266663,
-          "confianca": "LOW",
-          "justificativa": "Lille projeta ≈1.5 gol(s) vs ≈1.4 do adversário. Prob vitória: 39.2% (margem: 6.1 p.p.)",
-          "edge": 0.0614,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_2.5",
-          "probabilidade": 0.5510162448730036,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.9. OVER 2.5: 55.1% de probabilidade",
-          "edge": 0.051,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.7984,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.9.",
-          "edge": 0.2984,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "YES",
-          "probabilidade": 0.5975,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.5 (casa) x 1.4 (fora). Ambas marcam - Sim: 59.8%",
-          "edge": 0.0975,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        }
-      ]
-    },
-    {
-      "competicao": "UEFA Champions League",
-      "data": "2026-11-25T20:00:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 2,
-        "visitante": 0
-      },
-      "times": {
-        "casa": "Inter",
-        "visitante": "Stuttgart",
-        "escudo_casa": "https://crests.football-data.org/108.png",
-        "escudo_visitante": "https://crests.football-data.org/10.png"
-      },
-      "probabilidades": {
-        "casa": 0.4418907122897564,
-        "empate": 0.2832412162899303,
-        "visitante": 0.2748680714203133
-      },
-      "favorito": {
-        "nome": "Inter",
-        "prob": 0.4418907122897564,
-        "vantagem": 0.15864949599982608
-      },
-      "gols_esperados": {
-        "casa": 1.5434864772727273,
-        "visitante": 1.177534767092412,
-        "total": 2.721021244365139
-      },
-      "mercados": {
-        "under_25": 0.48860524706171404,
-        "over_25": 0.511394752938286,
-        "btts_yes": 0.5596496099112671,
-        "btts_no": 0.4403503900887329
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.7454545454545454,
-          "ataque": 0.8800000000000001,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.7609090909090909
-        },
-        "visitante": {
-          "forma_recente": 0.5181818181818181,
-          "ataque": 0.6,
-          "defesa": 0.6666666666666666,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.6046969696969696
-        }
-      },
-      "leitura_rapida": "Inter favorito (44%, risco alto). Mercado de gols equilibrado (xG total ≈2.7).",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 1.0,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 10,
-          "sequencia_sofre": 1,
-          "jogos": 10
-        },
-        "visitante": {
-          "prob_marca": 0.6,
-          "prob_sofre": 0.6,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 10
-        }
-      },
-      "alertas": [
-        "Inter jogou recentemente — possível desgaste físico.",
-        "Stuttgart jogou recentemente — possível desgaste físico."
-      ],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "media",
-        "nota": "Inter favorito (44.2%), margem 15.9 p.p., xG 1.5 e mercado de gols equilibrado."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
-        "competition": "UEFA Champions League",
-        "sport_key": "soccer_uefa_champs_league",
-        "odds_match_id": "e7e64568f6af00d395a3fdfc27de8ae3",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": true,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "22/11 19:45",
-            "mandante": "Atalanta",
-            "visitante": "Inter",
-            "placar": "4 x 4",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "08/11 17:00",
-            "mandante": "Inter",
-            "visitante": "Como 1907",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "03/11 20:00",
-            "mandante": "Feyenoord",
-            "visitante": "Inter",
-            "placar": "0 x 3",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "31/10 19:45",
-            "mandante": "Milan",
-            "visitante": "Inter",
-            "placar": "3 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "28/10 17:30",
-            "mandante": "Venezia FC",
-            "visitante": "Inter",
-            "placar": "0 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "21/11 17:30",
-            "mandante": "Schalke",
-            "visitante": "Stuttgart",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "07/11 17:30",
-            "mandante": "Stuttgart",
-            "visitante": "Bremen",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "03/11 17:45",
-            "mandante": "Galatasaray",
-            "visitante": "Stuttgart",
-            "placar": "2 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "31/10 14:30",
-            "mandante": "Leverkusen",
-            "visitante": "Stuttgart",
-            "placar": "2 x 4",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "23/10 18:30",
-            "mandante": "Stuttgart",
-            "visitante": "M'gladbach",
-            "placar": "2 x 3",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.4418907122897564,
-          "confianca": "MEDIUM",
-          "justificativa": "Inter projeta ≈1.5 gol(s) vs ≈1.2 do adversário. Prob vitória: 44.2% (margem: 15.9 p.p.)",
-          "edge": 0.1586,
-          "odd_decimal": 1.47,
-          "ev": -0.3632,
-          "ev_bruto": -0.3504,
-          "prob_mercado_justa": 0.694,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_2.5",
-          "probabilidade": 0.511394752938286,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.7. OVER 2.5: 51.1% de probabilidade",
-          "edge": 0.0114,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.7847,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.7. | Forma: 100% casa marca, 60% visit marca",
-          "edge": 0.2847,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.4242,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.5 (casa) x 1.2 (fora). Ambas marcam - Nao: 42.4% | Forma 10j/0j consecutivos com gol",
-          "edge": -0.0758,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        }
-      ]
-    },
-    {
-      "competicao": "Championship",
-      "data": "2026-11-25T20:00:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 2,
-        "visitante": 1
-      },
-      "times": {
-        "casa": "Stoke",
-        "visitante": "Millwall",
-        "escudo_casa": "https://crests.football-data.org/70.png",
-        "escudo_visitante": "https://crests.football-data.org/384.png"
-      },
-      "probabilidades": {
-        "casa": 0.6826048881595567,
-        "empate": 0.2306090962863208,
-        "visitante": 0.08678601555412256
-      },
-      "favorito": {
-        "nome": "Stoke",
-        "prob": 0.6826048881595567,
-        "vantagem": 0.45199579187323585
-      },
-      "gols_esperados": {
-        "casa": 1.8614909547930283,
-        "visitante": 0.5343137037037038,
-        "total": 2.395804658496732
-      },
-      "mercados": {
-        "under_25": 0.5712031109980131,
-        "over_25": 0.42879688900198687,
-        "btts_yes": 0.3613297916985944,
-        "btts_no": 0.6386702083014055
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.925,
-          "ataque": 0.4,
-          "defesa": 1.0,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.7837500000000001
-        },
-        "visitante": {
-          "forma_recente": 0.15555555555555556,
-          "ataque": 0.13333333333333333,
-          "defesa": 0.0,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.2277777777777778
-        }
-      },
-      "leitura_rapida": "Stoke favorito (68%, risco forte). Mercado de gols equilibrado (xG total ≈2.4). | Forma recente: Millwall em baixa.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "em baixa"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.8,
-          "prob_sofre": 0.4,
-          "sequencia_marca": 4,
-          "sequencia_sofre": 0,
-          "jogos": 5
-        },
-        "visitante": {
-          "prob_marca": 0.333,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 6,
-          "jogos": 6
-        }
-      },
-      "alertas": [
-        "Stoke jogou recentemente — possível desgaste físico.",
-        "Millwall jogou recentemente — possível desgaste físico."
-      ],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "alta",
-        "nota": "Stoke favorito (68.3%), margem 45.2 p.p., xG 1.9 e tendência de menos gols (Under 2.5 57%)."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
-        "competition": "Championship",
-        "sport_key": "soccer_efl_champ",
-        "odds_match_id": "77dfddf6dea97d5ecb5e2463b29fe67e",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
-      },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
-      "historico": {
-        "casa": [
-          {
-            "data": "21/11 15:00",
-            "mandante": "Stoke",
-            "visitante": "Birmingham",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "07/11 12:30",
-            "mandante": "Portsmouth",
-            "visitante": "Stoke",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "03/11 19:45",
-            "mandante": "Blackburn",
-            "visitante": "Stoke",
-            "placar": "1 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "31/10 12:30",
-            "mandante": "Stoke",
-            "visitante": "Preston NE",
-            "placar": "2 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "24/10 14:00",
-            "mandante": "Stoke",
-            "visitante": "Bristol City",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "21/11 12:30",
-            "mandante": "Millwall",
-            "visitante": "QPR",
-            "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "07/11 15:00",
-            "mandante": "West Brom",
-            "visitante": "Millwall",
-            "placar": "3 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "03/11 20:00",
-            "mandante": "Birmingham",
-            "visitante": "Millwall",
-            "placar": "3 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "31/10 15:00",
-            "mandante": "Millwall",
-            "visitante": "Derby County",
-            "placar": "4 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "24/10 11:30",
-            "mandante": "Portsmouth",
-            "visitante": "Millwall",
-            "placar": "2 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.6826048881595567,
-          "confianca": "HIGH",
-          "justificativa": "Stoke projeta ≈1.9 gol(s) vs ≈0.5 do adversário. Prob vitória: 68.3% (margem: 45.2 p.p.)",
-          "edge": 0.452,
-          "odd_decimal": 2.38,
-          "ev": 0.6385,
-          "ev_bruto": 0.6246,
-          "prob_mercado_justa": 0.4166,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER_2.5",
-          "probabilidade": 0.5712031109980131,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.4. UNDER 2.5: 57.1% de probabilidade",
-          "edge": 0.0712,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.669,
-          "confianca": "MEDIUM",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.4. | Forma: 80% casa marca, 33% visit marca",
-          "edge": 0.169,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.6766,
-          "confianca": "MEDIUM",
-          "justificativa": "xG: 1.9 (casa) x 0.5 (fora). Ambas marcam - Nao: 67.7% | Forma 4j/0j consecutivos com gol",
-          "edge": 0.1766,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        }
-      ]
-    },
-    {
-      "competicao": "UEFA Champions League",
-      "data": "2026-11-25T20:00:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 0,
-        "visitante": 1
-      },
-      "times": {
-        "casa": "Shaktar",
-        "visitante": "Fenerbahçe",
-        "escudo_casa": "https://crests.football-data.org/1887.png",
-        "escudo_visitante": "https://crests.football-data.org/613.png"
-      },
-      "probabilidades": {
-        "casa": 0.6752087256729025,
-        "empate": 0.19379784231099612,
-        "visitante": 0.1309934320161014
-      },
-      "favorito": {
-        "nome": "Shaktar",
-        "prob": 0.6752087256729025,
-        "vantagem": 0.48141088336190635
-      },
-      "gols_esperados": {
-        "casa": 2.461930147058824,
-        "visitante": 1.034044117647059,
-        "total": 3.495974264705883
-      },
-      "mercados": {
-        "under_25": 0.32284960788358197,
-        "over_25": 0.677150392116418,
-        "btts_yes": 0.5993378290924273,
-        "btts_no": 0.4006621709075727
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.338235294117647,
-          "ataque": 0.6,
-          "defesa": 0.6,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.5483823529411765
-        },
-        "visitante": {
-          "forma_recente": 0.5294117647058824,
-          "ataque": 0.0,
-          "defesa": 0.0,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.3252941176470588
-        }
-      },
-      "leitura_rapida": "Shaktar favorito (68%, risco forte). Jogo mais aberto (xG total ≈3.5). Over 2.5 com 68%.",
-      "tendencia": {
-        "casa": "estavel",
-        "visitante": "estavel"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.5,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 4,
-          "jogos": 4
-        },
-        "visitante": {
-          "prob_marca": 0.75,
-          "prob_sofre": 1.0,
-          "sequencia_marca": 2,
-          "sequencia_sofre": 4,
-          "jogos": 4
-        }
-      },
-      "alertas": [],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "alta",
-        "nota": "Shaktar favorito (67.5%), margem 48.1 p.p., xG 2.5 e tendência de jogo aberto (Over 2.5 68%)."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "no_event_match",
-        "reason": "não encontrou evento equivalente na consulta por liga",
-        "competition": "UEFA Champions League",
-        "sport_key": "soccer_uefa_champs_league",
-        "ev_filter": "fail",
-        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
-      },
-      "odds_integradas": false,
-      "odds_valor_alto": false,
-      "historico": {
-        "casa": [
-          {
-            "data": "03/11 17:45",
-            "mandante": "Shaktar",
-            "visitante": "Sporting CP",
-            "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "21/10 19:00",
-            "mandante": "Inter",
-            "visitante": "Shaktar",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "14/10 19:00",
-            "mandante": "Shaktar",
-            "visitante": "PAE AEK",
-            "placar": "3 x 1",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "10/09 16:45",
-            "mandante": "PSV",
-            "visitante": "Shaktar",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ],
-        "visitante": [
-          {
-            "data": "04/11 17:45",
-            "mandante": "Fenerbahçe",
-            "visitante": "Liverpool",
-            "placar": "3 x 2",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          },
-          {
-            "data": "20/10 16:45",
-            "mandante": "Fenerbahçe",
-            "visitante": "Slavia Praha",
-            "placar": "2 x 2",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "14/10 19:00",
-            "mandante": "Aston Villa",
-            "visitante": "Fenerbahçe",
-            "placar": "6 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "10/09 16:45",
-            "mandante": "Fenerbahçe",
-            "visitante": "Roma",
-            "placar": "1 x 1",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          }
-        ]
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.6752087256729025,
-          "confianca": "HIGH",
-          "justificativa": "Shaktar projeta ≈2.5 gol(s) vs ≈1.0 do adversário. Prob vitória: 67.5% (margem: 48.1 p.p.)",
-          "edge": 0.4814,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER_3.5",
-          "probabilidade": 0.5396028163700302,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈3.5. UNDER 3.5: 54.0% de probabilidade",
-          "edge": 0.0396,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.8732,
-          "confianca": "HIGH",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈3.5.",
-          "edge": 0.3732,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.4007,
-          "confianca": "LOW",
-          "justificativa": "xG: 2.5 (casa) x 1.0 (fora). Ambas marcam - Nao: 40.1%",
-          "edge": -0.0993,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        }
-      ]
-    },
-    {
-      "competicao": "Campeonato Brasileiro Série A",
-      "data": "2026-11-25T23:00:00Z",
-      "status": "FINISHED",
-      "placar_atual": {
-        "casa": 1,
-        "visitante": 1
-      },
-      "times": {
-        "casa": "Mineiro",
-        "visitante": "Corinthians",
-        "escudo_casa": "https://crests.football-data.org/1766.png",
-        "escudo_visitante": "https://crests.football-data.org/1779.png"
-      },
-      "probabilidades": {
-        "casa": 0.44808467952821174,
-        "empate": 0.3140427678035742,
-        "visitante": 0.23787255266821405
-      },
-      "favorito": {
-        "nome": "Mineiro",
-        "prob": 0.44808467952821174,
-        "vantagem": 0.13404191172463753
-      },
-      "gols_esperados": {
-        "casa": 1.3269433333333334,
-        "visitante": 0.9033333333333333,
-        "total": 2.2302766666666667
-      },
-      "mercados": {
-        "under_25": 0.6146554331464007,
-        "over_25": 0.3853445668535993,
-        "btts_yes": 0.45373449865983884,
-        "btts_no": 0.5462655013401612
-      },
-      "scores": {
-        "casa": {
-          "forma_recente": 0.4181818181818182,
-          "ataque": 0.5333333333333333,
-          "defesa": 0.7333333333333334,
-          "fator_mando": 1.1,
-          "h2h_factor": 0.5,
-          "score_total": 0.5863636363636364
-        },
-        "visitante": {
-          "forma_recente": 0.5,
-          "ataque": 0.4,
-          "defesa": 0.6,
-          "fator_mando": 0.9,
-          "h2h_factor": 0.5,
-          "score_total": 0.535
-        }
-      },
-      "leitura_rapida": "Mineiro favorito (45%, risco alto). Jogo fechado esperado (xG total ≈2.2). Under 2.5 com 61%. | Forma recente: Mineiro em baixa.",
-      "tendencia": {
-        "casa": "em baixa",
-        "visitante": "indefinida"
-      },
-      "tendencia_gols": {
-        "casa": {
-          "prob_marca": 0.7,
-          "prob_sofre": 0.7,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 10
-        },
-        "visitante": {
-          "prob_marca": 0.5,
-          "prob_sofre": 0.5,
-          "sequencia_marca": 0,
-          "sequencia_sofre": 0,
-          "jogos": 0
-        }
-      },
-      "alertas": [],
-      "analise_ia": {
-        "palpite_ia": "1",
-        "confianca_ia": "media",
-        "nota": "Mineiro favorito (44.8%), margem 13.4 p.p., xG 1.3 e tendência de menos gols (Under 2.5 61%)."
-      },
-      "odds_debug": {
-        "enabled": "false",
-        "status": "matched",
-        "reason": "odds h2h encontradas com sucesso",
-        "competition": "Campeonato Brasileiro Série A",
-        "sport_key": "soccer_brazil_campeonato",
-        "odds_match_id": "786625491d1c7b42ec2eb6bb5f903f4f",
-        "bookmakers_outcomes": "3",
-        "ev_filter": "pass",
-        "ev_reason": "há palpite com EV >= 3.0%"
-      },
-      "odds_integradas": true,
-      "odds_valor_alto": true,
-      "historico": {
-        "casa": [
-          {
-            "data": "14/11 21:30",
-            "mandante": "Mirassol",
-            "visitante": "Mineiro",
-            "placar": "0 x 0",
-            "resultado": "E",
-            "resultado_label": "Empate"
-          },
-          {
-            "data": "05/11 00:30",
-            "mandante": "Botafogo",
-            "visitante": "Mineiro",
-            "placar": "1 x 0",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "29/10 22:30",
-            "mandante": "Mineiro",
-            "visitante": "Cruzeiro",
-            "placar": "0 x 1",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "26/10 23:00",
-            "mandante": "Flamengo",
-            "visitante": "Mineiro",
-            "placar": "3 x 2",
-            "resultado": "D",
-            "resultado_label": "Derrota"
-          },
-          {
-            "data": "17/10 21:30",
-            "mandante": "Mineiro",
-            "visitante": "Coritiba",
-            "placar": "1 x 0",
-            "resultado": "V",
-            "resultado_label": "Vitoria"
-          }
-        ],
-        "visitante": []
-      },
-      "palpites": [
-        {
-          "tipo": "WINNER",
-          "opcao": "1",
-          "probabilidade": 0.44808467952821174,
-          "confianca": "MEDIUM",
-          "justificativa": "Mineiro projeta ≈1.3 gol(s) vs ≈0.9 do adversário. Prob vitória: 44.8% (margem: 13.4 p.p.)",
-          "edge": 0.134,
-          "odd_decimal": 2.45,
-          "ev": 0.115,
-          "ev_bruto": 0.0978,
-          "prob_mercado_justa": 0.4019,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "UNDER_2.5",
-          "probabilidade": 0.6146554331464007,
-          "confianca": "LOW",
-          "justificativa": "Gols esperados no jogo: ≈2.2. UNDER 2.5: 61.5% de probabilidade",
-          "edge": 0.1147,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "OVER_UNDER",
-          "opcao": "OVER_1.5",
-          "probabilidade": 0.6695,
-          "confianca": "MEDIUM",
-          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.2.",
-          "edge": 0.1695,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ACERTO"
-        },
-        {
-          "tipo": "BTTS",
-          "opcao": "NO",
-          "probabilidade": 0.5463,
-          "confianca": "LOW",
-          "justificativa": "xG: 1.3 (casa) x 0.9 (fora). Ambas marcam - Nao: 54.6%",
-          "edge": 0.0463,
-          "odd_decimal": null,
-          "ev": null,
-          "ev_bruto": null,
-          "prob_mercado_justa": null,
-          "valor_esperado_positivo": false,
-          "resultado_verificador": "ERRO"
-        },
-        {
-          "tipo": "EMPATE",
-          "opcao": "X",
-          "probabilidade": 0.3140427678035742,
-          "confianca": "LOW",
-          "justificativa": "Ambas defesas solidas (73% / 60% de aproveitamento defensivo). Empate com 31.4% de probabilidade",
-          "edge": 0.0,
-          "odd_decimal": 3.51,
-          "ev": 0.1195,
-          "ev_bruto": 0.1023,
-          "prob_mercado_justa": 0.2805,
-          "valor_esperado_positivo": true,
-          "resultado_verificador": "ACERTO"
-        }
-      ]
-    },
     {
       "competicao": "Campeonato Brasileiro Série A",
       "data": "2026-11-26T23:00:00Z",
@@ -2996,12 +21,1943 @@
         "escudo_visitante": "https://crests.football-data.org/4287.png"
       },
       "probabilidades": {
+        "casa": 0.5611795616093643,
+        "empate": 0.28483267661574413,
+        "visitante": 0.15398776177489162
+      },
+      "favorito": {
+        "nome": "São Paulo",
+        "prob": 0.5611795616093643,
+        "vantagem": 0.2763468849936202
+      },
+      "gols_esperados": {
+        "casa": 1.5490375859649124,
+        "visitante": 0.7044245199362041,
+        "total": 2.2534621059011166
+      },
+      "mercados": {
+        "under_25": 0.6085441604431218,
+        "over_25": 0.39145583955687824,
+        "btts_yes": 0.41306942121766627,
+        "btts_no": 0.5869305787823338
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.4,
+          "ataque": 0.33333333333333337,
+          "defesa": 0.7333333333333334,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.53
+        },
+        "visitante": {
+          "forma_recente": 0.4,
+          "ataque": 0.32,
+          "defesa": 0.0,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.36
+        }
+      },
+      "leitura_rapida": "São Paulo favorito (56%, risco moderado). Jogo fechado esperado (xG total ≈2.3). Under 2.5 com 61%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 0.7,
+          "prob_sofre": 0.7,
+          "sequencia_marca": 1,
+          "sequencia_sofre": 2,
+          "jogos": 10
+        },
+        "visitante": {
+          "prob_marca": 0.8,
+          "prob_sofre": 0.8,
+          "sequencia_marca": 4,
+          "sequencia_sofre": 1,
+          "jogos": 10
+        }
+      },
+      "alertas": [
+        "São Paulo jogou recentemente — possível desgaste físico.",
+        "Clube do Remo jogou recentemente — possível desgaste físico."
+      ],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "alta",
+        "nota": "São Paulo favorito (56.1%), margem 27.6 p.p., xG 1.5 e tendência de menos gols (Under 2.5 61%)."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
+        "competition": "Campeonato Brasileiro Série A",
+        "sport_key": "soccer_brazil_campeonato",
+        "odds_match_id": "908ac2d3341c0dd5d86e300affa06f15",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": true,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "23/11 23:00",
+            "mandante": "Botafogo",
+            "visitante": "São Paulo",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "20/11 00:30",
+            "mandante": "São Paulo",
+            "visitante": "Fluminense",
+            "placar": "0 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "05/11 00:30",
+            "mandante": "São Paulo",
+            "visitante": "Corinthians",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "29/10 00:30",
+            "mandante": "Bahia",
+            "visitante": "São Paulo",
+            "placar": "3 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "24/10 19:30",
+            "mandante": "Mirassol",
+            "visitante": "São Paulo",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "22/11 19:00",
+            "mandante": "Paranaense",
+            "visitante": "Clube do Remo",
+            "placar": "4 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "18/11 23:00",
+            "mandante": "Clube do Remo",
+            "visitante": "Chapecoense",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "05/11 22:30",
+            "mandante": "Palmeiras",
+            "visitante": "Clube do Remo",
+            "placar": "6 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "29/10 00:30",
+            "mandante": "Clube do Remo",
+            "visitante": "Botafogo",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "23/10 23:00",
+            "mandante": "Cruzeiro",
+            "visitante": "Clube do Remo",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.5611795616093643,
+          "confianca": "MEDIUM",
+          "justificativa": "São Paulo projeta ≈1.5 gol(s) vs ≈0.7 do adversário. Prob vitória: 56.1% (margem: 27.6 p.p.)",
+          "edge": 0.2763,
+          "odd_decimal": 1.37,
+          "ev": -0.218,
+          "ev_bruto": -0.2312,
+          "prob_mercado_justa": 0.7176,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER_2.5",
+          "probabilidade": 0.6085441604431218,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.3. UNDER 2.5: 60.9% de probabilidade",
+          "edge": 0.1085,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.7245,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.3. | Forma: 70% casa marca, 80% visit marca",
+          "edge": 0.2245,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.5282,
+          "confianca": "LOW",
+          "justificativa": "xG: 1.5 (casa) x 0.7 (fora). Ambas marcam - Nao: 52.8% | Forma 1j/4j consecutivos com gol",
+          "edge": 0.0282,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Eredivisie",
+      "data": "2026-11-27T19:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Groningen",
+        "visitante": "Willem II",
+        "escudo_casa": "https://crests.football-data.org/677.png",
+        "escudo_visitante": "https://crests.football-data.org/672.png"
+      },
+      "probabilidades": {
+        "casa": 0.6574581653734745,
+        "empate": 0.1735163480855526,
+        "visitante": 0.16902548654097294
+      },
+      "favorito": {
+        "nome": "Groningen",
+        "prob": 0.6574581653734745,
+        "vantagem": 0.48394181728792185
+      },
+      "gols_esperados": {
+        "casa": 2.958964743589744,
+        "visitante": 1.5259350427350427,
+        "total": 4.484899786324787
+      },
+      "mercados": {
+        "under_25": 0.17727445503349848,
+        "over_25": 0.8227255449665015,
+        "btts_yes": 0.7481904259907625,
+        "btts_no": 0.25180957400923754
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.2727272727272727,
+          "ataque": 0.8,
+          "defesa": 0.0,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.4554545454545455
+        },
+        "visitante": {
+          "forma_recente": 0.1,
+          "ataque": 0.4,
+          "defesa": 0.0,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.275
+        }
+      },
+      "leitura_rapida": "Groningen favorito (66%, risco forte). Jogo mais aberto (xG total ≈4.5). Over 2.5 com 82%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 1.0,
+          "prob_sofre": 0.9,
+          "sequencia_marca": 10,
+          "sequencia_sofre": 6,
+          "jogos": 10
+        },
+        "visitante": {
+          "prob_marca": 0.7,
+          "prob_sofre": 1.0,
+          "sequencia_marca": 2,
+          "sequencia_sofre": 10,
+          "jogos": 10
+        }
+      },
+      "alertas": [],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "alta",
+        "nota": "Groningen favorito (65.7%), margem 48.4 p.p., xG 3.0 e tendência de jogo aberto (Over 2.5 82%)."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "matched",
+        "reason": "odds h2h encontradas com sucesso",
+        "competition": "Eredivisie",
+        "sport_key": "soccer_netherlands_eredivisie",
+        "odds_match_id": "7aa2e13c09deb4fbd70e62312e82a514",
+        "bookmakers_outcomes": "3",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": true,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "21/11 20:00",
+            "mandante": "Groningen",
+            "visitante": "Heerenveen",
+            "placar": "1 x 3",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "08/11 15:45",
+            "mandante": "AZ",
+            "visitante": "Groningen",
+            "placar": "4 x 3",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "01/11 15:45",
+            "mandante": "Groningen",
+            "visitante": "Sparta",
+            "placar": "2 x 3",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "25/10 13:30",
+            "mandante": "NEC",
+            "visitante": "Groningen",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "18/10 14:45",
+            "mandante": "Groningen",
+            "visitante": "Ajax",
+            "placar": "2 x 5",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "22/11 11:15",
+            "mandante": "Twente",
+            "visitante": "Willem II",
+            "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "06/11 19:00",
+            "mandante": "Willem II",
+            "visitante": "Zwolle",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "31/10 17:45",
+            "mandante": "PSV",
+            "visitante": "Willem II",
+            "placar": "7 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "24/10 16:45",
+            "mandante": "Willem II",
+            "visitante": "Cambuur",
+            "placar": "1 x 6",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "17/10 19:00",
+            "mandante": "Sparta",
+            "visitante": "Willem II",
+            "placar": "3 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.6574581653734745,
+          "confianca": "HIGH",
+          "justificativa": "Groningen projeta ≈3.0 gol(s) vs ≈1.5 do adversário. Prob vitória: 65.7% (margem: 48.4 p.p.)",
+          "edge": 0.4839,
+          "odd_decimal": 1.43,
+          "ev": -0.0479,
+          "ev_bruto": -0.0598,
+          "prob_mercado_justa": 0.6905,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_3.5",
+          "probabilidade": 0.65123330295738,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈4.5. OVER 3.5: 65.1% de probabilidade",
+          "edge": 0.1512,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.9273,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈4.5. | Forma: 100% casa marca, 70% visit marca",
+          "edge": 0.4273,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.7289,
+          "confianca": "HIGH",
+          "justificativa": "xG: 3.0 (casa) x 1.5 (fora). Ambas marcam - Sim: 72.9% | Forma 10j/2j consecutivos com gol",
+          "edge": 0.2289,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Bundesliga",
+      "data": "2026-11-27T19:30:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Bremen",
+        "visitante": "M'gladbach",
+        "escudo_casa": "https://crests.football-data.org/12.png",
+        "escudo_visitante": "https://crests.football-data.org/18.png"
+      },
+      "probabilidades": {
+        "casa": 0.8272975433758749,
+        "empate": 0.11156785144534516,
+        "visitante": 0.06113460517877995
+      },
+      "favorito": {
+        "nome": "Bremen",
+        "prob": 0.8272975433758749,
+        "vantagem": 0.7157296919305297
+      },
+      "gols_esperados": {
+        "casa": 3.523648922910175,
+        "visitante": 0.9874134941064894,
+        "total": 4.511062417016665
+      },
+      "mercados": {
+        "under_25": 0.1772419763961981,
+        "over_25": 0.8227580236038019,
+        "btts_yes": 0.6135371582347572,
+        "btts_no": 0.3864628417652428
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.6909090909090909,
+          "ataque": 1.0,
+          "defesa": 0.6,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.7718181818181818
+        },
+        "visitante": {
+          "forma_recente": 0.2,
+          "ataque": 0.4,
+          "defesa": 0.0,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.31
+        }
+      },
+      "leitura_rapida": "Bremen favorito (83%, risco forte). Jogo mais aberto (xG total ≈4.5). Over 2.5 com 82%. | Forma recente: M'gladbach em baixa.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "em baixa"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 0.9,
+          "prob_sofre": 0.8,
+          "sequencia_marca": 1,
+          "sequencia_sofre": 0,
+          "jogos": 10
+        },
+        "visitante": {
+          "prob_marca": 0.6,
+          "prob_sofre": 0.9,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 2,
+          "jogos": 10
+        }
+      },
+      "alertas": [],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "alta",
+        "nota": "Bremen favorito (82.7%), margem 71.6 p.p., xG 3.5 e tendência de jogo aberto (Over 2.5 82%)."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente na consulta por liga",
+        "competition": "Bundesliga",
+        "sport_key": "soccer_germany_bundesliga",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "22/11 16:30",
+            "mandante": "Bremen",
+            "visitante": "HSV",
+            "placar": "4 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "07/11 17:30",
+            "mandante": "Stuttgart",
+            "visitante": "Bremen",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "31/10 14:30",
+            "mandante": "Bremen",
+            "visitante": "Hoffenheim",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "24/10 13:30",
+            "mandante": "Mainz",
+            "visitante": "Bremen",
+            "placar": "2 x 3",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "17/10 13:30",
+            "mandante": "Bremen",
+            "visitante": "SC Paderborn",
+            "placar": "2 x 2",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "21/11 14:30",
+            "mandante": "M'gladbach",
+            "visitante": "Dortmund",
+            "placar": "0 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "06/11 19:30",
+            "mandante": "HSV",
+            "visitante": "M'gladbach",
+            "placar": "3 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "31/10 14:30",
+            "mandante": "M'gladbach",
+            "visitante": "SC Paderborn",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "23/10 18:30",
+            "mandante": "Stuttgart",
+            "visitante": "M'gladbach",
+            "placar": "2 x 3",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "18/10 15:30",
+            "mandante": "M'gladbach",
+            "visitante": "Hoffenheim",
+            "placar": "1 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.8272975433758749,
+          "confianca": "HIGH",
+          "justificativa": "Bremen projeta ≈3.5 gol(s) vs ≈1.0 do adversário. Prob vitória: 82.7% (margem: 71.6 p.p.)",
+          "edge": 0.7157,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_3.5",
+          "probabilidade": 0.6498790098348484,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈4.5. OVER 3.5: 65.0% de probabilidade",
+          "edge": 0.1499,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.9171,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈4.5. | Forma: 90% casa marca, 60% visit marca",
+          "edge": 0.4171,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.4159,
+          "confianca": "LOW",
+          "justificativa": "xG: 3.5 (casa) x 1.0 (fora). Ambas marcam - Nao: 41.6% | Forma 1j/0j consecutivos com gol",
+          "edge": -0.0841,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Ligue 1",
+      "data": "2026-11-27T19:45:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Brest",
+        "visitante": "Paris FC",
+        "escudo_casa": "https://crests.football-data.org/512.png",
+        "escudo_visitante": "https://crests.football-data.org/1045.png"
+      },
+      "probabilidades": {
+        "casa": 0.38281957419189744,
+        "empate": 0.29287095989628315,
+        "visitante": 0.3243094659118194
+      },
+      "favorito": {
+        "nome": "Brest",
+        "prob": 0.38281957419189744,
+        "vantagem": 0.05851010828007802
+      },
+      "gols_esperados": {
+        "casa": 1.3860000000000001,
+        "visitante": 1.26,
+        "total": 2.646
+      },
+      "mercados": {
+        "under_25": 0.5070205245285664,
+        "over_25": 0.49297947547143367,
+        "btts_yes": 0.5532843421798356,
+        "btts_no": 0.4467156578201644
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.5,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.555
+        },
+        "visitante": {
+          "forma_recente": 0.5,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.535
+        }
+      },
+      "leitura_rapida": "Brest favorito (38%, risco alto). Mercado de gols equilibrado (xG total ≈2.6).",
+      "tendencia": {
+        "casa": "indefinida",
+        "visitante": "indefinida"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 0.5,
+          "prob_sofre": 0.5,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 0,
+          "jogos": 0
+        },
+        "visitante": {
+          "prob_marca": 0.5,
+          "prob_sofre": 0.5,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 0,
+          "jogos": 0
+        }
+      },
+      "alertas": [],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "baixa",
+        "nota": "Brest favorito (38.3%), margem 5.9 p.p., xG 1.4 e mercado de gols equilibrado."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "skip_edge_gate",
+        "reason": "edge abaixo do gate (5.9 p.p. < 10.0 p.p.)",
+        "competition": "Ligue 1",
+        "sport_key": "soccer_france_ligue_one",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [],
+        "visitante": []
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.38281957419189744,
+          "confianca": "LOW",
+          "justificativa": "Brest projeta ≈1.4 gol(s) vs ≈1.3 do adversário. Prob vitória: 38.3% (margem: 5.9 p.p.)",
+          "edge": 0.0585,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER_2.5",
+          "probabilidade": 0.5070205245285664,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.6. UNDER 2.5: 50.7% de probabilidade",
+          "edge": 0.007,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.7574,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.6.",
+          "edge": 0.2574,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.5533,
+          "confianca": "LOW",
+          "justificativa": "xG: 1.4 (casa) x 1.3 (fora). Ambas marcam - Sim: 55.3%",
+          "edge": 0.0533,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Serie A",
+      "data": "2026-11-27T19:45:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Venezia FC",
+        "visitante": "Bologna",
+        "escudo_casa": "https://crests.football-data.org/454.png",
+        "escudo_visitante": "https://crests.football-data.org/103.png"
+      },
+      "probabilidades": {
+        "casa": 0.38199976557000803,
+        "empate": 0.294251314888983,
+        "visitante": 0.32374891954100904
+      },
+      "favorito": {
+        "nome": "Venezia FC",
+        "prob": 0.38199976557000803,
+        "vantagem": 0.05825084602899899
+      },
+      "gols_esperados": {
+        "casa": 1.375,
+        "visitante": 1.25,
+        "total": 2.625
+      },
+      "mercados": {
+        "under_25": 0.5122451459575859,
+        "over_25": 0.4877548540424141,
+        "btts_yes": 0.5492559297309694,
+        "btts_no": 0.45074407026903063
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.5,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.555
+        },
+        "visitante": {
+          "forma_recente": 0.5,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.535
+        }
+      },
+      "leitura_rapida": "Venezia FC favorito (38%, risco alto). Mercado de gols equilibrado (xG total ≈2.6).",
+      "tendencia": {
+        "casa": "indefinida",
+        "visitante": "indefinida"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 0.5,
+          "prob_sofre": 0.5,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 0,
+          "jogos": 0
+        },
+        "visitante": {
+          "prob_marca": 0.5,
+          "prob_sofre": 0.5,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 0,
+          "jogos": 0
+        }
+      },
+      "alertas": [],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "baixa",
+        "nota": "Venezia FC favorito (38.2%), margem 5.8 p.p., xG 1.4 e mercado de gols equilibrado."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "skip_edge_gate",
+        "reason": "edge abaixo do gate (5.8 p.p. < 10.0 p.p.)",
+        "competition": "Serie A",
+        "sport_key": "soccer_italy_serie_a",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [],
+        "visitante": []
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.38199976557000803,
+          "confianca": "LOW",
+          "justificativa": "Venezia FC projeta ≈1.4 gol(s) vs ≈1.2 do adversário. Prob vitória: 38.2% (margem: 5.8 p.p.)",
+          "edge": 0.0583,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER_2.5",
+          "probabilidade": 0.5122451459575859,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.6. UNDER 2.5: 51.2% de probabilidade",
+          "edge": 0.0122,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.7536,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.6.",
+          "edge": 0.2536,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.5493,
+          "confianca": "LOW",
+          "justificativa": "xG: 1.4 (casa) x 1.2 (fora). Ambas marcam - Sim: 54.9%",
+          "edge": 0.0493,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Premier League",
+      "data": "2026-11-27T20:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Nottingham",
+        "visitante": "Chelsea",
+        "escudo_casa": "https://crests.football-data.org/351.png",
+        "escudo_visitante": "https://crests.football-data.org/61.png"
+      },
+      "probabilidades": {
+        "casa": 0.41690066882562615,
+        "empate": 0.3294908891551715,
+        "visitante": 0.25360844201920235
+      },
+      "favorito": {
+        "nome": "Nottingham",
+        "prob": 0.41690066882562615,
+        "vantagem": 0.08740977967045466
+      },
+      "gols_esperados": {
+        "casa": 1.2049452000000003,
+        "visitante": 0.8858056042780749,
+        "total": 2.090750804278075
+      },
+      "mercados": {
+        "under_25": 0.6521569364912927,
+        "over_25": 0.3478430635087073,
+        "btts_yes": 0.42864618912677344,
+        "btts_no": 0.5713538108732266
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.30909090909090914,
+          "ataque": 0.3,
+          "defesa": 0.7,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.4831818181818182
+        },
+        "visitante": {
+          "forma_recente": 0.3909090909090909,
+          "ataque": 0.3,
+          "defesa": 0.4,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.4318181818181818
+        }
+      },
+      "leitura_rapida": "Nottingham favorito (42%, risco alto). Jogo fechado esperado (xG total ≈2.1). Under 2.5 com 65%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 0.5,
+          "prob_sofre": 0.9,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 8,
+          "jogos": 10
+        },
+        "visitante": {
+          "prob_marca": 0.7,
+          "prob_sofre": 0.8,
+          "sequencia_marca": 1,
+          "sequencia_sofre": 2,
+          "jogos": 10
+        }
+      },
+      "alertas": [],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "media",
+        "nota": "Nottingham favorito (41.7%), margem 8.7 p.p., xG 1.2 e tendência de menos gols (Under 2.5 65%)."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "skip_edge_gate",
+        "reason": "edge abaixo do gate (8.7 p.p. < 10.0 p.p.)",
+        "competition": "Premier League",
+        "sport_key": "soccer_epl",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "21/11 15:00",
+            "mandante": "Bournemouth",
+            "visitante": "Nottingham",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "07/11 17:30",
+            "mandante": "Nottingham",
+            "visitante": "Man City",
+            "placar": "3 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "31/10 15:00",
+            "mandante": "Brentford",
+            "visitante": "Nottingham",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "23/10 19:00",
+            "mandante": "Ipswich Town",
+            "visitante": "Nottingham",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "18/10 15:30",
+            "mandante": "Nottingham",
+            "visitante": "Arsenal",
+            "placar": "0 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "21/11 15:00",
+            "mandante": "Chelsea",
+            "visitante": "Leeds United",
+            "placar": "1 x 4",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "08/11 14:00",
+            "mandante": "Sunderland",
+            "visitante": "Chelsea",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "31/10 12:30",
+            "mandante": "Chelsea",
+            "visitante": "Man United",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "24/10 16:30",
+            "mandante": "Chelsea",
+            "visitante": "Tottenham",
+            "placar": "0 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "17/10 11:30",
+            "mandante": "Everton",
+            "visitante": "Chelsea",
+            "placar": "0 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.41690066882562615,
+          "confianca": "LOW",
+          "justificativa": "Nottingham projeta ≈1.2 gol(s) vs ≈0.9 do adversário. Prob vitória: 41.7% (margem: 8.7 p.p.)",
+          "edge": 0.0874,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER_2.5",
+          "probabilidade": 0.6521569364912927,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈2.1. UNDER 2.5: 65.2% de probabilidade",
+          "edge": 0.1522,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.6076,
+          "confianca": "LOW",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.1. | Forma: 50% casa marca, 70% visit marca",
+          "edge": 0.1076,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.6028,
+          "confianca": "LOW",
+          "justificativa": "xG: 1.2 (casa) x 0.9 (fora). Ambas marcam - Nao: 60.3% | Forma 0j/1j consecutivos com gol",
+          "edge": 0.1028,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Primera Division",
+      "data": "2026-11-27T20:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Levante",
+        "visitante": "Santander",
+        "escudo_casa": "https://crests.football-data.org/88.png",
+        "escudo_visitante": "https://crests.football-data.org/5335.png"
+      },
+      "probabilidades": {
+        "casa": 0.5877717524986956,
+        "empate": 0.19241399904948875,
+        "visitante": 0.21981424845181566
+      },
+      "favorito": {
+        "nome": "Levante",
+        "prob": 0.5877717524986956,
+        "vantagem": 0.36795750404688
+      },
+      "gols_esperados": {
+        "casa": 2.7161736507399574,
+        "visitante": 1.6766034560480843,
+        "total": 4.392777106788042
+      },
+      "mercados": {
+        "under_25": 0.18735158213466063,
+        "over_25": 0.8126484178653394,
+        "btts_yes": 0.7661724677339957,
+        "btts_no": 0.23382753226600428
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.3727272727272727,
+          "ataque": 0.72,
+          "defesa": 0.11999999999999988,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.4944545454545454
+        },
+        "visitante": {
+          "forma_recente": 0.5545454545454546,
+          "ataque": 0.48,
+          "defesa": 0.0,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.4540909090909091
+        }
+      },
+      "leitura_rapida": "Levante favorito (59%, risco moderado). Jogo mais aberto (xG total ≈4.4). Over 2.5 com 81%.",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 0.7,
+          "prob_sofre": 0.8,
+          "sequencia_marca": 1,
+          "sequencia_sofre": 1,
+          "jogos": 10
+        },
+        "visitante": {
+          "prob_marca": 0.7,
+          "prob_sofre": 1.0,
+          "sequencia_marca": 2,
+          "sequencia_sofre": 10,
+          "jogos": 10
+        }
+      },
+      "alertas": [
+        "Levante jogou recentemente — possível desgaste físico."
+      ],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "alta",
+        "nota": "Levante favorito (58.8%), margem 36.8 p.p., xG 2.7 e tendência de jogo aberto (Over 2.5 81%)."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Primera Division",
+        "sport_key": "soccer_spain_la_liga",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "23/11 20:00",
+            "mandante": "Levante",
+            "visitante": "Elche",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "08/11 17:30",
+            "mandante": "Celta",
+            "visitante": "Levante",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "31/10 13:00",
+            "mandante": "Levante",
+            "visitante": "Atleti",
+            "placar": "0 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "25/10 17:30",
+            "mandante": "Real Sociedad",
+            "visitante": "Levante",
+            "placar": "2 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "21/10 18:00",
+            "mandante": "Levante",
+            "visitante": "Athletic",
+            "placar": "3 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "22/11 15:15",
+            "mandante": "Santander",
+            "visitante": "Real Sociedad",
+            "placar": "3 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "07/11 13:00",
+            "mandante": "Málaga",
+            "visitante": "Santander",
+            "placar": "1 x 2",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "01/11 15:15",
+            "mandante": "Santander",
+            "visitante": "Real Madrid",
+            "placar": "0 x 3",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "24/10 14:15",
+            "mandante": "Santander",
+            "visitante": "Espanyol",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "18/10 12:00",
+            "mandante": "Osasuna",
+            "visitante": "Santander",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.5877717524986956,
+          "confianca": "HIGH",
+          "justificativa": "Levante projeta ≈2.7 gol(s) vs ≈1.7 do adversário. Prob vitória: 58.8% (margem: 36.8 p.p.)",
+          "edge": 0.368,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_3.5",
+          "probabilidade": 0.6366753291961649,
+          "confianca": "MEDIUM",
+          "justificativa": "Gols esperados no jogo: ≈4.4. OVER 3.5: 63.7% de probabilidade",
+          "edge": 0.1367,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.8435,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈4.4. | Forma: 70% casa marca, 70% visit marca",
+          "edge": 0.3435,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.6557,
+          "confianca": "MEDIUM",
+          "justificativa": "xG: 2.7 (casa) x 1.7 (fora). Ambas marcam - Sim: 65.6% | Forma 1j/2j consecutivos com gol",
+          "edge": 0.1557,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Championship",
+      "data": "2026-11-27T20:00:00Z",
+      "status": "SCHEDULED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Southampton",
+        "visitante": "Middlesbrough",
+        "escudo_casa": "https://crests.football-data.org/340.png",
+        "escudo_visitante": "https://crests.football-data.org/343.png"
+      },
+      "probabilidades": {
+        "casa": 0.4725373622393603,
+        "empate": 0.2705552369853963,
+        "visitante": 0.2569074007752433
+      },
+      "favorito": {
+        "nome": "Southampton",
+        "prob": 0.4725373622393603,
+        "vantagem": 0.20198212525396403
+      },
+      "gols_esperados": {
+        "casa": 1.6795109663865546,
+        "visitante": 1.1935157870370372,
+        "total": 2.873026753423592
+      },
+      "mercados": {
+        "under_25": 0.4524082479259287,
+        "over_25": 0.5475917520740713,
+        "btts_yes": 0.5815897297644816,
+        "btts_no": 0.41841027023551836
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.6224489795918368,
+          "ataque": 1.0,
+          "defesa": 0.8,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.7878571428571429
+        },
+        "visitante": {
+          "forma_recente": 0.7555555555555555,
+          "ataque": 0.6666666666666667,
+          "defesa": 0.6,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.6911111111111111
+        }
+      },
+      "leitura_rapida": "Southampton favorito (47%, risco moderado). Mercado de gols equilibrado (xG total ≈2.9).",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "estavel"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 0.857,
+          "prob_sofre": 0.857,
+          "sequencia_marca": 2,
+          "sequencia_sofre": 1,
+          "jogos": 7
+        },
+        "visitante": {
+          "prob_marca": 0.667,
+          "prob_sofre": 0.5,
+          "sequencia_marca": 2,
+          "sequencia_sofre": 1,
+          "jogos": 6
+        }
+      },
+      "alertas": [
+        "Southampton jogou recentemente — possível desgaste físico.",
+        "Middlesbrough jogou recentemente — possível desgaste físico."
+      ],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "alta",
+        "nota": "Southampton favorito (47.3%), margem 20.2 p.p., xG 1.7 e mercado de gols equilibrado."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Championship",
+        "sport_key": "soccer_efl_champ",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "24/11 19:45",
+            "mandante": "Sheffield Utd",
+            "visitante": "Southampton",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "21/11 12:30",
+            "mandante": "Southampton",
+            "visitante": "Derby County",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "07/11 15:00",
+            "mandante": "Preston NE",
+            "visitante": "Southampton",
+            "placar": "1 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "03/11 20:00",
+            "mandante": "West Brom",
+            "visitante": "Southampton",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "31/10 15:00",
+            "mandante": "Southampton",
+            "visitante": "QPR",
+            "placar": "4 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ],
+        "visitante": [
+          {
+            "data": "24/11 19:45",
+            "mandante": "Middlesbrough",
+            "visitante": "Swansea",
+            "placar": "2 x 1",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "21/11 15:00",
+            "mandante": "Middlesbrough",
+            "visitante": "Bristol City",
+            "placar": "2 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          },
+          {
+            "data": "07/11 15:00",
+            "mandante": "Watford",
+            "visitante": "Middlesbrough",
+            "placar": "0 x 0",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "04/11 19:45",
+            "mandante": "Wrexham",
+            "visitante": "Middlesbrough",
+            "placar": "2 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "31/10 15:00",
+            "mandante": "Middlesbrough",
+            "visitante": "Charlton",
+            "placar": "3 x 0",
+            "resultado": "V",
+            "resultado_label": "Vitoria"
+          }
+        ]
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.4725373622393603,
+          "confianca": "MEDIUM",
+          "justificativa": "Southampton projeta ≈1.7 gol(s) vs ≈1.2 do adversário. Prob vitória: 47.3% (margem: 20.2 p.p.)",
+          "edge": 0.202,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_2.5",
+          "probabilidade": 0.5475917520740713,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.9. OVER 2.5: 54.8% de probabilidade",
+          "edge": 0.0476,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.7922,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.9. | Forma: 86% casa marca, 67% visit marca",
+          "edge": 0.2922,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.4224,
+          "confianca": "LOW",
+          "justificativa": "xG: 1.7 (casa) x 1.2 (fora). Ambas marcam - Nao: 42.2% | Forma 2j/2j consecutivos com gol",
+          "edge": -0.0776,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Primeira Liga",
+      "data": "2026-11-27T20:15:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Marítimo",
+        "visitante": "CD Nacional",
+        "escudo_casa": "https://crests.football-data.org/5575.png",
+        "escudo_visitante": "https://crests.football-data.org/5529.png"
+      },
+      "probabilidades": {
+        "casa": 0.2412855957404342,
+        "empate": 0.2941625499030652,
+        "visitante": 0.4645518543565006
+      },
+      "favorito": {
+        "nome": "CD Nacional",
+        "prob": 0.4645518543565006,
+        "vantagem": 0.17038930445343542
+      },
+      "gols_esperados": {
+        "casa": 1.0062345454545454,
+        "visitante": 1.4781818181818178,
+        "total": 2.484416363636363
+      },
+      "mercados": {
+        "under_25": 0.5479068326987718,
+        "over_25": 0.45209316730122817,
+        "btts_yes": 0.5058279965182653,
+        "btts_no": 0.49417200348173473
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.14545454545454545,
+          "ataque": 0.32,
+          "defesa": 0.28,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.3469090909090909
+        },
+        "visitante": {
+          "forma_recente": 0.5,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.535
+        }
+      },
+      "leitura_rapida": "CD Nacional favorito (46%, risco moderado). Mercado de gols equilibrado (xG total ≈2.5).",
+      "tendencia": {
+        "casa": "estavel",
+        "visitante": "indefinida"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 0.7,
+          "prob_sofre": 0.9,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 9,
+          "jogos": 10
+        },
+        "visitante": {
+          "prob_marca": 0.5,
+          "prob_sofre": 0.5,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 0,
+          "jogos": 0
+        }
+      },
+      "alertas": [],
+      "analise_ia": {
+        "palpite_ia": "2",
+        "confianca_ia": "media",
+        "nota": "CD Nacional favorito (46.5%), margem 17.0 p.p., xG 1.5 e mercado de gols equilibrado."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "no_event_match",
+        "reason": "não encontrou evento equivalente no retorno do endpoint upcoming",
+        "competition": "Primeira Liga",
+        "sport_key": "soccer_portugal_primeira_liga",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [
+          {
+            "data": "01/11 18:00",
+            "mandante": "Marítimo",
+            "visitante": "Santa Clara",
+            "placar": "0 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "23/10 19:45",
+            "mandante": "Vitória SC",
+            "visitante": "Marítimo",
+            "placar": "5 x 0",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "10/10 17:00",
+            "mandante": "Marítimo",
+            "visitante": "Porto",
+            "placar": "1 x 2",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          },
+          {
+            "data": "19/09 14:30",
+            "mandante": "Gil Vicente",
+            "visitante": "Marítimo",
+            "placar": "1 x 1",
+            "resultado": "E",
+            "resultado_label": "Empate"
+          },
+          {
+            "data": "14/09 19:15",
+            "mandante": "Moreirense",
+            "visitante": "Marítimo",
+            "placar": "3 x 1",
+            "resultado": "D",
+            "resultado_label": "Derrota"
+          }
+        ],
+        "visitante": []
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "2",
+          "probabilidade": 0.4645518543565006,
+          "confianca": "MEDIUM",
+          "justificativa": "CD Nacional projeta ≈1.5 gol(s) vs ≈1.0 do adversário. Prob vitória: 46.5% (margem: 17.0 p.p.)",
+          "edge": 0.1704,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER_2.5",
+          "probabilidade": 0.5479068326987718,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.5. UNDER 2.5: 54.8% de probabilidade",
+          "edge": 0.0479,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.7256,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.5.",
+          "edge": 0.2256,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "NO",
+          "probabilidade": 0.4942,
+          "confianca": "LOW",
+          "justificativa": "xG: 1.0 (casa) x 1.5 (fora). Ambas marcam - Nao: 49.4%",
+          "edge": -0.0058,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
+    },
+    {
+      "competicao": "Campeonato Brasileiro Série A",
+      "data": "2026-11-27T23:00:00Z",
+      "status": "TIMED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Fluminense",
+        "visitante": "Cruzeiro",
+        "escudo_casa": "https://crests.football-data.org/1765.png",
+        "escudo_visitante": "https://crests.football-data.org/1771.png"
+      },
+      "probabilidades": {
         "casa": 0.37244888305532,
         "empate": 0.31041132961418283,
         "visitante": 0.31713978733049725
       },
       "favorito": {
-        "nome": "São Paulo",
+        "nome": "Fluminense",
         "prob": 0.37244888305532,
         "vantagem": 0.05530909572482273
       },
@@ -3034,7 +1990,7 @@
           "score_total": 0.535
         }
       },
-      "leitura_rapida": "São Paulo favorito (37%, risco alto). Mercado de gols equilibrado (xG total ≈2.4).",
+      "leitura_rapida": "Fluminense favorito (37%, risco alto). Mercado de gols equilibrado (xG total ≈2.4).",
       "tendencia": {
         "casa": "indefinida",
         "visitante": "indefinida"
@@ -3059,7 +2015,7 @@
       "analise_ia": {
         "palpite_ia": "1",
         "confianca_ia": "baixa",
-        "nota": "São Paulo favorito (37.2%), margem 5.5 p.p., xG 1.3 e tendência de menos gols (Under 2.5 57%)."
+        "nota": "Fluminense favorito (37.2%), margem 5.5 p.p., xG 1.3 e tendência de menos gols (Under 2.5 57%)."
       },
       "odds_debug": {
         "enabled": "false",
@@ -3082,7 +2038,7 @@
           "opcao": "1",
           "probabilidade": 0.37244888305532,
           "confianca": "LOW",
-          "justificativa": "São Paulo projeta ≈1.3 gol(s) vs ≈1.1 do adversário. Prob vitória: 37.2% (margem: 5.5 p.p.)",
+          "justificativa": "Fluminense projeta ≈1.3 gol(s) vs ≈1.1 do adversário. Prob vitória: 37.2% (margem: 5.5 p.p.)",
           "edge": 0.0553,
           "odd_decimal": null,
           "ev": null,
@@ -3148,42 +2104,196 @@
           "resultado_verificador": null
         }
       ]
+    },
+    {
+      "competicao": "Copa Libertadores",
+      "data": "2026-11-28T00:00:00Z",
+      "status": "SCHEDULED",
+      "placar_atual": {
+        "casa": null,
+        "visitante": null
+      },
+      "times": {
+        "casa": "Time da casa",
+        "visitante": "Time visitante",
+        "escudo_casa": null,
+        "escudo_visitante": null
+      },
+      "probabilidades": {
+        "casa": 0.3799167334838365,
+        "empate": 0.29776346412453736,
+        "visitante": 0.32231980239162616
+      },
+      "favorito": {
+        "nome": "Time da casa",
+        "prob": 0.3799167334838365,
+        "vantagem": 0.05759693109221031
+      },
+      "gols_esperados": {
+        "casa": 1.3475000000000001,
+        "visitante": 1.225,
+        "total": 2.5725000000000002
+      },
+      "mercados": {
+        "under_25": 0.5254205834582348,
+        "over_25": 0.4745794165417652,
+        "btts_yes": 0.5390579670543345,
+        "btts_no": 0.4609420329456655
+      },
+      "scores": {
+        "casa": {
+          "forma_recente": 0.5,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 1.1,
+          "h2h_factor": 0.5,
+          "score_total": 0.555
+        },
+        "visitante": {
+          "forma_recente": 0.5,
+          "ataque": 0.4,
+          "defesa": 0.6,
+          "fator_mando": 0.9,
+          "h2h_factor": 0.5,
+          "score_total": 0.535
+        }
+      },
+      "leitura_rapida": "Time da casa favorito (38%, risco alto). Mercado de gols equilibrado (xG total ≈2.6).",
+      "tendencia": {
+        "casa": "indefinida",
+        "visitante": "indefinida"
+      },
+      "tendencia_gols": {
+        "casa": {
+          "prob_marca": 0.5,
+          "prob_sofre": 0.5,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 0,
+          "jogos": 0
+        },
+        "visitante": {
+          "prob_marca": 0.5,
+          "prob_sofre": 0.5,
+          "sequencia_marca": 0,
+          "sequencia_sofre": 0,
+          "jogos": 0
+        }
+      },
+      "alertas": [],
+      "analise_ia": {
+        "palpite_ia": "1",
+        "confianca_ia": "baixa",
+        "nota": "Time da casa favorito (38.0%), margem 5.8 p.p., xG 1.3 e mercado de gols equilibrado."
+      },
+      "odds_debug": {
+        "enabled": "false",
+        "status": "skip_edge_gate",
+        "reason": "edge abaixo do gate (5.8 p.p. < 10.0 p.p.)",
+        "competition": "Copa Libertadores",
+        "sport_key": "soccer_conmebol_libertadores",
+        "ev_filter": "fail",
+        "ev_reason": "nenhum palpite atingiu EV >= 3.0%"
+      },
+      "odds_integradas": false,
+      "odds_valor_alto": false,
+      "historico": {
+        "casa": [],
+        "visitante": []
+      },
+      "palpites": [
+        {
+          "tipo": "WINNER",
+          "opcao": "1",
+          "probabilidade": 0.3799167334838365,
+          "confianca": "LOW",
+          "justificativa": "Time da casa projeta ≈1.3 gol(s) vs ≈1.2 do adversário. Prob vitória: 38.0% (margem: 5.8 p.p.)",
+          "edge": 0.0576,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "UNDER_2.5",
+          "probabilidade": 0.5254205834582348,
+          "confianca": "LOW",
+          "justificativa": "Gols esperados no jogo: ≈2.6. UNDER 2.5: 52.5% de probabilidade",
+          "edge": 0.0254,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "OVER_UNDER",
+          "opcao": "OVER_1.5",
+          "probabilidade": 0.7436,
+          "confianca": "HIGH",
+          "justificativa": "Pelo menos 2 gols no jogo. xG total: ≈2.6.",
+          "edge": 0.2436,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        },
+        {
+          "tipo": "BTTS",
+          "opcao": "YES",
+          "probabilidade": 0.5391,
+          "confianca": "LOW",
+          "justificativa": "xG: 1.3 (casa) x 1.2 (fora). Ambas marcam - Sim: 53.9%",
+          "edge": 0.0391,
+          "odd_decimal": null,
+          "ev": null,
+          "ev_bruto": null,
+          "prob_mercado_justa": null,
+          "valor_esperado_positivo": false,
+          "resultado_verificador": null
+        }
+      ]
     }
   ],
   "acertos_hoje": {
-    "acertos": 29,
-    "total": 57,
-    "taxa": 0.509
+    "acertos": 0,
+    "total": 0,
+    "taxa": null
   },
   "daily_tips_ids": [
     {
-      "casa": "Bolton",
-      "visitante": "West Brom",
-      "data": "2026-11-25T19:45:00Z",
+      "casa": "Groningen",
+      "visitante": "Willem II",
+      "data": "2026-11-27T19:00:00Z",
       "tipo": "OVER_UNDER",
       "opcao": "OVER_1.5",
-      "probabilidade": 0.9983
+      "probabilidade": 0.9273
     },
     {
-      "casa": "Club Brugge",
-      "visitante": "Liverpool",
-      "data": "2026-11-25T20:00:00Z",
+      "casa": "Bremen",
+      "visitante": "M'gladbach",
+      "data": "2026-11-27T19:30:00Z",
       "tipo": "OVER_UNDER",
       "opcao": "OVER_1.5",
-      "probabilidade": 0.9283
+      "probabilidade": 0.9171
     },
     {
-      "casa": "Sabah FK",
-      "visitante": "Barça",
-      "data": "2026-11-25T17:45:00Z",
+      "casa": "Levante",
+      "visitante": "Santander",
+      "data": "2026-11-27T20:00:00Z",
       "tipo": "OVER_UNDER",
       "opcao": "OVER_1.5",
-      "probabilidade": 0.895
+      "probabilidade": 0.8435
     }
   ],
-  "daily_tips_date": "2026-11-25",
+  "daily_tips_date": "2026-11-26",
   "recovery_tip": {
     "ativo": false
   },
-  "recovery_tip_date": "2026-11-25"
+  "recovery_tip_date": "2026-11-26"
 }
