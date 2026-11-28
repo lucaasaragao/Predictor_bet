@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-28",
-      "ultima_atualizacao": "2026-11-28T13:51:38-03:00",
-      "finalizados": 6,
-      "taxa_geral": 0.542,
-      "total_acertos": 13,
-      "total_palpites": 24,
+      "ultima_atualizacao": "2026-11-28T13:59:13-03:00",
+      "finalizados": 9,
+      "taxa_geral": 0.5,
+      "total_acertos": 18,
+      "total_palpites": 36,
       "mercados": {
         "WINNER": {
-          "acertos": 4,
-          "total": 6,
-          "taxa": 0.667
+          "acertos": 5,
+          "total": 9,
+          "taxa": 0.556
         },
         "OVER_UNDER": {
-          "acertos": 7,
-          "total": 12,
-          "taxa": 0.583
+          "acertos": 9,
+          "total": 18,
+          "taxa": 0.5
         },
         "BTTS": {
-          "acertos": 2,
-          "total": 6,
-          "taxa": 0.333
+          "acertos": 4,
+          "total": 9,
+          "taxa": 0.444
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 6,
-          "brier": 0.5004,
-          "log_loss": 0.8692
+          "n": 9,
+          "brier": 0.5627,
+          "log_loss": 0.9521
         },
         "OVER_UNDER": {
-          "n": 6,
-          "brier": 0.2034,
-          "log_loss": 0.5957
+          "n": 9,
+          "brier": 0.2331,
+          "log_loss": 0.6567
         },
         "BTTS": {
-          "n": 6,
-          "brier": 0.3129,
-          "log_loss": 0.824
+          "n": 9,
+          "brier": 0.2898,
+          "log_loss": 0.7761
         }
       },
       "jogos": [
@@ -261,6 +261,117 @@
               "confianca": "LOW",
               "probabilidade": 0.592,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-28T15:00:00Z",
+          "casa": "Millwall",
+          "visitante": "Burnley",
+          "competicao": "Championship",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.486,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.529,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.693,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.54,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-28T15:00:00Z",
+          "casa": "Leeds United",
+          "visitante": "Coventry City",
+          "competicao": "Premier League",
+          "placar": "3-0",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.573,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.528,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.719,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.545,
+              "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-28T15:00:00Z",
+          "casa": "QPR",
+          "visitante": "Sheffield Utd",
+          "competicao": "Championship",
+          "placar": "1-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.547,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.564,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.806,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.43,
+              "resultado": "ERRO"
             }
           ]
         }
