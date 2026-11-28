@@ -2,43 +2,43 @@
   "dias": [
     {
       "data": "2026-11-28",
-      "ultima_atualizacao": "2026-11-28T15:29:34-03:00",
-      "finalizados": 19,
-      "taxa_geral": 0.474,
-      "total_acertos": 36,
-      "total_palpites": 76,
+      "ultima_atualizacao": "2026-11-28T15:37:44-03:00",
+      "finalizados": 20,
+      "taxa_geral": 0.475,
+      "total_acertos": 38,
+      "total_palpites": 80,
       "mercados": {
         "WINNER": {
-          "acertos": 9,
-          "total": 19,
-          "taxa": 0.474
+          "acertos": 10,
+          "total": 20,
+          "taxa": 0.5
         },
         "OVER_UNDER": {
-          "acertos": 16,
-          "total": 38,
-          "taxa": 0.421
+          "acertos": 17,
+          "total": 40,
+          "taxa": 0.425
         },
         "BTTS": {
           "acertos": 11,
-          "total": 19,
-          "taxa": 0.579
+          "total": 20,
+          "taxa": 0.55
         }
       },
       "metricas_probabilisticas": {
         "1X2": {
-          "n": 19,
-          "brier": 0.6523,
-          "log_loss": 1.0758
+          "n": 20,
+          "brier": 0.6431,
+          "log_loss": 1.0629
         },
         "OVER_UNDER": {
-          "n": 19,
-          "brier": 0.2439,
-          "log_loss": 0.6797
+          "n": 20,
+          "brier": 0.2446,
+          "log_loss": 0.6812
         },
         "BTTS": {
-          "n": 19,
-          "brier": 0.2891,
-          "log_loss": 0.7737
+          "n": 20,
+          "brier": 0.285,
+          "log_loss": 0.7654
         }
       },
       "jogos": [
@@ -742,6 +742,43 @@
               "confianca": "LOW",
               "probabilidade": 0.615,
               "resultado": "ACERTO"
+            }
+          ]
+        },
+        {
+          "data_jogo": "2026-11-28T16:15:00Z",
+          "casa": "Angers SCO",
+          "visitante": "RC Lens",
+          "competicao": "Ligue 1",
+          "placar": "2-5",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "2",
+              "confianca": "MEDIUM",
+              "probabilidade": 0.441,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "UNDER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.756,
+              "resultado": "ACERTO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "NO",
+              "confianca": "LOW",
+              "probabilidade": 0.456,
+              "resultado": "ERRO"
             }
           ]
         }
