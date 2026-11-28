@@ -2,30 +2,84 @@
   "dias": [
     {
       "data": "2026-11-28",
-      "ultima_atualizacao": "2026-11-28T11:57:09-03:00",
-      "finalizados": 0,
+      "ultima_atualizacao": "2026-11-28T12:10:33-03:00",
+      "finalizados": 1,
       "taxa_geral": 0.0,
       "total_acertos": 0,
-      "total_palpites": 0,
-      "mercados": {},
-      "metricas_probabilisticas": {
-        "1X2": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+      "total_palpites": 4,
+      "mercados": {
+        "WINNER": {
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         },
         "OVER_UNDER": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 2,
+          "taxa": 0.0
         },
         "BTTS": {
-          "n": 0,
-          "brier": null,
-          "log_loss": null
+          "acertos": 0,
+          "total": 1,
+          "taxa": 0.0
         }
       },
-      "jogos": []
+      "metricas_probabilisticas": {
+        "1X2": {
+          "n": 1,
+          "brier": 0.6862,
+          "log_loss": 1.121
+        },
+        "OVER_UNDER": {
+          "n": 1,
+          "brier": 0.2586,
+          "log_loss": 0.7103
+        },
+        "BTTS": {
+          "n": 1,
+          "brier": 0.3194,
+          "log_loss": 0.8329
+        }
+      },
+      "jogos": [
+        {
+          "data_jogo": "2026-11-28T13:00:00Z",
+          "casa": "Real Betis",
+          "visitante": "Rayo Vallecano",
+          "competicao": "Primera Division",
+          "placar": "0-1",
+          "palpites": [
+            {
+              "tipo": "WINNER",
+              "opcao": "1",
+              "confianca": "LOW",
+              "probabilidade": 0.385,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_2.5",
+              "confianca": "LOW",
+              "probabilidade": 0.508,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "OVER_UNDER",
+              "opcao": "OVER_1.5",
+              "confianca": "HIGH",
+              "probabilidade": 0.769,
+              "resultado": "ERRO"
+            },
+            {
+              "tipo": "BTTS",
+              "opcao": "YES",
+              "confianca": "LOW",
+              "probabilidade": 0.565,
+              "resultado": "ERRO"
+            }
+          ]
+        }
+      ]
     },
     {
       "data": "2026-11-27",
